@@ -25,4 +25,5 @@ filtered-openapi.yaml
 uv.lock
 .comfy_environment
 
-# Hermes cache (junction to D:\OLLAMA_MODELS
+# Hermes cache (junction to D:\OLLAMA_MODELS\cache)
+/.cache/
