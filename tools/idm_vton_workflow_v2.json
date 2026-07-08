@@ -1,0 +1,101 @@
+{
+  "1": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "idm_test_human.jpg",
+      "upload": "image"
+    }
+  },
+  "2": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "idm_test_garment.jpg",
+      "upload": "image"
+    }
+  },
+  "3": {
+    "class_type": "LayerMask: SegformerClothesPipelineLoader",
+    "inputs": {
+      "model": "segformer_b3_clothes",
+      "face": false,
+      "hair": false,
+      "hat": false,
+      "sunglass": false,
+      "left_arm": false,
+      "right_arm": false,
+      "left_leg": false,
+      "right_leg": false,
+      "upper_clothes": true,
+      "skirt": false,
+      "pants": false,
+      "dress": false,
+      "belt": false,
+      "shoe": false,
+      "bag": false,
+      "scarf": false,
+      "left_shoe": false,
+      "right_shoe": false
+    }
+  },
+  "4": {
+    "class_type": "LayerMask: SegformerUltraV2",
+    "inputs": {
+      "image": ["1", 0],
+      "segformer_pipeline": ["3", 0],
+      "detail_method": "PyMatting",
+      "detail_erode": 6,
+      "detail_dilate": 6,
+      "black_point": 0.01,
+      "white_point": 0.99,
+      "process_detail": false,
+      "device": "cuda",
+      "max_megapixels": 2.0
+    }
+  },
+  "5": {
+    "class_type": "MaskToImage",
+    "inputs": {
+      "mask": ["4", 1]
+    }
+  },
+  "6": {
+    "class_type": "DensePosePreprocessor",
+    "inputs": {
+      "image": ["1", 0],
+      "model": "densepose_r50_fpn_dl.torchscript",
+      "cmap": "Viridis (MagicAnimate)",
+      "resolution": 768
+    }
+  },
+  "7": {
+    "class_type": "PipelineLoader",
+    "inputs": {
+      "weight_dtype": "float16"
+    }
+  },
+  "8": {
+    "class_type": "IDM-VTON",
+    "inputs": {
+      "pipeline": ["7", 0],
+      "human_img": ["1", 0],
+      "pose_img": ["6", 0],
+      "mask_img": ["5", 0],
+      "garment_img": ["2", 0],
+      "garment_description": "a shirt",
+      "negative_prompt": "monochrome, lowres, bad anatomy, worst quality, low quality",
+      "width": 768,
+      "height": 1024,
+      "num_inference_steps": 30,
+      "guidance_scale": 2.0,
+      "strength": 1.0,
+      "seed": 42
+    }
+  },
+  "9": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": ["8", 0],
+      "filename_prefix": "idm_vton_test"
+    }
+  }
+}

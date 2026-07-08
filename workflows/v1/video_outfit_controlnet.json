@@ -1,0 +1,312 @@
+{
+  "1": {
+    "class_type": "LoadVideo",
+    "_meta": {
+      "title": "Video"
+    },
+    "inputs": {
+      "file": "outfit_swap_v2_noaudio.mp4"
+    }
+  },
+  "2": {
+    "class_type": "GetVideoComponents",
+    "_meta": {
+      "title": "Frames"
+    },
+    "inputs": {
+      "video": [
+        "1",
+        0
+      ]
+    }
+  },
+  "3": {
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "SDXL"
+    },
+    "inputs": {
+      "ckpt_name": "sd_xl_base_1.0.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "ControlNetLoader",
+    "_meta": {
+      "title": "ControlNet"
+    },
+    "inputs": {
+      "control_net_name": "diffusers_xl_depth_full.safetensors"
+    }
+  },
+  "5": {
+    "class_type": "SolidMask",
+    "_meta": {
+      "title": "Clothing Mask"
+    },
+    "inputs": {
+      "value": 1.0,
+      "width": 300,
+      "height": 210
+    }
+  },
+  "6": {
+    "class_type": "SolidMask",
+    "_meta": {
+      "title": "Base Mask"
+    },
+    "inputs": {
+      "value": 0.0,
+      "width": 768,
+      "height": 432
+    }
+  },
+  "7": {
+    "class_type": "MaskComposite",
+    "_meta": {
+      "title": "Position Mask"
+    },
+    "inputs": {
+      "destination": [
+        "6",
+        0
+      ],
+      "source": [
+        "5",
+        0
+      ],
+      "x": 234,
+      "y": 118,
+      "operation": "add"
+    }
+  },
+  "8": {
+    "class_type": "GrowMask",
+    "_meta": {
+      "title": "Grow"
+    },
+    "inputs": {
+      "mask": [
+        "7",
+        0
+      ],
+      "expand": 20,
+      "tapered_corners": true
+    }
+  },
+  "9": {
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Positive"
+    },
+    "inputs": {
+      "text": "elegant white silk dress with golden embroidery, beautiful fabric, detailed texture",
+      "clip": [
+        "3",
+        1
+      ]
+    }
+  },
+  "10": {
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Negative"
+    },
+    "inputs": {
+      "text": "ugly, blurry, low quality, deformed, red dress",
+      "clip": [
+        "3",
+        1
+      ]
+    }
+  },
+  "11": {
+    "class_type": "ControlNetApplyAdvanced",
+    "_meta": {
+      "title": "ControlNet Apply"
+    },
+    "inputs": {
+      "positive": [
+        "9",
+        0
+      ],
+      "negative": [
+        "10",
+        0
+      ],
+      "control_net": [
+        "4",
+        0
+      ],
+      "image": [
+        "20",
+        0
+      ],
+      "strength": 0.8,
+      "start_percent": 0.0,
+      "end_percent": 1.0
+    }
+  },
+  "12": {
+    "class_type": "VAEEncodeForInpaint",
+    "_meta": {
+      "title": "Inpaint Encode"
+    },
+    "inputs": {
+      "pixels": [
+        "20",
+        0
+      ],
+      "vae": [
+        "3",
+        2
+      ],
+      "mask": [
+        "23",
+        0
+      ],
+      "grow_mask_by": 6
+    }
+  },
+  "13": {
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    },
+    "inputs": {
+      "seed": 42,
+      "steps": 25,
+      "cfg": 7.5,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 0.9,
+      "model": [
+        "3",
+        0
+      ],
+      "positive": [
+        "11",
+        0
+      ],
+      "negative": [
+        "10",
+        0
+      ],
+      "latent_image": [
+        "12",
+        0
+      ]
+    }
+  },
+  "14": {
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "Decode"
+    },
+    "inputs": {
+      "samples": [
+        "13",
+        0
+      ],
+      "vae": [
+        "3",
+        2
+      ]
+    }
+  },
+  "15": {
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save"
+    },
+    "inputs": {
+      "filename_prefix": "video_outfit_cn",
+      "images": [
+        "24",
+        0
+      ]
+    }
+  },
+  "16": {
+    "class_type": "MaskToImage",
+    "_meta": {
+      "title": "Mask Preview"
+    },
+    "inputs": {
+      "mask": [
+        "8",
+        0
+      ]
+    }
+  },
+  "17": {
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Mask"
+    },
+    "inputs": {
+      "filename_prefix": "cn_mask",
+      "images": [
+        "16",
+        0
+      ]
+    }
+  },
+  "20": {
+    "class_type": "ImageScale",
+    "inputs": {
+      "image": [
+        "2",
+        0
+      ],
+      "upscale_method": "lanczos",
+      "width": 768,
+      "height": 432,
+      "crop": "disabled"
+    }
+  },
+  "21": {
+    "class_type": "MaskToImage",
+    "inputs": {
+      "mask": [
+        "8",
+        0
+      ]
+    }
+  },
+  "22": {
+    "class_type": "ImageScale",
+    "inputs": {
+      "image": [
+        "21",
+        0
+      ],
+      "upscale_method": "nearest-exact",
+      "width": 768,
+      "height": 432,
+      "crop": "disabled"
+    }
+  },
+  "23": {
+    "class_type": "ImageToMask",
+    "inputs": {
+      "image": [
+        "22",
+        0
+      ],
+      "channel": "red"
+    }
+  },
+  "24": {
+    "class_type": "ImageScale",
+    "inputs": {
+      "image": [
+        "14",
+        0
+      ],
+      "upscale_method": "lanczos",
+      "width": 1920,
+      "height": 1080,
+      "crop": "disabled"
+    }
+  }
+}

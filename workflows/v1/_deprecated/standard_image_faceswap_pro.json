@@ -1,0 +1,121 @@
+{
+  "prompt": {
+    "1": {
+      "class_type": "LoadImage",
+      "_meta": {
+        "title": "📷 Source Face (要使用的脸)"
+      },
+      "inputs": {
+        "image": "source_face.jpg",
+        "upload": "image"
+      }
+    },
+    "2": {
+      "class_type": "LoadImage",
+      "_meta": {
+        "title": "🎯 Target Image (目标图片)"
+      },
+      "inputs": {
+        "image": "target.jpg",
+        "upload": "image"
+      }
+    },
+    "3": {
+      "class_type": "ReActorFaceSwap",
+      "_meta": {
+        "title": "🔄 ReActor Face Swap"
+      },
+      "inputs": {
+        "enabled": true,
+        "input_image": ["2", 0],
+        "source_image": ["1", 0],
+        "swap_model": "inswapper_128.onnx",
+        "facedetection": "retinaface_resnet50",
+        "face_restore_model": "none",
+        "face_restore_visibility": 1.0,
+        "codeformer_weight": 0.5,
+        "detect_gender_input": "no",
+        "detect_gender_source": "no",
+        "input_faces_index": "0",
+        "source_faces_index": "0",
+        "console_log_level": 1
+      }
+    },
+    "4": {
+      "class_type": "ReActorRestoreFace",
+      "_meta": {
+        "title": "✨ GFPGAN Face Restore"
+      },
+      "inputs": {
+        "image": ["3", 0],
+        "model": "GFPGANv1.4.pth",
+        "visibility": 0.8,
+        "codeformer_weight": 0.5,
+        "facedetection": "retinaface_resnet50"
+      }
+    },
+    "5": {
+      "class_type": "SaveImage",
+      "_meta": {
+        "title": "💾 Save (swap only)"
+      },
+      "inputs": {
+        "filename_prefix": "faceswap_raw",
+        "images": ["3", 0]
+      }
+    },
+    "6": {
+      "class_type": "SaveImage",
+      "_meta": {
+        "title": "💾 Save (swap + restore)"
+      },
+      "inputs": {
+        "filename_prefix": "faceswap_restored",
+        "images": ["4", 0]
+      }
+    },
+    "7": {
+      "class_type": "ReActorFaceBoost",
+      "_meta": {
+        "title": "🚀 Face Boost (可选增强)"
+      },
+      "inputs": {
+        "enabled": false,
+        "boost_model": "GFPGANv1.4.pth",
+        "interpolation": "Bilinear",
+        "visibility": 1.0,
+        "codeformer_weight": 0.5,
+        "restore_with_main_after": false
+      }
+    },
+    "8": {
+      "class_type": "ReActorOptions",
+      "_meta": {
+        "title": "⚙️ ReActor Options"
+      },
+      "inputs": {
+        "input_faces_order": "left-right",
+        "input_faces_index": "0",
+        "detect_gender_input": "no",
+        "source_faces_order": "left-right",
+        "source_faces_index": "0",
+        "detect_gender_source": "no",
+        "console_log_level": 1,
+        "restore_swapped_only": true
+      }
+    },
+    "9": {
+      "class_type": "ReActorSaveFaceModel",
+      "_meta": {
+        "title": "📦 Save Face Model (可选缓存)"
+      },
+      "inputs": {
+        "save_mode": false,
+        "face_model_name": "cached_face",
+        "select_face_index": "0",
+        "image": ["1", 0],
+        "det_size": [640, 640]
+      }
+    }
+  }
+}

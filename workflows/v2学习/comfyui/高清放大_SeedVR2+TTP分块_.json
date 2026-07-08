@@ -1,0 +1,1253 @@
+{
+  "id": "9a9b3182-98a6-450a-a90a-4ea5bdb0327b",
+  "revision": 0,
+  "last_node_id": 189,
+  "last_link_id": 365,
+  "nodes": [
+    {
+      "id": 121,
+      "type": "easy imageSize",
+      "pos": {
+        "0": 906.2013549804688,
+        "1": 2486.385009765625
+      },
+      "size": {
+        "0": 210,
+        "1": 108
+      },
+      "flags": {
+        "collapsed": true,
+        "pinned": true
+      },
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 260
+        }
+      ],
+      "outputs": [
+        {
+          "label": "宽度",
+          "name": "width_int",
+          "type": "INT",
+          "links": [
+            252
+          ]
+        },
+        {
+          "label": "高度",
+          "name": "height_int",
+          "type": "INT",
+          "links": [
+            253
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "easy imageSize",
+        "cnr_id": "comfyui-easy-use",
+        "ver": "3f37ba9491fa7f6c8520dda6cf92a8e2dcbee8fa",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        "Width: 2048 , Height: 2048"
+      ]
+    },
+    {
+      "id": 134,
+      "type": "ImpactMinMax",
+      "pos": {
+        "0": 926.4513549804688,
+        "1": 2543.0322265625
+      },
+      "size": {
+        "0": 315,
+        "1": 78
+      },
+      "flags": {
+        "collapsed": true,
+        "pinned": true
+      },
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "A",
+          "name": "a",
+          "type": "*",
+          "link": 252
+        },
+        {
+          "label": "B",
+          "name": "b",
+          "type": "*",
+          "link": 253
+        }
+      ],
+      "outputs": [
+        {
+          "label": "整数",
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            251
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "ImpactMinMax"
+      },
+      "widgets_values": [
+        false
+      ]
+    },
+    {
+      "id": 140,
+      "type": "ImageResize+",
+      "pos": {
+        "0": 739.3018798828125,
+        "1": 2585.5556640625
+      },
+      "size": {
+        "0": 315,
+        "1": 218
+      },
+      "flags": {
+        "collapsed": true,
+        "pinned": true
+      },
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 342
+        },
+        {
+          "label": "宽度",
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 334
+        },
+        {
+          "label": "高度",
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 335
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            339
+          ]
+        },
+        {
+          "label": "宽度",
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "label": "高度",
+          "name": "height",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "ImageResize+"
+      },
+      "widgets_values": [
+        1280,
+        1280,
+        "lanczos",
+        "keep proportion",
+        "always",
+        0
+      ]
+    },
+    {
+      "id": 137,
+      "type": "TTP_Image_Tile_Batch",
+      "pos": {
+        "0": 739.4007568359375,
+        "1": 2645.28369140625
+      },
+      "size": {
+        "0": 315,
+        "1": 142
+      },
+      "flags": {
+        "collapsed": true,
+        "pinned": true
+      },
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 339
+        },
+        {
+          "label": "tile_width",
+          "name": "tile_width",
+          "type": "INT",
+          "widget": {
+            "name": "tile_width"
+          },
+          "link": 332
+        },
+        {
+          "label": "tile_height",
+          "name": "tile_height",
+          "type": "INT",
+          "widget": {
+            "name": "tile_height"
+          },
+          "link": 333
+        }
+      ],
+      "outputs": [
+        {
+          "label": "IMAGES",
+          "name": "IMAGES",
+          "type": "IMAGE",
+          "links": [
+            260,
+            262,
+            336
+          ]
+        },
+        {
+          "label": "POSITIONS",
+          "name": "POSITIONS",
+          "type": "LIST",
+          "links": [
+            257
+          ]
+        },
+        {
+          "label": "ORIGINAL_SIZE",
+          "name": "ORIGINAL_SIZE",
+          "type": "TUPLE",
+          "links": [
+            258
+          ]
+        },
+        {
+          "label": "GRID_SIZE",
+          "name": "GRID_SIZE",
+          "type": "TUPLE",
+          "links": [
+            259
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "TTP_Image_Tile_Batch"
+      },
+      "widgets_values": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "id": 135,
+      "type": "easy cleanGpuUsed",
+      "pos": {
+        "0": 747.7373046875,
+        "1": 2695.281005859375
+      },
+      "size": {
+        "0": 210,
+        "1": 26
+      },
+      "flags": {
+        "collapsed": true,
+        "pinned": true
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "输入任何",
+          "name": "anything",
+          "type": "*",
+          "link": 262
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "easy cleanGpuUsed"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 183,
+      "type": "ImageResize+",
+      "pos": {
+        "0": 753.415771484375,
+        "1": 2748.419189453125
+      },
+      "size": {
+        "0": 315,
+        "1": 218
+      },
+      "flags": {
+        "collapsed": true,
+        "pinned": true
+      },
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 336
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            337
+          ]
+        },
+        {
+          "label": "宽度",
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "label": "高度",
+          "name": "height",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "ImageResize+"
+      },
+      "widgets_values": [
+        1280,
+        1280,
+        "nearest-exact",
+        "keep proportion",
+        "always",
+        0
+      ]
+    },
+    {
+      "id": 132,
+      "type": "SeedVR2",
+      "pos": {
+        "0": 916.5861206054688,
+        "1": 2590.1689453125
+      },
+      "size": {
+        "0": 315,
+        "1": 202
+      },
+      "flags": {
+        "collapsed": true,
+        "pinned": true
+      },
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "images",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 249
+        },
+        {
+          "label": "new_width",
+          "name": "new_width",
+          "type": "INT",
+          "widget": {
+            "name": "new_width"
+          },
+          "link": 251
+        }
+      ],
+      "outputs": [
+        {
+          "label": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            247
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "SeedVR2"
+      },
+      "widgets_values": [
+        "seedvr2_ema_3b_fp8_e4m3fn.safetensors",
+        258,
+        "randomize",
+        1280,
+        1,
+        1,
+        true
+      ]
+    },
+    {
+      "id": 129,
+      "type": "TTP_Image_Assy",
+      "pos": {
+        "0": 946.7979125976562,
+        "1": 2644.298095703125
+      },
+      "size": {
+        "0": 418.1999816894531,
+        "1": 118
+      },
+      "flags": {
+        "collapsed": true,
+        "pinned": true
+      },
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "tiles",
+          "name": "tiles",
+          "type": "IMAGE",
+          "link": 247
+        },
+        {
+          "label": "positions",
+          "name": "positions",
+          "type": "LIST",
+          "link": 257
+        },
+        {
+          "label": "original_size",
+          "name": "original_size",
+          "type": "TUPLE",
+          "link": 258
+        },
+        {
+          "label": "grid_size",
+          "name": "grid_size",
+          "type": "TUPLE",
+          "link": 259
+        }
+      ],
+      "outputs": [
+        {
+          "label": "RECONSTRUCTED_IMAGE",
+          "name": "RECONSTRUCTED_IMAGE",
+          "type": "IMAGE",
+          "links": [
+            246
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "TTP_Image_Assy"
+      },
+      "widgets_values": [
+        128
+      ]
+    },
+    {
+      "id": 130,
+      "type": "ImageCASharpening+",
+      "pos": {
+        "0": 901.4518432617188,
+        "1": 2727.797607421875
+      },
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true,
+        "pinned": true
+      },
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 246
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            343
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "ImageCASharpening+"
+      },
+      "widgets_values": [
+        0.8
+      ]
+    },
+    {
+      "id": 133,
+      "type": "ImageCASharpening+",
+      "pos": {
+        "0": 893.8014526367188,
+        "1": 2429.673095703125
+      },
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true,
+        "pinned": true
+      },
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 337
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            249
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "ImageCASharpening+"
+      },
+      "widgets_values": [
+        0.8
+      ]
+    },
+    {
+      "id": 184,
+      "type": "LoadImage",
+      "pos": {
+        "0": -40,
+        "1": 2280
+      },
+      "size": {
+        "0": 604.7633056640625,
+        "1": 646.5379028320312
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            342
+          ]
+        },
+        {
+          "label": "遮罩",
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "1b58273b14cca6c57114142bd9d6b5af.jpg",
+        "image",
+        ""
+      ],
+      "color": "#232",
+      "bgcolor": "#353",
+      "_widget_cache_map": {
+        "查看图片.png": {
+          "value": "img/3b35de82128c4ff8a3d3ee94945ea0c5/17d44269a14f6958fec4a3771d3d46ee937f099e3793d8a59f5c55a18eaeaff8.png",
+          "name": "查看图片.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/3b35de82128c4ff8a3d3ee94945ea0c5/17d44269a14f6958fec4a3771d3d46ee937f099e3793d8a59f5c55a18eaeaff8.png",
+          "width": 1267,
+          "height": 950
+        },
+        "image.png": {
+          "value": "img/5feed2aded224d97bc2a41981ca43f71/577fb52827252e08116f6e0229c0587ed25729ca05e8e48cbabfecf7fcd3aaa8.png",
+          "name": "image.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/5feed2aded224d97bc2a41981ca43f71/577fb52827252e08116f6e0229c0587ed25729ca05e8e48cbabfecf7fcd3aaa8.png",
+          "width": 1536,
+          "height": 768
+        },
+        "1b58273b14cca6c57114142bd9d6b5af.jpg": {
+          "value": "img/5feed2aded224d97bc2a41981ca43f71/ab1b5aadc7f8bfed6745792638a9dc82ed0b355238c3ecfa6e8a92eae1190e1d.jpg",
+          "name": "1b58273b14cca6c57114142bd9d6b5af.jpg",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/5feed2aded224d97bc2a41981ca43f71/ab1b5aadc7f8bfed6745792638a9dc82ed0b355238c3ecfa6e8a92eae1190e1d.jpg",
+          "width": 960,
+          "height": 1200
+        }
+      }
+    },
+    {
+      "id": 180,
+      "type": "SimpleMath+",
+      "pos": {
+        "0": 735.3916015625,
+        "1": 2542.041015625
+      },
+      "size": {
+        "0": 315,
+        "1": 98
+      },
+      "flags": {
+        "collapsed": true,
+        "pinned": true
+      },
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "A",
+          "name": "a",
+          "shape": 7,
+          "type": "*",
+          "link": 330
+        },
+        {
+          "label": "B",
+          "name": "b",
+          "shape": 7,
+          "type": "*",
+          "link": 331
+        },
+        {
+          "name": "c",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "整数",
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            334,
+            335
+          ]
+        },
+        {
+          "label": "浮点",
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "SimpleMath+"
+      },
+      "widgets_values": [
+        "a*b/2-64"
+      ]
+    },
+    {
+      "id": 182,
+      "type": "Int",
+      "pos": {
+        "0": 744.4295654296875,
+        "1": 2491.606689453125
+      },
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true,
+        "pinned": true
+      },
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "整数",
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            331,
+            332,
+            333
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "Int"
+      },
+      "widgets_values": [
+        "2048"
+      ]
+    },
+    {
+      "id": 185,
+      "type": "SaveImage",
+      "pos": {
+        "0": 634.84716796875,
+        "1": 2276.001708984375
+      },
+      "size": {
+        "0": 600.9202880859375,
+        "1": 686.6300659179688
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 343
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "SeedVR2+TTP"
+      ]
+    },
+    {
+      "id": 181,
+      "type": "Int",
+      "pos": {
+        "0": -610,
+        "1": 2310
+      },
+      "size": {
+        "0": 357.22265625,
+        "1": 100.6365966796875
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "整数",
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            330
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "Int"
+      },
+      "widgets_values": [
+        "4"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    }
+  ],
+  "links": [
+    [
+      246,
+      129,
+      0,
+      130,
+      0,
+      "IMAGE"
+    ],
+    [
+      247,
+      132,
+      0,
+      129,
+      0,
+      "IMAGE"
+    ],
+    [
+      249,
+      133,
+      0,
+      132,
+      0,
+      "IMAGE"
+    ],
+    [
+      251,
+      134,
+      0,
+      132,
+      1,
+      "INT"
+    ],
+    [
+      252,
+      121,
+      0,
+      134,
+      0,
+      "*"
+    ],
+    [
+      253,
+      121,
+      1,
+      134,
+      1,
+      "*"
+    ],
+    [
+      257,
+      137,
+      1,
+      129,
+      1,
+      "LIST"
+    ],
+    [
+      258,
+      137,
+      2,
+      129,
+      2,
+      "TUPLE"
+    ],
+    [
+      259,
+      137,
+      3,
+      129,
+      3,
+      "TUPLE"
+    ],
+    [
+      260,
+      137,
+      0,
+      121,
+      0,
+      "IMAGE"
+    ],
+    [
+      262,
+      137,
+      0,
+      135,
+      0,
+      "*"
+    ],
+    [
+      330,
+      181,
+      0,
+      180,
+      0,
+      "*"
+    ],
+    [
+      331,
+      182,
+      0,
+      180,
+      1,
+      "*"
+    ],
+    [
+      332,
+      182,
+      0,
+      137,
+      1,
+      "INT"
+    ],
+    [
+      333,
+      182,
+      0,
+      137,
+      2,
+      "INT"
+    ],
+    [
+      334,
+      180,
+      0,
+      140,
+      1,
+      "INT"
+    ],
+    [
+      335,
+      180,
+      0,
+      140,
+      2,
+      "INT"
+    ],
+    [
+      336,
+      137,
+      0,
+      183,
+      0,
+      "IMAGE"
+    ],
+    [
+      337,
+      183,
+      0,
+      133,
+      0,
+      "IMAGE"
+    ],
+    [
+      339,
+      140,
+      0,
+      137,
+      0,
+      "IMAGE"
+    ],
+    [
+      342,
+      184,
+      0,
+      140,
+      0,
+      "IMAGE"
+    ],
+    [
+      343,
+      130,
+      0,
+      185,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 9,
+      "title": "2.上传原图",
+      "bounding": [
+        -70,
+        2160,
+        660,
+        820
+      ],
+      "color": "#8A8",
+      "font_size": 50,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 11,
+      "title": "保存图像",
+      "bounding": [
+        610,
+        2160,
+        640,
+        820
+      ],
+      "color": "#3f789e",
+      "font_size": 50,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 12,
+      "title": "1.设置放大尺寸",
+      "bounding": [
+        -790.6194458007812,
+        2159.59228515625,
+        704.5277709960938,
+        817.4017944335938
+      ],
+      "color": "#8A8",
+      "font_size": 50,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 13,
+      "title": "2代表2k分辨率",
+      "bounding": [
+        -610,
+        2430,
+        354.7916259765625,
+        80
+      ],
+      "color": "#8A8",
+      "font_size": 50,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 14,
+      "title": "4代表4k分辨率",
+      "bounding": [
+        -610,
+        2530,
+        354.43707275390625,
+        80
+      ],
+      "color": "#8A8",
+      "font_size": 50,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 15,
+      "title": "6代表6k分辨率",
+      "bounding": [
+        -610,
+        2620,
+        354.9615783691406,
+        80
+      ],
+      "color": "#8A8",
+      "font_size": 50,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 16,
+      "title": "8K也能出但是预览很慢",
+      "bounding": [
+        -610,
+        2730,
+        348.6906433105469,
+        80
+      ],
+      "color": "#8A8",
+      "font_size": 30,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 17,
+      "title": "预览不出来的时候，点左上角图库，选图下载",
+      "bounding": [
+        -720,
+        2820,
+        606.3159790039062,
+        80
+      ],
+      "color": "#b58b2a",
+      "font_size": 28,
+      "flags": {
+        "pinned": true
+      }
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.9646149645000008,
+      "offset": [
+        1280.5040369215878,
+        -2130.205311498619
+      ]
+    },
+    "linkExtensions": [
+      {
+        "id": 280,
+        "parentId": 1
+      },
+      {
+        "id": 293,
+        "parentId": 1
+      }
+    ],
+    "links_added_by_ue": [],
+    "VHS_KeepIntermediate": true,
+    "ue_links": [],
+    "VHS_MetadataImage": true,
+    "VHS_latentpreviewrate": 0,
+    "frontendVersion": "1.23.0",
+    "VHS_latentpreview": false,
+    "0246.VERSION": [
+      0,
+      0,
+      4
+    ]
+  },
+  "version": 0.4,
+  "seed_widgets": {
+    "132": 1
+  },
+  "widget_idx_map": {
+    "132": {
+      "seed": 1
+    }
+  }
+}

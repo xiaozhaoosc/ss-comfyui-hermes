@@ -1,0 +1,2629 @@
+{
+  "last_node_id": 65,
+  "last_link_id": 92,
+  "nodes": [
+    {
+      "id": 10,
+      "type": "easy preSampling",
+      "pos": [
+        -3304.760986328125,
+        304.03741455078125
+      ],
+      "size": [
+        315,
+        242
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pipe",
+          "type": "PIPE_LINE",
+          "link": 8
+        },
+        {
+          "name": "image_to_latent",
+          "type": "IMAGE",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "latent",
+          "type": "LATENT",
+          "shape": 7,
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "pipe",
+          "type": "PIPE_LINE",
+          "links": [
+            9
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "aux_id": "ComfyUI-Easy-Use.git",
+        "ver": "4738313b64ea3c15a74df3dbed27b5391ffc78c6",
+        "Node name for S&R": "easy preSampling"
+      },
+      "widgets_values": [
+        20,
+        8,
+        "euler",
+        "normal",
+        1,
+        621965894487674,
+        "randomize"
+      ]
+    },
+    {
+      "id": 16,
+      "type": "ImageListToBatch+",
+      "pos": [
+        -103.45221710205078,
+        266.94134521484375
+      ],
+      "size": [
+        214.20001220703125,
+        26
+      ],
+      "flags": {},
+      "order": 33,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "label": "image",
+          "type": "IMAGE",
+          "link": 18
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "label": "IMAGE",
+          "type": "IMAGE",
+          "shape": 3,
+          "links": [
+            17
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_essentials",
+        "ver": "33ff89fd354d8ec3ab6affb605a79a931b445d99",
+        "Node name for S&R": "ImageListToBatch+",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [],
+      "color": "#1f1f48"
+    },
+    {
+      "id": 25,
+      "type": "easy imageCount",
+      "pos": [
+        -103.45221710205078,
+        186.94134521484375
+      ],
+      "size": [
+        210,
+        26
+      ],
+      "flags": {},
+      "order": 34,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 29
+        }
+      ],
+      "outputs": [
+        {
+          "name": "count",
+          "type": "INT",
+          "links": [
+            32
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "aux_id": "ComfyUI-Easy-Use.git",
+        "ver": "4738313b64ea3c15a74df3dbed27b5391ffc78c6",
+        "Node name for S&R": "easy imageCount"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 27,
+      "type": "MathExpression|pysssss",
+      "pos": [
+        169.96102905273438,
+        185.35842895507812
+      ],
+      "size": [
+        210,
+        116
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 37,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "shape": 7,
+          "link": 32
+        },
+        {
+          "name": "b",
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "c",
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "shape": 7,
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            33
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "1.1.1"
+      },
+      "widgets_values": [
+        "a/2"
+      ]
+    },
+    {
+      "id": 17,
+      "type": "CR Image Grid Panel",
+      "pos": [
+        168.44613647460938,
+        359.86065673828125
+      ],
+      "size": [
+        210,
+        198
+      ],
+      "flags": {},
+      "order": 38,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "label": "images",
+          "type": "IMAGE",
+          "link": 17
+        },
+        {
+          "name": "max_columns",
+          "type": "INT",
+          "widget": {
+            "name": "max_columns"
+          },
+          "link": 33
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "label": "image",
+          "type": "IMAGE",
+          "shape": 3,
+          "links": [
+            19
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "show_help",
+          "label": "show_help",
+          "type": "STRING",
+          "shape": 3,
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "ComfyUI_Comfyroll_CustomNodes.git",
+        "ver": "d78b780ae43fcf8c6b7c6505e6ffb4584281ceca",
+        "Node name for S&R": "CR Image Grid Panel",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [
+        2,
+        "white",
+        0,
+        "white",
+        3,
+        "#000000"
+      ],
+      "color": "#1f1f48"
+    },
+    {
+      "id": 35,
+      "type": "easy forLoopStart",
+      "pos": [
+        -2544.273681640625,
+        1465.1480712890625
+      ],
+      "size": [
+        210,
+        118
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "initial_value1",
+          "label": "initial_value1",
+          "type": "*",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "initial_value2",
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "flow",
+          "label": "flow",
+          "type": "FLOW_CONTROL",
+          "shape": 5,
+          "links": [
+            47
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "index",
+          "label": "index",
+          "type": "INT",
+          "links": [
+            46
+          ],
+          "slot_index": 1
+        },
+        {
+          "name": "value1",
+          "label": "value1",
+          "type": "*",
+          "links": [
+            44
+          ],
+          "slot_index": 2
+        },
+        {
+          "name": "value2",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "ComfyUI-Easy-Use.git",
+        "ver": "4738313b64ea3c15a74df3dbed27b5391ffc78c6",
+        "Node name for S&R": "easy forLoopStart"
+      },
+      "widgets_values": [
+        3
+      ],
+      "color": "#1f1f48",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 33,
+      "type": "easy batchAnything",
+      "pos": [
+        -706.4235229492188,
+        1506.52734375
+      ],
+      "size": [
+        210,
+        46
+      ],
+      "flags": {},
+      "order": 29,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "any_1",
+          "label": "any_1",
+          "type": "*",
+          "link": 44
+        },
+        {
+          "name": "any_2",
+          "label": "any_2",
+          "type": "*",
+          "link": 56
+        }
+      ],
+      "outputs": [
+        {
+          "name": "batch",
+          "label": "batch",
+          "type": "*",
+          "links": [
+            48
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "aux_id": "ComfyUI-Easy-Use.git",
+        "ver": "4738313b64ea3c15a74df3dbed27b5391ffc78c6",
+        "Node name for S&R": "easy batchAnything",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [],
+      "color": "#1f1f48"
+    },
+    {
+      "id": 40,
+      "type": "easy forLoopStart",
+      "pos": [
+        -2223.59619140625,
+        1588.718017578125
+      ],
+      "size": [
+        210,
+        118
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "initial_value1",
+          "label": "initial_value1",
+          "type": "*",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "initial_value2",
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "flow",
+          "label": "flow",
+          "type": "FLOW_CONTROL",
+          "shape": 5,
+          "links": [
+            51
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "index",
+          "label": "index",
+          "type": "INT",
+          "links": [
+            58
+          ],
+          "slot_index": 1
+        },
+        {
+          "name": "value1",
+          "label": "value1",
+          "type": "*",
+          "links": [
+            54
+          ],
+          "slot_index": 2
+        },
+        {
+          "name": "value2",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "ComfyUI-Easy-Use.git",
+        "ver": "4738313b64ea3c15a74df3dbed27b5391ffc78c6",
+        "Node name for S&R": "easy forLoopStart"
+      },
+      "widgets_values": [
+        2
+      ],
+      "color": "#1f1f48",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 42,
+      "type": "easy forLoopEnd",
+      "pos": [
+        -955.6958618164062,
+        1588.677978515625
+      ],
+      "size": [
+        178,
+        66
+      ],
+      "flags": {},
+      "order": 27,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "flow",
+          "type": "FLOW_CONTROL",
+          "shape": 5,
+          "link": 51
+        },
+        {
+          "name": "initial_value1",
+          "type": "*",
+          "shape": 7,
+          "link": 55
+        },
+        {
+          "name": "initial_value2",
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "value1",
+          "type": "*",
+          "links": [
+            56
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "value2",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "ComfyUI-Easy-Use.git",
+        "ver": "4738313b64ea3c15a74df3dbed27b5391ffc78c6",
+        "Node name for S&R": "easy forLoopEnd"
+      },
+      "widgets_values": [],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 37,
+      "type": "easy forLoopEnd",
+      "pos": [
+        -417.4472961425781,
+        1465.14892578125
+      ],
+      "size": [
+        178,
+        66
+      ],
+      "flags": {},
+      "order": 32,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "flow",
+          "type": "FLOW_CONTROL",
+          "shape": 5,
+          "link": 47
+        },
+        {
+          "name": "initial_value1",
+          "type": "*",
+          "shape": 7,
+          "link": 48
+        },
+        {
+          "name": "initial_value2",
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "value1",
+          "type": "*",
+          "links": [
+            69
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "value2",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "ComfyUI-Easy-Use.git",
+        "ver": "4738313b64ea3c15a74df3dbed27b5391ffc78c6",
+        "Node name for S&R": "easy forLoopEnd"
+      },
+      "widgets_values": [],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 52,
+      "type": "SaveImage",
+      "pos": [
+        -660.7959594726562,
+        1679.20947265625
+      ],
+      "size": [
+        589.82470703125,
+        664.6669311523438
+      ],
+      "flags": {},
+      "order": 36,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 69
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.15",
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "forloop/grid"
+      ]
+    },
+    {
+      "id": 36,
+      "type": "MathExpression|pysssss",
+      "pos": [
+        -2515.3759765625,
+        1641.104248046875
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 8,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "a",
+          "label": "a",
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "shape": 7,
+          "link": 46
+        },
+        {
+          "name": "b",
+          "label": "b",
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "c",
+          "label": "c",
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "shape": 7,
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "label": "INT",
+          "type": "INT",
+          "links": [],
+          "slot_index": 0
+        },
+        {
+          "name": "FLOAT",
+          "label": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            40,
+            41,
+            71
+          ],
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "1.1.1",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [
+        "0.5+0.2*a"
+      ],
+      "color": "#1f1f48"
+    },
+    {
+      "id": 34,
+      "type": "CR Text",
+      "pos": [
+        -2494.712158203125,
+        2053.424072265625
+      ],
+      "size": [
+        210,
+        207.53952026367188
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "*",
+          "links": [
+            42
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "show_help",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "ComfyUI_Comfyroll_CustomNodes.git",
+        "ver": "d78b780ae43fcf8c6b7c6505e6ffb4584281ceca",
+        "Node name for S&R": "CR Text"
+      },
+      "widgets_values": [
+        "a man having beer at bar, everning "
+      ]
+    },
+    {
+      "id": 47,
+      "type": "CR Text",
+      "pos": [
+        -2233.521728515625,
+        1756.6761474609375
+      ],
+      "size": [
+        357.5158996582031,
+        96
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "*",
+          "links": [
+            57
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "show_help",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "ComfyUI_Comfyroll_CustomNodes.git",
+        "ver": "d78b780ae43fcf8c6b7c6505e6ffb4584281ceca",
+        "Node name for S&R": "CR Text"
+      },
+      "widgets_values": [
+        "other\\pixel sprites.safetensors\nlesson\\超级人物线稿_v1.0.safetensors"
+      ]
+    },
+    {
+      "id": 46,
+      "type": "Text Load Line From File",
+      "pos": [
+        -2215.208740234375,
+        1905.083984375
+      ],
+      "size": [
+        315,
+        198
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "multiline_text",
+          "type": "STRING",
+          "shape": 7,
+          "widget": {
+            "name": "multiline_text"
+          },
+          "link": 57
+        },
+        {
+          "name": "index",
+          "type": "INT",
+          "widget": {
+            "name": "index"
+          },
+          "link": 58
+        }
+      ],
+      "outputs": [
+        {
+          "name": "line_text",
+          "type": "STRING",
+          "links": [
+            62,
+            72
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "dictionary",
+          "type": "DICT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "was-node-suite-comfyui",
+        "ver": "3ed45af34a14551dc28cb3127235cc7197d4633f",
+        "Node name for S&R": "Text Load Line From File"
+      },
+      "widgets_values": [
+        "",
+        "[filename]",
+        "TextBatch",
+        "index",
+        0,
+        ""
+      ]
+    },
+    {
+      "id": 49,
+      "type": "CR String To Combo",
+      "pos": [
+        -2214.345703125,
+        2156.990478515625
+      ],
+      "size": [
+        315,
+        78
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": 62
+        }
+      ],
+      "outputs": [
+        {
+          "name": "any",
+          "type": "*",
+          "links": [
+            67
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "show_help",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "ComfyUI_Comfyroll_CustomNodes.git",
+        "ver": "d78b780ae43fcf8c6b7c6505e6ffb4584281ceca",
+        "Node name for S&R": "CR String To Combo"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 53,
+      "type": "StringFunction|pysssss",
+      "pos": [
+        -1719.859375,
+        3007.4296875
+      ],
+      "size": [
+        400,
+        224
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 15,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "text_a",
+          "type": "STRING",
+          "shape": 7,
+          "widget": {
+            "name": "text_a"
+          },
+          "link": 72
+        },
+        {
+          "name": "text_b",
+          "type": "STRING",
+          "shape": 7,
+          "widget": {
+            "name": "text_b"
+          },
+          "link": 70
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            73
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "1.1.1",
+        "Node name for S&R": "StringFunction|pysssss"
+      },
+      "widgets_values": [
+        "append",
+        "yes",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": 54,
+      "type": "CR Float To String",
+      "pos": [
+        -1699.859375,
+        2797.35986328125
+      ],
+      "size": [
+        315,
+        78
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 12,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "float_",
+          "type": "FLOAT",
+          "widget": {
+            "name": "float_"
+          },
+          "link": 71
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            70
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "show_help",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "ComfyUI_Comfyroll_CustomNodes.git",
+        "ver": "d78b780ae43fcf8c6b7c6505e6ffb4584281ceca",
+        "Node name for S&R": "CR Float To String"
+      },
+      "widgets_values": [
+        0
+      ]
+    },
+    {
+      "id": 31,
+      "type": "easy a1111Loader",
+      "pos": [
+        -1733.9754638671875,
+        2324.935302734375
+      ],
+      "size": [
+        362.6794128417969,
+        354.8995056152344
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "optional_lora_stack",
+          "type": "LORA_STACK",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "optional_controlnet_stack",
+          "type": "CONTROL_NET_STACK",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "lora_model_strength",
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_model_strength"
+          },
+          "link": 40
+        },
+        {
+          "name": "lora_clip_strength",
+          "type": "FLOAT",
+          "widget": {
+            "name": "lora_clip_strength"
+          },
+          "link": 41
+        },
+        {
+          "name": "positive",
+          "type": "STRING",
+          "widget": {
+            "name": "positive"
+          },
+          "link": 42
+        },
+        {
+          "name": "lora_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "lora_name"
+          },
+          "link": 67
+        }
+      ],
+      "outputs": [
+        {
+          "name": "pipe",
+          "type": "PIPE_LINE",
+          "links": [
+            39
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": null
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "ComfyUI-Easy-Use.git",
+        "ver": "4738313b64ea3c15a74df3dbed27b5391ffc78c6",
+        "Node name for S&R": "easy a1111Loader"
+      },
+      "widgets_values": [
+        "sd15\\儿童插画绘本Minimalism_v2.0.safetensors",
+        "Baked VAE",
+        -2,
+        "lesson\\超级人物线稿_v1.0.safetensors",
+        0.65,
+        1,
+        "512 x 512",
+        512,
+        512,
+        "1 boy running in town ",
+        "",
+        1,
+        false
+      ]
+    },
+    {
+      "id": 43,
+      "type": "easy batchAnything",
+      "pos": [
+        -1261.8104248046875,
+        1637.0386962890625
+      ],
+      "size": [
+        210,
+        46
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "any_1",
+          "label": "any_1",
+          "type": "*",
+          "link": 54
+        },
+        {
+          "name": "any_2",
+          "label": "any_2",
+          "type": "*",
+          "link": 66
+        }
+      ],
+      "outputs": [
+        {
+          "name": "batch",
+          "label": "batch",
+          "type": "*",
+          "links": [
+            55
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "aux_id": "ComfyUI-Easy-Use.git",
+        "ver": "4738313b64ea3c15a74df3dbed27b5391ffc78c6",
+        "Node name for S&R": "easy batchAnything",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [],
+      "color": "#1f1f48"
+    },
+    {
+      "id": 51,
+      "type": "CR Overlay Text",
+      "pos": [
+        -1248.7354736328125,
+        2975.0732421875
+      ],
+      "size": [
+        400,
+        384
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 64
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": 73
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            66
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "show_help",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "ComfyUI_Comfyroll_CustomNodes.git",
+        "ver": "d78b780ae43fcf8c6b7c6505e6ffb4584281ceca",
+        "Node name for S&R": "CR Overlay Text"
+      },
+      "widgets_values": [
+        "text",
+        "FZDHTJW.ttf",
+        12,
+        "custom",
+        "top",
+        "center",
+        0,
+        0,
+        0,
+        0,
+        0,
+        "text center",
+        "#000000"
+      ]
+    },
+    {
+      "id": 32,
+      "type": "easy kSampler",
+      "pos": [
+        -1253.5113525390625,
+        2560.661865234375
+      ],
+      "size": [
+        315,
+        290
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "pipe",
+          "type": "PIPE_LINE",
+          "link": 43
+        },
+        {
+          "name": "model",
+          "type": "MODEL",
+          "shape": 7,
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "pipe",
+          "type": "PIPE_LINE",
+          "links": null
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            64
+          ],
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "aux_id": "ComfyUI-Easy-Use.git",
+        "ver": "4738313b64ea3c15a74df3dbed27b5391ffc78c6",
+        "Node name for S&R": "easy kSampler"
+      },
+      "widgets_values": [
+        "Preview",
+        0,
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 30,
+      "type": "easy preSampling",
+      "pos": [
+        -1253.525390625,
+        2246.373779296875
+      ],
+      "size": [
+        315,
+        242
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "pipe",
+          "type": "PIPE_LINE",
+          "link": 39
+        },
+        {
+          "name": "image_to_latent",
+          "type": "IMAGE",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "latent",
+          "type": "LATENT",
+          "shape": 7,
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "pipe",
+          "type": "PIPE_LINE",
+          "links": [
+            43
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "aux_id": "ComfyUI-Easy-Use.git",
+        "ver": "4738313b64ea3c15a74df3dbed27b5391ffc78c6",
+        "Node name for S&R": "easy preSampling"
+      },
+      "widgets_values": [
+        20,
+        8,
+        "euler",
+        "normal",
+        1,
+        351895310643883,
+        "randomize"
+      ]
+    },
+    {
+      "id": 58,
+      "type": "AIO_Preprocessor",
+      "pos": [
+        -2340,
+        850
+      ],
+      "size": [
+        315,
+        82
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 92
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            78,
+            79
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_controlnet_aux",
+        "ver": "1e9eac6377c882da8bb360c7544607036904362c",
+        "Node name for S&R": "AIO_Preprocessor"
+      },
+      "widgets_values": [
+        "CannyEdgePreprocessor",
+        512
+      ]
+    },
+    {
+      "id": 56,
+      "type": "easy controlnetStack",
+      "pos": [
+        -1998.7037353515625,
+        431.73583984375
+      ],
+      "size": [
+        342.5999755859375,
+        238
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "optional_controlnet_stack",
+          "type": "CONTROL_NET_STACK",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "image_1",
+          "type": "IMAGE",
+          "shape": 7,
+          "link": 79
+        },
+        {
+          "name": "image_2",
+          "type": "IMAGE",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "image_3",
+          "type": "IMAGE",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "controlnet_1_strength",
+          "type": "FLOAT",
+          "shape": 7,
+          "widget": {
+            "name": "controlnet_1_strength"
+          },
+          "link": 75
+        }
+      ],
+      "outputs": [
+        {
+          "name": "controlnet_stack",
+          "type": "CONTROL_NET_STACK",
+          "links": [
+            74
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "ComfyUI-Easy-Use.git",
+        "ver": "4738313b64ea3c15a74df3dbed27b5391ffc78c6",
+        "Node name for S&R": "easy controlnetStack"
+      },
+      "widgets_values": [
+        true,
+        "simple",
+        1,
+        "sd15\\control_v11p_sd15_canny.pth",
+        1,
+        0,
+        1,
+        1,
+        "None",
+        1,
+        0,
+        1,
+        1,
+        "None",
+        1,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "id": 12,
+      "type": "easy a1111Loader",
+      "pos": [
+        -1625.778076171875,
+        415.6546630859375
+      ],
+      "size": [
+        400,
+        386
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "optional_lora_stack",
+          "type": "LORA_STACK",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "optional_controlnet_stack",
+          "type": "CONTROL_NET_STACK",
+          "shape": 7,
+          "link": 74
+        },
+        {
+          "name": "positive",
+          "type": "STRING",
+          "widget": {
+            "name": "positive"
+          },
+          "link": 38
+        }
+      ],
+      "outputs": [
+        {
+          "name": "pipe",
+          "type": "PIPE_LINE",
+          "links": [
+            12
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": null
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "ComfyUI-Easy-Use.git",
+        "ver": "4738313b64ea3c15a74df3dbed27b5391ffc78c6",
+        "Node name for S&R": "easy a1111Loader"
+      },
+      "widgets_values": [
+        "sd15\\dreamshaper_8.safetensors",
+        "Baked VAE",
+        -2,
+        "None",
+        0.65,
+        1,
+        "768 x 512",
+        512,
+        512,
+        "1 boy running in town ",
+        "embedding:EasyNegative, ",
+        1,
+        false
+      ]
+    },
+    {
+      "id": 14,
+      "type": "easy preSampling",
+      "pos": [
+        -1210,
+        420
+      ],
+      "size": [
+        315,
+        242
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pipe",
+          "type": "PIPE_LINE",
+          "link": 12
+        },
+        {
+          "name": "image_to_latent",
+          "type": "IMAGE",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "latent",
+          "type": "LATENT",
+          "shape": 7,
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "pipe",
+          "type": "PIPE_LINE",
+          "links": [
+            11
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "aux_id": "ComfyUI-Easy-Use.git",
+        "ver": "4738313b64ea3c15a74df3dbed27b5391ffc78c6",
+        "Node name for S&R": "easy preSampling"
+      },
+      "widgets_values": [
+        20,
+        8,
+        "euler",
+        "normal",
+        1,
+        613415730055669,
+        "randomize"
+      ]
+    },
+    {
+      "id": 28,
+      "type": "CR Text",
+      "pos": [
+        -1556.281005859375,
+        260.6430969238281
+      ],
+      "size": [
+        268.4156494140625,
+        96
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "*",
+          "links": [
+            38
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "show_help",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "ComfyUI_Comfyroll_CustomNodes.git",
+        "ver": "d78b780ae43fcf8c6b7c6505e6ffb4584281ceca",
+        "Node name for S&R": "CR Text"
+      },
+      "widgets_values": [
+        "(masterpiece:1.2),(high quality:1.15),sports car running in city, building ,blue sky, road "
+      ]
+    },
+    {
+      "id": 59,
+      "type": "PreviewImage",
+      "pos": [
+        -1944.6243896484375,
+        727.1632080078125
+      ],
+      "size": [
+        248.9437713623047,
+        345.837646484375
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 78
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.15",
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 8,
+      "type": "MathExpression|pysssss",
+      "pos": [
+        -1963.6107177734375,
+        250.4093475341797
+      ],
+      "size": [
+        282.1950988769531,
+        122.71998596191406
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "label": "a",
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "shape": 7,
+          "link": 82
+        },
+        {
+          "name": "b",
+          "label": "b",
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "c",
+          "label": "c",
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "shape": 7,
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "label": "INT",
+          "type": "INT",
+          "links": [],
+          "slot_index": 0
+        },
+        {
+          "name": "FLOAT",
+          "label": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            75
+          ],
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "1.1.1",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [
+        "0.5+0.2*a"
+      ],
+      "color": "#1f1f48"
+    },
+    {
+      "id": 13,
+      "type": "easy kSampler",
+      "pos": [
+        -1202.801025390625,
+        721.0020141601562
+      ],
+      "size": [
+        315,
+        290
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pipe",
+          "type": "PIPE_LINE",
+          "link": 11
+        },
+        {
+          "name": "model",
+          "type": "MODEL",
+          "shape": 7,
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "pipe",
+          "type": "PIPE_LINE",
+          "links": null
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            14
+          ],
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "aux_id": "ComfyUI-Easy-Use.git",
+        "ver": "4738313b64ea3c15a74df3dbed27b5391ffc78c6",
+        "Node name for S&R": "easy kSampler"
+      },
+      "widgets_values": [
+        "Preview",
+        0,
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 7,
+      "type": "easy forLoopEnd",
+      "pos": [
+        -895.2465209960938,
+        147.18313598632812
+      ],
+      "size": [
+        178,
+        66
+      ],
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "flow",
+          "type": "FLOW_CONTROL",
+          "shape": 5,
+          "link": 6
+        },
+        {
+          "name": "initial_value1",
+          "type": "*",
+          "shape": 7,
+          "link": 36
+        },
+        {
+          "name": "initial_value2",
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "value1",
+          "type": "*",
+          "links": [
+            18,
+            29,
+            31
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "value2",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "ComfyUI-Easy-Use.git",
+        "ver": "4738313b64ea3c15a74df3dbed27b5391ffc78c6",
+        "Node name for S&R": "easy forLoopEnd"
+      },
+      "widgets_values": [],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 26,
+      "type": "PreviewImage",
+      "pos": [
+        -802.6998901367188,
+        349.0411376953125
+      ],
+      "size": [
+        456.1470642089844,
+        650.3697509765625
+      ],
+      "flags": {},
+      "order": 35,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 31
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.15",
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 15,
+      "type": "easy batchAnything",
+      "pos": [
+        -1175.8160400390625,
+        220.1942138671875
+      ],
+      "size": [
+        210,
+        46
+      ],
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "any_1",
+          "label": "any_1",
+          "type": "*",
+          "link": 15
+        },
+        {
+          "name": "any_2",
+          "label": "any_2",
+          "type": "*",
+          "link": 14
+        }
+      ],
+      "outputs": [
+        {
+          "name": "batch",
+          "label": "batch",
+          "type": "*",
+          "links": [
+            36,
+            91
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "aux_id": "ComfyUI-Easy-Use.git",
+        "ver": "4738313b64ea3c15a74df3dbed27b5391ffc78c6",
+        "Node name for S&R": "easy batchAnything",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [],
+      "color": "#1f1f48"
+    },
+    {
+      "id": 9,
+      "type": "easy a1111Loader",
+      "pos": [
+        -3741.689208984375,
+        304.03741455078125
+      ],
+      "size": [
+        400,
+        386
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "optional_lora_stack",
+          "type": "LORA_STACK",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "optional_controlnet_stack",
+          "type": "CONTROL_NET_STACK",
+          "shape": 7,
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "pipe",
+          "type": "PIPE_LINE",
+          "links": [
+            8
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": null
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "ComfyUI-Easy-Use.git",
+        "ver": "4738313b64ea3c15a74df3dbed27b5391ffc78c6",
+        "Node name for S&R": "easy a1111Loader"
+      },
+      "widgets_values": [
+        "AYU_阿屿_写实大模型_V1.safetensors",
+        "Baked VAE",
+        -2,
+        "None",
+        1,
+        1,
+        "512 x 512",
+        512,
+        512,
+        "(masterpiece:1.2),(high quality:1.15),sports car running in city, building ,blue sky, road ",
+        "embedding:EasyNegative,",
+        1,
+        false
+      ]
+    },
+    {
+      "id": 11,
+      "type": "easy kSampler",
+      "pos": [
+        -2955.91796875,
+        305.01043701171875
+      ],
+      "size": [
+        382.68426513671875,
+        396.23858642578125
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pipe",
+          "type": "PIPE_LINE",
+          "link": 9
+        },
+        {
+          "name": "model",
+          "type": "MODEL",
+          "shape": 7,
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "pipe",
+          "type": "PIPE_LINE",
+          "links": null
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            92
+          ],
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "aux_id": "ComfyUI-Easy-Use.git",
+        "ver": "4738313b64ea3c15a74df3dbed27b5391ffc78c6",
+        "Node name for S&R": "easy kSampler"
+      },
+      "widgets_values": [
+        "Preview",
+        0,
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 57,
+      "type": "LoadImage",
+      "pos": [
+        -2329.259033203125,
+        487.83447265625
+      ],
+      "size": [
+        292.7241516113281,
+        314
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [],
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.15",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "Snipaste_2025-03-10_15-08-41.jpg",
+        "image"
+      ]
+    },
+    {
+      "id": 18,
+      "type": "PreviewImage",
+      "pos": [
+        -87.0957260131836,
+        619.0272827148438
+      ],
+      "size": [
+        491.75250244140625,
+        486.6141357421875
+      ],
+      "flags": {},
+      "order": 39,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 19
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.15",
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 1,
+      "type": "easy forLoopStart",
+      "pos": [
+        -2321.35595703125,
+        145.4412384033203
+      ],
+      "size": [
+        210,
+        118
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "initial_value1",
+          "label": "initial_value1",
+          "type": "*",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "initial_value2",
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "flow",
+          "label": "flow",
+          "type": "FLOW_CONTROL",
+          "shape": 5,
+          "links": [
+            6
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "index",
+          "label": "index",
+          "type": "INT",
+          "links": [
+            82
+          ],
+          "slot_index": 1
+        },
+        {
+          "name": "value1",
+          "label": "value1",
+          "type": "*",
+          "links": [
+            15
+          ],
+          "slot_index": 2
+        },
+        {
+          "name": "value2",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "ComfyUI-Easy-Use.git",
+        "ver": "4738313b64ea3c15a74df3dbed27b5391ffc78c6",
+        "Node name for S&R": "easy forLoopStart"
+      },
+      "widgets_values": [
+        4
+      ],
+      "color": "#1f1f48",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 65,
+      "type": "PreviewImage",
+      "pos": [
+        -1346.568603515625,
+        -461.5705261230469
+      ],
+      "size": [
+        1070.859130859375,
+        497.0711669921875
+      ],
+      "flags": {},
+      "order": 31,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 91
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.15",
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    }
+  ],
+  "links": [
+    [
+      6,
+      1,
+      0,
+      7,
+      0,
+      "FLOW_CONTROL"
+    ],
+    [
+      8,
+      9,
+      0,
+      10,
+      0,
+      "PIPE_LINE"
+    ],
+    [
+      9,
+      10,
+      0,
+      11,
+      0,
+      "PIPE_LINE"
+    ],
+    [
+      11,
+      14,
+      0,
+      13,
+      0,
+      "PIPE_LINE"
+    ],
+    [
+      12,
+      12,
+      0,
+      14,
+      0,
+      "PIPE_LINE"
+    ],
+    [
+      14,
+      13,
+      1,
+      15,
+      1,
+      "*"
+    ],
+    [
+      15,
+      1,
+      2,
+      15,
+      0,
+      "*"
+    ],
+    [
+      17,
+      16,
+      0,
+      17,
+      0,
+      "IMAGE"
+    ],
+    [
+      18,
+      7,
+      0,
+      16,
+      0,
+      "IMAGE"
+    ],
+    [
+      19,
+      17,
+      0,
+      18,
+      0,
+      "IMAGE"
+    ],
+    [
+      29,
+      7,
+      0,
+      25,
+      0,
+      "IMAGE"
+    ],
+    [
+      31,
+      7,
+      0,
+      26,
+      0,
+      "IMAGE"
+    ],
+    [
+      32,
+      25,
+      0,
+      27,
+      0,
+      "INT,FLOAT,IMAGE,LATENT"
+    ],
+    [
+      33,
+      27,
+      0,
+      17,
+      1,
+      "INT"
+    ],
+    [
+      36,
+      15,
+      0,
+      7,
+      1,
+      "*"
+    ],
+    [
+      38,
+      28,
+      0,
+      12,
+      2,
+      "STRING"
+    ],
+    [
+      39,
+      31,
+      0,
+      30,
+      0,
+      "PIPE_LINE"
+    ],
+    [
+      40,
+      36,
+      1,
+      31,
+      2,
+      "FLOAT"
+    ],
+    [
+      41,
+      36,
+      1,
+      31,
+      3,
+      "FLOAT"
+    ],
+    [
+      42,
+      34,
+      0,
+      31,
+      4,
+      "STRING"
+    ],
+    [
+      43,
+      30,
+      0,
+      32,
+      0,
+      "PIPE_LINE"
+    ],
+    [
+      44,
+      35,
+      2,
+      33,
+      0,
+      "*"
+    ],
+    [
+      46,
+      35,
+      1,
+      36,
+      0,
+      "INT,FLOAT,IMAGE,LATENT"
+    ],
+    [
+      47,
+      35,
+      0,
+      37,
+      0,
+      "FLOW_CONTROL"
+    ],
+    [
+      48,
+      33,
+      0,
+      37,
+      1,
+      "*"
+    ],
+    [
+      51,
+      40,
+      0,
+      42,
+      0,
+      "FLOW_CONTROL"
+    ],
+    [
+      54,
+      40,
+      2,
+      43,
+      0,
+      "*"
+    ],
+    [
+      55,
+      43,
+      0,
+      42,
+      1,
+      "*"
+    ],
+    [
+      56,
+      42,
+      0,
+      33,
+      1,
+      "*"
+    ],
+    [
+      57,
+      47,
+      0,
+      46,
+      0,
+      "STRING"
+    ],
+    [
+      58,
+      40,
+      1,
+      46,
+      1,
+      "INT"
+    ],
+    [
+      62,
+      46,
+      0,
+      49,
+      0,
+      "STRING"
+    ],
+    [
+      64,
+      32,
+      1,
+      51,
+      0,
+      "IMAGE"
+    ],
+    [
+      66,
+      51,
+      0,
+      43,
+      1,
+      "*"
+    ],
+    [
+      67,
+      49,
+      0,
+      31,
+      5,
+      "COMBO"
+    ],
+    [
+      69,
+      37,
+      0,
+      52,
+      0,
+      "IMAGE"
+    ],
+    [
+      70,
+      54,
+      0,
+      53,
+      1,
+      "STRING"
+    ],
+    [
+      71,
+      36,
+      1,
+      54,
+      0,
+      "FLOAT"
+    ],
+    [
+      72,
+      46,
+      0,
+      53,
+      0,
+      "STRING"
+    ],
+    [
+      73,
+      53,
+      0,
+      51,
+      1,
+      "STRING"
+    ],
+    [
+      74,
+      56,
+      0,
+      12,
+      1,
+      "CONTROL_NET_STACK"
+    ],
+    [
+      75,
+      8,
+      1,
+      56,
+      4,
+      "FLOAT"
+    ],
+    [
+      78,
+      58,
+      0,
+      59,
+      0,
+      "IMAGE"
+    ],
+    [
+      79,
+      58,
+      0,
+      56,
+      1,
+      "IMAGE"
+    ],
+    [
+      82,
+      1,
+      1,
+      8,
+      0,
+      "INT,FLOAT,IMAGE,LATENT"
+    ],
+    [
+      91,
+      15,
+      0,
+      65,
+      0,
+      "IMAGE"
+    ],
+    [
+      92,
+      11,
+      1,
+      58,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "上游",
+      "bounding": [
+        -3784.7587890625,
+        170.49801635742188,
+        1324.946533203125,
+        829.778076171875
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "循环部分",
+      "bounding": [
+        -2354.426025390625,
+        110.94940185546875,
+        1708.041015625,
+        1000.0032958984375
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "后续流程",
+      "bounding": [
+        -113.45215606689453,
+        113.34135437011719,
+        553.99169921875,
+        1027.8309326171875
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.20992832109440868,
+      "offset": [
+        6205.114086232046,
+        1303.382274010753
+      ]
+    }
+  },
+  "version": 0.4
+}

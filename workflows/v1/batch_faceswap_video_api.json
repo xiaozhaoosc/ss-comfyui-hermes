@@ -1,0 +1,66 @@
+{
+  "prompt": {
+    "1": {
+      "class_type": "VHS_LoadVideo",
+      "inputs": {
+        "video": "INPUT_VIDEO_PLACEHOLDER",
+        "force_rate": 0,
+        "force_size": "Disabled",
+        "custom_width": 512,
+        "custom_height": 512,
+        "frame_load_cap": 0,
+        "skip_first_frames": 0,
+        "select_every_nth": 1
+      }
+    },
+    "2": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "FACE_IMAGE_PLACEHOLDER"
+      }
+    },
+    "3": {
+      "class_type": "ReActorFaceSwap",
+      "inputs": {
+        "enabled": true,
+        "input_image": [
+          "1",
+          0
+        ],
+        "source_image": [
+          "2",
+          0
+        ],
+        "swap_model": "inswapper_128.onnx",
+        "facedetection": "retinaface_resnet50",
+        "face_restore_model": "none",
+        "face_restore_visibility": 1.0,
+        "codeformer_weight": 0.5,
+        "detect_gender_input": "no",
+        "detect_gender_source": "no",
+        "input_faces_index": "0",
+        "source_faces_index": "0",
+        "console_log_level": 1
+      }
+    },
+    "4": {
+      "class_type": "VHS_VideoCombine",
+      "inputs": {
+        "images": [
+          "3",
+          0
+        ],
+        "audio": [
+          "1",
+          2
+        ],
+        "frame_rate": 30,
+        "loop_count": 0,
+        "filename_prefix": "OUTPUT_PREFIX_PLACEHOLDER",
+        "format": "video/h264-mp4",
+        "pingpong": false,
+        "save_output": true
+      }
+    }
+  }
+}

@@ -27,3 +27,35 @@ uv.lock
 
 # Hermes cache (junction to D:\OLLAMA_MODELS\cache)
 /.cache/
+
+# AI agent 会话记录（可能含对话历史，敏感）
+/.agent/
+/.agents/
+
+# 临时帧目录与生成物
+/temp_faceswap_frames/
+/temp_faceswap_xiaozhan/
+/temp_frames/
+
+# 测试输入数据
+/test_images/
+/test_inputs/
+
+# 截图与个人项目资料
+comfyui_interface_screenshot.png
+/zombie_girlfriend_project/
+/AI形象申诉材料包_README.md
+
+# 误创建的空文件
+/0.26.0
+
+# GFPGAN 模型目录
+/gfpgan/
+
+# 项目运行数据
+/projects/
+
+# 工具目录下的模型文件（体积过大，不入库）
+/tools/models/
+# 任何 .tmp 临时下载文件
+*.tmp

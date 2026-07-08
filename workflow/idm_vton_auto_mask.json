@@ -1,0 +1,115 @@
+{
+  "1": {
+    "class_type": "LoadImage",
+    "_meta": {"title": "Load Human Image"},
+    "inputs": {
+      "image": "vton/human.jpg",
+      "upload": "image"
+    }
+  },
+  "2": {
+    "class_type": "LoadImage",
+    "_meta": {"title": "Load Garment Image"},
+    "inputs": {
+      "image": "vton/garment.jpg",
+      "upload": "image"
+    }
+  },
+  "3": {
+    "class_type": "LayerMask: SegformerB2ClothesUltra",
+    "_meta": {"title": "Auto Mask - Upper Clothes"},
+    "inputs": {
+      "image": ["1", 0],
+      "face": false,
+      "hair": false,
+      "hat": false,
+      "sunglass": false,
+      "left_arm": false,
+      "right_arm": false,
+      "left_leg": false,
+      "right_leg": false,
+      "upper_clothes": true,
+      "skirt": false,
+      "pants": false,
+      "dress": false,
+      "belt": false,
+      "shoe": false,
+      "bag": false,
+      "scarf": false,
+      "detail_method": "VITMatte",
+      "detail_erode": 6,
+      "detail_dilate": 6,
+      "black_point": 0.15,
+      "white_point": 0.99,
+      "process_detail": true,
+      "device": "cuda",
+      "max_megapixels": 2.0
+    }
+  },
+  "4": {
+    "class_type": "DensePosePreprocessor",
+    "_meta": {"title": "DensePose Estimator"},
+    "inputs": {
+      "image": ["1", 0],
+      "model": "densepose_r50_fpn_dl.torchscript",
+      "cmap": "Viridis (MagicAnimate)",
+      "resolution": 768
+    }
+  },
+  "5": {
+    "class_type": "PipelineLoader",
+    "_meta": {"title": "Load IDM-VTON Pipeline"},
+    "inputs": {
+      "weight_dtype": "float16"
+    }
+  },
+  "10": {
+    "class_type": "MaskToImage",
+    "_meta": {"title": "Convert Mask to Image"},
+    "inputs": {
+      "mask": ["3", 1]
+    }
+  },
+  "6": {
+    "class_type": "IDM-VTON",
+    "_meta": {"title": "Run IDM-VTON Inference"},
+    "inputs": {
+      "pipeline": ["5", 0],
+      "human_img": ["1", 0],
+      "pose_img": ["4", 0],
+      "mask_img": ["10", 0],
+      "garment_img": ["2", 0],
+      "garment_description": "a white short-sleeve t-shirt",
+      "negative_prompt": "monochrome, lowres, bad anatomy, worst quality, low quality",
+      "width": 768,
+      "height": 1024,
+      "num_inference_steps": 30,
+      "guidance_scale": 2.0,
+      "strength": 1.0,
+      "seed": 42
+    }
+  },
+  "7": {
+    "class_type": "SaveImage",
+    "_meta": {"title": "Save Result"},
+    "inputs": {
+      "images": ["6", 0],
+      "filename_prefix": "idm_vton_test"
+    }
+  },
+  "8": {
+    "class_type": "MaskToImage",
+    "_meta": {"title": "Mask Preview"},
+    "inputs": {
+      "mask": ["3", 1]
+    }
+  },
+  "9": {
+    "class_type": "SaveImage",
+    "_meta": {"title": "Save Mask Preview"},
+    "inputs": {
+      "images": ["8", 0],
+      "filename_prefix": "idm_vton_mask"
+    }
+  }
+}

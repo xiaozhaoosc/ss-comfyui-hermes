@@ -1,0 +1,84 @@
+{
+  "1": {
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Human Image"
+    },
+    "inputs": {
+      "image": "vton/person.png",
+      "upload": "image"
+    }
+  },
+  "2": {
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Garment Image"
+    },
+    "inputs": {
+      "image": "vton/garment.jpg",
+      "upload": "image"
+    }
+  },
+  "3": {
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Mask Image"
+    },
+    "inputs": {
+      "image": "vton/mask.png",
+      "upload": "image"
+    }
+  },
+  "4": {
+    "class_type": "DensePosePreprocessor",
+    "_meta": {
+      "title": "DensePose Estimator"
+    },
+    "inputs": {
+      "image": ["1", 0],
+      "model": "densepose_r50_fpn_dl.torchscript",
+      "cmap": "Viridis (MagicAnimate)",
+      "resolution": 768
+    }
+  },
+  "5": {
+    "class_type": "PipelineLoader",
+    "_meta": {
+      "title": "Load IDM-VTON Pipeline"
+    },
+    "inputs": {
+      "weight_dtype": "float16"
+    }
+  },
+  "6": {
+    "class_type": "IDM-VTON",
+    "_meta": {
+      "title": "Run IDM-VTON Inference"
+    },
+    "inputs": {
+      "pipeline": ["5", 0],
+      "human_img": ["1", 0],
+      "pose_img": ["4", 0],
+      "mask_img": ["3", 0],
+      "garment_img": ["2", 0],
+      "garment_description": "a casual t-shirt",
+      "negative_prompt": "low quality, blurry, distorted",
+      "width": 768,
+      "height": 1024,
+      "num_inference_steps": 30,
+      "guidance_scale": 2.0,
+      "strength": 1.0,
+      "seed": 42
+    }
+  },
+  "7": {
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Result"
+    },
+    "inputs": {
+      "images": ["6", 0],
+      "filename_prefix": "idm_vton_result"
+    }
+  }
+}

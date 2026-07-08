@@ -1,0 +1,164 @@
+{
+  "1": {
+    "class_type": "UnetLoaderGGUF",
+    "inputs": {
+      "unet_name": "ltx-2.3-22b-dev-Q2_K.gguf"
+    }
+  },
+  "2": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "vae_with_config_fixed.safetensors"
+    }
+  },
+  "3": {
+    "class_type": "LTXVGemmaCLIPModelLoader",
+    "inputs": {
+      "gemma_path": "gemma_3_12B_it.safetensors",
+      "ltxv_path": "ltx-2.3-22b-dev.safetensors",
+      "max_length": 1024
+    }
+  },
+  "4": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "A golden retriever running playfully along a sandy beach at golden hour sunset, waves gently crashing in the background, warm cinematic lighting with lens flare, shallow depth of field, photorealistic 4K quality, smooth drone tracking shot following the dog, vibrant orange and purple sky colors",
+      "clip": [
+        "3",
+        0
+      ]
+    }
+  },
+  "5": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "blurry, low quality, distorted, ugly",
+      "clip": [
+        "3",
+        0
+      ]
+    }
+  },
+  "6": {
+    "class_type": "LTXVConditioning",
+    "inputs": {
+      "positive": [
+        "4",
+        0
+      ],
+      "negative": [
+        "5",
+        0
+      ],
+      "frame_rate": 25.0
+    }
+  },
+  "7": {
+    "class_type": "EmptyLTXVLatentVideo",
+    "inputs": {
+      "width": 768,
+      "height": 512,
+      "length": 97,
+      "batch_size": 1
+    }
+  },
+  "10": {
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 42
+    }
+  },
+  "11": {
+    "class_type": "BasicGuider",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "conditioning": [
+        "6",
+        0
+      ]
+    }
+  },
+  "12": {
+    "class_type": "KSamplerSelect",
+    "inputs": {
+      "sampler_name": "euler_ancestral_cfg_pp"
+    }
+  },
+  "13": {
+    "class_type": "LTXVScheduler",
+    "inputs": {
+      "steps": 16,
+      "max_shift": 2.05,
+      "base_shift": 0.95,
+      "stretch": 1.0,
+      "terminal": 0.1
+    }
+  },
+  "14": {
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "noise": [
+        "10",
+        0
+      ],
+      "guider": [
+        "11",
+        0
+      ],
+      "sampler": [
+        "12",
+        0
+      ],
+      "sigmas": [
+        "13",
+        0
+      ],
+      "latent_image": [
+        "7",
+        0
+      ]
+    }
+  },
+  "15": {
+    "class_type": "LTXVTiledVAEDecode",
+    "inputs": {
+      "vae": [
+        "2",
+        0
+      ],
+      "latents": [
+        "14",
+        0
+      ],
+      "horizontal_tiles": 2,
+      "vertical_tiles": 2,
+      "overlap": 8,
+      "last_frame_fix": false
+    }
+  },
+  "16": {
+    "class_type": "CreateVideo",
+    "inputs": {
+      "images": [
+        "15",
+        0
+      ],
+      "fps": 25.0
+    }
+  },
+  "17": {
+    "class_type": "SaveVideo",
+    "inputs": {
+      "video": [
+        "16",
+        0
+      ],
+      "filename_prefix": "ltxv_gguf_test",
+      "format": "mp4",
+      "codec": "h264"
+    }
+  }
+}

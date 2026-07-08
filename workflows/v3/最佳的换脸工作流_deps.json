@@ -1,0 +1,33 @@
+{
+    "custom_nodes": {
+        "https://github.com/Fannovel16/comfyui_controlnet_aux": {
+            "state": "installed",
+            "hash": "-"
+        },
+        "https://github.com/ArtBot2023/CharacterFaceSwap": {
+            "state": "installed",
+            "hash": "-"
+        },
+        "https://github.com/jags111/efficiency-nodes-comfyui": {
+            "state": "installed",
+            "hash": "-"
+        },
+        "https://github.com/THtianhao/ComfyUI-Portrait-Maker": {
+            "state": "installed",
+            "hash": "-"
+        },
+        "https://github.com/cubiq/ComfyUI_IPAdapter_plus": {
+            "state": "installed",
+            "hash": "-"
+        },
+        "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes": {
+            "state": "installed",
+            "hash": "-"
+        },
+        "https://github.com/Gourieff/ComfyUI-ReActor": {
+            "state": "installed",
+            "hash": "-"
+        }
+    },
+    "unknown_nodes": []
+}

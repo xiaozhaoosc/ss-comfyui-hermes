@@ -1,0 +1,61 @@
+{
+  "1": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "vton_person.png",
+      "upload": "image"
+    }
+  },
+  "2": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "idm_test_garment.jpg",
+      "upload": "image"
+    }
+  },
+  "3": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "vton_mask_auto.png",
+      "upload": "image"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "vton_pose.png",
+      "upload": "image"
+    }
+  },
+  "5": {
+    "class_type": "PipelineLoader",
+    "inputs": {
+      "weight_dtype": "float16"
+    }
+  },
+  "6": {
+    "class_type": "IDM-VTON",
+    "inputs": {
+      "pipeline": ["5", 0],
+      "human_img": ["1", 0],
+      "pose_img": ["4", 0],
+      "mask_img": ["3", 0],
+      "garment_img": ["2", 0],
+      "garment_description": "a shirt",
+      "negative_prompt": "monochrome, lowres, bad anatomy, worst quality, low quality",
+      "width": 768,
+      "height": 1024,
+      "num_inference_steps": 30,
+      "guidance_scale": 2.0,
+      "strength": 1.0,
+      "seed": 42
+    }
+  },
+  "7": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": ["6", 0],
+      "filename_prefix": "idm_vton_v2"
+    }
+  }
+}

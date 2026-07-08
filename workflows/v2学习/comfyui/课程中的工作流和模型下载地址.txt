@@ -1,0 +1,247 @@
+第七节的工作流
+
+文章教程：https://myaiforce.com.cn/flux-skin-realism/
+🔗 下载此工作流(国外)：https://openart.ai/workflows/myaiforce/hRD5i3MiCrJKJqylQdKP
+🔗 下载此工作流(国内)：https://www.liblib.art/modelinfo/17c59b2366324cafa27830b996d10489
+☁️ 我在云端使用ComfyUI: https://myaiforce.com.cn/lanrui/
+
+🔗 Checkpoint：
+Flux fp8(国外): https://huggingface.co/Kijai/flux-fp8
+Flux fp8(国内): https://www.liblib.art/modelinfo/de40ff893256477bbb1bb54e3d8d9df6
+epiCRealism(国外): https://civitai.com/models/25694/epicrealism
+epiCRealism(国内): https://pan.baidu.com/s/1vM6RM_06nml0lUIzPD824Q?pwd=8qxx
+🔗LoRA：
+Flux Realism LoRA(国外): https://civitai.com/models/631986/xlabs-flux-realism-lora
+Flux Realism LoRA(国内): https://pan.baidu.com/s/1f58tvCDjxSjzKsT0wKqF2A?pwd=cyf9
+细节增强器(国外)：https://civitai.com/models/82098/add-more-details-detail-enhancer-tweaker-lora
+细节增强器(国内)：https://pan.baidu.com/s/1uiSEQw8FUX0j5hAebBOBgA?pwd=qakp
+---------------------
+第八节：
+文章教程：https://myaiforce.com.cn/flux-replace-background/
+🔗 下载此工作流(国外)：https://openart.ai/workflows/myaiforce/UdbHePrLFEP9WzdrmmFj
+🔗 下载此工作流(国内)：https://www.liblib.art/modelinfo/8d3df7d490f34df9b3d136fdfff2c959
+☁️ 我在云端使用ComfyUI: https://myaiforce.com.cn/lanrui/
+🔗 Checkpoints:
+Flux fp8(国外): https://huggingface.co/Kijai/flux-fp8
+Flux fp8(国内): https://www.liblib.art/modelinfo/de40ff893256477bbb1bb54e3d8d9df6
+epiCRealism(国外): https://civitai.com/models/25694/epicrealism
+epiCRealism(国内): https://pan.baidu.com/s/1vM6RM_06nml0lUIzPD824Q?pwd=8qxx
+Juggernaut XL Lightning(国外): https://civitai.com/models/133005?modelVersionId=357609
+Juggernaut XL Lightning(国内): https://www.liblib.art/modelinfo/cb96a3f90bf6485ba547b2e04f8481f2
+🔗模型:
+Flux ControlNet Canny V3(国外): https://huggingface.co/XLabs-AI/flux-controlnet-canny-v3
+Flux ControlNet Canny V3(国内):https://www.liblib.art/modelinfo/13db01e88127402682b80bc84ab6df9d
+
+--------------------------------
+第九节资料
+
+我在云端使用ComfyUI: https://myaiforce.com.cn/lanrui/
+
+🔗 下载此工作流程： https://openart.ai/workflows/myaiforce/M3OEFh46Ojtb6RcdOCsI
+🔗 国内下载地址：https://www.liblib.art/modelinfo/d0e628576b2249dc83e72039d84818a1
+
+🔗 Checkpoint：
+Flux fp8: https://huggingface.co/Kijai/flux-fp8
+
+Flux fp8(哩布): https://www.liblib.art/modelinfo/de40ff893256477bbb1bb54e3d8d9df6
+
+Juggernaut XI版本(C站): https://civitai.com/models/133005/juggernaut-xl
+
+Juggernaut XI版本(度盘): https://pan.baidu.com/s/1-xLOc8rLLmy1NU26oApSjA?pwd=1p3r
+
+🔗LoRA：
+Detailed Perfection用于Flux(C站)： https://civitai.com/models/411088
+Detailed Perfection用于Flux(度盘)：https://pan.baidu.com/s/16UiK3nh0PdADvQktOqe6DA?pwd=tu6m
+🔗模型：
+ControlNet Union SDXL:https://huggingface.co/xinsir/controlnet-union-sdxl-1.0/tree/main
+ControlNet Union SDXL(哩布):https://www.liblib.art/modelinfo/6219ecb01e594c18855b9ef1d42ac216
+
+4x-UltraSharp:https://openmodeldb.info/models/4x-UltraSharp
+
+4x-UltraSharp(度盘): https://pan.baidu.com/s/1NcgcVmAxhRbp_AaQnzRLTQ?pwd=xwli
+
+4x-FaceUpDAT:https://openmodeldb.info/models/4x-FaceUpDAT
+
+4x-FaceUpDAT(度盘): https://pan.baidu.com/s/14AXA_4CkWcT1wGMeQEjZMQ?pwd=smxz
+
+----------------------------------
+第10节资料
+Flux fp8:https://huggingface.co/Kijai/flux-fp8
+Flux fp8(哩布): https://www.liblib.art/modelinfo/de40ff893256477bbb1bb54e3d8d9df6
+🔗LoRA:
+消除背景模糊的Flux Lora(C站):https://civitai.com/models/675581/anti-blur-flux-lora
+消除背景模糊的Flux Lora(度盘): https://pan.baidu.com/s/1BXzFRKymYyfau9hwsfyaNQ?pwd=phbl
+下载此工作流(国外): https://openart.ai/workflows/myaiforce/aCceg9xT5ctNFHLmqXb8
+下载此工作流(国内): https://www.liblib.art/modelinfo/d87ca539a674430bb9a644d4cee6787c
+
+--------------------------------------
+第11节：
+Flux fp8:https://huggingface.co/Kijai/flux-fp8
+
+Flux fp8(哩布): https://www.liblib.art/modelinfo/de40ff893256477bbb1bb54e3d8d9df6
+
+GGUF 模型文件:https://huggingface.co/city96/FLUX.1-dev-gguf/tree/main
+
+GGUF Clip 文件:https://huggingface.co/city96/t5-v1_1-xxl-encoder-gguf/tree/main
+
+GGUF 模型和 Clip 文件(哩布):https://www.liblib.art/modelinfo/a803b54513034fa4b5012bc8a1807ccd
+Flux.1-dev-Controlnet-Upscaler: https://huggingface.co/jasperai/Flux.1-dev-Controlnet-Upscaler/tree/main
+
+Flux.1-dev-Controlnet-Upscaler (哩布):https://www.liblib.art/modelinfo/90a432b15b974033a2da689f95ed6ea8
+🔗 节点:
+ComfyUI-GGUF:https://github.com/city96/ComfyUI-GGUF
+🔗 下载此工作流程 (国外): https://openart.ai/workflows/myaiforce/svOEmbK8C4zyJsCYmqnx
+🔗 下载此工作流程 (国内): https://www.liblib.art/modelinfo/604c17e08bba471590b0e1493c60a8ea
+
+第12节资料
+
+💥 🎥相关视频：
+Flux ControlNet 放大：https://youtu.be/EaqTEZd6SP4、
+Flux ControlNet 放大：https://www.bilibili.com/video/BV1QBxse5Ebh/
+
+掌握 Flux：使用提示词和 LoRA 控制画面布局和背景模糊：https://youtu.be/tfJLJW5dfi4
+掌握 Flux：使用提示词和 LoRA 控制画面布局和背景模糊：https://www.bilibili.com/video/BV1Aesbe6E1j/
+ 
+
+🔀 相关工作流：
+Flux 换背景 (Xlabs ControlNet) 国外下载地址: https://openart.ai/workflows/myaiforce/UdbHePrLFEP9WzdrmmFj
+
+Flux 换背景 (Xlabs ControlNet) 国内下载地址: https://www.liblib.art/modelinfo/8d3df7d490f34df9b3d136fdfff2c959
+
+🔗模型：
+Flux fp8(国外): https://huggingface.co/Kijai/flux-fp8
+
+Flux fp8(国内): https://www.liblib.art/modelinfo/de40ff893256477bbb1bb54e3d8d9df6
+
+Flux.1-dev-Controlnet-Depth(国外): https://huggingface.co/jasperai/Flux.1-dev-Controlnet-Depth/tree/main
+
+Flux.1-dev-Controlnet-Depth(国内): https://pan.baidu.com/s/1NDcS5XMgddtMz-qXYIutXw?pwd=86bc
+🔗 节点：
+ComfyUI-Inspyrenet-Rembg: https://github.com/john-mnz/ComfyUI-Inspyrenet-Rembg
+comfyui-lama-remover: https://github.com/Layer-norm/comfyui-lama-remover
+
+🔗 下载此工作流(国外)： https://openart.ai/workflows/myaiforce/Y6SIbfSH0XgpdIeO1Dlb
+🔗 下载此工作流(国内)： https://www.liblib.art/modelinfo/668e78793c2144d6b091a1d06f63d3bc
+☁️ 我在云端使用ComfyUI: https://myaiforce.com.cn/lanrui/
+
+----------------------------------------------
+第13节资料
+
+Flux 换背景大师 V1(使用Xlabs ControlNet Canny): https://www.bilibili.com/video/BV1r1pFeQEWQ/
+
+使用 Jasper AI Flux ControlNet Depth 轻松换背景: https://www.bilibili.com/video/BV1ecxQesEEE/
+
+Flux ControlNet 放大: https://www.bilibili.com/video/BV1QBxse5Ebh/
+🔀 相关工作流程:
+Flux 换背景大师 V1: https://openart.ai/workflows/myaiforce/UdbHePrLFEP9WzdrmmFj
+
+Flux 换背景大师 V1: https://www.liblib.art/modelinfo/8d3df7d490f34df9b3d136fdfff2c959
+
+使用 Jasper AI Flux ControlNet Depth 轻松换背景: https://openart.ai/workflows/myaiforce/Y6SIbfSH0XgpdIeO1Dlb
+
+使用 Jasper AI Flux ControlNet Depth 轻松换背景: https://www.liblib.art/modelinfo/668e78793c2144d6b091a1d06f63d3bc
+Flux ControlNet 放大: https://openart.ai/workflows/myaiforce/svOEmbK8C4zyJsCYmqnx
+Flux ControlNet 放大: https://www.liblib.art/modelinfo/604c17e08bba471590b0e1493c60a8ea
+🔗模型:
+Flux fp8: https://huggingface.co/Kijai/flux-fp8
+Flux fp8(哩布): https://www.liblib.art/modelinfo/de40ff893256477bbb1bb54e3d8d9df6
+
+Flux.1-dev-Controlnet-Depth
+(国外): https://huggingface.co/jasperai/Flux.1-dev-Controlnet-Depth/tree/main
+
+Flux.1-dev-Controlnet-Depth
+(国内): https://pan.baidu.com/s/1NDcS5XMgddtMz-qXYIutXw?pwd=86bc
+
+Flux.1-dev-Controlnet-Upscaler
+(国外): https://huggingface.co/jasperai/Flux.1-dev-Controlnet-Upscaler/tree/main
+
+Flux.1-dev-Controlnet-Upscaler
+(国内): https://www.liblib.art/modelinfo/90a432b15b974033a2da689f95ed6ea8
+
+🔗 节点:
+ComfyUI-Inspyrenet-Rembg: https://github.com/john-mnz/ComfyUI-Inspyrenet-Rembg
+comfyui-lama-remover: https://github.com/Layer-norm/comfyui-lama-remover
+
+🔗 下载此工作流: https://www.liblib.art/modelinfo/8d3df7d490f34df9b3d136fdfff2c959
+
+更多海量免费资源获取：
+设计宝藏：www.shejibaozang.com
+公众号：设计后期宝藏库
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

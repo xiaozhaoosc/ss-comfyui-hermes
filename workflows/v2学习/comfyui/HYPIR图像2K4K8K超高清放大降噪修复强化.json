@@ -1,0 +1,377 @@
+{
+  "id": "00000000-0000-0000-0000-000000000000",
+  "revision": 0,
+  "last_node_id": 8,
+  "last_link_id": 10,
+  "nodes": [
+    {
+      "id": 3,
+      "type": "LoadImage",
+      "pos": {
+        "0": -230.87139892578125,
+        "1": 159.9479217529297
+      },
+      "size": {
+        "0": 392.3489685058594,
+        "1": 546.046875
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            7,
+            9
+          ]
+        },
+        {
+          "label": "遮罩",
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "微信图片_20250902122644_29_930.jpg",
+        "image",
+        ""
+      ],
+      "_widget_cache_map": {
+        "微信图片_20250902122644_29_930.jpg": {
+          "value": "img/eea83b9a292e4debbe028d25f1e51dbe/4009d9bf92fa1eb6f41551b0cf38db01256736070f025e70ccd7106221b24764.jpg",
+          "name": "微信图片_20250902122644_29_930.jpg",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/eea83b9a292e4debbe028d25f1e51dbe/4009d9bf92fa1eb6f41551b0cf38db01256736070f025e70ccd7106221b24764.jpg",
+          "width": 1152,
+          "height": 1424
+        }
+      }
+    },
+    {
+      "id": 6,
+      "type": "LayerUtility: ImageScaleByAspectRatio V2",
+      "pos": {
+        "0": 175.04141235351562,
+        "1": 158.9307098388672
+      },
+      "size": {
+        "0": 320.90985107421875,
+        "1": 546.694091796875
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 9
+        },
+        {
+          "label": "遮罩",
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            10
+          ]
+        },
+        {
+          "label": "遮罩",
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        },
+        {
+          "label": "原始大小",
+          "name": "original_size",
+          "type": "BOX",
+          "links": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LayerUtility: ImageScaleByAspectRatio V2"
+      },
+      "widgets_values": [
+        "original",
+        1,
+        1,
+        "letterbox",
+        "lanczos",
+        "8",
+        "None",
+        1024,
+        "#000000"
+      ],
+      "color": "rgba(38, 73, 116, 0.7)"
+    },
+    {
+      "id": 1,
+      "type": "HYPIRAdvancedRestoration",
+      "pos": {
+        "0": 508.1051330566406,
+        "1": 156.59420776367188
+      },
+      "size": {
+        "0": 395.5228576660156,
+        "1": 548.0465087890625
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 10
+        }
+      ],
+      "outputs": [
+        {
+          "label": "IMAGE",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            6,
+            8
+          ]
+        },
+        {
+          "label": "STRING",
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "HYPIRAdvancedRestoration"
+      },
+      "widgets_values": [
+        "high quality portrait, detailed face, sharp features",
+        2,
+        101498788056869,
+        "randomize",
+        "HYPIR_sd2",
+        "stable-diffusion-2-1-base",
+        200,
+        100,
+        256,
+        512,
+        512,
+        512,
+        1,
+        false
+      ]
+    },
+    {
+      "id": 4,
+      "type": "PreviewImage",
+      "pos": {
+        "0": 923.2003784179688,
+        "1": 157.77622985839844
+      },
+      "size": {
+        "0": 386.5072021484375,
+        "1": 548.1898193359375
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 6
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 5,
+      "type": "Image Comparer (rgthree)",
+      "pos": {
+        "0": 1320.7451171875,
+        "1": 156.34083557128906
+      },
+      "size": {
+        "0": 405.680419921875,
+        "1": 544.953125
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "label": "图像_A",
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 7
+        },
+        {
+          "dir": 3,
+          "label": "图像_B",
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 8
+        }
+      ],
+      "outputs": [],
+      "title": "Image Comparer (rgthree)",
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "comparer_mode": "Slide"
+      },
+      "widgets_values": [
+        [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "https://images-tmp-wm.liblib.cloud/sd-images/53566efaded0de6acb1a66d86c54b2e7424c5ce8164b71e499581438385c98a6.png?filename=sd-images/53566efaded0de6acb1a66d86c54b2e7424c5ce8164b71e499581438385c98a6.png&type=output&rand=0.5545431903075994"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "https://images-tmp-wm.liblib.cloud/sd-images/1e7891ed1d61860733dd3c02090e4b9888895e75cefeed3112ac415df7417e68.png?filename=sd-images/1e7891ed1d61860733dd3c02090e4b9888895e75cefeed3112ac415df7417e68.png&type=output&rand=0.4853987215898987"
+          }
+        ]
+      ]
+    }
+  ],
+  "links": [
+    [
+      6,
+      1,
+      0,
+      4,
+      0,
+      "IMAGE"
+    ],
+    [
+      7,
+      3,
+      0,
+      5,
+      0,
+      "IMAGE"
+    ],
+    [
+      8,
+      1,
+      0,
+      5,
+      1,
+      "IMAGE"
+    ],
+    [
+      9,
+      3,
+      0,
+      6,
+      0,
+      "IMAGE"
+    ],
+    [
+      10,
+      6,
+      0,
+      1,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.8390545288824016,
+      "offset": [
+        440.9228686919733,
+        91.36127434867079
+      ]
+    },
+    "ue_links": [],
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4,
+  "seed_widgets": {
+    "1": 2
+  },
+  "widget_idx_map": {
+    "1": {
+      "seed": 2
+    }
+  }
+}

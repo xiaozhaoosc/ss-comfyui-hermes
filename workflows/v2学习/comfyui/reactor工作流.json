@@ -1,0 +1,2608 @@
+{
+  "last_node_id": 106,
+  "last_link_id": 118,
+  "nodes": [
+    {
+      "id": 28,
+      "type": "LoadImage",
+      "pos": {
+        "0": -80,
+        "1": -1100
+      },
+      "size": {
+        "0": 320,
+        "1": 320
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "图像"
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3,
+          "label": "遮罩"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "1 (40).jpg",
+        "image"
+      ],
+      "color": "#84a0bd"
+    },
+    {
+      "id": 29,
+      "type": "LoadImage",
+      "pos": {
+        "0": 280,
+        "1": -1100
+      },
+      "size": {
+        "0": 320,
+        "1": 320
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            40
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "图像"
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3,
+          "label": "遮罩"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "2 (10).jpg",
+        "image"
+      ],
+      "color": "#84a0bd"
+    },
+    {
+      "id": 30,
+      "type": "LoadImage",
+      "pos": {
+        "0": 640,
+        "1": -1100
+      },
+      "size": {
+        "0": 320,
+        "1": 320
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "图像"
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3,
+          "label": "遮罩"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "3 (2).jpg",
+        "image"
+      ],
+      "color": "#84a0bd"
+    },
+    {
+      "id": 15,
+      "type": "LoadImage",
+      "pos": {
+        "0": -140,
+        "1": -2640
+      },
+      "size": {
+        "0": 320,
+        "1": 320
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            47
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "图像"
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3,
+          "label": "遮罩"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "a1.png",
+        "image"
+      ],
+      "color": "#84a0bd"
+    },
+    {
+      "id": 39,
+      "type": "LoadImage",
+      "pos": {
+        "0": -140,
+        "1": -2260
+      },
+      "size": {
+        "0": 320,
+        "1": 320
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "图像"
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3,
+          "label": "遮罩"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "musk.jpg",
+        "image"
+      ],
+      "color": "#84a0bd"
+    },
+    {
+      "id": 14,
+      "type": "PreviewImage",
+      "pos": {
+        "0": 960,
+        "1": -2440
+      },
+      "size": [
+        220,
+        240
+      ],
+      "flags": {},
+      "order": 32,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 15,
+          "label": "图像"
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "color": "#84a0bd"
+    },
+    {
+      "id": 1,
+      "type": "ReActorFaceSwap",
+      "pos": {
+        "0": 560,
+        "1": -2460
+      },
+      "size": {
+        "0": 315,
+        "1": 358
+      },
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "input_image",
+          "type": "IMAGE",
+          "link": 47,
+          "label": "目标图像"
+        },
+        {
+          "name": "source_image",
+          "type": "IMAGE",
+          "link": null,
+          "label": "源图像"
+        },
+        {
+          "name": "face_model",
+          "type": "FACE_MODEL",
+          "link": null,
+          "label": "面部模型"
+        },
+        {
+          "name": "face_boost",
+          "type": "FACE_BOOST",
+          "link": null,
+          "label": "面部增强"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            15
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "图像"
+        },
+        {
+          "name": "FACE_MODEL",
+          "type": "FACE_MODEL",
+          "links": [],
+          "slot_index": 1,
+          "shape": 3,
+          "label": "面部模型"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ReActorFaceSwap"
+      },
+      "widgets_values": [
+        true,
+        "inswapper_128.onnx",
+        "retinaface_resnet50",
+        "GFPGANv1.4.pth",
+        1,
+        0.5,
+        "no",
+        "no",
+        "0",
+        "0",
+        1
+      ]
+    },
+    {
+      "id": 38,
+      "type": "LoadImage",
+      "pos": {
+        "0": -140,
+        "1": -1880
+      },
+      "size": {
+        "0": 320,
+        "1": 320
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "图像"
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3,
+          "label": "遮罩"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "a2.png",
+        "image"
+      ],
+      "color": "#84a0bd"
+    },
+    {
+      "id": 41,
+      "type": "PreviewImage",
+      "pos": {
+        "0": 980,
+        "1": 60
+      },
+      "size": [
+        220,
+        240
+      ],
+      "flags": {},
+      "order": 33,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 50,
+          "label": "图像"
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "color": "#84a0bd"
+    },
+    {
+      "id": 43,
+      "type": "LoadImage",
+      "pos": {
+        "0": 140,
+        "1": -240
+      },
+      "size": {
+        "0": 320,
+        "1": 320
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            52
+          ],
+          "shape": 3,
+          "label": "图像"
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3,
+          "label": "遮罩"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "xd20201109145509_46240.png",
+        "image"
+      ],
+      "color": "#84a0bd"
+    },
+    {
+      "id": 48,
+      "type": "LoadImage",
+      "pos": {
+        "0": -120,
+        "1": -3620
+      },
+      "size": {
+        "0": 320,
+        "1": 320
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            54,
+            56,
+            59,
+            74,
+            77
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "图像"
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3,
+          "label": "遮罩"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "d921f05ce98e8f55c3b71e7ccd11718d.jpg",
+        "image"
+      ],
+      "color": "#84a0bd"
+    },
+    {
+      "id": 47,
+      "type": "LoadImage",
+      "pos": {
+        "0": -120,
+        "1": -4040
+      },
+      "size": {
+        "0": 320,
+        "1": 320
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            53,
+            55,
+            60,
+            73,
+            76
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "图像"
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3,
+          "label": "遮罩"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "984227f10f2b98e0a1be207f47c6b6d9181737.jpg",
+        "image"
+      ],
+      "color": "#84a0bd"
+    },
+    {
+      "id": 54,
+      "type": "ReActorFaceSwap",
+      "pos": {
+        "0": 320,
+        "1": -3540
+      },
+      "size": {
+        "0": 315,
+        "1": 358
+      },
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "input_image",
+          "type": "IMAGE",
+          "link": 60,
+          "label": "目标图像"
+        },
+        {
+          "name": "source_image",
+          "type": "IMAGE",
+          "link": 59,
+          "label": "源图像"
+        },
+        {
+          "name": "face_model",
+          "type": "FACE_MODEL",
+          "link": null,
+          "label": "面部模型"
+        },
+        {
+          "name": "face_boost",
+          "type": "FACE_BOOST",
+          "link": null,
+          "label": "面部增强"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            65,
+            79
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "图像"
+        },
+        {
+          "name": "FACE_MODEL",
+          "type": "FACE_MODEL",
+          "links": [],
+          "slot_index": 1,
+          "shape": 3,
+          "label": "面部模型"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ReActorFaceSwap"
+      },
+      "widgets_values": [
+        true,
+        "inswapper_128.onnx",
+        "retinaface_resnet50",
+        "GFPGANv1.4.pth",
+        1,
+        0.5,
+        "no",
+        "no",
+        "0",
+        "0",
+        1
+      ]
+    },
+    {
+      "id": 50,
+      "type": "ReActorFaceSwap",
+      "pos": {
+        "0": 320,
+        "1": -3540
+      },
+      "size": {
+        "0": 315,
+        "1": 358
+      },
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "input_image",
+          "type": "IMAGE",
+          "link": 55,
+          "label": "目标图像"
+        },
+        {
+          "name": "source_image",
+          "type": "IMAGE",
+          "link": 56,
+          "label": "源图像"
+        },
+        {
+          "name": "face_model",
+          "type": "FACE_MODEL",
+          "link": null,
+          "label": "面部模型"
+        },
+        {
+          "name": "face_boost",
+          "type": "FACE_BOOST",
+          "link": null,
+          "label": "面部增强"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            64
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "图像"
+        },
+        {
+          "name": "FACE_MODEL",
+          "type": "FACE_MODEL",
+          "links": null,
+          "shape": 3,
+          "label": "面部模型"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ReActorFaceSwap"
+      },
+      "widgets_values": [
+        true,
+        "inswapper_128.onnx",
+        "retinaface_resnet50",
+        "GFPGANv1.3.pth",
+        1,
+        0.5,
+        "no",
+        "no",
+        "0",
+        "0",
+        1
+      ]
+    },
+    {
+      "id": 67,
+      "type": "ReActorFaceSwap",
+      "pos": {
+        "0": 320,
+        "1": -3540
+      },
+      "size": {
+        "0": 315,
+        "1": 358
+      },
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "input_image",
+          "type": "IMAGE",
+          "link": 73,
+          "label": "目标图像"
+        },
+        {
+          "name": "source_image",
+          "type": "IMAGE",
+          "link": 74,
+          "label": "源图像"
+        },
+        {
+          "name": "face_model",
+          "type": "FACE_MODEL",
+          "link": null,
+          "label": "面部模型"
+        },
+        {
+          "name": "face_boost",
+          "type": "FACE_BOOST",
+          "link": null,
+          "label": "面部增强"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            75
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "图像"
+        },
+        {
+          "name": "FACE_MODEL",
+          "type": "FACE_MODEL",
+          "links": null,
+          "shape": 3,
+          "label": "面部模型"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ReActorFaceSwap"
+      },
+      "widgets_values": [
+        true,
+        "inswapper_128.onnx",
+        "retinaface_resnet50",
+        "codeformer-v0.1.0.pth",
+        1,
+        0.1,
+        "no",
+        "no",
+        "0",
+        "0",
+        1
+      ]
+    },
+    {
+      "id": 68,
+      "type": "ReActorFaceSwap",
+      "pos": {
+        "0": 320,
+        "1": -3540
+      },
+      "size": {
+        "0": 315,
+        "1": 358
+      },
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "input_image",
+          "type": "IMAGE",
+          "link": 76,
+          "label": "目标图像"
+        },
+        {
+          "name": "source_image",
+          "type": "IMAGE",
+          "link": 77,
+          "label": "源图像"
+        },
+        {
+          "name": "face_model",
+          "type": "FACE_MODEL",
+          "link": null,
+          "label": "面部模型"
+        },
+        {
+          "name": "face_boost",
+          "type": "FACE_BOOST",
+          "link": null,
+          "label": "面部增强"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            78
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "图像"
+        },
+        {
+          "name": "FACE_MODEL",
+          "type": "FACE_MODEL",
+          "links": null,
+          "shape": 3,
+          "label": "面部模型"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ReActorFaceSwap"
+      },
+      "widgets_values": [
+        true,
+        "inswapper_128.onnx",
+        "retinaface_resnet50",
+        "codeformer-v0.1.0.pth",
+        1,
+        1,
+        "no",
+        "no",
+        "0",
+        "0",
+        1
+      ]
+    },
+    {
+      "id": 44,
+      "type": "LoadImage",
+      "pos": {
+        "0": -100,
+        "1": -6260
+      },
+      "size": {
+        "0": 320,
+        "1": 320
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "图像"
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3,
+          "label": "遮罩"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "984227f10f2b98e0a1be207f47c6b6d9181737.jpg",
+        "image"
+      ],
+      "color": "#84a0bd"
+    },
+    {
+      "id": 72,
+      "type": "LoadImage",
+      "pos": {
+        "0": -140,
+        "1": -4760
+      },
+      "size": {
+        "0": 320,
+        "1": 320
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            84,
+            87,
+            89,
+            91
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "图像"
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3,
+          "label": "遮罩"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "d921f05ce98e8f55c3b71e7ccd11718d.jpg",
+        "image"
+      ],
+      "color": "#84a0bd"
+    },
+    {
+      "id": 71,
+      "type": "LoadImage",
+      "pos": {
+        "0": -140,
+        "1": -5160
+      },
+      "size": {
+        "0": 320,
+        "1": 320
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            83,
+            86,
+            88,
+            90
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "图像"
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3,
+          "label": "遮罩"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "984227f10f2b98e0a1be207f47c6b6d9181737.jpg",
+        "image"
+      ],
+      "color": "#84a0bd"
+    },
+    {
+      "id": 45,
+      "type": "LoadImage",
+      "pos": {
+        "0": -100,
+        "1": -5860
+      },
+      "size": {
+        "0": 320,
+        "1": 320
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "图像"
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3,
+          "label": "遮罩"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "d921f05ce98e8f55c3b71e7ccd11718d.jpg",
+        "image"
+      ],
+      "color": "#84a0bd"
+    },
+    {
+      "id": 76,
+      "type": "ReActorFaceSwap",
+      "pos": {
+        "0": 320,
+        "1": -4960
+      },
+      "size": {
+        "0": 315,
+        "1": 358
+      },
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "input_image",
+          "type": "IMAGE",
+          "link": 86,
+          "label": "目标图像"
+        },
+        {
+          "name": "source_image",
+          "type": "IMAGE",
+          "link": 87,
+          "label": "源图像"
+        },
+        {
+          "name": "face_model",
+          "type": "FACE_MODEL",
+          "link": null,
+          "label": "面部模型"
+        },
+        {
+          "name": "face_boost",
+          "type": "FACE_BOOST",
+          "link": null,
+          "label": "面部增强"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            92
+          ],
+          "shape": 3,
+          "label": "图像",
+          "slot_index": 0
+        },
+        {
+          "name": "FACE_MODEL",
+          "type": "FACE_MODEL",
+          "links": null,
+          "shape": 3,
+          "label": "面部模型"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ReActorFaceSwap"
+      },
+      "widgets_values": [
+        true,
+        "inswapper_128.onnx",
+        "retinaface_mobile0.25",
+        "GFPGANv1.4.pth",
+        1,
+        0.45,
+        "no",
+        "no",
+        "0",
+        "0",
+        1
+      ]
+    },
+    {
+      "id": 79,
+      "type": "PreviewImage",
+      "pos": {
+        "0": 1080,
+        "1": -4960
+      },
+      "size": {
+        "0": 320,
+        "1": 340
+      },
+      "flags": {},
+      "order": 38,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 92,
+          "label": "图像"
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "color": "#84a0bd"
+    },
+    {
+      "id": 74,
+      "type": "PreviewImage",
+      "pos": {
+        "0": 740,
+        "1": -4960
+      },
+      "size": [
+        320,
+        340
+      ],
+      "flags": {},
+      "order": 37,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 85,
+          "label": "图像"
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "color": "#84a0bd"
+    },
+    {
+      "id": 80,
+      "type": "PreviewImage",
+      "pos": {
+        "0": 1420,
+        "1": -4960
+      },
+      "size": {
+        "0": 320,
+        "1": 340
+      },
+      "flags": {},
+      "order": 39,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 94,
+          "label": "图像"
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "color": "#84a0bd"
+    },
+    {
+      "id": 81,
+      "type": "PreviewImage",
+      "pos": {
+        "0": 1760,
+        "1": -4960
+      },
+      "size": {
+        "0": 320,
+        "1": 340
+      },
+      "flags": {},
+      "order": 40,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 95,
+          "label": "图像"
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "color": "#84a0bd"
+    },
+    {
+      "id": 78,
+      "type": "ReActorFaceSwap",
+      "pos": {
+        "0": 320,
+        "1": -4960
+      },
+      "size": {
+        "0": 315,
+        "1": 358
+      },
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "input_image",
+          "type": "IMAGE",
+          "link": 90,
+          "label": "目标图像"
+        },
+        {
+          "name": "source_image",
+          "type": "IMAGE",
+          "link": 91,
+          "label": "源图像"
+        },
+        {
+          "name": "face_model",
+          "type": "FACE_MODEL",
+          "link": null,
+          "label": "面部模型"
+        },
+        {
+          "name": "face_boost",
+          "type": "FACE_BOOST",
+          "link": null,
+          "label": "面部增强"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            95
+          ],
+          "shape": 3,
+          "label": "图像",
+          "slot_index": 0
+        },
+        {
+          "name": "FACE_MODEL",
+          "type": "FACE_MODEL",
+          "links": null,
+          "shape": 3,
+          "label": "面部模型"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ReActorFaceSwap"
+      },
+      "widgets_values": [
+        true,
+        "inswapper_128.onnx",
+        "YOLOv5n",
+        "GFPGANv1.4.pth",
+        1,
+        0.5,
+        "no",
+        "no",
+        "0",
+        "0",
+        1
+      ]
+    },
+    {
+      "id": 77,
+      "type": "ReActorFaceSwap",
+      "pos": {
+        "0": 320,
+        "1": -4960
+      },
+      "size": {
+        "0": 315,
+        "1": 358
+      },
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "input_image",
+          "type": "IMAGE",
+          "link": 88,
+          "label": "目标图像"
+        },
+        {
+          "name": "source_image",
+          "type": "IMAGE",
+          "link": 89,
+          "label": "源图像"
+        },
+        {
+          "name": "face_model",
+          "type": "FACE_MODEL",
+          "link": null,
+          "label": "面部模型"
+        },
+        {
+          "name": "face_boost",
+          "type": "FACE_BOOST",
+          "link": null,
+          "label": "面部增强"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            94
+          ],
+          "shape": 3,
+          "label": "图像",
+          "slot_index": 0
+        },
+        {
+          "name": "FACE_MODEL",
+          "type": "FACE_MODEL",
+          "links": null,
+          "shape": 3,
+          "label": "面部模型"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ReActorFaceSwap"
+      },
+      "widgets_values": [
+        true,
+        "inswapper_128.onnx",
+        "YOLOv5l",
+        "GFPGANv1.4.pth",
+        1,
+        0.5,
+        "no",
+        "no",
+        "0",
+        "0",
+        1
+      ]
+    },
+    {
+      "id": 73,
+      "type": "ReActorFaceSwap",
+      "pos": {
+        "0": 320,
+        "1": -4960
+      },
+      "size": {
+        "0": 315,
+        "1": 358
+      },
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "input_image",
+          "type": "IMAGE",
+          "link": 83,
+          "label": "目标图像"
+        },
+        {
+          "name": "source_image",
+          "type": "IMAGE",
+          "link": 84,
+          "label": "源图像"
+        },
+        {
+          "name": "face_model",
+          "type": "FACE_MODEL",
+          "link": null,
+          "label": "面部模型"
+        },
+        {
+          "name": "face_boost",
+          "type": "FACE_BOOST",
+          "link": null,
+          "label": "面部增强"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            85
+          ],
+          "shape": 3,
+          "label": "图像",
+          "slot_index": 0
+        },
+        {
+          "name": "FACE_MODEL",
+          "type": "FACE_MODEL",
+          "links": null,
+          "shape": 3,
+          "label": "面部模型"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ReActorFaceSwap"
+      },
+      "widgets_values": [
+        true,
+        "inswapper_128.onnx",
+        "retinaface_resnet50",
+        "GFPGANv1.4.pth",
+        1,
+        0.5,
+        "no",
+        "no",
+        "0",
+        "0",
+        1
+      ]
+    },
+    {
+      "id": 61,
+      "type": "Image Comparer (rgthree)",
+      "pos": {
+        "0": 740,
+        "1": -3780
+      },
+      "size": [
+        400,
+        480
+      ],
+      "flags": {},
+      "order": 35,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 66,
+          "label": "图像_A",
+          "dir": 3
+        },
+        {
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 79,
+          "label": "图像_B",
+          "dir": 3
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "comparer_mode": "Slide"
+      },
+      "widgets_values": [
+        [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_bxxsz_00013_.png&type=temp&subfolder=&rand=0.4399747356133483"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_bxxsz_00014_.png&type=temp&subfolder=&rand=0.12116837646029555"
+          }
+        ]
+      ]
+    },
+    {
+      "id": 57,
+      "type": "Image Comparer (rgthree)",
+      "pos": {
+        "0": 1220,
+        "1": -3780
+      },
+      "size": [
+        400,
+        480
+      ],
+      "flags": {},
+      "order": 34,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 64,
+          "label": "图像_A",
+          "dir": 3
+        },
+        {
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 65,
+          "label": "图像_B",
+          "dir": 3
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "comparer_mode": "Slide"
+      },
+      "widgets_values": [
+        [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_tjuoa_00015_.png&type=temp&subfolder=&rand=0.3701947658245919"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_tjuoa_00016_.png&type=temp&subfolder=&rand=0.09222859125344773"
+          }
+        ]
+      ]
+    },
+    {
+      "id": 60,
+      "type": "Image Comparer (rgthree)",
+      "pos": {
+        "0": 1680,
+        "1": -3780
+      },
+      "size": [
+        380,
+        480
+      ],
+      "flags": {},
+      "order": 36,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 75,
+          "label": "图像_A",
+          "dir": 3
+        },
+        {
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 78,
+          "label": "图像_B",
+          "dir": 3
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "comparer_mode": "Slide"
+      },
+      "widgets_values": [
+        [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_qlyhf_00009_.png&type=temp&subfolder=&rand=0.5404923870315652"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_qlyhf_00010_.png&type=temp&subfolder=&rand=0.42475413600390044"
+          }
+        ]
+      ]
+    },
+    {
+      "id": 49,
+      "type": "ReActorFaceSwap",
+      "pos": {
+        "0": 320,
+        "1": -3980
+      },
+      "size": {
+        "0": 315,
+        "1": 358
+      },
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "input_image",
+          "type": "IMAGE",
+          "link": 53,
+          "label": "目标图像"
+        },
+        {
+          "name": "source_image",
+          "type": "IMAGE",
+          "link": 54,
+          "label": "源图像"
+        },
+        {
+          "name": "face_model",
+          "type": "FACE_MODEL",
+          "link": null,
+          "label": "面部模型"
+        },
+        {
+          "name": "face_boost",
+          "type": "FACE_BOOST",
+          "link": null,
+          "label": "面部增强"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            66
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "图像"
+        },
+        {
+          "name": "FACE_MODEL",
+          "type": "FACE_MODEL",
+          "links": null,
+          "shape": 3,
+          "label": "面部模型"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ReActorFaceSwap"
+      },
+      "widgets_values": [
+        true,
+        "inswapper_128.onnx",
+        "retinaface_resnet50",
+        "codeformer-v0.1.0.pth",
+        1,
+        0.5,
+        "no",
+        "no",
+        "0",
+        "0",
+        1
+      ]
+    },
+    {
+      "id": 40,
+      "type": "ReActorFaceSwap",
+      "pos": {
+        "0": 580,
+        "1": 40
+      },
+      "size": {
+        "0": 315,
+        "1": 358
+      },
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "input_image",
+          "type": "IMAGE",
+          "link": 52,
+          "label": "目标图像"
+        },
+        {
+          "name": "source_image",
+          "type": "IMAGE",
+          "link": null,
+          "label": "源图像"
+        },
+        {
+          "name": "face_model",
+          "type": "FACE_MODEL",
+          "link": null,
+          "label": "面部模型"
+        },
+        {
+          "name": "face_boost",
+          "type": "FACE_BOOST",
+          "link": null,
+          "label": "面部增强"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            50
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "图像"
+        },
+        {
+          "name": "FACE_MODEL",
+          "type": "FACE_MODEL",
+          "links": [],
+          "slot_index": 1,
+          "shape": 3,
+          "label": "面部模型"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ReActorFaceSwap"
+      },
+      "widgets_values": [
+        true,
+        "inswapper_128.onnx",
+        "retinaface_resnet50",
+        "GFPGANv1.4.pth",
+        1,
+        0.5,
+        "no",
+        "no",
+        "0",
+        "0",
+        1
+      ]
+    },
+    {
+      "id": 31,
+      "type": "LoadImage",
+      "pos": {
+        "0": 1020,
+        "1": -1100
+      },
+      "size": {
+        "0": 320,
+        "1": 320
+      },
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            42
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "图像"
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3,
+          "label": "遮罩"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "4 (2).jpg",
+        "image"
+      ],
+      "color": "#84a0bd"
+    },
+    {
+      "id": 95,
+      "type": "LoadImage",
+      "pos": {
+        "0": 140,
+        "1": 940
+      },
+      "size": {
+        "0": 320,
+        "1": 320
+      },
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            103,
+            111
+          ],
+          "shape": 3,
+          "label": "图像"
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3,
+          "label": "遮罩"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "xd20201109145509_46240.png",
+        "image"
+      ],
+      "color": "#84a0bd"
+    },
+    {
+      "id": 92,
+      "type": "LoadImage",
+      "pos": {
+        "0": 140,
+        "1": 160
+      },
+      "size": {
+        "0": 320,
+        "1": 320
+      },
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "图像"
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3,
+          "label": "遮罩"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "4 (2).jpg",
+        "image"
+      ],
+      "color": "#84a0bd"
+    },
+    {
+      "id": 105,
+      "type": "ReActorFaceBoost",
+      "pos": {
+        "0": 220,
+        "1": 1760
+      },
+      "size": {
+        "0": 315,
+        "1": 178
+      },
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "FACE_BOOST",
+          "type": "FACE_BOOST",
+          "links": [
+            114
+          ],
+          "shape": 3,
+          "label": "面部增强",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ReActorFaceBoost"
+      },
+      "widgets_values": [
+        true,
+        "codeformer-v0.1.0.pth",
+        "Bicubic",
+        1,
+        0.5,
+        true
+      ]
+    },
+    {
+      "id": 96,
+      "type": "ReActorFaceBoost",
+      "pos": {
+        "0": 580,
+        "1": 1000
+      },
+      "size": {
+        "0": 315,
+        "1": 178
+      },
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "FACE_BOOST",
+          "type": "FACE_BOOST",
+          "links": [
+            115
+          ],
+          "shape": 3,
+          "label": "面部增强",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ReActorFaceBoost"
+      },
+      "widgets_values": [
+        true,
+        "codeformer-v0.1.0.pth",
+        "Bicubic",
+        1,
+        0.5,
+        false
+      ]
+    },
+    {
+      "id": 93,
+      "type": "ReActorFaceSwap",
+      "pos": {
+        "0": 580,
+        "1": 1220
+      },
+      "size": {
+        "0": 315,
+        "1": 358
+      },
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "input_image",
+          "type": "IMAGE",
+          "link": 103,
+          "label": "目标图像"
+        },
+        {
+          "name": "source_image",
+          "type": "IMAGE",
+          "link": 106,
+          "label": "源图像"
+        },
+        {
+          "name": "face_model",
+          "type": "FACE_MODEL",
+          "link": null,
+          "label": "面部模型"
+        },
+        {
+          "name": "face_boost",
+          "type": "FACE_BOOST",
+          "link": 115,
+          "label": "面部增强"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            116
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "图像"
+        },
+        {
+          "name": "FACE_MODEL",
+          "type": "FACE_MODEL",
+          "links": [],
+          "slot_index": 1,
+          "shape": 3,
+          "label": "面部模型"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ReActorFaceSwap"
+      },
+      "widgets_values": [
+        true,
+        "inswapper_128.onnx",
+        "retinaface_resnet50",
+        "GFPGANv1.4.pth",
+        1,
+        0.5,
+        "no",
+        "no",
+        "0",
+        "0",
+        1
+      ]
+    },
+    {
+      "id": 104,
+      "type": "ReActorFaceSwap",
+      "pos": {
+        "0": 580,
+        "1": 1620
+      },
+      "size": {
+        "0": 315,
+        "1": 358
+      },
+      "flags": {},
+      "order": 31,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "input_image",
+          "type": "IMAGE",
+          "link": 111,
+          "label": "目标图像"
+        },
+        {
+          "name": "source_image",
+          "type": "IMAGE",
+          "link": 112,
+          "label": "源图像"
+        },
+        {
+          "name": "face_model",
+          "type": "FACE_MODEL",
+          "link": null,
+          "label": "面部模型"
+        },
+        {
+          "name": "face_boost",
+          "type": "FACE_BOOST",
+          "link": 114,
+          "label": "面部增强"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            117
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "图像"
+        },
+        {
+          "name": "FACE_MODEL",
+          "type": "FACE_MODEL",
+          "links": [],
+          "slot_index": 1,
+          "shape": 3,
+          "label": "面部模型"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ReActorFaceSwap"
+      },
+      "widgets_values": [
+        true,
+        "inswapper_128.onnx",
+        "retinaface_resnet50",
+        "GFPGANv1.4.pth",
+        1,
+        0.5,
+        "no",
+        "no",
+        "0",
+        "0",
+        1
+      ]
+    },
+    {
+      "id": 98,
+      "type": "Image Comparer (rgthree)",
+      "pos": {
+        "0": 940,
+        "1": 1340
+      },
+      "size": [
+        460,
+        400
+      ],
+      "flags": {},
+      "order": 41,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 116,
+          "label": "图像_A",
+          "dir": 3
+        },
+        {
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 117,
+          "label": "图像_B",
+          "dir": 3
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "comparer_mode": "Slide"
+      },
+      "widgets_values": [
+        [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_xqgtd_00001_.png&type=temp&subfolder=&rand=0.925849140917421"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_xqgtd_00002_.png&type=temp&subfolder=&rand=0.276272500270617"
+          }
+        ]
+      ]
+    },
+    {
+      "id": 97,
+      "type": "LoadImage",
+      "pos": {
+        "0": 140,
+        "1": 1320
+      },
+      "size": {
+        "0": 320,
+        "1": 320
+      },
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            106,
+            112
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "图像"
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3,
+          "label": "遮罩"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "4 (2).jpg",
+        "image"
+      ],
+      "color": "#84a0bd"
+    }
+  ],
+  "links": [
+    [
+      15,
+      1,
+      0,
+      14,
+      0,
+      "IMAGE"
+    ],
+    [
+      40,
+      29,
+      0,
+      34,
+      0,
+      "IMAGE"
+    ],
+    [
+      42,
+      31,
+      0,
+      34,
+      1,
+      "IMAGE"
+    ],
+    [
+      47,
+      15,
+      0,
+      1,
+      0,
+      "IMAGE"
+    ],
+    [
+      50,
+      40,
+      0,
+      41,
+      0,
+      "IMAGE"
+    ],
+    [
+      52,
+      43,
+      0,
+      40,
+      0,
+      "IMAGE"
+    ],
+    [
+      53,
+      47,
+      0,
+      49,
+      0,
+      "IMAGE"
+    ],
+    [
+      54,
+      48,
+      0,
+      49,
+      1,
+      "IMAGE"
+    ],
+    [
+      55,
+      47,
+      0,
+      50,
+      0,
+      "IMAGE"
+    ],
+    [
+      56,
+      48,
+      0,
+      50,
+      1,
+      "IMAGE"
+    ],
+    [
+      59,
+      48,
+      0,
+      54,
+      1,
+      "IMAGE"
+    ],
+    [
+      60,
+      47,
+      0,
+      54,
+      0,
+      "IMAGE"
+    ],
+    [
+      64,
+      50,
+      0,
+      57,
+      0,
+      "IMAGE"
+    ],
+    [
+      65,
+      54,
+      0,
+      57,
+      1,
+      "IMAGE"
+    ],
+    [
+      66,
+      49,
+      0,
+      61,
+      0,
+      "IMAGE"
+    ],
+    [
+      73,
+      47,
+      0,
+      67,
+      0,
+      "IMAGE"
+    ],
+    [
+      74,
+      48,
+      0,
+      67,
+      1,
+      "IMAGE"
+    ],
+    [
+      75,
+      67,
+      0,
+      60,
+      0,
+      "IMAGE"
+    ],
+    [
+      76,
+      47,
+      0,
+      68,
+      0,
+      "IMAGE"
+    ],
+    [
+      77,
+      48,
+      0,
+      68,
+      1,
+      "IMAGE"
+    ],
+    [
+      78,
+      68,
+      0,
+      60,
+      1,
+      "IMAGE"
+    ],
+    [
+      79,
+      54,
+      0,
+      61,
+      1,
+      "IMAGE"
+    ],
+    [
+      83,
+      71,
+      0,
+      73,
+      0,
+      "IMAGE"
+    ],
+    [
+      84,
+      72,
+      0,
+      73,
+      1,
+      "IMAGE"
+    ],
+    [
+      85,
+      73,
+      0,
+      74,
+      0,
+      "IMAGE"
+    ],
+    [
+      86,
+      71,
+      0,
+      76,
+      0,
+      "IMAGE"
+    ],
+    [
+      87,
+      72,
+      0,
+      76,
+      1,
+      "IMAGE"
+    ],
+    [
+      88,
+      71,
+      0,
+      77,
+      0,
+      "IMAGE"
+    ],
+    [
+      89,
+      72,
+      0,
+      77,
+      1,
+      "IMAGE"
+    ],
+    [
+      90,
+      71,
+      0,
+      78,
+      0,
+      "IMAGE"
+    ],
+    [
+      91,
+      72,
+      0,
+      78,
+      1,
+      "IMAGE"
+    ],
+    [
+      92,
+      76,
+      0,
+      79,
+      0,
+      "IMAGE"
+    ],
+    [
+      94,
+      77,
+      0,
+      80,
+      0,
+      "IMAGE"
+    ],
+    [
+      95,
+      78,
+      0,
+      81,
+      0,
+      "IMAGE"
+    ],
+    [
+      103,
+      95,
+      0,
+      93,
+      0,
+      "IMAGE"
+    ],
+    [
+      106,
+      97,
+      0,
+      93,
+      1,
+      "IMAGE"
+    ],
+    [
+      111,
+      95,
+      0,
+      104,
+      0,
+      "IMAGE"
+    ],
+    [
+      112,
+      97,
+      0,
+      104,
+      1,
+      "IMAGE"
+    ],
+    [
+      114,
+      105,
+      0,
+      104,
+      3,
+      "FACE_BOOST"
+    ],
+    [
+      115,
+      96,
+      0,
+      93,
+      3,
+      "FACE_BOOST"
+    ],
+    [
+      116,
+      93,
+      0,
+      98,
+      0,
+      "IMAGE"
+    ],
+    [
+      117,
+      104,
+      0,
+      98,
+      1,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "title": "YOLOv5n",
+      "bounding": [
+        1750,
+        -5053,
+        343,
+        455
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "title": "YOLOv5l",
+      "bounding": [
+        1406,
+        -5054,
+        340,
+        455
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "title": "resnet50",
+      "bounding": [
+        730,
+        -5053,
+        339,
+        455
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "title": "Codeformer vs gfpgan",
+      "bounding": [
+        711,
+        -3851,
+        467,
+        566
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "title": "CodeFormer 0.1 VS 1",
+      "bounding": [
+        1651,
+        -3849,
+        440,
+        565
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "title": "GFPGAN 1.3 VS 1.4",
+      "bounding": [
+        1188,
+        -3851,
+        449,
+        567
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "title": "mobile0.25",
+      "bounding": [
+        1073,
+        -5053,
+        331,
+        454
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.6648549497050735,
+      "offset": [
+        558.7606812006916,
+        6564.772136130703
+      ]
+    }
+  },
+  "version": 0.4
+}

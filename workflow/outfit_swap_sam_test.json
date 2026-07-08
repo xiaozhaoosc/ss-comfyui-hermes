@@ -1,0 +1,152 @@
+{
+  "last_node_id": 18,
+  "last_link_id": 22,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "LoadImage",
+      "pos": [0, 300],
+      "size": [315, 314],
+      "properties": {"Node name for S&R": "LoadImage"},
+      "widgets_values": ["sample_outfit.jpg", "image"]
+    },
+    {
+      "id": 2,
+      "type": "SAMDetectorSegmented",
+      "pos": [400, 300],
+      "size": [250, 100],
+      "properties": {"Node name for S&R": "SAMDetectorSegmented"},
+      "widgets_values": ["threshold", 0.25, 0.0, 0.0, false]
+    },
+    {
+      "id": 3,
+      "type": "SAMPLoader",
+      "pos": [400, 100],
+      "size": [250, 60],
+      "properties": {"Node name for S&R": "SAMPLoader"},
+      "widgets_values": ["sam_vit_b (375MB)", "auto"]
+    },
+    {
+      "id": 4,
+      "type": "SAMPointPrompt",
+      "pos": [700, 200],
+      "size": [250, 100],
+      "properties": {"Node name for S&R": "SAMPointPrompt"},
+      "widgets_values": [0.5, 0.45, 0, 0.55, 0.4, 0, 0.45, 0.5, 0, 0.55, 0.55, 0, 0.5, 0.35, 0, 0.4, 0.45, 0, 0.6, 0.45, 0, 0.5, 0.65, 0]
+    },
+    {
+      "id": 5,
+      "type": "MaskSmooth",
+      "pos": [1000, 300],
+      "size": [250, 60],
+      "properties": {"Node name for S&R": "MaskSmooth"},
+      "widgets_values": [20]
+    },
+    {
+      "id": 6,
+      "type": "MaskGaussianBlur",
+      "pos": [1300, 300],
+      "size": [250, 60],
+      "properties": {"Node name for S&R": "MaskGaussianBlur"},
+      "widgets_values": [5]
+    },
+    {
+      "id": 7,
+      "type": "CheckpointLoaderSimple",
+      "pos": [0, 0],
+      "size": [315, 100],
+      "properties": {"Node name for S&R": "CheckpointLoaderSimple"},
+      "widgets_values": ["sd_xl_base_1.0_0.9vae.safetensors"]
+    },
+    {
+      "id": 8,
+      "type": "CLIPTextEncode",
+      "pos": [400, 0],
+      "size": [300, 100],
+      "properties": {"Node name for S&R": "CLIPTextEncode"},
+      "widgets_values": ["beautiful woman wearing elegant red evening dress, intricate embroidery, silk fabric, studio lighting, high fashion photography, 8k, sharp focus"]
+    },
+    {
+      "id": 9,
+      "type": "CLIPTextEncode",
+      "pos": [400, 120],
+      "size": [300, 100],
+      "properties": {"Node name for S&R": "CLIPTextEncode"},
+      "widgets_values": ["ugly, blurry, low quality, deformed, disfigured, watermark, text, logo, bad anatomy, extra limbs"]
+    },
+    {
+      "id": 10,
+      "type": "VAELoader",
+      "pos": [0, 150],
+      "size": [315, 60],
+      "properties": {"Node name for S&R": "VAELoader"},
+      "widgets_values": ["sdxl_vae.safetensors"]
+    },
+    {
+      "id": 11,
+      "type": "VAEEncodeForInpaint",
+      "pos": [700, 400],
+      "size": [250, 100],
+      "properties": {"Node name for S&R": "VAEEncodeForInpaint"},
+      "widgets_values": [8]
+    },
+    {
+      "id": 12,
+      "type": "KSampler",
+      "pos": [1000, 100],
+      "size": [315, 262],
+      "properties": {"Node name for S&R": "KSampler"},
+      "widgets_values": [42, "fixed", 25, 7.5, "dpmpp_2m", "karras", 0.9]
+    },
+    {
+      "id": 13,
+      "type": "VAEDecode",
+      "pos": [1400, 100],
+      "size": [210, 50],
+      "properties": {"Node name for S&R": "VAEDecode"}
+    },
+    {
+      "id": 14,
+      "type": "ImageCompositeMasked",
+      "pos": [1400, 300],
+      "size": [250, 100],
+      "properties": {"Node name for S&R": "ImageCompositeMasked"},
+      "widgets_values": [0, 0, false]
+    },
+    {
+      "id": 15,
+      "type": "SaveImage",
+      "pos": [1700, 200],
+      "size": [300, 300],
+      "properties": {"Node name for S&R": "SaveImage"},
+      "widgets_values": ["outfit_swap_sam"]
+    }
+  ],
+  "links": [
+    [1, 1, 0, 2, 0, "IMAGE"],
+    [2, 1, 0, 4, 0, "IMAGE"],
+    [3, 3, 0, 2, 1, "SAM_MODEL"],
+    [4, 4, 0, 2, 2, "SAM_POINT_PROMPT"],
+    [5, 2, 0, 5, 0, "MASK"],
+    [6, 5, 0, 6, 0, "MASK"],
+    [7, 7, 0, 12, 0, "MODEL"],
+    [8, 7, 1, 8, 0, "CLIP"],
+    [9, 7, 1, 9, 0, "CLIP"],
+    [10, 8, 0, 12, 1, "CONDITIONING"],
+    [11, 9, 0, 12, 2, "CONDITIONING"],
+    [12, 10, 0, 11, 2, "VAE"],
+    [13, 1, 0, 11, 0, "IMAGE"],
+    [14, 6, 0, 11, 1, "MASK"],
+    [15, 7, 0, 12, 0, "MODEL"],
+    [16, 11, 0, 12, 3, "LATENT"],
+    [17, 12, 0, 13, 0, "LATENT"],
+    [18, 13, 0, 14, 0, "IMAGE"],
+    [19, 1, 0, 14, 1, "IMAGE"],
+    [20, 6, 0, 14, 2, "MASK"],
+    [21, 14, 0, 15, 0, "IMAGE"]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}

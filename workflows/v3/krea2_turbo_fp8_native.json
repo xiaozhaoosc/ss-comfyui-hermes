@@ -1,0 +1,1074 @@
+{
+  "id": "537262d5-2435-4124-929f-baf2eec70733",
+  "revision": 0,
+  "last_node_id": 211,
+  "last_link_id": 461,
+  "nodes": [
+    {
+      "id": 5,
+      "type": "VAELoader",
+      "pos": [
+        1650,
+        5070
+      ],
+      "size": [
+        270,
+        60
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            3
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.25.0",
+        "Node name for S&R": "VAELoader",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "qwen_image_vae.safetensors"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 10,
+      "type": "VAEDecode",
+      "pos": [
+        2490,
+        4780
+      ],
+      "size": [
+        140,
+        50
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 1
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            2
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.25.0",
+        "Node name for S&R": "VAEDecode",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 11,
+      "type": "SaveImage",
+      "pos": [
+        2650,
+        4820
+      ],
+      "size": [
+        590,
+        550
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.25.0",
+        "Node name for S&R": "SaveImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "KREA-2/KREA_"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 4,
+      "type": "CLIPLoader",
+      "pos": [
+        1650,
+        4920
+      ],
+      "size": [
+        270,
+        110
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            8,
+            9
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.25.0",
+        "Node name for S&R": "CLIPLoader",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "qwen3vl_4b_fp8_scaled.safetensors",
+        "krea2",
+        "cpu"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 211,
+      "type": "fd70c536-c9a9-419f-8fc6-f3dca1ea680a",
+      "pos": [
+        1880,
+        4390
+      ],
+      "size": [
+        510,
+        210
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "current_line_text",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "proxyWidgets": [
+          [
+            "182",
+            "string"
+          ],
+          [
+            "181",
+            "starting_index"
+          ],
+          [
+            "181",
+            "hold_current_text"
+          ],
+          [
+            "181",
+            "reload_file"
+          ],
+          [
+            "181",
+            "reset_counter"
+          ],
+          [
+            "181",
+            "skip_lines"
+          ],
+          [
+            "181",
+            "traversal_mode"
+          ]
+        ],
+        "cnr_id": "comfy-core",
+        "ver": "0.3.76",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.1"
+        }
+      },
+      "widgets_values": [],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 9,
+      "type": "EmptyLatentImage",
+      "pos": [
+        1650,
+        5180
+      ],
+      "size": [
+        270,
+        110
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            4
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.25.0",
+        "Node name for S&R": "EmptyLatentImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        2048,
+        2048,
+        1
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 7,
+      "type": "CLIPTextEncode",
+      "pos": [
+        1940,
+        5080
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 9
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            6
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.25.0",
+        "Node name for S&R": "CLIPTextEncode",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        ""
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 6,
+      "type": "CLIPTextEncode",
+      "pos": [
+        1940,
+        4820
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 8
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            5
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.25.0",
+        "Node name for S&R": "CLIPTextEncode",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "a close-up candid photograph of a photorealistic anthropomorphic lizard wearing a black nike sweatsuit with black sneakers holding a sign that reads \"Rebels KREA-2 GGUFs\", 8k details, cinematic, sunset lighting"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 8,
+      "type": "KSampler",
+      "pos": [
+        2350,
+        4830
+      ],
+      "size": [
+        270,
+        460
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 461
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 5
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 6
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 4
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            1
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.25.0",
+        "Node name for S&R": "KSampler",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        403321243988573,
+        "randomize",
+        8,
+        1,
+        "euler",
+        "simple",
+        1
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 2,
+      "type": "UNETLoader",
+      "pos": [
+        1310,
+        4660
+      ],
+      "size": [
+        270,
+        90
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            461
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.25.0",
+        "Node name for S&R": "UNETLoader",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "krea2_turbo_fp8_scaled.safetensors",
+        "default"
+      ]
+    },
+    {
+      "id": 3,
+      "type": "UnetLoaderGGUF",
+      "pos": [
+        1650,
+        4800
+      ],
+      "size": [
+        270,
+        60
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI-GGUF",
+        "ver": "6ea2651e7df66d7585f6ffee804b20e92fb38b8a",
+        "Node name for S&R": "UnetLoaderGGUF",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "Krea-2-Base-Q5_K_M.gguf"
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    }
+  ],
+  "links": [
+    [
+      1,
+      8,
+      0,
+      10,
+      0,
+      "LATENT"
+    ],
+    [
+      2,
+      10,
+      0,
+      11,
+      0,
+      "IMAGE"
+    ],
+    [
+      3,
+      5,
+      0,
+      10,
+      1,
+      "VAE"
+    ],
+    [
+      4,
+      9,
+      0,
+      8,
+      3,
+      "LATENT"
+    ],
+    [
+      5,
+      6,
+      0,
+      8,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      6,
+      7,
+      0,
+      8,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      8,
+      4,
+      0,
+      6,
+      0,
+      "CLIP"
+    ],
+    [
+      9,
+      4,
+      0,
+      7,
+      0,
+      "CLIP"
+    ],
+    [
+      461,
+      2,
+      0,
+      8,
+      0,
+      "MODEL"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "Thank You For Choosing Rebel AI Workflows <3",
+      "bounding": [
+        1640,
+        4710,
+        1610,
+        670
+      ],
+      "color": "#a1309b",
+      "flags": {}
+    }
+  ],
+  "definitions": {
+    "subgraphs": [
+      {
+        "id": "fd70c536-c9a9-419f-8fc6-f3dca1ea680a",
+        "version": 1,
+        "state": {
+          "lastGroupId": 9,
+          "lastNodeId": 211,
+          "lastLinkId": 461,
+          "lastRerouteId": 0
+        },
+        "revision": 0,
+        "config": {},
+        "name": "Prompt Cycler",
+        "inputNode": {
+          "id": -10,
+          "bounding": [
+            -2219.3037349444858,
+            602.9994237603842,
+            128,
+            48
+          ]
+        },
+        "outputNode": {
+          "id": -20,
+          "bounding": [
+            -714.0201350909695,
+            592.9994237603842,
+            141.48046875,
+            68
+          ]
+        },
+        "inputs": [],
+        "outputs": [
+          {
+            "id": "6684e73f-81fd-4978-a3c8-aac333064e17",
+            "name": "current_line_text",
+            "type": "STRING",
+            "linkIds": [
+              6
+            ],
+            "localized_name": "current_line_text",
+            "pos": [
+              -690.0201350909695,
+              616.9994237603842
+            ]
+          }
+        ],
+        "widgets": [],
+        "nodes": [
+          {
+            "id": 198,
+            "type": "DisplayAny",
+            "pos": [
+              -1020,
+              410
+            ],
+            "size": [
+              250,
+              180
+            ],
+            "flags": {},
+            "order": 5,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "input",
+                "name": "input",
+                "type": "*",
+                "link": 2
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "STRING",
+                "name": "STRING",
+                "type": "STRING",
+                "links": null
+              }
+            ],
+            "title": "Remaining Prompts to Process",
+            "properties": {
+              "cnr_id": "kikotools",
+              "ver": "1.0.21",
+              "Node name for S&R": "DisplayAny",
+              "ue_properties": {
+                "version": "7.0.1",
+                "widget_ue_connectable": {
+                  "mode": true
+                }
+              }
+            },
+            "widgets_values": [
+              "raw value",
+              "raw value",
+              null
+            ],
+            "color": "#322",
+            "bgcolor": "#533"
+          },
+          {
+            "id": 19,
+            "type": "DisplayAny",
+            "pos": [
+              -1270,
+              410
+            ],
+            "size": [
+              210,
+              180
+            ],
+            "flags": {},
+            "order": 4,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "input",
+                "name": "input",
+                "type": "*",
+                "link": 3
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "STRING",
+                "name": "STRING",
+                "type": "STRING",
+                "links": null
+              }
+            ],
+            "title": "Total Prompts",
+            "properties": {
+              "cnr_id": "kikotools",
+              "ver": "1.0.21",
+              "Node name for S&R": "DisplayAny",
+              "ue_properties": {
+                "version": "7.0.1",
+                "widget_ue_connectable": {
+                  "mode": true
+                }
+              }
+            },
+            "widgets_values": [
+              "raw value",
+              "raw value",
+              null
+            ],
+            "color": "#322",
+            "bgcolor": "#533"
+          },
+          {
+            "id": 20,
+            "type": "DisplayAny",
+            "pos": [
+              -1510,
+              420
+            ],
+            "size": [
+              210,
+              180
+            ],
+            "flags": {},
+            "order": 3,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "input",
+                "name": "input",
+                "type": "*",
+                "link": 4
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "STRING",
+                "name": "STRING",
+                "type": "STRING",
+                "links": null
+              }
+            ],
+            "title": "Current Prompt",
+            "properties": {
+              "cnr_id": "kikotools",
+              "ver": "1.0.21",
+              "Node name for S&R": "DisplayAny",
+              "ue_properties": {
+                "version": "7.0.1",
+                "widget_ue_connectable": {
+                  "mode": true
+                }
+              }
+            },
+            "widgets_values": [
+              "raw value",
+              "raw value",
+              null
+            ],
+            "color": "#232",
+            "bgcolor": "#353"
+          },
+          {
+            "id": 181,
+            "type": "WWAA_AdvancedTextFileReader",
+            "pos": [
+              -2040,
+              550
+            ],
+            "size": [
+              470,
+              270
+            ],
+            "flags": {},
+            "order": 1,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "file_path",
+                "name": "file_path",
+                "type": "STRING",
+                "widget": {
+                  "name": "file_path"
+                },
+                "link": 5
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "current_line_text",
+                "name": "current_line_text",
+                "type": "STRING",
+                "links": [
+                  1,
+                  6
+                ]
+              },
+              {
+                "localized_name": "current_line_number",
+                "name": "current_line_number",
+                "type": "INT",
+                "links": [
+                  4
+                ]
+              },
+              {
+                "localized_name": "total_lines",
+                "name": "total_lines",
+                "type": "INT",
+                "links": [
+                  3
+                ]
+              },
+              {
+                "localized_name": "remaining_lines",
+                "name": "remaining_lines",
+                "type": "INT",
+                "links": [
+                  2
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "wwaa-customnodes",
+              "ver": "2.0.5",
+              "Node name for S&R": "WWAA_AdvancedTextFileReader",
+              "ue_properties": {
+                "version": "7.0.1",
+                "widget_ue_connectable": {
+                  "file_path": true,
+                  "traversal_mode": true,
+                  "skip_lines": true,
+                  "reset_counter": true,
+                  "reload_file": true,
+                  "hold_current_text": true,
+                  "starting_index": true
+                }
+              },
+              "aux_id": "hgabha/WWAA-CustomNodes"
+            },
+            "widgets_values": [
+              "E:\\Resources\\LoRA Single Person Prompts.txt",
+              "forward",
+              0,
+              false,
+              false,
+              false,
+              0
+            ],
+            "color": "#4e2d12ff",
+            "bgcolor": "#92511bff"
+          },
+          {
+            "id": 182,
+            "type": "Simple String",
+            "pos": [
+              -2040,
+              440
+            ],
+            "size": [
+              470,
+              60
+            ],
+            "flags": {},
+            "order": 0,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+              {
+                "localized_name": "stringout",
+                "name": "stringout",
+                "type": "STRING",
+                "links": [
+                  5
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "cg-use-everywhere",
+              "ver": "7.0.1",
+              "Node name for S&R": "Simple String",
+              "ue_properties": {
+                "version": "7.0.1",
+                "widget_ue_connectable": {
+                  "string": true
+                }
+              }
+            },
+            "widgets_values": [
+              "C:\\Users\\noahp\\OneDrive\\Documents\\myFluxPrompts.txt"
+            ]
+          },
+          {
+            "id": 183,
+            "type": "DisplayAny",
+            "pos": [
+              -1500,
+              640
+            ],
+            "size": [
+              730,
+              230
+            ],
+            "flags": {},
+            "order": 2,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "input",
+                "name": "input",
+                "type": "*",
+                "link": 1
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "STRING",
+                "name": "STRING",
+                "type": "STRING",
+                "links": null
+              }
+            ],
+            "properties": {
+              "cnr_id": "kikotools",
+              "ver": "1.0.21",
+              "Node name for S&R": "DisplayAny",
+              "ue_properties": {
+                "version": "7.0.1",
+                "widget_ue_connectable": {
+                  "mode": true
+                }
+              }
+            },
+            "widgets_values": [
+              "raw value",
+              "raw value",
+              null
+            ]
+          }
+        ],
+        "groups": [],
+        "links": [
+          {
+            "id": 2,
+            "origin_id": 181,
+            "origin_slot": 3,
+            "target_id": 198,
+            "target_slot": 0,
+            "type": "*"
+          },
+          {
+            "id": 3,
+            "origin_id": 181,
+            "origin_slot": 2,
+            "target_id": 19,
+            "target_slot": 0,
+            "type": "*"
+          },
+          {
+            "id": 4,
+            "origin_id": 181,
+            "origin_slot": 1,
+            "target_id": 20,
+            "target_slot": 0,
+            "type": "*"
+          },
+          {
+            "id": 5,
+            "origin_id": 182,
+            "origin_slot": 0,
+            "target_id": 181,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 1,
+            "origin_id": 181,
+            "origin_slot": 0,
+            "target_id": 183,
+            "target_slot": 0,
+            "type": "*"
+          },
+          {
+            "id": 6,
+            "origin_id": 181,
+            "origin_slot": 0,
+            "target_id": -20,
+            "target_slot": 0,
+            "type": "*"
+          }
+        ],
+        "extra": {
+          "workflowRendererVersion": "LG",
+          "ue_links": [],
+          "links_added_by_ue": []
+        }
+      }
+    ]
+  },
+  "config": {},
+  "extra": {
+    "ue_links": [],
+    "ds": {
+      "scale": 0.8264462809917359,
+      "offset": [
+        -1123.5893051146209,
+        -4311.697965971327
+      ]
+    },
+    "links_added_by_ue": [],
+    "frontendVersion": "1.45.19",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}

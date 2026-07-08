@@ -1,0 +1,114 @@
+{
+  "1": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "todo/idm_vton_test/human.jpg",
+      "upload": "image"
+    }
+  },
+  "2": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "todo/idm_vton_test/garment.jpg",
+      "upload": "image"
+    }
+  },
+  "3": {
+    "class_type": "FaceProtectMask",
+    "inputs": {
+      "image": [
+        "1",
+        0
+      ],
+      "clothing_labels": "4,5,7,8",
+      "protect_labels": "2,3,11",
+      "protect_expand": 15,
+      "feather": 8
+    }
+  },
+  "9": {
+    "class_type": "MaskToImage",
+    "inputs": {
+      "mask": [
+        "3",
+        0
+      ]
+    }
+  },
+  "4": {
+    "class_type": "DensePosePreprocessor",
+    "inputs": {
+      "image": [
+        "1",
+        0
+      ]
+    }
+  },
+  "5": {
+    "class_type": "PipelineLoader",
+    "inputs": {
+      "weight_dtype": "float16"
+    }
+  },
+  "6": {
+    "class_type": "IDM-VTON",
+    "inputs": {
+      "pipeline": [
+        "5",
+        0
+      ],
+      "human_img": [
+        "1",
+        0
+      ],
+      "pose_img": [
+        "4",
+        0
+      ],
+      "mask_img": [
+        "9",
+        0
+      ],
+      "garment_img": [
+        "2",
+        0
+      ],
+      "garment_description": "a plain white crew neck short-sleeve t-shirt",
+      "negative_prompt": "monochrome, lowres, bad anatomy, worst quality, low quality, artifacts, distortion",
+      "width": 768,
+      "height": 1024,
+      "num_inference_steps": 30,
+      "guidance_scale": 2.0,
+      "strength": 1.0,
+      "seed": 42
+    }
+  },
+  "10": {
+    "class_type": "PreviewImage",
+    "inputs": {
+      "images": [
+        "3",
+        1
+      ]
+    }
+  },
+  "7": {
+    "class_type": "PreviewImage",
+    "inputs": {
+      "images": [
+        "6",
+        0
+      ]
+    }
+  },
+  "8": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "6",
+        0
+      ],
+      "filename_prefix": "idm_vton_result"
+    }
+  }
+}

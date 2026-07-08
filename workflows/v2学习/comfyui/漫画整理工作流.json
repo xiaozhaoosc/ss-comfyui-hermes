@@ -1,0 +1,4557 @@
+{
+  "last_node_id": 140,
+  "last_link_id": 234,
+  "nodes": [
+    {
+      "id": 45,
+      "type": "CR Image Border",
+      "pos": [
+        1667.1505439849768,
+        1944.075599179019
+      ],
+      "size": {
+        "0": 315,
+        "1": 246
+      },
+      "flags": {},
+      "order": 67,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 64,
+          "label": "image"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            65
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "image"
+        },
+        {
+          "name": "show_help",
+          "type": "STRING",
+          "links": null,
+          "shape": 3,
+          "label": "show_help"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CR Image Border",
+        "ttNbgOverride": {
+          "color": "#332922",
+          "bgcolor": "#593930",
+          "groupcolor": "#b06634"
+        }
+      },
+      "widgets_values": [
+        20,
+        20,
+        20,
+        20,
+        "custom",
+        100,
+        "turquoise",
+        "#FFC0CB"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 34,
+      "type": "CR Page Layout",
+      "pos": [
+        1189.9383413926478,
+        1958.0116787244733
+      ],
+      "size": {
+        "0": 400,
+        "1": 506
+      },
+      "flags": {},
+      "order": 66,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image_panel",
+          "type": "IMAGE",
+          "link": 143,
+          "label": "image_panel"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            64
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "image"
+        },
+        {
+          "name": "show_help",
+          "type": "STRING",
+          "links": null,
+          "shape": 3,
+          "label": "show_help"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CR Page Layout",
+        "ttNbgOverride": {
+          "color": "#332922",
+          "bgcolor": "#593930",
+          "groupcolor": "#b06634"
+        }
+      },
+      "widgets_values": [
+        "header and footer",
+        200,
+        "Day in the Life",
+        "left",
+        100,
+        "By: 啦啦啦的小黄瓜",
+        "right",
+        "方正粉丝天下简体.ttf",
+        "black",
+        150,
+        60,
+        10,
+        "black",
+        "white",
+        "#000000",
+        "#000000",
+        "#000000"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 96,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -907.5163019353605,
+        237.55239729447743
+      ],
+      "size": [
+        330.50439769200545,
+        74.90730592654762
+      ],
+      "flags": {},
+      "order": 32,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": null
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 175,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            181
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 97,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -887.5163019353606,
+        357.55239729447743
+      ],
+      "size": [
+        307.24099542924023,
+        75.9999942779541
+      ],
+      "flags": {},
+      "order": 33,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": null
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 176,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            182
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 2,
+      "type": "KSampler (Efficient)",
+      "pos": [
+        -348.5163019353605,
+        264.55239729447743
+      ],
+      "size": {
+        "0": 326.2000427246094,
+        "1": 586
+      },
+      "flags": {},
+      "order": 49,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": null,
+          "label": "model"
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 181,
+          "label": "positive"
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 182,
+          "label": "negative",
+          "slot_index": 2
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": null,
+          "label": "latent_image"
+        },
+        {
+          "name": "optional_vae",
+          "type": "VAE",
+          "link": null,
+          "label": "optional_vae"
+        },
+        {
+          "name": "script",
+          "type": "SCRIPT",
+          "link": null,
+          "label": "script"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": null,
+          "shape": 3,
+          "label": "MODEL"
+        },
+        {
+          "name": "CONDITIONING+",
+          "type": "CONDITIONING",
+          "links": null,
+          "shape": 3,
+          "label": "CONDITIONING+"
+        },
+        {
+          "name": "CONDITIONING-",
+          "type": "CONDITIONING",
+          "links": null,
+          "shape": 3,
+          "label": "CONDITIONING-"
+        },
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": null,
+          "shape": 3,
+          "label": "LATENT"
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": null,
+          "shape": 3,
+          "label": "VAE"
+        },
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            41
+          ],
+          "shape": 3,
+          "slot_index": 5,
+          "label": "IMAGE"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler (Efficient)"
+      },
+      "widgets_values": [
+        851590489004658,
+        982112652296693,
+        8,
+        2,
+        "lcm",
+        "karras",
+        1,
+        "auto",
+        "true"
+      ],
+      "color": "#222233",
+      "bgcolor": "#333355",
+      "shape": 1
+    },
+    {
+      "id": 105,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -947.5163019353605,
+        1057.5523972944773
+      ],
+      "size": {
+        "0": 330.50439453125,
+        "1": 74.90730285644531
+      },
+      "flags": {},
+      "order": 34,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": null
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 183,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            185
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 104,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -917.5163019353605,
+        1187.552397294477
+      ],
+      "size": {
+        "0": 307.2409973144531,
+        "1": 75.99999237060547
+      },
+      "flags": {},
+      "order": 35,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": null
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 184,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            186
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 109,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -837.5163019353606,
+        2617.552397294478
+      ],
+      "size": {
+        "0": 330.50439453125,
+        "1": 74.90730285644531
+      },
+      "flags": {},
+      "order": 38,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": null
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 191,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            195
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 108,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -807.5163019353606,
+        2747.552397294478
+      ],
+      "size": {
+        "0": 307.2409973144531,
+        "1": 75.99999237060547
+      },
+      "flags": {},
+      "order": 39,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": null
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 192,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            196
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 111,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -817.5163019353606,
+        3537.552397294478
+      ],
+      "size": {
+        "0": 330.50439453125,
+        "1": 74.90730285644531
+      },
+      "flags": {},
+      "order": 40,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": null
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 197,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            201
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 113,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -777.5163019353607,
+        4247.552397294477
+      ],
+      "size": {
+        "0": 330.50439453125,
+        "1": 74.90730285644531
+      },
+      "flags": {},
+      "order": 42,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": null
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 203,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            205
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 115,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -757.5163019353607,
+        4997.552397294477
+      ],
+      "size": {
+        "0": 330.50439453125,
+        "1": 74.90730285644531
+      },
+      "flags": {},
+      "order": 44,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": null
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 207,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            209
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 117,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -717.5163019353607,
+        5817.552397294477
+      ],
+      "size": {
+        "0": 330.50439453125,
+        "1": 74.90730285644531
+      },
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": null
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 211,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            213
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 89,
+      "type": "Anything Everywhere",
+      "pos": [
+        -4696.472659403513,
+        3209.4792876805936
+      ],
+      "size": {
+        "0": 210,
+        "1": 26
+      },
+      "flags": {},
+      "order": 46,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "MODEL",
+          "type": "*",
+          "link": 171,
+          "color_on": "#B39DDB"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Anything Everywhere",
+        "group_restricted": false,
+        "color_restricted": false
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 90,
+      "type": "Anything Everywhere",
+      "pos": [
+        -4692.472659403513,
+        3285.4792876805936
+      ],
+      "size": {
+        "0": 210,
+        "1": 26
+      },
+      "flags": {},
+      "order": 47,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "CLIP",
+          "type": "*",
+          "link": 172,
+          "color_on": "#FFD500"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Anything Everywhere",
+        "group_restricted": false,
+        "color_restricted": false
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 92,
+      "type": "Anything Everywhere",
+      "pos": [
+        -5033.472659403514,
+        3476.479287680594
+      ],
+      "size": {
+        "0": 210,
+        "1": 26
+      },
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "VAE",
+          "type": "*",
+          "link": 168,
+          "color_on": "#FF6E6E"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Anything Everywhere",
+        "group_restricted": false,
+        "color_restricted": false
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 103,
+      "type": "KSampler (Efficient)",
+      "pos": [
+        -354.5163019353605,
+        948.5523972944775
+      ],
+      "size": [
+        326.2000427246094,
+        586
+      ],
+      "flags": {},
+      "order": 50,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": null,
+          "label": "model"
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 185,
+          "label": "positive"
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 186,
+          "label": "negative",
+          "slot_index": 2
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": null,
+          "label": "latent_image"
+        },
+        {
+          "name": "optional_vae",
+          "type": "VAE",
+          "link": null,
+          "label": "optional_vae"
+        },
+        {
+          "name": "script",
+          "type": "SCRIPT",
+          "link": null,
+          "label": "script"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": null,
+          "shape": 3,
+          "label": "MODEL"
+        },
+        {
+          "name": "CONDITIONING+",
+          "type": "CONDITIONING",
+          "links": null,
+          "shape": 3,
+          "label": "CONDITIONING+"
+        },
+        {
+          "name": "CONDITIONING-",
+          "type": "CONDITIONING",
+          "links": null,
+          "shape": 3,
+          "label": "CONDITIONING-"
+        },
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": null,
+          "shape": 3,
+          "label": "LATENT"
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": null,
+          "shape": 3,
+          "label": "VAE"
+        },
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            215
+          ],
+          "shape": 3,
+          "slot_index": 5,
+          "label": "IMAGE"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler (Efficient)"
+      },
+      "widgets_values": [
+        851590489004658,
+        982112652296693,
+        8,
+        2,
+        "lcm",
+        "karras",
+        1,
+        "auto",
+        "true"
+      ],
+      "color": "#222233",
+      "bgcolor": "#333355",
+      "shape": 1
+    },
+    {
+      "id": 52,
+      "type": "KSampler (Efficient)",
+      "pos": [
+        -257.51630193536056,
+        3511.552397294478
+      ],
+      "size": {
+        "0": 326.2000427246094,
+        "1": 586
+      },
+      "flags": {},
+      "order": 53,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": null,
+          "label": "model"
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 201,
+          "label": "positive"
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 202,
+          "label": "negative"
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": null,
+          "label": "latent_image"
+        },
+        {
+          "name": "optional_vae",
+          "type": "VAE",
+          "link": null,
+          "label": "optional_vae"
+        },
+        {
+          "name": "script",
+          "type": "SCRIPT",
+          "link": null,
+          "label": "script"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": null,
+          "shape": 3,
+          "label": "MODEL"
+        },
+        {
+          "name": "CONDITIONING+",
+          "type": "CONDITIONING",
+          "links": null,
+          "shape": 3,
+          "label": "CONDITIONING+"
+        },
+        {
+          "name": "CONDITIONING-",
+          "type": "CONDITIONING",
+          "links": null,
+          "shape": 3,
+          "label": "CONDITIONING-"
+        },
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": null,
+          "shape": 3,
+          "label": "LATENT"
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": null,
+          "shape": 3,
+          "label": "VAE"
+        },
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            90
+          ],
+          "shape": 3,
+          "slot_index": 5,
+          "label": "IMAGE"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler (Efficient)"
+      },
+      "widgets_values": [
+        851590489004658,
+        982112652296693,
+        12,
+        2,
+        "lcm",
+        "karras",
+        1,
+        "auto",
+        "true"
+      ],
+      "color": "#222233",
+      "bgcolor": "#333355",
+      "shape": 1
+    },
+    {
+      "id": 78,
+      "type": "ImpactMakeImageBatch",
+      "pos": [
+        1153.9383413926478,
+        2647.011678724471
+      ],
+      "size": {
+        "0": 140,
+        "1": 186
+      },
+      "flags": {},
+      "order": 64,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image1",
+          "type": "IMAGE",
+          "link": 134,
+          "label": "image1"
+        },
+        {
+          "name": "image2",
+          "type": "IMAGE",
+          "link": 135,
+          "label": "image2"
+        },
+        {
+          "name": "image3",
+          "type": "IMAGE",
+          "link": 136,
+          "label": "image3"
+        },
+        {
+          "name": "image4",
+          "type": "IMAGE",
+          "link": 137,
+          "label": "image4"
+        },
+        {
+          "name": "image5",
+          "type": "IMAGE",
+          "link": 138,
+          "label": "image5"
+        },
+        {
+          "name": "image6",
+          "type": "IMAGE",
+          "link": 139,
+          "label": "image6"
+        },
+        {
+          "name": "image7",
+          "type": "IMAGE",
+          "link": 140,
+          "label": "image7"
+        },
+        {
+          "name": "image8",
+          "type": "IMAGE",
+          "link": 141,
+          "label": "image8"
+        },
+        {
+          "name": "image9",
+          "type": "IMAGE",
+          "link": null,
+          "label": "image9"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            142
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "IMAGE"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImpactMakeImageBatch",
+        "ttNbgOverride": {
+          "color": "#332922",
+          "bgcolor": "#593930",
+          "groupcolor": "#b06634"
+        }
+      },
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 68,
+      "type": "CR Image Grid Panel",
+      "pos": [
+        1371.1505439849768,
+        2625.0755991790165
+      ],
+      "size": {
+        "0": 315,
+        "1": 198
+      },
+      "flags": {},
+      "order": 65,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 142,
+          "label": "images"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            143
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "image"
+        },
+        {
+          "name": "show_help",
+          "type": "STRING",
+          "links": null,
+          "shape": 3,
+          "label": "show_help"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CR Image Grid Panel",
+        "ttNbgOverride": {
+          "color": "#332922",
+          "bgcolor": "#593930",
+          "groupcolor": "#b06634"
+        }
+      },
+      "widgets_values": [
+        20,
+        "white",
+        5,
+        "black",
+        4,
+        "#000000"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 99,
+      "type": "EmptyLatentImage",
+      "pos": [
+        -5389.472659403514,
+        3588.4792876805936
+      ],
+      "size": {
+        "0": 315,
+        "1": 106
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            178
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        1024,
+        1024,
+        1
+      ]
+    },
+    {
+      "id": 100,
+      "type": "Anything Everywhere",
+      "pos": [
+        -5026.472659403514,
+        3589.4792876805936
+      ],
+      "size": {
+        "0": 210,
+        "1": 26
+      },
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "LATENT",
+          "type": "*",
+          "link": 178,
+          "color_on": "#FF9CF9"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Anything Everywhere",
+        "group_restricted": false,
+        "color_restricted": false
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 107,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -909.5163019353605,
+        1814.552397294477
+      ],
+      "size": {
+        "0": 330.50439453125,
+        "1": 74.90730285644531
+      },
+      "flags": {},
+      "order": 36,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": null
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 187,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            189
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 106,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -887.5163019353606,
+        1951.552397294477
+      ],
+      "size": {
+        "0": 307.2409973144531,
+        "1": 75.99999237060547
+      },
+      "flags": {},
+      "order": 37,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": null
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 188,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            190
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 47,
+      "type": "KSampler (Efficient)",
+      "pos": [
+        -281.5163019353605,
+        2563.552397294478
+      ],
+      "size": {
+        "0": 326.2000427246094,
+        "1": 586
+      },
+      "flags": {},
+      "order": 52,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": null,
+          "label": "model"
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 195,
+          "label": "positive"
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 196,
+          "label": "negative"
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": null,
+          "label": "latent_image"
+        },
+        {
+          "name": "optional_vae",
+          "type": "VAE",
+          "link": null,
+          "label": "optional_vae"
+        },
+        {
+          "name": "script",
+          "type": "SCRIPT",
+          "link": null,
+          "label": "script"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": null,
+          "shape": 3,
+          "label": "MODEL"
+        },
+        {
+          "name": "CONDITIONING+",
+          "type": "CONDITIONING",
+          "links": null,
+          "shape": 3,
+          "label": "CONDITIONING+"
+        },
+        {
+          "name": "CONDITIONING-",
+          "type": "CONDITIONING",
+          "links": null,
+          "shape": 3,
+          "label": "CONDITIONING-"
+        },
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": null,
+          "shape": 3,
+          "label": "LATENT"
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": null,
+          "shape": 3,
+          "label": "VAE"
+        },
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            73
+          ],
+          "shape": 3,
+          "slot_index": 5,
+          "label": "IMAGE"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler (Efficient)"
+      },
+      "widgets_values": [
+        49142047746654,
+        982112652296693,
+        12,
+        2,
+        "lcm",
+        "karras",
+        1,
+        "auto",
+        "true"
+      ],
+      "color": "#222233",
+      "bgcolor": "#333355",
+      "shape": 1
+    },
+    {
+      "id": 110,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -791.5163019353607,
+        3663.552397294478
+      ],
+      "size": {
+        "0": 307.2409973144531,
+        "1": 75.99999237060547
+      },
+      "flags": {},
+      "order": 41,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": null
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 198,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            202
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 112,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -753.5163019353607,
+        4373.552397294477
+      ],
+      "size": {
+        "0": 307.2409973144531,
+        "1": 75.99999237060547
+      },
+      "flags": {},
+      "order": 43,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": null
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 204,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            206
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 114,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -737.5163019353607,
+        5113.552397294477
+      ],
+      "size": {
+        "0": 307.2409973144531,
+        "1": 75.99999237060547
+      },
+      "flags": {},
+      "order": 45,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": null
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 208,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            210
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 116,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -696.5163019353606,
+        5938.552397294477
+      ],
+      "size": {
+        "0": 307.2409973144531,
+        "1": 75.99999237060547
+      },
+      "flags": {},
+      "order": 31,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": null
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 212,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            214
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 91,
+      "type": "VAELoader",
+      "pos": [
+        -5391.007516487682,
+        3475.3300416712277
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            168
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "vae-ft-mse-840000-ema-pruned.safetensors"
+      ]
+    },
+    {
+      "id": 93,
+      "type": "LoraLoader",
+      "pos": [
+        -5053.007516487682,
+        3243.3300416712277
+      ],
+      "size": {
+        "0": 315,
+        "1": 126
+      },
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 169
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 170
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            171
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            172
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoader"
+      },
+      "widgets_values": [
+        "LCM_LoRA_Weights_SD15.safetensors",
+        1,
+        1
+      ]
+    },
+    {
+      "id": 31,
+      "type": "KSampler (Efficient)",
+      "pos": [
+        -298.5163019353605,
+        1789.552397294477
+      ],
+      "size": [
+        326.2000427246094,
+        586
+      ],
+      "flags": {},
+      "order": 51,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": null,
+          "label": "model"
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 189,
+          "label": "positive"
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 190,
+          "label": "negative"
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": null,
+          "label": "latent_image"
+        },
+        {
+          "name": "optional_vae",
+          "type": "VAE",
+          "link": null,
+          "label": "optional_vae"
+        },
+        {
+          "name": "script",
+          "type": "SCRIPT",
+          "link": null,
+          "label": "script"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": null,
+          "shape": 3,
+          "label": "MODEL"
+        },
+        {
+          "name": "CONDITIONING+",
+          "type": "CONDITIONING",
+          "links": null,
+          "shape": 3,
+          "label": "CONDITIONING+"
+        },
+        {
+          "name": "CONDITIONING-",
+          "type": "CONDITIONING",
+          "links": null,
+          "shape": 3,
+          "label": "CONDITIONING-"
+        },
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": null,
+          "shape": 3,
+          "label": "LATENT"
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": null,
+          "shape": 3,
+          "label": "VAE"
+        },
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            52
+          ],
+          "shape": 3,
+          "slot_index": 5,
+          "label": "IMAGE"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler (Efficient)"
+      },
+      "widgets_values": [
+        49142047746649,
+        982112652296693,
+        8,
+        2,
+        "lcm",
+        "karras",
+        1,
+        "auto",
+        "true"
+      ],
+      "color": "#222233",
+      "bgcolor": "#333355",
+      "shape": 1
+    },
+    {
+      "id": 62,
+      "type": "CR Simple Meme Template",
+      "pos": [
+        169,
+        5021
+      ],
+      "size": [
+        449.6629638671875,
+        376.09393310546875
+      ],
+      "flags": {},
+      "order": 63,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 99,
+          "label": "image"
+        },
+        {
+          "name": "text_bottom",
+          "type": "STRING",
+          "link": 219,
+          "widget": {
+            "name": "text_bottom"
+          },
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            140
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "image"
+        },
+        {
+          "name": "show_help",
+          "type": "STRING",
+          "links": null,
+          "shape": 3,
+          "label": "show_help"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CR Simple Meme Template",
+        "ttNbgOverride": {
+          "color": "#332922",
+          "bgcolor": "#593930",
+          "groupcolor": "#b06634"
+        }
+      },
+      "widgets_values": [
+        "custom",
+        "",
+        "抵挡外来物种对世界的侵略，\n拿起正义的武器，捍卫人类家园。",
+        "方正粉丝天下简体.ttf",
+        65,
+        "black",
+        "none",
+        "white",
+        "bottom",
+        "#000000",
+        "#000000"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 58,
+      "type": "CR Simple Meme Template",
+      "pos": [
+        150,
+        4300
+      ],
+      "size": [
+        449.6629638671875,
+        376.09393310546875
+      ],
+      "flags": {},
+      "order": 62,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 91,
+          "label": "image"
+        },
+        {
+          "name": "text_bottom",
+          "type": "STRING",
+          "link": 220,
+          "widget": {
+            "name": "text_bottom"
+          },
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            139
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "image"
+        },
+        {
+          "name": "show_help",
+          "type": "STRING",
+          "links": null,
+          "shape": 3,
+          "label": "show_help"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CR Simple Meme Template",
+        "ttNbgOverride": {
+          "color": "#332922",
+          "bgcolor": "#593930",
+          "groupcolor": "#b06634"
+        }
+      },
+      "widgets_values": [
+        "custom",
+        "",
+        "总会畅想自己成为一个\n科技加身的机械女侠。",
+        "方正粉丝天下简体.ttf",
+        65,
+        "black",
+        "none",
+        "white",
+        "bottom",
+        "#000000",
+        "#000000"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 57,
+      "type": "CR Simple Meme Template",
+      "pos": [
+        144,
+        3550
+      ],
+      "size": [
+        449.6629638671875,
+        376.09393310546875
+      ],
+      "flags": {},
+      "order": 61,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 90,
+          "label": "image"
+        },
+        {
+          "name": "text_bottom",
+          "type": "STRING",
+          "link": 221,
+          "widget": {
+            "name": "text_bottom"
+          },
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            138
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "image"
+        },
+        {
+          "name": "show_help",
+          "type": "STRING",
+          "links": null,
+          "shape": 3,
+          "label": "show_help"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CR Simple Meme Template",
+        "ttNbgOverride": {
+          "color": "#332922",
+          "bgcolor": "#593930",
+          "groupcolor": "#b06634"
+        }
+      },
+      "widgets_values": [
+        "custom",
+        "",
+        "我一个人的时候，\n喜欢看书，了解各种领域的文化。",
+        "方正粉丝天下简体.ttf",
+        65,
+        "black",
+        "none",
+        "white",
+        "bottom",
+        "#000000",
+        "#000000"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 49,
+      "type": "CR Simple Meme Template",
+      "pos": [
+        133,
+        2602
+      ],
+      "size": [
+        449.6629638671875,
+        376.09393310546875
+      ],
+      "flags": {},
+      "order": 60,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 73,
+          "label": "image"
+        },
+        {
+          "name": "text_bottom",
+          "type": "STRING",
+          "link": 222,
+          "widget": {
+            "name": "text_bottom"
+          },
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            137
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "image"
+        },
+        {
+          "name": "show_help",
+          "type": "STRING",
+          "links": null,
+          "shape": 3,
+          "label": "show_help"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CR Simple Meme Template",
+        "ttNbgOverride": {
+          "color": "#332922",
+          "bgcolor": "#593930",
+          "groupcolor": "#b06634"
+        }
+      },
+      "widgets_values": [
+        "custom",
+        "",
+        "给儿子，女儿准备好早餐，\n就会迎来独处的时光。",
+        "方正粉丝天下简体.ttf",
+        65,
+        "black",
+        "none",
+        "white",
+        "bottom",
+        "#000000",
+        "#000000"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 33,
+      "type": "CR Simple Meme Template",
+      "pos": [
+        109,
+        1801
+      ],
+      "size": [
+        449.6629638671875,
+        376.09393310546875
+      ],
+      "flags": {},
+      "order": 59,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 52,
+          "label": "image"
+        },
+        {
+          "name": "text_bottom",
+          "type": "STRING",
+          "link": 223,
+          "widget": {
+            "name": "text_bottom"
+          },
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            136
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "image"
+        },
+        {
+          "name": "show_help",
+          "type": "STRING",
+          "links": null,
+          "shape": 3,
+          "label": "show_help"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CR Simple Meme Template",
+        "ttNbgOverride": {
+          "color": "#332922",
+          "bgcolor": "#593930",
+          "groupcolor": "#b06634"
+        }
+      },
+      "widgets_values": [
+        "custom",
+        "",
+        "忙碌的生活，\n让我很享受短暂的安静时光。",
+        "方正粉丝天下简体.ttf",
+        65,
+        "black",
+        "none",
+        "white",
+        "bottom",
+        "#000000",
+        "#000000"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 29,
+      "type": "CR Simple Meme Template",
+      "pos": [
+        102.48369806463985,
+        1060.552397294477
+      ],
+      "size": [
+        449.6629638671875,
+        376.09393310546875
+      ],
+      "flags": {},
+      "order": 58,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 215,
+          "label": "image"
+        },
+        {
+          "name": "text_bottom",
+          "type": "STRING",
+          "link": 224,
+          "widget": {
+            "name": "text_bottom"
+          },
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            135
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "image"
+        },
+        {
+          "name": "show_help",
+          "type": "STRING",
+          "links": null,
+          "shape": 3,
+          "label": "show_help"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CR Simple Meme Template",
+        "ttNbgOverride": {
+          "color": "#332922",
+          "bgcolor": "#593930",
+          "groupcolor": "#b06634"
+        }
+      },
+      "widgets_values": [
+        "custom",
+        "",
+        "不仅要照顾家庭，\n还要维护建筑的安全。",
+        "方正粉丝天下简体.ttf",
+        65,
+        "black",
+        "none",
+        "white",
+        "bottom",
+        "#000000",
+        "#000000"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 28,
+      "type": "CR Simple Meme Template",
+      "pos": [
+        85,
+        398
+      ],
+      "size": [
+        449.6629638671875,
+        376.09393310546875
+      ],
+      "flags": {},
+      "order": 57,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 41,
+          "label": "image"
+        },
+        {
+          "name": "text_bottom",
+          "type": "STRING",
+          "link": 225,
+          "widget": {
+            "name": "text_bottom"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            134
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "image"
+        },
+        {
+          "name": "show_help",
+          "type": "STRING",
+          "links": null,
+          "shape": 3,
+          "label": "show_help"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CR Simple Meme Template",
+        "ttNbgOverride": {
+          "color": "#332922",
+          "bgcolor": "#593930",
+          "groupcolor": "#b06634"
+        }
+      },
+      "widgets_values": [
+        "custom",
+        "",
+        "一个人生活，并不容易。",
+        "方正粉丝天下简体.ttf",
+        65,
+        "black",
+        "none",
+        "white",
+        "bottom",
+        "#000000",
+        "#000000"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 66,
+      "type": "CR Simple Meme Template",
+      "pos": [
+        159,
+        5828
+      ],
+      "size": [
+        449.6629638671875,
+        376.09393310546875
+      ],
+      "flags": {},
+      "order": 56,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 107,
+          "label": "image"
+        },
+        {
+          "name": "text_bottom",
+          "type": "STRING",
+          "link": 226,
+          "widget": {
+            "name": "text_bottom"
+          },
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            141
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "image"
+        },
+        {
+          "name": "show_help",
+          "type": "STRING",
+          "links": null,
+          "shape": 3,
+          "label": "show_help"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CR Simple Meme Template",
+        "ttNbgOverride": {
+          "color": "#332922",
+          "bgcolor": "#593930",
+          "groupcolor": "#b06634"
+        }
+      },
+      "widgets_values": [
+        "custom",
+        "",
+        "因为我不仅仅是一个妈妈，\n更是肩负重担的hero！！",
+        "方正粉丝天下简体.ttf",
+        65,
+        "black",
+        "none",
+        "white",
+        "bottom",
+        "#000000",
+        "#000000"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 131,
+      "type": "Text box",
+      "pos": [
+        -4326.458350076007,
+        3488.4460409051508
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            225
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "box1",
+      "properties": {
+        "Node name for S&R": "Text box"
+      },
+      "widgets_values": [
+        "一个人生活，并不容易。"
+      ]
+    },
+    {
+      "id": 129,
+      "type": "Text box",
+      "pos": [
+        -3494.9700820148096,
+        3498.9652505538575
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            223
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "box3",
+      "properties": {
+        "Node name for S&R": "Text box"
+      },
+      "widgets_values": [
+        "忙碌的生活，\n让我很享受短暂的安静时光。"
+      ]
+    },
+    {
+      "id": 128,
+      "type": "Text box",
+      "pos": [
+        -3080.9700820148114,
+        3500.9652505538575
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            222
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "box4",
+      "properties": {
+        "Node name for S&R": "Text box"
+      },
+      "widgets_values": [
+        "给儿子，女儿准备好早餐，\n就会迎来独处的时光。"
+      ]
+    },
+    {
+      "id": 127,
+      "type": "Text box",
+      "pos": [
+        -4325.970082014813,
+        3770.965250553857
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            221
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "box5",
+      "properties": {
+        "Node name for S&R": "Text box"
+      },
+      "widgets_values": [
+        "我一个人的时候，\n喜欢看书，了解各种领域的文化。"
+      ]
+    },
+    {
+      "id": 126,
+      "type": "Text box",
+      "pos": [
+        -3908.970082014809,
+        3773.965250553857
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            220
+          ],
+          "shape": 3
+        }
+      ],
+      "title": "box6",
+      "properties": {
+        "Node name for S&R": "Text box"
+      },
+      "widgets_values": [
+        "总会畅想自己成为一个\n科技加身的机械女侠。"
+      ]
+    },
+    {
+      "id": 125,
+      "type": "Text box",
+      "pos": [
+        -3492.9700820148096,
+        3780.965250553857
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            219
+          ],
+          "shape": 3
+        }
+      ],
+      "title": "box7",
+      "properties": {
+        "Node name for S&R": "Text box"
+      },
+      "widgets_values": [
+        "抵挡外来物种对世界的侵略，\n拿起正义的武器，捍卫人类家园。"
+      ]
+    },
+    {
+      "id": 132,
+      "type": "Text box",
+      "pos": [
+        -3082.970082014811,
+        3778.965250553857
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            226
+          ],
+          "shape": 3
+        }
+      ],
+      "title": "box7",
+      "properties": {
+        "Node name for S&R": "Text box"
+      },
+      "widgets_values": [
+        "因为我不仅仅是一个妈妈，\n更是肩负重担的hero！！"
+      ]
+    },
+    {
+      "id": 130,
+      "type": "Text box",
+      "pos": [
+        -3911.970082014809,
+        3497.9652505538575
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            224
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "box2",
+      "properties": {
+        "Node name for S&R": "Text box"
+      },
+      "widgets_values": [
+        "不仅要照顾家庭，\n还要维护建筑的安全。"
+      ]
+    },
+    {
+      "id": 86,
+      "type": "SDXLPromptStyler",
+      "pos": [
+        -1533,
+        340
+      ],
+      "size": [
+        404.3913269042969,
+        337.55804443359375
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text_positive",
+          "type": "STRING",
+          "link": 227,
+          "widget": {
+            "name": "text_positive"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "text_positive",
+          "type": "STRING",
+          "links": [
+            175
+          ],
+          "shape": 3,
+          "label": "text_positive",
+          "slot_index": 0
+        },
+        {
+          "name": "text_negative",
+          "type": "STRING",
+          "links": [
+            176
+          ],
+          "shape": 3,
+          "label": "text_negative",
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SDXLPromptStyler"
+      },
+      "widgets_values": [
+        "cartoon of 20 year old woman (brown short crop hair, wire glasses), looking at us, shrugging shoulders, suburban backyard background",
+        "bad anatomy",
+        "sai-anime",
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "id": 85,
+      "type": "SDXLPromptStyler",
+      "pos": [
+        -1527.51630193536,
+        1067.552397294477
+      ],
+      "size": [
+        418.4336853027344,
+        361.8080749511719
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text_positive",
+          "type": "STRING",
+          "link": 228,
+          "widget": {
+            "name": "text_positive"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "text_positive",
+          "type": "STRING",
+          "links": [
+            183
+          ],
+          "shape": 3,
+          "label": "text_positive",
+          "slot_index": 0
+        },
+        {
+          "name": "text_negative",
+          "type": "STRING",
+          "links": [
+            184
+          ],
+          "shape": 3,
+          "label": "text_negative",
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SDXLPromptStyler"
+      },
+      "widgets_values": [
+        "cartoon of 20 year old woman (brown short crop hair, wire glasses), using both hands to push upright lawn mower, suburban backyard, wide screen shot",
+        "",
+        "sai-anime",
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "id": 84,
+      "type": "SDXLPromptStyler",
+      "pos": [
+        -1524,
+        1728
+      ],
+      "size": [
+        399.38201904296875,
+        340.2135925292969
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text_positive",
+          "type": "STRING",
+          "link": 229,
+          "widget": {
+            "name": "text_positive"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "text_positive",
+          "type": "STRING",
+          "links": [
+            187
+          ],
+          "shape": 3,
+          "label": "text_positive",
+          "slot_index": 0
+        },
+        {
+          "name": "text_negative",
+          "type": "STRING",
+          "links": [
+            188
+          ],
+          "shape": 3,
+          "label": "text_negative",
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SDXLPromptStyler"
+      },
+      "widgets_values": [
+        "cartoon of steamy bathroom (foggy glass, frosted glass:1.3) sheet covering around 20 year old woman (brown short crop hair, wire glasses), looking at mirror",
+        "body curves, details, nsfw, nipples",
+        "sai-anime",
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "id": 83,
+      "type": "SDXLPromptStyler",
+      "pos": [
+        -1517.5163019353597,
+        2547.552397294478
+      ],
+      "size": [
+        449.120361328125,
+        368.6626892089844
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text_positive",
+          "type": "STRING",
+          "link": 230,
+          "widget": {
+            "name": "text_positive"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "text_positive",
+          "type": "STRING",
+          "links": [
+            191
+          ],
+          "shape": 3,
+          "label": "text_positive",
+          "slot_index": 0
+        },
+        {
+          "name": "text_negative",
+          "type": "STRING",
+          "links": [
+            192
+          ],
+          "shape": 3,
+          "label": "text_negative",
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SDXLPromptStyler"
+      },
+      "widgets_values": [
+        "cartoon of 20 year old woman (brown short crop hair, wireframe glasses), (handing lunchbag to kids:1.4), kid taking lunchbag, suburban family room background",
+        "",
+        "sai-anime",
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "id": 79,
+      "type": "SDXLPromptStyler",
+      "pos": [
+        -1507.5163019353597,
+        3467.552397294478
+      ],
+      "size": [
+        415.9674987792969,
+        395.6341857910156
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text_positive",
+          "type": "STRING",
+          "link": 231,
+          "widget": {
+            "name": "text_positive"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "text_positive",
+          "type": "STRING",
+          "links": [
+            197
+          ],
+          "shape": 3,
+          "label": "text_positive",
+          "slot_index": 0
+        },
+        {
+          "name": "text_negative",
+          "type": "STRING",
+          "links": [
+            198
+          ],
+          "shape": 3,
+          "label": "text_negative",
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SDXLPromptStyler"
+      },
+      "widgets_values": [
+        "cartoon of extreme close up of hand, touching vertical book on book shelf, styled like illustrated cartoon",
+        "bad fingers, bad hands, malformed hands, multiple hands",
+        "sai-anime",
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "id": 80,
+      "type": "SDXLPromptStyler",
+      "pos": [
+        -1537.51630193536,
+        4217.552397294477
+      ],
+      "size": [
+        488.73406982421875,
+        284.9295654296875
+      ],
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text_positive",
+          "type": "STRING",
+          "link": 232,
+          "widget": {
+            "name": "text_positive"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "text_positive",
+          "type": "STRING",
+          "links": [
+            203
+          ],
+          "shape": 3,
+          "label": "text_positive",
+          "slot_index": 0
+        },
+        {
+          "name": "text_negative",
+          "type": "STRING",
+          "links": [
+            204
+          ],
+          "shape": 3,
+          "label": "text_negative",
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SDXLPromptStyler"
+      },
+      "widgets_values": [
+        "Spiral stairways leading down secret passage, into darkness with blue glow, digital computers, screens behind her, cc tv feeds, cartoon of 20 year old woman (brown short crop hair, wireframe glasses)",
+        "",
+        "sai-anime",
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "id": 139,
+      "type": "Text box",
+      "pos": [
+        -3096.3938944162296,
+        3149.7096006330603
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            234
+          ],
+          "shape": 3
+        }
+      ],
+      "title": "box7",
+      "properties": {
+        "Node name for S&R": "Text box"
+      },
+      "widgets_values": [
+        "cartoon of 20 year old woman (brown short crop hair, wireframe glasses), zipping up super hero armored black leather costume, full body wide shot, grabbing weapon tools"
+      ]
+    },
+    {
+      "id": 133,
+      "type": "Text box",
+      "pos": [
+        -4336.393894416234,
+        2859.7096006330607
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            227
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "box1",
+      "properties": {
+        "Node name for S&R": "Text box"
+      },
+      "widgets_values": [
+        "cartoon of 20 year old woman (brown short crop hair, wire glasses), looking at us, shrugging shoulders, suburban backyard background"
+      ]
+    },
+    {
+      "id": 140,
+      "type": "Text box",
+      "pos": [
+        -3926.3938944162305,
+        2869.7096006330607
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            228
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "box2",
+      "properties": {
+        "Node name for S&R": "Text box"
+      },
+      "widgets_values": [
+        "cartoon of 20 year old woman (brown short crop hair, wire glasses), using both hands to push upright lawn mower, suburban backyard, wide screen shot"
+      ]
+    },
+    {
+      "id": 134,
+      "type": "Text box",
+      "pos": [
+        -3506.39389441623,
+        2869.7096006330607
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            229
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "box3",
+      "properties": {
+        "Node name for S&R": "Text box"
+      },
+      "widgets_values": [
+        "cartoon of steamy bathroom (foggy glass, frosted glass:1.3) sheet covering around 20 year old woman (brown short crop hair, wire glasses), looking at mirror"
+      ]
+    },
+    {
+      "id": 135,
+      "type": "Text box",
+      "pos": [
+        -3096.3938944162296,
+        2879.709600633061
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            230
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "box4",
+      "properties": {
+        "Node name for S&R": "Text box"
+      },
+      "widgets_values": [
+        "cartoon of 20 year old woman (brown short crop hair, wireframe glasses), (handing lunchbag to kids:1.4), kid taking lunchbag, suburban family room background"
+      ]
+    },
+    {
+      "id": 136,
+      "type": "Text box",
+      "pos": [
+        -4336.393894416234,
+        3149.7096006330603
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            231
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "box5",
+      "properties": {
+        "Node name for S&R": "Text box"
+      },
+      "widgets_values": [
+        "cartoon of extreme close up of hand, touching vertical book on book shelf, styled like illustrated cartoon"
+      ]
+    },
+    {
+      "id": 137,
+      "type": "Text box",
+      "pos": [
+        -3916.3938944162305,
+        3149.7096006330603
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            232
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "box6",
+      "properties": {
+        "Node name for S&R": "Text box"
+      },
+      "widgets_values": [
+        "cartoon of extreme close up of hand, touching vertical book on book shelf, styled like illustrated cartoon"
+      ]
+    },
+    {
+      "id": 81,
+      "type": "SDXLPromptStyler",
+      "pos": [
+        -1527.51630193536,
+        4967.552397294477
+      ],
+      "size": [
+        471.1192626953125,
+        342.6641845703125
+      ],
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text_positive",
+          "type": "STRING",
+          "link": 233,
+          "widget": {
+            "name": "text_positive"
+          },
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "text_positive",
+          "type": "STRING",
+          "links": [
+            207
+          ],
+          "shape": 3,
+          "label": "text_positive",
+          "slot_index": 0
+        },
+        {
+          "name": "text_negative",
+          "type": "STRING",
+          "links": [
+            208
+          ],
+          "shape": 3,
+          "label": "text_negative",
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SDXLPromptStyler"
+      },
+      "widgets_values": [
+        "cartoon of 20 year old woman (brown short crop hair, wireframe glasses), zipping up super hero armored black leather costume, full body wide shot, grabbing weapon tools",
+        "",
+        "sai-anime",
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "id": 82,
+      "type": "SDXLPromptStyler",
+      "pos": [
+        -1497.5163019353597,
+        5767.552397294477
+      ],
+      "size": [
+        470.9091796875,
+        326.4243469238281
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text_positive",
+          "type": "STRING",
+          "link": 234,
+          "widget": {
+            "name": "text_positive"
+          },
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "text_positive",
+          "type": "STRING",
+          "links": [
+            211
+          ],
+          "shape": 3,
+          "label": "text_positive",
+          "slot_index": 0
+        },
+        {
+          "name": "text_negative",
+          "type": "STRING",
+          "links": [
+            212
+          ],
+          "shape": 3,
+          "label": "text_negative",
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SDXLPromptStyler"
+      },
+      "widgets_values": [
+        "cartoon of 20 year old woman (brown short crop hair, wireframe glasses, brown leather armored super hero suit), flying in air, red explosions, (expression of anger:1.3) on her face",
+        "",
+        "sai-anime",
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "id": 64,
+      "type": "KSampler (Efficient)",
+      "pos": [
+        -232.51630193536062,
+        5744.552397294477
+      ],
+      "size": {
+        "0": 326.2000427246094,
+        "1": 586
+      },
+      "flags": {},
+      "order": 48,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": null,
+          "label": "model"
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 213,
+          "label": "positive"
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 214,
+          "label": "negative"
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": null,
+          "label": "latent_image"
+        },
+        {
+          "name": "optional_vae",
+          "type": "VAE",
+          "link": null,
+          "label": "optional_vae"
+        },
+        {
+          "name": "script",
+          "type": "SCRIPT",
+          "link": null,
+          "label": "script"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": null,
+          "shape": 3,
+          "label": "MODEL"
+        },
+        {
+          "name": "CONDITIONING+",
+          "type": "CONDITIONING",
+          "links": null,
+          "shape": 3,
+          "label": "CONDITIONING+"
+        },
+        {
+          "name": "CONDITIONING-",
+          "type": "CONDITIONING",
+          "links": null,
+          "shape": 3,
+          "label": "CONDITIONING-"
+        },
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": null,
+          "shape": 3,
+          "label": "LATENT"
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": null,
+          "shape": 3,
+          "label": "VAE"
+        },
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            107
+          ],
+          "shape": 3,
+          "slot_index": 5,
+          "label": "IMAGE"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler (Efficient)"
+      },
+      "widgets_values": [
+        1076994129110765,
+        982112652296693,
+        8,
+        2,
+        "lcm",
+        "karras",
+        1,
+        "auto",
+        "true"
+      ],
+      "color": "#222233",
+      "bgcolor": "#333355",
+      "shape": 1
+    },
+    {
+      "id": 60,
+      "type": "KSampler (Efficient)",
+      "pos": [
+        -255.51630193536053,
+        4985.552397294477
+      ],
+      "size": {
+        "0": 326.2000427246094,
+        "1": 586
+      },
+      "flags": {},
+      "order": 55,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": null,
+          "label": "model"
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 209,
+          "label": "positive"
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 210,
+          "label": "negative"
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": null,
+          "label": "latent_image"
+        },
+        {
+          "name": "optional_vae",
+          "type": "VAE",
+          "link": null,
+          "label": "optional_vae"
+        },
+        {
+          "name": "script",
+          "type": "SCRIPT",
+          "link": null,
+          "label": "script"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": null,
+          "shape": 3,
+          "label": "MODEL"
+        },
+        {
+          "name": "CONDITIONING+",
+          "type": "CONDITIONING",
+          "links": null,
+          "shape": 3,
+          "label": "CONDITIONING+"
+        },
+        {
+          "name": "CONDITIONING-",
+          "type": "CONDITIONING",
+          "links": null,
+          "shape": 3,
+          "label": "CONDITIONING-"
+        },
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": null,
+          "shape": 3,
+          "label": "LATENT"
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": null,
+          "shape": 3,
+          "label": "VAE"
+        },
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            99
+          ],
+          "shape": 3,
+          "slot_index": 5,
+          "label": "IMAGE"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler (Efficient)"
+      },
+      "widgets_values": [
+        255497954449349,
+        982112652296693,
+        8,
+        2,
+        "lcm",
+        "karras",
+        1,
+        "auto",
+        "true"
+      ],
+      "color": "#222233",
+      "bgcolor": "#333355",
+      "shape": 1
+    },
+    {
+      "id": 55,
+      "type": "KSampler (Efficient)",
+      "pos": [
+        -247.51630193536056,
+        4267.552397294477
+      ],
+      "size": {
+        "0": 326.2000427246094,
+        "1": 586
+      },
+      "flags": {},
+      "order": 54,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": null,
+          "label": "model"
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 205,
+          "label": "positive"
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 206,
+          "label": "negative"
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": null,
+          "label": "latent_image"
+        },
+        {
+          "name": "optional_vae",
+          "type": "VAE",
+          "link": null,
+          "label": "optional_vae"
+        },
+        {
+          "name": "script",
+          "type": "SCRIPT",
+          "link": null,
+          "label": "script"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": null,
+          "shape": 3,
+          "label": "MODEL"
+        },
+        {
+          "name": "CONDITIONING+",
+          "type": "CONDITIONING",
+          "links": null,
+          "shape": 3,
+          "label": "CONDITIONING+"
+        },
+        {
+          "name": "CONDITIONING-",
+          "type": "CONDITIONING",
+          "links": null,
+          "shape": 3,
+          "label": "CONDITIONING-"
+        },
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": null,
+          "shape": 3,
+          "label": "LATENT"
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": null,
+          "shape": 3,
+          "label": "VAE"
+        },
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            91
+          ],
+          "shape": 3,
+          "slot_index": 5,
+          "label": "IMAGE"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler (Efficient)"
+      },
+      "widgets_values": [
+        936446196038728,
+        982112652296693,
+        8,
+        2,
+        "lcm",
+        "karras",
+        1,
+        "auto",
+        "true"
+      ],
+      "color": "#222233",
+      "bgcolor": "#333355",
+      "shape": 1
+    },
+    {
+      "id": 138,
+      "type": "Text box",
+      "pos": [
+        -3506.39389441623,
+        3159.7096006330603
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            233
+          ],
+          "shape": 3
+        }
+      ],
+      "title": "box7",
+      "properties": {
+        "Node name for S&R": "Text box"
+      },
+      "widgets_values": [
+        "Spiral stairways leading down secret passage, into darkness with blue glow, digital computers, screens behind her, cc tv feeds, cartoon of ((20 year old woman)) (brown short crop hair, wireframe glasses)"
+      ]
+    },
+    {
+      "id": 27,
+      "type": "PreviewBridge",
+      "pos": [
+        2324,
+        1741
+      ],
+      "size": {
+        "0": 4525.494140625,
+        "1": 3137.73046875
+      },
+      "flags": {},
+      "order": 68,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 65,
+          "label": "images"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": null,
+          "shape": 3,
+          "label": "IMAGE"
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3,
+          "label": "MASK"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewBridge",
+        "ttNbgOverride": {
+          "color": "#332922",
+          "bgcolor": "#593930",
+          "groupcolor": "#b06634"
+        }
+      },
+      "widgets_values": [
+        "$27-0"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 88,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        -5403.007516487682,
+        3243.3300416712277
+      ],
+      "size": {
+        "0": 315,
+        "1": 98
+      },
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            169
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            170
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "aziibpixelmix_v10.safetensors"
+      ]
+    }
+  ],
+  "links": [
+    [
+      41,
+      2,
+      5,
+      28,
+      0,
+      "IMAGE"
+    ],
+    [
+      52,
+      31,
+      5,
+      33,
+      0,
+      "IMAGE"
+    ],
+    [
+      64,
+      34,
+      0,
+      45,
+      0,
+      "IMAGE"
+    ],
+    [
+      65,
+      45,
+      0,
+      27,
+      0,
+      "IMAGE"
+    ],
+    [
+      73,
+      47,
+      5,
+      49,
+      0,
+      "IMAGE"
+    ],
+    [
+      90,
+      52,
+      5,
+      57,
+      0,
+      "IMAGE"
+    ],
+    [
+      91,
+      55,
+      5,
+      58,
+      0,
+      "IMAGE"
+    ],
+    [
+      99,
+      60,
+      5,
+      62,
+      0,
+      "IMAGE"
+    ],
+    [
+      107,
+      64,
+      5,
+      66,
+      0,
+      "IMAGE"
+    ],
+    [
+      134,
+      28,
+      0,
+      78,
+      0,
+      "IMAGE"
+    ],
+    [
+      135,
+      29,
+      0,
+      78,
+      1,
+      "IMAGE"
+    ],
+    [
+      136,
+      33,
+      0,
+      78,
+      2,
+      "IMAGE"
+    ],
+    [
+      137,
+      49,
+      0,
+      78,
+      3,
+      "IMAGE"
+    ],
+    [
+      138,
+      57,
+      0,
+      78,
+      4,
+      "IMAGE"
+    ],
+    [
+      139,
+      58,
+      0,
+      78,
+      5,
+      "IMAGE"
+    ],
+    [
+      140,
+      62,
+      0,
+      78,
+      6,
+      "IMAGE"
+    ],
+    [
+      141,
+      66,
+      0,
+      78,
+      7,
+      "IMAGE"
+    ],
+    [
+      142,
+      78,
+      0,
+      68,
+      0,
+      "IMAGE"
+    ],
+    [
+      143,
+      68,
+      0,
+      34,
+      0,
+      "IMAGE"
+    ],
+    [
+      168,
+      91,
+      0,
+      92,
+      0,
+      "*"
+    ],
+    [
+      169,
+      88,
+      0,
+      93,
+      0,
+      "MODEL"
+    ],
+    [
+      170,
+      88,
+      1,
+      93,
+      1,
+      "CLIP"
+    ],
+    [
+      171,
+      93,
+      0,
+      89,
+      0,
+      "*"
+    ],
+    [
+      172,
+      93,
+      1,
+      90,
+      0,
+      "*"
+    ],
+    [
+      175,
+      86,
+      0,
+      96,
+      1,
+      "STRING"
+    ],
+    [
+      176,
+      86,
+      1,
+      97,
+      1,
+      "STRING"
+    ],
+    [
+      178,
+      99,
+      0,
+      100,
+      0,
+      "*"
+    ],
+    [
+      181,
+      96,
+      0,
+      2,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      182,
+      97,
+      0,
+      2,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      183,
+      85,
+      0,
+      105,
+      1,
+      "STRING"
+    ],
+    [
+      184,
+      85,
+      1,
+      104,
+      1,
+      "STRING"
+    ],
+    [
+      185,
+      105,
+      0,
+      103,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      186,
+      104,
+      0,
+      103,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      187,
+      84,
+      0,
+      107,
+      1,
+      "STRING"
+    ],
+    [
+      188,
+      84,
+      1,
+      106,
+      1,
+      "STRING"
+    ],
+    [
+      189,
+      107,
+      0,
+      31,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      190,
+      106,
+      0,
+      31,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      191,
+      83,
+      0,
+      109,
+      1,
+      "STRING"
+    ],
+    [
+      192,
+      83,
+      1,
+      108,
+      1,
+      "STRING"
+    ],
+    [
+      195,
+      109,
+      0,
+      47,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      196,
+      108,
+      0,
+      47,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      197,
+      79,
+      0,
+      111,
+      1,
+      "STRING"
+    ],
+    [
+      198,
+      79,
+      1,
+      110,
+      1,
+      "STRING"
+    ],
+    [
+      201,
+      111,
+      0,
+      52,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      202,
+      110,
+      0,
+      52,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      203,
+      80,
+      0,
+      113,
+      1,
+      "STRING"
+    ],
+    [
+      204,
+      80,
+      1,
+      112,
+      1,
+      "STRING"
+    ],
+    [
+      205,
+      113,
+      0,
+      55,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      206,
+      112,
+      0,
+      55,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      207,
+      81,
+      0,
+      115,
+      1,
+      "STRING"
+    ],
+    [
+      208,
+      81,
+      1,
+      114,
+      1,
+      "STRING"
+    ],
+    [
+      209,
+      115,
+      0,
+      60,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      210,
+      114,
+      0,
+      60,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      211,
+      82,
+      0,
+      117,
+      1,
+      "STRING"
+    ],
+    [
+      212,
+      82,
+      1,
+      116,
+      1,
+      "STRING"
+    ],
+    [
+      213,
+      117,
+      0,
+      64,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      214,
+      116,
+      0,
+      64,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      215,
+      103,
+      5,
+      29,
+      0,
+      "IMAGE"
+    ],
+    [
+      219,
+      125,
+      0,
+      62,
+      1,
+      "STRING"
+    ],
+    [
+      220,
+      126,
+      0,
+      58,
+      1,
+      "STRING"
+    ],
+    [
+      221,
+      127,
+      0,
+      57,
+      1,
+      "STRING"
+    ],
+    [
+      222,
+      128,
+      0,
+      49,
+      1,
+      "STRING"
+    ],
+    [
+      223,
+      129,
+      0,
+      33,
+      1,
+      "STRING"
+    ],
+    [
+      224,
+      130,
+      0,
+      29,
+      1,
+      "STRING"
+    ],
+    [
+      225,
+      131,
+      0,
+      28,
+      1,
+      "STRING"
+    ],
+    [
+      226,
+      132,
+      0,
+      66,
+      1,
+      "STRING"
+    ],
+    [
+      227,
+      133,
+      0,
+      86,
+      0,
+      "STRING"
+    ],
+    [
+      228,
+      140,
+      0,
+      85,
+      0,
+      "STRING"
+    ],
+    [
+      229,
+      134,
+      0,
+      84,
+      0,
+      "STRING"
+    ],
+    [
+      230,
+      135,
+      0,
+      83,
+      0,
+      "STRING"
+    ],
+    [
+      231,
+      136,
+      0,
+      79,
+      0,
+      "STRING"
+    ],
+    [
+      232,
+      137,
+      0,
+      80,
+      0,
+      "STRING"
+    ],
+    [
+      233,
+      138,
+      0,
+      81,
+      0,
+      "STRING"
+    ],
+    [
+      234,
+      139,
+      0,
+      82,
+      0,
+      "STRING"
+    ]
+  ],
+  "groups": [
+    {
+      "title": "Load",
+      "bounding": [
+        -5413,
+        3135,
+        941,
+        569
+      ],
+      "color": "#b58b2a",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "Ksampler",
+      "bounding": [
+        -1548,
+        164,
+        2202,
+        6177
+      ],
+      "color": "#a1309b",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "image",
+      "bounding": [
+        1144,
+        1870,
+        848,
+        973
+      ],
+      "color": "#88A",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "Captions",
+      "bounding": [
+        -4337,
+        3415,
+        1665,
+        577
+      ],
+      "color": "#b06634",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "Prompt",
+      "bounding": [
+        -4347,
+        2787,
+        1660,
+        584
+      ],
+      "color": "#A88",
+      "font_size": 24,
+      "locked": false
+    }
+  ],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}

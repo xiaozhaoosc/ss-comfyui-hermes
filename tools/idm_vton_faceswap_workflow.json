@@ -1,0 +1,72 @@
+{
+  "1": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "vton_faceswap_person.jpg",
+      "upload": "image"
+    }
+  },
+  "2": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "test_garment_flatlay.jpg",
+      "upload": "image"
+    }
+  },
+  "3": {
+    "class_type": "FaceProtectMask",
+    "inputs": {
+      "image": ["1", 0],
+      "clothing_labels": "4,7,8",
+      "protect_labels": "2,3,11",
+      "protect_expand": 10,
+      "feather": 5
+    }
+  },
+  "4": {
+    "class_type": "DensePosePreprocessor",
+    "inputs": {
+      "image": ["1", 0],
+      "model": "densepose_r50_fpn_dl.torchscript",
+      "cmap": "Viridis (MagicAnimate)",
+      "resolution": 768
+    }
+  },
+  "5": {
+    "class_type": "PipelineLoader",
+    "inputs": {
+      "weight_dtype": "float16"
+    }
+  },
+  "6": {
+    "class_type": "MaskToImage",
+    "inputs": {
+      "mask": ["3", 0]
+    }
+  },
+  "7": {
+    "class_type": "IDM-VTON",
+    "inputs": {
+      "pipeline": ["5", 0],
+      "human_img": ["1", 0],
+      "pose_img": ["4", 0],
+      "mask_img": ["6", 0],
+      "garment_img": ["2", 0],
+      "garment_description": "a long-sleeved shirt",
+      "negative_prompt": "monochrome, lowres, bad anatomy, worst quality, low quality",
+      "width": 768,
+      "height": 1024,
+      "num_inference_steps": 30,
+      "guidance_scale": 2.0,
+      "strength": 1.0,
+      "seed": 42
+    }
+  },
+  "8": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": ["7", 0],
+      "filename_prefix": "idm_vton_faceswap_test"
+    }
+  }
+}

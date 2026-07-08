@@ -1,0 +1,292 @@
+{
+  "id": "bff5d299-3395-49ac-afe4-3923ec7fcdf1",
+  "revision": 0,
+  "last_node_id": 13,
+  "last_link_id": 12,
+  "nodes": [
+    {
+      "id": 12,
+      "type": "IndexTTSRun",
+      "pos": {
+        "0": 551.3715209960938,
+        "1": 181.70286560058594
+      },
+      "size": {
+        "0": 315,
+        "1": 342
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 11
+        },
+        {
+          "label": "dialogue_audio_s2",
+          "name": "dialogue_audio_s2",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "label": "text",
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": 12
+        }
+      ],
+      "outputs": [
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            10
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "IndexTTSRun"
+      },
+      "widgets_values": [
+        "v1.5",
+        "",
+        30,
+        0.8,
+        1,
+        3,
+        1000,
+        120,
+        4,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "id": 11,
+      "type": "LoadAudio",
+      "pos": {
+        "0": 130.72311401367188,
+        "1": 168.09642028808594
+      },
+      "size": {
+        "0": 315,
+        "1": 136
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "音频",
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            11
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LoadAudio",
+        "ttNbgOverride": {
+          "bgcolor": "#335",
+          "groupcolor": "#88A",
+          "color": "#223"
+        }
+      },
+      "widgets_values": [
+        "66原声.MP3",
+        "",
+        ""
+      ],
+      "color": "#223",
+      "bgcolor": "#335",
+      "_widget_cache_map": {
+        "2025-06-12-130824_175549.mp3": {
+          "value": "video/8e0d9fdebc3c465991039eb76bbfd1f5/1acda8a9cf6ec1ae3ba5ada800d8406dfeb3dc99bd4d47118142bb7d8067cdc6.mp3",
+          "name": "2025-06-12-130824_175549.mp3",
+          "filename": "2025-06-12-130824_175549.mp3",
+          "format": "audio/mpeg",
+          "url": "https://liblibai-tmp-image.liblib.cloud/video/8e0d9fdebc3c465991039eb76bbfd1f5/1acda8a9cf6ec1ae3ba5ada800d8406dfeb3dc99bd4d47118142bb7d8067cdc6.mp3"
+        },
+        "小棵音色4。剪映导出.MP3": {
+          "value": "video/4669c7ffa2b546bc9eca2c803b61e3dc/e23239fede93aa3aa7b8cd7c1238c0c9d41b3257e0d0e91fbebc99ebd877c720.MP3",
+          "name": "小棵音色4。剪映导出.MP3",
+          "filename": "小棵音色4。剪映导出.MP3",
+          "format": "audio/mpeg",
+          "url": "https://liblibai-tmp-image.liblib.cloud/video/4669c7ffa2b546bc9eca2c803b61e3dc/e23239fede93aa3aa7b8cd7c1238c0c9d41b3257e0d0e91fbebc99ebd877c720.MP3"
+        },
+        "66原声.MP3": {
+          "value": "video/789d03f9f4274b0c81fbeadad562f78b/8a7ab1750e5c0571725634d07322d775ee38b9f219a119e7de455508807cc6f6.MP3",
+          "name": "66原声.MP3",
+          "filename": "66原声.MP3",
+          "format": "audio/mpeg",
+          "url": "https://liblibai-tmp-image.liblib.cloud/video/789d03f9f4274b0c81fbeadad562f78b/8a7ab1750e5c0571725634d07322d775ee38b9f219a119e7de455508807cc6f6.MP3"
+        }
+      }
+    },
+    {
+      "id": 13,
+      "type": "CR Prompt Text",
+      "pos": {
+        "0": 78.77872467041016,
+        "1": 387.7005310058594
+      },
+      "size": {
+        "0": 449.0068359375,
+        "1": 207.53952026367188
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "提示词文本",
+          "name": "prompt",
+          "type": "STRING",
+          "links": [
+            12
+          ]
+        },
+        {
+          "label": "show_help",
+          "name": "show_help",
+          "type": "STRING"
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "CR Prompt Text"
+      },
+      "widgets_values": [
+        "每到入秋的天气，就想来一煲暖暖的羊肉煲。\n市面上，清汤羊比较多，但是酱爆做法，就不是很多了。\n我都没想到，这家在海珠区，解放桥底，做了20多年，以鱼生出名的正味美食城，\n原来做羊腩煲也好赞的哦。\n关键是现在推出的羊腩煲，性价比超高。\n69块就有这么大份的羊腩煲，一斤八的鲜羊腩。\n还配一份羊宝，四份配菜，包茶味。\n他家的羊肉嫩，没有膻味。\n我认为好的羊肉煲必须是：肉嫩、不膻、汤味浓、温补不燥。\n他们的配料有马蹄、萝卜，所以补而不燥。\n羊腩q弹，羊宝爽口。\n有时候在广州街头，跟三五自己吃一顿羊腩煲，这个价格真的非常实惠。\n是个不错的选择。"
+      ]
+    },
+    {
+      "id": 10,
+      "type": "PreviewAudio",
+      "pos": {
+        "0": 914.1964111328125,
+        "1": 257.7071533203125
+      },
+      "size": {
+        "0": 315,
+        "1": 88
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "音频",
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 10
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "PreviewAudio"
+      },
+      "widgets_values": [
+        ""
+      ]
+    }
+  ],
+  "links": [
+    [
+      10,
+      12,
+      0,
+      10,
+      0,
+      "AUDIO"
+    ],
+    [
+      11,
+      11,
+      0,
+      12,
+      0,
+      "AUDIO"
+    ],
+    [
+      12,
+      13,
+      0,
+      12,
+      2,
+      "STRING"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "音频上传",
+      "bounding": [
+        123.69477844238281,
+        94.49681854248047,
+        335,
+        219.60000610351562
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1.1671841070450013,
+      "offset": [
+        111.9265450771446,
+        -128.5720703942134
+      ]
+    },
+    "ue_links": [],
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4,
+  "widget_idx_map": {},
+  "seed_widgets": {}
+}

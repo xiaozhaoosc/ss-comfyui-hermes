@@ -1,0 +1,1686 @@
+{
+  "id": "9a6bb580-900f-4a5f-9233-12eb0fe41226",
+  "revision": 0,
+  "last_node_id": 375,
+  "last_link_id": 201,
+  "nodes": [
+    {
+      "id": 351,
+      "type": "WanVideoBlockSwap",
+      "pos": {
+        "0": 409.9999694824219,
+        "1": 1684.8974609375
+      },
+      "size": {
+        "0": 359.9404296875,
+        "1": 154
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "block_swap_args",
+          "name": "block_swap_args",
+          "type": "BLOCKSWAPARGS",
+          "slot_index": 0,
+          "links": [
+            174
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "WanVideoBlockSwap"
+      },
+      "widgets_values": [
+        20,
+        false,
+        false,
+        true,
+        0
+      ],
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 352,
+      "type": "WanVideoLoraSelect",
+      "pos": {
+        "0": 399.9999694824219,
+        "1": 1944.8974609375
+      },
+      "size": {
+        "0": 386.51202392578125,
+        "1": 158.29818725585938
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "prev_lora",
+          "name": "prev_lora",
+          "shape": 7,
+          "type": "WANVIDLORA",
+          "link": null
+        },
+        {
+          "label": "blocks",
+          "name": "blocks",
+          "shape": 7,
+          "type": "SELECTEDBLOCKS",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "lora",
+          "name": "lora",
+          "type": "WANVIDLORA",
+          "slot_index": 0,
+          "links": [
+            175
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "WanVideoLoraSelect"
+      },
+      "widgets_values": [
+        "Motion-Lora-Camera-Push-In_Wan-14B-720p",
+        1,
+        false
+      ],
+      "color": "#232",
+      "bgcolor": "#353",
+      "_widget_cache_map": {
+        "捏捏乐+切割万物=万相lora模型_捏捏乐loraV1": {
+          "name": "捏捏乐+切割万物=万相lora模型_捏捏乐loraV1",
+          "baseType": 19,
+          "value": "e9a4470f29ea4fc09ea662b79fa908af"
+        },
+        "真人快打Fighting GO_V1.0": {
+          "name": "真人快打Fighting GO_V1.0",
+          "baseType": 25,
+          "value": "13d2196e17894488bb794475c972589c"
+        },
+        "Tai Chi ITV_打太极": {
+          "name": "Tai Chi ITV_打太极",
+          "baseType": 25,
+          "value": "ec94191bec3a415ba98597f8e748732e"
+        },
+        "放气效果（Wan2.1 I2V LoRA）_V1": {
+          "name": "放气效果（Wan2.1 I2V LoRA）_V1",
+          "baseType": 25,
+          "value": "26c61761a98f460a87ea18133e2a8a68"
+        },
+        "万相wan2.1 万物开花_1.0": {
+          "name": "万相wan2.1 万物开花_1.0",
+          "baseType": 25,
+          "value": "cda2ea9de6854f62a675a69062562b55"
+        },
+        "通义万相WAN2.1万物花开_图生视频lora_480V1.0": {
+          "name": "通义万相WAN2.1万物花开_图生视频lora_480V1.0",
+          "baseType": 25,
+          "value": "be7bcecf59dc4fdb8dbdb4b5d04bbd58"
+        },
+        "Wan2.1-分裂复制-Division_v1": {
+          "name": "Wan2.1-分裂复制-Division_v1",
+          "baseType": 25,
+          "value": "b12fcf9ff5204ecaacfb2bbadf6e705c"
+        },
+        "360度旋转lora_flux": {
+          "name": "360度旋转lora_flux",
+          "baseType": 25,
+          "value": "dc94c0e560b448559c7e959d18ec4549"
+        },
+        "360度旋转lora 2.0版本(Wan2.1万相lora)_V2.0": {
+          "name": "360度旋转lora 2.0版本(Wan2.1万相lora)_V2.0",
+          "baseType": 25,
+          "value": "f6035130e4024ebd81fb1eef1c159e99"
+        },
+        "肌肉秀（Wan2.1 I2V LoRA）_v1.0": {
+          "name": "肌肉秀（Wan2.1 I2V LoRA）_v1.0",
+          "baseType": 25,
+          "value": "0bf3d1b5b5af400db3c6613e77dcc415"
+        },
+        "wan2.1 图转视频人物跳舞_V1.0": {
+          "name": "wan2.1 图转视频人物跳舞_V1.0",
+          "baseType": 25,
+          "value": "ba92b77381e5431dabd637b07e0e3213"
+        },
+        "Wan2.1_I2V_14B_FusionX_LoRA_I2V_14B": {
+          "name": "Wan2.1_I2V_14B_FusionX_LoRA_I2V_14B",
+          "baseType": 25,
+          "value": "c84d2594293345358e250192cf2e3347"
+        },
+        "Wan2.1-PUSA-V1_1.0": {
+          "name": "Wan2.1-PUSA-V1_1.0",
+          "baseType": 25,
+          "value": "842c16a17b2a4ed29bf3a367df366b02"
+        },
+        "Motion-Lora-Camera-Push-In_Wan-14B-720p": {
+          "name": "Motion-Lora-Camera-Push-In_Wan-14B-720p",
+          "baseType": 25,
+          "value": "f1b52087c37e4d6e85e246368a1e1e2d"
+        }
+      }
+    },
+    {
+      "id": 353,
+      "type": "LoadWanVideoClipTextEncoder",
+      "pos": {
+        "0": 389.9999694824219,
+        "1": 2494.8974609375
+      },
+      "size": {
+        "0": 512.1028442382812,
+        "1": 146.6564178466797
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "wan_clip_vision",
+          "name": "wan_clip_vision",
+          "type": "CLIP_VISION",
+          "slot_index": 0,
+          "links": [
+            178
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LoadWanVideoClipTextEncoder"
+      },
+      "widgets_values": [
+        "open-clip-xlm-roberta-large-vit-huge-14_visual_fp16.safetensors",
+        "fp16",
+        "offload_device"
+      ],
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 354,
+      "type": "WanVideoVAELoader",
+      "pos": {
+        "0": 399.9999694824219,
+        "1": 2694.8974609375
+      },
+      "size": {
+        "0": 504.63909912109375,
+        "1": 82
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "vae",
+          "name": "vae",
+          "type": "WANVAE",
+          "slot_index": 0,
+          "links": [
+            180,
+            186
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "WanVideoVAELoader"
+      },
+      "widgets_values": [
+        "Wan2_1_VAE_bf16.safetensors",
+        "bf16"
+      ],
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 355,
+      "type": "LoadWanVideoT5TextEncoder",
+      "pos": {
+        "0": 399.9999694824219,
+        "1": 2234.8974609375
+      },
+      "size": {
+        "0": 520.08740234375,
+        "1": 136.79803466796875
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "wan_t5_model",
+          "name": "wan_t5_model",
+          "type": "WANTEXTENCODER",
+          "slot_index": 0,
+          "links": [
+            176
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LoadWanVideoT5TextEncoder"
+      },
+      "widgets_values": [
+        "umt5-xxl-enc-bf16.safetensors",
+        "bf16",
+        "offload_device",
+        "disabled"
+      ],
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 357,
+      "type": "WanVideoTextEncode",
+      "pos": {
+        "0": 970,
+        "1": 2194.8974609375
+      },
+      "size": {
+        "0": 304.7176208496094,
+        "1": 206.27496337890625
+      },
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "t5",
+          "name": "t5",
+          "type": "WANTEXTENCODER",
+          "link": 176
+        },
+        {
+          "label": "model_to_offload",
+          "name": "model_to_offload",
+          "shape": 7,
+          "type": "WANVIDEOMODEL",
+          "link": null
+        },
+        {
+          "label": "positive_prompt",
+          "name": "positive_prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "positive_prompt"
+          },
+          "link": 193
+        }
+      ],
+      "outputs": [
+        {
+          "label": "text_embeds",
+          "name": "text_embeds",
+          "type": "WANVIDEOTEXTEMBEDS",
+          "slot_index": 0,
+          "links": [
+            191
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "WanVideoTextEncode"
+      },
+      "widgets_values": [
+        "Gorgeous pink flowers, lush green leaves, and intertwining vines grow and cling to the magnificent buildings in a continuous frame.",
+        "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
+        true
+      ],
+      "color": "#322",
+      "bgcolor": "#533",
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 358,
+      "type": "WanVideoImageClipEncode",
+      "pos": {
+        "0": 950,
+        "1": 2494.8974609375
+      },
+      "size": {
+        "0": 319.20001220703125,
+        "1": 313.1524353027344
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "clip_vision",
+          "name": "clip_vision",
+          "type": "CLIP_VISION",
+          "link": 178
+        },
+        {
+          "label": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 179
+        },
+        {
+          "label": "vae",
+          "name": "vae",
+          "type": "WANVAE",
+          "link": 180
+        },
+        {
+          "label": "generation_width",
+          "name": "generation_width",
+          "type": "INT",
+          "widget": {
+            "name": "generation_width"
+          },
+          "link": 181
+        },
+        {
+          "label": "generation_height",
+          "name": "generation_height",
+          "type": "INT",
+          "widget": {
+            "name": "generation_height"
+          },
+          "link": 182
+        },
+        {
+          "label": "num_frames",
+          "name": "num_frames",
+          "type": "INT",
+          "widget": {
+            "name": "num_frames"
+          },
+          "link": 183
+        }
+      ],
+      "outputs": [
+        {
+          "label": "image_embeds",
+          "name": "image_embeds",
+          "type": "WANVIDIMAGE_EMBEDS",
+          "links": [
+            190
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "WanVideoImageClipEncode"
+      },
+      "widgets_values": [
+        480,
+        768,
+        81,
+        true,
+        0,
+        1,
+        1,
+        true
+      ],
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 349,
+      "type": "LibLibOptions",
+      "pos": {
+        "0": -957.85791015625,
+        "1": 1640.5400390625
+      },
+      "size": {
+        "0": 315,
+        "1": 394
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "options",
+          "name": "options",
+          "type": "LIBLIB_OPTIONS",
+          "links": [
+            170
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LibLibOptions"
+      },
+      "widgets_values": [
+        true,
+        130330716424188,
+        "randomize",
+        false,
+        "",
+        false,
+        300,
+        false,
+        0,
+        false,
+        20,
+        false,
+        0.8,
+        true,
+        0.7
+      ]
+    },
+    {
+      "id": 348,
+      "type": "LibLibVision",
+      "pos": {
+        "0": -617.24560546875,
+        "1": 1633.674072265625
+      },
+      "size": {
+        "0": 409.6757507324219,
+        "1": 508.9315490722656
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "images",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 192
+        },
+        {
+          "label": "options",
+          "name": "options",
+          "shape": 7,
+          "type": "LIBLIB_OPTIONS",
+          "link": 170
+        }
+      ],
+      "outputs": [
+        {
+          "label": "description",
+          "name": "description",
+          "type": "STRING",
+          "links": [
+            172,
+            173
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LibLibVision"
+      },
+      "widgets_values": [
+        "Describe this image scene in detail. Include any important actions, subjects, settings, and atmosphere. DONT START WITH \"HERE THE PROMPT\", JUST GIVE THE PROMPT, NOTHING ELSE !\n\nInstructions: Generating Hyper-Detailed, Rapid Push-in Animation Prompts\nInput: An image.\n\nOutput: A single, exceptionally detailed and highly dynamic text prompt, meticulously describing a super-fast, aggressive \"push-in\" animation based on the input image.\n\nCore Instructions for Gemini:\nYour primary task is to act as an advanced animation prompt generator, creating prompts that are not only dynamic but also exceptionally rich in visual information, capturing the full essence of the input image. When you receive an image, you must follow these steps to create a highly descriptive and dynamic prompt:\n\nForensic Image Analysis (Maximum Detail):\n\nPerform an exhaustive analysis of the image, capturing every discernible visual element, texture, and nuance.\n\nIdentify and describe:\n\nMain subjects and their specific characteristics: What are they? What material are they made of? Are there any unique markings, patterns, or intricate designs?\n\nForeground, midground, and background elements: Detail what is present at each depth, noting their relationship to the overall scene.\n\nSpecific objects and their states: Are they worn, new, sharp, blurred?\n\nTextures: Describe the tactile quality of surfaces (e.g., rough granite, slick metallic, shimmering silk, cracked earth, wet leaves).\n\nLighting conditions: Go beyond just \"day\" or \"night.\" Describe the quality, direction, and color of light (e.g., harsh midday glare, soft golden hour luminescence, diffused overcast glow, sharp dramatic shadows, flickering artificial light, ethereal moonbeams). Note how light interacts with surfaces – reflections, refractions, glints.\n\nColors: Specify dominant hues, subtle color variations, and how colors interplay (e.g., muted earth tones, vibrant contrasting primaries, iridescent shifts).\n\nAtmosphere and mood: Is it misty, clear, dusty, serene, chaotic, melancholic, futuristic, ancient? Use evocative adjectives.\n\nEnvironmental specificities: If a natural scene, identify specific flora/fauna, geological features. If urban, architectural styles, types of vehicles, signs.\n\nMicro-details: Zoom in mentally. Are there tiny cracks, dust motes, water droplets, individual leaves, specific patterns on fabrics?\n\nElaborate on the \"Push-in\" Motion (Super Fast & Visually Integrated):\n\nThe core characteristic of the movement MUST be speed, intensity, and a sense of aggressive, almost overwhelming, progression.\n\nIntegrate the minute details from step 1 into the description of the movement, showing what the camera rapidly passes through, by, or into.\n\nIf the image depicts a traversable landscape or scene:\n\nDescribe the camera rapidly plunging, rocketing, or violently streaking through the environment.\n\nEmphasize the blurring and rapid distortion of passing elements due to high velocity, and the sudden shift in perspective as details rush into focus.\n\nExamples: \"Violently streaking through an ancient, gnarled forest, the vibrant moss-covered roots and individual, dew-kissed fern fronds blurring into streaks as blinding shafts of sunlight aggressively pierce the incredibly dense, emerald canopy, revealing a dimly lit, winding path of damp, dark earth that vanishes into the depths.\"\n\nIf the image depicts a static or non-traversable scene:\n\nDescribe a lightning-fast, aggressive lunge or instantaneous acceleration towards a specific, highly detailed focal point.\n\nEmphasize the abruptness of the reveal, where intricate, previously unseen details burst into sharp clarity as the camera slams into position.\n\nExamples: \"Instantly rocketing towards a weathered, gargantuan stone archway, its surface of rough, dark granite and intricate, moss-dusted carvings of forgotten mythical beasts exploding into crisp, sharp focus as every minute crack and chisel mark becomes startlingly visible under the harsh, clear midday sun.\"\n\nIntegrate Rich Visuals with Dynamic, Fast Motion:\n\nWeave all the comprehensive, micro-level visual analysis from step 1 with the detailed, rapid \"push-in\" motion from step 2.\n\nThe prompt should create a vivid, almost overwhelming mental image of the animation, suggesting both the scene's unparalleled detail and the experience of a blindingly fast, impactful entry.\n\nUse powerful verbs and an expansive vocabulary of adjectives to convey speed, impact, and granular visual richness.\n\nConcise and Polished Output Format:\n\nYour final response MUST ONLY be the single, generated animation prompt.\n\nEnsure the prompt is ready for direct use in an animation generation model, without any extraneous text.\n\nThe prompt should be a complete, compelling sentence or a series of interconnected, highly descriptive phrases that form a coherent and visually arresting description of the animation.\n\nExamples of Expected Input/Output for Gemini (Hyper-Detailed & Super Fast):\nExample 1: Traversable Landscape (Forest)\n\nImage Input: (Imagine an extremely detailed image of an autumnal forest. The ground is a vibrant tapestry of individual golden, fiery red, and rust-colored maple and oak leaves, some curled, some flat, distinct veins visible. Towering, textured oak trunks with rough bark form a natural tunnel. Sunbeams, sharp and golden, cut through the thinning canopy, illuminating dust motes. A narrow, dark, damp dirt path winds deeply into the background.)\n\nExpected Gemini Output: \"Violently plunging into a vibrant autumnal forest, individual golden, fiery red, and rust-colored maple and oak leaves on the damp ground blurring into streaks, as towering, rough-barked oak trunks whip past, and sharp, golden sunbeams aggressively pierce the thinning canopy, illuminating countless dancing dust motes, revealing a dark, winding dirt path that vanishes instantly into the detailed, shadowy depths.\"\n\nExample 2: Static Scene / Zoom-in (Architectural Detail)\n\nImage Input: (Imagine a close-up, highly detailed image of an ancient, weathered stone gargoyle carving on a cathedral wall. The grey granite is deeply textured with lichen patches. The gargoyle's face shows intricate, eroded details – cracked eyes, sharp teeth, and individual chips on its horns. Diffused, soft morning light gently highlights its contours, creating subtle shadows in the crevices.)\n\nExpected Gemini Output: \"Aggressively lunging towards an ancient, weathered stone gargoyle carving, its rough, grey granite surface and patches of green lichen instantly filling the frame, as its intricately eroded face with cracked eyes, sharp, chipped teeth, and individual horn fragments burst into razor-sharp focus, all subtly illuminated by diffused, soft morning light casting delicate shadows within every crevice.\"\n\nExample 3: Traversable Urban Environment (Night City)\n\nImage Input: (Imagine a cyberpunk city street at night, slick with recent rain, reflecting the vibrant, streaking neon signs of countless businesses. The towering skyscrapers are obsidian-black glass and brushed steel, dotted with thousands of tiny, glowing window squares. Fast-moving, aerodynamic flying cars, emitting trails of electric blue and crimson light, zip between the colossal structures in tight formation.)\n\nExpected Gemini Output: \"Darting violently through a bustling, rain-slicked cyberpunk city street at night, the vibrant, streaking neon signs blurring into iridescent rivers on the wet asphalt, as towering, obsidian-black glass and brushed steel skyscrapers, dotted with thousands of glowing window squares, whip past, and sleek, aerodynamic flying cars, emitting distinct trails of electric blue and crimson light, rocket instantly between their colossal, imposing forms.\"",
+        "qwen2.5-vl-72b-instruct",
+        "text"
+      ]
+    },
+    {
+      "id": 320,
+      "type": "ShowText|pysssss",
+      "pos": {
+        "0": -951.0914916992188,
+        "1": 2223.24560546875
+      },
+      "size": {
+        "0": 420.6380615234375,
+        "1": 646.1216430664062
+      },
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "文本",
+          "name": "text",
+          "type": "STRING",
+          "link": 172
+        }
+      ],
+      "outputs": [
+        {
+          "label": "字符串",
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "ShowText|pysssss",
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "1.2.5"
+      },
+      "widgets_values": [
+        "Instantly rocketing towards the heart of the lavender field, the vibrant purple blooms blurring into a hypnotic, swirling vortex of color as the rows of lavender, each individual flower a tiny point of light, rush towards the viewer, the distant cypress trees transforming into sharp, dark silhouettes against a breathtaking sunset sky, the soft golden light illuminating every minute detail of the scene, until the camera slams into the heart of the field, revealing the intricate texture of the blossoms, the delicate variations in purple hues, and the subtle golden undertones of the setting sun, in breathtaking, hyper-real clarity.\n",
+        "Instantly rocketing towards the heart of the lavender field, the vibrant purple blooms blurring into a hypnotic, swirling vortex of color as the rows of lavender, each individual flower a tiny point of light, rush towards the viewer, the distant cypress trees transforming into sharp, dark silhouettes against a breathtaking sunset sky, the soft golden light illuminating every minute detail of the scene, until the camera slams into the heart of the field, revealing the intricate texture of the blossoms, the delicate variations in purple hues, and the subtle golden undertones of the setting sun, in breathtaking, hyper-real clarity.\n"
+      ]
+    },
+    {
+      "id": 362,
+      "type": "LayerUtility: ImageScaleByAspectRatio V2",
+      "pos": {
+        "0": -0.6396867632865906,
+        "1": 2462.472412109375
+      },
+      "size": {
+        "0": 364.8801574707031,
+        "1": 330
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 184
+        },
+        {
+          "label": "遮罩",
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "label": "遮罩",
+          "name": "mask",
+          "type": "MASK",
+          "links": []
+        },
+        {
+          "label": "原始大小",
+          "name": "original_size",
+          "type": "BOX",
+          "links": []
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "slot_index": 3,
+          "links": [
+            181
+          ]
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "slot_index": 4,
+          "links": [
+            182
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LayerUtility: ImageScaleByAspectRatio V2"
+      },
+      "widgets_values": [
+        "original",
+        1,
+        1,
+        "letterbox",
+        "lanczos",
+        "8",
+        "longest",
+        960,
+        "#000000"
+      ],
+      "color": "rgba(38, 73, 116, 0.7)",
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 325,
+      "type": "ttN concat",
+      "pos": {
+        "0": -516.846923828125,
+        "1": 2216.2275390625
+      },
+      "size": {
+        "0": 400,
+        "1": 220
+      },
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "文本_2",
+          "name": "text2",
+          "type": "STRING",
+          "widget": {
+            "name": "text2"
+          },
+          "link": 173
+        }
+      ],
+      "outputs": [
+        {
+          "label": "联结字符串",
+          "name": "concat",
+          "type": "STRING",
+          "links": [
+            193
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "ttN concat",
+        "cnr_id": "comfyui_tinyterranodes",
+        "ver": "2.0.7",
+        "ttNnodeVersion": "1.0.0"
+      },
+      "widgets_values": [
+        "Push-in camera, ",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": 360,
+      "type": "Int",
+      "pos": {
+        "0": 9.106846809387207,
+        "1": 2320.839599609375
+      },
+      "size": {
+        "0": 243.29237365722656,
+        "1": 75.32024383544922
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "整数",
+          "name": "INT",
+          "type": "INT",
+          "slot_index": 0,
+          "links": [
+            183
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "Int"
+      },
+      "widgets_values": [
+        "81"
+      ],
+      "color": "#232",
+      "bgcolor": "#353",
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 343,
+      "type": "Note",
+      "pos": {
+        "0": 17.78952980041504,
+        "1": 1950.3126220703125
+      },
+      "size": {
+        "0": 325.4310607910156,
+        "1": 133.8367919921875
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "motionpushin lora 建议区间： 0.5 - 1.2"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 350,
+      "type": "LoadImage",
+      "pos": {
+        "0": -2017.59765625,
+        "1": 1657.4078369140625
+      },
+      "size": {
+        "0": 990.9232788085938,
+        "1": 1216.39599609375
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            179,
+            184,
+            192
+          ]
+        },
+        {
+          "label": "遮罩",
+          "name": "MASK",
+          "type": "MASK",
+          "links": []
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "500332725-c45a650d6289b00dd77543a3eed00fa2f2495cbfd04bbf057583d2b35cbde25d.png",
+        "image",
+        ""
+      ],
+      "color": "#232",
+      "bgcolor": "#353",
+      "_widget_cache_map": {
+        "fb5c0c2e973bd093b9eba7c50a5bdc4fd9288fe01b3a01-vWWm7d-2.jpeg": {
+          "value": "img/a7c59925c301ddc58f1e3157a6c7b866/7d91e0dea2a39000bb78fbb9493f7c6c25c8bee3878cb0a6ee214174da03436f.jpeg",
+          "name": "fb5c0c2e973bd093b9eba7c50a5bdc4fd9288fe01b3a01-vWWm7d-2.jpeg",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/a7c59925c301ddc58f1e3157a6c7b866/7d91e0dea2a39000bb78fbb9493f7c6c25c8bee3878cb0a6ee214174da03436f.jpeg",
+          "width": 1134,
+          "height": 1417
+        },
+        "315482759-a5748300ac8bfa82bc97ab9744e14e2b05fa8e28e7c62473a76f6ea4b6f42ff6.png": {
+          "value": "img/a7c59925c301ddc58f1e3157a6c7b866/a5748300ac8bfa82bc97ab9744e14e2b05fa8e28e7c62473a76f6ea4b6f42ff6.png",
+          "name": "315482759-a5748300ac8bfa82bc97ab9744e14e2b05fa8e28e7c62473a76f6ea4b6f42ff6.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/a7c59925c301ddc58f1e3157a6c7b866/a5748300ac8bfa82bc97ab9744e14e2b05fa8e28e7c62473a76f6ea4b6f42ff6.png",
+          "width": 1536,
+          "height": 2048
+        },
+        "一个日本的男性程序员拿着键盘面对着一哥拿着香蕉站立的大猩猩，他们两个面对面，背景是办公室场景，远景，全身像.png": {
+          "value": "img/a7c59925c301ddc58f1e3157a6c7b866/be592f561f2d76a8e72ccd1eb11de9b02f9b0017c31bf9f594cb05e819b3cb05.png",
+          "name": "一个日本的男性程序员拿着键盘面对着一哥拿着香蕉站立的大猩猩，他们两个面对面，背景是办公室场景，远景，全身像.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/a7c59925c301ddc58f1e3157a6c7b866/be592f561f2d76a8e72ccd1eb11de9b02f9b0017c31bf9f594cb05e819b3cb05.png",
+          "width": 1536,
+          "height": 2048
+        },
+        "一个日本老大爷拿着大大的香蕉，一个金发美女拿着菠萝，他们两个面对面，背景是公交车上，远景，全身像.png": {
+          "value": "img/a7c59925c301ddc58f1e3157a6c7b866/1b1121bae02b59a67096d5952b87edcc3e7e6b473f9aa209ab2da3fe535d504c.png",
+          "name": "一个日本老大爷拿着大大的香蕉，一个金发美女拿着菠萝，他们两个面对面，背景是公交车上，远景，全身像.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/a7c59925c301ddc58f1e3157a6c7b866/1b1121bae02b59a67096d5952b87edcc3e7e6b473f9aa209ab2da3fe535d504c.png",
+          "width": 1728,
+          "height": 2304
+        },
+        "可爱的猴子，3D，Macaron配色方案，动漫风格，粉红色头发和粉色西装的孙悟空形象，英俊，酷炫，3D猴王全身像，艺术趋势，高品质，杰作，纯色的干净的背景.png": {
+          "value": "img/a7c59925c301ddc58f1e3157a6c7b866/dddeec08818e7f599c1647256af500baf27ef76ab89a56c09ecdecabdc06199d.png",
+          "name": "可爱的猴子，3D，Macaron配色方案，动漫风格，粉红色头发和粉色西装的孙悟空形象，英俊，酷炫，3D猴王全身像，艺术趋势，高品质，杰作，纯色的干净的背景.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/a7c59925c301ddc58f1e3157a6c7b866/dddeec08818e7f599c1647256af500baf27ef76ab89a56c09ecdecabdc06199d.png",
+          "width": 1536,
+          "height": 2048
+        },
+        "一只胖乎乎的斑马像是被充满气鼓鼓的跟球一样，表情搞笑，3D毛绒绒材质，正面，背景是蓝色的天空，柔和的光线，精细的毛绒感，暖色，C4D.jpeg": {
+          "value": "img/a7c59925c301ddc58f1e3157a6c7b866/a9e997ba51cb79314b72041b4ac1e99b61ca8896932cdc2efa430ec06edff092.jpeg",
+          "name": "一只胖乎乎的斑马像是被充满气鼓鼓的跟球一样，表情搞笑，3D毛绒绒材质，正面，背景是蓝色的天空，柔和的光线，精细的毛绒感，暖色，C4D.jpeg",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/a7c59925c301ddc58f1e3157a6c7b866/a9e997ba51cb79314b72041b4ac1e99b61ca8896932cdc2efa430ec06edff092.jpeg",
+          "width": 768,
+          "height": 1024
+        },
+        "一只拟人化的猫，穿西装打领带戴着眼镜和耳机，正在看报纸，干净的背景.png": {
+          "value": "img/a7c59925c301ddc58f1e3157a6c7b866/3a69b2f5906ab1fad3f31bd1d6cdb380eeca566ae2c83bea620f35eb663d53da.png",
+          "name": "一只拟人化的猫，穿西装打领带戴着眼镜和耳机，正在看报纸，干净的背景.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/a7c59925c301ddc58f1e3157a6c7b866/3a69b2f5906ab1fad3f31bd1d6cdb380eeca566ae2c83bea620f35eb663d53da.png",
+          "width": 1536,
+          "height": 2048
+        },
+        "output (13).png": {
+          "value": "img/7c60fd65c04146039ee50bc461afa80d/ee61a41069939a2c22157676efe2fcc8f8290309947bdabbc8e4d970b463b435.png",
+          "name": "output (13).png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/7c60fd65c04146039ee50bc461afa80d/ee61a41069939a2c22157676efe2fcc8f8290309947bdabbc8e4d970b463b435.png",
+          "width": 1136,
+          "height": 1024
+        },
+        "0a764b8ec2b6e04c3be0c5871892693abbbca1af72090da23667ef4aa18abebe.png": {
+          "value": "img/7c60fd65c04146039ee50bc461afa80d/0a764b8ec2b6e04c3be0c5871892693abbbca1af72090da23667ef4aa18abebe.png",
+          "name": "0a764b8ec2b6e04c3be0c5871892693abbbca1af72090da23667ef4aa18abebe.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/7c60fd65c04146039ee50bc461afa80d/0a764b8ec2b6e04c3be0c5871892693abbbca1af72090da23667ef4aa18abebe.png",
+          "width": 1024,
+          "height": 1024
+        },
+        "123.png": {
+          "value": "img/7c60fd65c04146039ee50bc461afa80d/775fd06d4c806fa1b5186d74bfc65b4652c2c6c2b4dfc8de233cd80f4e1deace.png",
+          "name": "123.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/7c60fd65c04146039ee50bc461afa80d/775fd06d4c806fa1b5186d74bfc65b4652c2c6c2b4dfc8de233cd80f4e1deace.png",
+          "width": 1032,
+          "height": 1536
+        },
+        "output (15).png": {
+          "value": "img/7c60fd65c04146039ee50bc461afa80d/8a59c1863b83e9244a1cfe4dd717d3aa05fc3b1c769abe93efad6af3a71e9b89.png",
+          "name": "output (15).png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/7c60fd65c04146039ee50bc461afa80d/8a59c1863b83e9244a1cfe4dd717d3aa05fc3b1c769abe93efad6af3a71e9b89.png",
+          "width": 600,
+          "height": 548
+        },
+        "output (21).png": {
+          "value": "img/7c60fd65c04146039ee50bc461afa80d/0541dfe76311bd2b87f76e9913f8257873ceebfa9e35dfd8cd5dbec85e2ec9fc.png",
+          "name": "output (21).png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/7c60fd65c04146039ee50bc461afa80d/0541dfe76311bd2b87f76e9913f8257873ceebfa9e35dfd8cd5dbec85e2ec9fc.png",
+          "width": 1810,
+          "height": 2418
+        },
+        "output (4).png": {
+          "value": "img/7c60fd65c04146039ee50bc461afa80d/c0e804110f1eba9017f56a4cf5e2e72c1dfb6399c098bd6a8d03fdc9568bc8c4.png",
+          "name": "output (4).png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/7c60fd65c04146039ee50bc461afa80d/c0e804110f1eba9017f56a4cf5e2e72c1dfb6399c098bd6a8d03fdc9568bc8c4.png",
+          "width": 1472,
+          "height": 1536
+        },
+        "output (12).png": {
+          "value": "img/042b8a712a76434d89320bbe45aa40f8/f4f38da80a6890758aef08edc7f4b32d2a60aab1838e19eb58c7ad0d1bef306c.png",
+          "name": "output (12).png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/042b8a712a76434d89320bbe45aa40f8/f4f38da80a6890758aef08edc7f4b32d2a60aab1838e19eb58c7ad0d1bef306c.png",
+          "width": 1448,
+          "height": 1536
+        },
+        "output (6).png": {
+          "value": "img/042b8a712a76434d89320bbe45aa40f8/0b18c41edeb114e4bf94d218de2477d72aba38fcdfd7d2fe25da8b3f1a814b12.png",
+          "name": "output (6).png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/042b8a712a76434d89320bbe45aa40f8/0b18c41edeb114e4bf94d218de2477d72aba38fcdfd7d2fe25da8b3f1a814b12.png",
+          "width": 1024,
+          "height": 1536
+        },
+        "output (10).png": {
+          "value": "img/7c60fd65c04146039ee50bc461afa80d/c251a8ba2343c35e7ee99c4f2cf6a1a44b2b3a2f15ef5d3bba0e07728897f36b.png",
+          "name": "output (10).png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/7c60fd65c04146039ee50bc461afa80d/c251a8ba2343c35e7ee99c4f2cf6a1a44b2b3a2f15ef5d3bba0e07728897f36b.png",
+          "width": 1520,
+          "height": 1536
+        },
+        "image.png": {
+          "value": "img/8e0d9fdebc3c465991039eb76bbfd1f5/21ade6291e6ea83fbe66ad9fa89ffb90051e911f13a0aef380def176da527d79.png",
+          "name": "image.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/8e0d9fdebc3c465991039eb76bbfd1f5/21ade6291e6ea83fbe66ad9fa89ffb90051e911f13a0aef380def176da527d79.png",
+          "width": 600,
+          "height": 1009
+        },
+        "db6568d28c23859878a5196e1d7dd06.jpg": {
+          "value": "img/f0251bdafe604a4186428bf0553f2a6e/2ca889ba53bc98e5f943afa51e5c88c6894eb9d39349454f816335235831c6f0.jpg",
+          "name": "db6568d28c23859878a5196e1d7dd06.jpg",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/f0251bdafe604a4186428bf0553f2a6e/2ca889ba53bc98e5f943afa51e5c88c6894eb9d39349454f816335235831c6f0.jpg",
+          "width": 604,
+          "height": 807
+        },
+        "372f5bc037cdde28752cedc924c8b0abfdd3d51fa27520239a71e2458d2f871f.png": {
+          "value": "img/081e9f07d9bd4c2ba090efde163518f9/372f5bc037cdde28752cedc924c8b0abfdd3d51fa27520239a71e2458d2f871f.png",
+          "name": "372f5bc037cdde28752cedc924c8b0abfdd3d51fa27520239a71e2458d2f871f.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/081e9f07d9bd4c2ba090efde163518f9/372f5bc037cdde28752cedc924c8b0abfdd3d51fa27520239a71e2458d2f871f.png",
+          "width": 1024,
+          "height": 1024
+        },
+        "output (5).png": {
+          "value": "img/081e9f07d9bd4c2ba090efde163518f9/527f146ab02ecd3e5c9baf1b35c59fe054d2802ab9086c4619b3b499f6215a49.png",
+          "name": "output (5).png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/081e9f07d9bd4c2ba090efde163518f9/527f146ab02ecd3e5c9baf1b35c59fe054d2802ab9086c4619b3b499f6215a49.png",
+          "width": 3872,
+          "height": 2154
+        },
+        "500332725-c45a650d6289b00dd77543a3eed00fa2f2495cbfd04bbf057583d2b35cbde25d.png": {
+          "value": "img/081e9f07d9bd4c2ba090efde163518f9/c45a650d6289b00dd77543a3eed00fa2f2495cbfd04bbf057583d2b35cbde25d.png",
+          "name": "500332725-c45a650d6289b00dd77543a3eed00fa2f2495cbfd04bbf057583d2b35cbde25d.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/081e9f07d9bd4c2ba090efde163518f9/c45a650d6289b00dd77543a3eed00fa2f2495cbfd04bbf057583d2b35cbde25d.png",
+          "width": 1344,
+          "height": 768
+        }
+      }
+    },
+    {
+      "id": 365,
+      "type": "WanVideoDecode",
+      "pos": {
+        "0": 1980.0001220703125,
+        "1": 1804.8974609375
+      },
+      "size": {
+        "0": 276.25933837890625,
+        "1": 198
+      },
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "vae",
+          "name": "vae",
+          "type": "WANVAE",
+          "link": 186
+        },
+        {
+          "label": "samples",
+          "name": "samples",
+          "type": "LATENT",
+          "link": 187
+        }
+      ],
+      "outputs": [
+        {
+          "label": "images",
+          "name": "images",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            201
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "WanVideoDecode"
+      },
+      "widgets_values": [
+        true,
+        272,
+        272,
+        144,
+        128,
+        "default"
+      ],
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 356,
+      "type": "WanVideoModelLoader",
+      "pos": {
+        "0": 870,
+        "1": 1774.8974609375
+      },
+      "size": {
+        "0": 399.9275207519531,
+        "1": 316.2763977050781
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "compile_args",
+          "name": "compile_args",
+          "shape": 7,
+          "type": "WANCOMPILEARGS",
+          "link": null
+        },
+        {
+          "label": "block_swap_args",
+          "name": "block_swap_args",
+          "shape": 7,
+          "type": "BLOCKSWAPARGS",
+          "link": 174
+        },
+        {
+          "label": "lora",
+          "name": "lora",
+          "shape": 7,
+          "type": "WANVIDLORA",
+          "link": 175
+        },
+        {
+          "label": "vram_management_args",
+          "name": "vram_management_args",
+          "shape": 7,
+          "type": "VRAM_MANAGEMENTARGS",
+          "link": null
+        },
+        {
+          "label": "vace_model",
+          "name": "vace_model",
+          "shape": 7,
+          "type": "VACEPATH",
+          "link": null
+        },
+        {
+          "label": "fantasytalking_model",
+          "name": "fantasytalking_model",
+          "shape": 7,
+          "type": "FANTASYTALKINGMODEL",
+          "link": null
+        },
+        {
+          "label": "multitalk_model",
+          "name": "multitalk_model",
+          "shape": 7,
+          "type": "MULTITALKMODEL",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "model",
+          "name": "model",
+          "type": "WANVIDEOMODEL",
+          "slot_index": 0,
+          "links": [
+            189
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "WanVideoModelLoader"
+      },
+      "widgets_values": [
+        "Wan14Bi2vFusioniX_fp16.safetensors",
+        "bf16",
+        "fp8_e4m3fn",
+        "offload_device",
+        "sdpa"
+      ],
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 368,
+      "type": "WanVideoSampler",
+      "pos": {
+        "0": 1369.82421875,
+        "1": 2021.6239013671875
+      },
+      "size": {
+        "0": 480.6401672363281,
+        "1": 618
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "model",
+          "name": "model",
+          "type": "WANVIDEOMODEL",
+          "link": 189
+        },
+        {
+          "label": "image_embeds",
+          "name": "image_embeds",
+          "type": "WANVIDIMAGE_EMBEDS",
+          "link": 190
+        },
+        {
+          "label": "text_embeds",
+          "name": "text_embeds",
+          "shape": 7,
+          "type": "WANVIDEOTEXTEMBEDS",
+          "link": 191
+        },
+        {
+          "label": "samples",
+          "name": "samples",
+          "shape": 7,
+          "type": "LATENT",
+          "link": null
+        },
+        {
+          "label": "feta_args",
+          "name": "feta_args",
+          "shape": 7,
+          "type": "FETAARGS",
+          "link": null
+        },
+        {
+          "label": "context_options",
+          "name": "context_options",
+          "shape": 7,
+          "type": "WANVIDCONTEXT",
+          "link": null
+        },
+        {
+          "label": "cache_args",
+          "name": "cache_args",
+          "shape": 7,
+          "type": "CACHEARGS",
+          "link": null
+        },
+        {
+          "label": "flowedit_args",
+          "name": "flowedit_args",
+          "shape": 7,
+          "type": "FLOWEDITARGS",
+          "link": null
+        },
+        {
+          "label": "slg_args",
+          "name": "slg_args",
+          "shape": 7,
+          "type": "SLGARGS",
+          "link": null
+        },
+        {
+          "label": "loop_args",
+          "name": "loop_args",
+          "shape": 7,
+          "type": "LOOPARGS",
+          "link": null
+        },
+        {
+          "label": "experimental_args",
+          "name": "experimental_args",
+          "shape": 7,
+          "type": "EXPERIMENTALARGS",
+          "link": null
+        },
+        {
+          "label": "sigmas",
+          "name": "sigmas",
+          "shape": 7,
+          "type": "SIGMAS",
+          "link": null
+        },
+        {
+          "label": "unianimate_poses",
+          "name": "unianimate_poses",
+          "shape": 7,
+          "type": "UNIANIMATE_POSE",
+          "link": null
+        },
+        {
+          "label": "fantasytalking_embeds",
+          "name": "fantasytalking_embeds",
+          "shape": 7,
+          "type": "FANTASYTALKING_EMBEDS",
+          "link": null
+        },
+        {
+          "label": "uni3c_embeds",
+          "name": "uni3c_embeds",
+          "shape": 7,
+          "type": "UNI3C_EMBEDS",
+          "link": null
+        },
+        {
+          "label": "multitalk_embeds",
+          "name": "multitalk_embeds",
+          "shape": 7,
+          "type": "MULTITALK_EMBEDS",
+          "link": null
+        },
+        {
+          "label": "freeinit_args",
+          "name": "freeinit_args",
+          "shape": 7,
+          "type": "FREEINITARGS",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "samples",
+          "name": "samples",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            187
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "WanVideoSampler"
+      },
+      "widgets_values": [
+        10,
+        1,
+        5,
+        511008936686863,
+        "randomize",
+        true,
+        "unipc",
+        0,
+        1,
+        false,
+        "comfy"
+      ],
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 366,
+      "type": "VHS_VideoCombine",
+      "pos": {
+        "0": 2327.5078125,
+        "1": 1643.0792236328125
+      },
+      "size": {
+        "0": 530.1194458007812,
+        "1": 637.0676879882812
+      },
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 201
+        },
+        {
+          "label": "音频",
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "label": "批次管理",
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "文件名",
+          "name": "Filenames",
+          "type": "VHS_FILENAMES"
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 16,
+        "loop_count": 0,
+        "filename_prefix": "xiao",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 19,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "output.mp4",
+            "url": "https://liblibai-tmp-image.liblib.cloud/sd-images/85b6a0a533bd8e1d70daf64804bfc09c81ed3dcede721c18b5e092405c5e2031.mp4?Token=dd2e4c366ae044cabc823deb95232c42",
+            "coverUrl": "https://liblibai-tmp-image.liblib.cloud/sd-images/60d3dbf2a76469aa0767f787dcc8ae155342afd04453ae07cd3f78c39a8064cb.jpg?Token=dd2e4c366ae044cabc823deb95232c42",
+            "type": "output",
+            "format": "video/mp4"
+          }
+        }
+      },
+      "color": "#322",
+      "bgcolor": "#533"
+    }
+  ],
+  "links": [
+    [
+      170,
+      349,
+      0,
+      348,
+      1,
+      "LIBLIB_OPTIONS"
+    ],
+    [
+      172,
+      348,
+      0,
+      320,
+      0,
+      "STRING"
+    ],
+    [
+      173,
+      348,
+      0,
+      325,
+      0,
+      "STRING"
+    ],
+    [
+      174,
+      351,
+      0,
+      356,
+      1,
+      "BLOCKSWAPARGS"
+    ],
+    [
+      175,
+      352,
+      0,
+      356,
+      2,
+      "WANVIDLORA"
+    ],
+    [
+      176,
+      355,
+      0,
+      357,
+      0,
+      "WANTEXTENCODER"
+    ],
+    [
+      178,
+      353,
+      0,
+      358,
+      0,
+      "CLIP_VISION"
+    ],
+    [
+      179,
+      350,
+      0,
+      358,
+      1,
+      "IMAGE"
+    ],
+    [
+      180,
+      354,
+      0,
+      358,
+      2,
+      "WANVAE"
+    ],
+    [
+      181,
+      362,
+      3,
+      358,
+      3,
+      "INT"
+    ],
+    [
+      182,
+      362,
+      4,
+      358,
+      4,
+      "INT"
+    ],
+    [
+      183,
+      360,
+      0,
+      358,
+      5,
+      "INT"
+    ],
+    [
+      184,
+      350,
+      0,
+      362,
+      0,
+      "IMAGE"
+    ],
+    [
+      186,
+      354,
+      0,
+      365,
+      0,
+      "WANVAE"
+    ],
+    [
+      187,
+      368,
+      0,
+      365,
+      1,
+      "LATENT"
+    ],
+    [
+      189,
+      356,
+      0,
+      368,
+      0,
+      "WANVIDEOMODEL"
+    ],
+    [
+      190,
+      358,
+      0,
+      368,
+      1,
+      "WANVIDIMAGE_EMBEDS"
+    ],
+    [
+      191,
+      357,
+      0,
+      368,
+      2,
+      "WANVIDEOTEXTEMBEDS"
+    ],
+    [
+      192,
+      350,
+      0,
+      348,
+      0,
+      "IMAGE"
+    ],
+    [
+      193,
+      325,
+      0,
+      357,
+      2,
+      "STRING"
+    ],
+    [
+      201,
+      365,
+      0,
+      366,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 11,
+      "title": "视频生成",
+      "bounding": [
+        -49.06324768066406,
+        1562.748291015625,
+        2992.134521484375,
+        1367.8868408203125
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 12,
+      "title": "提示词",
+      "bounding": [
+        -973.9077758789062,
+        1560.9136962890625,
+        903.4449462890625,
+        1331.3421630859375
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 13,
+      "title": "01上传图片",
+      "bounding": [
+        -2042.344482421875,
+        1562.0654296875,
+        1036.6351318359375,
+        1328.15625
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.7972024500000005,
+      "offset": [
+        516.0145031089015,
+        -1345.2636427883288
+      ]
+    },
+    "frontendVersion": "1.23.4",
+    "ue_links": [],
+    "links_added_by_ue": [],
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true,
+    "groupNodes": {}
+  },
+  "version": 0.4
+}

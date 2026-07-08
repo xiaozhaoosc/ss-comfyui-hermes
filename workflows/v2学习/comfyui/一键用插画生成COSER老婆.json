@@ -1,0 +1,395 @@
+{
+  "id": "e7b4d798-72bf-4c2d-abeb-b3554f04e707",
+  "revision": 0,
+  "last_node_id": 20,
+  "last_link_id": 23,
+  "nodes": [
+    {
+      "id": 18,
+      "type": "ImageResize+",
+      "pos": {
+        "0": 599.5894165039062,
+        "1": 903.3302612304688
+      },
+      "size": {
+        "0": 288.4144287109375,
+        "1": 218
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 17
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            18
+          ]
+        },
+        {
+          "label": "宽度",
+          "name": "width",
+          "type": "INT",
+          "links": []
+        },
+        {
+          "label": "高度",
+          "name": "height",
+          "type": "INT",
+          "links": []
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "ImageResize+"
+      },
+      "widgets_values": [
+        1536,
+        1536,
+        "lanczos",
+        "keep proportion",
+        "always",
+        0
+      ]
+    },
+    {
+      "id": 14,
+      "type": "SaveImage",
+      "pos": {
+        "0": 199.84414672851562,
+        "1": 1267.712646484375
+      },
+      "size": {
+        "0": 312.7884521484375,
+        "1": 346.2998352050781
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 13
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 16,
+      "type": "LoadImage",
+      "pos": {
+        "0": 202.3572540283203,
+        "1": 903.4779052734375
+      },
+      "size": {
+        "0": 315,
+        "1": 314
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            17,
+            22
+          ]
+        },
+        {
+          "label": "遮罩",
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "41_start.png",
+        "image",
+        ""
+      ],
+      "_widget_cache_map": {
+        "image.png": {
+          "value": "img/081e9f07d9bd4c2ba090efde163518f9/05011ea53ee71b344489e3964f500863b697d4762036ee8de27aca3b8d3c08ff.png",
+          "name": "image.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/081e9f07d9bd4c2ba090efde163518f9/05011ea53ee71b344489e3964f500863b697d4762036ee8de27aca3b8d3c08ff.png",
+          "width": 85,
+          "height": 113
+        },
+        "20250110-013708.jpg": {
+          "value": "img/081e9f07d9bd4c2ba090efde163518f9/98ea0d60fe7b7c95576ddf9532c7ecdb4c3849edfcb22c93ab6e449eba9a8fcf.jpg",
+          "name": "20250110-013708.jpg",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/081e9f07d9bd4c2ba090efde163518f9/98ea0d60fe7b7c95576ddf9532c7ecdb4c3849edfcb22c93ab6e449eba9a8fcf.jpg",
+          "width": 768,
+          "height": 768
+        },
+        "20240920-005416.jpg": {
+          "value": "img/081e9f07d9bd4c2ba090efde163518f9/49d4d3e44b2238f59acf8ce866ab5bbc02f3d9ef572fa8bd42b8497fc5516808.jpg",
+          "name": "20240920-005416.jpg",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/081e9f07d9bd4c2ba090efde163518f9/49d4d3e44b2238f59acf8ce866ab5bbc02f3d9ef572fa8bd42b8497fc5516808.jpg"
+        },
+        "3D_Animation_Style_only_a_young_man_character_sitting_in_a_gam_1 (2).jpg": {
+          "value": "img/081e9f07d9bd4c2ba090efde163518f9/3d15b7e961f94b26942bdad73098ebbf6a76ab7734cc786811d1c24010f6414c.jpg",
+          "name": "3D_Animation_Style_only_a_young_man_character_sitting_in_a_gam_1 (2).jpg",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/081e9f07d9bd4c2ba090efde163518f9/3d15b7e961f94b26942bdad73098ebbf6a76ab7734cc786811d1c24010f6414c.jpg",
+          "width": 768,
+          "height": 768
+        },
+        "3D_Animation_Style_only_a_young_man_character_sitting_in_a_gam_2.jpg": {
+          "value": "img/081e9f07d9bd4c2ba090efde163518f9/2cf0c0a1f003349978df5a75c11b8ba40bef008f1bc5dbd990c5179426826114.jpg",
+          "name": "3D_Animation_Style_only_a_young_man_character_sitting_in_a_gam_2.jpg",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/081e9f07d9bd4c2ba090efde163518f9/2cf0c0a1f003349978df5a75c11b8ba40bef008f1bc5dbd990c5179426826114.jpg",
+          "width": 768,
+          "height": 768
+        },
+        "生成宠物照片 (10).png": {
+          "value": "img/588cc5e197c24e928ad033c0b70d0d09/836f507f24316cbe63361d2ee09f097b7acadebe48f622b637ad11d6fa38253a.png",
+          "name": "生成宠物照片 (10).png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/588cc5e197c24e928ad033c0b70d0d09/836f507f24316cbe63361d2ee09f097b7acadebe48f622b637ad11d6fa38253a.png",
+          "width": 1024,
+          "height": 1536
+        },
+        "41_start.png": {
+          "value": "img/588cc5e197c24e928ad033c0b70d0d09/a592239d02e07df06114897964441bb53f5ba0d647878de14f8bd384d17287b0.png",
+          "name": "41_start.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/588cc5e197c24e928ad033c0b70d0d09/a592239d02e07df06114897964441bb53f5ba0d647878de14f8bd384d17287b0.png",
+          "width": 768,
+          "height": 1228
+        }
+      }
+    },
+    {
+      "id": 17,
+      "type": "GeminiImageNode",
+      "pos": {
+        "0": 953.9017944335938,
+        "1": 904.5234985351562
+      },
+      "size": {
+        "0": 416.5869140625,
+        "1": 390.74969482421875
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "images",
+          "name": "images",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 18
+        },
+        {
+          "label": "files",
+          "name": "files",
+          "shape": 7,
+          "type": "GEMINI_INPUT_FILES",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "IMAGE",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            13,
+            23
+          ]
+        },
+        {
+          "label": "STRING",
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "GeminiImageNode"
+      },
+      "widgets_values": [
+        "Generate a photo of an 18 - year - old East Asian coser. She is full of youthful vitality, cute, charming and has a good figure. The photo should present a realistic cosplay shooting texture. She cosplays the main character in the original picture, retaining the same clothing and pose. The skin and clothing should have a real - life texture. Place an easel at the back - side of the coser to display the original picture. The location is set at Comiket in Tokyo. She maintains the same pose, looking like a real person stepping out of an illustration, with a perfect and delicate face, straight hair, big eyes, and a lively expression. The coser should be the main body of the picture, taking up a large proportion in the frame.",
+        "gemini-2.5-flash-image-preview",
+        2921620988360,
+        "randomize"
+      ]
+    },
+    {
+      "id": 20,
+      "type": "Image Comparer (rgthree)",
+      "pos": {
+        "0": 553.2792358398438,
+        "1": 1188.1236572265625
+      },
+      "size": {
+        "0": 386.6489562988281,
+        "1": 411.6701965332031
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "label": "图像_A",
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 23
+        },
+        {
+          "dir": 3,
+          "label": "图像_B",
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 22
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "comparer_mode": "Slide"
+      },
+      "widgets_values": [
+        []
+      ]
+    }
+  ],
+  "links": [
+    [
+      13,
+      17,
+      0,
+      14,
+      0,
+      "IMAGE"
+    ],
+    [
+      17,
+      16,
+      0,
+      18,
+      0,
+      "IMAGE"
+    ],
+    [
+      18,
+      18,
+      0,
+      17,
+      0,
+      "IMAGE"
+    ],
+    [
+      22,
+      16,
+      0,
+      20,
+      1,
+      "IMAGE"
+    ],
+    [
+      23,
+      17,
+      0,
+      20,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "nano-banana手办生成器",
+      "bounding": [
+        189.84414672851562,
+        829.7302856445312,
+        1190.6446533203125,
+        813.0836791992188
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1.2839025177495011,
+      "offset": [
+        157.71098471779405,
+        -861.8185114689813
+      ]
+    },
+    "ue_links": [],
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4,
+  "widget_idx_map": {
+    "17": {
+      "seed": 2
+    }
+  },
+  "seed_widgets": {
+    "17": 2
+  }
+}

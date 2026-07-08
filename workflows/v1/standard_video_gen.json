@@ -1,0 +1,166 @@
+{
+  "prompt": {
+    "1": {
+      "class_type": "UnetLoaderGGUF",
+      "_meta": {
+        "title": "Load UNet GGUF"
+      },
+      "inputs": {
+        "unet_name": "ltx-2.3-22b-dev-Q2_K.gguf"
+      }
+    },
+    "2": {
+      "class_type": "VAELoader",
+      "_meta": {
+        "title": "Load VAE"
+      },
+      "inputs": {
+        "vae_name": "vae_with_config_fixed.safetensors"
+      }
+    },
+    "3": {
+      "class_type": "LTXVGemmaCLIPModelLoader",
+      "_meta": {
+        "title": "Load CLIP Models"
+      },
+      "inputs": {
+        "gemma_path": "gemma_3_12B_it.safetensors",
+        "ltxv_path": "ltx-2.3-22b-dev.safetensors",
+        "max_length": 1024
+      }
+    },
+    "4": {
+      "class_type": "CLIPTextEncode",
+      "_meta": {
+        "title": "Positive Prompt"
+      },
+      "inputs": {
+        "text": "A golden retriever running playfully on a sandy beach at golden hour sunset, warm cinematic lighting, shallow depth of field, photorealistic, 4K quality, smooth camera tracking shot",
+        "clip": ["3", 0]
+      }
+    },
+    "5": {
+      "class_type": "CLIPTextEncode",
+      "_meta": {
+        "title": "Negative Prompt"
+      },
+      "inputs": {
+        "text": "blurry, low quality, distorted, ugly",
+        "clip": ["3", 0]
+      }
+    },
+    "6": {
+      "class_type": "LTXVConditioning",
+      "_meta": {
+        "title": "Conditioning"
+      },
+      "inputs": {
+        "positive": ["4", 0],
+        "negative": ["5", 0],
+        "frame_rate": 25.0
+      }
+    },
+    "7": {
+      "class_type": "EmptyLTXVLatentVideo",
+      "_meta": {
+        "title": "Empty Latent"
+      },
+      "inputs": {
+        "width": 768,
+        "height": 480,
+        "length": 49,
+        "batch_size": 1
+      }
+    },
+    "10": {
+      "class_type": "RandomNoise",
+      "_meta": {
+        "title": "Random Noise"
+      },
+      "inputs": {
+        "noise_seed": 42
+      }
+    },
+    "11": {
+      "class_type": "BasicGuider",
+      "_meta": {
+        "title": "Guider"
+      },
+      "inputs": {
+        "model": ["1", 0],
+        "conditioning": ["6", 0]
+      }
+    },
+    "12": {
+      "class_type": "KSamplerSelect",
+      "_meta": {
+        "title": "Sampler"
+      },
+      "inputs": {
+        "sampler_name": "euler_ancestral_cfg_pp"
+      }
+    },
+    "13": {
+      "class_type": "LTXVScheduler",
+      "_meta": {
+        "title": "Scheduler"
+      },
+      "inputs": {
+        "steps": 16,
+        "max_shift": 2.05,
+        "base_shift": 0.95,
+        "stretch": 1.0,
+        "terminal": 0.1
+      }
+    },
+    "14": {
+      "class_type": "SamplerCustomAdvanced",
+      "_meta": {
+        "title": "Advanced Sampler"
+      },
+      "inputs": {
+        "noise": ["10", 0],
+        "guider": ["11", 0],
+        "sampler": ["12", 0],
+        "sigmas": ["13", 0],
+        "latent_image": ["7", 0]
+      }
+    },
+    "15": {
+      "class_type": "LTXVTiledVAEDecode",
+      "_meta": {
+        "title": "Tiled VAE Decode"
+      },
+      "inputs": {
+        "vae": ["2", 0],
+        "latents": ["14", 0],
+        "horizontal_tiles": 2,
+        "vertical_tiles": 2,
+        "overlap": 8,
+        "last_frame_fix": false
+      }
+    },
+    "16": {
+      "class_type": "CreateVideo",
+      "_meta": {
+        "title": "Create Video"
+      },
+      "inputs": {
+        "images": ["15", 0],
+        "fps": 25.0
+      }
+    },
+    "17": {
+      "class_type": "SaveVideo",
+      "_meta": {
+        "title": "Save Video"
+      },
+      "inputs": {
+        "video": ["16", 0],
+        "filename_prefix": "ltxv_generated",
+        "format": "mp4",
+        "codec": "h264"
+      }
+    }
+  }
+}

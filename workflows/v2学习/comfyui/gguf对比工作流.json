@@ -1,0 +1,2346 @@
+{
+  "last_node_id": 408,
+  "last_link_id": 812,
+  "nodes": [
+    {
+      "id": 70,
+      "type": "ConditioningSetTimestepRange",
+      "pos": {
+        "0": -1030,
+        "1": 120
+      },
+      "size": {
+        "0": 317.4000244140625,
+        "1": 82
+      },
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 93,
+          "slot_index": 0,
+          "label": "conditioning"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            92
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "CONDITIONING"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ConditioningSetTimestepRange",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [
+        0,
+        0.1
+      ],
+      "color": "#1f1f48"
+    },
+    {
+      "id": 71,
+      "type": "CLIPTextEncode",
+      "pos": {
+        "0": -672,
+        "1": -20
+      },
+      "size": {
+        "0": 464.1728210449219,
+        "1": 147.5100860595703
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 94,
+          "label": "clip"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            93,
+            597
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "CONDITIONING"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "",
+        true
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 105,
+      "type": "Note",
+      "pos": {
+        "0": -992,
+        "1": -455
+      },
+      "size": {
+        "0": 210,
+        "1": 107.46865844726562
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Make sure the resolution is multiple of 64 pixels and adds up to around 1 megapixel. "
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 67,
+      "type": "ConditioningZeroOut",
+      "pos": {
+        "0": -462,
+        "1": -333
+      },
+      "size": {
+        "0": 211.60000610351562,
+        "1": 26
+      },
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 597,
+          "label": "conditioning"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            90
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "CONDITIONING"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ConditioningZeroOut",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [],
+      "color": "#1f1f48"
+    },
+    {
+      "id": 11,
+      "type": "TripleCLIPLoader",
+      "pos": {
+        "0": -1036,
+        "1": -281
+      },
+      "size": {
+        "0": 315,
+        "1": 106
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            5,
+            94
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "CLIP"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "TripleCLIPLoader",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [
+        "clip_g.safetensors",
+        "clip_l.safetensors",
+        "t5xxl_fp8_e4m3fn.safetensors"
+      ],
+      "color": "#1f1f48"
+    },
+    {
+      "id": 135,
+      "type": "EmptySD3LatentImage",
+      "pos": {
+        "0": -770,
+        "1": -456
+      },
+      "size": {
+        "0": 294.3804626464844,
+        "1": 114.79912567138672
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            744,
+            765,
+            776,
+            786
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "LATENT"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptySD3LatentImage",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [
+        1216,
+        832,
+        1
+      ],
+      "color": "#1f1f48"
+    },
+    {
+      "id": 13,
+      "type": "ModelSamplingSD3",
+      "pos": {
+        "0": 120,
+        "1": -480
+      },
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 606,
+          "label": "model"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            741
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "MODEL"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ModelSamplingSD3",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [
+        3
+      ],
+      "color": "#1f1f48"
+    },
+    {
+      "id": 304,
+      "type": "VAELoader",
+      "pos": {
+        "0": -1023,
+        "1": -119
+      },
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            751,
+            779,
+            789
+          ],
+          "slot_index": 0,
+          "label": "VAE"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [
+        "sd35_gguf_vae.safetensors"
+      ],
+      "color": "#1f1f48"
+    },
+    {
+      "id": 68,
+      "type": "ConditioningSetTimestepRange",
+      "pos": {
+        "0": -1020,
+        "1": -10
+      },
+      "size": {
+        "0": 317.4000244140625,
+        "1": 82
+      },
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 90,
+          "label": "conditioning"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            91
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "CONDITIONING"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ConditioningSetTimestepRange",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [
+        0.1,
+        1
+      ],
+      "color": "#1f1f48"
+    },
+    {
+      "id": 377,
+      "type": "PreviewImage",
+      "pos": {
+        "0": 510,
+        "1": -501
+      },
+      "size": {
+        "0": 434.41082763671875,
+        "1": 396.8557434082031
+      },
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 760,
+          "label": "images"
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [],
+      "color": "#1f1f48"
+    },
+    {
+      "id": 301,
+      "type": "UnetLoaderGGUF",
+      "pos": {
+        "0": 90,
+        "1": -610
+      },
+      "size": {
+        "0": 372.8216552734375,
+        "1": 77.22305297851562
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            606
+          ],
+          "slot_index": 0,
+          "label": "MODEL"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UnetLoaderGGUF",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [
+        "sd35\\sd3.5_large-q4_0.gguf"
+      ],
+      "color": "#1f1f48"
+    },
+    {
+      "id": 391,
+      "type": "PreviewImage",
+      "pos": {
+        "0": 500,
+        "1": 710
+      },
+      "size": {
+        "0": 430,
+        "1": 400
+      },
+      "flags": {},
+      "order": 33,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 780,
+          "label": "images"
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [],
+      "color": "#1f1f48"
+    },
+    {
+      "id": 392,
+      "type": "ModelSamplingSD3",
+      "pos": {
+        "0": 120,
+        "1": 1350
+      },
+      "size": {
+        "0": 320,
+        "1": 60
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 782,
+          "label": "model"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            783
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "MODEL"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ModelSamplingSD3",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [
+        3
+      ],
+      "color": "#1f1f48"
+    },
+    {
+      "id": 396,
+      "type": "PreviewImage",
+      "pos": {
+        "0": 490,
+        "1": 1310
+      },
+      "size": {
+        "0": 430,
+        "1": 400
+      },
+      "flags": {},
+      "order": 35,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 790,
+          "label": "images"
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [],
+      "color": "#1f1f48"
+    },
+    {
+      "id": 400,
+      "type": "easy cleanGpuUsed",
+      "pos": {
+        "0": 845,
+        "1": -602
+      },
+      "size": {
+        "0": 210,
+        "1": 26
+      },
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "type": "*",
+          "link": 796,
+          "label": "anything"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": null,
+          "label": "output"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "easy cleanGpuUsed",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [],
+      "color": "#1f1f48"
+    },
+    {
+      "id": 402,
+      "type": "easy cleanGpuUsed",
+      "pos": {
+        "0": 830.9093017578125,
+        "1": 602.098388671875
+      },
+      "size": {
+        "0": 210,
+        "1": 26
+      },
+      "flags": {},
+      "order": 34,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "type": "*",
+          "link": 798,
+          "label": "anything"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": null,
+          "label": "output"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "easy cleanGpuUsed",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [],
+      "color": "#1f1f48"
+    },
+    {
+      "id": 401,
+      "type": "easy cleanGpuUsed",
+      "pos": {
+        "0": 758,
+        "1": 18
+      },
+      "size": {
+        "0": 210,
+        "1": 26
+      },
+      "flags": {},
+      "order": 32,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "type": "*",
+          "link": 797,
+          "label": "anything"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": null,
+          "label": "output"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "easy cleanGpuUsed",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [],
+      "color": "#1f1f48"
+    },
+    {
+      "id": 382,
+      "type": "PreviewImage",
+      "pos": {
+        "0": 511,
+        "1": 126
+      },
+      "size": {
+        "0": 430,
+        "1": 400
+      },
+      "flags": {},
+      "order": 31,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 769,
+          "label": "images"
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [],
+      "color": "#1f1f48"
+    },
+    {
+      "id": 364,
+      "type": "PrimitiveNode",
+      "pos": {
+        "0": -520,
+        "1": 215
+      },
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            746,
+            766,
+            777,
+            787
+          ],
+          "widget": {
+            "name": "seed"
+          },
+          "label": "INT"
+        }
+      ],
+      "title": "seed",
+      "properties": {
+        "Run widget replace on values": false,
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [
+        540167325138322,
+        "increment"
+      ],
+      "color": "#1f1f48"
+    },
+    {
+      "id": 407,
+      "type": "ShowText|pysssss",
+      "pos": {
+        "0": -1323,
+        "1": 347
+      },
+      "size": {
+        "0": 564.7971801757812,
+        "1": 422.3096618652344
+      },
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 805,
+          "widget": {
+            "name": "text"
+          },
+          "label": "text"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 6,
+          "label": "STRING"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [
+        [
+          "This image features a vibrant CGI advertisement for a stylish organic cotton face mask, set against a clean, minimalist backdrop. The mask is displayed alongside a bottle of natural hand sanitizer and a small potted plant, promoting health and wellness. Sunlight highlights the soft fabric and vibrant colors of the mask, while a few scattered lavender sprigs add a touch of tranquility. The overall ambiance is fresh and calming, inviting viewers to make eco-conscious choices in personal care."
+        ],
+        "This image features a vibrant CGI advertisement for a stylish organic cotton face mask, set against a clean, minimalist backdrop. The mask is displayed alongside a bottle of natural hand sanitizer and a small potted plant, promoting health and wellness. Sunlight highlights the soft fabric and vibrant colors of the mask, while a few scattered lavender sprigs add a touch of tranquility. The overall ambiance is fresh and calming, inviting viewers to make eco-conscious choices in personal care."
+      ],
+      "color": "#1f1f48"
+    },
+    {
+      "id": 406,
+      "type": "Text Random Line",
+      "pos": {
+        "0": -1734,
+        "1": -218
+      },
+      "size": {
+        "0": 315,
+        "1": 106
+      },
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 803,
+          "widget": {
+            "name": "text"
+          },
+          "label": "text"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            804,
+            805
+          ],
+          "slot_index": 0,
+          "label": "STRING"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Text Random Line",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [
+        "",
+        1103323234335351,
+        "randomize"
+      ],
+      "color": "#1f1f48"
+    },
+    {
+      "id": 403,
+      "type": "easy cleanGpuUsed",
+      "pos": {
+        "0": 836,
+        "1": 1221
+      },
+      "size": {
+        "0": 210,
+        "1": 26
+      },
+      "flags": {},
+      "order": 36,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "type": "*",
+          "link": 799,
+          "label": "anything"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": null,
+          "label": "output"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "easy cleanGpuUsed",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [],
+      "color": "#1f1f48"
+    },
+    {
+      "id": 6,
+      "type": "CLIPTextEncode",
+      "pos": {
+        "0": -1695,
+        "1": -405
+      },
+      "size": {
+        "0": 441.5226135253906,
+        "1": 59
+      },
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 5,
+          "label": "clip"
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 804,
+          "widget": {
+            "name": "text"
+          },
+          "label": "text"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            742,
+            763,
+            774,
+            784
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "CONDITIONING"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "",
+        true
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 69,
+      "type": "ConditioningCombine",
+      "pos": {
+        "0": -1007,
+        "1": 246
+      },
+      "size": {
+        "0": 228.39999389648438,
+        "1": 46
+      },
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning_1",
+          "type": "CONDITIONING",
+          "link": 91,
+          "label": "conditioning_1"
+        },
+        {
+          "name": "conditioning_2",
+          "type": "CONDITIONING",
+          "link": 92,
+          "label": "conditioning_2"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            743,
+            764,
+            775,
+            785
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "CONDITIONING"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ConditioningCombine",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [],
+      "color": "#1f1f48"
+    },
+    {
+      "id": 387,
+      "type": "ModelSamplingSD3",
+      "pos": {
+        "0": 130,
+        "1": 750
+      },
+      "size": {
+        "0": 320,
+        "1": 60
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 772,
+          "label": "model"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            773
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "MODEL"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ModelSamplingSD3",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [
+        3
+      ],
+      "color": "#1f1f48"
+    },
+    {
+      "id": 404,
+      "type": "CheckpointLoaderSimple",
+      "pos": {
+        "0": 105,
+        "1": 18
+      },
+      "size": {
+        "0": 315,
+        "1": 98
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            801
+          ],
+          "slot_index": 0,
+          "label": "MODEL"
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": null,
+          "label": "CLIP"
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            802
+          ],
+          "slot_index": 2,
+          "label": "VAE"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [
+        "sd35\\sd3.5_medium.safetensors"
+      ],
+      "color": "#1f1f48"
+    },
+    {
+      "id": 374,
+      "type": "VAEDecode",
+      "pos": {
+        "0": 505,
+        "1": -608
+      },
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 750,
+          "label": "samples"
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 751,
+          "label": "vae"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            760,
+            796,
+            809
+          ],
+          "slot_index": 0,
+          "label": "IMAGE"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [],
+      "color": "#1f1f48"
+    },
+    {
+      "id": 381,
+      "type": "VAEDecode",
+      "pos": {
+        "0": 510,
+        "1": 17
+      },
+      "size": {
+        "0": 210,
+        "1": 50
+      },
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 767,
+          "label": "samples"
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 802,
+          "label": "vae"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            769,
+            771,
+            797
+          ],
+          "slot_index": 0,
+          "label": "IMAGE"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [],
+      "color": "#1f1f48"
+    },
+    {
+      "id": 386,
+      "type": "ImageGridComposite2x2",
+      "pos": {
+        "0": 1082,
+        "1": 256
+      },
+      "size": {
+        "0": 302.4000244140625,
+        "1": 86
+      },
+      "flags": {},
+      "order": 37,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image1",
+          "type": "IMAGE",
+          "link": 809,
+          "label": "image1"
+        },
+        {
+          "name": "image2",
+          "type": "IMAGE",
+          "link": 771,
+          "label": "image2"
+        },
+        {
+          "name": "image3",
+          "type": "IMAGE",
+          "link": 811,
+          "label": "image3"
+        },
+        {
+          "name": "image4",
+          "type": "IMAGE",
+          "link": 812,
+          "label": "image4"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            794,
+            806
+          ],
+          "slot_index": 0,
+          "label": "IMAGE"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageGridComposite2x2",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [],
+      "color": "#1f1f48"
+    },
+    {
+      "id": 408,
+      "type": "SaveImage",
+      "pos": {
+        "0": 1560,
+        "1": -58
+      },
+      "size": {
+        "0": 315,
+        "1": 270
+      },
+      "flags": {},
+      "order": 39,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 806,
+          "label": "images"
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveImage",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [
+        "sd35/compare/plot"
+      ],
+      "color": "#1f1f48"
+    },
+    {
+      "id": 397,
+      "type": "PreviewImage",
+      "pos": {
+        "0": 1548,
+        "1": 257
+      },
+      "size": {
+        "0": 1090.289794921875,
+        "1": 925.93310546875
+      },
+      "flags": {},
+      "order": 38,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 794,
+          "label": "images"
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [],
+      "color": "#1f1f48"
+    },
+    {
+      "id": 390,
+      "type": "VAEDecode",
+      "pos": {
+        "0": 510,
+        "1": 620
+      },
+      "size": {
+        "0": 210,
+        "1": 50
+      },
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 778,
+          "label": "samples"
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 779,
+          "label": "vae"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            780,
+            798,
+            811
+          ],
+          "slot_index": 0,
+          "label": "IMAGE"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [],
+      "color": "#1f1f48"
+    },
+    {
+      "id": 395,
+      "type": "VAEDecode",
+      "pos": {
+        "0": 500,
+        "1": 1220
+      },
+      "size": {
+        "0": 210,
+        "1": 50
+      },
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 788,
+          "label": "samples"
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 789,
+          "label": "vae"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            790,
+            799,
+            812
+          ],
+          "slot_index": 0,
+          "label": "IMAGE"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [],
+      "color": "#1f1f48"
+    },
+    {
+      "id": 363,
+      "type": "KSampler",
+      "pos": {
+        "0": 109,
+        "1": -370
+      },
+      "size": {
+        "0": 315,
+        "1": 262
+      },
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 741,
+          "label": "model"
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 742,
+          "label": "positive"
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 743,
+          "label": "negative"
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 744,
+          "label": "latent_image"
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 746,
+          "widget": {
+            "name": "seed"
+          },
+          "label": "seed"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            750
+          ],
+          "slot_index": 0,
+          "label": "LATENT"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [
+        540167325138322,
+        "randomize",
+        30,
+        4.5,
+        "dpmpp_2m",
+        "sgm_uniform",
+        1
+      ],
+      "color": "#1f1f48"
+    },
+    {
+      "id": 380,
+      "type": "KSampler",
+      "pos": {
+        "0": 110,
+        "1": 185
+      },
+      "size": {
+        "0": 320,
+        "1": 260
+      },
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 801,
+          "label": "model"
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 763,
+          "label": "positive"
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 764,
+          "label": "negative"
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 765,
+          "label": "latent_image"
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 766,
+          "widget": {
+            "name": "seed"
+          },
+          "label": "seed"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            767
+          ],
+          "slot_index": 0,
+          "label": "LATENT"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [
+        540167325138322,
+        "randomize",
+        30,
+        4.5,
+        "dpmpp_2m",
+        "sgm_uniform",
+        1
+      ],
+      "color": "#1f1f48"
+    },
+    {
+      "id": 394,
+      "type": "KSampler",
+      "pos": {
+        "0": 130,
+        "1": 1450
+      },
+      "size": {
+        "0": 320,
+        "1": 260
+      },
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 783,
+          "label": "model"
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 784,
+          "label": "positive"
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 785,
+          "label": "negative"
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 786,
+          "label": "latent_image"
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 787,
+          "widget": {
+            "name": "seed"
+          },
+          "label": "seed"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            788
+          ],
+          "slot_index": 0,
+          "label": "LATENT"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [
+        540167325138322,
+        "randomize",
+        30,
+        4.5,
+        "dpmpp_2m",
+        "sgm_uniform",
+        1
+      ],
+      "color": "#1f1f48"
+    },
+    {
+      "id": 389,
+      "type": "KSampler",
+      "pos": {
+        "0": 136,
+        "1": 894
+      },
+      "size": {
+        "0": 320,
+        "1": 260
+      },
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 773,
+          "label": "model"
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 774,
+          "label": "positive"
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 775,
+          "label": "negative"
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 776,
+          "label": "latent_image"
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 777,
+          "widget": {
+            "name": "seed"
+          },
+          "label": "seed"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            778
+          ],
+          "slot_index": 0,
+          "label": "LATENT"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [
+        540167325138322,
+        "randomize",
+        30,
+        4.5,
+        "dpmpp_2m",
+        "sgm_uniform",
+        1
+      ],
+      "color": "#1f1f48"
+    },
+    {
+      "id": 388,
+      "type": "UnetLoaderGGUF",
+      "pos": {
+        "0": 100,
+        "1": 620
+      },
+      "size": {
+        "0": 370,
+        "1": 80
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            772
+          ],
+          "slot_index": 0,
+          "label": "MODEL"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UnetLoaderGGUF",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [
+        "sd35\\sd3.5_medium-q4_0.gguf"
+      ],
+      "color": "#1f1f48"
+    },
+    {
+      "id": 393,
+      "type": "UnetLoaderGGUF",
+      "pos": {
+        "0": 90,
+        "1": 1220
+      },
+      "size": {
+        "0": 370,
+        "1": 80
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            782
+          ],
+          "slot_index": 0,
+          "label": "MODEL"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UnetLoaderGGUF",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [
+        "sd35\\sd3.5_medium-q8_0.gguf"
+      ],
+      "color": "#1f1f48"
+    },
+    {
+      "id": 405,
+      "type": "CR Text",
+      "pos": {
+        "0": -2007,
+        "1": -43
+      },
+      "size": {
+        "0": 592.5663452148438,
+        "1": 741.3825073242188
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "*",
+          "links": [
+            803
+          ],
+          "slot_index": 0,
+          "label": "text"
+        },
+        {
+          "name": "show_help",
+          "type": "STRING",
+          "links": null,
+          "label": "show_help"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CR Text",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [
+        "This image showcases a vibrant CGI advertisement for a stylish electric scooter parked on a sunlit city sidewalk. The scooter’s sleek design features a matte finish in deep emerald green, with a streamlined frame and ergonomic handlebars. The deck has a textured grip, and the wheels are highlighted with a subtle reflective rim. In the background, urban greenery adds a refreshing touch, with tall trees swaying gently in the breeze, and a few colorful flower beds lining the walkway. A reusable coffee cup, emblazoned with a motivational quote about sustainability, rests in the scooter’s front basket, surrounded by a small folded reusable shopping bag. The sunlight casts playful shadows, enhancing the inviting atmosphere, while pedestrians in the distance enjoy the day.\nThis image features a luxurious organic bedding set elegantly displayed in a serene bedroom. The bedding, made from 100% organic cotton, showcases a soft, pastel floral pattern that enhances the tranquil atmosphere. Sunlight filters through sheer curtains, casting a warm glow over the room, and creating soft shadows on the plush carpet. The bed is perfectly made with a fluffy white duvet, and a plush throw blanket, draped casually over the bed, is accompanied by decorative pillows in varying textures and sizes. A bedside table holds a small vase of fresh wildflowers, and potted plants sit on the windowsill, adding vibrant green hues. The overall ambiance feels calm and inviting, encouraging relaxation and mindful living.\nThis image presents a vibrant CGI advertisement for a colorful reusable shopping bag at a lively farmer's market. The bag, made from recycled materials, features a bright geometric pattern in shades of blue, orange, and yellow, and is overflowing with fresh produce—vivid red tomatoes, vibrant green kale, and a bunch of ripe bananas. Sunlight streams through market canopies, enhancing the richness of the colors, while colorful stalls in the background display a variety of organic goods. Nearby, a chalkboard sign displays the day's specials written in whimsical chalk lettering. A few customers can be seen chatting with vendors, adding life to the scene. The overall atmosphere is energetic and community-focused, promoting a sustainable lifestyle.\nThis image showcases an innovative solar-powered outdoor light illuminating a beautifully landscaped garden at dusk. The light, featuring a sleek, modern design with a brushed aluminum finish, stands tall among lush greenery, casting a warm, inviting glow on a stone pathway lined with blooming flowers. The pathway is bordered by meticulously arranged flowerbeds, showcasing a mix of vibrant petals—yellows, pinks, and purples—filling the scene with color. Small, twinkling fairy lights are draped around nearby trees, enhancing the magical atmosphere as fireflies dance in the air. A cozy seating area with stylish outdoor furniture is visible in the background, inviting relaxation. The text subtly emphasizes eco-friendly outdoor solutions.\nThis image features a vibrant CGI advertisement for a fashionable bamboo kitchen utensil set, displayed on a rustic countertop in a bright kitchen. The utensils, crafted from sustainably sourced bamboo, are arranged neatly in a stylish utensil holder, showcasing their smooth finishes and natural grain patterns. Sunlight spills through a nearby window, highlighting the beauty of the bamboo and casting soft shadows. Surrounding the utensils are fresh herbs in small pots, a cutting board with colorful vegetables, and a cookbook opened to a healthy recipe. The overall ambiance is warm and inviting, encouraging viewers to embrace sustainable cooking practices.\nThis image presents a vibrant CGI advertisement for a modern compost tumbler, set in a lush backyard surrounded by greenery. The tumbler, made from recycled materials, features a sleek design with a rotating mechanism visible, and is shown half-filled with colorful kitchen scraps and garden waste—coffee grounds, vegetable peelings, and dried leaves. Nearby, a small vegetable garden thrives, with ripe tomatoes and leafy greens peeking through the soil, emphasizing the benefits of composting. The sun casts a golden hue over the scene, creating a sense of abundance and sustainability. The overall feel is productive and eco-conscious.\nThis image showcases a vibrant CGI advertisement for a stylish electric kettle, set on a sleek kitchen countertop filled with natural light. The kettle, crafted from high-quality stainless steel, features a unique ergonomic handle and a digital temperature display. It sits next to an assortment of loose teas displayed in clear jars, with a cozy mug resting nearby filled with freshly brewed tea, steam rising gently. Sunlight filters through a window, illuminating the scene and highlighting the kettle’s polished surface. A small potted plant adds a touch of greenery, promoting a calm and inviting atmosphere.\nThis image features a vibrant CGI advertisement for a trendy plant-based protein shake, displayed on a vibrant kitchen table. The packaging, featuring eye-catching graphics in bright colors, sits next to a tall glass filled with the shake, garnished with a slice of banana and a sprinkle of chia seeds. Surrounding the glass are fresh fruits—ripe berries, bananas, and leafy greens—arranged artfully to emphasize the wholesome ingredients. The sunlight streaming through the window enhances the vibrancy of the colors, creating an energetic feel. A few workout accessories, like a yoga mat and a water bottle, are visible in the background, promoting a healthy, active lifestyle.\nThis image presents a vibrant CGI advertisement for a modern eco-friendly air fryer, set in a bright kitchen filled with colorful vegetables. The air fryer, designed with sustainable materials, features a sleek digital interface. It is shown cooking a delicious meal, with steam rising from the top and a display showcasing the cooking time. Surrounding the fryer are fresh ingredients—bell peppers, sweet potatoes, and zucchini—arranged on a cutting board, emphasizing healthy cooking. Sunlight pours in, illuminating the kitchen and enhancing the inviting atmosphere, promoting healthy and sustainable cooking practices.\nThis image showcases a vibrant CGI advertisement for a stylish organic cotton hoodie, set against a backdrop of a cozy outdoor fire pit. The hoodie, featuring a soft fabric and trendy design, is draped over a comfortable chair, with a warm blanket folded beside it. The fire pit is surrounded by rustic seating, and the glow of the fire casts a warm light, creating an inviting atmosphere. Nearby, a small table holds a selection of herbal teas and snacks, encouraging relaxation and connection with nature. The overall ambiance feels warm and welcoming, promoting sustainable fashion choices.\nThis image features a vibrant CGI advertisement for a chic reusable straw set, displayed against a colorful picnic scene on a grassy lawn. The straws, made from stainless steel and silicone, are presented in a stylish carrying case, opened to reveal multiple colors. Surrounding them are refreshing beverages in mason jars, garnished with slices of lemon and mint leaves, and a spread of fresh fruits on a picnic blanket. The sunlight filters through the trees overhead, creating a cheerful and lively atmosphere, promoting eco-friendly choices for everyday use.\nThis image presents a vibrant CGI advertisement for a modern solar-powered backpack, set against a scenic hiking trail with lush greenery. The backpack, crafted from recycled materials, features integrated solar panels on the outer flap, ready to charge devices on the go. In the foreground, a water bottle and hiking gear—like maps and binoculars—are neatly arranged, emphasizing adventure and sustainability. The sunlight dapples the path, creating a sense of exploration and encouraging viewers to enjoy the outdoors responsibly.\nThis image showcases a vibrant CGI advertisement for a biodegradable phone case, displayed against a minimalist desk environment. The case, made from compostable materials, features a sleek design with a matte finish and is shown next to a smartphone that displays a vibrant wallpaper. A small potted plant sits nearby, adding a touch of nature to the workspace. Sunlight streaming through the window highlights the case’s texture, promoting responsible choices in technology. The ambiance is modern and fresh, inviting viewers to consider eco-friendly accessories.\nThis image features a vibrant CGI advertisement for a chic organic cotton tote bag, set against a beautiful beach scene with golden sand and gentle waves. The bag, filled with beach essentials like sunscreen, a towel, and a novel, is displayed prominently on the sand. Sunlight sparkles on the water, creating a serene atmosphere. Nearby, a beach umbrella is partially open, and a beach ball lies in the sand, inviting relaxation and fun. The overall feel is joyful and carefree, encouraging viewers to embrace eco-friendly choices during leisure activities.\nThis image presents a vibrant CGI advertisement for an innovative eco-friendly pet bowl, set in a bright and cheerful kitchen. The bowl, made from sustainable materials, is filled with healthy pet food and is accompanied by a playful puppy exploring nearby. A few toys are scattered on the floor, and the sunlight streaming through the window creates a warm, inviting atmosphere. The text emphasizes responsible pet care choices, promoting a happy, healthy lifestyle for pets.\nThis image showcases a vibrant CGI advertisement for a modern solar-powered garden shed, set in a beautifully landscaped yard filled with colorful flowers and greenery. The shed, featuring a contemporary design with large windows, is surrounded by garden tools and pots, showcasing an organized space for gardening. Sunlight filters through the trees, casting dappled shadows on the shed, creating a peaceful and productive vibe. The text invites viewers to consider sustainable solutions for their outdoor spaces.\nThis image features a vibrant CGI advertisement for a stylish organic cotton face mask, set against a clean, minimalist backdrop. The mask is displayed alongside a bottle of natural hand sanitizer and a small potted plant, promoting health and wellness. Sunlight highlights the soft fabric and vibrant colors of the mask, while a few scattered lavender sprigs add a touch of tranquility. The overall ambiance is fresh and calming, inviting viewers to make eco-conscious choices in personal care.\nThis image presents a vibrant CGI advertisement for a trendy solar-powered phone charger, set on a bright picnic table in a sunny park. The charger, with a sleek design featuring a solar panel, is shown next to a smartphone, with a refreshing drink in a mason jar nearby. The table is adorned with a colorful picnic blanket and a spread of fresh fruits, creating a cheerful, outdoor vibe. The sunlight enhances the entire scene, promoting sustainable tech solutions for active lifestyles.",
+        true
+      ],
+      "color": "#1f1f48"
+    }
+  ],
+  "links": [
+    [
+      5,
+      11,
+      0,
+      6,
+      0,
+      "CLIP"
+    ],
+    [
+      90,
+      67,
+      0,
+      68,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      91,
+      68,
+      0,
+      69,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      92,
+      70,
+      0,
+      69,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      93,
+      71,
+      0,
+      70,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      94,
+      11,
+      0,
+      71,
+      0,
+      "CLIP"
+    ],
+    [
+      597,
+      71,
+      0,
+      67,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      606,
+      301,
+      0,
+      13,
+      0,
+      "MODEL"
+    ],
+    [
+      741,
+      13,
+      0,
+      363,
+      0,
+      "MODEL"
+    ],
+    [
+      742,
+      6,
+      0,
+      363,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      743,
+      69,
+      0,
+      363,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      744,
+      135,
+      0,
+      363,
+      3,
+      "LATENT"
+    ],
+    [
+      746,
+      364,
+      0,
+      363,
+      4,
+      "INT"
+    ],
+    [
+      750,
+      363,
+      0,
+      374,
+      0,
+      "LATENT"
+    ],
+    [
+      751,
+      304,
+      0,
+      374,
+      1,
+      "VAE"
+    ],
+    [
+      760,
+      374,
+      0,
+      377,
+      0,
+      "IMAGE"
+    ],
+    [
+      763,
+      6,
+      0,
+      380,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      764,
+      69,
+      0,
+      380,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      765,
+      135,
+      0,
+      380,
+      3,
+      "LATENT"
+    ],
+    [
+      766,
+      364,
+      0,
+      380,
+      4,
+      "INT"
+    ],
+    [
+      767,
+      380,
+      0,
+      381,
+      0,
+      "LATENT"
+    ],
+    [
+      769,
+      381,
+      0,
+      382,
+      0,
+      "IMAGE"
+    ],
+    [
+      771,
+      381,
+      0,
+      386,
+      1,
+      "IMAGE"
+    ],
+    [
+      772,
+      388,
+      0,
+      387,
+      0,
+      "MODEL"
+    ],
+    [
+      773,
+      387,
+      0,
+      389,
+      0,
+      "MODEL"
+    ],
+    [
+      774,
+      6,
+      0,
+      389,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      775,
+      69,
+      0,
+      389,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      776,
+      135,
+      0,
+      389,
+      3,
+      "LATENT"
+    ],
+    [
+      777,
+      364,
+      0,
+      389,
+      4,
+      "INT"
+    ],
+    [
+      778,
+      389,
+      0,
+      390,
+      0,
+      "LATENT"
+    ],
+    [
+      779,
+      304,
+      0,
+      390,
+      1,
+      "VAE"
+    ],
+    [
+      780,
+      390,
+      0,
+      391,
+      0,
+      "IMAGE"
+    ],
+    [
+      782,
+      393,
+      0,
+      392,
+      0,
+      "MODEL"
+    ],
+    [
+      783,
+      392,
+      0,
+      394,
+      0,
+      "MODEL"
+    ],
+    [
+      784,
+      6,
+      0,
+      394,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      785,
+      69,
+      0,
+      394,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      786,
+      135,
+      0,
+      394,
+      3,
+      "LATENT"
+    ],
+    [
+      787,
+      364,
+      0,
+      394,
+      4,
+      "INT"
+    ],
+    [
+      788,
+      394,
+      0,
+      395,
+      0,
+      "LATENT"
+    ],
+    [
+      789,
+      304,
+      0,
+      395,
+      1,
+      "VAE"
+    ],
+    [
+      790,
+      395,
+      0,
+      396,
+      0,
+      "IMAGE"
+    ],
+    [
+      794,
+      386,
+      0,
+      397,
+      0,
+      "IMAGE"
+    ],
+    [
+      796,
+      374,
+      0,
+      400,
+      0,
+      "*"
+    ],
+    [
+      797,
+      381,
+      0,
+      401,
+      0,
+      "*"
+    ],
+    [
+      798,
+      390,
+      0,
+      402,
+      0,
+      "*"
+    ],
+    [
+      799,
+      395,
+      0,
+      403,
+      0,
+      "*"
+    ],
+    [
+      801,
+      404,
+      0,
+      380,
+      0,
+      "MODEL"
+    ],
+    [
+      802,
+      404,
+      2,
+      381,
+      1,
+      "VAE"
+    ],
+    [
+      803,
+      405,
+      0,
+      406,
+      0,
+      "STRING"
+    ],
+    [
+      804,
+      406,
+      0,
+      6,
+      1,
+      "STRING"
+    ],
+    [
+      805,
+      406,
+      0,
+      407,
+      0,
+      "STRING"
+    ],
+    [
+      806,
+      386,
+      0,
+      408,
+      0,
+      "IMAGE"
+    ],
+    [
+      809,
+      374,
+      0,
+      386,
+      0,
+      "IMAGE"
+    ],
+    [
+      811,
+      390,
+      0,
+      386,
+      2,
+      "IMAGE"
+    ],
+    [
+      812,
+      395,
+      0,
+      386,
+      3,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.3380916604057103,
+      "offset": [
+        2474.6389693684846,
+        913.8706054180296
+      ]
+    },
+    "workspace_info": {
+      "id": "xDDiUL7nRxyYC1i92Vppj"
+    }
+  },
+  "version": 0.4
+}

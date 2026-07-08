@@ -1,0 +1,3394 @@
+{
+  "id": "a054c190-3b39-436d-8085-c49a91105c84",
+  "revision": 0,
+  "last_node_id": 141,
+  "last_link_id": 213,
+  "nodes": [
+    {
+      "id": 109,
+      "type": "ControlNetApplyAdvanced",
+      "pos": {
+        "0": -1980,
+        "1": 300
+      },
+      "size": {
+        "0": 337.4889221191406,
+        "1": 186
+      },
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "正面条件",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 158
+        },
+        {
+          "label": "负面条件",
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 159
+        },
+        {
+          "label": "ControlNet",
+          "name": "control_net",
+          "type": "CONTROL_NET",
+          "link": 160
+        },
+        {
+          "label": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 161
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "正面条件",
+          "name": "positive",
+          "shape": 3,
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            155
+          ]
+        },
+        {
+          "label": "负面条件",
+          "name": "negative",
+          "shape": 3,
+          "type": "CONDITIONING",
+          "slot_index": 1,
+          "links": [
+            156
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "ControlNetApplyAdvanced",
+        "ttNbgOverride": {
+          "color": "#322",
+          "bgcolor": "#533",
+          "groupcolor": "#A88"
+        }
+      },
+      "widgets_values": [
+        0.45,
+        0,
+        0.6
+      ],
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 127,
+      "type": "PreviewImage",
+      "pos": {
+        "0": -1610,
+        "1": 30
+      },
+      "size": {
+        "0": 320.8221435546875,
+        "1": 451.64227294921875
+      },
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 190
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": [
+        ""
+      ],
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 136,
+      "type": "FaceBoundingBox",
+      "pos": {
+        "0": -3498,
+        "1": 30
+      },
+      "size": {
+        "0": 315,
+        "1": 186
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "面部分析模型",
+          "name": "analysis_models",
+          "type": "ANALYSIS_MODELS",
+          "link": 204
+        },
+        {
+          "label": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 206
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "shape": 6,
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            205,
+            207
+          ]
+        },
+        {
+          "label": "X",
+          "name": "x",
+          "shape": 6,
+          "type": "INT",
+          "links": null
+        },
+        {
+          "label": "Y",
+          "name": "y",
+          "shape": 6,
+          "type": "INT",
+          "links": null
+        },
+        {
+          "label": "宽度",
+          "name": "width",
+          "shape": 6,
+          "type": "INT",
+          "links": null
+        },
+        {
+          "label": "高度",
+          "name": "height",
+          "shape": 6,
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "FaceBoundingBox"
+      },
+      "widgets_values": [
+        0,
+        0.1,
+        -1
+      ],
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 137,
+      "type": "FaceAnalysisModels",
+      "pos": {
+        "0": -3500,
+        "1": 270
+      },
+      "size": {
+        "0": 315,
+        "1": 82
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "面部分析模型",
+          "name": "ANALYSIS_MODELS",
+          "shape": 3,
+          "type": "ANALYSIS_MODELS",
+          "slot_index": 0,
+          "links": [
+            204
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "FaceAnalysisModels"
+      },
+      "widgets_values": [
+        "insightface",
+        "CUDA"
+      ],
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 138,
+      "type": "PreviewImage",
+      "pos": {
+        "0": -3130,
+        "1": 32
+      },
+      "size": {
+        "0": 388.1527099609375,
+        "1": 365.03118896484375
+      },
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 205
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": [
+        ""
+      ],
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 101,
+      "type": "CheckpointLoaderSimple",
+      "pos": {
+        "0": -2598,
+        "1": 31
+      },
+      "size": {
+        "0": 465.8774108886719,
+        "1": 98
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "模型",
+          "name": "MODEL",
+          "shape": 3,
+          "type": "MODEL",
+          "slot_index": 0,
+          "links": [
+            154
+          ]
+        },
+        {
+          "label": "CLIP",
+          "name": "CLIP",
+          "shape": 3,
+          "type": "CLIP",
+          "slot_index": 1,
+          "links": [
+            141,
+            142
+          ]
+        },
+        {
+          "label": "VAE",
+          "name": "VAE",
+          "shape": 3,
+          "type": "VAE",
+          "slot_index": 2,
+          "links": [
+            135,
+            138
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "CheckpointLoaderSimple",
+        "ttNbgOverride": {
+          "color": "#322",
+          "bgcolor": "#533",
+          "groupcolor": "#A88"
+        }
+      },
+      "widgets_values": [
+        "DreamShaper XL v2.1 Turbo 闪电_v2.1 Turbo"
+      ],
+      "_widget_cache_map": {
+        "DreamShaper XL v2.1 Turbo 闪电_v2.1 Turbo": {
+          "name": "DreamShaper XL v2.1 Turbo 闪电_v2.1 Turbo",
+          "baseType": 3,
+          "value": "92802afed001405a8aa23d1397fe70c2"
+        }
+      }
+    },
+    {
+      "id": 99,
+      "type": "CLIPTextEncode",
+      "pos": {
+        "0": -2596,
+        "1": 205
+      },
+      "size": {
+        "0": 459.71453857421875,
+        "1": 114.91950225830078
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "CLIP",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 142
+        }
+      ],
+      "outputs": [
+        {
+          "label": "条件",
+          "name": "CONDITIONING",
+          "shape": 3,
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            158
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "CLIPTextEncode",
+        "ttNbgOverride": {
+          "color": "#322",
+          "bgcolor": "#533",
+          "groupcolor": "#A88"
+        }
+      },
+      "widgets_values": [
+        "Perfect, high quality, regular"
+      ],
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 98,
+      "type": "CLIPTextEncode",
+      "pos": {
+        "0": -2599,
+        "1": 377
+      },
+      "size": {
+        "0": 459.87237548828125,
+        "1": 124.57303619384766
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "CLIP",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 141
+        }
+      ],
+      "outputs": [
+        {
+          "label": "条件",
+          "name": "CONDITIONING",
+          "shape": 3,
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            159
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "CLIPTextEncode",
+        "ttNbgOverride": {
+          "color": "#322",
+          "bgcolor": "#533",
+          "groupcolor": "#A88"
+        }
+      },
+      "widgets_values": [
+        "Low quality, irregular"
+      ],
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 111,
+      "type": "AIO_Preprocessor",
+      "pos": {
+        "0": -1980,
+        "1": 30
+      },
+      "size": {
+        "0": 338.8114013671875,
+        "1": 82
+      },
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 209
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "shape": 3,
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            161,
+            190
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "AIO_Preprocessor",
+        "ttNbgOverride": {
+          "color": "#322",
+          "bgcolor": "#533",
+          "groupcolor": "#A88"
+        }
+      },
+      "widgets_values": [
+        "LineArtPreprocessor",
+        512
+      ],
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 110,
+      "type": "ControlNetLoader",
+      "pos": {
+        "0": -1979,
+        "1": 170
+      },
+      "size": {
+        "0": 337.6184387207031,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "ControlNet",
+          "name": "CONTROL_NET",
+          "shape": 3,
+          "type": "CONTROL_NET",
+          "links": [
+            160
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "ControlNetLoader",
+        "ttNbgOverride": {
+          "color": "#322",
+          "bgcolor": "#533",
+          "groupcolor": "#A88"
+        }
+      },
+      "widgets_values": [
+        "xinsir_controlnet-canny-sdxl_V2"
+      ],
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 104,
+      "type": "InstantIDModelLoader",
+      "pos": {
+        "0": -1124,
+        "1": 33
+      },
+      "size": {
+        "0": 347.9075927734375,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INSTANTID",
+          "shape": 3,
+          "type": "INSTANTID",
+          "slot_index": 0,
+          "links": [
+            150
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "InstantIDModelLoader",
+        "ttNbgOverride": {
+          "color": "#322",
+          "bgcolor": "#533",
+          "groupcolor": "#A88"
+        }
+      },
+      "widgets_values": [
+        "ip-adapter_instant_id_sdxl"
+      ],
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 106,
+      "type": "InstantIDFaceAnalysis",
+      "pos": {
+        "0": -1124,
+        "1": 160
+      },
+      "size": {
+        "0": 342.9969482421875,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "面部分析",
+          "name": "FACEANALYSIS",
+          "shape": 3,
+          "type": "FACEANALYSIS",
+          "slot_index": 0,
+          "links": [
+            151
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "InstantIDFaceAnalysis",
+        "ttNbgOverride": {
+          "color": "#322",
+          "bgcolor": "#533",
+          "groupcolor": "#A88"
+        }
+      },
+      "widgets_values": [
+        "CPU"
+      ],
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 105,
+      "type": "ControlNetLoader",
+      "pos": {
+        "0": -1122,
+        "1": 291
+      },
+      "size": {
+        "0": 343.9832458496094,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "ControlNet",
+          "name": "CONTROL_NET",
+          "shape": 3,
+          "type": "CONTROL_NET",
+          "slot_index": 0,
+          "links": [
+            152
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "ControlNetLoader",
+        "ttNbgOverride": {
+          "color": "#322",
+          "bgcolor": "#533",
+          "groupcolor": "#A88"
+        }
+      },
+      "widgets_values": [
+        "control_instant_id_sdxl"
+      ],
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 107,
+      "type": "ApplyInstantID",
+      "pos": {
+        "0": -735,
+        "1": 37
+      },
+      "size": {
+        "0": 236.75576782226562,
+        "1": 266
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "InstantID",
+          "name": "instantid",
+          "type": "INSTANTID",
+          "link": 150
+        },
+        {
+          "label": "InsightFace",
+          "name": "insightface",
+          "type": "FACEANALYSIS",
+          "link": 151
+        },
+        {
+          "label": "ControlNet",
+          "name": "control_net",
+          "type": "CONTROL_NET",
+          "link": 152
+        },
+        {
+          "label": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 207
+        },
+        {
+          "label": "模型",
+          "name": "model",
+          "type": "MODEL",
+          "link": 154
+        },
+        {
+          "label": "正面条件",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 155
+        },
+        {
+          "label": "负面条件",
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 156
+        },
+        {
+          "label": "图像_kps",
+          "name": "image_kps",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 211
+        },
+        {
+          "label": "遮罩",
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "模型",
+          "name": "MODEL",
+          "shape": 3,
+          "type": "MODEL",
+          "slot_index": 0,
+          "links": [
+            146
+          ]
+        },
+        {
+          "label": "正面条件",
+          "name": "positive",
+          "shape": 3,
+          "type": "CONDITIONING",
+          "slot_index": 1,
+          "links": [
+            136
+          ]
+        },
+        {
+          "label": "负面条件",
+          "name": "negative",
+          "shape": 3,
+          "type": "CONDITIONING",
+          "slot_index": 2,
+          "links": [
+            137
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "ApplyInstantID",
+        "ttNbgOverride": {
+          "color": "#322",
+          "bgcolor": "#533",
+          "groupcolor": "#A88"
+        }
+      },
+      "widgets_values": [
+        1,
+        0,
+        1
+      ],
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 97,
+      "type": "InpaintModelConditioning",
+      "pos": {
+        "0": -377,
+        "1": 31
+      },
+      "size": {
+        "0": 304.36248779296875,
+        "1": 139.05015563964844
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "正面条件",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 136
+        },
+        {
+          "label": "负面条件",
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 137
+        },
+        {
+          "label": "VAE",
+          "name": "vae",
+          "type": "VAE",
+          "link": 138
+        },
+        {
+          "label": "图像",
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 213
+        },
+        {
+          "label": "遮罩",
+          "name": "mask",
+          "type": "MASK",
+          "link": 140
+        }
+      ],
+      "outputs": [
+        {
+          "label": "正面条件",
+          "name": "positive",
+          "shape": 3,
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            147
+          ]
+        },
+        {
+          "label": "负面条件",
+          "name": "negative",
+          "shape": 3,
+          "type": "CONDITIONING",
+          "slot_index": 1,
+          "links": [
+            148
+          ]
+        },
+        {
+          "label": "Latent",
+          "name": "latent",
+          "shape": 3,
+          "type": "LATENT",
+          "slot_index": 2,
+          "links": [
+            179
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "InpaintModelConditioning",
+        "ttNbgOverride": {
+          "color": "#322",
+          "bgcolor": "#533",
+          "groupcolor": "#A88"
+        }
+      },
+      "widgets_values": [
+        true
+      ],
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 121,
+      "type": "RepeatLatentBatch",
+      "pos": {
+        "0": -8,
+        "1": 34
+      },
+      "size": {
+        "0": 242.97276306152344,
+        "1": 58
+      },
+      "flags": {},
+      "order": 31,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "Latent",
+          "name": "samples",
+          "type": "LATENT",
+          "link": 179
+        }
+      ],
+      "outputs": [
+        {
+          "label": "Latent",
+          "name": "LATENT",
+          "shape": 3,
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            149
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "RepeatLatentBatch",
+        "ttNbgOverride": {
+          "color": "#322",
+          "bgcolor": "#533",
+          "groupcolor": "#A88"
+        }
+      },
+      "widgets_values": [
+        1
+      ],
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 102,
+      "type": "KSampler",
+      "pos": {
+        "0": 298,
+        "1": 30
+      },
+      "size": {
+        "0": 329.70928955078125,
+        "1": 262
+      },
+      "flags": {},
+      "order": 32,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "模型",
+          "name": "model",
+          "type": "MODEL",
+          "link": 146
+        },
+        {
+          "label": "正面条件",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 147
+        },
+        {
+          "label": "负面条件",
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 148
+        },
+        {
+          "label": "Latent",
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 149
+        }
+      ],
+      "outputs": [
+        {
+          "label": "Latent",
+          "name": "LATENT",
+          "shape": 3,
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            134
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "KSampler",
+        "ttNbgOverride": {
+          "color": "#322",
+          "bgcolor": "#533",
+          "groupcolor": "#A88"
+        }
+      },
+      "widgets_values": [
+        455194316331324,
+        "randomize",
+        15,
+        1.5,
+        "euler_ancestral",
+        "sgm_uniform",
+        0.6
+      ],
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 96,
+      "type": "VAEDecode",
+      "pos": {
+        "0": 702,
+        "1": 33
+      },
+      "size": {
+        "0": 221.92666625976562,
+        "1": 46
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 33,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "Latent",
+          "name": "samples",
+          "type": "LATENT",
+          "link": 134
+        },
+        {
+          "label": "VAE",
+          "name": "vae",
+          "type": "VAE",
+          "link": 135
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "shape": 3,
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            187,
+            192,
+            193
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "VAEDecode",
+        "ttNbgOverride": {
+          "color": "#322",
+          "bgcolor": "#533",
+          "groupcolor": "#A88"
+        }
+      },
+      "widgets_values": [],
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 125,
+      "type": "SUPIR_Upscale",
+      "pos": {
+        "0": 1051,
+        "1": 31
+      },
+      "size": {
+        "0": 413.1808166503906,
+        "1": 838
+      },
+      "flags": {},
+      "order": 34,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 187
+        },
+        {
+          "label": "captions",
+          "name": "captions",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "captions"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "upscaled_image",
+          "shape": 3,
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            188,
+            189,
+            194
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "SUPIR_Upscale"
+      },
+      "widgets_values": [
+        "SUPIR-v0F_fp16.safetensors",
+        "juggernautXL_v9-Lightning_4S_V9 + RDPhoto 2",
+        198138323036021,
+        "randomize",
+        "lanczos",
+        2,
+        30,
+        -1,
+        2,
+        "masterpiece, best quality,finely detail, highres, 8k,beautiful and aesthetic，",
+        "sketches, (worst quality:2), (low quality:2), (normal quality:2), lowers, normal quality, ((monochrome)), ((grayscale)), facing away, looking away, text, error ,extra digit, fewer digits, cropped,jpeg artifacts,signature, watermark, username,blurry, skin spots, acnes, skin blemishes, bad anatomy,fat,bad feet,cropped,poorly drawn hands,poorly drawn face,mutation,deformed, tilted head, bad anatomy,bad hands,extra fingers,fewer digits,extra limbs,extra arms,extra legs,malformed limbs,fused fingers, too many fingers,long neck,cross-eyed,mutated hands,bad body,bad proportions,gross proportions,text,error,missing fingers, missing arms,missing legs,extra digit, extra arms, extra leg, extra foot,missing fingers",
+        5,
+        1.003,
+        1,
+        4,
+        0,
+        "Wavelet",
+        true,
+        true,
+        512,
+        64,
+        "",
+        "auto",
+        "auto",
+        1,
+        false,
+        1024,
+        512,
+        false,
+        false,
+        "RestoreEDMSampler"
+      ],
+      "_widget_cache_map": {
+        "真实感Juggernaut XL_Juggernaut_X_RunDiffusion": {
+          "name": "真实感Juggernaut XL_Juggernaut_X_RunDiffusion",
+          "value": 1821357
+        },
+        "juggernautXL_v9-Lightning_4S_V9 + RDPhoto 2": {
+          "name": "juggernautXL_v9-Lightning_4S_V9 + RDPhoto 2",
+          "value": 1127394
+        }
+      }
+    },
+    {
+      "id": 129,
+      "type": "PreviewImage",
+      "pos": {
+        "0": 710,
+        "1": -299
+      },
+      "size": {
+        "0": 210,
+        "1": 246
+      },
+      "flags": {},
+      "order": 35,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 192
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": [
+        ""
+      ],
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 130,
+      "type": "Image Comparer (rgthree)",
+      "pos": {
+        "0": 1580,
+        "1": 32
+      },
+      "size": {
+        "0": 612.143310546875,
+        "1": 696.2833862304688
+      },
+      "flags": {},
+      "order": 38,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "label": "图像_A",
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 194
+        },
+        {
+          "dir": 3,
+          "label": "图像_B",
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 193
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "comparer_mode": "Slide"
+      },
+      "widgets_values": [
+        [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "https://images-tmp-wm.liblib.cloud/sd-images/5b73ba71da2d62ce4bc2fff038991cf90d92973c1d9a0319439dae9f10aaaa8d.png?filename=sd-images/5b73ba71da2d62ce4bc2fff038991cf90d92973c1d9a0319439dae9f10aaaa8d.png&type=output&rand=0.0347483396905266"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "https://images-tmp-wm.liblib.cloud/sd-images/97f40c67271fbf87e85542948ad67ef4d72c988079b5aca97754d0b66ba781e9.png?filename=sd-images/97f40c67271fbf87e85542948ad67ef4d72c988079b5aca97754d0b66ba781e9.png&type=output&rand=0.10946423172893116"
+          }
+        ]
+      ],
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 131,
+      "type": "Image Comparer (rgthree)",
+      "pos": {
+        "0": -3495,
+        "1": 1131
+      },
+      "size": {
+        "0": 597.9979248046875,
+        "1": 806.4151611328125
+      },
+      "flags": {},
+      "order": 42,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "label": "图像_A",
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 203
+        },
+        {
+          "dir": 3,
+          "label": "图像_B",
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 195
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "comparer_mode": "Slide"
+      },
+      "widgets_values": [
+        [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "https://images-tmp-wm.liblib.cloud/sd-images/6cc3a93cf17bfe0ecb2c14ae4ef1f2ec13e0ca61f4aab58ce84e041ad51fa894.png?filename=sd-images/6cc3a93cf17bfe0ecb2c14ae4ef1f2ec13e0ca61f4aab58ce84e041ad51fa894.png&type=output&rand=0.33756986378726306"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "https://images-tmp-wm.liblib.cloud/sd-images/9aa3b1343c9351df9d49ee10e6a89f3a409b369caaad685c75bb34e179f105d5.png?filename=sd-images/9aa3b1343c9351df9d49ee10e6a89f3a409b369caaad685c75bb34e179f105d5.png&type=output&rand=0.7577875310405184"
+          }
+        ]
+      ],
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 115,
+      "type": "LayerUtility: CropByMask V2",
+      "pos": {
+        "0": -2201,
+        "1": 1130
+      },
+      "size": {
+        "0": 221.6002960205078,
+        "1": 262
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 185
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 168
+        },
+        {
+          "label": "裁剪框",
+          "name": "crop_box",
+          "shape": 7,
+          "type": "BOX",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "裁剪图像",
+          "name": "croped_image",
+          "shape": 3,
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            173,
+            197
+          ]
+        },
+        {
+          "label": "裁剪遮罩",
+          "name": "croped_mask",
+          "shape": 3,
+          "type": "MASK",
+          "slot_index": 1,
+          "links": [
+            180,
+            198
+          ]
+        },
+        {
+          "label": "裁剪框",
+          "name": "crop_box",
+          "shape": 3,
+          "type": "BOX",
+          "slot_index": 2,
+          "links": [
+            171,
+            174
+          ]
+        },
+        {
+          "label": "裁剪框预览",
+          "name": "box_preview",
+          "shape": 3,
+          "type": "IMAGE",
+          "slot_index": 3,
+          "links": []
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LayerUtility: CropByMask V2",
+        "ttNbgOverride": {
+          "color": "#322",
+          "bgcolor": "#533",
+          "groupcolor": "#A88"
+        }
+      },
+      "widgets_values": [
+        false,
+        "mask_area",
+        200,
+        200,
+        200,
+        200,
+        "8"
+      ],
+      "color": "rgba(38, 73, 116, 0.7)",
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 117,
+      "type": "ImageResize+",
+      "pos": {
+        "0": -1899,
+        "1": 1131
+      },
+      "size": {
+        "0": 218.4100341796875,
+        "1": 218
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 173
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "shape": 3,
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            183
+          ]
+        },
+        {
+          "label": "宽度",
+          "name": "width",
+          "shape": 3,
+          "type": "INT",
+          "slot_index": 1,
+          "links": []
+        },
+        {
+          "label": "高度",
+          "name": "height",
+          "shape": 3,
+          "type": "INT",
+          "slot_index": 2,
+          "links": []
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "ImageResize+",
+        "ttNbgOverride": {
+          "color": "#322",
+          "bgcolor": "#533",
+          "groupcolor": "#A88"
+        }
+      },
+      "widgets_values": [
+        1152,
+        1152,
+        "lanczos",
+        "keep proportion",
+        "always",
+        0
+      ],
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 132,
+      "type": "PreviewImage",
+      "pos": {
+        "0": -2196,
+        "1": 1444
+      },
+      "size": {
+        "0": 210,
+        "1": 246
+      },
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 197
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": [
+        ""
+      ],
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 133,
+      "type": "LayerMask: MaskPreview",
+      "pos": {
+        "0": -1896,
+        "1": 1443
+      },
+      "size": {
+        "0": 210,
+        "1": 246
+      },
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "遮罩",
+          "name": "mask",
+          "type": "MASK",
+          "link": 198
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LayerMask: MaskPreview"
+      },
+      "widgets_values": [
+        ""
+      ],
+      "color": "rgba(27, 80, 119, 0.7)",
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 123,
+      "type": "LayerMask: PersonMaskUltra V2",
+      "pos": {
+        "0": -2598,
+        "1": 1131
+      },
+      "size": {
+        "0": 306.84613037109375,
+        "1": 414
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 181
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "label": "遮罩",
+          "name": "mask",
+          "type": "MASK",
+          "slot_index": 1,
+          "links": [
+            168
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LayerMask: PersonMaskUltra V2"
+      },
+      "widgets_values": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        0.4,
+        "VITMatte",
+        6,
+        6,
+        0.01,
+        0.99,
+        true,
+        "cuda",
+        2
+      ],
+      "color": "rgba(27, 80, 119, 0.7)",
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 139,
+      "type": "Reroute",
+      "pos": {
+        "0": -2164,
+        "1": 787
+      },
+      "size": {
+        "0": 75,
+        "1": 26
+      },
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 208
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            209
+          ]
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 113,
+      "type": "Reroute",
+      "pos": {
+        "0": -1624,
+        "1": 788
+      },
+      "size": {
+        "0": 75,
+        "1": 26
+      },
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 183
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            208,
+            210
+          ]
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false,
+        "ttNbgOverride": {
+          "color": "#322",
+          "bgcolor": "#533",
+          "groupcolor": "#A88"
+        }
+      }
+    },
+    {
+      "id": 140,
+      "type": "Reroute",
+      "pos": {
+        "0": -925,
+        "1": 790
+      },
+      "size": {
+        "0": 75,
+        "1": 26
+      },
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 210
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            211,
+            212
+          ]
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 141,
+      "type": "Reroute",
+      "pos": {
+        "0": -528,
+        "1": 788
+      },
+      "size": {
+        "0": 75,
+        "1": 26
+      },
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 212
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            213
+          ]
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 120,
+      "type": "CropMask",
+      "pos": {
+        "0": -699,
+        "1": 1129
+      },
+      "size": {
+        "0": 215.79617309570312,
+        "1": 130
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "遮罩",
+          "name": "mask",
+          "type": "MASK",
+          "link": 176
+        },
+        {
+          "label": "宽度",
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 177
+        },
+        {
+          "label": "高度",
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 178
+        }
+      ],
+      "outputs": [
+        {
+          "label": "遮罩",
+          "name": "MASK",
+          "shape": 3,
+          "type": "MASK",
+          "slot_index": 0,
+          "links": [
+            140,
+            172
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "CropMask",
+        "ttNbgOverride": {
+          "color": "#322",
+          "bgcolor": "#533",
+          "groupcolor": "#A88"
+        }
+      },
+      "widgets_values": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 119,
+      "type": "MaskBlur+",
+      "pos": {
+        "0": -1008,
+        "1": 1129
+      },
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "遮罩",
+          "name": "mask",
+          "type": "MASK",
+          "link": 175
+        }
+      ],
+      "outputs": [
+        {
+          "label": "遮罩",
+          "name": "MASK",
+          "shape": 3,
+          "type": "MASK",
+          "slot_index": 0,
+          "links": [
+            176,
+            199
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "MaskBlur+",
+        "ttNbgOverride": {
+          "color": "#322",
+          "bgcolor": "#533",
+          "groupcolor": "#A88"
+        }
+      },
+      "widgets_values": [
+        60,
+        "auto"
+      ],
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 122,
+      "type": "GrowMask",
+      "pos": {
+        "0": -1271,
+        "1": 1131
+      },
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "遮罩",
+          "name": "mask",
+          "type": "MASK",
+          "link": 180
+        }
+      ],
+      "outputs": [
+        {
+          "label": "遮罩",
+          "name": "MASK",
+          "shape": 3,
+          "type": "MASK",
+          "slot_index": 0,
+          "links": [
+            175
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "GrowMask",
+        "ttNbgOverride": {
+          "color": "#322",
+          "bgcolor": "#533",
+          "groupcolor": "#A88"
+        }
+      },
+      "widgets_values": [
+        40,
+        false
+      ],
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 118,
+      "type": "LayerUtility: CropBoxResolve",
+      "pos": {
+        "0": -940,
+        "1": 1292
+      },
+      "size": {
+        "0": 140,
+        "1": 90
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "裁剪框",
+          "name": "crop_box",
+          "type": "BOX",
+          "link": 174
+        }
+      ],
+      "outputs": [
+        {
+          "label": "X",
+          "name": "x",
+          "shape": 3,
+          "type": "INT",
+          "links": null
+        },
+        {
+          "label": "Y",
+          "name": "y",
+          "shape": 3,
+          "type": "INT",
+          "links": null
+        },
+        {
+          "label": "宽度",
+          "name": "width",
+          "shape": 3,
+          "type": "INT",
+          "slot_index": 2,
+          "links": [
+            144,
+            177
+          ]
+        },
+        {
+          "label": "高度",
+          "name": "height",
+          "shape": 3,
+          "type": "INT",
+          "slot_index": 3,
+          "links": [
+            145,
+            178
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LayerUtility: CropBoxResolve",
+        "ttNbgOverride": {
+          "color": "#322",
+          "bgcolor": "#533",
+          "groupcolor": "#A88"
+        }
+      },
+      "widgets_values": [],
+      "color": "rgba(38, 73, 116, 0.7)",
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 134,
+      "type": "LayerMask: MaskPreview",
+      "pos": {
+        "0": -1011,
+        "1": 1448
+      },
+      "size": {
+        "0": 210,
+        "1": 246
+      },
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "遮罩",
+          "name": "mask",
+          "type": "MASK",
+          "link": 199
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LayerMask: MaskPreview"
+      },
+      "widgets_values": [
+        ""
+      ],
+      "color": "rgba(27, 80, 119, 0.7)",
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 116,
+      "type": "LayerUtility: RestoreCropBox",
+      "pos": {
+        "0": 1600,
+        "1": 1131
+      },
+      "size": {
+        "0": 231.222412109375,
+        "1": 125.03752136230469
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 39,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "背景图像",
+          "name": "background_image",
+          "type": "IMAGE",
+          "link": 186
+        },
+        {
+          "name": "croped_image",
+          "type": "IMAGE",
+          "link": 170
+        },
+        {
+          "label": "裁剪框",
+          "name": "crop_box",
+          "type": "BOX",
+          "link": 171
+        },
+        {
+          "name": "croped_mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": 172
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "shape": 3,
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            200
+          ]
+        },
+        {
+          "label": "遮罩",
+          "name": "mask",
+          "shape": 3,
+          "type": "MASK",
+          "slot_index": 1,
+          "links": []
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LayerUtility: RestoreCropBox",
+        "ttNbgOverride": {
+          "color": "#322",
+          "bgcolor": "#533",
+          "groupcolor": "#A88"
+        }
+      },
+      "widgets_values": [
+        false
+      ],
+      "color": "rgba(38, 73, 116, 0.7)",
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 135,
+      "type": "ColorMatch",
+      "pos": {
+        "0": 1899,
+        "1": 1132
+      },
+      "size": {
+        "0": 315,
+        "1": 102
+      },
+      "flags": {},
+      "order": 40,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "参考图像",
+          "name": "image_ref",
+          "type": "IMAGE",
+          "link": 201
+        },
+        {
+          "label": "目标图像",
+          "name": "image_target",
+          "type": "IMAGE",
+          "link": 200
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            202,
+            203
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "ColorMatch"
+      },
+      "widgets_values": [
+        "mkl",
+        1
+      ],
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 103,
+      "type": "LoadImage",
+      "pos": {
+        "0": -4303,
+        "1": 1134
+      },
+      "size": {
+        "0": 614.2056884765625,
+        "1": 803.003662109375
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "shape": 3,
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            181,
+            185,
+            186,
+            195,
+            201
+          ]
+        },
+        {
+          "label": "遮罩",
+          "name": "MASK",
+          "shape": 3,
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LoadImage",
+        "ttNbgOverride": {
+          "color": "#322",
+          "bgcolor": "#533",
+          "groupcolor": "#A88"
+        }
+      },
+      "widgets_values": [
+        "3.png",
+        "image",
+        ""
+      ],
+      "_widget_cache_map": {
+        "105677061-e30d43231fa6b5771b39028fda4c9a741d11e47312c57a3467365ea269d55e31.png": {
+          "value": "img/ab7d75d067294d3b84a7583f9d551f71/e30d43231fa6b5771b39028fda4c9a741d11e47312c57a3467365ea269d55e31.png",
+          "name": "105677061-e30d43231fa6b5771b39028fda4c9a741d11e47312c57a3467365ea269d55e31.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/ab7d75d067294d3b84a7583f9d551f71/e30d43231fa6b5771b39028fda4c9a741d11e47312c57a3467365ea269d55e31.png",
+          "width": 672,
+          "height": 1008
+        },
+        "e759415a-4254-4a1d-81e9-602eddd07de5.png": {
+          "value": "img/ab7d75d067294d3b84a7583f9d551f71/19d4eb9c28b3b2ab2b715d8fad6d1ce018af0bfc93d9a26e4836e149d4c4278f.png",
+          "name": "e759415a-4254-4a1d-81e9-602eddd07de5.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/ab7d75d067294d3b84a7583f9d551f71/19d4eb9c28b3b2ab2b715d8fad6d1ce018af0bfc93d9a26e4836e149d4c4278f.png",
+          "width": 768,
+          "height": 1024
+        },
+        "1269112-6c833369ca26545ee2126b7ee6c8fd7c2c35f34ed33f5a3d7e91b9c15e0957c3.png": {
+          "value": "img/ab7d75d067294d3b84a7583f9d551f71/6c833369ca26545ee2126b7ee6c8fd7c2c35f34ed33f5a3d7e91b9c15e0957c3.png",
+          "name": "1269112-6c833369ca26545ee2126b7ee6c8fd7c2c35f34ed33f5a3d7e91b9c15e0957c3.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/ab7d75d067294d3b84a7583f9d551f71/6c833369ca26545ee2126b7ee6c8fd7c2c35f34ed33f5a3d7e91b9c15e0957c3.png",
+          "width": 768,
+          "height": 1024
+        },
+        "output - 2024-10-31T141736.496_看图王.jpg": {
+          "value": "img/ab7d75d067294d3b84a7583f9d551f71/596d3604752bf90f805df43dec887c5ff3036f5058aa9eb848958e1db456dd7b.jpg",
+          "name": "output - 2024-10-31T141736.496_看图王.jpg",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/ab7d75d067294d3b84a7583f9d551f71/596d3604752bf90f805df43dec887c5ff3036f5058aa9eb848958e1db456dd7b.jpg",
+          "width": 1536,
+          "height": 2048
+        },
+        "105677061-e30d43231fa6b5771b39028fda4c9a741d11e47312c57a3467365ea269d55e31_看图王.jpg": {
+          "value": "img/ab7d75d067294d3b84a7583f9d551f71/a195e9419afd1c3447fa7f2adead8c17f36791d85a162d93101957e4e0e6dcf7.jpg",
+          "name": "105677061-e30d43231fa6b5771b39028fda4c9a741d11e47312c57a3467365ea269d55e31_看图王.jpg",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/ab7d75d067294d3b84a7583f9d551f71/a195e9419afd1c3447fa7f2adead8c17f36791d85a162d93101957e4e0e6dcf7.jpg",
+          "width": 672,
+          "height": 1008
+        },
+        "185457778-9a55537c8349d50cf6ec2c7a0e81855dbb0418eda6572f163514782035f6de8d_看图王.jpg": {
+          "value": "img/ab7d75d067294d3b84a7583f9d551f71/d3a9fd5622587b1d2b4873e44d0b1c5738f749f1dd150a87124d3ec8cec2c988.jpg",
+          "name": "185457778-9a55537c8349d50cf6ec2c7a0e81855dbb0418eda6572f163514782035f6de8d_看图王.jpg",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/ab7d75d067294d3b84a7583f9d551f71/d3a9fd5622587b1d2b4873e44d0b1c5738f749f1dd150a87124d3ec8cec2c988.jpg",
+          "width": 1024,
+          "height": 1024
+        },
+        "20241128-172151.jpeg": {
+          "value": "img/d837823501734a8db4e9d42d4e2bbab0/33d2369f9a3e6f47bd702124665330bd88c270391873b0528c2eb61b0b595c58.jpeg",
+          "name": "20241128-172151.jpeg",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/d837823501734a8db4e9d42d4e2bbab0/33d2369f9a3e6f47bd702124665330bd88c270391873b0528c2eb61b0b595c58.jpeg",
+          "width": 768,
+          "height": 1024
+        },
+        "2 (1).png": {
+          "value": "img/5c9f1753439746439994a8f1189fc6d4/48caece81dfdd9ebf2e10779c1f4d088d930a1a0eee1495d70d49d484aa626d9.png",
+          "name": "2 (1).png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/5c9f1753439746439994a8f1189fc6d4/48caece81dfdd9ebf2e10779c1f4d088d930a1a0eee1495d70d49d484aa626d9.png",
+          "width": 1248,
+          "height": 1656
+        },
+        "2 (2).png": {
+          "value": "img/5c9f1753439746439994a8f1189fc6d4/8ac1ab87f1458d7d8efa2bef09d3f393efcae625a1894cf94ccecc2c344e689e.png",
+          "name": "2 (2).png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/5c9f1753439746439994a8f1189fc6d4/8ac1ab87f1458d7d8efa2bef09d3f393efcae625a1894cf94ccecc2c344e689e.png",
+          "width": 1248,
+          "height": 1656
+        },
+        "3.png": {
+          "value": "img/3a72d55c6646478488578a0a7b536252/bca848dae2cb200c0361651e9ca752690cd45f483ce4340c549067e5b2a0e6c5.png",
+          "name": "3.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/3a72d55c6646478488578a0a7b536252/bca848dae2cb200c0361651e9ca752690cd45f483ce4340c549067e5b2a0e6c5.png",
+          "width": 1248,
+          "height": 1656
+        }
+      }
+    },
+    {
+      "id": 100,
+      "type": "ImageResize+",
+      "pos": {
+        "0": 1604,
+        "1": 1311
+      },
+      "size": {
+        "0": 230,
+        "1": 218
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 36,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 188
+        },
+        {
+          "label": "宽度",
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 144
+        },
+        {
+          "label": "高度",
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 145
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "shape": 3,
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            170
+          ]
+        },
+        {
+          "label": "宽度",
+          "name": "width",
+          "shape": 3,
+          "type": "INT",
+          "slot_index": 1,
+          "links": null
+        },
+        {
+          "label": "高度",
+          "name": "height",
+          "shape": 3,
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "ImageResize+",
+        "ttNbgOverride": {
+          "color": "#322",
+          "bgcolor": "#533",
+          "groupcolor": "#A88"
+        }
+      },
+      "widgets_values": [
+        1024,
+        1024,
+        "lanczos",
+        "pad",
+        "always",
+        0
+      ],
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 108,
+      "type": "LoadImage",
+      "pos": {
+        "0": -4299,
+        "1": 33
+      },
+      "size": {
+        "0": 607.6571655273438,
+        "1": 840.3047485351562
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "shape": 3,
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            206
+          ]
+        },
+        {
+          "label": "遮罩",
+          "name": "MASK",
+          "shape": 3,
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "q (27).jpg",
+        "image",
+        ""
+      ],
+      "_widget_cache_map": {
+        "007gznKbgy1hrqwfpl1ccj30u00wlgsd.jpg": {
+          "value": "img/ab7d75d067294d3b84a7583f9d551f71/f7aec7906e70d83d1c4787020cd20979a39edbdff2d856a860062ae3a393b6d9.jpg",
+          "name": "007gznKbgy1hrqwfpl1ccj30u00wlgsd.jpg",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/ab7d75d067294d3b84a7583f9d551f71/f7aec7906e70d83d1c4787020cd20979a39edbdff2d856a860062ae3a393b6d9.jpg",
+          "width": 690,
+          "height": 749
+        },
+        "下载.jpg": {
+          "value": "img/ab7d75d067294d3b84a7583f9d551f71/d2e8ef0851e784a8a208e9d7c17bf9209f18f765c1cce3730966070b6a87ab6c.jpg",
+          "name": "下载.jpg",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/ab7d75d067294d3b84a7583f9d551f71/d2e8ef0851e784a8a208e9d7c17bf9209f18f765c1cce3730966070b6a87ab6c.jpg",
+          "width": 420,
+          "height": 462
+        },
+        "4881467dgy1g3kqppziyhj20tz13913t.jpg": {
+          "value": "img/ab7d75d067294d3b84a7583f9d551f71/5b8facea42b61c90f834d67493304b84b4a2ab88a2ef425281bb2c03de39e206.jpg",
+          "name": "4881467dgy1g3kqppziyhj20tz13913t.jpg",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/ab7d75d067294d3b84a7583f9d551f71/5b8facea42b61c90f834d67493304b84b4a2ab88a2ef425281bb2c03de39e206.jpg",
+          "width": 690,
+          "height": 904
+        },
+        "微信截图_20241018155444_看图王.jpg": {
+          "value": "img/ab7d75d067294d3b84a7583f9d551f71/d9ace235cc6cef5bf8e8dd122d005d0ac67cbfdf9a337d0f49b0a71a5466d1c9.jpg",
+          "name": "微信截图_20241018155444_看图王.jpg",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/ab7d75d067294d3b84a7583f9d551f71/d9ace235cc6cef5bf8e8dd122d005d0ac67cbfdf9a337d0f49b0a71a5466d1c9.jpg",
+          "width": 975,
+          "height": 1029
+        },
+        "QQ截图20240821173728.png": {
+          "value": "img/ab7d75d067294d3b84a7583f9d551f71/19f332d84c7f903eff9ae40b90b3a1965e2a6b59ce0909e786c52af88119eeba.png",
+          "name": "QQ截图20240821173728.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/ab7d75d067294d3b84a7583f9d551f71/19f332d84c7f903eff9ae40b90b3a1965e2a6b59ce0909e786c52af88119eeba.png",
+          "width": 1144,
+          "height": 1304
+        },
+        "23665708.png": {
+          "value": "img/ab7d75d067294d3b84a7583f9d551f71/bd1baf310f7460666abc1a832d5937291dc020133389202f216339104313e094.png",
+          "name": "23665708.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/ab7d75d067294d3b84a7583f9d551f71/bd1baf310f7460666abc1a832d5937291dc020133389202f216339104313e094.png",
+          "width": 1536,
+          "height": 2304
+        },
+        "43340152-bd74af86b4b8bc3a60607ab6c51263747ed5cc09f275e5287804d9bd9669f689.png": {
+          "value": "img/ab7d75d067294d3b84a7583f9d551f71/bd74af86b4b8bc3a60607ab6c51263747ed5cc09f275e5287804d9bd9669f689.png",
+          "name": "43340152-bd74af86b4b8bc3a60607ab6c51263747ed5cc09f275e5287804d9bd9669f689.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/ab7d75d067294d3b84a7583f9d551f71/bd74af86b4b8bc3a60607ab6c51263747ed5cc09f275e5287804d9bd9669f689.png",
+          "width": 512,
+          "height": 768
+        },
+        "微信截图_20241127152738.png": {
+          "value": "img/ab7d75d067294d3b84a7583f9d551f71/8705b03e7de6aaafdfd0c806e7b8864f437d4b2d2f1ddc34e94f6335d6c7c6cf.png",
+          "name": "微信截图_20241127152738.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/ab7d75d067294d3b84a7583f9d551f71/8705b03e7de6aaafdfd0c806e7b8864f437d4b2d2f1ddc34e94f6335d6c7c6cf.png",
+          "width": 983,
+          "height": 961
+        },
+        "20241128-172126.jpeg": {
+          "value": "img/d837823501734a8db4e9d42d4e2bbab0/b7d54ef447cd30ac1754ca090b3478c76b953395f8e74f763abd1809f16d8e5d.jpeg",
+          "name": "20241128-172126.jpeg",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/d837823501734a8db4e9d42d4e2bbab0/b7d54ef447cd30ac1754ca090b3478c76b953395f8e74f763abd1809f16d8e5d.jpeg",
+          "width": 768,
+          "height": 1024
+        },
+        "2 (2).png": {
+          "value": "img/5c9f1753439746439994a8f1189fc6d4/8ac1ab87f1458d7d8efa2bef09d3f393efcae625a1894cf94ccecc2c344e689e.png",
+          "name": "2 (2).png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/5c9f1753439746439994a8f1189fc6d4/8ac1ab87f1458d7d8efa2bef09d3f393efcae625a1894cf94ccecc2c344e689e.png",
+          "width": 1248,
+          "height": 1656
+        },
+        "微信图片_20241121040216.jpg": {
+          "value": "img/5c9f1753439746439994a8f1189fc6d4/feb54139eba946b541474cbd05f26389a358d46c61b4ffcb461a64b7d0807ec2.jpg",
+          "name": "微信图片_20241121040216.jpg",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/5c9f1753439746439994a8f1189fc6d4/feb54139eba946b541474cbd05f26389a358d46c61b4ffcb461a64b7d0807ec2.jpg",
+          "width": 1080,
+          "height": 1439
+        },
+        "1 (6).png": {
+          "value": "img/3a72d55c6646478488578a0a7b536252/49b7cad9df79c3e828a8db027689418249aa1805fa643467132cdc1f2574d483.png",
+          "name": "1 (6).png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/3a72d55c6646478488578a0a7b536252/49b7cad9df79c3e828a8db027689418249aa1805fa643467132cdc1f2574d483.png",
+          "width": 1024,
+          "height": 1024
+        },
+        "q (27).jpg": {
+          "value": "img/5c9f1753439746439994a8f1189fc6d4/d6cef0b5521d0691f03fb14081e6eb902a7fab7d66e502f04800b7ae04bb1a1f.jpg",
+          "name": "q (27).jpg",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/5c9f1753439746439994a8f1189fc6d4/d6cef0b5521d0691f03fb14081e6eb902a7fab7d66e502f04800b7ae04bb1a1f.jpg",
+          "width": 1600,
+          "height": 2000
+        }
+      }
+    },
+    {
+      "id": 124,
+      "type": "SaveImage",
+      "pos": {
+        "0": 2430,
+        "1": 775
+      },
+      "size": {
+        "0": 764.4850463867188,
+        "1": 976.4780883789062
+      },
+      "flags": {},
+      "order": 41,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 202
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "ComfyUI",
+        ""
+      ],
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 126,
+      "type": "PreviewImage",
+      "pos": {
+        "0": 1052,
+        "1": -300
+      },
+      "size": {
+        "0": 210,
+        "1": 246
+      },
+      "flags": {},
+      "order": 37,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 189
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": [
+        ""
+      ],
+      "_widget_cache_map": {}
+    }
+  ],
+  "links": [
+    [
+      134,
+      102,
+      0,
+      96,
+      0,
+      "LATENT"
+    ],
+    [
+      135,
+      101,
+      2,
+      96,
+      1,
+      "VAE"
+    ],
+    [
+      136,
+      107,
+      1,
+      97,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      137,
+      107,
+      2,
+      97,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      138,
+      101,
+      2,
+      97,
+      2,
+      "VAE"
+    ],
+    [
+      140,
+      120,
+      0,
+      97,
+      4,
+      "MASK"
+    ],
+    [
+      141,
+      101,
+      1,
+      98,
+      0,
+      "CLIP"
+    ],
+    [
+      142,
+      101,
+      1,
+      99,
+      0,
+      "CLIP"
+    ],
+    [
+      144,
+      118,
+      2,
+      100,
+      1,
+      "INT"
+    ],
+    [
+      145,
+      118,
+      3,
+      100,
+      2,
+      "INT"
+    ],
+    [
+      146,
+      107,
+      0,
+      102,
+      0,
+      "MODEL"
+    ],
+    [
+      147,
+      97,
+      0,
+      102,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      148,
+      97,
+      1,
+      102,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      149,
+      121,
+      0,
+      102,
+      3,
+      "LATENT"
+    ],
+    [
+      150,
+      104,
+      0,
+      107,
+      0,
+      "INSTANTID"
+    ],
+    [
+      151,
+      106,
+      0,
+      107,
+      1,
+      "FACEANALYSIS"
+    ],
+    [
+      152,
+      105,
+      0,
+      107,
+      2,
+      "CONTROL_NET"
+    ],
+    [
+      154,
+      101,
+      0,
+      107,
+      4,
+      "MODEL"
+    ],
+    [
+      155,
+      109,
+      0,
+      107,
+      5,
+      "CONDITIONING"
+    ],
+    [
+      156,
+      109,
+      1,
+      107,
+      6,
+      "CONDITIONING"
+    ],
+    [
+      158,
+      99,
+      0,
+      109,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      159,
+      98,
+      0,
+      109,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      160,
+      110,
+      0,
+      109,
+      2,
+      "CONTROL_NET"
+    ],
+    [
+      161,
+      111,
+      0,
+      109,
+      3,
+      "IMAGE"
+    ],
+    [
+      168,
+      123,
+      1,
+      115,
+      1,
+      "MASK"
+    ],
+    [
+      170,
+      100,
+      0,
+      116,
+      1,
+      "IMAGE"
+    ],
+    [
+      171,
+      115,
+      2,
+      116,
+      2,
+      "BOX"
+    ],
+    [
+      172,
+      120,
+      0,
+      116,
+      3,
+      "MASK"
+    ],
+    [
+      173,
+      115,
+      0,
+      117,
+      0,
+      "IMAGE"
+    ],
+    [
+      174,
+      115,
+      2,
+      118,
+      0,
+      "BOX"
+    ],
+    [
+      175,
+      122,
+      0,
+      119,
+      0,
+      "MASK"
+    ],
+    [
+      176,
+      119,
+      0,
+      120,
+      0,
+      "MASK"
+    ],
+    [
+      177,
+      118,
+      2,
+      120,
+      1,
+      "INT"
+    ],
+    [
+      178,
+      118,
+      3,
+      120,
+      2,
+      "INT"
+    ],
+    [
+      179,
+      97,
+      2,
+      121,
+      0,
+      "LATENT"
+    ],
+    [
+      180,
+      115,
+      1,
+      122,
+      0,
+      "MASK"
+    ],
+    [
+      181,
+      103,
+      0,
+      123,
+      0,
+      "IMAGE"
+    ],
+    [
+      183,
+      117,
+      0,
+      113,
+      0,
+      "*"
+    ],
+    [
+      185,
+      103,
+      0,
+      115,
+      0,
+      "IMAGE"
+    ],
+    [
+      186,
+      103,
+      0,
+      116,
+      0,
+      "IMAGE"
+    ],
+    [
+      187,
+      96,
+      0,
+      125,
+      0,
+      "IMAGE"
+    ],
+    [
+      188,
+      125,
+      0,
+      100,
+      0,
+      "IMAGE"
+    ],
+    [
+      189,
+      125,
+      0,
+      126,
+      0,
+      "IMAGE"
+    ],
+    [
+      190,
+      111,
+      0,
+      127,
+      0,
+      "IMAGE"
+    ],
+    [
+      192,
+      96,
+      0,
+      129,
+      0,
+      "IMAGE"
+    ],
+    [
+      193,
+      96,
+      0,
+      130,
+      1,
+      "IMAGE"
+    ],
+    [
+      194,
+      125,
+      0,
+      130,
+      0,
+      "IMAGE"
+    ],
+    [
+      195,
+      103,
+      0,
+      131,
+      1,
+      "IMAGE"
+    ],
+    [
+      197,
+      115,
+      0,
+      132,
+      0,
+      "IMAGE"
+    ],
+    [
+      198,
+      115,
+      1,
+      133,
+      0,
+      "MASK"
+    ],
+    [
+      199,
+      119,
+      0,
+      134,
+      0,
+      "MASK"
+    ],
+    [
+      200,
+      116,
+      0,
+      135,
+      1,
+      "IMAGE"
+    ],
+    [
+      201,
+      103,
+      0,
+      135,
+      0,
+      "IMAGE"
+    ],
+    [
+      202,
+      135,
+      0,
+      124,
+      0,
+      "IMAGE"
+    ],
+    [
+      203,
+      135,
+      0,
+      131,
+      0,
+      "IMAGE"
+    ],
+    [
+      204,
+      137,
+      0,
+      136,
+      0,
+      "ANALYSIS_MODELS"
+    ],
+    [
+      205,
+      136,
+      0,
+      138,
+      0,
+      "IMAGE"
+    ],
+    [
+      206,
+      108,
+      0,
+      136,
+      1,
+      "IMAGE"
+    ],
+    [
+      207,
+      136,
+      0,
+      107,
+      3,
+      "IMAGE"
+    ],
+    [
+      208,
+      113,
+      0,
+      139,
+      0,
+      "*"
+    ],
+    [
+      209,
+      139,
+      0,
+      111,
+      0,
+      "IMAGE"
+    ],
+    [
+      210,
+      113,
+      0,
+      140,
+      0,
+      "*"
+    ],
+    [
+      211,
+      140,
+      0,
+      107,
+      7,
+      "IMAGE"
+    ],
+    [
+      212,
+      140,
+      0,
+      141,
+      0,
+      "*"
+    ],
+    [
+      213,
+      141,
+      0,
+      97,
+      3,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "主体图",
+      "bounding": [
+        -5012,
+        1404,
+        612,
+        279
+      ],
+      "color": "#3f789e",
+      "font_size": 200,
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "脸部图",
+      "bounding": [
+        -5015,
+        322,
+        613,
+        282
+      ],
+      "color": "#3f789e",
+      "font_size": 200,
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "最终对比",
+      "bounding": [
+        -3365,
+        1986,
+        339,
+        113
+      ],
+      "color": "#3f789e",
+      "font_size": 80,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.3073560549142851,
+      "offset": [
+        5780.934867731487,
+        400.7496163600026
+      ]
+    },
+    "0246.VERSION": [
+      0,
+      0,
+      4
+    ],
+    "ue_links": [],
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4,
+  "widget_idx_map": {
+    "102": {
+      "seed": 0,
+      "sampler_name": 4,
+      "scheduler": 5
+    },
+    "125": {
+      "seed": 2
+    }
+  },
+  "seed_widgets": {
+    "102": 0,
+    "125": 2
+  }
+}

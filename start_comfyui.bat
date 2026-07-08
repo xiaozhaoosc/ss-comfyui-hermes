@@ -13,6 +13,8 @@ set TRANSFORMERS_CACHE=D:\OLLAMA_MODELS\cache\transformers
 set XDG_CACHE_HOME=D:\OLLAMA_MODELS\cache
 set PIP_CACHE_DIR=D:\OLLAMA_MODELS\cache\pip
 
+set KMP_DUPLICATE_LIB_OK=TRUE
+
 REM === ComfyUI 配置 ===
 set COMFYUI_PATH=D:\ai_projects\ComfyUI
 
@@ -27,6 +29,7 @@ echo ========================================
 
 venv\Scripts\python.exe main.py ^
     --highvram ^
+    --enable-manager ^
     --listen 0.0.0.0 ^
     --port 8188
 

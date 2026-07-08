@@ -1,0 +1,2233 @@
+{
+  "id": "d9c749eb-a775-42de-8056-33e4fcb427c5",
+  "revision": 0,
+  "last_node_id": 131,
+  "last_link_id": 191,
+  "nodes": [
+    {
+      "id": 5,
+      "type": "ConditioningZeroOut",
+      "pos": {
+        "0": 3150.70361328125,
+        "1": 2740.89599609375
+      },
+      "size": {
+        "0": 400,
+        "1": 30
+      },
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "条件",
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 4
+        }
+      ],
+      "outputs": [
+        {
+          "label": "条件",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            10
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "ConditioningZeroOut",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.15"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 10,
+      "type": "VAEDecode",
+      "pos": {
+        "0": 4080.70263671875,
+        "1": 2470.89599609375
+      },
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "Latent",
+          "name": "samples",
+          "type": "LATENT",
+          "link": 7
+        },
+        {
+          "label": "VAE",
+          "name": "vae",
+          "type": "VAE",
+          "link": 8
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            35,
+            72
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "VAEDecode",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.15"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 12,
+      "type": "VAEEncode",
+      "pos": {
+        "0": 3190.70361328125,
+        "1": 2890.89599609375
+      },
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 116
+        },
+        {
+          "label": "VAE",
+          "name": "vae",
+          "type": "VAE",
+          "link": 13
+        }
+      ],
+      "outputs": [
+        {
+          "label": "Latent",
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            12
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "VAEEncode",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.15"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 14,
+      "type": "TTP_Image_Assy",
+      "pos": {
+        "0": 5041.486328125,
+        "1": 1914.713623046875
+      },
+      "size": {
+        "0": 418.1999816894531,
+        "1": 118
+      },
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "tiles",
+          "name": "tiles",
+          "type": "IMAGE",
+          "link": 117
+        },
+        {
+          "label": "positions",
+          "name": "positions",
+          "type": "LIST",
+          "link": 20
+        },
+        {
+          "label": "original_size",
+          "name": "original_size",
+          "type": "TUPLE",
+          "link": 21
+        },
+        {
+          "label": "grid_size",
+          "name": "grid_size",
+          "type": "TUPLE",
+          "link": 22
+        }
+      ],
+      "outputs": [
+        {
+          "label": "RECONSTRUCTED_IMAGE",
+          "name": "RECONSTRUCTED_IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            69
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "TTP_Image_Assy",
+        "cnr_id": "comfyui_ttp_toolset",
+        "ver": "13bd85fc5ea8c3c6ecf2170d613c2a099c0c0d5b"
+      },
+      "widgets_values": [
+        64
+      ]
+    },
+    {
+      "id": 15,
+      "type": "TTP_Tile_image_size",
+      "pos": {
+        "0": 1716.53955078125,
+        "1": 1533.3876953125
+      },
+      "size": {
+        "0": 315,
+        "1": 126
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 50
+        }
+      ],
+      "outputs": [
+        {
+          "label": "tile_width",
+          "name": "tile_width",
+          "type": "INT",
+          "slot_index": 0,
+          "links": [
+            15
+          ]
+        },
+        {
+          "label": "tile_height",
+          "name": "tile_height",
+          "type": "INT",
+          "slot_index": 1,
+          "links": [
+            16
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "TTP_Tile_image_size",
+        "cnr_id": "comfyui_ttp_toolset",
+        "ver": "13bd85fc5ea8c3c6ecf2170d613c2a099c0c0d5b"
+      },
+      "widgets_values": [
+        2,
+        3,
+        0.1
+      ]
+    },
+    {
+      "id": 35,
+      "type": "easy imageListToImageBatch",
+      "pos": {
+        "0": 4731.486328125,
+        "1": 2084.71435546875
+      },
+      "size": {
+        "0": 210,
+        "1": 26
+      },
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 35
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            117
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "easy imageListToImageBatch",
+        "cnr_id": "comfyui-easy-use",
+        "ver": "0daf114fe8870aeacfea484aa59e7f9973b91cd5"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 36,
+      "type": "easy imageBatchToImageList",
+      "pos": {
+        "0": 2519.610107421875,
+        "1": 1874.9818115234375
+      },
+      "size": {
+        "0": 210,
+        "1": 26
+      },
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 37
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "shape": 6,
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            115
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "easy imageBatchToImageList",
+        "cnr_id": "comfyui-easy-use",
+        "ver": "0daf114fe8870aeacfea484aa59e7f9973b91cd5"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 50,
+      "type": "PreviewImage",
+      "pos": {
+        "0": 2086.53955078125,
+        "1": 1723.3876953125
+      },
+      "size": {
+        "0": 300,
+        "1": 300
+      },
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 58
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "PreviewImage",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.15"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 55,
+      "type": "PreviewImage",
+      "pos": {
+        "0": 1694.2529296875,
+        "1": 2546.60986328125
+      },
+      "size": {
+        "0": 210,
+        "1": 246
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 67
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "PreviewImage",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.15"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 56,
+      "type": "PreviewImage",
+      "pos": {
+        "0": 1984.2529296875,
+        "1": 2426.60986328125
+      },
+      "size": {
+        "0": 210,
+        "1": 246
+      },
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 68
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "PreviewImage",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.15"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 58,
+      "type": "PreviewImage",
+      "pos": {
+        "0": 4080.70263671875,
+        "1": 2610.89599609375
+      },
+      "size": {
+        "0": 210,
+        "1": 246
+      },
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 72
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "PreviewImage",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.15"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 81,
+      "type": "easy imageSize",
+      "pos": {
+        "0": 1694.2529296875,
+        "1": 2866.60986328125
+      },
+      "size": {
+        "0": 210,
+        "1": 108
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 100
+        }
+      ],
+      "outputs": [
+        {
+          "label": "宽度",
+          "name": "width_int",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "label": "高度",
+          "name": "height_int",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "easy imageSize",
+        "cnr_id": "comfyui-easy-use",
+        "ver": "0daf114fe8870aeacfea484aa59e7f9973b91cd5"
+      },
+      "widgets_values": [
+        "Width: 832 , Height: 1024"
+      ]
+    },
+    {
+      "id": 82,
+      "type": "easy imageSize",
+      "pos": {
+        "0": 1984.2529296875,
+        "1": 2746.60986328125
+      },
+      "size": {
+        "0": 210,
+        "1": 108
+      },
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 101
+        }
+      ],
+      "outputs": [
+        {
+          "label": "宽度",
+          "name": "width_int",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "label": "高度",
+          "name": "height_int",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "easy imageSize",
+        "cnr_id": "comfyui-easy-use",
+        "ver": "0daf114fe8870aeacfea484aa59e7f9973b91cd5"
+      },
+      "widgets_values": [
+        "Width: 3328 , Height: 4096"
+      ]
+    },
+    {
+      "id": 16,
+      "type": "LayerUtility: ImageScaleByAspectRatio V2",
+      "pos": {
+        "0": 1304.2529296875,
+        "1": 2556.60986328125
+      },
+      "size": {
+        "0": 315,
+        "1": 330
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 45
+        },
+        {
+          "label": "遮罩",
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            52,
+            67,
+            100
+          ]
+        },
+        {
+          "label": "遮罩",
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        },
+        {
+          "label": "原始大小",
+          "name": "original_size",
+          "type": "BOX",
+          "links": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LayerUtility: ImageScaleByAspectRatio V2",
+        "cnr_id": "comfyui_layerstyle",
+        "ver": "7b326d13e43fc4022cd80e472c7af67027409b1e"
+      },
+      "widgets_values": [
+        "original",
+        1,
+        1,
+        "letterbox",
+        "lanczos",
+        "8",
+        "height",
+        1024,
+        "#000000"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 43,
+      "type": "ImageUpscaleWithModel",
+      "pos": {
+        "0": 1694.2529296875,
+        "1": 2426.60986328125
+      },
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "放大模型",
+          "name": "upscale_model",
+          "type": "UPSCALE_MODEL",
+          "link": 53
+        },
+        {
+          "label": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 52
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            50,
+            51,
+            68,
+            101
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "ImageUpscaleWithModel",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.15"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 8,
+      "type": "UNETLoader",
+      "pos": {
+        "0": 2494.2529296875,
+        "1": 2316.60986328125
+      },
+      "size": {
+        "0": 315,
+        "1": 82
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "模型",
+          "name": "MODEL",
+          "type": "MODEL",
+          "slot_index": 0,
+          "links": [
+            5
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "UNETLoader",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.15"
+      },
+      "widgets_values": [
+        "F.1基础模型_fp16",
+        "fp8_e4m3fn"
+      ],
+      "color": "#223",
+      "bgcolor": "#335",
+      "_widget_cache_map": {
+        "F.1基础模型_fp16": {
+          "name": "F.1基础模型_fp16",
+          "baseType": 19,
+          "value": "96c20952b98b474dbd500dddfc08002b"
+        }
+      }
+    },
+    {
+      "id": 44,
+      "type": "UpscaleModelLoader",
+      "pos": {
+        "0": 1304.2529296875,
+        "1": 2426.60986328125
+      },
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "放大模型",
+          "name": "UPSCALE_MODEL",
+          "type": "UPSCALE_MODEL",
+          "links": [
+            53
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "UpscaleModelLoader",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.15"
+      },
+      "widgets_values": [
+        "4xNomos8kSCHAT-L"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 3,
+      "type": "DualCLIPLoader",
+      "pos": {
+        "0": 2494.2529296875,
+        "1": 2786.60986328125
+      },
+      "size": {
+        "0": 315,
+        "1": 130
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "CLIP",
+          "name": "CLIP",
+          "type": "CLIP",
+          "slot_index": 0,
+          "links": [
+            2
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "DualCLIPLoader",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.15"
+      },
+      "widgets_values": [
+        "clip_l",
+        "t5xxl_fp16",
+        "flux",
+        "default"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 4,
+      "type": "VAELoader",
+      "pos": {
+        "0": 2494.2529296875,
+        "1": 2976.60986328125
+      },
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "slot_index": 0,
+          "links": [
+            8,
+            13
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "VAELoader",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.15"
+      },
+      "widgets_values": [
+        "ae.sft"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 2,
+      "type": "CLIPTextEncodeFlux",
+      "pos": {
+        "0": 3150.70361328125,
+        "1": 2470.89599609375
+      },
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "CLIP",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 2
+        },
+        {
+          "label": "T5XXL",
+          "name": "t5xxl",
+          "type": "STRING",
+          "widget": {
+            "name": "t5xxl"
+          },
+          "link": 94
+        },
+        {
+          "label": "CLIP_L",
+          "name": "clip_l",
+          "type": "STRING",
+          "widget": {
+            "name": "clip_l"
+          },
+          "link": 95
+        }
+      ],
+      "outputs": [
+        {
+          "label": "条件",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            4,
+            9
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "CLIPTextEncodeFlux",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.15"
+      },
+      "widgets_values": [
+        "",
+        "",
+        3.5
+      ]
+    },
+    {
+      "id": 31,
+      "type": "LayerMask: LoadFlorence2Model",
+      "pos": {
+        "0": 2789.610107421875,
+        "1": 1564.9818115234375
+      },
+      "size": {
+        "0": 550,
+        "1": 60
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "florence2_model",
+          "name": "florence2_model",
+          "type": "FLORENCE2",
+          "links": [
+            33
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LayerMask: LoadFlorence2Model",
+        "cnr_id": "ComfyUI_LayerStyle_Advance",
+        "ver": "8e30d7d64f879928af812a8aa6de02c8524bdb9d"
+      },
+      "widgets_values": [
+        "gokaygokay/Florence-2-Flux-Large"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 13,
+      "type": "TTP_Image_Tile_Batch",
+      "pos": {
+        "0": 2076.53955078125,
+        "1": 1523.3876953125
+      },
+      "size": {
+        "0": 315,
+        "1": 142
+      },
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 51
+        },
+        {
+          "label": "tile_width",
+          "name": "tile_width",
+          "type": "INT",
+          "widget": {
+            "name": "tile_width"
+          },
+          "link": 15
+        },
+        {
+          "label": "tile_height",
+          "name": "tile_height",
+          "type": "INT",
+          "widget": {
+            "name": "tile_height"
+          },
+          "link": 16
+        }
+      ],
+      "outputs": [
+        {
+          "label": "IMAGES",
+          "name": "IMAGES",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            37,
+            58
+          ]
+        },
+        {
+          "label": "POSITIONS",
+          "name": "POSITIONS",
+          "type": "LIST",
+          "slot_index": 1,
+          "links": [
+            20
+          ]
+        },
+        {
+          "label": "ORIGINAL_SIZE",
+          "name": "ORIGINAL_SIZE",
+          "type": "TUPLE",
+          "slot_index": 2,
+          "links": [
+            21
+          ]
+        },
+        {
+          "label": "GRID_SIZE",
+          "name": "GRID_SIZE",
+          "type": "TUPLE",
+          "slot_index": 3,
+          "links": [
+            22
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "TTP_Image_Tile_Batch",
+        "cnr_id": "comfyui_ttp_toolset",
+        "ver": "13bd85fc5ea8c3c6ecf2170d613c2a099c0c0d5b"
+      },
+      "widgets_values": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "id": 77,
+      "type": "ShowText|pysssss",
+      "pos": {
+        "0": 3871.522705078125,
+        "1": 1797.70947265625
+      },
+      "size": {
+        "0": 645.400634765625,
+        "1": 382
+      },
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "文本",
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": 93
+        }
+      ],
+      "outputs": [
+        {
+          "label": "字符串",
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "slot_index": 0,
+          "links": [
+            94,
+            95
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "ShowText|pysssss",
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "bbda5e52ad580c13ceaa53136d9c2bed9137bd2e"
+      },
+      "widgets_values": [
+        "The image is a close-up of a person's back, with their head turned towards the right side of the frame. The person is wearing a large straw hat with a wide brim and a blue and white striped shirt underneath. The hat has a small white feather on top. The background is a clear blue sky with a hint of white clouds. In the distance, there is a hill covered in green trees. The hill appears to be slightly blurred, but it seems to be a part of a larger landscape. The image is taken from a low angle, looking up at the hill. The overall mood of the image is peaceful and serene.",
+        "The image is a close-up of a person's back, with their head turned towards the right side of the frame. The person is wearing a large straw hat with a wide brim and a blue and white striped shirt underneath. The hat has a small white feather on top. The background is a clear blue sky with a hint of white clouds. In the distance, there is a hill covered in green trees. The hill appears to be slightly blurred, but it seems to be a part of a larger landscape. The image is taken from a low angle, looking up at the hill. The overall mood of the image is peaceful and serene.",
+        "The image is a close-up portrait of a young girl's face. She is wearing a large, wide-brimmed straw hat with a wide brim and a white ribbon tied around the crown. The hat is resting on her head. She has blonde hair that is pulled back in a ponytail and is wearing blue denim overalls with a white t-shirt underneath. The girl is looking directly at the camera with a slight smile on her lips. The background is a light blue sky with a hint of white clouds. The overall mood of the image is peaceful and serene.",
+        "The image is a close-up of a person's lower body, from the waist down. The person is wearing a light blue denim dungaree with a white button-down shirt underneath. The background is blurred, but it appears to be a grassy field with a small tree in the distance. The grass is a vibrant green color and there is a dirt path running across the field. The image is taken from a low angle, looking up at the person's left hand. The overall mood of the image is peaceful and serene.",
+        "The image shows a close-up of a person's lower body, from the waist down. The person is wearing a light blue denim dungaree with two pockets on the front and two buttons on the back. The back of the person's shirt is white and has a ruffled collar. The background is a grassy field with trees and hills in the distance. The sky is overcast and the overall mood of the image is peaceful and serene.",
+        "The image shows a close-up of a person's lower body, from the knees down, standing on a grassy field. The person is wearing a light blue denim skirt and white sneakers. The grass is a vibrant green color and appears to be freshly mowed. The image is taken from a low angle, looking down on the grass. The focus is on the lower half of the image, where the person's legs are visible. The shoes are white with a lace-up design and appear to be made of leather. The background is blurred, but it seems to be an outdoor setting.",
+        "The image shows a close-up of a person's lower body, from the knees down, standing on a grassy field. The person is wearing light blue denim shorts and white sneakers. The grass is a mix of green and brown, with some areas appearing to be slightly faded and discolored. The shoes have a white sole and laces that are tied in a bow at the top. The image is taken from a low angle, looking down on the grass."
+      ]
+    },
+    {
+      "id": 7,
+      "type": "LoraLoaderModelOnly",
+      "pos": {
+        "0": 2494.2529296875,
+        "1": 2476.60986328125
+      },
+      "size": {
+        "0": 315,
+        "1": 82
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "模型",
+          "name": "model",
+          "type": "MODEL",
+          "link": 5
+        }
+      ],
+      "outputs": [
+        {
+          "label": "模型",
+          "name": "MODEL",
+          "type": "MODEL",
+          "slot_index": 0,
+          "links": [
+            64
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LoraLoaderModelOnly",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.15"
+      },
+      "widgets_values": [
+        "FLUX.1八步出图Lora提速版_FLUX.1八步出图Lora",
+        1
+      ],
+      "color": "#223",
+      "bgcolor": "#335",
+      "_widget_cache_map": {
+        "FLUX.1八步出图Lora提速版_FLUX.1八步出图Lora": {
+          "name": "FLUX.1八步出图Lora提速版_FLUX.1八步出图Lora",
+          "baseType": 19,
+          "value": "64b93fa067454d659000d35b2f19d79a"
+        }
+      }
+    },
+    {
+      "id": 53,
+      "type": "LoraLoaderModelOnly",
+      "pos": {
+        "0": 2494.2529296875,
+        "1": 2626.60986328125
+      },
+      "size": {
+        "0": 315,
+        "1": 82
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "模型",
+          "name": "model",
+          "type": "MODEL",
+          "link": 64
+        }
+      ],
+      "outputs": [
+        {
+          "label": "模型",
+          "name": "MODEL",
+          "type": "MODEL",
+          "slot_index": 0,
+          "links": [
+            188
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LoraLoaderModelOnly",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.15"
+      },
+      "widgets_values": [
+        "AWPortraitFL LoRA_1.0",
+        0.65
+      ],
+      "color": "#223",
+      "bgcolor": "#335",
+      "_widget_cache_map": {
+        "AWPortraitFL LoRA_1.0": {
+          "name": "AWPortraitFL LoRA_1.0",
+          "baseType": 19,
+          "value": "337719652f0542c9acd9cf8996015d26"
+        }
+      }
+    },
+    {
+      "id": 18,
+      "type": "LayerUtility: Florence2Image2Prompt",
+      "pos": {
+        "0": 2779.610107421875,
+        "1": 1704.9818115234375
+      },
+      "size": {
+        "0": 567,
+        "1": 198
+      },
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "florence2_model",
+          "name": "florence2_model",
+          "type": "FLORENCE2",
+          "link": 33
+        },
+        {
+          "label": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 115
+        }
+      ],
+      "outputs": [
+        {
+          "label": "text",
+          "name": "text",
+          "type": "STRING",
+          "slot_index": 0,
+          "links": [
+            93,
+            190
+          ]
+        },
+        {
+          "label": "preview_image",
+          "name": "preview_image",
+          "type": "IMAGE",
+          "slot_index": 1,
+          "links": [
+            116
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LayerUtility: Florence2Image2Prompt",
+        "cnr_id": "ComfyUI_LayerStyle_Advance",
+        "ver": "8e30d7d64f879928af812a8aa6de02c8524bdb9d"
+      },
+      "widgets_values": [
+        "more detailed caption",
+        "",
+        1024,
+        3,
+        false,
+        false
+      ],
+      "color": "rgba(38, 73, 116, 0.7)"
+    },
+    {
+      "id": 131,
+      "type": "ShowText|pysssss",
+      "pos": {
+        "0": 3870.54150390625,
+        "1": 1339.5023193359375
+      },
+      "size": {
+        "0": 645.400634765625,
+        "1": 382
+      },
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "文本",
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": 189
+        }
+      ],
+      "outputs": [
+        {
+          "label": "字符串",
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "slot_index": 0,
+          "links": []
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "ShowText|pysssss",
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "bbda5e52ad580c13ceaa53136d9c2bed9137bd2e"
+      },
+      "widgets_values": [
+        "画面是一张人物背部的特写，他的头部微微转向画面右侧。此人戴着一顶宽檐大草帽，内搭一件蓝白条纹相间的衬衫，帽子顶端还别着一根小小的白色羽毛。背景是澄澈的蓝天，点缀着几缕淡淡的白云。远处，一座被绿树覆盖的山丘隐约可见——山丘似乎略显模糊，却仿佛融入了更辽阔的自然景观之中。整幅画面采用低角度拍摄，目光仰望那座山丘，营造出一种宁静祥和的氛围。",
+        "画面是一张人物背部的特写，他的头部微微转向画面右侧。此人戴着一顶宽檐大草帽，内搭一件蓝白条纹相间的衬衫，帽子顶端还别着一根小小的白色羽毛。背景是澄澈的蓝天，点缀着几缕淡淡的白云。远处，一座被绿树覆盖的山丘隐约可见——山丘似乎略显模糊，却仿佛融入了更辽阔的自然景观之中。整幅画面采用低角度拍摄，目光仰望那座山丘，营造出一种宁静祥和的氛围。",
+        "画面是一幅年轻女孩的特写肖像。她戴着一顶宽大、帽檐宽阔的草帽，帽檐宽厚，帽顶还系着一条白色丝带。帽子稳稳地戴在她的头上。她的金色长发被整齐地束成马尾，内搭一件白色T恤，外罩蓝色牛仔背带裤。女孩正直视着镜头，嘴角微微上扬，露出一丝恬静的微笑。背景是一片浅蓝色的天空，点缀着几朵淡淡的白云。整幅画面洋溢着宁静祥和的氛围。",
+        "画面是一张人物下半身的特写，从腰部以下清晰呈现。此人身穿浅蓝色牛仔背带裤，内搭一件白色衬衫式衬衣。背景模糊不清，但隐约可见一片绿意盎然的草地，远处还有一棵小树。草地上铺着一条蜿蜒的小径，整幅画面以低角度拍摄，镜头仰视着人物的左手。整体氛围宁静祥和，令人倍感放松。",
+        "图像展示了一位人物下半身的特写，从腰部向下。此人身穿浅蓝色牛仔背带裤，正面有两个口袋，背面则有两颗纽扣。人物衬衫的背面是白色，并饰有荷叶边领口。背景是一片绿意盎然的草地，远处点缀着树木与丘陵。天空阴云密布，整幅画面呈现出宁静安详的氛围。",
+        "图像展示了一位人物下半身的特写，从膝盖以下，正站在一片绿草如茵的田野上。此人身穿浅蓝色牛仔裙，脚蹬白色运动鞋。草地呈现出鲜艳的绿色，看起来像是刚被修剪过。画面采用低角度拍摄，镜头俯视着地面的青草。焦点集中在画面的下半部分，清晰可见人物的双腿。鞋子为白色，带有系带设计，材质似乎是皮革。背景虽略显模糊，但整体显得是一处户外场景。",
+        "图片展示了一位人物下半身的特写，从膝盖以下，正站在一片绿草如茵的田野上。此人身穿浅蓝色牛仔短裤和白色运动鞋。草地呈现出绿色与棕色相间的色调，部分区域似乎略显褪色，颜色变得暗淡。鞋子底部为白色，鞋带则在顶部打成了一个蝴蝶结。这张照片是从低角度拍摄的，镜头俯视着地面的草地。"
+      ]
+    },
+    {
+      "id": 9,
+      "type": "KSampler",
+      "pos": {
+        "0": 3650.70361328125,
+        "1": 2450.89599609375
+      },
+      "size": {
+        "0": 315,
+        "1": 474
+      },
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "模型",
+          "name": "model",
+          "type": "MODEL",
+          "link": 188
+        },
+        {
+          "label": "正面条件",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 9
+        },
+        {
+          "label": "负面条件",
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 10
+        },
+        {
+          "label": "Latent",
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 12
+        }
+      ],
+      "outputs": [
+        {
+          "label": "Latent",
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            7
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "KSampler",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.15"
+      },
+      "widgets_values": [
+        1027884558308698,
+        "randomize",
+        8,
+        1,
+        "euler",
+        "beta",
+        0.42
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 130,
+      "type": "LibLibTranslate",
+      "pos": {
+        "0": 3401.2041015625,
+        "1": 1705.1756591796875
+      },
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "text",
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": 190
+        }
+      ],
+      "outputs": [
+        {
+          "label": "text",
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            189
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LibLibTranslate"
+      },
+      "widgets_values": [
+        "English",
+        "Chinese",
+        ""
+      ]
+    },
+    {
+      "id": 57,
+      "type": "Image Comparer (rgthree)",
+      "pos": {
+        "0": 5690.30224609375,
+        "1": 1269.7313232421875
+      },
+      "size": {
+        "0": 1375.157958984375,
+        "1": 1797.2515869140625
+      },
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "label": "图像_A",
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 69
+        },
+        {
+          "dir": 3,
+          "label": "图像_B",
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 70
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "comparer_mode": "Slide",
+        "cnr_id": "rgthree-comfy",
+        "ver": "32142fe476878a354dda6e2d4b5ea98960de3ced"
+      },
+      "widgets_values": [
+        [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "https://images-tmp-wm.liblib.cloud/sd-images/8c395eb13d81477622f439a1e844392320cbd902f79942ee543327eb685f1c9c.png?filename=sd-images/8c395eb13d81477622f439a1e844392320cbd902f79942ee543327eb685f1c9c.png&type=output&rand=0.8686857307263476"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "https://images-tmp-wm.liblib.cloud/sd-images/ae8031eb020cc6298bb4cad5060711574a4717205259c183f89a6e4d9c9fd9b3.png?filename=sd-images/ae8031eb020cc6298bb4cad5060711574a4717205259c183f89a6e4d9c9fd9b3.png&type=output&rand=0.8429106325422087"
+          }
+        ]
+      ]
+    },
+    {
+      "id": 11,
+      "type": "LoadImage",
+      "pos": {
+        "0": 1011.7461547851562,
+        "1": 1310.3779296875
+      },
+      "size": {
+        "0": 627.72412109375,
+        "1": 878.0042114257812
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            45,
+            70
+          ]
+        },
+        {
+          "label": "遮罩",
+          "name": "MASK",
+          "type": "MASK",
+          "slot_index": 1,
+          "links": null
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LoadImage",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.15"
+      },
+      "widgets_values": [
+        "bb5877505d420671c950f4f98a673edd948b1645ce55c2ce308efad3d6f9de42.jpg",
+        "image",
+        ""
+      ],
+      "color": "#223",
+      "bgcolor": "#335",
+      "_widget_cache_map": {
+        "por1originallow.jpg": {
+          "value": "img/a52ede581b7c47a1b88138a236c58b46/7d57c2c32fb6640134fb08347cfa04d1f53028e07a5276261461b3f308623ace.jpg",
+          "name": "por1originallow.jpg",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/a52ede581b7c47a1b88138a236c58b46/7d57c2c32fb6640134fb08347cfa04d1f53028e07a5276261461b3f308623ace.jpg",
+          "width": 1024,
+          "height": 1024
+        },
+        "view.png": {
+          "value": "img/a52ede581b7c47a1b88138a236c58b46/de84ddcd124c85d9f4d7c74de89798f15f079d52146c5f698d25b176fdda418b.png",
+          "name": "view.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/a52ede581b7c47a1b88138a236c58b46/de84ddcd124c85d9f4d7c74de89798f15f079d52146c5f698d25b176fdda418b.png",
+          "width": 896,
+          "height": 1160
+        },
+        "运动鞋替换洞洞鞋.png": {
+          "value": "img/0b4cddc1d531444e83e692b858d28c59/d0bc667f19a68c01271c8cbfbd6c84440e2869e8ff637b2923a5d64afd6556d4.png",
+          "name": "运动鞋替换洞洞鞋.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/0b4cddc1d531444e83e692b858d28c59/d0bc667f19a68c01271c8cbfbd6c84440e2869e8ff637b2923a5d64afd6556d4.png",
+          "width": 1024,
+          "height": 1024
+        },
+        "b6b6d122-55d3-4450-bb5f-8904216a4e4b.jpg": {
+          "value": "img/0b4cddc1d531444e83e692b858d28c59/137a5839f09c41579162cd4f9539574cf3cef801f89fb2cc2dc7c18310846c4c.jpg",
+          "name": "b6b6d122-55d3-4450-bb5f-8904216a4e4b.jpg",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/0b4cddc1d531444e83e692b858d28c59/137a5839f09c41579162cd4f9539574cf3cef801f89fb2cc2dc7c18310846c4c.jpg",
+          "width": 1024,
+          "height": 1024
+        },
+        "20250913_1541_包包彩饰缩小_remix_01k51082m5f6kre213r02wnzn9.jpg": {
+          "value": "img/0b4cddc1d531444e83e692b858d28c59/8689f6bd4c90dcbabb7f5ccbecd7b0123852bccef3cab17b7565baae6828a955.jpg",
+          "name": "20250913_1541_包包彩饰缩小_remix_01k51082m5f6kre213r02wnzn9.jpg",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/0b4cddc1d531444e83e692b858d28c59/8689f6bd4c90dcbabb7f5ccbecd7b0123852bccef3cab17b7565baae6828a955.jpg",
+          "width": 1024,
+          "height": 1024
+        },
+        "Generated Image September 13, 2025 - 4_37PM.png": {
+          "value": "img/0b4cddc1d531444e83e692b858d28c59/04756b35f81c2be9a81f770b65c26fc3a890fa11df454c2de38fef01a43514dc.png",
+          "name": "Generated Image September 13, 2025 - 4_37PM.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/0b4cddc1d531444e83e692b858d28c59/04756b35f81c2be9a81f770b65c26fc3a890fa11df454c2de38fef01a43514dc.png",
+          "width": 832,
+          "height": 1248
+        },
+        "bb5877505d420671c950f4f98a673edd948b1645ce55c2ce308efad3d6f9de42.jpg": {
+          "value": "img/0b4cddc1d531444e83e692b858d28c59/897053753209d0edf88e936292193f20a2a5dc704cd535c091ac101c51d0b4c4.jpg",
+          "name": "bb5877505d420671c950f4f98a673edd948b1645ce55c2ce308efad3d6f9de42.jpg",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/0b4cddc1d531444e83e692b858d28c59/897053753209d0edf88e936292193f20a2a5dc704cd535c091ac101c51d0b4c4.jpg",
+          "width": 800,
+          "height": 986
+        }
+      }
+    }
+  ],
+  "links": [
+    [
+      2,
+      3,
+      0,
+      2,
+      0,
+      "CLIP"
+    ],
+    [
+      4,
+      2,
+      0,
+      5,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      5,
+      8,
+      0,
+      7,
+      0,
+      "MODEL"
+    ],
+    [
+      7,
+      9,
+      0,
+      10,
+      0,
+      "LATENT"
+    ],
+    [
+      8,
+      4,
+      0,
+      10,
+      1,
+      "VAE"
+    ],
+    [
+      9,
+      2,
+      0,
+      9,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      10,
+      5,
+      0,
+      9,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      12,
+      12,
+      0,
+      9,
+      3,
+      "LATENT"
+    ],
+    [
+      13,
+      4,
+      0,
+      12,
+      1,
+      "VAE"
+    ],
+    [
+      15,
+      15,
+      0,
+      13,
+      1,
+      "INT"
+    ],
+    [
+      16,
+      15,
+      1,
+      13,
+      2,
+      "INT"
+    ],
+    [
+      20,
+      13,
+      1,
+      14,
+      1,
+      "LIST"
+    ],
+    [
+      21,
+      13,
+      2,
+      14,
+      2,
+      "TUPLE"
+    ],
+    [
+      22,
+      13,
+      3,
+      14,
+      3,
+      "TUPLE"
+    ],
+    [
+      33,
+      31,
+      0,
+      18,
+      0,
+      "FLORENCE2"
+    ],
+    [
+      35,
+      10,
+      0,
+      35,
+      0,
+      "IMAGE"
+    ],
+    [
+      37,
+      13,
+      0,
+      36,
+      0,
+      "IMAGE"
+    ],
+    [
+      45,
+      11,
+      0,
+      16,
+      0,
+      "IMAGE"
+    ],
+    [
+      50,
+      43,
+      0,
+      15,
+      0,
+      "IMAGE"
+    ],
+    [
+      51,
+      43,
+      0,
+      13,
+      0,
+      "IMAGE"
+    ],
+    [
+      52,
+      16,
+      0,
+      43,
+      1,
+      "IMAGE"
+    ],
+    [
+      53,
+      44,
+      0,
+      43,
+      0,
+      "UPSCALE_MODEL"
+    ],
+    [
+      58,
+      13,
+      0,
+      50,
+      0,
+      "IMAGE"
+    ],
+    [
+      64,
+      7,
+      0,
+      53,
+      0,
+      "MODEL"
+    ],
+    [
+      67,
+      16,
+      0,
+      55,
+      0,
+      "IMAGE"
+    ],
+    [
+      68,
+      43,
+      0,
+      56,
+      0,
+      "IMAGE"
+    ],
+    [
+      69,
+      14,
+      0,
+      57,
+      0,
+      "IMAGE"
+    ],
+    [
+      70,
+      11,
+      0,
+      57,
+      1,
+      "IMAGE"
+    ],
+    [
+      72,
+      10,
+      0,
+      58,
+      0,
+      "IMAGE"
+    ],
+    [
+      93,
+      18,
+      0,
+      77,
+      0,
+      "STRING"
+    ],
+    [
+      94,
+      77,
+      0,
+      2,
+      1,
+      "STRING"
+    ],
+    [
+      95,
+      77,
+      0,
+      2,
+      2,
+      "STRING"
+    ],
+    [
+      100,
+      16,
+      0,
+      81,
+      0,
+      "IMAGE"
+    ],
+    [
+      101,
+      43,
+      0,
+      82,
+      0,
+      "IMAGE"
+    ],
+    [
+      115,
+      36,
+      0,
+      18,
+      1,
+      "IMAGE"
+    ],
+    [
+      116,
+      18,
+      1,
+      12,
+      0,
+      "IMAGE"
+    ],
+    [
+      117,
+      35,
+      0,
+      14,
+      0,
+      "IMAGE"
+    ],
+    [
+      188,
+      53,
+      0,
+      9,
+      0,
+      "MODEL"
+    ],
+    [
+      189,
+      130,
+      0,
+      131,
+      0,
+      "STRING"
+    ],
+    [
+      190,
+      18,
+      0,
+      130,
+      0,
+      "STRING"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 8,
+      "title": "Lingzi_TTP分块超清放大4K",
+      "bounding": [
+        900,
+        1010,
+        6239.5205078125,
+        2135.625732421875
+      ],
+      "color": "#8AA",
+      "font_size": 80,
+      "flags": {}
+    },
+    {
+      "id": 1,
+      "title": "加载图像【1】",
+      "bounding": [
+        995.5093383789062,
+        1230.1119384765625,
+        661.2566528320312,
+        982.727783203125
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "尺寸控制+放大【3】",
+      "bounding": [
+        994.2527465820312,
+        2236.60986328125,
+        1460,
+        820
+      ],
+      "color": "#8A8",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "TTP分块处理【4】",
+      "bounding": [
+        1675.7734375,
+        1230.87890625,
+        777.4251098632812,
+        982.2120361328125
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 4,
+      "title": "图像分块提示词反推【5】",
+      "bounding": [
+        2473.971923828125,
+        1230.590087890625,
+        2116.677001953125,
+        983.4508056640625
+      ],
+      "color": "#88A",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 5,
+      "title": "模型加载【2】",
+      "bounding": [
+        2474.2529296875,
+        2236.60986328125,
+        350,
+        820
+      ],
+      "color": "#A88",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 6,
+      "title": "FL采样区【6】",
+      "bounding": [
+        2844.2529296875,
+        2236.60986328125,
+        1746.5205078125,
+        823.344970703125
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 7,
+      "title": "分块合并【7】",
+      "bounding": [
+        4611.486328125,
+        1234.713623046875,
+        1033.9180908203125,
+        1824.9708251953125
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.8769226950000125,
+      "offset": [
+        -760.5489039407994,
+        -1131.660810537055
+      ]
+    },
+    "ue_links": [],
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4,
+  "seed_widgets": {
+    "9": 0
+  },
+  "widget_idx_map": {
+    "9": {
+      "seed": 0,
+      "sampler_name": 4,
+      "scheduler": 5
+    }
+  }
+}

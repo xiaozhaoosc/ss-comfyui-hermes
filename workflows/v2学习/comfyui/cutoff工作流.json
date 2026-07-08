@@ -1,0 +1,1165 @@
+{
+  "last_node_id": 25,
+  "last_link_id": 38,
+  "nodes": [
+    {
+      "id": 7,
+      "type": "BNK_CutoffSetRegions",
+      "pos": [
+        1315,
+        529
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip_regions",
+          "type": "CLIPREGION",
+          "link": 3,
+          "label": "clip_regions"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CLIPREGION",
+          "type": "CLIPREGION",
+          "links": [
+            4
+          ],
+          "shape": 3,
+          "label": "CLIPREGION",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BNK_CutoffSetRegions"
+      },
+      "widgets_values": [
+        "red shoes",
+        "red",
+        1
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 8,
+      "type": "BNK_CutoffSetRegions",
+      "pos": [
+        893,
+        767
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip_regions",
+          "type": "CLIPREGION",
+          "link": 5,
+          "label": "clip_regions"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CLIPREGION",
+          "type": "CLIPREGION",
+          "links": [
+            6
+          ],
+          "shape": 3,
+          "label": "CLIPREGION",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BNK_CutoffSetRegions"
+      },
+      "widgets_values": [
+        "yellow eyes",
+        "yellow",
+        1
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 9,
+      "type": "BNK_CutoffSetRegions",
+      "pos": [
+        1316,
+        770
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip_regions",
+          "type": "CLIPREGION",
+          "link": 6,
+          "label": "clip_regions"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CLIPREGION",
+          "type": "CLIPREGION",
+          "links": [
+            9
+          ],
+          "shape": 3,
+          "label": "CLIPREGION",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BNK_CutoffSetRegions"
+      },
+      "widgets_values": [
+        " pink skirt",
+        " pink",
+        1
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 12,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        -588,
+        632
+      ],
+      "size": {
+        "0": 315,
+        "1": 98
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            25,
+            26
+          ],
+          "shape": 3,
+          "label": "MODEL",
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            8
+          ],
+          "shape": 3,
+          "label": "CLIP"
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": null,
+          "shape": 3,
+          "label": "VAE"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "ghostmix_v20Bakedvae.safetensors"
+      ]
+    },
+    {
+      "id": 11,
+      "type": "CLIPSetLastLayer",
+      "pos": [
+        -121,
+        653
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 8,
+          "label": "clip",
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            7,
+            13,
+            34
+          ],
+          "shape": 3,
+          "label": "CLIP",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPSetLastLayer"
+      },
+      "widgets_values": [
+        -1
+      ]
+    },
+    {
+      "id": 6,
+      "type": "BNK_CutoffSetRegions",
+      "pos": [
+        886,
+        523
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip_regions",
+          "type": "CLIPREGION",
+          "link": 4,
+          "label": "clip_regions"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CLIPREGION",
+          "type": "CLIPREGION",
+          "links": [
+            5
+          ],
+          "shape": 3,
+          "label": "CLIPREGION",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BNK_CutoffSetRegions"
+      },
+      "widgets_values": [
+        "blue hair",
+        "blue",
+        1
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 4,
+      "type": "BNK_CutoffSetRegions",
+      "pos": [
+        890,
+        284
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip_regions",
+          "type": "CLIPREGION",
+          "link": 1,
+          "label": "clip_regions"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CLIPREGION",
+          "type": "CLIPREGION",
+          "links": [
+            2
+          ],
+          "shape": 3,
+          "label": "CLIPREGION",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BNK_CutoffSetRegions"
+      },
+      "widgets_values": [
+        "white shirt",
+        "white",
+        1
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 14,
+      "type": "CLIPTextEncode",
+      "pos": [
+        418,
+        549
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 13,
+          "label": "clip"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            12,
+            36
+          ],
+          "shape": 3,
+          "label": "CONDITIONING",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 13,
+      "type": "BNK_CutoffRegionsToConditioning",
+      "pos": [
+        1769,
+        525
+      ],
+      "size": {
+        "0": 317.4000244140625,
+        "1": 106
+      },
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip_regions",
+          "type": "CLIPREGION",
+          "link": 9,
+          "label": "clip_regions"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            19
+          ],
+          "shape": 3,
+          "label": "CONDITIONING",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BNK_CutoffRegionsToConditioning"
+      },
+      "widgets_values": [
+        "",
+        1,
+        1
+      ]
+    },
+    {
+      "id": 17,
+      "type": "EmptyLatentImage",
+      "pos": [
+        1683,
+        1111
+      ],
+      "size": {
+        "0": 315,
+        "1": 106
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            21,
+            22
+          ],
+          "shape": 3,
+          "label": "LATENT",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        512,
+        512,
+        1
+      ]
+    },
+    {
+      "id": 18,
+      "type": "PrimitiveNode",
+      "pos": [
+        1791,
+        831
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            23,
+            24
+          ],
+          "widget": {
+            "name": "seed"
+          }
+        }
+      ],
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        278924309888523,
+        "randomize"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 1,
+      "type": "KSampler",
+      "pos": [
+        2195,
+        423
+      ],
+      "size": [
+        315,
+        262
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 25,
+          "label": "model"
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 19,
+          "label": "positive"
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 12,
+          "label": "negative",
+          "slot_index": 2
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 21,
+          "label": "latent_image",
+          "slot_index": 3
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 23,
+          "widget": {
+            "name": "seed"
+          },
+          "slot_index": 4
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            27
+          ],
+          "shape": 3,
+          "label": "LATENT",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        278924309888523,
+        "randomize",
+        20,
+        5,
+        "dpmpp_2m_sde_gpu",
+        "karras",
+        0.8
+      ]
+    },
+    {
+      "id": 10,
+      "type": "KSampler",
+      "pos": [
+        2199,
+        987
+      ],
+      "size": [
+        315,
+        262
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 26,
+          "label": "model"
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 35,
+          "label": "positive"
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 36,
+          "label": "negative",
+          "slot_index": 2
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 22,
+          "label": "latent_image"
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 24,
+          "widget": {
+            "name": "seed"
+          },
+          "slot_index": 4
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            29
+          ],
+          "shape": 3,
+          "label": "LATENT",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        278924309888523,
+        "randomize",
+        20,
+        5,
+        "dpmpp_2m_sde_gpu",
+        "karras",
+        0.8
+      ]
+    },
+    {
+      "id": 21,
+      "type": "VAELoader",
+      "pos": [
+        2193,
+        822
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            30,
+            31
+          ],
+          "shape": 3,
+          "label": "VAE",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "vae-ft-mse-840000-ema-pruned.safetensors"
+      ]
+    },
+    {
+      "id": 19,
+      "type": "VAEDecode",
+      "pos": [
+        2737,
+        720
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 27,
+          "label": "samples"
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 30,
+          "label": "vae",
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            37
+          ],
+          "shape": 3,
+          "label": "IMAGE",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 20,
+      "type": "VAEDecode",
+      "pos": [
+        2731,
+        997
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 29,
+          "label": "samples"
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 31,
+          "label": "vae"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            38
+          ],
+          "shape": 3,
+          "label": "IMAGE",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 2,
+      "type": "BNK_CutoffBasePrompt",
+      "pos": [
+        421,
+        280
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 7,
+          "label": "clip",
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CLIPREGION",
+          "type": "CLIPREGION",
+          "links": [
+            1
+          ],
+          "shape": 3,
+          "label": "CLIPREGION",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BNK_CutoffBasePrompt"
+      },
+      "widgets_values": [
+        "a cute girl, white shirt with green tie, red shoes, blue hair, yellow eyes, pink skirt,"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 15,
+      "type": "CLIPTextEncode",
+      "pos": [
+        413,
+        1064
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 34,
+          "label": "clip"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            35
+          ],
+          "shape": 3,
+          "label": "CONDITIONING",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "a cute girl, white shirt with green tie, red shoes, blue hair, yellow eyes, pink skirt,"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 25,
+      "type": "PreviewImage",
+      "pos": [
+        2941,
+        925
+      ],
+      "size": [
+        450.6250573730458,
+        491.6529284667961
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 38,
+          "label": "images"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 24,
+      "type": "PreviewImage",
+      "pos": [
+        2959,
+        449
+      ],
+      "size": [
+        432.27706787109264,
+        430.9788229370113
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 37,
+          "label": "images"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 5,
+      "type": "BNK_CutoffSetRegions",
+      "pos": [
+        1321,
+        287
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip_regions",
+          "type": "CLIPREGION",
+          "link": 2,
+          "label": "clip_regions"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CLIPREGION",
+          "type": "CLIPREGION",
+          "links": [
+            3
+          ],
+          "shape": 3,
+          "label": "CLIPREGION",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BNK_CutoffSetRegions"
+      },
+      "widgets_values": [
+        "green tie",
+        "green",
+        1
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    }
+  ],
+  "links": [
+    [
+      1,
+      2,
+      0,
+      4,
+      0,
+      "CLIPREGION"
+    ],
+    [
+      2,
+      4,
+      0,
+      5,
+      0,
+      "CLIPREGION"
+    ],
+    [
+      3,
+      5,
+      0,
+      7,
+      0,
+      "CLIPREGION"
+    ],
+    [
+      4,
+      7,
+      0,
+      6,
+      0,
+      "CLIPREGION"
+    ],
+    [
+      5,
+      6,
+      0,
+      8,
+      0,
+      "CLIPREGION"
+    ],
+    [
+      6,
+      8,
+      0,
+      9,
+      0,
+      "CLIPREGION"
+    ],
+    [
+      7,
+      11,
+      0,
+      2,
+      0,
+      "CLIP"
+    ],
+    [
+      8,
+      12,
+      1,
+      11,
+      0,
+      "CLIP"
+    ],
+    [
+      9,
+      9,
+      0,
+      13,
+      0,
+      "CLIPREGION"
+    ],
+    [
+      12,
+      14,
+      0,
+      1,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      13,
+      11,
+      0,
+      14,
+      0,
+      "CLIP"
+    ],
+    [
+      19,
+      13,
+      0,
+      1,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      21,
+      17,
+      0,
+      1,
+      3,
+      "LATENT"
+    ],
+    [
+      22,
+      17,
+      0,
+      10,
+      3,
+      "LATENT"
+    ],
+    [
+      23,
+      18,
+      0,
+      1,
+      4,
+      "INT"
+    ],
+    [
+      24,
+      18,
+      0,
+      10,
+      4,
+      "INT"
+    ],
+    [
+      25,
+      12,
+      0,
+      1,
+      0,
+      "MODEL"
+    ],
+    [
+      26,
+      12,
+      0,
+      10,
+      0,
+      "MODEL"
+    ],
+    [
+      27,
+      1,
+      0,
+      19,
+      0,
+      "LATENT"
+    ],
+    [
+      29,
+      10,
+      0,
+      20,
+      0,
+      "LATENT"
+    ],
+    [
+      30,
+      21,
+      0,
+      19,
+      1,
+      "VAE"
+    ],
+    [
+      31,
+      21,
+      0,
+      20,
+      1,
+      "VAE"
+    ],
+    [
+      34,
+      11,
+      0,
+      15,
+      0,
+      "CLIP"
+    ],
+    [
+      35,
+      15,
+      0,
+      10,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      36,
+      14,
+      0,
+      10,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      37,
+      19,
+      0,
+      24,
+      0,
+      "IMAGE"
+    ],
+    [
+      38,
+      20,
+      0,
+      25,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}

@@ -1,0 +1,93 @@
+{
+  "prompt": {
+    "1": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "todo/face/ken4.png"
+      }
+    },
+    "10": {
+      "class_type": "ImageResize+",
+      "inputs": {
+        "image": ["1", 0],
+        "width": 576,
+        "height": 1024,
+        "interpolation": "lanczos",
+        "method": "stretch",
+        "condition": "always",
+        "multiple_of": 8
+      }
+    },
+    "2": {
+      "class_type": "VHS_LoadVideo",
+      "inputs": {
+        "video": "Ms.琪大宝er/#很喜欢这段话.mp4",
+        "force_rate": 0,
+        "custom_width": 576,
+        "custom_height": 1024,
+        "frame_load_cap": 0,
+        "skip_first_frames": 0,
+        "select_every_nth": 1,
+        "meta_batch": null
+      }
+    },
+    "3": {
+      "class_type": "MimicMotionGetPoses",
+      "inputs": {
+        "ref_image": ["10", 0],
+        "pose_images": ["2", 0],
+        "include_body": true,
+        "include_hand": true,
+        "include_face": true
+      }
+    },
+    "4": {
+      "class_type": "DownloadAndLoadMimicMotionModel",
+      "inputs": {
+        "model": "MimicMotionMergedUnet_1-0-fp16.safetensors",
+        "precision": "fp16"
+      }
+    },
+    "5": {
+      "class_type": "MimicMotionSampler",
+      "inputs": {
+        "mimic_pipeline": ["4", 0],
+        "ref_image": ["10", 0],
+        "pose_images": ["3", 1],
+        "steps": 25,
+        "cfg_min": 2.0,
+        "cfg_max": 3.0,
+        "seed": 42,
+        "fps": 15,
+        "noise_aug_strength": 0.0,
+        "context_size": 16,
+        "context_overlap": 6,
+        "keep_model_loaded": true
+      }
+    },
+    "6": {
+      "class_type": "MimicMotionDecode",
+      "inputs": {
+        "mimic_pipeline": ["4", 0],
+        "samples": ["5", 0],
+        "decode_chunk_size": 4
+      }
+    },
+    "7": {
+      "class_type": "VHS_VideoCombine",
+      "inputs": {
+        "images": ["6", 0],
+        "frame_rate": 15,
+        "loop_count": 0,
+        "filename_prefix": "mimicmotion_test",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 19,
+        "save_metadata": true,
+        "pingpong": false,
+        "save_output": true
+      }
+    }
+  },
+  "client_id": "hermes-mimicmotion"
+}

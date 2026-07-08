@@ -1,0 +1,238 @@
+{
+  "last_node_id": 15,
+  "last_link_id": 18,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "CheckpointLoaderSimple",
+      "pos": [50, 50],
+      "size": [315, 98],
+      "properties": {},
+      "widgets_values": ["sd_xl_base_1.0.safetensors"],
+      "outputs": [
+        {"name": "MODEL", "type": "MODEL", "links": [1], "slot_index": 0},
+        {"name": "CLIP", "type": "CLIP", "links": [2, 3], "slot_index": 1},
+        {"name": "VAE", "type": "VAE", "links": [10, 14], "slot_index": 2}
+      ]
+    },
+    {
+      "id": 2,
+      "type": "LoadImage",
+      "pos": [50, 250],
+      "size": [315, 314],
+      "properties": {},
+      "widgets_values": ["ra_classify/14919943218349803596.jpg", "image"],
+      "outputs": [
+        {"name": "IMAGE", "type": "IMAGE", "links": [4, 7], "slot_index": 0},
+        {"name": "MASK", "type": "MASK", "links": null}
+      ]
+    },
+    {
+      "id": 3,
+      "type": "LoadImage",
+      "pos": [50, 600],
+      "size": [315, 314],
+      "properties": {},
+      "widgets_values": ["ra_masks/14919943218349803596_mask.png", "image"],
+      "outputs": [
+        {"name": "IMAGE", "type": "IMAGE", "links": null},
+        {"name": "MASK", "type": "MASK", "links": [5, 11]}
+      ]
+    },
+    {
+      "id": 4,
+      "type": "LoadImage",
+      "pos": [50, 950],
+      "size": [315, 314],
+      "properties": {},
+      "widgets_values": ["ra_test_samples/face_source.png", "image"],
+      "outputs": [
+        {"name": "IMAGE", "type": "IMAGE", "links": [6], "slot_index": 0},
+        {"name": "MASK", "type": "MASK", "links": null}
+      ]
+    },
+    {
+      "id": 5,
+      "type": "IPAdapterAdvanced",
+      "pos": [450, 50],
+      "size": [340, 280],
+      "properties": {},
+      "widgets_values": [0.85, "linear", 0.5, "V only"],
+      "inputs": [
+        {"name": "model", "type": "MODEL", "link": 1},
+        {"name": "ipadapter", "type": "IPADAPTER", "link": 8},
+        {"name": "image", "type": "IMAGE", "link": 6}
+      ],
+      "outputs": [
+        {"name": "MODEL", "type": "MODEL", "links": [9], "slot_index": 0},
+        {"name": "weight", "type": "FLOAT", "links": null}
+      ]
+    },
+    {
+      "id": 6,
+      "type": "IPAdapterModelLoader",
+      "pos": [450, 400],
+      "size": [315, 58],
+      "properties": {},
+      "widgets_values": ["ip-adapter-plus_sdxl_vit-h.safetensors"],
+      "outputs": [
+        {"name": "IPADAPTER", "type": "IPADAPTER", "links": [8], "slot_index": 0}
+      ]
+    },
+    {
+      "id": 7,
+      "type": "CLIPVisionLoader",
+      "pos": [450, 500],
+      "size": [315, 58],
+      "properties": {},
+      "widgets_values": ["CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors"],
+      "outputs": [
+        {"name": "CLIP_VISION", "type": "CLIP_VISION", "links": null}
+      ]
+    },
+    {
+      "id": 8,
+      "type": "CLIPTextEncode",
+      "pos": [850, 50],
+      "size": [400, 200],
+      "properties": {},
+      "widgets_values": ["beautiful woman, natural skin texture, photorealistic, high quality portrait, soft lighting, studio background"],
+      "inputs": [
+        {"name": "clip", "type": "CLIP", "link": 2}
+      ],
+      "outputs": [
+        {"name": "CONDITIONING", "type": "CONDITIONING", "links": [12], "slot_index": 0}
+      ]
+    },
+    {
+      "id": 9,
+      "type": "CLIPTextEncode",
+      "pos": [850, 280],
+      "size": [400, 200],
+      "properties": {},
+      "widgets_values": ["blurry, mosaic, pixelated, distorted face, bad quality, artifacts, watermark"],
+      "inputs": [
+        {"name": "clip", "type": "CLIP", "link": 3}
+      ],
+      "outputs": [
+        {"name": "CONDITIONING", "type": "CONDITIONING", "links": [13], "slot_index": 0}
+      ]
+    },
+    {
+      "id": 10,
+      "type": "VAEEncodeForInpaint",
+      "pos": [850, 520],
+      "size": [280, 80],
+      "properties": {},
+      "widgets_values": [64],
+      "inputs": [
+        {"name": "pixels", "type": "IMAGE", "link": 4},
+        {"name": "vae", "type": "VAE", "link": 10},
+        {"name": "mask", "type": "MASK", "link": 5}
+      ],
+      "outputs": [
+        {"name": "LATENT", "type": "LATENT", "links": [15], "slot_index": 0}
+      ]
+    },
+    {
+      "id": 11,
+      "type": "SetLatentNoiseMask",
+      "pos": [850, 640],
+      "size": [280, 60],
+      "properties": {},
+      "inputs": [
+        {"name": "samples", "type": "LATENT", "link": 15},
+        {"name": "mask", "type": "MASK", "link": 11}
+      ],
+      "outputs": [
+        {"name": "LATENT", "type": "LATENT", "links": [16], "slot_index": 0}
+      ]
+    },
+    {
+      "id": 12,
+      "type": "KSampler",
+      "pos": [1300, 50],
+      "size": [315, 262],
+      "properties": {},
+      "widgets_values": [42, "fixed", 30, 7.5, "euler", "normal", 0.75],
+      "inputs": [
+        {"name": "model", "type": "MODEL", "link": 9},
+        {"name": "positive", "type": "CONDITIONING", "link": 12},
+        {"name": "negative", "type": "CONDITIONING", "link": 13},
+        {"name": "latent_image", "type": "LATENT", "link": 16}
+      ],
+      "outputs": [
+        {"name": "LATENT", "type": "LATENT", "links": [17], "slot_index": 0}
+      ]
+    },
+    {
+      "id": 13,
+      "type": "VAEDecode",
+      "pos": [1650, 50],
+      "size": [210, 46],
+      "properties": {},
+      "inputs": [
+        {"name": "samples", "type": "LATENT", "link": 17},
+        {"name": "vae", "type": "VAE", "link": 14}
+      ],
+      "outputs": [
+        {"name": "IMAGE", "type": "IMAGE", "links": [18], "slot_index": 0}
+      ]
+    },
+    {
+      "id": 14,
+      "type": "ReActorFaceSwap",
+      "pos": [1900, 50],
+      "size": [315, 362],
+      "properties": {},
+      "widgets_values": [true, "inswapper_128.onnx", "retinaface_resnet50", "GFPGANv1.4.pth", 1.0, 0.5, "no", "no", "0", "0", 1],
+      "inputs": [
+        {"name": "input_image", "type": "IMAGE", "link": 18},
+        {"name": "source_image", "type": "IMAGE", "link": null}
+      ],
+      "outputs": [
+        {"name": "IMAGE", "type": "IMAGE", "links": null, "slot_index": 0}
+      ]
+    },
+    {
+      "id": 15,
+      "type": "SaveImage",
+      "pos": [2250, 50],
+      "size": [315, 270],
+      "properties": {},
+      "widgets_values": ["ra_inpaint_result"],
+      "inputs": [
+        {"name": "images", "type": "IMAGE", "link": null}
+      ]
+    }
+  ],
+  "links": [
+    [1, 1, 0, 5, 0, "MODEL"],
+    [2, 1, 1, 8, 0, "CLIP"],
+    [3, 1, 1, 9, 0, "CLIP"],
+    [4, 2, 0, 10, 0, "IMAGE"],
+    [5, 3, 1, 10, 2, "MASK"],
+    [6, 4, 0, 5, 2, "IMAGE"],
+    [8, 6, 0, 5, 1, "IPADAPTER"],
+    [9, 5, 0, 12, 0, "MODEL"],
+    [10, 1, 2, 10, 1, "VAE"],
+    [11, 3, 1, 11, 1, "MASK"],
+    [12, 8, 0, 12, 1, "CONDITIONING"],
+    [13, 9, 0, 12, 2, "CONDITIONING"],
+    [14, 1, 2, 13, 1, "VAE"],
+    [15, 10, 0, 11, 0, "LATENT"],
+    [16, 11, 0, 12, 3, "LATENT"],
+    [17, 12, 0, 13, 0, "LATENT"],
+    [18, 13, 0, 14, 0, "IMAGE"]
+  ],
+  "groups": [
+    {
+      "title": "A: Inpainting + IP-Adapter + ReActor",
+      "bounding": [20, -20, 2600, 1350],
+      "color": "#3f789e"
+    }
+  ],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}

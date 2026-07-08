@@ -1,0 +1,732 @@
+{
+  "last_node_id": 272,
+  "last_link_id": 600,
+  "nodes": [
+    {
+      "id": 252,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        -3750,
+        830
+      ],
+      "size": {
+        "0": 380,
+        "1": 100
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            565
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "模型"
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [],
+          "shape": 3,
+          "slot_index": 1,
+          "label": "CLIP"
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            557
+          ],
+          "shape": 3,
+          "slot_index": 2,
+          "label": "VAE"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "sd3_medium.safetensors"
+      ],
+      "serialize_values": [
+        null
+      ]
+    },
+    {
+      "id": 11,
+      "type": "TripleCLIPLoader",
+      "pos": [
+        -3310,
+        830
+      ],
+      "size": {
+        "0": 380,
+        "1": 110
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            5,
+            94
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "CLIP"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "TripleCLIPLoader"
+      },
+      "widgets_values": [
+        "clip_g.safetensors",
+        "clip_l.safetensors",
+        "t5xxl_fp16.safetensors"
+      ],
+      "serialize_values": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 13,
+      "type": "ModelSamplingSD3",
+      "pos": [
+        -3220,
+        470
+      ],
+      "size": {
+        "0": 310,
+        "1": 60
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 565,
+          "label": "model"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            591
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "MODEL"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ModelSamplingSD3"
+      },
+      "widgets_values": [
+        3
+      ],
+      "serialize_values": [
+        null
+      ]
+    },
+    {
+      "id": 271,
+      "type": "KSampler",
+      "pos": [
+        -1461,
+        739
+      ],
+      "size": [
+        310,
+        262
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 591,
+          "label": "模型"
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 595,
+          "label": "正面条件"
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 592,
+          "label": "负面条件"
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 593,
+          "label": "Latent"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            596
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "Latent"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        945512652412924,
+        "fixed",
+        28,
+        4.5,
+        "dpmpp_2m",
+        "sgm_uniform",
+        1
+      ],
+      "serialize_values": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 231,
+      "type": "VAEDecode",
+      "pos": [
+        -1017,
+        760
+      ],
+      "size": [
+        140,
+        46.370280634028404
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 596,
+          "label": "Latent"
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 557,
+          "label": "VAE"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            599
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "图像"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 233,
+      "type": "PreviewImage",
+      "pos": [
+        -800,
+        757
+      ],
+      "size": {
+        "0": 1020,
+        "1": 1040
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 599,
+          "label": "图像"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 135,
+      "type": "EmptySD3LatentImage",
+      "pos": [
+        -1845,
+        473
+      ],
+      "size": {
+        "0": 380,
+        "1": 130
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            593
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "LATENT"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptySD3LatentImage"
+      },
+      "widgets_values": [
+        1024,
+        1024,
+        1
+      ],
+      "serialize_values": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 67,
+      "type": "ConditioningZeroOut",
+      "pos": [
+        -2378,
+        958
+      ],
+      "size": {
+        "0": 290,
+        "1": 30
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 580,
+          "label": "条件"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            90
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "条件"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ConditioningZeroOut"
+      }
+    },
+    {
+      "id": 68,
+      "type": "ConditioningSetTimestepRange",
+      "pos": [
+        -2020,
+        961
+      ],
+      "size": {
+        "0": 290,
+        "1": 82
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 90,
+          "label": "条件"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            91
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "条件"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ConditioningSetTimestepRange"
+      },
+      "widgets_values": [
+        0.1,
+        1
+      ],
+      "serialize_values": [
+        null,
+        null
+      ]
+    },
+    {
+      "id": 69,
+      "type": "ConditioningCombine",
+      "pos": [
+        -1681,
+        1095
+      ],
+      "size": {
+        "0": 310,
+        "1": 50
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning_1",
+          "type": "CONDITIONING",
+          "link": 91,
+          "label": "条件1"
+        },
+        {
+          "name": "conditioning_2",
+          "type": "CONDITIONING",
+          "link": 92,
+          "label": "条件2"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            592
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "条件"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ConditioningCombine"
+      }
+    },
+    {
+      "id": 70,
+      "type": "ConditioningSetTimestepRange",
+      "pos": [
+        -2197,
+        1129
+      ],
+      "size": {
+        "0": 310,
+        "1": 82
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 600,
+          "slot_index": 0,
+          "label": "条件"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            92
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "条件"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ConditioningSetTimestepRange"
+      },
+      "widgets_values": [
+        0,
+        0.1
+      ],
+      "serialize_values": [
+        null,
+        null
+      ]
+    },
+    {
+      "id": 71,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -2790,
+        960
+      ],
+      "size": [
+        341.37023759481417,
+        198.28689021042942
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 94,
+          "label": "CLIP"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            580,
+            600
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "条件"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ],
+      "serialize_values": [
+        ""
+      ]
+    },
+    {
+      "id": 6,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -2772,
+        676
+      ],
+      "size": [
+        320.7500627571678,
+        230.7166126103051
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 5,
+          "label": "CLIP"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            595
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "条件"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "a female character with long, flowing hair that appears to be made of ethereal, swirling patterns resembling the Northern Lights or Aurora Borealis. The background is dominated by deep blues and purples, creating a mysterious and dramatic atmosphere. The character's face is serene, with pale skin and striking features. She wears a dark-colored outfit with subtle patterns. The overall style of the artwork is reminiscent of fantasy or supernatural genres"
+      ],
+      "serialize_values": [
+        "a female character with long, flowing hair that appears to be made of ethereal, swirling patterns resembling the Northern Lights or Aurora Borealis. The background is dominated by deep blues and purples, creating a mysterious and dramatic atmosphere. The character's face is serene, with pale skin and striking features. She wears a dark-colored outfit with subtle patterns. The overall style of the artwork is reminiscent of fantasy or supernatural genres"
+      ]
+    }
+  ],
+  "links": [
+    [
+      5,
+      11,
+      0,
+      6,
+      0,
+      "CLIP"
+    ],
+    [
+      90,
+      67,
+      0,
+      68,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      91,
+      68,
+      0,
+      69,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      92,
+      70,
+      0,
+      69,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      94,
+      11,
+      0,
+      71,
+      0,
+      "CLIP"
+    ],
+    [
+      557,
+      252,
+      2,
+      231,
+      1,
+      "VAE"
+    ],
+    [
+      565,
+      252,
+      0,
+      13,
+      0,
+      "MODEL"
+    ],
+    [
+      580,
+      71,
+      0,
+      67,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      591,
+      13,
+      0,
+      271,
+      0,
+      "MODEL"
+    ],
+    [
+      592,
+      69,
+      0,
+      271,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      593,
+      135,
+      0,
+      271,
+      3,
+      "LATENT"
+    ],
+    [
+      595,
+      6,
+      0,
+      271,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      596,
+      271,
+      0,
+      231,
+      0,
+      "LATENT"
+    ],
+    [
+      599,
+      231,
+      0,
+      233,
+      0,
+      "IMAGE"
+    ],
+    [
+      600,
+      71,
+      0,
+      70,
+      0,
+      "CONDITIONING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.5989500000000031,
+      "offset": {
+        "0": 3395.8498985268934,
+        "1": -255.11805117239476
+      }
+    }
+  },
+  "version": 0.4
+}

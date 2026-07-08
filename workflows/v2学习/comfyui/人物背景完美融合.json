@@ -1,0 +1,1045 @@
+{
+  "id": "13ca4beb-e336-4089-96b0-2e8f19e61cd3",
+  "revision": 0,
+  "last_node_id": 29,
+  "last_link_id": 46,
+  "nodes": [
+    {
+      "id": 7,
+      "type": "CLIPTextEncode",
+      "pos": {
+        "0": 515.3430786132812,
+        "1": 407.5027160644531
+      },
+      "size": {
+        "0": 413.73773193359375,
+        "1": 142.72357177734375
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "CLIP",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 5
+        }
+      ],
+      "outputs": [
+        {
+          "label": "条件",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            10
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "text, watermark"
+      ]
+    },
+    {
+      "id": 4,
+      "type": "CheckpointLoaderSimple",
+      "pos": {
+        "0": 519.347412109375,
+        "1": 598.1818237304688
+      },
+      "size": {
+        "0": 407.4482727050781,
+        "1": 106.78072357177734
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "模型",
+          "name": "MODEL",
+          "type": "MODEL",
+          "slot_index": 0,
+          "links": [
+            46
+          ]
+        },
+        {
+          "label": "CLIP",
+          "name": "CLIP",
+          "type": "CLIP",
+          "slot_index": 1,
+          "links": [
+            3,
+            5
+          ]
+        },
+        {
+          "label": "VAE",
+          "name": "VAE",
+          "type": "VAE",
+          "slot_index": 2,
+          "links": [
+            29,
+            30,
+            31,
+            33
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "dreamshaper_8_v8"
+      ],
+      "_widget_cache_map": {
+        "AWPainting_v1.3": {
+          "name": "AWPainting_v1.4",
+          "value": "ea3f612759734012bdcc5134780825e4"
+        },
+        "dreamshaper_8_v8": {
+          "name": "dreamshaper_8_v8",
+          "baseType": 1,
+          "value": "682d87c61fa447d49b06931b626d17ae"
+        }
+      }
+    },
+    {
+      "id": 11,
+      "type": "VAEEncode",
+      "pos": {
+        "0": 944.14697265625,
+        "1": 595.5844116210938
+      },
+      "size": {
+        "0": 372.4429931640625,
+        "1": 114.23863220214844
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 15
+        },
+        {
+          "label": "VAE",
+          "name": "vae",
+          "type": "VAE",
+          "link": 30
+        }
+      ],
+      "outputs": [
+        {
+          "label": "Latent",
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            13
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "VAEEncode"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 10,
+      "type": "ICLightConditioning",
+      "pos": {
+        "0": 938.9520874023438,
+        "1": 403.71160888671875
+      },
+      "size": {
+        "0": 367.06060791015625,
+        "1": 150.5438232421875
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "正面条件",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 11
+        },
+        {
+          "label": "负面条件",
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 10
+        },
+        {
+          "label": "VAE",
+          "name": "vae",
+          "type": "VAE",
+          "link": 33
+        },
+        {
+          "label": "前景Latent",
+          "name": "foreground",
+          "type": "LATENT",
+          "link": 13
+        },
+        {
+          "label": "背景Latent(可选)",
+          "name": "opt_background",
+          "shape": 7,
+          "type": "LATENT",
+          "link": 16
+        }
+      ],
+      "outputs": [
+        {
+          "label": "正面条件",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            23
+          ]
+        },
+        {
+          "label": "负面条件",
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": [
+            22
+          ]
+        },
+        {
+          "label": "空Latent",
+          "name": "empty_latent",
+          "type": "LATENT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "ICLightConditioning"
+      },
+      "widgets_values": [
+        0.2
+      ]
+    },
+    {
+      "id": 16,
+      "type": "LoadAndApplyICLightUnet",
+      "pos": {
+        "0": 933.471923828125,
+        "1": 220.5340576171875
+      },
+      "size": {
+        "0": 375.3359375,
+        "1": 133.76498413085938
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "模型",
+          "name": "model",
+          "type": "MODEL",
+          "link": 46
+        }
+      ],
+      "outputs": [
+        {
+          "label": "模型",
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            19
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LoadAndApplyICLightUnet"
+      },
+      "widgets_values": [
+        "iclight_sd15_fbc.safetensors"
+      ]
+    },
+    {
+      "id": 8,
+      "type": "VAEDecode",
+      "pos": {
+        "0": 1318.7933349609375,
+        "1": 226.53546142578125
+      },
+      "size": {
+        "0": 378.08770751953125,
+        "1": 132.5526580810547
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "Latent",
+          "name": "samples",
+          "type": "LATENT",
+          "link": 7
+        },
+        {
+          "label": "VAE",
+          "name": "vae",
+          "type": "VAE",
+          "link": 29
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            9
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "VAEDecode"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 14,
+      "type": "VAEEncode",
+      "pos": {
+        "0": 1321.9783935546875,
+        "1": 408.44085693359375
+      },
+      "size": {
+        "0": 381.47454833984375,
+        "1": 137.06854248046875
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 17
+        },
+        {
+          "label": "VAE",
+          "name": "vae",
+          "type": "VAE",
+          "link": 31
+        }
+      ],
+      "outputs": [
+        {
+          "label": "Latent",
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            16
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "VAEEncode"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 28,
+      "type": "GetImageSize+",
+      "pos": {
+        "0": 1334.781494140625,
+        "1": 591.7985229492188
+      },
+      "size": {
+        "0": 378.0876770019531,
+        "1": 117.4298095703125
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 39
+        }
+      ],
+      "outputs": [
+        {
+          "label": "宽度",
+          "name": "width",
+          "type": "INT",
+          "links": [
+            44
+          ]
+        },
+        {
+          "label": "高度",
+          "name": "height",
+          "type": "INT",
+          "links": [
+            45
+          ]
+        },
+        {
+          "name": "count",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "GetImageSize+"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 3,
+      "type": "KSampler",
+      "pos": {
+        "0": 1734.4046630859375,
+        "1": 424.62646484375
+      },
+      "size": {
+        "0": 348.8681945800781,
+        "1": 282.07012939453125
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "模型",
+          "name": "model",
+          "type": "MODEL",
+          "link": 19
+        },
+        {
+          "label": "正面条件",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 23
+        },
+        {
+          "label": "负面条件",
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 22
+        },
+        {
+          "label": "Latent",
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 43
+        }
+      ],
+      "outputs": [
+        {
+          "label": "Latent",
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            7
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        327825352486149,
+        "fixed",
+        25,
+        6,
+        "dpmpp_2m",
+        "karras",
+        0.9
+      ]
+    },
+    {
+      "id": 29,
+      "type": "EmptyLatentImage",
+      "pos": {
+        "0": 1724.6102294921875,
+        "1": 231.25344848632812
+      },
+      "size": {
+        "0": 354.0034484863281,
+        "1": 144.0078887939453
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "宽度",
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 44
+        },
+        {
+          "label": "高度",
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 45
+        }
+      ],
+      "outputs": [
+        {
+          "label": "Latent",
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            43
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        512,
+        512,
+        1
+      ]
+    },
+    {
+      "id": 13,
+      "type": "LoadImage",
+      "pos": {
+        "0": 514.3374633789062,
+        "1": -495.44525146484375
+      },
+      "size": {
+        "0": 815.223876953125,
+        "1": 594.8096313476562
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            15
+          ]
+        },
+        {
+          "label": "遮罩",
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "527600441-f44f76de3488f7e36972f083e1f02cbc46285d68c08ce3945aed8f45b361cdd2.png",
+        "image",
+        ""
+      ],
+      "_widget_cache_map": {
+        "527600441-f44f76de3488f7e36972f083e1f02cbc46285d68c08ce3945aed8f45b361cdd2.png": {
+          "value": "img/efff83557a234f92a63b790859244230/f44f76de3488f7e36972f083e1f02cbc46285d68c08ce3945aed8f45b361cdd2.png",
+          "name": "527600441-f44f76de3488f7e36972f083e1f02cbc46285d68c08ce3945aed8f45b361cdd2.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/efff83557a234f92a63b790859244230/f44f76de3488f7e36972f083e1f02cbc46285d68c08ce3945aed8f45b361cdd2.png",
+          "width": 1024,
+          "height": 1024
+        }
+      }
+    },
+    {
+      "id": 15,
+      "type": "LoadImage",
+      "pos": {
+        "0": 1375.3619384765625,
+        "1": -510.85357666015625
+      },
+      "size": {
+        "0": 712.3577270507812,
+        "1": 599.6818237304688
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            17,
+            39
+          ]
+        },
+        {
+          "label": "遮罩",
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "国风山水.png",
+        "image",
+        ""
+      ],
+      "_widget_cache_map": {
+        "84858f69c2941a6f736ac0f98a0b342b27ed8a0300f6bbee4d7eb03f2a88fe66-1756392260577.png": {
+          "value": "img/efff83557a234f92a63b790859244230/84858f69c2941a6f736ac0f98a0b342b27ed8a0300f6bbee4d7eb03f2a88fe66.png",
+          "name": "84858f69c2941a6f736ac0f98a0b342b27ed8a0300f6bbee4d7eb03f2a88fe66-1756392260577.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/efff83557a234f92a63b790859244230/84858f69c2941a6f736ac0f98a0b342b27ed8a0300f6bbee4d7eb03f2a88fe66.png",
+          "width": 1024,
+          "height": 1536
+        },
+        "花朵.png": {
+          "value": "img/efff83557a234f92a63b790859244230/cc34650d8e0509c19b7bf4e75d00144c4a8d7042f50192e685c33edce59c1b9b.png",
+          "name": "花朵.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/efff83557a234f92a63b790859244230/cc34650d8e0509c19b7bf4e75d00144c4a8d7042f50192e685c33edce59c1b9b.png",
+          "width": 1024,
+          "height": 1024
+        },
+        "国风山水.png": {
+          "value": "img/efff83557a234f92a63b790859244230/1a5dae44fecd8bc69d387cf0d1df634369927cbd963c359c76b159805daba6cf.png",
+          "name": "国风山水.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/efff83557a234f92a63b790859244230/1a5dae44fecd8bc69d387cf0d1df634369927cbd963c359c76b159805daba6cf.png",
+          "width": 1024,
+          "height": 1024
+        }
+      }
+    },
+    {
+      "id": 6,
+      "type": "CLIPTextEncode",
+      "pos": {
+        "0": 518.33642578125,
+        "1": 215.1450958251953
+      },
+      "size": {
+        "0": 406.5380554199219,
+        "1": 141.48326110839844
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "CLIP",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 3
+        }
+      ],
+      "outputs": [
+        {
+          "label": "条件",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            11
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "Masterpiece, Ultra HD, 8K, a girl"
+      ]
+    },
+    {
+      "id": 9,
+      "type": "SaveImage",
+      "pos": {
+        "0": 2123.805908203125,
+        "1": -542.1229858398438
+      },
+      "size": {
+        "0": 1310.563720703125,
+        "1": 1262.4171142578125
+      },
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 9
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "ComfyUI",
+        ""
+      ]
+    }
+  ],
+  "links": [
+    [
+      3,
+      4,
+      1,
+      6,
+      0,
+      "CLIP"
+    ],
+    [
+      5,
+      4,
+      1,
+      7,
+      0,
+      "CLIP"
+    ],
+    [
+      7,
+      3,
+      0,
+      8,
+      0,
+      "LATENT"
+    ],
+    [
+      9,
+      8,
+      0,
+      9,
+      0,
+      "IMAGE"
+    ],
+    [
+      10,
+      7,
+      0,
+      10,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      11,
+      6,
+      0,
+      10,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      13,
+      11,
+      0,
+      10,
+      3,
+      "LATENT"
+    ],
+    [
+      15,
+      13,
+      0,
+      11,
+      0,
+      "IMAGE"
+    ],
+    [
+      16,
+      14,
+      0,
+      10,
+      4,
+      "LATENT"
+    ],
+    [
+      17,
+      15,
+      0,
+      14,
+      0,
+      "IMAGE"
+    ],
+    [
+      19,
+      16,
+      0,
+      3,
+      0,
+      "MODEL"
+    ],
+    [
+      22,
+      10,
+      1,
+      3,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      23,
+      10,
+      0,
+      3,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      29,
+      4,
+      2,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      30,
+      4,
+      2,
+      11,
+      1,
+      "VAE"
+    ],
+    [
+      31,
+      4,
+      2,
+      14,
+      1,
+      "VAE"
+    ],
+    [
+      33,
+      4,
+      2,
+      10,
+      2,
+      "VAE"
+    ],
+    [
+      39,
+      15,
+      0,
+      28,
+      0,
+      "IMAGE"
+    ],
+    [
+      43,
+      29,
+      0,
+      3,
+      3,
+      "LATENT"
+    ],
+    [
+      44,
+      28,
+      0,
+      29,
+      0,
+      "INT"
+    ],
+    [
+      45,
+      28,
+      1,
+      29,
+      1,
+      "INT"
+    ],
+    [
+      46,
+      4,
+      0,
+      16,
+      0,
+      "MODEL"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "前景图",
+      "bounding": [
+        508.01055908203125,
+        -583.7376098632812,
+        835.2238159179688,
+        678.4096069335938
+      ],
+      "color": "#3f789e",
+      "font_size": 35,
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "背景图",
+      "bounding": [
+        1361.68896484375,
+        -588.1266479492188,
+        732.357666015625,
+        683.2817993164062
+      ],
+      "color": "#3f789e",
+      "font_size": 35,
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "工作区",
+      "bounding": [
+        505.34307861328125,
+        141.54498291015625,
+        1587.929931640625,
+        578.2777709960938
+      ],
+      "color": "#3f789e",
+      "font_size": 35,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.45000000000000573,
+      "offset": [
+        -16.884132852962352,
+        643.9164868871499
+      ]
+    },
+    "ue_links": [],
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}

@@ -1,0 +1,1997 @@
+{
+  "id": "108d7570-2216-4b76-80f1-db6ffbca701b",
+  "revision": 0,
+  "last_node_id": 35,
+  "last_link_id": 33,
+  "nodes": [
+    {
+      "id": 10,
+      "type": "CLIPTextEncode",
+      "pos": {
+        "0": 3166.21728515625,
+        "1": 980.8507080078125
+      },
+      "size": {
+        "0": 337.81170654296875,
+        "1": 132.77113342285156
+      },
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "CLIP",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 10
+        },
+        {
+          "label": "文本",
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": 11
+        }
+      ],
+      "outputs": [
+        {
+          "label": "条件",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            12,
+            14
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "CLIPTextEncode",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.38",
+        "widget_ue_connectable": {
+          "text": true
+        }
+      },
+      "widgets_values": [
+        "Using this elegant style, create a portrait of a swan wearing a pearl tiara and lace collar, maintaining the same refined quality and soft color tones."
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 11,
+      "type": "ConditioningZeroOut",
+      "pos": {
+        "0": 3166.21728515625,
+        "1": 689.4686279296875
+      },
+      "size": {
+        "0": 340.0658874511719,
+        "1": 77.49588775634766
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "条件",
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 12
+        }
+      ],
+      "outputs": [
+        {
+          "label": "条件",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            20
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "ConditioningZeroOut",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.39",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 12,
+      "type": "FluxGuidance",
+      "pos": {
+        "0": 3166.21728515625,
+        "1": 483.5387268066406
+      },
+      "size": {
+        "0": 341.6086120605469,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "条件",
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 13
+        }
+      ],
+      "outputs": [
+        {
+          "label": "条件",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            19
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "FluxGuidance",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.38",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        3.5
+      ]
+    },
+    {
+      "id": 13,
+      "type": "ReferenceLatent",
+      "pos": {
+        "0": 3166.21728515625,
+        "1": 387.76666259765625
+      },
+      "size": {
+        "0": 345.1275634765625,
+        "1": 55.57568359375
+      },
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "conditioning",
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 14
+        },
+        {
+          "label": "latent",
+          "name": "latent",
+          "shape": 7,
+          "type": "LATENT",
+          "link": 15
+        }
+      ],
+      "outputs": [
+        {
+          "label": "CONDITIONING",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            13
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "ReferenceLatent",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.41",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 14,
+      "type": "VAELoader",
+      "pos": {
+        "0": 2817.9521484375,
+        "1": 979.030517578125
+      },
+      "size": {
+        "0": 342.72509765625,
+        "1": 132.34718322753906
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "VAE",
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            17,
+            24
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "VAELoader",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.38",
+        "models": [
+          {
+            "name": "ae.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/Lumina_Image_2.0_Repackaged/resolve/main/split_files/vae/ae.safetensors",
+            "directory": "vae"
+          }
+        ],
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "ae.sft"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 15,
+      "type": "DualCLIPLoader",
+      "pos": {
+        "0": 2817.9521484375,
+        "1": 810.9843139648438
+      },
+      "size": {
+        "0": 337.76861572265625,
+        "1": 130
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "CLIP",
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            10
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "DualCLIPLoader",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.38",
+        "models": [
+          {
+            "name": "clip_l.safetensors",
+            "url": "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/clip_l.safetensors",
+            "directory": "text_encoders"
+          },
+          {
+            "name": "t5xxl_fp8_e4m3fn_scaled.safetensors",
+            "url": "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp8_e4m3fn_scaled.safetensors",
+            "directory": "text_encoders"
+          }
+        ],
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "clip_l",
+        "t5xxl_fp8_e4m3fn",
+        "flux",
+        "default"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 16,
+      "type": "UNETLoader",
+      "pos": {
+        "0": 2817.9521484375,
+        "1": 687.6741333007812
+      },
+      "size": {
+        "0": 337.76861572265625,
+        "1": 82
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "模型",
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            28
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "UNETLoader",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.38",
+        "models": [
+          {
+            "name": "flux1-dev-kontext_fp8_scaled.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/flux1-kontext-dev_ComfyUI/resolve/main/split_files/diffusion_models/flux1-dev-kontext_fp8_scaled.safetensors",
+            "directory": "diffusion_models"
+          }
+        ],
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "F.1 Kontext dev_fp8",
+        "default"
+      ],
+      "color": "#322",
+      "bgcolor": "#533",
+      "_widget_cache_map": {
+        "F.1 Kontext dev_fp8": {
+          "name": "F.1 Kontext dev_fp8",
+          "baseType": 31,
+          "value": "055884abd26243c688e0827eada6df6b"
+        },
+        "墨沫实用 F.1 Kontext dev _V1": {
+          "name": "墨沫实用 F.1 Kontext dev _V1",
+          "baseType": 31,
+          "value": "f48854d29aad4d809822281e66351a68"
+        },
+        "墨沫创意风F.1-Kontext_墨沫创意风-Kontext": {
+          "name": "墨沫创意风F.1-Kontext_墨沫创意风-Kontext",
+          "baseType": 31,
+          "value": "3072ec027287485aadd6e7f552e79ceb"
+        },
+        "F.1 Kontext_full": {
+          "name": "F.1 Kontext_full",
+          "baseType": 31,
+          "value": "c4dc9e3510a741ce997883572c78805e"
+        }
+      }
+    },
+    {
+      "id": 17,
+      "type": "LoadImage",
+      "pos": {
+        "0": 977.7105102539062,
+        "1": 933.7353515625
+      },
+      "size": {
+        "0": 383.541015625,
+        "1": 314
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "label": "遮罩",
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "未标题-1.png",
+        "image",
+        ""
+      ],
+      "_widget_cache_map": {
+        "未标题-1.png": {
+          "value": "img/eea83b9a292e4debbe028d25f1e51dbe/b5c5921c8c57c919caff12c4d44661a73f9aafb9fc19e3b736cb74aef0a3bc3c.png",
+          "name": "未标题-1.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/eea83b9a292e4debbe028d25f1e51dbe/b5c5921c8c57c919caff12c4d44661a73f9aafb9fc19e3b736cb74aef0a3bc3c.png",
+          "width": 1024,
+          "height": 378
+        }
+      }
+    },
+    {
+      "id": 18,
+      "type": "VAEEncode",
+      "pos": {
+        "0": 3168.4248046875,
+        "1": 583.9995727539062
+      },
+      "size": {
+        "0": 339.4806823730469,
+        "1": 67.555419921875
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 16
+        },
+        {
+          "label": "VAE",
+          "name": "vae",
+          "type": "VAE",
+          "link": 17
+        }
+      ],
+      "outputs": [
+        {
+          "label": "Latent",
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            15,
+            21
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "VAEEncode",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.39",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 19,
+      "type": "KSampler",
+      "pos": {
+        "0": 1800.70849609375,
+        "1": 725.7798461914062
+      },
+      "size": {
+        "0": 402.2265930175781,
+        "1": 290.6186828613281
+      },
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "模型",
+          "name": "model",
+          "type": "MODEL",
+          "link": 18
+        },
+        {
+          "label": "正面条件",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 19
+        },
+        {
+          "label": "负面条件",
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 20
+        },
+        {
+          "label": "Latent",
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 21
+        }
+      ],
+      "outputs": [
+        {
+          "label": "Latent",
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            23
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "KSampler",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.38",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        245686049363399,
+        "randomize",
+        30,
+        1,
+        "euler",
+        "simple",
+        1
+      ]
+    },
+    {
+      "id": 20,
+      "type": "FluxKontextImageScale",
+      "pos": {
+        "0": 3169.655517578125,
+        "1": 815.449462890625
+      },
+      "size": {
+        "0": 342.5912780761719,
+        "1": 132.2813262939453
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 22
+        }
+      ],
+      "outputs": [
+        {
+          "label": "IMAGE",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            16
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "FluxKontextImageScale",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.38",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 21,
+      "type": "VAEDecode",
+      "pos": {
+        "0": 2820.23291015625,
+        "1": 398.5520324707031
+      },
+      "size": {
+        "0": 328.3342590332031,
+        "1": 242.58782958984375
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "Latent",
+          "name": "samples",
+          "type": "LATENT",
+          "link": 23
+        },
+        {
+          "label": "VAE",
+          "name": "vae",
+          "type": "VAE",
+          "link": 24
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            25,
+            27
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "VAEDecode",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.38",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 22,
+      "type": "SaveImage",
+      "pos": {
+        "0": 1372.6556396484375,
+        "1": 387.844970703125
+      },
+      "size": {
+        "0": 396.30377197265625,
+        "1": 497.869873046875
+      },
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 25
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "SaveImage",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.39",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "pl-kontext-dev"
+      ]
+    },
+    {
+      "id": 23,
+      "type": "Image Comparer (rgthree)",
+      "pos": {
+        "0": 2261.52587890625,
+        "1": 764.9334106445312
+      },
+      "size": {
+        "0": 497.79217529296875,
+        "1": 499.2802734375
+      },
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "label": "图像_A",
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 26
+        },
+        {
+          "dir": 3,
+          "label": "图像_B",
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 27
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "comparer_mode": "Slide"
+      },
+      "widgets_values": [
+        [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "https://images-tmp-wm.liblib.cloud/sd-images/6c5ea088ab88b0683143128bfa476a2232c4e187de8fdc8db307237b05ba21fa.png?filename=sd-images/6c5ea088ab88b0683143128bfa476a2232c4e187de8fdc8db307237b05ba21fa.png&type=output&rand=0.7636902333126224"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "https://images-tmp-wm.liblib.cloud/sd-images/edefa9b17e5b652d0925889c4f0f7e34bcf015e45bbf7e9fd955939beb28cefd.png?filename=sd-images/edefa9b17e5b652d0925889c4f0f7e34bcf015e45bbf7e9fd955939beb28cefd.png&type=output&rand=0.4150865397061938"
+          }
+        ]
+      ]
+    },
+    {
+      "id": 26,
+      "type": "LayerUtility: ImageScaleByAspectRatio V2",
+      "pos": {
+        "0": 2260.083251953125,
+        "1": 391.41790771484375
+      },
+      "size": {
+        "0": 495.94830322265625,
+        "1": 330
+      },
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 29
+        },
+        {
+          "label": "遮罩",
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            22,
+            26
+          ]
+        },
+        {
+          "label": "遮罩",
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        },
+        {
+          "label": "原始大小",
+          "name": "original_size",
+          "type": "BOX",
+          "links": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LayerUtility: ImageScaleByAspectRatio V2"
+      },
+      "widgets_values": [
+        "original",
+        1,
+        1,
+        "letterbox",
+        "lanczos",
+        "8",
+        "None",
+        1024,
+        "#000000"
+      ],
+      "color": "rgba(38, 73, 116, 0.7)"
+    },
+    {
+      "id": 28,
+      "type": "LoadImage",
+      "pos": {
+        "0": 1371.8533935546875,
+        "1": 931.5728149414062
+      },
+      "size": {
+        "0": 383.541015625,
+        "1": 314
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "label": "遮罩",
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "23.png",
+        "image",
+        ""
+      ],
+      "_widget_cache_map": {
+        "未标题-1.png": {
+          "value": "img/eea83b9a292e4debbe028d25f1e51dbe/b5c5921c8c57c919caff12c4d44661a73f9aafb9fc19e3b736cb74aef0a3bc3c.png",
+          "name": "未标题-1.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/eea83b9a292e4debbe028d25f1e51dbe/b5c5921c8c57c919caff12c4d44661a73f9aafb9fc19e3b736cb74aef0a3bc3c.png",
+          "width": 1024,
+          "height": 378
+        },
+        "23.png": {
+          "value": "img/eea83b9a292e4debbe028d25f1e51dbe/c7550c614e138f70d0945bd24d0a56271374e9f9eda83f6e611c7c187649aa67.png",
+          "name": "23.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/eea83b9a292e4debbe028d25f1e51dbe/c7550c614e138f70d0945bd24d0a56271374e9f9eda83f6e611c7c187649aa67.png",
+          "width": 1024,
+          "height": 378
+        }
+      }
+    },
+    {
+      "id": 30,
+      "type": "Image Comparer (rgthree)",
+      "pos": {
+        "0": 2874.823974609375,
+        "1": 1629.036865234375
+      },
+      "size": {
+        "0": 753.6179809570312,
+        "1": 922.811767578125
+      },
+      "flags": {},
+      "order": 15,
+      "mode": 4,
+      "inputs": [
+        {
+          "dir": 3,
+          "label": "图像_A",
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 30
+        },
+        {
+          "dir": 3,
+          "label": "图像_B",
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 31
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "comparer_mode": "Slide"
+      },
+      "widgets_values": [
+        []
+      ]
+    },
+    {
+      "id": 31,
+      "type": "LoadImage",
+      "pos": {
+        "0": 1015.6920776367188,
+        "1": 1645.860595703125
+      },
+      "size": {
+        "0": 703.3944702148438,
+        "1": 911.325927734375
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "shape": 3,
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            30,
+            33
+          ]
+        },
+        {
+          "label": "遮罩",
+          "name": "MASK",
+          "shape": 3,
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "538903954-c5c0d0b0f37744a981958017930358a2b3b6a6ee22369e086b87a254c6aa5fc0.png",
+        "image",
+        ""
+      ],
+      "_widget_cache_map": {
+        "image (49).png": {
+          "value": "img/f2ac4a9f25064cac9bf96e98b6f75ed7/257fa8d608bcbb18f5900e61ba4890596488a4f0867e0ef415483d192a1f1204.png",
+          "name": "image (49).png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/f2ac4a9f25064cac9bf96e98b6f75ed7/257fa8d608bcbb18f5900e61ba4890596488a4f0867e0ef415483d192a1f1204.png"
+        },
+        "advanced-simple-refined.png": {
+          "value": "img/f2ac4a9f25064cac9bf96e98b6f75ed7/20ff213eaf0347a11ccc8483d52c519dc689932ed31a9fae7daa02b6bada6004.png",
+          "name": "advanced-simple-refined.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/f2ac4a9f25064cac9bf96e98b6f75ed7/20ff213eaf0347a11ccc8483d52c519dc689932ed31a9fae7daa02b6bada6004.png"
+        },
+        "10D.png": {
+          "value": "img/f2ac4a9f25064cac9bf96e98b6f75ed7/3a8b7f1d3c2e6fb54334e88eac9e1d58e3eb26362c1d54d848122f96607e6c58.png",
+          "name": "10D.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/f2ac4a9f25064cac9bf96e98b6f75ed7/3a8b7f1d3c2e6fb54334e88eac9e1d58e3eb26362c1d54d848122f96607e6c58.png"
+        },
+        "A yuant 01.png": {
+          "value": "img/f2ac4a9f25064cac9bf96e98b6f75ed7/88d2e5c11280a15d3948ac21f2c5531c16817e89e7b483af1975873b5fe8f557.png",
+          "name": "A yuant 01.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/f2ac4a9f25064cac9bf96e98b6f75ed7/88d2e5c11280a15d3948ac21f2c5531c16817e89e7b483af1975873b5fe8f557.png",
+          "width": 802,
+          "height": 1053
+        },
+        "A yuant 02_b.png": {
+          "value": "img/f2ac4a9f25064cac9bf96e98b6f75ed7/23043fc1268a94b4af2e1a2468c2aa1b734fb9dec61e6b9c8af1cdf460509f89.png",
+          "name": "A yuant 02_b.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/f2ac4a9f25064cac9bf96e98b6f75ed7/23043fc1268a94b4af2e1a2468c2aa1b734fb9dec61e6b9c8af1cdf460509f89.png",
+          "width": 1400,
+          "height": 1875
+        },
+        "d3cb1db4539f53d3ef7eac601d172fea34caada910e580-Lutjlw.jpg": {
+          "value": "img/f2ac4a9f25064cac9bf96e98b6f75ed7/bfdd30c554a297fc0bbf1762c9e968d3278207892be7fc7024b3b91e5aa162d0.jpg",
+          "name": "d3cb1db4539f53d3ef7eac601d172fea34caada910e580-Lutjlw.jpg",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/f2ac4a9f25064cac9bf96e98b6f75ed7/bfdd30c554a297fc0bbf1762c9e968d3278207892be7fc7024b3b91e5aa162d0.jpg",
+          "width": 634,
+          "height": 929
+        },
+        "492779590-d50263de92a2e7f35a430d26a621a0e8efc8553743db5e093196c15b99f300a8.png": {
+          "value": "img/eea83b9a292e4debbe028d25f1e51dbe/d50263de92a2e7f35a430d26a621a0e8efc8553743db5e093196c15b99f300a8.png",
+          "name": "492779590-d50263de92a2e7f35a430d26a621a0e8efc8553743db5e093196c15b99f300a8.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/eea83b9a292e4debbe028d25f1e51dbe/d50263de92a2e7f35a430d26a621a0e8efc8553743db5e093196c15b99f300a8.png",
+          "width": 800,
+          "height": 1024
+        },
+        "538903954-c5c0d0b0f37744a981958017930358a2b3b6a6ee22369e086b87a254c6aa5fc0.png": {
+          "value": "img/eea83b9a292e4debbe028d25f1e51dbe/c5c0d0b0f37744a981958017930358a2b3b6a6ee22369e086b87a254c6aa5fc0.png",
+          "name": "538903954-c5c0d0b0f37744a981958017930358a2b3b6a6ee22369e086b87a254c6aa5fc0.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/eea83b9a292e4debbe028d25f1e51dbe/c5c0d0b0f37744a981958017930358a2b3b6a6ee22369e086b87a254c6aa5fc0.png",
+          "width": 1024,
+          "height": 1024
+        }
+      }
+    },
+    {
+      "id": 32,
+      "type": "PreviewImage",
+      "pos": {
+        "0": 2149.826904296875,
+        "1": 1642.1221923828125
+      },
+      "size": {
+        "0": 684.6552124023438,
+        "1": 912.3690185546875
+      },
+      "flags": {},
+      "order": 16,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 32
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": [],
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 33,
+      "type": "SUPIR_Upscale",
+      "pos": {
+        "0": 1737.4990234375,
+        "1": 1645.43359375
+      },
+      "size": {
+        "0": 396.4057922363281,
+        "1": 923.8492431640625
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 33
+        },
+        {
+          "label": "captions",
+          "name": "captions",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "captions"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "upscaled_image",
+          "shape": 3,
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            31,
+            32
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "SUPIR_Upscale"
+      },
+      "widgets_values": [
+        "SUPIR-v0Q_fp16.safetensors",
+        "juggernautXL_v9_V9 + RDPhoto 2",
+        454332503631615,
+        "randomize",
+        "lanczos",
+        1.5,
+        45,
+        -1,
+        4,
+        "high quality, detailed",
+        "bad quality, blurry, messy",
+        5,
+        1.003,
+        1,
+        4,
+        0,
+        "Wavelet",
+        true,
+        true,
+        1024,
+        64,
+        "",
+        "auto",
+        "auto",
+        1,
+        false,
+        1024,
+        512,
+        false,
+        false,
+        "RestoreEDMSampler"
+      ],
+      "_widget_cache_map": {
+        "juggernautXL_v9_V9 + RDPhoto 2": {
+          "name": "juggernautXL_v9_V9 + RDPhoto 2",
+          "value": "84d2b9cc66bf4953bd9f9c4c152eb6cb"
+        }
+      }
+    },
+    {
+      "id": 34,
+      "type": "Fast Groups Bypasser (rgthree)",
+      "pos": {
+        "0": 961.562255859375,
+        "1": 137.0074920654297
+      },
+      "size": {
+        "0": 469.5991516113281,
+        "1": 130
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "可选连接",
+          "name": "OPT_CONNECTION",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "matchColors": "",
+        "matchTitle": "",
+        "showNav": true,
+        "sort": "position",
+        "customSortAlphabet": "",
+        "toggleRestriction": "default",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65
+      }
+    },
+    {
+      "id": 35,
+      "type": "LoadImage",
+      "pos": {
+        "0": -176.0786895751953,
+        "1": 395.4056091308594
+      },
+      "size": {
+        "0": 1048.86474609375,
+        "1": 873.9454345703125
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "label": "遮罩",
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "wechat_2025-08-13_215505_213.png",
+        "image",
+        ""
+      ],
+      "_widget_cache_map": {
+        "微信截图_20250805134249.png": {
+          "value": "img/eea83b9a292e4debbe028d25f1e51dbe/eb483cda3ddf25f64e906681b2ba02a93de8ac01579814a1fc8f7d3d2ebe6a8b.png",
+          "name": "微信截图_20250805134249.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/eea83b9a292e4debbe028d25f1e51dbe/eb483cda3ddf25f64e906681b2ba02a93de8ac01579814a1fc8f7d3d2ebe6a8b.png",
+          "width": 1249,
+          "height": 958
+        },
+        "wechat_2025-08-13_215505_213.png": {
+          "value": "img/eea83b9a292e4debbe028d25f1e51dbe/a4c263e7c1c8dd1e373b15a98b55d78f876d32ca7f8eed98b3d6e68f4b1543e2.png",
+          "name": "wechat_2025-08-13_215505_213.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/eea83b9a292e4debbe028d25f1e51dbe/a4c263e7c1c8dd1e373b15a98b55d78f876d32ca7f8eed98b3d6e68f4b1543e2.png",
+          "width": 1257,
+          "height": 930
+        }
+      }
+    },
+    {
+      "id": 29,
+      "type": "LoadImage",
+      "pos": {
+        "0": 1470.2176513671875,
+        "1": -35.88888931274414
+      },
+      "size": {
+        "0": 383.541015625,
+        "1": 314
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "label": "遮罩",
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "output-(1).png",
+        "image",
+        ""
+      ],
+      "_widget_cache_map": {
+        "未标题-1.png": {
+          "value": "img/eea83b9a292e4debbe028d25f1e51dbe/b5c5921c8c57c919caff12c4d44661a73f9aafb9fc19e3b736cb74aef0a3bc3c.png",
+          "name": "未标题-1.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/eea83b9a292e4debbe028d25f1e51dbe/b5c5921c8c57c919caff12c4d44661a73f9aafb9fc19e3b736cb74aef0a3bc3c.png",
+          "width": 1024,
+          "height": 378
+        },
+        "23.png": {
+          "value": "img/eea83b9a292e4debbe028d25f1e51dbe/c7550c614e138f70d0945bd24d0a56271374e9f9eda83f6e611c7c187649aa67.png",
+          "name": "23.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/eea83b9a292e4debbe028d25f1e51dbe/c7550c614e138f70d0945bd24d0a56271374e9f9eda83f6e611c7c187649aa67.png",
+          "width": 1024,
+          "height": 378
+        },
+        "233.jpg": {
+          "value": "img/eea83b9a292e4debbe028d25f1e51dbe/33123160da1653bf772a56f13417bb2f82c0b2e460cb584e436f68d5a8b56936.jpg",
+          "name": "233.jpg",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/eea83b9a292e4debbe028d25f1e51dbe/33123160da1653bf772a56f13417bb2f82c0b2e460cb584e436f68d5a8b56936.jpg",
+          "width": 1024,
+          "height": 378
+        },
+        "output-(1).png": {
+          "value": "img/eea83b9a292e4debbe028d25f1e51dbe/551a7aa26b61c147f67572debc13730d45a9908f942f143e67d0a6a63de889a7.png",
+          "name": "output-(1).png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/eea83b9a292e4debbe028d25f1e51dbe/551a7aa26b61c147f67572debc13730d45a9908f942f143e67d0a6a63de889a7.png",
+          "width": 1024,
+          "height": 378
+        }
+      }
+    },
+    {
+      "id": 25,
+      "type": "LibLibTranslate",
+      "pos": {
+        "0": 1800.8336181640625,
+        "1": 389.1014404296875
+      },
+      "size": {
+        "0": 403.7631530761719,
+        "1": 289.1316223144531
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "text",
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            11
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LibLibTranslate"
+      },
+      "widgets_values": [
+        "Chinese",
+        "English",
+        "产品主体固定（形状/角度/朝向不变），场景围绕主体旋转，适配视角（消失点/线与主体视角对齐），保持场景中元素的相对位置；光影、色调与场景匹配，边缘自然衔接，消除拼接感，使产品主体与场景真实空间融为一体"
+      ]
+    },
+    {
+      "id": 27,
+      "type": "LoadImage",
+      "pos": {
+        "0": 979.2664794921875,
+        "1": 390.1053771972656
+      },
+      "size": {
+        "0": 383.7774353027344,
+        "1": 499.9937438964844
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            29
+          ]
+        },
+        {
+          "label": "遮罩",
+          "name": "MASK",
+          "type": "MASK"
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LoadImage",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.42",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "10.png",
+        "image",
+        ""
+      ],
+      "_widget_cache_map": {
+        "6.jpg": {
+          "value": "img/6f68b83cbe5c4c00b4c14a5237d2e8a5/7ecc09d9702729ccf27d79b85a2ff95f11455c61ec32d22e0e502725dc68ab59.jpg",
+          "name": "6.jpg",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/6f68b83cbe5c4c00b4c14a5237d2e8a5/7ecc09d9702729ccf27d79b85a2ff95f11455c61ec32d22e0e502725dc68ab59.jpg",
+          "width": 768,
+          "height": 1024
+        },
+        "8.jpg": {
+          "value": "img/6f68b83cbe5c4c00b4c14a5237d2e8a5/1e0f2c5c3da59797c50242bcd68bca20e8e36bda3503fd1d63d2e97ac715a3bd.jpg",
+          "name": "8.jpg",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/6f68b83cbe5c4c00b4c14a5237d2e8a5/1e0f2c5c3da59797c50242bcd68bca20e8e36bda3503fd1d63d2e97ac715a3bd.jpg",
+          "width": 768,
+          "height": 1024
+        },
+        "10.jpg": {
+          "value": "img/6f68b83cbe5c4c00b4c14a5237d2e8a5/c9ed9a5d1de16e97db96e374393881b3a94dc8908abac6f9bf5ac52b1fb74637.jpg",
+          "name": "10.jpg",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/6f68b83cbe5c4c00b4c14a5237d2e8a5/c9ed9a5d1de16e97db96e374393881b3a94dc8908abac6f9bf5ac52b1fb74637.jpg",
+          "width": 768,
+          "height": 1024
+        },
+        "12.jpg": {
+          "value": "img/6f68b83cbe5c4c00b4c14a5237d2e8a5/45d3ec7b792ca5ee1492228d5fd5ef656833ed34449187a194a714084fe0074a.jpg",
+          "name": "12.jpg",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/6f68b83cbe5c4c00b4c14a5237d2e8a5/45d3ec7b792ca5ee1492228d5fd5ef656833ed34449187a194a714084fe0074a.jpg",
+          "width": 768,
+          "height": 1024
+        },
+        "8d5bc536d6b74439aaf72dc733f14668.jpeg": {
+          "value": "img/eae344d03ae6440cb34c5471de6bb287/6964dc57e6f6cc1fcd604972fbe2df59491b4e2f82d35fda7a724126e721cffc.jpeg",
+          "name": "8d5bc536d6b74439aaf72dc733f14668.jpeg",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/eae344d03ae6440cb34c5471de6bb287/6964dc57e6f6cc1fcd604972fbe2df59491b4e2f82d35fda7a724126e721cffc.jpeg",
+          "width": 600,
+          "height": 767
+        },
+        "微信截图_20240725204737.png": {
+          "value": "img/eae344d03ae6440cb34c5471de6bb287/292dd5bb3b6759717096ace95e36b48b373681821cb1853803e9eef24c30c2bb.png",
+          "name": "微信截图_20240725204737.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/eae344d03ae6440cb34c5471de6bb287/292dd5bb3b6759717096ace95e36b48b373681821cb1853803e9eef24c30c2bb.png",
+          "width": 514,
+          "height": 861
+        },
+        "8307b8fa-e5b5-4b8f-beaf-945fa2298c74.jpg": {
+          "value": "img/eae344d03ae6440cb34c5471de6bb287/856a73239ad7b02fd64c261a78f98ed93b2c49b43a54b18eb6734e4a3d9c510c.jpg",
+          "name": "8307b8fa-e5b5-4b8f-beaf-945fa2298c74.jpg",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/eae344d03ae6440cb34c5471de6bb287/856a73239ad7b02fd64c261a78f98ed93b2c49b43a54b18eb6734e4a3d9c510c.jpg",
+          "width": 768,
+          "height": 1152
+        },
+        "807794133600197684.png": {
+          "value": "img/eae344d03ae6440cb34c5471de6bb287/556e6d3838270251fa84c6e1fbb4d1241017b854e11bfa1a1f04846dfb1a3f8c.png",
+          "name": "807794133600197684.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/eae344d03ae6440cb34c5471de6bb287/556e6d3838270251fa84c6e1fbb4d1241017b854e11bfa1a1f04846dfb1a3f8c.png",
+          "width": 768,
+          "height": 1152
+        },
+        "294975953-ab9f4b465be263a0ac52f183346a4df9f06441eff6e64a2dda812d8115e3711c.png": {
+          "value": "img/eae344d03ae6440cb34c5471de6bb287/ab9f4b465be263a0ac52f183346a4df9f06441eff6e64a2dda812d8115e3711c.png",
+          "name": "294975953-ab9f4b465be263a0ac52f183346a4df9f06441eff6e64a2dda812d8115e3711c.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/eae344d03ae6440cb34c5471de6bb287/ab9f4b465be263a0ac52f183346a4df9f06441eff6e64a2dda812d8115e3711c.png",
+          "width": 768,
+          "height": 1152
+        },
+        "296475270-7df3b0982acdc5947e998254d562725d56f4443a3bc4aa0ba02a572622a5ac27.png": {
+          "value": "img/eae344d03ae6440cb34c5471de6bb287/7df3b0982acdc5947e998254d562725d56f4443a3bc4aa0ba02a572622a5ac27.png",
+          "name": "296475270-7df3b0982acdc5947e998254d562725d56f4443a3bc4aa0ba02a572622a5ac27.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/eae344d03ae6440cb34c5471de6bb287/7df3b0982acdc5947e998254d562725d56f4443a3bc4aa0ba02a572622a5ac27.png",
+          "width": 768,
+          "height": 1152
+        },
+        "levi_payne7354_A_cute_girl_with_pink_hair_and_blue_eyes_wearing_21475b99-6ae9-4843-a04f-cf346e04f52b.png": {
+          "value": "img/eae344d03ae6440cb34c5471de6bb287/7f59ef9ad99a6cac292c709c513557ceafd8872f6ac85d6176bf7ef5f07bd8f6.png",
+          "name": "levi_payne7354_A_cute_girl_with_pink_hair_and_blue_eyes_wearing_21475b99-6ae9-4843-a04f-cf346e04f52b.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/eae344d03ae6440cb34c5471de6bb287/7f59ef9ad99a6cac292c709c513557ceafd8872f6ac85d6176bf7ef5f07bd8f6.png",
+          "width": 896,
+          "height": 1344
+        },
+        "336326174-59b3f2e4e689d35ef99559eb46ac1dd34075fee084e4739a22e4fa0c354fb1a6.png": {
+          "value": "img/eae344d03ae6440cb34c5471de6bb287/59b3f2e4e689d35ef99559eb46ac1dd34075fee084e4739a22e4fa0c354fb1a6.png",
+          "name": "336326174-59b3f2e4e689d35ef99559eb46ac1dd34075fee084e4739a22e4fa0c354fb1a6.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/eae344d03ae6440cb34c5471de6bb287/59b3f2e4e689d35ef99559eb46ac1dd34075fee084e4739a22e4fa0c354fb1a6.png",
+          "width": 768,
+          "height": 1152
+        },
+        "334896570-ee67212fb045c0b4a5b3d409cd2026608abc1d0faede2f96ca42270be63945d9.png": {
+          "value": "img/eae344d03ae6440cb34c5471de6bb287/ee67212fb045c0b4a5b3d409cd2026608abc1d0faede2f96ca42270be63945d9.png",
+          "name": "334896570-ee67212fb045c0b4a5b3d409cd2026608abc1d0faede2f96ca42270be63945d9.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/eae344d03ae6440cb34c5471de6bb287/ee67212fb045c0b4a5b3d409cd2026608abc1d0faede2f96ca42270be63945d9.png",
+          "width": 1024,
+          "height": 1536
+        },
+        "女孩躺在水面上的发光的石头手里拿着油灯，四周是波光粼粼的水面，水面下是鱼儿游动，光落到脸上，禅意，香道，上下构图，水中女孩倒影，美丽的坐在地上女孩，若隐若现的女孩，女孩头部特写，云雾缭绕，周围的鱼儿游...(27).png": {
+          "value": "img/eae344d03ae6440cb34c5471de6bb287/f0c67e0dc83cc5e506fd79b255d8a020d68bfca7ed29469f533c95e4360a9695.png",
+          "name": "女孩躺在水面上的发光的石头手里拿着油灯，四周是波光粼粼的水面，水面下是鱼儿游动，光落到脸上，禅意，香道，上下构图，水中女孩倒影，美丽的坐在地上女孩，若隐若现的女孩，女孩头部特写，云雾缭绕，周围的鱼儿游...(27).png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/eae344d03ae6440cb34c5471de6bb287/f0c67e0dc83cc5e506fd79b255d8a020d68bfca7ed29469f533c95e4360a9695.png",
+          "width": 1536,
+          "height": 2048
+        },
+        "女孩躺在水面上的发光的石头手里拿着油灯，四周是波光粼粼的水面，水面下是鱼儿游动，光落到脸上，禅意，香道，上下构图，水中女孩倒影，美丽的坐在地上女孩，若隐若现的女孩，女孩头部特写，云雾缭绕，周围的鱼儿游...(9).png": {
+          "value": "img/eae344d03ae6440cb34c5471de6bb287/68917f3201d8f20524b48bcfb2f197eba42bd8647388ef9effcb49ddf3ae2faf.png",
+          "name": "女孩躺在水面上的发光的石头手里拿着油灯，四周是波光粼粼的水面，水面下是鱼儿游动，光落到脸上，禅意，香道，上下构图，水中女孩倒影，美丽的坐在地上女孩，若隐若现的女孩，女孩头部特写，云雾缭绕，周围的鱼儿游...(9).png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/eae344d03ae6440cb34c5471de6bb287/68917f3201d8f20524b48bcfb2f197eba42bd8647388ef9effcb49ddf3ae2faf.png",
+          "width": 1536,
+          "height": 2048
+        },
+        "301895242-278947e6df48496c07462acb856440beaac31fe900a979ea9b0b0e1caa4c581f.png": {
+          "value": "img/eae344d03ae6440cb34c5471de6bb287/278947e6df48496c07462acb856440beaac31fe900a979ea9b0b0e1caa4c581f.png",
+          "name": "301895242-278947e6df48496c07462acb856440beaac31fe900a979ea9b0b0e1caa4c581f.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/eae344d03ae6440cb34c5471de6bb287/278947e6df48496c07462acb856440beaac31fe900a979ea9b0b0e1caa4c581f.png",
+          "width": 768,
+          "height": 1152
+        },
+        "309741861-61baf83d7d956b70f0b5129c0d0ce24a055c618b50bac5d9d30bc40fcdf924ec.png": {
+          "value": "img/eae344d03ae6440cb34c5471de6bb287/61baf83d7d956b70f0b5129c0d0ce24a055c618b50bac5d9d30bc40fcdf924ec.png",
+          "name": "309741861-61baf83d7d956b70f0b5129c0d0ce24a055c618b50bac5d9d30bc40fcdf924ec.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/eae344d03ae6440cb34c5471de6bb287/61baf83d7d956b70f0b5129c0d0ce24a055c618b50bac5d9d30bc40fcdf924ec.png",
+          "width": 768,
+          "height": 1152
+        },
+        "图层 18.png": {
+          "value": "img/eae344d03ae6440cb34c5471de6bb287/7c6139c3bd3f81a578f93dc7c779ca9c6ea5d98fe70002ef58de472f78ebc0df.png",
+          "name": "图层 18.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/eae344d03ae6440cb34c5471de6bb287/7c6139c3bd3f81a578f93dc7c779ca9c6ea5d98fe70002ef58de472f78ebc0df.png",
+          "width": 750,
+          "height": 1000
+        },
+        "516325848-950fff25fbee8762f22315d0285ab68b535f992cd260cb1e3163cadd4a95877c.png": {
+          "value": "img/eae344d03ae6440cb34c5471de6bb287/950fff25fbee8762f22315d0285ab68b535f992cd260cb1e3163cadd4a95877c.png",
+          "name": "516325848-950fff25fbee8762f22315d0285ab68b535f992cd260cb1e3163cadd4a95877c.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/eae344d03ae6440cb34c5471de6bb287/950fff25fbee8762f22315d0285ab68b535f992cd260cb1e3163cadd4a95877c.png",
+          "width": 1024,
+          "height": 1536
+        },
+        "513293311-27a8f952242c9f731edcb6638c437850e132c5b6931c2e18c38949dc28beee0d.png": {
+          "value": "img/eae344d03ae6440cb34c5471de6bb287/27a8f952242c9f731edcb6638c437850e132c5b6931c2e18c38949dc28beee0d.png",
+          "name": "513293311-27a8f952242c9f731edcb6638c437850e132c5b6931c2e18c38949dc28beee0d.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/eae344d03ae6440cb34c5471de6bb287/27a8f952242c9f731edcb6638c437850e132c5b6931c2e18c38949dc28beee0d.png",
+          "width": 1024,
+          "height": 1536
+        },
+        "10_R.png": {
+          "value": "img/53cca7487233411da9fdb574d73e3621/73ce36c257295fc4ee85bc5983131eedf31c65b582e4ab188db20ec85794b62f.png",
+          "name": "10_R.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/53cca7487233411da9fdb574d73e3621/73ce36c257295fc4ee85bc5983131eedf31c65b582e4ab188db20ec85794b62f.png",
+          "width": 1024,
+          "height": 1024
+        },
+        "未标题-1.png": {
+          "value": "img/53cca7487233411da9fdb574d73e3621/8e1a5a2efa5f762ab2d821a9c749e38da74ebf0d2d4306d2d11705470450066f.png",
+          "name": "未标题-1.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/53cca7487233411da9fdb574d73e3621/8e1a5a2efa5f762ab2d821a9c749e38da74ebf0d2d4306d2d11705470450066f.png",
+          "width": 1220,
+          "height": 1092
+        },
+        "10.png": {
+          "value": "img/eea83b9a292e4debbe028d25f1e51dbe/43e76c888d29cc4f80d5a4675a9e3b2c1e92d1710f4412cead634a6071bf8158.png",
+          "name": "10.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/eea83b9a292e4debbe028d25f1e51dbe/43e76c888d29cc4f80d5a4675a9e3b2c1e92d1710f4412cead634a6071bf8158.png",
+          "width": 1024,
+          "height": 1024
+        }
+      }
+    },
+    {
+      "id": 24,
+      "type": "LoraLoaderModelOnly",
+      "pos": {
+        "0": 1800.277099609375,
+        "1": 1058.1541748046875
+      },
+      "size": {
+        "0": 405.42987060546875,
+        "1": 206.64041137695312
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "模型",
+          "name": "model",
+          "type": "MODEL",
+          "link": 28
+        }
+      ],
+      "outputs": [
+        {
+          "label": "模型",
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            18
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LoraLoaderModelOnly"
+      },
+      "widgets_values": [
+        "Kontext 最新电商角度自适应自动纠正透视场景产品溶图_1.0纠正角度溶图",
+        1.5
+      ],
+      "_widget_cache_map": {
+        "Kontext-3D Chibi风格转绘_v1": {
+          "name": "Kontext-3D Chibi风格转绘_v1",
+          "baseType": 31,
+          "value": "173a984fe198415cb887116576303281"
+        },
+        "模型测试_1.0": {
+          "name": "模型测试_1.0",
+          "baseType": 31,
+          "value": "c848fed3aac94ed4af20807eef844ca3"
+        },
+        "一键电商模特衣服图案印花_1.0": {
+          "name": "一键电商模特衣服图案印花_1.0",
+          "baseType": 31,
+          "value": "c848fed3aac94ed4af20807eef844ca3"
+        },
+        "精修首饰灵感生成_墨沫F.1_V2-kontext": {
+          "name": "精修首饰灵感生成_墨沫F.1_V2-kontext",
+          "baseType": 31,
+          "value": "c67d035ecf904fe0ae3048828723441b"
+        },
+        "创意美甲生成_F.1 Kontext 版": {
+          "name": "创意美甲生成_F.1 Kontext 版",
+          "baseType": 31,
+          "value": "1e363235dd4d436ca192534f4bb8e937"
+        },
+        "非遗剪纸F.1_kontext可编辑": {
+          "name": "非遗剪纸F.1_kontext可编辑",
+          "baseType": 31,
+          "value": "6eb50b526d9843c599b9ae37ee5d5e8f"
+        },
+        "线描版画_墨沫F.1_Kontext可编辑-V2": {
+          "name": "线描版画_墨沫F.1_Kontext可编辑-V2",
+          "baseType": 31,
+          "value": "2f534a9f4281431abbb3ce3d0519c2e6"
+        },
+        "F.1 Kontext 电商万物光影融合_F.1 Kontext 电商万物光影融合": {
+          "name": "F.1 Kontext 电商万物光影融合_F.1 Kontext 电商万物光影融合",
+          "baseType": 31,
+          "value": "526294f9583446e091a42e98adec1816"
+        },
+        "Kontext 最新电商角度自适应自动纠正透视场景产品溶图_1.0纠正角度溶图": {
+          "name": "Kontext 最新电商角度自适应自动纠正透视场景产品溶图_1.0纠正角度溶图",
+          "baseType": 31,
+          "value": "dc9032f5ee084a7593de48c39285c95e"
+        }
+      }
+    }
+  ],
+  "links": [
+    [
+      10,
+      15,
+      0,
+      10,
+      0,
+      "CLIP"
+    ],
+    [
+      11,
+      25,
+      0,
+      10,
+      1,
+      "STRING"
+    ],
+    [
+      12,
+      10,
+      0,
+      11,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      13,
+      13,
+      0,
+      12,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      14,
+      10,
+      0,
+      13,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      15,
+      18,
+      0,
+      13,
+      1,
+      "LATENT"
+    ],
+    [
+      16,
+      20,
+      0,
+      18,
+      0,
+      "IMAGE"
+    ],
+    [
+      17,
+      14,
+      0,
+      18,
+      1,
+      "VAE"
+    ],
+    [
+      18,
+      24,
+      0,
+      19,
+      0,
+      "MODEL"
+    ],
+    [
+      19,
+      12,
+      0,
+      19,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      20,
+      11,
+      0,
+      19,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      21,
+      18,
+      0,
+      19,
+      3,
+      "LATENT"
+    ],
+    [
+      22,
+      26,
+      0,
+      20,
+      0,
+      "IMAGE"
+    ],
+    [
+      23,
+      19,
+      0,
+      21,
+      0,
+      "LATENT"
+    ],
+    [
+      24,
+      14,
+      0,
+      21,
+      1,
+      "VAE"
+    ],
+    [
+      25,
+      21,
+      0,
+      22,
+      0,
+      "IMAGE"
+    ],
+    [
+      26,
+      26,
+      0,
+      23,
+      0,
+      "IMAGE"
+    ],
+    [
+      27,
+      21,
+      0,
+      23,
+      1,
+      "IMAGE"
+    ],
+    [
+      28,
+      16,
+      0,
+      24,
+      0,
+      "MODEL"
+    ],
+    [
+      29,
+      27,
+      0,
+      26,
+      0,
+      "IMAGE"
+    ],
+    [
+      30,
+      31,
+      0,
+      30,
+      0,
+      "IMAGE"
+    ],
+    [
+      31,
+      33,
+      0,
+      30,
+      1,
+      "IMAGE"
+    ],
+    [
+      32,
+      33,
+      0,
+      32,
+      0,
+      "IMAGE"
+    ],
+    [
+      33,
+      31,
+      0,
+      33,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "爱做饭的设计-Kontext自适应纠正透视场景产品溶图",
+      "bounding": [
+        964.5236206054688,
+        294.3893737792969,
+        2615.630615234375,
+        1000.864013671875
+      ],
+      "color": "#b58b2a",
+      "font_size": 40,
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "提前把产品放在你的场景图上，保存后上传",
+      "bounding": [
+        -199.8333282470703,
+        294.1116027832031,
+        1146.8936767578125,
+        1000.864013671875
+      ],
+      "color": "#a1309b",
+      "font_size": 40,
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "高清放大",
+      "bounding": [
+        969.1753540039062,
+        1340.7681884765625,
+        2732.149658203125,
+        1250.845703125
+      ],
+      "color": "#3f789e",
+      "font_size": 180,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.9646149645000018,
+      "offset": [
+        -1538.527470200614,
+        -352.3255344515975
+      ]
+    },
+    "ue_links": [],
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}

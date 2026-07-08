@@ -1,0 +1,1146 @@
+{
+  "id": "ebdc4eb3-35e3-4bdb-8564-3a4a91f14f68",
+  "revision": 0,
+  "last_node_id": 29,
+  "last_link_id": 39,
+  "nodes": [
+    {
+      "id": 14,
+      "type": "FluxGuidance",
+      "pos": {
+        "0": 1761.45458984375,
+        "1": 824.2094116210938
+      },
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "条件",
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 13
+        }
+      ],
+      "outputs": [
+        {
+          "label": "条件",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            21
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "FluxGuidance"
+      },
+      "widgets_values": [
+        30
+      ]
+    },
+    {
+      "id": 15,
+      "type": "VAEDecode",
+      "pos": {
+        "0": 2505.994140625,
+        "1": 1029.01025390625
+      },
+      "size": {
+        "0": 275.31103515625,
+        "1": 46
+      },
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "Latent",
+          "name": "samples",
+          "type": "LATENT",
+          "link": 14
+        },
+        {
+          "label": "VAE",
+          "name": "vae",
+          "type": "VAE",
+          "link": 15
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            28
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 22,
+      "type": "LayerUtility: ImageScaleByAspectRatio V2",
+      "pos": {
+        "0": 1017.1879272460938,
+        "1": 743.5132446289062
+      },
+      "size": {
+        "0": 286.14910888671875,
+        "1": 351.3245849609375
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 26
+        },
+        {
+          "label": "遮罩",
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": 27
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            29,
+            35
+          ]
+        },
+        {
+          "label": "遮罩",
+          "name": "mask",
+          "type": "MASK",
+          "links": [
+            25
+          ]
+        },
+        {
+          "label": "原始大小",
+          "name": "original_size",
+          "type": "BOX",
+          "links": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LayerUtility: ImageScaleByAspectRatio V2"
+      },
+      "widgets_values": [
+        "original",
+        1,
+        1,
+        "letterbox",
+        "lanczos",
+        "8",
+        "height",
+        1024,
+        "#000000"
+      ],
+      "color": "rgba(38, 73, 116, 0.7)"
+    },
+    {
+      "id": 24,
+      "type": "KSampler",
+      "pos": {
+        "0": 2487.02294921875,
+        "1": 713.9625244140625
+      },
+      "size": {
+        "0": 315,
+        "1": 262
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "模型",
+          "name": "model",
+          "type": "MODEL",
+          "link": 30
+        },
+        {
+          "label": "正面条件",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 31
+        },
+        {
+          "label": "负面条件",
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 32
+        },
+        {
+          "label": "Latent",
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 33
+        }
+      ],
+      "outputs": [
+        {
+          "label": "Latent",
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            14
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        546049895021784,
+        "randomize",
+        10,
+        1,
+        "euler",
+        "beta",
+        1
+      ]
+    },
+    {
+      "id": 10,
+      "type": "Mask Fill Holes",
+      "pos": {
+        "0": 1037.1861572265625,
+        "1": 1152.71240234375
+      },
+      "size": {
+        "0": 210,
+        "1": 26
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "遮罩",
+          "name": "masks",
+          "type": "MASK",
+          "link": 10
+        }
+      ],
+      "outputs": [
+        {
+          "label": "遮罩",
+          "name": "MASKS",
+          "type": "MASK",
+          "links": [
+            27
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "Mask Fill Holes"
+      }
+    },
+    {
+      "id": 27,
+      "type": "UNETLoader",
+      "pos": {
+        "0": 1394.7274169921875,
+        "1": 695.296142578125
+      },
+      "size": {
+        "0": 315,
+        "1": 82
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "模型",
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            39
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "UNETLoader"
+      },
+      "widgets_values": [
+        "flux.1-fill-dev-OneReward_bf16",
+        "fp8_e4m3fn"
+      ],
+      "_widget_cache_map": {
+        "flux.1-fill-dev-OneReward_bf16": {
+          "name": "flux.1-fill-dev-OneReward_bf16",
+          "baseType": 19,
+          "value": "5f8fb75d317549b3969f5fc8b8d8bbb9"
+        }
+      }
+    },
+    {
+      "id": 29,
+      "type": "DualCLIPLoader",
+      "pos": {
+        "0": 1403.439208984375,
+        "1": 886.7069091796875
+      },
+      "size": {
+        "0": 315,
+        "1": 130
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "CLIP",
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            38
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "DualCLIPLoader"
+      },
+      "widgets_values": [
+        "t5xxl_fp8_e4m3fn",
+        "clip_l",
+        "flux",
+        "default"
+      ]
+    },
+    {
+      "id": 11,
+      "type": "VAELoader",
+      "pos": {
+        "0": 1408.15087890625,
+        "1": 1113.3311767578125
+      },
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            15,
+            23
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "ae.sft"
+      ]
+    },
+    {
+      "id": 23,
+      "type": "Image Comparer (rgthree)",
+      "pos": {
+        "0": 2843.727294921875,
+        "1": 704.253173828125
+      },
+      "size": {
+        "0": 460.4382629394531,
+        "1": 724.5860595703125
+      },
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "label": "图像_A",
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 28
+        },
+        {
+          "dir": 3,
+          "label": "图像_B",
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 29
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "comparer_mode": "Slide"
+      },
+      "widgets_values": [
+        [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "https://images-tmp-wm.liblib.cloud/sd-images/13b01582ad121cf29be29be92c093e45a07a0f6de840545edd985810e02e0538.png?filename=sd-images/13b01582ad121cf29be29be92c093e45a07a0f6de840545edd985810e02e0538.png&type=output&rand=0.32281903072832296"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "https://images-tmp-wm.liblib.cloud/sd-images/fdb92b10b4bf7e998e70ac9a661bbea31b1c166be1168569173f3308c73a409a.png?filename=sd-images/fdb92b10b4bf7e998e70ac9a661bbea31b1c166be1168569173f3308c73a409a.png&type=output&rand=0.06815043091470008"
+          }
+        ]
+      ]
+    },
+    {
+      "id": 28,
+      "type": "LoraLoaderModelOnly",
+      "pos": {
+        "0": 1741.44384765625,
+        "1": 683.8511352539062
+      },
+      "size": {
+        "0": 315,
+        "1": 82
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "模型",
+          "name": "model",
+          "type": "MODEL",
+          "link": 39
+        }
+      ],
+      "outputs": [
+        {
+          "label": "模型",
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            37
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LoraLoaderModelOnly"
+      },
+      "widgets_values": [
+        "FLUX.1八步出图Lora提速版_FLUX.1八步出图Lora",
+        1
+      ],
+      "_widget_cache_map": {
+        "removal_timestep_alpha-2-1740_物品移除": {
+          "name": "removal_timestep_alpha-2-1740_物品移除",
+          "baseType": 19,
+          "value": "2843d8fdd195440d9a4eb1d014af3a8b"
+        },
+        "FLUX.1八步出图Lora提速版_FLUX.1八步出图Lora": {
+          "name": "FLUX.1八步出图Lora提速版_FLUX.1八步出图Lora",
+          "baseType": 19,
+          "value": "64b93fa067454d659000d35b2f19d79a"
+        }
+      }
+    },
+    {
+      "id": 13,
+      "type": "DifferentialDiffusion",
+      "pos": {
+        "0": 2142.52490234375,
+        "1": 686.7623901367188
+      },
+      "size": {
+        "0": 275.0000305175781,
+        "1": 26
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "模型",
+          "name": "model",
+          "type": "MODEL",
+          "link": 37
+        }
+      ],
+      "outputs": [
+        {
+          "label": "模型",
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            30
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "DifferentialDiffusion"
+      }
+    },
+    {
+      "id": 21,
+      "type": "InpaintModelConditioning",
+      "pos": {
+        "0": 2139.324951171875,
+        "1": 790.4813842773438
+      },
+      "size": {
+        "0": 315,
+        "1": 138
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "正面条件",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 21
+        },
+        {
+          "label": "负面条件",
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 22
+        },
+        {
+          "label": "VAE",
+          "name": "vae",
+          "type": "VAE",
+          "link": 23
+        },
+        {
+          "label": "图像",
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 35
+        },
+        {
+          "label": "遮罩",
+          "name": "mask",
+          "type": "MASK",
+          "link": 25
+        }
+      ],
+      "outputs": [
+        {
+          "label": "正面条件",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            31
+          ]
+        },
+        {
+          "label": "负面条件",
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": [
+            32
+          ]
+        },
+        {
+          "label": "Latent",
+          "name": "latent",
+          "type": "LATENT",
+          "links": [
+            33
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "InpaintModelConditioning"
+      },
+      "widgets_values": [
+        false
+      ]
+    },
+    {
+      "id": 12,
+      "type": "ConditioningZeroOut",
+      "pos": {
+        "0": 2160.22998046875,
+        "1": 989.2149658203125
+      },
+      "size": {
+        "0": 283.21429443359375,
+        "1": 29.115501403808594
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "条件",
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 11
+        }
+      ],
+      "outputs": [
+        {
+          "label": "条件",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            22
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "ConditioningZeroOut"
+      }
+    },
+    {
+      "id": 25,
+      "type": "LoadImage",
+      "pos": {
+        "0": 605.72216796875,
+        "1": 718.2501220703125
+      },
+      "size": {
+        "0": 366.40576171875,
+        "1": 469.93084716796875
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            26
+          ]
+        },
+        {
+          "label": "遮罩",
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            10
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "clipspace-mask-1770089.6.png",
+        "image",
+        ""
+      ],
+      "_widget_cache_map": {
+        "0010da13268b4692bddb7f878e2a9f38_3.png": {
+          "value": "img/baf50bd0eb394d5db6b7f3f0357b7e8b/33bbb09ecd1bb0cc93de02e35ae49792c25556a8fd37b7ad75fe3852f435de3c.png",
+          "name": "0010da13268b4692bddb7f878e2a9f38_3.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/baf50bd0eb394d5db6b7f3f0357b7e8b/33bbb09ecd1bb0cc93de02e35ae49792c25556a8fd37b7ad75fe3852f435de3c.png",
+          "width": 1024,
+          "height": 1024
+        },
+        "clipspace-mask-542112.299999997.png": {
+          "value": "img/baf50bd0eb394d5db6b7f3f0357b7e8b/15b9d84c90640a7da67c93777a58e1e51b83d622541df520e4c18038ce2a9f75.png",
+          "name": "clipspace-mask-542112.299999997.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/baf50bd0eb394d5db6b7f3f0357b7e8b/15b9d84c90640a7da67c93777a58e1e51b83d622541df520e4c18038ce2a9f75.png",
+          "width": 1024,
+          "height": 1024
+        },
+        "ffc928a9329aea73217ecd17384b7ec4e3ac44af4fd518e6f715c0ec5a42447e.png": {
+          "value": "img/baf50bd0eb394d5db6b7f3f0357b7e8b/ffc928a9329aea73217ecd17384b7ec4e3ac44af4fd518e6f715c0ec5a42447e.png",
+          "name": "ffc928a9329aea73217ecd17384b7ec4e3ac44af4fd518e6f715c0ec5a42447e.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/baf50bd0eb394d5db6b7f3f0357b7e8b/ffc928a9329aea73217ecd17384b7ec4e3ac44af4fd518e6f715c0ec5a42447e.png",
+          "width": 960,
+          "height": 1280
+        },
+        "clipspace-mask-1047473.8999999911.png": {
+          "value": "img/baf50bd0eb394d5db6b7f3f0357b7e8b/6559d77c84c84c007e866a4550ecdbfdfa359a3ed102c177d96dacb9194915a3.png",
+          "name": "clipspace-mask-1047473.8999999911.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/baf50bd0eb394d5db6b7f3f0357b7e8b/6559d77c84c84c007e866a4550ecdbfdfa359a3ed102c177d96dacb9194915a3.png",
+          "width": 960,
+          "height": 1280
+        },
+        "AAAAAAAAAAAAAAAAAAAAAIciHD863NL9_f2NZvCSqGuebrQ9rQXIQew29V8IhBSt0fk.png": {
+          "value": "img/baf50bd0eb394d5db6b7f3f0357b7e8b/b5dd4b6bf81886a766492f07d78e5f6c8511d3e210db34bb12c696fed2ebc526.png",
+          "name": "AAAAAAAAAAAAAAAAAAAAAIciHD863NL9_f2NZvCSqGuebrQ9rQXIQew29V8IhBSt0fk.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/baf50bd0eb394d5db6b7f3f0357b7e8b/b5dd4b6bf81886a766492f07d78e5f6c8511d3e210db34bb12c696fed2ebc526.png",
+          "width": 864,
+          "height": 1152
+        },
+        "clipspace-mask-1268784.png": {
+          "value": "img/baf50bd0eb394d5db6b7f3f0357b7e8b/39f762338de5649b1646f6d810e467d3013a86bee55d7d351442cc33616d3864.png",
+          "name": "clipspace-mask-1268784.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/baf50bd0eb394d5db6b7f3f0357b7e8b/39f762338de5649b1646f6d810e467d3013a86bee55d7d351442cc33616d3864.png",
+          "width": 864,
+          "height": 1152
+        },
+        "clipspace-mask-1445153.899999991.png": {
+          "value": "img/baf50bd0eb394d5db6b7f3f0357b7e8b/8e485e2f14e53a20110f16b649ebfa33216b247192698cc3473f3283d1f4ab10.png",
+          "name": "clipspace-mask-1445153.899999991.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/baf50bd0eb394d5db6b7f3f0357b7e8b/8e485e2f14e53a20110f16b649ebfa33216b247192698cc3473f3283d1f4ab10.png",
+          "width": 1024,
+          "height": 1024
+        },
+        "AAAAAAAAAAAAAAAAAAAAAIciHD863NL9_f2NZvCSqGuebrQ9rQXIQew29V8IhBSt0fo.png": {
+          "value": "img/baf50bd0eb394d5db6b7f3f0357b7e8b/35a1aa76f1fc70ea849ecd168b2d0f356414cd7def0d5edbe3a17d74a1bae1b7.png",
+          "name": "AAAAAAAAAAAAAAAAAAAAAIciHD863NL9_f2NZvCSqGuebrQ9rQXIQew29V8IhBSt0fo.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/baf50bd0eb394d5db6b7f3f0357b7e8b/35a1aa76f1fc70ea849ecd168b2d0f356414cd7def0d5edbe3a17d74a1bae1b7.png",
+          "width": 864,
+          "height": 1152
+        },
+        "output (23).png": {
+          "value": "img/baf50bd0eb394d5db6b7f3f0357b7e8b/d70479b4f393096e31b5843ced65a155152126e75a7b022501153a4d4100291d.png",
+          "name": "output (23).png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/baf50bd0eb394d5db6b7f3f0357b7e8b/d70479b4f393096e31b5843ced65a155152126e75a7b022501153a4d4100291d.png",
+          "width": 1232,
+          "height": 1328
+        },
+        "clipspace-mask-1751995.099999994.png": {
+          "value": "img/baf50bd0eb394d5db6b7f3f0357b7e8b/6fdebbac786a7343d6e3befbb6fb642d0221716cf08ccaa59a33791d88816ac3.png",
+          "name": "clipspace-mask-1751995.099999994.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/baf50bd0eb394d5db6b7f3f0357b7e8b/6fdebbac786a7343d6e3befbb6fb642d0221716cf08ccaa59a33791d88816ac3.png",
+          "width": 1232,
+          "height": 1328
+        },
+        "AAAAAAAAAAAAAAAAAAAAAIF5R21v34D1-v6JYPDBoGvHaOI6p1jIF-tj8gIPgkT80fo.png": {
+          "value": "img/baf50bd0eb394d5db6b7f3f0357b7e8b/86cff6c83b90f49cf45c874032d6cdd10c574da06b744d4a58158f6ebf0ae3e3.png",
+          "name": "AAAAAAAAAAAAAAAAAAAAAIF5R21v34D1-v6JYPDBoGvHaOI6p1jIF-tj8gIPgkT80fo.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/baf50bd0eb394d5db6b7f3f0357b7e8b/86cff6c83b90f49cf45c874032d6cdd10c574da06b744d4a58158f6ebf0ae3e3.png",
+          "width": 864,
+          "height": 1152
+        },
+        "clipspace-mask-533316.6000000001.png": {
+          "value": "img/baf50bd0eb394d5db6b7f3f0357b7e8b/646539ed9e685e32c528a51d86a6ddcdecfd1d5b2932d2049db5a2fb83771ca1.png",
+          "name": "clipspace-mask-533316.6000000001.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/baf50bd0eb394d5db6b7f3f0357b7e8b/646539ed9e685e32c528a51d86a6ddcdecfd1d5b2932d2049db5a2fb83771ca1.png",
+          "width": 864,
+          "height": 1152
+        },
+        "AAAAAAAAAAAAAAAAAAAAAIMlQD1vjIHy_6bRMvCQqW7HPLRt_wmUR-Ni8gRbg0X50fk.png": {
+          "value": "img/baf50bd0eb394d5db6b7f3f0357b7e8b/b50d62b6e25c4f84ed7632c067a49087ad1fa59e0ef75b9d0f2432af960437b4.png",
+          "name": "AAAAAAAAAAAAAAAAAAAAAIMlQD1vjIHy_6bRMvCQqW7HPLRt_wmUR-Ni8gRbg0X50fk.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/baf50bd0eb394d5db6b7f3f0357b7e8b/b50d62b6e25c4f84ed7632c067a49087ad1fa59e0ef75b9d0f2432af960437b4.png",
+          "width": 864,
+          "height": 1152
+        },
+        "clipspace-mask-1761462.8000000003.png": {
+          "value": "img/baf50bd0eb394d5db6b7f3f0357b7e8b/45704c5f20d6851abef93262366f789b162e786503fc220ede5c200620b2ad81.png",
+          "name": "clipspace-mask-1761462.8000000003.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/baf50bd0eb394d5db6b7f3f0357b7e8b/45704c5f20d6851abef93262366f789b162e786503fc220ede5c200620b2ad81.png",
+          "width": 864,
+          "height": 1152
+        },
+        "clipspace-mask-1770089.6.png": {
+          "value": "img/baf50bd0eb394d5db6b7f3f0357b7e8b/8715a14838a4e012131f5d8df1c12fe83758a94eec4a6a12d7246ca4cf8b172a.png",
+          "name": "clipspace-mask-1770089.6.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/baf50bd0eb394d5db6b7f3f0357b7e8b/8715a14838a4e012131f5d8df1c12fe83758a94eec4a6a12d7246ca4cf8b172a.png",
+          "width": 864,
+          "height": 1152
+        }
+      }
+    },
+    {
+      "id": 19,
+      "type": "CLIPTextEncode",
+      "pos": {
+        "0": 1752.221923828125,
+        "1": 928.2899169921875
+      },
+      "size": {
+        "0": 328.10980224609375,
+        "1": 149.37310791015625
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "CLIP",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 38
+        }
+      ],
+      "outputs": [
+        {
+          "label": "条件",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            11,
+            13
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "The girl is wearing a yoga top and pants."
+      ]
+    }
+  ],
+  "links": [
+    [
+      10,
+      25,
+      1,
+      10,
+      0,
+      "MASK"
+    ],
+    [
+      11,
+      19,
+      0,
+      12,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      13,
+      19,
+      0,
+      14,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      14,
+      24,
+      0,
+      15,
+      0,
+      "LATENT"
+    ],
+    [
+      15,
+      11,
+      0,
+      15,
+      1,
+      "VAE"
+    ],
+    [
+      21,
+      14,
+      0,
+      21,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      22,
+      12,
+      0,
+      21,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      23,
+      11,
+      0,
+      21,
+      2,
+      "VAE"
+    ],
+    [
+      25,
+      22,
+      1,
+      21,
+      4,
+      "MASK"
+    ],
+    [
+      26,
+      25,
+      0,
+      22,
+      0,
+      "IMAGE"
+    ],
+    [
+      27,
+      10,
+      0,
+      22,
+      1,
+      "MASK"
+    ],
+    [
+      28,
+      15,
+      0,
+      23,
+      0,
+      "IMAGE"
+    ],
+    [
+      29,
+      22,
+      0,
+      23,
+      1,
+      "IMAGE"
+    ],
+    [
+      30,
+      13,
+      0,
+      24,
+      0,
+      "MODEL"
+    ],
+    [
+      31,
+      21,
+      0,
+      24,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      32,
+      21,
+      1,
+      24,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      33,
+      21,
+      2,
+      24,
+      3,
+      "LATENT"
+    ],
+    [
+      35,
+      22,
+      0,
+      21,
+      3,
+      "IMAGE"
+    ],
+    [
+      37,
+      28,
+      0,
+      13,
+      0,
+      "MODEL"
+    ],
+    [
+      38,
+      29,
+      0,
+      19,
+      0,
+      "CLIP"
+    ],
+    [
+      39,
+      27,
+      0,
+      28,
+      0,
+      "MODEL"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "Group",
+      "bounding": [
+        595.7222290039062,
+        644.6500854492188,
+        725.1410522460938,
+        562.3115234375
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "Group",
+      "bounding": [
+        1365.0904541015625,
+        627.4444580078125,
+        1981.60791015625,
+        846.4495239257812
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1.2839025177495031,
+      "offset": [
+        -1836.9294666312378,
+        -618.8158199078264
+      ]
+    },
+    "ue_links": [],
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4,
+  "seed_widgets": {
+    "24": 0
+  },
+  "widget_idx_map": {
+    "24": {
+      "seed": 0,
+      "sampler_name": 4,
+      "scheduler": 5
+    }
+  }
+}

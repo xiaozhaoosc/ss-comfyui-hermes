@@ -1,0 +1,346 @@
+{
+  "last_node_id": 47,
+  "last_link_id": 81,
+  "nodes": [
+    {
+      "id": 16,
+      "type": "LoadImage",
+      "pos": [
+        -1290,
+        1990
+      ],
+      "size": {
+        "0": 540,
+        "1": 400
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            77
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [
+        "kari-shea-1SAnrIxw5OY-unsplash.jpg",
+        "image"
+      ],
+      "color": "#1f1f48"
+    },
+    {
+      "id": 44,
+      "type": "I2VGenXL_ModelLoader_Zho",
+      "pos": [
+        -1290,
+        1880
+      ],
+      "size": {
+        "0": 540,
+        "1": 60
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "pipe",
+          "type": "MODEL",
+          "links": [
+            66
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "I2VGenXL_ModelLoader_Zho",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [
+        "ali-vilab/i2vgen-xl"
+      ],
+      "color": "#1f1f48"
+    },
+    {
+      "id": 46,
+      "type": "PreviewImage",
+      "pos": [
+        -229,
+        1711
+      ],
+      "size": {
+        "0": 210,
+        "1": 246
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 79
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "color": "#1f1f48"
+    },
+    {
+      "id": 47,
+      "type": "RIFE VFI",
+      "pos": [
+        -245,
+        1878
+      ],
+      "size": {
+        "0": 443.4000244140625,
+        "1": 198
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "frames",
+          "type": "IMAGE",
+          "link": 80
+        },
+        {
+          "name": "optional_interpolation_states",
+          "type": "INTERPOLATION_STATES",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            81
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RIFE VFI",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [
+        "rife47.pth",
+        10,
+        2,
+        true,
+        true,
+        1
+      ],
+      "color": "#1f1f48"
+    },
+    {
+      "id": 17,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        -359,
+        2126
+      ],
+      "size": [
+        755.0211791992188,
+        290
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 81
+        },
+        {
+          "name": "audio",
+          "type": "VHS_AUDIO",
+          "link": null
+        },
+        {
+          "name": "batch_manager",
+          "type": "VHS_BatchManager",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "title": "OUTPUT",
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": {
+        "frame_rate": 8,
+        "loop_count": 0,
+        "filename_prefix": "i2v/b",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 19,
+        "save_metadata": true,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "b_00011.mp4",
+            "subfolder": "i2v",
+            "type": "output",
+            "format": "video/h264-mp4"
+          }
+        }
+      },
+      "color": "#1f1f48"
+    },
+    {
+      "id": 45,
+      "type": "I2VGenXL_Generation_Zho",
+      "pos": [
+        -722,
+        1878
+      ],
+      "size": {
+        "0": 310,
+        "1": 510
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pipe",
+          "type": "MODEL",
+          "link": 66
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 77,
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            79,
+            80
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "I2VGenXL_Generation_Zho",
+        "ttNbgOverride": {
+          "color": "#1f1f48",
+          "groupcolor": "#88A"
+        }
+      },
+      "widgets_values": [
+        "the laptop turns on, screen lights on",
+        "Distorted, discontinuous, Ugly, blurry, low resolution, motionless, static, disfigured, disconnected limbs, Ugly faces, incomplete arms",
+        40,
+        9,
+        1280,
+        704,
+        16,
+        372764735500178,
+        "randomize"
+      ],
+      "color": "#1f1f48"
+    }
+  ],
+  "links": [
+    [
+      66,
+      44,
+      0,
+      45,
+      0,
+      "MODEL"
+    ],
+    [
+      77,
+      16,
+      0,
+      45,
+      1,
+      "IMAGE"
+    ],
+    [
+      79,
+      45,
+      0,
+      46,
+      0,
+      "IMAGE"
+    ],
+    [
+      80,
+      45,
+      0,
+      47,
+      0,
+      "IMAGE"
+    ],
+    [
+      81,
+      47,
+      0,
+      17,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}

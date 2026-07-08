@@ -1,0 +1,974 @@
+{
+  "last_node_id": 305,
+  "last_link_id": 669,
+  "nodes": [
+    {
+      "id": 302,
+      "type": "workflow/不用动",
+      "pos": [
+        40,
+        760
+      ],
+      "size": {
+        "0": 481.1999816894531,
+        "1": 194
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 669
+        },
+        {
+          "name": "条件",
+          "type": "CONDITIONING",
+          "link": 666
+        },
+        {
+          "name": "ConditioningZeroOut conditioning",
+          "type": "CONDITIONING",
+          "link": 667
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            663
+          ],
+          "shape": 3
+        },
+        {
+          "name": "条件",
+          "type": "CONDITIONING",
+          "links": [
+            664
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "workflow/不用动"
+      },
+      "widgets_values": [
+        3,
+        0,
+        0.1,
+        0.1,
+        1
+      ]
+    },
+    {
+      "id": 231,
+      "type": "VAEDecode",
+      "pos": [
+        1520,
+        840
+      ],
+      "size": [
+        280,
+        80
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 596,
+          "label": "Latent"
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 557,
+          "label": "VAE"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            599
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "图像"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "locked": true
+    },
+    {
+      "id": 71,
+      "type": "CLIPTextEncode",
+      "pos": [
+        1040,
+        520
+      ],
+      "size": [
+        400,
+        120
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 662,
+          "label": "CLIP"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            666,
+            667
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "条件"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "bad quality,"
+      ],
+      "color": "#322",
+      "bgcolor": "#533",
+      "locked": true
+    },
+    {
+      "id": 135,
+      "type": "EmptySD3LatentImage",
+      "pos": [
+        480,
+        120
+      ],
+      "size": [
+        315,
+        106
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            593
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptySD3LatentImage"
+      },
+      "widgets_values": [
+        640,
+        1280,
+        1
+      ]
+    },
+    {
+      "id": 252,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        40,
+        120
+      ],
+      "size": [
+        375.8787841796875,
+        98
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            669
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "模型"
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            662,
+            668
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            557
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "sd3_medium_incl_clips.safetensors"
+      ],
+      "locked": true
+    },
+    {
+      "id": 277,
+      "type": "LoraLoader",
+      "pos": [
+        880,
+        120
+      ],
+      "size": [
+        600,
+        120
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": null,
+          "label": "模型"
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": null,
+          "label": "CLIP"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [],
+          "shape": 3,
+          "label": "模型",
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoader"
+      },
+      "widgets_values": [
+        "Hyper-SDXL-8steps-lora.safetensors",
+        0.8,
+        1
+      ],
+      "locked": true
+    },
+    {
+      "id": 275,
+      "type": "CLIPTextEncode",
+      "pos": [
+        1040,
+        280
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 668,
+          "label": "CLIP",
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            605
+          ],
+          "shape": 3,
+          "label": "条件",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "realistic close-up of a bird with feathers in disarray, open beak showing surprise, intense bright blue eyes, monochromatic lightly blurred background enhancing focus on the bird, detailed feather texture, digital photography style, inspired by audubon wildlife illustrations, masterpiece\n"
+      ],
+      "locked": true
+    },
+    {
+      "id": 233,
+      "type": "PreviewImage",
+      "pos": [
+        1880,
+        40
+      ],
+      "size": {
+        "0": 520,
+        "1": 960
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 599,
+          "label": "图像"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 272,
+      "type": "PrimitiveNode",
+      "pos": [
+        1000,
+        880
+      ],
+      "size": [
+        400,
+        80
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            597
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "seed"
+          }
+        }
+      ],
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        0,
+        "randomize"
+      ]
+    },
+    {
+      "id": 271,
+      "type": "KSampler",
+      "pos": [
+        1520,
+        120
+      ],
+      "size": [
+        280,
+        680
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 663,
+          "label": "模型"
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 605,
+          "label": "正面条件"
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 664,
+          "label": "负面条件"
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 593,
+          "label": "Latent"
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 597,
+          "widget": {
+            "name": "seed"
+          },
+          "slot_index": 4,
+          "label": "随机种"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            596
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "Latent"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        0,
+        "fixed",
+        30,
+        4.5,
+        "dpmpp_2m",
+        "sgm_uniform",
+        1
+      ]
+    },
+    {
+      "id": 303,
+      "type": "Note",
+      "pos": [
+        1040,
+        800
+      ],
+      "size": [
+        200,
+        52
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "出图种子数值或随机数"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 304,
+      "type": "Note",
+      "pos": [
+        1240,
+        160
+      ],
+      "size": {
+        "0": 200,
+        "1": 52
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "测试中"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 278,
+      "type": "DualCLIPLoader",
+      "pos": [
+        40,
+        320
+      ],
+      "size": [
+        360,
+        120
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 2,
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DualCLIPLoader"
+      },
+      "widgets_values": [
+        "clip_g.safetensors",
+        "clip_l.safetensors",
+        "sd3"
+      ],
+      "locked": true
+    }
+  ],
+  "links": [
+    [
+      557,
+      252,
+      2,
+      231,
+      1,
+      "VAE"
+    ],
+    [
+      593,
+      135,
+      0,
+      271,
+      3,
+      "LATENT"
+    ],
+    [
+      596,
+      271,
+      0,
+      231,
+      0,
+      "LATENT"
+    ],
+    [
+      597,
+      272,
+      0,
+      271,
+      4,
+      "INT"
+    ],
+    [
+      599,
+      231,
+      0,
+      233,
+      0,
+      "IMAGE"
+    ],
+    [
+      605,
+      275,
+      0,
+      271,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      662,
+      252,
+      1,
+      71,
+      0,
+      "CLIP"
+    ],
+    [
+      663,
+      302,
+      0,
+      271,
+      0,
+      "MODEL"
+    ],
+    [
+      664,
+      302,
+      1,
+      271,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      666,
+      71,
+      0,
+      302,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      667,
+      71,
+      0,
+      302,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      668,
+      252,
+      1,
+      275,
+      0,
+      "CLIP"
+    ],
+    [
+      669,
+      252,
+      0,
+      302,
+      0,
+      "MODEL"
+    ]
+  ],
+  "groups": [
+    {
+      "title": "出图参数",
+      "bounding": [
+        843,
+        10,
+        1020,
+        986
+      ],
+      "color": "#A88",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "选择SD3-5G-Clips大模型",
+      "bounding": [
+        15,
+        11,
+        801,
+        557
+      ],
+      "color": "#444",
+      "font_size": 24,
+      "locked": false
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.8264462809917354,
+      "offset": [
+        320.7810711853506,
+        26.1247954637593
+      ]
+    },
+    "groupNodes": {
+      "不用动": {
+        "nodes": [
+          {
+            "type": "ModelSamplingSD3",
+            "pos": [
+              40,
+              760
+            ],
+            "size": {
+              "0": 315,
+              "1": 58
+            },
+            "flags": {
+              "collapsed": false
+            },
+            "order": 6,
+            "mode": 0,
+            "inputs": [
+              {
+                "name": "model",
+                "type": "MODEL",
+                "link": null
+              }
+            ],
+            "outputs": [
+              {
+                "name": "MODEL",
+                "type": "MODEL",
+                "links": [],
+                "shape": 3,
+                "slot_index": 0
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "ModelSamplingSD3"
+            },
+            "widgets_values": [
+              3
+            ],
+            "index": 0
+          },
+          {
+            "type": "ConditioningSetTimestepRange",
+            "pos": [
+              40,
+              880
+            ],
+            "size": {
+              "0": 317.4000244140625,
+              "1": 82
+            },
+            "flags": {},
+            "order": 8,
+            "mode": 0,
+            "inputs": [
+              {
+                "name": "conditioning",
+                "type": "CONDITIONING",
+                "link": null,
+                "slot_index": 0,
+                "label": "条件"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "CONDITIONING",
+                "type": "CONDITIONING",
+                "links": [],
+                "shape": 3,
+                "slot_index": 0,
+                "label": "条件"
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "ConditioningSetTimestepRange"
+            },
+            "widgets_values": [
+              0,
+              0.1
+            ],
+            "index": 1
+          },
+          {
+            "type": "ConditioningZeroOut",
+            "pos": [
+              680,
+              760
+            ],
+            "size": {
+              "0": 211.60000610351562,
+              "1": 26
+            },
+            "flags": {
+              "collapsed": false
+            },
+            "order": 9,
+            "mode": 0,
+            "inputs": [
+              {
+                "name": "conditioning",
+                "type": "CONDITIONING",
+                "link": null,
+                "label": "条件"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "CONDITIONING",
+                "type": "CONDITIONING",
+                "links": [],
+                "shape": 3,
+                "slot_index": 0,
+                "label": "条件"
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "ConditioningZeroOut"
+            },
+            "index": 2
+          },
+          {
+            "type": "ConditioningSetTimestepRange",
+            "pos": [
+              560,
+              880
+            ],
+            "size": {
+              "0": 317.4000244140625,
+              "1": 82
+            },
+            "flags": {
+              "collapsed": false
+            },
+            "order": 10,
+            "mode": 0,
+            "inputs": [
+              {
+                "name": "conditioning",
+                "type": "CONDITIONING",
+                "link": null,
+                "label": "条件"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "CONDITIONING",
+                "type": "CONDITIONING",
+                "links": [],
+                "shape": 3,
+                "slot_index": 0,
+                "label": "条件"
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "ConditioningSetTimestepRange"
+            },
+            "widgets_values": [
+              0.1,
+              1
+            ],
+            "index": 3
+          },
+          {
+            "type": "ConditioningCombine",
+            "pos": [
+              400,
+              760
+            ],
+            "size": {
+              "0": 228.39999389648438,
+              "1": 46
+            },
+            "flags": {},
+            "order": 11,
+            "mode": 0,
+            "inputs": [
+              {
+                "name": "conditioning_1",
+                "type": "CONDITIONING",
+                "link": null,
+                "label": "条件1"
+              },
+              {
+                "name": "conditioning_2",
+                "type": "CONDITIONING",
+                "link": null,
+                "label": "条件2"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "CONDITIONING",
+                "type": "CONDITIONING",
+                "links": [],
+                "shape": 3,
+                "slot_index": 0,
+                "label": "条件"
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "ConditioningCombine"
+            },
+            "index": 4
+          }
+        ],
+        "links": [
+          [
+            null,
+            0,
+            0,
+            0,
+            277,
+            "MODEL"
+          ],
+          [
+            null,
+            0,
+            1,
+            0,
+            71,
+            "CONDITIONING"
+          ],
+          [
+            null,
+            0,
+            2,
+            0,
+            71,
+            "CONDITIONING"
+          ],
+          [
+            2,
+            0,
+            3,
+            0,
+            67,
+            "CONDITIONING"
+          ],
+          [
+            3,
+            0,
+            4,
+            0,
+            68,
+            "CONDITIONING"
+          ],
+          [
+            1,
+            0,
+            4,
+            1,
+            70,
+            "CONDITIONING"
+          ]
+        ],
+        "external": [
+          [
+            0,
+            0,
+            "MODEL"
+          ],
+          [
+            4,
+            0,
+            "CONDITIONING"
+          ]
+        ]
+      }
+    }
+  },
+  "version": 0.4
+}

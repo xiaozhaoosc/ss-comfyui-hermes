@@ -1,0 +1,2405 @@
+{
+  "id": "db679192-e60b-492a-99d8-3d017320d610",
+  "revision": 0,
+  "last_node_id": 167,
+  "last_link_id": 291,
+  "nodes": [
+    {
+      "id": 56,
+      "type": "ControlNetLoader",
+      "pos": {
+        "0": -18.5277099609375,
+        "1": 264.1139831542969
+      },
+      "size": {
+        "0": 386.2285461425781,
+        "1": 75.74897003173828
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "ControlNet",
+          "name": "CONTROL_NET",
+          "type": "CONTROL_NET",
+          "links": [
+            116
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "ControlNetLoader"
+      },
+      "widgets_values": [
+        "FLUX.1-dev-ControlNet-Union-Pro-InstantX.safetensors"
+      ],
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 63,
+      "type": "PreviewImage",
+      "pos": {
+        "0": 405.5139465332031,
+        "1": -91.2825927734375
+      },
+      "size": {
+        "0": 359.2720031738281,
+        "1": 306.9825744628906
+      },
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 129
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 114,
+      "type": "PreviewImage",
+      "pos": {
+        "0": 931.1781005859375,
+        "1": -1068.830078125
+      },
+      "size": {
+        "0": 210,
+        "1": 246
+      },
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 214
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 116,
+      "type": "LayerMask: MaskGrow",
+      "pos": {
+        "0": 1392.8087158203125,
+        "1": -1186.3765869140625
+      },
+      "size": {
+        "0": 315,
+        "1": 106
+      },
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "遮罩",
+          "name": "mask",
+          "type": "MASK",
+          "link": 215
+        }
+      ],
+      "outputs": [
+        {
+          "label": "遮罩",
+          "name": "mask",
+          "type": "MASK",
+          "links": [
+            216
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LayerMask: MaskGrow"
+      },
+      "widgets_values": [
+        true,
+        0,
+        0
+      ],
+      "color": "rgba(27, 80, 119, 0.7)"
+    },
+    {
+      "id": 84,
+      "type": "LayerUtility: ImageScaleByAspectRatio V2",
+      "pos": {
+        "0": 586.9774780273438,
+        "1": -714.9521484375
+      },
+      "size": {
+        "0": 315,
+        "1": 330
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 213
+        },
+        {
+          "label": "遮罩",
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK"
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            168,
+            169,
+            171,
+            176
+          ]
+        },
+        {
+          "label": "遮罩",
+          "name": "mask",
+          "type": "MASK",
+          "links": [
+            224
+          ]
+        },
+        {
+          "label": "原始大小",
+          "name": "original_size",
+          "type": "BOX"
+        },
+        {
+          "name": "width",
+          "type": "INT"
+        },
+        {
+          "name": "height",
+          "type": "INT"
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LayerUtility: ImageScaleByAspectRatio V2"
+      },
+      "widgets_values": [
+        "original",
+        1,
+        1,
+        "letterbox",
+        "lanczos",
+        "8",
+        "width",
+        1024,
+        "#000000"
+      ],
+      "color": "rgba(38, 73, 116, 0.7)"
+    },
+    {
+      "id": 88,
+      "type": "GetImageSize+",
+      "pos": {
+        "0": 588.963134765625,
+        "1": -663.7135009765625
+      },
+      "size": {
+        "0": 210,
+        "1": 66
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 171
+        }
+      ],
+      "outputs": [
+        {
+          "label": "宽度",
+          "name": "width",
+          "type": "INT",
+          "links": [
+            172
+          ]
+        },
+        {
+          "label": "高度",
+          "name": "height",
+          "type": "INT",
+          "links": [
+            173
+          ]
+        },
+        {
+          "name": "count",
+          "type": "INT"
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "GetImageSize+"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 53,
+      "type": "CLIPTextEncodeFlux",
+      "pos": {
+        "0": 588.6596069335938,
+        "1": -620.7413940429688
+      },
+      "size": {
+        "0": 275.5301513671875,
+        "1": 106
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "CLIP",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 118
+        },
+        {
+          "label": "CLIP_L",
+          "name": "clip_l",
+          "type": "STRING",
+          "widget": {
+            "name": "clip_l"
+          },
+          "link": 217
+        },
+        {
+          "label": "T5XXL",
+          "name": "t5xxl",
+          "type": "STRING",
+          "widget": {
+            "name": "t5xxl"
+          },
+          "link": 218
+        }
+      ],
+      "outputs": [
+        {
+          "label": "条件",
+          "name": "CONDITIONING",
+          "shape": 3,
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            115
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "CLIPTextEncodeFlux"
+      },
+      "widgets_values": [
+        "Generate a game tournament poster with a central focus on a unique and artistically designed crystal flower. The petals of the flower are carved from transparent crystal with a faint blue luster, gradually darkening from the stamen outward to create a profound and mysterious visual effect. The petal edges are in an irregular wavy shape, resembling the natural form blown by the wind, and inlaid with tiny diamonds that sparkle dazzlingly under the refraction of light, like the stars in the night sky. The stamen is a large oval crystal emitting a soft pink glow, with faintly visible golden filaments inside, like the veins of life, adding a touch of vitality and liveliness to the whole flower. The flower stem consists of a silver wire entwined with a lavender crystal column, engraved with delicate patterns that spiral upward, symbolizing growth and strength. The bottom of the stem is rooted in a circular base made of white crystal, carved with mysterious runes symbolizing the game world, emitting a faint blue light, providing a stable and mysterious support for the flower. Surrounding the crystal flower is an expansive flower sea with rich and soft colors, full of a dreamy feeling. The near flower sea is dominated by large areas of pink roses. The rose petals are thick and delicate, full and charming, with a faint golden sheen on each petal, as if gently caressed by the sun. Among the rose bushes are occasionally dotted a few white lilies. The lily petals are wide and soft, and the stamens are light yellow, emitting a fresh fragrance, forming a sharp contrast with the surrounding vibrant pink roses, creating an elegant and quiet atmosphere. In the distance of the flower sea is a purple lavender field, with the lavender flowers swaying gently in the breeze and emitting a charming aroma, adding a romantic and poetic touch to the whole picture. Above the flower sea floats a layer of faint golden mist, which sparkles with tiny light spots under the sunlight, like the powder of elves, making the whole flower sea look more dreamy. At the end of the flower sea are rolling mountains, shrouded in a pale blue veil, looming, like a landscape in a Chinese ink-wash painting, adding a distant and mysterious atmosphere to the flower sea. Around the crystal flower and the flower sea, there is a faint colorful glow, like the fragments of a rainbow, sprinkling on the ground, making the whole picture bright and warm. There are also some tiny crystal particles in the glow, like elves jumping merrily in the air, adding a lively touch to the picture. From the stamen of the crystal flower, several soft rays are shot out from time to time, like moonlight, scattering in all directions, illuminating the surrounding flower sea and sky. Where the rays reach, the colors of the flowers become more vivid and the sky becomes clearer, as if cheering for this unique crystal flower. Occasionally, several butterflies with transparent wings fly up from the flower clusters. Their wings are speckled with colorful lights and they dance gracefully in the light, adding vitality and energy to the picture.",
+        "Generate a game tournament poster with a central focus on a unique and artistically designed crystal flower. The petals of the flower are carved from transparent crystal with a faint blue luster, gradually darkening from the stamen outward to create a profound and mysterious visual effect. The petal edges are in an irregular wavy shape, resembling the natural form blown by the wind, and inlaid with tiny diamonds that sparkle dazzlingly under the refraction of light, like the stars in the night sky. The stamen is a large oval crystal emitting a soft pink glow, with faintly visible golden filaments inside, like the veins of life, adding a touch of vitality and liveliness to the whole flower. The flower stem consists of a silver wire entwined with a lavender crystal column, engraved with delicate patterns that spiral upward, symbolizing growth and strength. The bottom of the stem is rooted in a circular base made of white crystal, carved with mysterious runes symbolizing the game world, emitting a faint blue light, providing a stable and mysterious support for the flower. Surrounding the crystal flower is an expansive flower sea with rich and soft colors, full of a dreamy feeling. The near flower sea is dominated by large areas of pink roses. The rose petals are thick and delicate, full and charming, with a faint golden sheen on each petal, as if gently caressed by the sun. Among the rose bushes are occasionally dotted a few white lilies. The lily petals are wide and soft, and the stamens are light yellow, emitting a fresh fragrance, forming a sharp contrast with the surrounding vibrant pink roses, creating an elegant and quiet atmosphere. In the distance of the flower sea is a purple lavender field, with the lavender flowers swaying gently in the breeze and emitting a charming aroma, adding a romantic and poetic touch to the whole picture. Above the flower sea floats a layer of faint golden mist, which sparkles with tiny light spots under the sunlight, like the powder of elves, making the whole flower sea look more dreamy. At the end of the flower sea are rolling mountains, shrouded in a pale blue veil, looming, like a landscape in a Chinese ink-wash painting, adding a distant and mysterious atmosphere to the flower sea. Around the crystal flower and the flower sea, there is a faint colorful glow, like the fragments of a rainbow, sprinkling on the ground, making the whole picture bright and warm. There are also some tiny crystal particles in the glow, like elves jumping merrily in the air, adding a lively touch to the picture. From the stamen of the crystal flower, several soft rays are shot out from time to time, like moonlight, scattering in all directions, illuminating the surrounding flower sea and sky. Where the rays reach, the colors of the flowers become more vivid and the sky becomes clearer, as if cheering for this unique crystal flower. Occasionally, several butterflies with transparent wings fly up from the flower clusters. Their wings are speckled with colorful lights and they dance gracefully in the light, adding vitality and energy to the picture.",
+        3.5
+      ],
+      "color": "#346434",
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 95,
+      "type": "MaskPreview+",
+      "pos": {
+        "0": 1170.9083251953125,
+        "1": -1077.2869873046875
+      },
+      "size": {
+        "0": 210,
+        "1": 246
+      },
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "遮罩",
+          "name": "mask",
+          "type": "MASK",
+          "link": 179
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "MaskPreview+"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 92,
+      "type": "LayerMask: SegmentAnythingUltra V2",
+      "pos": {
+        "0": 596.00830078125,
+        "1": -1179.935546875
+      },
+      "size": {
+        "0": 315,
+        "1": 366
+      },
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 176
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            214,
+            225
+          ]
+        },
+        {
+          "label": "遮罩",
+          "name": "mask",
+          "type": "MASK",
+          "links": [
+            179,
+            215
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LayerMask: SegmentAnythingUltra V2"
+      },
+      "widgets_values": [
+        "sam_vit_h_4b8939.pth",
+        "GroundingDINO_SwinT_OGC (694MB)",
+        0.3,
+        "VITMatte",
+        6,
+        6,
+        0.15,
+        0.99,
+        true,
+        "subject",
+        "cuda",
+        2,
+        false
+      ],
+      "color": "rgba(27, 80, 119, 0.7)"
+    },
+    {
+      "id": 57,
+      "type": "AIO_Preprocessor",
+      "pos": {
+        "0": 395.9387512207031,
+        "1": 263.0909118652344
+      },
+      "size": {
+        "0": 374.4688720703125,
+        "1": 85.29705047607422
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 168
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            117,
+            129
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "AIO_Preprocessor"
+      },
+      "widgets_values": [
+        "LineArtPreprocessor",
+        1024
+      ],
+      "color": "#232",
+      "bgcolor": "#353",
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 71,
+      "type": "ControlNetLoader",
+      "pos": {
+        "0": 864.9702758789062,
+        "1": 269.751220703125
+      },
+      "size": {
+        "0": 364.9039611816406,
+        "1": 75.74897003173828
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "ControlNet",
+          "name": "CONTROL_NET",
+          "type": "CONTROL_NET",
+          "links": [
+            141
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "ControlNetLoader"
+      },
+      "widgets_values": [
+        "FLUX.1-dev-ControlNet-Union-Pro-InstantX.safetensors"
+      ],
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 73,
+      "type": "AIO_Preprocessor",
+      "pos": {
+        "0": 1268.023681640625,
+        "1": 255.20571899414062
+      },
+      "size": {
+        "0": 351.8899230957031,
+        "1": 84.04266357421875
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 169
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            140,
+            147
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "AIO_Preprocessor"
+      },
+      "widgets_values": [
+        "CannyEdgePreprocessor",
+        1024
+      ],
+      "color": "#232",
+      "bgcolor": "#353",
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 51,
+      "type": "LoraLoader",
+      "pos": {
+        "0": 187.02407836914062,
+        "1": -510.9049377441406
+      },
+      "size": {
+        "0": 315,
+        "1": 126
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "模型",
+          "name": "model",
+          "type": "MODEL",
+          "link": 288
+        },
+        {
+          "label": "CLIP",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 289
+        }
+      ],
+      "outputs": [
+        {
+          "label": "模型",
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            110
+          ]
+        },
+        {
+          "label": "CLIP",
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            112
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LoraLoader"
+      },
+      "widgets_values": [
+        "真实摄影细节加强滤镜_v1.0",
+        0.26,
+        0.19999999999999987
+      ],
+      "_widget_cache_map": {
+        "F.1 ZOEY真实皮肤_真实/去油/去除AI感/皮肤/纹理_真实/去油/去除AI感/皮肤/纹理_V3": {
+          "name": "F.1 ZOEY真实皮肤_真实/去油/去除AI感/皮肤/纹理_真实/去油/去除AI感/皮肤/纹理_V3",
+          "baseType": 19,
+          "value": "aaa7fd76a85b435888649b09357ac2fe"
+        },
+        "【油条】电商超级产品模特_极致细腻_V1": {
+          "name": "【油条】电商超级产品模特_极致细腻_V1",
+          "baseType": 19,
+          "value": "f0667879519f4a4eab26998fa945fea6"
+        },
+        "F1美妆化妆品超能焕颜场景：电商护肤品产品商业魅力引擎特效_v1.0": {
+          "name": "F1美妆化妆品超能焕颜场景：电商护肤品产品商业魅力引擎特效_v1.0",
+          "baseType": 19,
+          "value": "80910613f85a4d15b56fe1843b4fa347"
+        },
+        "ins简约电商摄影产品场景_ins简约写实电商摄影进阶版": {
+          "name": "ins简约电商摄影产品场景_ins简约写实电商摄影进阶版",
+          "baseType": 19,
+          "value": "b8a94b1b798d40d3b06954df644f6f0b"
+        },
+        "F1超好用的电商产品未来科技实验研究科研场景_美妆化妆品个护_v1.0": {
+          "name": "F1超好用的电商产品未来科技实验研究科研场景_美妆化妆品个护_v1.0",
+          "baseType": 19,
+          "value": "7f2fbc12c65949e597c1749293cdbc4c"
+        },
+        "【迈克】电商科研风（美妆 个护 护肤品）_1.0": {
+          "name": "【迈克】电商科研风（美妆 个护 护肤品）_1.0",
+          "baseType": 19,
+          "value": "d19a4c0b77274a49ba7b2a69e8420361"
+        },
+        "真实摄影细节加强滤镜_v1.0": {
+          "name": "真实摄影细节加强滤镜_v1.0",
+          "baseType": 19,
+          "value": "d0e98535b05946a5ba448d02b424a652"
+        }
+      }
+    },
+    {
+      "id": 58,
+      "type": "CLIPTextEncode",
+      "pos": {
+        "0": 598.9303588867188,
+        "1": -218.02310180664062
+      },
+      "size": {
+        "0": 224.3340301513672,
+        "1": 88
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "CLIP",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 119
+        }
+      ],
+      "outputs": [
+        {
+          "label": "条件",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            120
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 68,
+      "type": "VAEDecode",
+      "pos": {
+        "0": 585.2733154296875,
+        "1": -311.4468994140625
+      },
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "Latent",
+          "name": "samples",
+          "type": "LATENT",
+          "link": 133
+        },
+        {
+          "label": "VAE",
+          "name": "vae",
+          "type": "VAE",
+          "link": 139
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "shape": 3,
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            134,
+            223
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "VAEDecode"
+      },
+      "widgets_values": [],
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 72,
+      "type": "PreviewImage",
+      "pos": {
+        "0": 1263.63134765625,
+        "1": -79.33330535888672
+      },
+      "size": {
+        "0": 347.9825134277344,
+        "1": 280.6404724121094
+      },
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 140
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 123,
+      "type": "easy cleanGpuUsed",
+      "pos": {
+        "0": 1431.034423828125,
+        "1": -699.414794921875
+      },
+      "size": {
+        "0": 210,
+        "1": 26
+      },
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "输入任何",
+          "name": "anything",
+          "type": "*",
+          "link": 228
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*"
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "easy cleanGpuUsed"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 74,
+      "type": "ControlNetApplySD3",
+      "pos": {
+        "0": 857.0736083984375,
+        "1": -79.87178802490234
+      },
+      "size": {
+        "0": 382.0960693359375,
+        "1": 291.36846923828125
+      },
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "正面条件",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 153
+        },
+        {
+          "label": "负面条件",
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 154
+        },
+        {
+          "label": "ControlNet",
+          "name": "control_net",
+          "type": "CONTROL_NET",
+          "link": 141
+        },
+        {
+          "label": "VAE",
+          "name": "vae",
+          "type": "VAE",
+          "link": 150
+        },
+        {
+          "label": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 147
+        }
+      ],
+      "outputs": [
+        {
+          "label": "正面条件",
+          "name": "positive",
+          "shape": 3,
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            148
+          ]
+        },
+        {
+          "label": "负面条件",
+          "name": "negative",
+          "shape": 3,
+          "type": "CONDITIONING",
+          "slot_index": 1,
+          "links": [
+            149
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "ControlNetApplySD3"
+      },
+      "widgets_values": [
+        0.7500000000000002,
+        0,
+        0.75
+      ],
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 97,
+      "type": "InvertMask",
+      "pos": {
+        "0": 1400.628173828125,
+        "1": -1025.9986572265625
+      },
+      "size": {
+        "0": 305.0513000488281,
+        "1": 193.12229919433594
+      },
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "遮罩",
+          "name": "mask",
+          "type": "MASK",
+          "link": 216
+        }
+      ],
+      "outputs": [
+        {
+          "label": "遮罩",
+          "name": "MASK",
+          "type": "MASK",
+          "links": []
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "InvertMask"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 48,
+      "type": "UNETLoader",
+      "pos": {
+        "0": -60.752197265625,
+        "1": -686.77392578125
+      },
+      "size": {
+        "0": 210,
+        "1": 116.52274322509766
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "模型",
+          "name": "MODEL",
+          "shape": 3,
+          "type": "MODEL",
+          "slot_index": 0,
+          "links": [
+            286
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "UNETLoader"
+      },
+      "widgets_values": [
+        "基础算法_F.1",
+        "fp8_e4m3fn"
+      ],
+      "_widget_cache_map": {
+        "基础算法_F.1": {
+          "name": "基础算法_F.1",
+          "baseType": 19,
+          "value": "412b427ddb674b4dbab9e5abd5ae6057"
+        }
+      }
+    },
+    {
+      "id": 49,
+      "type": "DualCLIPLoader",
+      "pos": {
+        "0": -56.75568389892578,
+        "1": -507.614013671875
+      },
+      "size": {
+        "0": 210,
+        "1": 130
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "CLIP",
+          "name": "CLIP",
+          "shape": 3,
+          "type": "CLIP",
+          "slot_index": 0,
+          "links": [
+            287
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "DualCLIPLoader"
+      },
+      "widgets_values": [
+        "clip_l",
+        "t5xxl_fp8_e4m3fn",
+        "flux",
+        "default"
+      ],
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 50,
+      "type": "VAELoader",
+      "pos": {
+        "0": -51.4339714050293,
+        "1": -319.65277099609375
+      },
+      "size": {
+        "0": 210,
+        "1": 81.81724548339844
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "shape": 3,
+          "type": "VAE",
+          "slot_index": 0,
+          "links": [
+            127,
+            139,
+            150
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "ae.sft"
+      ],
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 70,
+      "type": "EmptyLatentImage",
+      "pos": {
+        "0": 589.4615478515625,
+        "1": -467.2622985839844
+      },
+      "size": {
+        "0": 324.8609924316406,
+        "1": 106
+      },
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "宽度",
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 172
+        },
+        {
+          "label": "高度",
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          }
+        },
+        {
+          "label": "高度",
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 173
+        }
+      ],
+      "outputs": [
+        {
+          "label": "Latent",
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            135
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        1080,
+        1352,
+        1
+      ]
+    },
+    {
+      "id": 59,
+      "type": "LoadImage",
+      "pos": {
+        "0": -564.3530883789062,
+        "1": -686.4490356445312
+      },
+      "size": {
+        "0": 449.733642578125,
+        "1": 472.01507568359375
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            213
+          ]
+        },
+        {
+          "label": "遮罩",
+          "name": "MASK",
+          "type": "MASK"
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "image.png",
+        "image",
+        ""
+      ],
+      "_widget_cache_map": {
+        "94.png": {
+          "value": "img/d2edcfd60dac4c9bb103f1034d382465/828fa5bc78f01cb741ecd119509e67b93e47659cb6c26f16d0d18f6c5b4389a9.png",
+          "name": "94.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/d2edcfd60dac4c9bb103f1034d382465/828fa5bc78f01cb741ecd119509e67b93e47659cb6c26f16d0d18f6c5b4389a9.png",
+          "width": 768,
+          "height": 1024
+        },
+        "01.png": {
+          "value": "img/d2edcfd60dac4c9bb103f1034d382465/aca1d5efa70d51f0fd300a18b83f472d0d2c45eb5be3fde0f302b0721dceb033.png",
+          "name": "01.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/d2edcfd60dac4c9bb103f1034d382465/aca1d5efa70d51f0fd300a18b83f472d0d2c45eb5be3fde0f302b0721dceb033.png",
+          "width": 1920,
+          "height": 1080
+        },
+        "02.png": {
+          "value": "img/d2edcfd60dac4c9bb103f1034d382465/bc4ebdc36918f2a15d5a04f9c6f4d480300303d5ad5bf1280ae8bd9e90a8c5d9.png",
+          "name": "02.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/d2edcfd60dac4c9bb103f1034d382465/bc4ebdc36918f2a15d5a04f9c6f4d480300303d5ad5bf1280ae8bd9e90a8c5d9.png",
+          "width": 1920,
+          "height": 1080
+        },
+        "image.png": {
+          "value": "img/38eeff9a98578c8bf95d425421a339c3/ee179428be21746f74dc1720812d12c6cb53370b61be68299799d20a49c93cee.png",
+          "name": "image.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/38eeff9a98578c8bf95d425421a339c3/ee179428be21746f74dc1720812d12c6cb53370b61be68299799d20a49c93cee.png",
+          "width": 1500,
+          "height": 2250
+        }
+      }
+    },
+    {
+      "id": 118,
+      "type": "LibLibTranslate",
+      "pos": {
+        "0": 86.0140380859375,
+        "1": -1166.5557861328125
+      },
+      "size": {
+        "0": 418.27386474609375,
+        "1": 347.68743896484375
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "text",
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            217,
+            218
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LibLibTranslate"
+      },
+      "widgets_values": [
+        "Chinese",
+        "English",
+        "高端产品写实平面摄影,床头柜上放一个长长的圆柱形保健品瓶，上面贴着亮绿色的标签。瓶身呈长圆柱形，瓶盖为白色。\n一位欧美女士的手从床上伸向保健品瓶，做出想要拿取的样子，旁边摆放着新鲜的西兰花、菠菜叶，一个白色的碗，里面装满了五颜六色的麦片圈，一个杯子里装满了牛奶，\n\n胡桃木床头柜在舒适的室内场景中，上面还有一盏白色的陶瓷灯，用柔和的自然光营造出柔和的阴影，增强温馨宜人的氛围。柔和的自然光线，暖色调，写实的生活方式摄影，强调养生和日常舒适"
+      ]
+    },
+    {
+      "id": 66,
+      "type": "KSampler //Inspire",
+      "pos": {
+        "0": 941.891845703125,
+        "1": -709.5465087890625
+      },
+      "size": {
+        "0": 411.5164489746094,
+        "1": 494.5766296386719
+      },
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "模型",
+          "name": "model",
+          "type": "MODEL",
+          "link": 138
+        },
+        {
+          "label": "正面条件",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 148
+        },
+        {
+          "label": "负面条件",
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 149
+        },
+        {
+          "label": "Latent",
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 135
+        },
+        {
+          "name": "scheduler_func_opt",
+          "shape": 7,
+          "type": "SCHEDULER_FUNC"
+        }
+      ],
+      "outputs": [
+        {
+          "label": "Latent",
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            133,
+            228
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "KSampler //Inspire"
+      },
+      "widgets_values": [
+        828506553692137,
+        "randomize",
+        30,
+        1,
+        "euler",
+        "beta",
+        1,
+        "GPU(=A1111)",
+        "incremental",
+        0,
+        0,
+        "linear",
+        0
+      ],
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 121,
+      "type": "LayerUtility: ImageBlendAdvance",
+      "pos": {
+        "0": 1370.6015625,
+        "1": -603.5150146484375
+      },
+      "size": {
+        "0": 315,
+        "1": 338
+      },
+      "flags": {},
+      "order": 31,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "背景图像",
+          "name": "background_image",
+          "type": "IMAGE",
+          "link": 223
+        },
+        {
+          "label": "图像层",
+          "name": "layer_image",
+          "type": "IMAGE",
+          "link": 225
+        },
+        {
+          "label": "遮罩层",
+          "name": "layer_mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": 224
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            255
+          ]
+        },
+        {
+          "label": "遮罩",
+          "name": "mask",
+          "type": "MASK"
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LayerUtility: ImageBlendAdvance"
+      },
+      "widgets_values": [
+        true,
+        "normal",
+        100,
+        50,
+        50,
+        "None",
+        1,
+        1,
+        0,
+        "lanczos",
+        0
+      ],
+      "color": "rgba(38, 73, 116, 0.7)"
+    },
+    {
+      "id": 69,
+      "type": "SaveImage",
+      "pos": {
+        "0": 1777.5504150390625,
+        "1": -763.28271484375
+      },
+      "size": {
+        "0": 483.84918212890625,
+        "1": 588.6805419921875
+      },
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 134
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "%date:yyyyMMdd%/image_"
+      ],
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 143,
+      "type": "SaveImage",
+      "pos": {
+        "0": 2284.078369140625,
+        "1": -762.8209228515625
+      },
+      "size": {
+        "0": 475.5351257324219,
+        "1": 584.1984252929688
+      },
+      "flags": {},
+      "order": 32,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 255
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 166,
+      "type": "Note",
+      "pos": {
+        "0": -147.8782196044922,
+        "1": -1017.4656982421875
+      },
+      "size": {
+        "0": 210,
+        "1": 144.0438995361328
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "可以用豆包来写，尽量详细一些"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 52,
+      "type": "LoraLoader",
+      "pos": {
+        "0": 189.30825805664062,
+        "1": -329.8365783691406
+      },
+      "size": {
+        "0": 315,
+        "1": 126
+      },
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "模型",
+          "name": "model",
+          "type": "MODEL",
+          "link": 110
+        },
+        {
+          "label": "CLIP",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 112
+        }
+      ],
+      "outputs": [
+        {
+          "label": "模型",
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            138
+          ]
+        },
+        {
+          "label": "CLIP",
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            118,
+            119
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LoraLoader"
+      },
+      "widgets_values": [
+        "ins简约电商摄影产品场景_ins简约写实电商摄影进阶版",
+        0.5,
+        1
+      ],
+      "_widget_cache_map": {
+        "F.1 ZOEY真实皮肤_真实/去油/去除AI感/皮肤/纹理_真实/去油/去除AI感/皮肤/纹理_V3": {
+          "name": "F.1 ZOEY真实皮肤_真实/去油/去除AI感/皮肤/纹理_真实/去油/去除AI感/皮肤/纹理_V3",
+          "baseType": 19,
+          "value": "aaa7fd76a85b435888649b09357ac2fe"
+        },
+        "阿瑞-时尚科技电商模特大片_FTMC": {
+          "name": "阿瑞-时尚科技电商模特大片_FTMC",
+          "baseType": 19,
+          "value": "0940ee360d50431da4fab3bde51b3d94"
+        },
+        "电商产品摄影F.1_v3.0": {
+          "name": "电商产品摄影F.1_v3.0",
+          "baseType": 19,
+          "value": "4a8a806ef85b47f997f050493e53a0a8"
+        },
+        "【油条】电商产品超细腻质感_v1": {
+          "name": "【油条】电商产品超细腻质感_v1",
+          "baseType": 19,
+          "value": "acc00b313f9d472ebbc7dc01d7f8723d"
+        },
+        "电商实验产品摄影_电商实验室产品摄影": {
+          "name": "电商实验产品摄影_电商实验室产品摄影",
+          "baseType": 19,
+          "value": "266f3d07eef0465988c079f6fbe103a7"
+        },
+        "F1超好用的电商产品未来科技实验研究科研场景_美妆化妆品个护_v1.0": {
+          "name": "F1超好用的电商产品未来科技实验研究科研场景_美妆化妆品个护_v1.0",
+          "baseType": 19,
+          "value": "7f2fbc12c65949e597c1749293cdbc4c"
+        },
+        "F1电商美妆成分分子气泡水科研场景_v1.0": {
+          "name": "F1电商美妆成分分子气泡水科研场景_v1.0",
+          "baseType": 19,
+          "value": "596e4bbc89bf4356949cd66025d86bd9"
+        },
+        "F.1_电商实验室场景护肤品_V1": {
+          "name": "F.1_电商实验室场景护肤品_V1",
+          "baseType": 19,
+          "value": "5fe1019662354a8993fa5e2bf0f301d7"
+        },
+        "XLabs F.1 Realism LoRA_V1": {
+          "name": "XLabs F.1 Realism LoRA_V1",
+          "baseType": 19,
+          "value": "d934fb7dda1949ae82d09ff8e4e4d87e"
+        },
+        "ins风格静物摄影图|生活场景、食物、装饰_v1.0": {
+          "name": "ins风格静物摄影图|生活场景、食物、装饰_v1.0",
+          "baseType": 19,
+          "value": "ce2a26b490b942808033e655a647cb25"
+        },
+        "F.1电商欧美模特跨境摄影场景图送礼，运动，户外，亲子，室内_V1": {
+          "name": "F.1电商欧美模特跨境摄影场景图送礼，运动，户外，亲子，室内_V1",
+          "baseType": 19,
+          "value": "5754aa221a554ae083fab17b5ca15d09"
+        },
+        "苏-Realistic欧美ins人像_v1.0": {
+          "name": "苏-Realistic欧美ins人像_v1.0",
+          "baseType": 19,
+          "value": "f85878d131e847b8a19b54a64cd59345"
+        },
+        "ins简约电商摄影产品场景_ins简约写实电商摄影进阶版": {
+          "name": "ins简约电商摄影产品场景_ins简约写实电商摄影进阶版",
+          "baseType": 19,
+          "value": "b8a94b1b798d40d3b06954df644f6f0b"
+        }
+      }
+    },
+    {
+      "id": 55,
+      "type": "ControlNetApplySD3",
+      "pos": {
+        "0": -15.148086547851562,
+        "1": -76.71477508544922
+      },
+      "size": {
+        "0": 380.08905029296875,
+        "1": 288.1070556640625
+      },
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "正面条件",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 115
+        },
+        {
+          "label": "负面条件",
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 120
+        },
+        {
+          "label": "ControlNet",
+          "name": "control_net",
+          "type": "CONTROL_NET",
+          "link": 116
+        },
+        {
+          "label": "VAE",
+          "name": "vae",
+          "type": "VAE",
+          "link": 127
+        },
+        {
+          "label": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 117
+        }
+      ],
+      "outputs": [
+        {
+          "label": "正面条件",
+          "name": "positive",
+          "shape": 3,
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            153
+          ]
+        },
+        {
+          "label": "负面条件",
+          "name": "negative",
+          "shape": 3,
+          "type": "CONDITIONING",
+          "slot_index": 1,
+          "links": [
+            154
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "ControlNetApplySD3"
+      },
+      "widgets_values": [
+        0.25,
+        0,
+        0.25
+      ],
+      "_widget_cache_map": {}
+    },
+    {
+      "id": 164,
+      "type": "LoraLoader",
+      "pos": {
+        "0": 188.3271484375,
+        "1": -689.7134399414062
+      },
+      "size": {
+        "0": 315,
+        "1": 126
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "模型",
+          "name": "model",
+          "type": "MODEL",
+          "link": 286
+        },
+        {
+          "label": "CLIP",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 287
+        }
+      ],
+      "outputs": [
+        {
+          "label": "模型",
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            288
+          ]
+        },
+        {
+          "label": "CLIP",
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            289
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LoraLoader"
+      },
+      "widgets_values": [
+        "QY_F.1-手部优化 ，手指修复，美甲艺术_电商手模_V1",
+        0.7000000000000002,
+        1
+      ],
+      "_widget_cache_map": {
+        "F.1 ZOEY真实皮肤_真实/去油/去除AI感/皮肤/纹理_真实/去油/去除AI感/皮肤/纹理_V3": {
+          "name": "F.1 ZOEY真实皮肤_真实/去油/去除AI感/皮肤/纹理_真实/去油/去除AI感/皮肤/纹理_V3",
+          "baseType": 19,
+          "value": "aaa7fd76a85b435888649b09357ac2fe"
+        },
+        "【油条】电商超级产品模特_极致细腻_V1": {
+          "name": "【油条】电商超级产品模特_极致细腻_V1",
+          "baseType": 19,
+          "value": "f0667879519f4a4eab26998fa945fea6"
+        },
+        "F1美妆化妆品超能焕颜场景：电商护肤品产品商业魅力引擎特效_v1.0": {
+          "name": "F1美妆化妆品超能焕颜场景：电商护肤品产品商业魅力引擎特效_v1.0",
+          "baseType": 19,
+          "value": "80910613f85a4d15b56fe1843b4fa347"
+        },
+        "ins简约电商摄影产品场景_ins简约写实电商摄影进阶版": {
+          "name": "ins简约电商摄影产品场景_ins简约写实电商摄影进阶版",
+          "baseType": 19,
+          "value": "b8a94b1b798d40d3b06954df644f6f0b"
+        },
+        "F1超好用的电商产品未来科技实验研究科研场景_美妆化妆品个护_v1.0": {
+          "name": "F1超好用的电商产品未来科技实验研究科研场景_美妆化妆品个护_v1.0",
+          "baseType": 19,
+          "value": "7f2fbc12c65949e597c1749293cdbc4c"
+        },
+        "【迈克】电商科研风（美妆 个护 护肤品）_1.0": {
+          "name": "【迈克】电商科研风（美妆 个护 护肤品）_1.0",
+          "baseType": 19,
+          "value": "d19a4c0b77274a49ba7b2a69e8420361"
+        },
+        "真实摄影细节加强滤镜_v1.0": {
+          "name": "真实摄影细节加强滤镜_v1.0",
+          "baseType": 19,
+          "value": "d0e98535b05946a5ba448d02b424a652"
+        },
+        "F.1手指手部手真实感高清完美手修复优化_V3B": {
+          "name": "F.1手指手部手真实感高清完美手修复优化_V3B",
+          "baseType": 19,
+          "value": "2711f7a575914e54b4c84e51b539eb61"
+        },
+        "QY_F.1-手部优化 ，手指修复，美甲艺术_电商手模_V1": {
+          "name": "QY_F.1-手部优化 ，手指修复，美甲艺术_电商手模_V1",
+          "baseType": 19,
+          "value": "0552b27b58ed4f748dd5349235a4e696"
+        }
+      }
+    }
+  ],
+  "links": [
+    [
+      110,
+      51,
+      0,
+      52,
+      0,
+      "MODEL"
+    ],
+    [
+      112,
+      51,
+      1,
+      52,
+      1,
+      "CLIP"
+    ],
+    [
+      115,
+      53,
+      0,
+      55,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      116,
+      56,
+      0,
+      55,
+      2,
+      "CONTROL_NET"
+    ],
+    [
+      117,
+      57,
+      0,
+      55,
+      4,
+      "IMAGE"
+    ],
+    [
+      118,
+      52,
+      1,
+      53,
+      0,
+      "CLIP"
+    ],
+    [
+      119,
+      52,
+      1,
+      58,
+      0,
+      "CLIP"
+    ],
+    [
+      120,
+      58,
+      0,
+      55,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      127,
+      50,
+      0,
+      55,
+      3,
+      "VAE"
+    ],
+    [
+      129,
+      57,
+      0,
+      63,
+      0,
+      "IMAGE"
+    ],
+    [
+      133,
+      66,
+      0,
+      68,
+      0,
+      "LATENT"
+    ],
+    [
+      134,
+      68,
+      0,
+      69,
+      0,
+      "IMAGE"
+    ],
+    [
+      135,
+      70,
+      0,
+      66,
+      3,
+      "LATENT"
+    ],
+    [
+      138,
+      52,
+      0,
+      66,
+      0,
+      "MODEL"
+    ],
+    [
+      139,
+      50,
+      0,
+      68,
+      1,
+      "VAE"
+    ],
+    [
+      140,
+      73,
+      0,
+      72,
+      0,
+      "IMAGE"
+    ],
+    [
+      141,
+      71,
+      0,
+      74,
+      2,
+      "CONTROL_NET"
+    ],
+    [
+      147,
+      73,
+      0,
+      74,
+      4,
+      "IMAGE"
+    ],
+    [
+      148,
+      74,
+      0,
+      66,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      149,
+      74,
+      1,
+      66,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      150,
+      50,
+      0,
+      74,
+      3,
+      "VAE"
+    ],
+    [
+      153,
+      55,
+      0,
+      74,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      154,
+      55,
+      1,
+      74,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      168,
+      84,
+      0,
+      57,
+      0,
+      "IMAGE"
+    ],
+    [
+      169,
+      84,
+      0,
+      73,
+      0,
+      "IMAGE"
+    ],
+    [
+      171,
+      84,
+      0,
+      88,
+      0,
+      "IMAGE"
+    ],
+    [
+      172,
+      88,
+      0,
+      70,
+      0,
+      "INT"
+    ],
+    [
+      173,
+      88,
+      1,
+      70,
+      2,
+      "INT"
+    ],
+    [
+      176,
+      84,
+      0,
+      92,
+      0,
+      "IMAGE"
+    ],
+    [
+      179,
+      92,
+      1,
+      95,
+      0,
+      "MASK"
+    ],
+    [
+      213,
+      59,
+      0,
+      84,
+      0,
+      "IMAGE"
+    ],
+    [
+      214,
+      92,
+      0,
+      114,
+      0,
+      "IMAGE"
+    ],
+    [
+      215,
+      92,
+      1,
+      116,
+      0,
+      "MASK"
+    ],
+    [
+      216,
+      116,
+      0,
+      97,
+      0,
+      "MASK"
+    ],
+    [
+      217,
+      118,
+      0,
+      53,
+      1,
+      "STRING"
+    ],
+    [
+      218,
+      118,
+      0,
+      53,
+      2,
+      "STRING"
+    ],
+    [
+      223,
+      68,
+      0,
+      121,
+      0,
+      "IMAGE"
+    ],
+    [
+      224,
+      84,
+      1,
+      121,
+      2,
+      "MASK"
+    ],
+    [
+      225,
+      92,
+      0,
+      121,
+      1,
+      "IMAGE"
+    ],
+    [
+      228,
+      66,
+      0,
+      123,
+      0,
+      "*"
+    ],
+    [
+      255,
+      121,
+      0,
+      143,
+      0,
+      "IMAGE"
+    ],
+    [
+      286,
+      48,
+      0,
+      164,
+      0,
+      "MODEL"
+    ],
+    [
+      287,
+      49,
+      0,
+      164,
+      1,
+      "CLIP"
+    ],
+    [
+      288,
+      164,
+      0,
+      51,
+      0,
+      "MODEL"
+    ],
+    [
+      289,
+      164,
+      1,
+      51,
+      1,
+      "CLIP"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 12,
+      "title": "controlnet",
+      "bounding": [
+        -28.52771759033203,
+        -164.8826446533203,
+        1735.8909912109375,
+        522.1301879882812
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 13,
+      "title": "模型",
+      "bounding": [
+        -70.75220489501953,
+        -763.3134155273438,
+        585.0604858398438,
+        569.4776611328125
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 14,
+      "title": "这里上传白底图",
+      "bounding": [
+        -574.3530883789062,
+        -760.0490112304688,
+        468.5932922363281,
+        568.158935546875
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 15,
+      "title": "抠图模块",
+      "bounding": [
+        586.00830078125,
+        -1259.9765625,
+        1131.800537109375,
+        456.0410461425781
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 16,
+      "title": "提示词书写",
+      "bounding": [
+        76.0140380859375,
+        -1240.15576171875,
+        438.2738342285156,
+        431.2874450683594
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.6588450000000007,
+      "offset": [
+        826.0369438941058,
+        1326.3729802366772
+      ]
+    },
+    "ue_links": [],
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4,
+  "seed_widgets": {
+    "66": 0
+  },
+  "widget_idx_map": {
+    "66": {
+      "seed": 0,
+      "sampler_name": 4,
+      "scheduler": 5
+    }
+  }
+}
