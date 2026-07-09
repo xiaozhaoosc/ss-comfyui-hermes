@@ -59,3 +59,14 @@ comfyui_interface_screenshot.png
 /tools/models/
 # 任何 .tmp 临时下载文件
 *.tmp
+
+# faceswap_app 打包产物与敏感文件
+/tools/faceswap_app/dist/
+/tools/faceswap_app/build/work_*/
+/tools/faceswap_app/build/*.log
+/tools/faceswap_app/build/*.txt
+/tools/faceswap_app/build/license_private_key.pem
+/tools/faceswap_app/build/license_public_key.pem
+/tools/faceswap_app/dist/
+# faceswap_app 运行时生成的本地 license 数据（用户隐私）
+/tools/faceswap_app/license.dat
