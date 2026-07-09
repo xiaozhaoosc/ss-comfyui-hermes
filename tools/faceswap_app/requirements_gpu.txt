@@ -1,0 +1,3 @@
+# 换脸客户端 - GPU 版附加依赖
+-r requirements_base.txt
+onnxruntime-gpu>=1.16.0
