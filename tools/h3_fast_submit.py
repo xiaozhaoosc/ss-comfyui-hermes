@@ -257,11 +257,16 @@ def validate_workflow(wf):
             lines.append(f"  x [{nid}] {ct}: 节点不存在")
             continue
         required = (info.get("input", {}) or {}).get("required", {}) or {}
+        optional = (info.get("input", {}) or {}).get("optional", {}) or {}
         node_msgs = []
-        for name, spec in required.items():
+        # 必填必须齐全；可选仅对"已提供"的做枚举/范围校验
+        targets = [(n, s, True) for n, s in required.items()]
+        targets += [(n, s, False) for n, s in optional.items()]
+        for name, spec, is_required in targets:
             if name not in inputs:
-                errors.append(f"[{nid}] {ct}: 缺少必填输入 {name}")
-                node_msgs.append(f"缺少必填 {name}")
+                if is_required:
+                    errors.append(f"[{nid}] {ct}: 缺少必填输入 {name}")
+                    node_msgs.append(f"缺少必填 {name}")
                 continue
             val = inputs[name]
             if isinstance(val, list):
@@ -580,4 +585,4 @@ def main():
 
 
 if __name__ == "__main__":
-    sys.exit(mai
+    sys.exit(main())
