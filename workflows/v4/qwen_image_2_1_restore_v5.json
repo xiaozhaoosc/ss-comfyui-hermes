@@ -1,0 +1,458 @@
+{
+  "1": {
+    "inputs": {
+      "unet_name": "qwen-image-2.1-UC-Q4_K_M.gguf"
+    },
+    "class_type": "UnetLoaderGGUF",
+    "_meta": {
+      "title": "1. 视觉扩散模型 (DiT GGUF) [inject:unet]"
+    }
+  },
+  "2": {
+    "inputs": {
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors",
+      "type": "qwen_image"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "2. 文本编码器 (官方 int8) [inject:clip]"
+    }
+  },
+  "3": {
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "3. 图像编解码器 (VAE) [inject:vae]"
+    }
+  },
+  "4": {
+    "inputs": {
+      "image": "restore_test_lowres.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "4. 加载待修复的图 [inject:image]"
+    }
+  },
+  "5": {
+    "inputs": {
+      "model_name": "realesr-general-x4v3.pth"
+    },
+    "class_type": "UpscaleModelLoader",
+    "_meta": {
+      "title": "5. 前置超分模型 (小图/压缩块去块用; 大图路径脚本剪掉) [inject:presr]"
+    }
+  },
+  "6": {
+    "inputs": {
+      "upscale_model": [
+        "5",
+        0
+      ],
+      "image": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "ImageUpscaleWithModel",
+    "_meta": {
+      "title": "6. 前置超分 4x (仅源图 <0.5MP 时接线)"
+    }
+  },
+  "7": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "megapixels": 1.0,
+      "resolution_steps": 8,
+      "image": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "7. 归一到 R1 第一遍工作分辨率 [inject:resize]"
+    }
+  },
+  "8": {
+    "inputs": {
+      "pixels": [
+        "7",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "8. Pass1 初始潜变量"
+    }
+  },
+  "9": {
+    "inputs": {
+      "prompt": "Restore and enhance this photo to high definition. Remove blur, out-of-focus softness, noise, grain, scratches and JPEG blocking artifacts. Recover crisp fine details: skin texture, hair strands, eyelashes, fabric weave, sharp clean edges. Keep the subject's identity, facial features, expression, pose, clothing and composition exactly unchanged. Natural colors, accurate white balance, clean sharp focus, photographic quality.",
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "image1": [
+        "7",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "9. Pass1 修复指令 [inject:prompt]"
+    }
+  },
+  "10": {
+    "inputs": {
+      "prompt": "blurry, out of focus, soft focus, noise, film grain, JPEG blocking artifacts, compression artifacts, oversmoothed, plastic skin, waxy skin, over-sharpened halos, ringing, deformed, distorted face, changed identity, extra fingers, watermark, text, logo, low resolution",
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "image1": [
+        "7",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "10. Pass1 负向提示词 (cfg>1 生效) [inject:negative]"
+    }
+  },
+  "11": {
+    "inputs": {
+      "reference_latents_method": "index_timestep_zero",
+      "conditioning": [
+        "9",
+        0
+      ]
+    },
+    "class_type": "FluxKontextMultiReferenceLatentMethod",
+    "_meta": {
+      "title": "11. Pass1 参考潜变量注入 (缺了这个会出拼贴)"
+    }
+  },
+  "12": {
+    "inputs": {
+      "reference_latents_method": "index_timestep_zero",
+      "conditioning": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "FluxKontextMultiReferenceLatentMethod",
+    "_meta": {
+      "title": "12. Pass1 负向参考潜变量注入"
+    }
+  },
+  "13": {
+    "inputs": {
+      "shift": 3.1,
+      "model": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "13. 采样位移对齐官方 edit 模板 (shift 3.1) [inject:shift]"
+    }
+  },
+  "14": {
+    "inputs": {
+      "strength": 1.0,
+      "model": [
+        "13",
+        0
+      ]
+    },
+    "class_type": "CFGNorm",
+    "_meta": {
+      "title": "14. CFG 归一化 (官方 edit 模板同款)"
+    }
+  },
+  "15": {
+    "inputs": {
+      "seed": 42,
+      "steps": 25,
+      "cfg": 3.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 0.65,
+      "model": [
+        "14",
+        0
+      ],
+      "positive": [
+        "11",
+        0
+      ],
+      "negative": [
+        "12",
+        0
+      ],
+      "latent_image": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "15. Pass1 结构修复 (25步/CFG3.0/denoise 0.65) [inject:sampler]"
+    }
+  },
+  "16": {
+    "inputs": {
+      "samples": [
+        "15",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "16. Pass1 解码 (Qwen VAE 输出 RGBA)"
+    }
+  },
+  "17": {
+    "inputs": {
+      "image": [
+        "16",
+        0
+      ]
+    },
+    "class_type": "SplitImageWithAlpha",
+    "_meta": {
+      "title": "17. 剥离 alpha 取 RGB (不剥超分会报 channels 错误)"
+    }
+  },
+  "18": {
+    "inputs": {
+      "model_name": "realesr-general-x4v3.pth"
+    },
+    "class_type": "UpscaleModelLoader",
+    "_meta": {
+      "title": "18. 超分模型 (给 Pass2 一个锐利的内容锚) [inject:upscaler]"
+    }
+  },
+  "19": {
+    "inputs": {
+      "upscale_model": [
+        "18",
+        0
+      ],
+      "image": [
+        "17",
+        0
+      ]
+    },
+    "class_type": "ImageUpscaleWithModel",
+    "_meta": {
+      "title": "19. 4x 超分 (再收到 R2, 相当于 2x 超采样降环)"
+    }
+  },
+  "20": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "megapixels": 2.0,
+      "resolution_steps": 8,
+      "image": [
+        "19",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "20. 收到 R2 = 2×R1, 即 Pass2 分辨率=最终输出尺寸 [inject:resize2]"
+    }
+  },
+  "21": {
+    "inputs": {
+      "pixels": [
+        "20",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "21. Pass2 初始潜变量 (重新编码, 不是放大 Pass1 的 latent)"
+    }
+  },
+  "22": {
+    "inputs": {
+      "prompt": "Enhance this photo's micro details at full resolution. Add natural skin texture, individual hair strands, eyelashes and fabric weave. Keep edges clean and sharp, remove residual softness. Keep the subject's identity, facial features, expression, pose, clothing and composition exactly unchanged. Natural colors, photographic quality.",
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "image1": [
+        "20",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "22. Pass2 细节重建指令 [inject:prompt2]"
+    }
+  },
+  "23": {
+    "inputs": {
+      "prompt": "blurry, out of focus, soft focus, noise, film grain, JPEG blocking artifacts, compression artifacts, oversmoothed, plastic skin, waxy skin, over-sharpened halos, ringing, deformed, distorted face, changed identity, extra fingers, watermark, text, logo, low resolution",
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "image1": [
+        "20",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "23. Pass2 负向提示词 [inject:negative2]"
+    }
+  },
+  "24": {
+    "inputs": {
+      "reference_latents_method": "index_timestep_zero",
+      "conditioning": [
+        "22",
+        0
+      ]
+    },
+    "class_type": "FluxKontextMultiReferenceLatentMethod",
+    "_meta": {
+      "title": "24. Pass2 参考潜变量注入"
+    }
+  },
+  "25": {
+    "inputs": {
+      "reference_latents_method": "index_timestep_zero",
+      "conditioning": [
+        "23",
+        0
+      ]
+    },
+    "class_type": "FluxKontextMultiReferenceLatentMethod",
+    "_meta": {
+      "title": "25. Pass2 负向参考潜变量注入"
+    }
+  },
+  "26": {
+    "inputs": {
+      "seed": 42,
+      "steps": 25,
+      "cfg": 3.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 0.35,
+      "model": [
+        "14",
+        0
+      ],
+      "positive": [
+        "24",
+        0
+      ],
+      "negative": [
+        "25",
+        0
+      ],
+      "latent_image": [
+        "21",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "26. Pass2 细节重建 (25步/CFG3.0/denoise 0.35) [inject:sampler2]"
+    }
+  },
+  "27": {
+    "inputs": {
+      "samples": [
+        "26",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "27. Pass2 解码 (= 最终图像)"
+    }
+  },
+  "28": {
+    "inputs": {
+      "image": [
+        "27",
+        0
+      ]
+    },
+    "class_type": "SplitImageWithAlpha",
+    "_meta": {
+      "title": "28. 剥离 alpha 取 RGB"
+    }
+  },
+  "29": {
+    "inputs": {
+      "image": [
+        "28",
+        0
+      ],
+      "facedetection": "retinaface_resnet50",
+      "model": "codeformer.pth",
+      "visibility": 1.0,
+      "codeformer_weight": 0.5
+    },
+    "class_type": "ReActorRestoreFace",
+    "_meta": {
+      "title": "29. 人像修脸 (CodeFormer, 强度可调) [inject:face]"
+    }
+  },
+  "30": {
+    "inputs": {
+      "filename_prefix": "2026-10-01/qwen_restore_v5",
+      "images": [
+        "29",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "30. 保存图像 (脚本按当日日期覆盖前缀) [inject:output]"
+    }
+  }
+}

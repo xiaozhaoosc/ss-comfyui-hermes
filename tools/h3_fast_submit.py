@@ -217,6 +217,12 @@ def inject_placeholders(wf, values):
 
 # ----------------------------- 校验 -----------------------------
 
+def _opts_to_list(opts):
+    if isinstance(opts, list) and opts and isinstance(opts[0], dict) and "key" in opts[0]:
+        return [o["key"] for o in opts]
+    return opts
+
+
 def _enum_options(spec):
     if isinstance(spec, dict):
         v = spec.get("value")
@@ -230,9 +236,12 @@ def _enum_options(spec):
                 return head["value"]
             opts = head.get("options")
             if isinstance(opts, list):
-                if opts and isinstance(opts[0], dict) and "key" in opts[0]:
-                    return [o["key"] for o in opts]
-                return opts
+                return _opts_to_list(opts)
+        # COMBO / 动态 COMBO 形如 ["COMBO", {"options":[...]}]
+        if isinstance(head, str) and len(spec) >= 2 and isinstance(spec[1], dict):
+            opts = spec[1].get("options")
+            if isinstance(opts, list):
+                return _opts_to_list(opts)
     return None
 
 

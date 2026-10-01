@@ -89,19 +89,15 @@ def blockiness_ratio(img, pitch=8):
 
 # ---------------------------------------------------------------- ③ 周期性
 
-def _moving_avg(v, win):
-    """长度不变的滑动均值，边缘用 edge 填充，避免端点被拉低。"""
-    if len(v) < win:
-        return v.copy()
-    pad = win // 2
-    vp = np.pad(v, pad, mode="edge")
-    k = np.ones(win, dtype=np.float64) / win
-    return np.convolve(vp, k, mode="valid")[:len(v)]
+def _prep_profile(v):
+    """周期检测前的剖面预处理：sqrt 方差稳定化。
 
-
-def _detrend(v, win=31):
-    """减掉 win 点滑动平均，去低频趋势，让周期峰值更干净。"""
-    return v - _moving_avg(v, win)
+    剖面是"相邻差分绝对值"，恒正且高度右偏；先开方压缩动态范围，
+    能让格线峰更干净、同时保持全正，比值才是有意义的衬度。
+    刻意**不**用"减去 31 点滑动平均"：剖面相减会变成有符号值，
+    分母 mean(~mask) 趋零，实测比值被放大到 3.9e5 量级而失效。
+    """
+    return np.sqrt(np.maximum(v, 0.0))
 
 
 def _periodicity_1d(v, P0):
@@ -109,7 +105,7 @@ def _periodicity_1d(v, P0):
 
     返回 dict: peak(峰值比), P, ph, worst(最差相位比), contrast(峰值比/最差相位比)
     """
-    vd = _detrend(v)
+    vd = _prep_profile(v)
     idx = np.arange(len(vd))
     denom = max(len(vd), 1)
     best = None
@@ -173,6 +169,15 @@ def _rgb_array(path, size=None):
         return np.asarray(im, dtype=np.float64)
 
 
+def _gray_at(path, size=None):
+    """把图片转成 float32 灰度；若给定 size 则先在 RGB 域做 LANCZOS 缩放再转灰度。"""
+    with Image.open(path) as im:
+        im = im.convert("RGB")
+        if size is not None and im.size != size:
+            im = im.resize(size, Image.LANCZOS)
+        return np.asarray(im.convert("L"), dtype=np.float32)
+
+
 def _rmse(a, b):
     d = a - b
     return float(np.sqrt((d ** 2).mean()))
@@ -217,8 +222,7 @@ def run(source, output, pitch, json_path):
     im_out.close()
 
     gray_src = to_gray_float(source)
-    out_rgb = _rgb_array(output)
-    gray_out = np.asarray(Image.open(output).convert("L"), dtype=np.float32)
+    gray_out = _gray_at(output)
 
     metrics = {}
 
@@ -282,8 +286,9 @@ def run(source, output, pitch, json_path):
         detected = False
 
     # ④ 锐度 1:1 同尺寸
-    base_gray = np.asarray(Image.open(source).convert("L").resize((w1, h1), Image.LANCZOS),
-                           dtype=np.float32)
+    # 基线 = 源图用 LANCZOS 放大到输出尺寸；注意先在 RGB 域放大再转灰度，
+    # 这样才与参考值一致（先转灰度再放大偏低约 4%）。
+    base_gray = _gray_at(source, (w1, h1))
     sharp_out = _sharpness(gray_out)
     sharp_base = _sharpness(base_gray)
     sharp_ratio = sharp_out / sharp_base if sharp_base > 1e-12 else float("inf")
