@@ -1,0 +1,340 @@
+{
+  "id": "f728c180-8186-43b8-b5b6-1f7a3d61e80b",
+  "revision": 0,
+  "last_node_id": 6,
+  "last_link_id": 5,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "LoadImage",
+      "pos": [
+        100,
+        200
+      ],
+      "size": [
+        320,
+        314
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            1
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "todo/face/ken1.png",
+        "image"
+      ],
+      "_meta": {
+        "title": "📷 Source Face"
+      }
+    },
+    {
+      "id": 2,
+      "type": "LoadImage",
+      "pos": [
+        100,
+        600
+      ],
+      "size": [
+        320,
+        314
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            2
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "example.png",
+        "image"
+      ],
+      "_meta": {
+        "title": "🎯 Target Image"
+      }
+    },
+    {
+      "id": 3,
+      "type": "ReActorFaceSwap",
+      "pos": [
+        500,
+        300
+      ],
+      "size": [
+        320,
+        400
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "input_image",
+          "type": "IMAGE",
+          "link": 2
+        },
+        {
+          "name": "source_image",
+          "type": "IMAGE",
+          "link": 1
+        },
+        {
+          "name": "face_model",
+          "type": "FACE_MODEL",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SWAPPED_IMAGE",
+          "type": "IMAGE",
+          "links": [
+            3,
+            5
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "FACE_MODEL",
+          "type": "FACE_MODEL",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "ORIGINAL_IMAGE",
+          "type": "IMAGE",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ReActorFaceSwap"
+      },
+      "widgets_values": [
+        true,
+        "inswapper_128.onnx",
+        "retinaface_resnet50",
+        "GFPGANv1.4.pth",
+        1.0,
+        0.5,
+        "no",
+        "no",
+        "0",
+        "0",
+        1
+      ],
+      "_meta": {
+        "title": "🔄 ReActor + GFPGAN"
+      }
+    },
+    {
+      "id": 4,
+      "type": "ReActorRestoreFace",
+      "pos": [
+        900,
+        550
+      ],
+      "size": [
+        320,
+        200
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 5
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            4
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ReActorRestoreFace"
+      },
+      "widgets_values": [
+        "retinaface_resnet50",
+        "GFPGANv1.4.pth",
+        0.8,
+        0.5
+      ],
+      "_meta": {
+        "title": "✨ GFPGAN Restore"
+      }
+    },
+    {
+      "id": 5,
+      "type": "SaveImage",
+      "pos": [
+        900,
+        200
+      ],
+      "size": [
+        320,
+        270
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "faceswap_comfyui/raw"
+      ],
+      "_meta": {
+        "title": "💾 Save Raw"
+      }
+    },
+    {
+      "id": 6,
+      "type": "SaveImage",
+      "pos": [
+        1300,
+        550
+      ],
+      "size": [
+        320,
+        270
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 4
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "faceswap_comfyui/restored"
+      ],
+      "_meta": {
+        "title": "💾 Save Restored"
+      }
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      0,
+      3,
+      1,
+      "IMAGE"
+    ],
+    [
+      2,
+      2,
+      0,
+      3,
+      0,
+      "IMAGE"
+    ],
+    [
+      3,
+      3,
+      0,
+      5,
+      0,
+      "IMAGE"
+    ],
+    [
+      4,
+      4,
+      0,
+      6,
+      0,
+      "IMAGE"
+    ],
+    [
+      5,
+      3,
+      0,
+      4,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "title": "ReActor 图片换脸",
+      "bounding": [
+        50,
+        100,
+        1620,
+        800
+      ],
+      "color": "#3f789e",
+      "font_size": 24
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.8,
+      "offset": [
+        0,
+        0
+      ]
+    }
+  },
+  "version": 0.4
+}

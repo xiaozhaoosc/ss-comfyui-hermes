@@ -1,0 +1,24 @@
+﻿[CHARACTER IDENTITY LOCK]
+Use the uploaded reference images as the primary identity reference.
+Create the canonical front-facing identity portrait of this exact same adult woman.
+This image is a Character Master Reference, not a normal artistic portrait.
+The woman faces directly toward the camera with her head centered naturally, eyes looking directly into the lens, with a calm, confident, subtly mysterious expression.
+Composition:
+front-facing head-and-shoulders portrait
+symmetrical composition
+camera at eye level
+85mm portrait perspective
+natural camera distance
+no wide-angle distortion
+no exaggerated perspective
+The primary goal is to establish a stable, recognizable facial identity.
+Strictly preserve:
+face shape, eye shape, eyebrow structure, nose structure, lip shape, jawline, chin, skin tone, hairline, and long straight black hair from the reference.
+Do NOT redesign the woman.
+Use soft, even, premium commercial portrait lighting.
+Use a simple, dark neutral background with minimal distractions.
+Do not introduce a complex environment.
+This image exists primarily to establish:
+the character's facial DNA.
+Facial identity consistency is more important than artistic styling.
+Do not make the character more glamorous at the cost of changing her identity.

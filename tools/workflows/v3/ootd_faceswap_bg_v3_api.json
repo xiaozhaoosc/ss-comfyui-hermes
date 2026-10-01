@@ -1,0 +1,190 @@
+{
+  "1": {
+    "class_type": "VHS_LoadVideo",
+    "inputs": {
+      "video": "ootd_target.mp4",
+      "force_rate": 0,
+      "custom_width": 720,
+      "custom_height": 1280,
+      "frame_load_cap": 0,
+      "skip_first_frames": 0,
+      "select_every_nth": 1,
+      "format": "AnimateDiff"
+    }
+  },
+  "2": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "characters/v3/C01_FACE_FRONT.png"
+    }
+  },
+  "3": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "characters/v3/C03_LEFT_3Q.png"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "characters/v3/C04_RIGHT_3Q.png"
+    }
+  },
+  "6": {
+    "class_type": "ImageBatch",
+    "inputs": {
+      "image1": [
+        "2",
+        0
+      ],
+      "image2": [
+        "3",
+        0
+      ]
+    }
+  },
+  "7": {
+    "class_type": "ImageBatch",
+    "inputs": {
+      "image1": [
+        "6",
+        0
+      ],
+      "image2": [
+        "4",
+        0
+      ]
+    }
+  },
+  "9": {
+    "class_type": "ReActorBuildFaceModel",
+    "inputs": {
+      "images": [
+        "7",
+        0
+      ],
+      "save_mode": false,
+      "send_only": false,
+      "face_model_name": "Mean",
+      "compute_method": "Mean"
+    }
+  },
+  "10": {
+    "class_type": "ReActorFaceSwap",
+    "inputs": {
+      "input_image": [
+        "1",
+        0
+      ],
+      "face_model": [
+        "9",
+        0
+      ],
+      "enabled": true,
+      "swap_model": "inswapper_128.onnx",
+      "facedetection": "YOLOv5l",
+      "face_restore_model": "none",
+      "face_restore_visibility": 1.0,
+      "codeformer_weight": 0.5,
+      "detect_gender_input": "no",
+      "detect_gender_source": "no",
+      "input_faces_index": "0",
+      "source_faces_index": "0",
+      "console_log_level": 1
+    }
+  },
+  "20": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "bg_paris_terrace.jpg"
+    }
+  },
+  "21": {
+    "class_type": "ImageScale",
+    "inputs": {
+      "image": [
+        "20",
+        0
+      ],
+      "upscale_method": "lanczos",
+      "width": 720,
+      "height": 1280,
+      "crop": "center"
+    }
+  },
+  "25": {
+    "class_type": "RepeatImageBatch",
+    "inputs": {
+      "image": [
+        "21",
+        0
+      ],
+      "amount": [
+        "1",
+        1
+      ]
+    }
+  },
+  "22": {
+    "class_type": "LoadBackgroundRemovalModel",
+    "inputs": {
+      "bg_removal_name": "BiRefNet-general.safetensors"
+    }
+  },
+  "23": {
+    "class_type": "RemoveBackground",
+    "inputs": {
+      "bg_removal_model": [
+        "22",
+        0
+      ],
+      "image": [
+        "10",
+        0
+      ]
+    }
+  },
+  "24": {
+    "class_type": "ImageCompositeMasked",
+    "inputs": {
+      "destination": [
+        "25",
+        0
+      ],
+      "source": [
+        "10",
+        0
+      ],
+      "mask": [
+        "23",
+        0
+      ],
+      "x": 0,
+      "y": 0,
+      "resize_source": false
+    }
+  },
+  "11": {
+    "class_type": "VHS_VideoCombine",
+    "inputs": {
+      "images": [
+        "24",
+        0
+      ],
+      "audio": [
+        "1",
+        2
+      ],
+      "frame_rate": 30.0,
+      "loop_count": 0,
+      "filename_prefix": "ootd_swap_bg_v3",
+      "format": "video/h264-mp4",
+      "pix_fmt": "yuv420p",
+      "crf": 18,
+      "save_metadata": true,
+      "trim_to_audio": false,
+      "pingpong": false,
+      "save_output": true
+    }
+  }
+}

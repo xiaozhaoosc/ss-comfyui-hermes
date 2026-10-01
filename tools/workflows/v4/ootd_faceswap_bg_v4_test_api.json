@@ -1,0 +1,167 @@
+{
+  "1": {
+    "class_type": "VHS_LoadVideo",
+    "inputs": {
+      "video": "shiling_say_yes.mp4",
+      "force_rate": 25.0,
+      "custom_width": 540,
+      "custom_height": 960,
+      "frame_load_cap": 60,
+      "skip_first_frames": 0,
+      "select_every_nth": 1,
+      "format": "AnimateDiff"
+    }
+  },
+  "2": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "characters/v3/C01_FACE_FRONT.png"
+    }
+  },
+  "10": {
+    "class_type": "ReActorFaceSwap",
+    "inputs": {
+      "input_image": [
+        "1",
+        0
+      ],
+      "source_image": [
+        "2",
+        0
+      ],
+      "enabled": true,
+      "swap_model": "inswapper_128.onnx",
+      "facedetection": "YOLOv5l",
+      "face_restore_model": "codeformer.pth",
+      "face_restore_visibility": 1.0,
+      "codeformer_weight": 0.85,
+      "detect_gender_input": "no",
+      "detect_gender_source": "no",
+      "input_faces_index": "0",
+      "source_faces_index": "0",
+      "console_log_level": 1
+    }
+  },
+  "20": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "bg_paris_terrace.jpg"
+    }
+  },
+  "21": {
+    "class_type": "ImageScale",
+    "inputs": {
+      "image": [
+        "20",
+        0
+      ],
+      "upscale_method": "lanczos",
+      "width": 540,
+      "height": 960,
+      "crop": "center"
+    }
+  },
+  "27": {
+    "class_type": "ImageBlur",
+    "inputs": {
+      "image": [
+        "21",
+        0
+      ],
+      "blur_radius": 10,
+      "sigma": 5.0
+    }
+  },
+  "25": {
+    "class_type": "RepeatImageBatch",
+    "inputs": {
+      "image": [
+        "27",
+        0
+      ],
+      "amount": [
+        "1",
+        1
+      ]
+    }
+  },
+  "22": {
+    "class_type": "LoadBackgroundRemovalModel",
+    "inputs": {
+      "bg_removal_name": "BiRefNet-general.safetensors"
+    }
+  },
+  "23": {
+    "class_type": "RemoveBackground",
+    "inputs": {
+      "bg_removal_model": [
+        "22",
+        0
+      ],
+      "image": [
+        "10",
+        0
+      ]
+    }
+  },
+  "26": {
+    "class_type": "GrowMaskWithBlur",
+    "inputs": {
+      "mask": [
+        "23",
+        0
+      ],
+      "expand": 0,
+      "incremental_expandrate": 0.0,
+      "tapered_corners": true,
+      "flip_input": false,
+      "blur_radius": 3.5,
+      "lerp_alpha": 0.8,
+      "decay_factor": 1.0,
+      "fill_holes": false
+    }
+  },
+  "24": {
+    "class_type": "ImageCompositeMasked",
+    "inputs": {
+      "destination": [
+        "25",
+        0
+      ],
+      "source": [
+        "10",
+        0
+      ],
+      "mask": [
+        "26",
+        0
+      ],
+      "x": 0,
+      "y": 0,
+      "resize_source": false
+    }
+  },
+  "11": {
+    "class_type": "VHS_VideoCombine",
+    "inputs": {
+      "images": [
+        "24",
+        0
+      ],
+      "audio": [
+        "1",
+        2
+      ],
+      "frame_rate": 25.0,
+      "loop_count": 0,
+      "filename_prefix": "2026-09-21/ootd_swap_v4_sayyes_c2_dof_fast_test",
+      "format": "video/h264-mp4",
+      "pix_fmt": "yuv420p",
+      "crf": 20,
+      "save_metadata": true,
+      "trim_to_audio": false,
+      "pingpong": false,
+      "save_output": true
+    }
+  }
+}

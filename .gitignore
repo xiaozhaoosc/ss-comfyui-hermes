@@ -1,0 +1,76 @@
+# ===== ComfyUI 标准忽略（沿用 upstream / Comfy-Org 约定） =====
+__pycache__/
+*.py[cod]
+/output/
+/input/
+!/input/example.png
+/models/
+/temp/
+/custom_nodes/
+!custom_nodes/example_node.py.example
+extra_model_paths.yaml
+/.vs
+.vscode/
+.idea/
+venv*/
+.venv/
+/web/extensions/*
+!/web/extensions/logging.js.example
+!/web/extensions/core/
+/tests-ui/data/object_info.json
+/user/
+*.log
+web_custom_versions/
+.DS_Store
+filtered-openapi.yaml
+uv.lock
+.comfy_environment
+/.cache/
+
+# ===== 本机 Hermes 环境补充 =====
+# 虚拟环境 / 解释器
+/ideogram4_venv/
+/*_venv/
+
+# 模型权重与大体积二进制
+*.pth
+*.safetensors
+*.gguf
+*.ckpt
+*.onnx
+*.exe
+/tools/models/
+/gfpgan/
+
+# Python 打包产物
+dist/
+build/
+
+# 运行 / 临时产物
+/out*/
+/temp*/
+/_compare_frames/
+/test_inputs/
+/tools/tmp_faceswap_verify/
+*.err
+/_*.txt
+
+# 嵌套的第三方仓库（自带 .git / node_modules / downloads）
+/tools/tiktok-downloader/
+node_modules/
+
+# 含硬编码 HF Token 的脚本（凭据不得外传，仅保留在本地）
+/ideogram4_download_model.py
+/ideogram4_step2_hf_login.bat
+/ideogram4_step2_hf_login.ps1
+/ideogram4_step3_test.bat
+/ideogram4_step3_test.ps1
+/ideogram4_step4_infer.bat
+
+# 工具链 / 编辑器缓存
+/.trae/
+/.trae_tmp/
+/.agent/
+/.agents/
+/.workbuddy/
+/.cowart-compat-marketplace/

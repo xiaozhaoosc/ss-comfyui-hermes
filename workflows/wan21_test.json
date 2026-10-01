@@ -1,0 +1,139 @@
+{
+  "last_node_id": 12,
+  "last_link_id": 12,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "UNETLoader",
+      "pos": [100, 100],
+      "size": [300, 100],
+      "properties": {},
+      "widgets_values": [
+        "wan2.1-t2v-1.3b\\diffusion_pytorch_model.safetensors",
+        "default"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "CLIPLoader",
+      "pos": [100, 250],
+      "size": [300, 100],
+      "properties": {},
+      "widgets_values": [
+        "umt5xxl_transformer.safetensors",
+        "wan"
+      ]
+    },
+    {
+      "id": 3,
+      "type": "VAELoader",
+      "pos": [100, 400],
+      "size": [300, 100],
+      "properties": {},
+      "widgets_values": [
+        "Wan2.1_VAE.pth"
+      ]
+    },
+    {
+      "id": 4,
+      "type": "CLIPTextEncode",
+      "pos": [500, 250],
+      "size": [400, 200],
+      "properties": {},
+      "widgets_values": [
+        "A beautiful sunset over the ocean, cinematic lighting, 4k, high quality"
+      ]
+    },
+    {
+      "id": 5,
+      "type": "CLIPTextEncode",
+      "pos": [500, 500],
+      "size": [400, 200],
+      "properties": {},
+      "widgets_values": [
+        "low quality, blurry, distorted"
+      ]
+    },
+    {
+      "id": 6,
+      "type": "EmptyWanLatentVideo",
+      "pos": [500, 100],
+      "size": [300, 150],
+      "properties": {},
+      "widgets_values": [
+        832,
+        480,
+        41,
+        1
+      ]
+    },
+    {
+      "id": 7,
+      "type": "KSampler",
+      "pos": [900, 250],
+      "size": [300, 300],
+      "properties": {},
+      "widgets_values": [
+        42,
+        "fixed",
+        20,
+        6.5,
+        "euler",
+        "normal",
+        1
+      ]
+    },
+    {
+      "id": 8,
+      "type": "VAEDecode",
+      "pos": [1200, 250],
+      "size": [200, 100],
+      "properties": {}
+    },
+    {
+      "id": 9,
+      "type": "SaveImage",
+      "pos": [1400, 250],
+      "size": [300, 300],
+      "properties": {},
+      "widgets_values": [
+        "wan21_test"
+      ]
+    },
+    {
+      "id": 10,
+      "type": "SaveAnimatedWEBP",
+      "pos": [1400, 600],
+      "size": [300, 200],
+      "properties": {},
+      "widgets_values": [
+        "wan21_video",
+        8,
+        0,
+        "lossless",
+        80
+      ]
+    }
+  ],
+  "links": [
+    [1, 1, 0, 7, 0, "MODEL"],
+    [2, 2, 0, 4, 0, "CLIP"],
+    [3, 2, 0, 5, 0, "CLIP"],
+    [4, 4, 0, 7, 1, "CONDITIONING"],
+    [5, 5, 0, 7, 2, "CONDITIONING"],
+    [6, 6, 0, 7, 3, "LATENT"],
+    [7, 7, 0, 8, 0, "LATENT"],
+    [8, 3, 0, 8, 1, "VAE"],
+    [9, 8, 0, 9, 0, "IMAGE"],
+    [10, 8, 0, 10, 0, "IMAGE"]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.8,
+      "offset": [0, 0]
+    }
+  },
+  "version": 0.4
+}

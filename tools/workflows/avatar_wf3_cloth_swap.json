@@ -1,0 +1,79 @@
+{
+  "prompt": {
+    "1": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "demo.jpg"
+      }
+    },
+    "2": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "demo_cropped.jpg"
+      }
+    },
+    "7": {
+      "class_type": "DensePosePreprocessor",
+      "inputs": {
+        "image": ["1", 0],
+        "model": "densepose_r50_fpn_dl.torchscript",
+        "cmap": "Parula (CivitAI)",
+        "resolution": 768
+      }
+    },
+    "13": {
+      "class_type": "FaceProtectMask",
+      "inputs": {
+        "image": ["1", 0],
+        "clothing_labels": "4,5,6,7,8",
+        "protect_labels": "2,3,11",
+        "protect_expand": 5,
+        "feather": 3
+      }
+    },
+    "15": {
+      "class_type": "InvertMask",
+      "inputs": {
+        "mask": ["13", 0]
+      }
+    },
+    "14": {
+      "class_type": "MaskToImage",
+      "inputs": {
+        "mask": ["15", 0]
+      }
+    },
+    "8": {
+      "class_type": "PipelineLoader",
+      "inputs": {
+        "weight_dtype": "float16"
+      }
+    },
+    "9": {
+      "class_type": "IDM-VTON",
+      "inputs": {
+        "pipeline": ["8", 0],
+        "human_img": ["1", 0],
+        "pose_img": ["7", 0],
+        "mask_img": ["14", 0],
+        "garment_img": ["2", 0],
+        "garment_description": "high quality fashion garment with detailed fabric texture",
+        "negative_prompt": "monochrome, lowres, bad anatomy, worst quality, low quality",
+        "width": 768,
+        "height": 1024,
+        "num_inference_steps": 15,
+        "guidance_scale": 2.0,
+        "strength": 1.0,
+        "seed": 42
+      }
+    },
+    "10": {
+      "class_type": "SaveImage",
+      "inputs": {
+        "images": ["9", 0],
+        "filename_prefix": "avatar_wf3_cloth_swap"
+      }
+    }
+  },
+  "client_id": "avatar-wf3-cloth-swap"
+}

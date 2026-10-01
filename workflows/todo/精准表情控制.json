@@ -1,0 +1,531 @@
+{
+  "id": "fa98d7c7-14bb-470a-a90e-0b9d8225b6ef",
+  "revision": 0,
+  "last_node_id": 36,
+  "last_link_id": 44,
+  "nodes": [
+    {
+      "id": 15,
+      "type": "LoadImage",
+      "pos": {
+        "0": 380,
+        "1": 270
+      },
+      "size": {
+        "0": 280,
+        "1": 750
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            19,
+            41
+          ]
+        },
+        {
+          "label": "遮罩",
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LoadImage",
+        "widget_ue_connectable": {
+          "image": true,
+          "upload": true
+        }
+      },
+      "widgets_values": [
+        "038f66f0026ca09038e6fa10591fcc6d7b9e0ed07013106e3447d98ab72e91a5.jpg",
+        "image",
+        ""
+      ],
+      "color": "#323",
+      "bgcolor": "#535",
+      "_widget_cache_map": {
+        "038f66f0026ca09038e6fa10591fcc6d7b9e0ed07013106e3447d98ab72e91a5.jpg": {
+          "value": "img/d8a6bc56a06648829398d6dc5a08db06/948bede137dfdeee1c9e8dccb3b58244f8c82c1a665de2cc242efbab98977adb.jpg",
+          "name": "038f66f0026ca09038e6fa10591fcc6d7b9e0ed07013106e3447d98ab72e91a5.jpg",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/d8a6bc56a06648829398d6dc5a08db06/948bede137dfdeee1c9e8dccb3b58244f8c82c1a665de2cc242efbab98977adb.jpg",
+          "width": 2008,
+          "height": 2008
+        }
+      }
+    },
+    {
+      "id": 33,
+      "type": "SaveImage",
+      "pos": {
+        "0": 1010,
+        "1": 270
+      },
+      "size": {
+        "0": 270,
+        "1": 750
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 42
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "SaveImage",
+        "widget_ue_connectable": {
+          "filename_prefix": true
+        }
+      },
+      "widgets_values": [
+        "ExpressionEditing",
+        ""
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 14,
+      "type": "ExpressionEditor",
+      "pos": {
+        "0": 680,
+        "1": 270
+      },
+      "size": {
+        "0": 310,
+        "1": 750
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "src_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 19
+        },
+        {
+          "label": "动态数据",
+          "name": "motion_link",
+          "shape": 7,
+          "type": "EDITOR_LINK",
+          "link": null
+        },
+        {
+          "label": "参考图像",
+          "name": "sample_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "表情数据",
+          "name": "add_exp",
+          "shape": 7,
+          "type": "EXP_DATA",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            42,
+            43
+          ]
+        },
+        {
+          "label": "动态数据",
+          "name": "motion_link",
+          "type": "EDITOR_LINK",
+          "links": null
+        },
+        {
+          "label": "表情数据",
+          "name": "save_exp",
+          "type": "EXP_DATA",
+          "links": null
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "ExpressionEditor",
+        "widget_ue_connectable": {
+          "rotate_pitch": true,
+          "rotate_yaw": true,
+          "rotate_roll": true,
+          "blink": true,
+          "eyebrow": true,
+          "wink": true,
+          "pupil_x": true,
+          "pupil_y": true,
+          "aaa": true,
+          "eee": true,
+          "woo": true,
+          "smile": true,
+          "src_ratio": true,
+          "sample_ratio": true,
+          "sample_parts": true,
+          "crop_factor": true
+        }
+      },
+      "widgets_values": [
+        -10,
+        0,
+        0,
+        5,
+        0,
+        0,
+        10,
+        5,
+        0,
+        0,
+        0,
+        -0.3,
+        1,
+        1,
+        "All",
+        1.7000000000000002,
+        ""
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 34,
+      "type": "CR Simple Image Compare",
+      "pos": {
+        "0": 1590,
+        "1": 850
+      },
+      "size": {
+        "0": 400,
+        "1": 282
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像1",
+          "name": "image1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 41
+        },
+        {
+          "label": "图像2",
+          "name": "image2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 43
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            44
+          ]
+        },
+        {
+          "label": "显示帮助",
+          "name": "show_help",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "CR Simple Image Compare",
+        "widget_ue_connectable": {
+          "text1": true,
+          "text2": true,
+          "footer_height": true,
+          "font_name": true,
+          "font_size": true,
+          "mode": true,
+          "border_thickness": true
+        }
+      },
+      "widgets_values": [
+        "BEFORE",
+        "AFTER",
+        104,
+        "impact.ttf",
+        50,
+        "dark",
+        20
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 35,
+      "type": "SaveImage",
+      "pos": {
+        "0": 1320,
+        "1": 440
+      },
+      "size": {
+        "0": 730,
+        "1": 580
+      },
+      "flags": {
+        "collapsed": false,
+        "pinned": true
+      },
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 44
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "SaveImage",
+        "widget_ue_connectable": {
+          "filename_prefix": true
+        }
+      },
+      "widgets_values": [
+        "ComfyUI",
+        ""
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 36,
+      "type": "Note",
+      "pos": {
+        "0": 1320,
+        "1": 260
+      },
+      "size": {
+        "0": 730,
+        "1": 140
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "Small Tutorial (really need one ?!) :\n\n\nTo get the face expression changes in real time please activate \"Queue (Change)\".\nClick on the arrow next queue button and just select \"Queue (change)\".\n\nEnjoy :)\nAll models required for the expression editor will be downloaded automaticaly !\n"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    }
+  ],
+  "links": [
+    [
+      19,
+      15,
+      0,
+      14,
+      0,
+      "IMAGE"
+    ],
+    [
+      41,
+      15,
+      0,
+      34,
+      0,
+      "IMAGE"
+    ],
+    [
+      42,
+      14,
+      0,
+      33,
+      0,
+      "IMAGE"
+    ],
+    [
+      43,
+      14,
+      0,
+      34,
+      1,
+      "IMAGE"
+    ],
+    [
+      44,
+      34,
+      0,
+      35,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "INSTAGRAM : EKKIVOK",
+      "bounding": [
+        1790,
+        150,
+        270,
+        30
+      ],
+      "color": "#b58b2a",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 2,
+      "title": "Informations and Comparer",
+      "bounding": [
+        1310,
+        190,
+        750,
+        840
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 3,
+      "title": "EXPRESSION CONTROL",
+      "bounding": [
+        370,
+        190,
+        920,
+        840
+      ],
+      "color": "#a1309b",
+      "font_size": 30,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 4,
+      "title": "EKKIVOK WORKFLOWS SERIES",
+      "bounding": [
+        840,
+        10,
+        770,
+        60
+      ],
+      "color": "#a1309b",
+      "font_size": 50,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 5,
+      "title": "EXPRESSION CONTROL - LIGHT",
+      "bounding": [
+        680,
+        80,
+        1100,
+        100
+      ],
+      "color": "#3f789e",
+      "font_size": 70,
+      "flags": {
+        "pinned": true
+      }
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1.708874251124587,
+      "offset": [
+        -960.7267449350303,
+        -420.09590955422
+      ]
+    },
+    "frontendVersion": "1.23.4",
+    "ue_links": [],
+    "links_added_by_ue": [],
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4,
+  "widget_idx_map": {},
+  "seed_widgets": {}
+}

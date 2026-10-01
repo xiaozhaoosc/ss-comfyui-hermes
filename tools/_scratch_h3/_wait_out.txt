@@ -1,0 +1,25 @@
+ready=True  用时=0.1s
+startlog exists=True size=24556
+---- 启动日志尾部 ----
+NFO][0m    0.0 seconds: D:\ai_projects\ComfyUI\custom_nodes\websocket_image_save.py
+[32m[INFO][0m    0.0 seconds (IMPORT FAILED): D:\ai_projects\ComfyUI\custom_nodes\comfyui-sg-llama-cpp
+[32m[INFO][0m    0.0 seconds: D:\ai_projects\ComfyUI\custom_nodes\ComfyUI-VFI
+[32m[INFO][0m    0.1 seconds: D:\ai_projects\ComfyUI\custom_nodes\ComfyUI-MimicMotionWrapper
+[32m[INFO][0m    0.1 seconds: D:\ai_projects\ComfyUI\custom_nodes\ComfyUI-LLM-Session
+[32m[INFO][0m    0.2 seconds: D:\ai_projects\ComfyUI\custom_nodes\ComfyUI-KJNodes
+[32m[INFO][0m    0.2 seconds: D:\ai_projects\ComfyUI\custom_nodes\ComfyUI-PlagueKind-Nodes
+[32m[INFO][0m    0.2 seconds: D:\ai_projects\ComfyUI\custom_nodes\rgthree-comfy
+[32m[INFO][0m    0.2 seconds: D:\ai_projects\ComfyUI\custom_nodes\ComfyUI-MAINodes
+[32m[INFO][0m    0.2 seconds: D:\ai_projects\ComfyUI\custom_nodes\ComfyUI-GGUF
+[32m[INFO][0m    0.4 seconds: D:\ai_projects\ComfyUI\custom_nodes\comfyui_controlnet_aux
+[32m[INFO][0m    3.5 seconds: D:\ai_projects\ComfyUI\custom_nodes\ComfyUI-ReActor-Nodes
+[32m[INFO][0m    5.2 seconds: D:\ai_projects\ComfyUI\custom_nodes\ComfyUI-VideoHelperSuite
+[32m[INFO][0m   17.6 seconds: D:\ai_projects\ComfyUI\custom_nodes\ComfyUI-IDM-VTON
+[32m[INFO][0m 
+[32m[INFO][0m Context impl SQLiteImpl.
+[32m[INFO][0m Will assume non-transactional DDL.
+[32m[INFO][0m Using RAM pressure cache.
+[32m[INFO][0m Starting server
+
+[32m[INFO][0m To see the GUI go to: http://0.0.0.0:8188
+

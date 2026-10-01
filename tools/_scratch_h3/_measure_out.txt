@@ -1,0 +1,4 @@
+rows=3 ok=3
+  v5_full                frames=73 det=1.000 id=0.9847 jit=4.1698 flk=0.0694 chr=0.0881 det_v=0.1445 mar=0.0185 sharp=21.4  (26.6s)
+  v5_pass1_derope前       frames=73 det=1.000 id=0.9837 jit=4.7362 flk=0.1667 chr=0.1005 det_v=0.0125 mar=0.0179 sharp=38.9  (24.4s)
+  c3_baseline_sayyes     frames=73 det=1.000 id=0.9865 jit=3.9353 flk=0.2500 chr=0.2950 det_v=0.2162 mar=0.0255 sharp=264.5  (25.1s)

@@ -1,0 +1,220 @@
+{
+  "1": {
+    "inputs": {
+      "unet_name": "qwen-image-2.1-UC-Q4_K_M.gguf"
+    },
+    "class_type": "UnetLoaderGGUF",
+    "_meta": {
+      "title": "1. 视觉扩散模型 (DiT GGUF) [inject:unet]"
+    }
+  },
+  "2": {
+    "inputs": {
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors",
+      "type": "qwen_image"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "2. 文本编码器 (官方 int8, 编辑需视觉塔故不能用 GGUF) [inject:clip]"
+    }
+  },
+  "3": {
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "3. 图像编解码器 (VAE) [inject:vae]"
+    }
+  },
+  "4": {
+    "inputs": {
+      "image": "qwen_test_source.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "4. 加载待编辑的原图 [inject:image]"
+    }
+  },
+  "5": {
+    "inputs": {
+      "image": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "FluxKontextImageScale",
+    "_meta": {
+      "title": "5. 归一到 Kontext 优选分辨率 (官方 edit 模板做法)"
+    }
+  },
+  "6": {
+    "inputs": {
+      "pixels": [
+        "5",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "6. 原图编码为初始潜变量 (输出比例跟随原图)"
+    }
+  },
+  "7": {
+    "inputs": {
+      "prompt": "Change the background into a vibrant sunset beach with rolling ocean waves and palm trees. Keep the character's appearance, face, and pose unchanged.",
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "image1": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "7. 编辑指令 + 图像参考 (Plus 多图编码) [inject:prompt]"
+    }
+  },
+  "8": {
+    "inputs": {
+      "prompt": "worst quality, low quality, deformed, distorted, blurry, bad anatomy, jpeg artifacts, watermark",
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "image1": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "8. 负向提示词 (cfg>1 时生效) [inject:negative]"
+    }
+  },
+  "9": {
+    "inputs": {
+      "reference_latents_method": "index_timestep_zero",
+      "conditioning": [
+        "7",
+        0
+      ]
+    },
+    "class_type": "FluxKontextMultiReferenceLatentMethod",
+    "_meta": {
+      "title": "9. 参考潜变量注入方式 (第三方重打包模型必需)"
+    }
+  },
+  "10": {
+    "inputs": {
+      "reference_latents_method": "index_timestep_zero",
+      "conditioning": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "FluxKontextMultiReferenceLatentMethod",
+    "_meta": {
+      "title": "10. 负向参考潜变量注入方式"
+    }
+  },
+  "11": {
+    "inputs": {
+      "shift": 3.1,
+      "model": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "11. 采样位移对齐官方 edit 模板 (shift 3.1) [inject:shift]"
+    }
+  },
+  "12": {
+    "inputs": {
+      "strength": 1.0,
+      "model": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "CFGNorm",
+    "_meta": {
+      "title": "12. CFG 归一化 (官方 edit 模板同款)"
+    }
+  },
+  "13": {
+    "inputs": {
+      "seed": 42,
+      "steps": 40,
+      "cfg": 3.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "12",
+        0
+      ],
+      "positive": [
+        "9",
+        0
+      ],
+      "negative": [
+        "10",
+        0
+      ],
+      "latent_image": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "13. KSampler 指令生成 (40步 / CFG 3.0 / Denoise 1.0) [inject:sampler]"
+    }
+  },
+  "14": {
+    "inputs": {
+      "samples": [
+        "13",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "14. VAE 解码为编辑后的图像"
+    }
+  },
+  "15": {
+    "inputs": {
+      "filename_prefix": "2026-09-30/qwen_edit",
+      "images": [
+        "14",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "15. 保存图像 (按日期归档) [inject:output]"
+    }
+  }
+}

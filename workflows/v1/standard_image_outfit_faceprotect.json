@@ -1,0 +1,81 @@
+{
+  "1": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "vton/person.png",
+      "upload": "image"
+    }
+  },
+  "2": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "vton/garment.jpg",
+      "upload": "image"
+    }
+  },
+  "4": {
+    "class_type": "DWPreprocessor",
+    "inputs": {
+      "image": ["1", 0],
+      "detect_hand": "enable",
+      "detect_body": "enable",
+      "detect_face": "enable",
+      "resolution": 768,
+      "bbox_detector": "yolox_l.onnx"
+    }
+  },
+  "5": {
+    "class_type": "PipelineLoader",
+    "inputs": {
+      "weight_dtype": "float16"
+    }
+  },
+  "8": {
+    "class_type": "FaceProtectMask",
+    "inputs": {
+      "image": ["1", 0],
+      "clothing_labels": "4,7,8",
+      "protect_labels": "2,3,11",
+      "protect_expand": 10,
+      "feather": 5
+    }
+  },
+  "10": {
+    "class_type": "MaskToImage",
+    "inputs": {
+      "mask": ["8", 0]
+    }
+  },
+  "6": {
+    "class_type": "IDM-VTON",
+    "inputs": {
+      "pipeline": ["5", 0],
+      "human_img": ["1", 0],
+      "pose_img": ["4", 0],
+      "mask_img": ["10", 0],
+      "garment_img": ["2", 0],
+      "garment_description": "a casual t-shirt",
+      "negative_prompt": "low quality, blurry, distorted",
+      "width": 768,
+      "height": 1024,
+      "num_inference_steps": 30,
+      "guidance_scale": 2.0,
+      "strength": 1.0,
+      "seed": 42
+    }
+  },
+  "7": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": ["6", 0],
+      "filename_prefix": "idm_vton_faceprotect"
+    }
+  },
+  "9": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": ["8", 1],
+      "filename_prefix": "parsing_preview"
+    }
+  }
+}

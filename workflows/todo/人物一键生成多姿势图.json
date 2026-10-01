@@ -1,0 +1,4139 @@
+{
+  "id": "91f6bbe2-ed41-4fd6-bac7-71d5b5864ecb",
+  "revision": 0,
+  "last_node_id": 189,
+  "last_link_id": 850,
+  "nodes": [
+    {
+      "id": 127,
+      "type": "UNETLoader",
+      "pos": {
+        "0": 333.0102233886719,
+        "1": 1770.9671630859375
+      },
+      "size": {
+        "0": 330,
+        "1": 90
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "模型",
+          "name": "MODEL",
+          "type": "MODEL",
+          "slot_index": 0,
+          "links": [
+            744
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "UNETLoader",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.48",
+        "models": [
+          {
+            "name": "qwen_image_fp8_e4m3fn.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/diffusion_models/qwen_image_fp8_e4m3fn.safetensors",
+            "directory": "diffusion_models"
+          }
+        ],
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "Qwen-Edit_1.0",
+        "default"
+      ],
+      "_widget_cache_map": {
+        "Qwen-Image_1.0": {
+          "name": "Qwen-Image_1.0",
+          "baseType": 37,
+          "value": "75e0be0c93b34dd8baeec9c968013e0c"
+        },
+        "Qwen-Edit_1.0": {
+          "name": "Qwen-Edit_1.0",
+          "baseType": 39,
+          "value": "b8d1b2c3008044b793fbf5d319278754"
+        }
+      }
+    },
+    {
+      "id": 128,
+      "type": "Note",
+      "pos": {
+        "0": 367.049560546875,
+        "1": 1451.1317138671875
+      },
+      "size": {
+        "0": 1624.8994140625,
+        "1": 168.4564971923828
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "widget_ue_connectable": {},
+        "text": ""
+      },
+      "widgets_values": [
+        "Qwen-image 本地部署：模型+插件+工作流=网盘链接：https://pan.quark.cn/s/b0ca85571bf8（手机端转存官方赠送1T网盘空间）\n\nB站：艾橘溪。https://space.bilibili.com/486814801\n\n如有疑问，可联系作者技术指导：由于程序插件环境搭建、效果调试等非常耗时间耗精力，因此如需远程技术指导，需微信付费技术指导。加微信：abinsz，备注：Ai指导\n\n工作流在线免费运行：https://www.runninghub.cn/user-center/1838157905546661890?inviteCode=kol01-rh055"
+      ],
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 4
+    },
+    {
+      "id": 132,
+      "type": "LoraLoaderModelOnly",
+      "pos": {
+        "0": 348.9440002441406,
+        "1": 2319.9296875
+      },
+      "size": {
+        "0": 278.8000183105469,
+        "1": 83.0999984741211
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "模型",
+          "name": "model",
+          "type": "MODEL",
+          "link": 742
+        }
+      ],
+      "outputs": [
+        {
+          "label": "模型",
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            741
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LoraLoaderModelOnly",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "models": [
+          {
+            "name": "Qwen-Image-Lightning-8steps-V1.0.safetensors",
+            "url": "https://huggingface.co/lightx2v/Qwen-Image-Lightning/resolve/main/Qwen-Image-Lightning-8steps-V1.0.safetensors",
+            "directory": "loras"
+          }
+        ]
+      },
+      "widgets_values": [
+        "Qwen-image4步极速生图_v1",
+        1
+      ],
+      "_widget_cache_map": {
+        "Qwen-image4步极速生图_v1": {
+          "name": "Qwen-image4步极速生图_v1",
+          "baseType": 37,
+          "value": "e7c65ada19fb4c789ee576d71163812d"
+        }
+      }
+    },
+    {
+      "id": 136,
+      "type": "LoraLoaderModelOnly",
+      "pos": {
+        "0": 345.8636474609375,
+        "1": 2178.184814453125
+      },
+      "size": {
+        "0": 293.1000061035156,
+        "1": 82
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "模型",
+          "name": "model",
+          "type": "MODEL",
+          "link": 744
+        }
+      ],
+      "outputs": [
+        {
+          "label": "模型",
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            742
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LoraLoaderModelOnly",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "models": [
+          {
+            "name": "Qwen-Image-Lightning-8steps-V1.0.safetensors",
+            "url": "https://huggingface.co/lightx2v/Qwen-Image-Lightning/resolve/main/Qwen-Image-Lightning-8steps-V1.0.safetensors",
+            "directory": "loras"
+          }
+        ]
+      },
+      "widgets_values": [
+        "麦橘千问美人 majicbeauty-Qwen_初版",
+        0.8
+      ],
+      "_widget_cache_map": {
+        "麦橘千问美人 majicbeauty-Qwen_初版": {
+          "name": "麦橘千问美人 majicbeauty-Qwen_初版",
+          "baseType": 37,
+          "value": "7a11a3cf6d9a49329e2bc89f26fb4ef9"
+        }
+      }
+    },
+    {
+      "id": 131,
+      "type": "ModelSamplingAuraFlow",
+      "pos": {
+        "0": 1225.56689453125,
+        "1": 2152.3994140625
+      },
+      "size": {
+        "0": 277.37298583984375,
+        "1": 58
+      },
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "模型",
+          "name": "model",
+          "type": "MODEL",
+          "link": 741
+        }
+      ],
+      "outputs": [
+        {
+          "label": "模型",
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            743
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "ModelSamplingAuraFlow",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.48",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        3.1000000000000005
+      ]
+    },
+    {
+      "id": 130,
+      "type": "VAEDecode",
+      "pos": {
+        "0": 2530,
+        "1": 1480
+      },
+      "size": {
+        "0": 277.8810119628906,
+        "1": 51.32400131225586
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 37,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "Latent",
+          "name": "samples",
+          "type": "LATENT",
+          "link": 739
+        },
+        {
+          "label": "VAE",
+          "name": "vae",
+          "type": "VAE",
+          "link": 740
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            745
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "VAEDecode",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.48",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 138,
+      "type": "KSampler",
+      "pos": {
+        "0": 2210,
+        "1": 1470
+      },
+      "size": {
+        "0": 278.82501220703125,
+        "1": 277.5211181640625
+      },
+      "flags": {},
+      "order": 29,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "模型",
+          "name": "model",
+          "type": "MODEL",
+          "link": 746
+        },
+        {
+          "label": "正面条件",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 747
+        },
+        {
+          "label": "负面条件",
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 748
+        },
+        {
+          "label": "Latent",
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 749
+        }
+      ],
+      "outputs": [
+        {
+          "label": "Latent",
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            739
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "KSampler",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.48",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        1089376802284355,
+        "randomize",
+        4,
+        1,
+        "euler",
+        "simple",
+        1
+      ]
+    },
+    {
+      "id": 142,
+      "type": "Text Multiline",
+      "pos": {
+        "0": 2200,
+        "1": 1810
+      },
+      "size": {
+        "0": 589.1437377929688,
+        "1": 182.00450134277344
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 2,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "字符串",
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            753
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "Text Multiline",
+        "cnr_id": "was-node-suite-comfyui",
+        "ver": "056badacda52e88d29d6a65f9509cd3115ace0f2"
+      },
+      "widgets_values": [
+        "人物动作：扭腰顶胯，双手抱头，展现S线，活力微笑，人脸保持一致。"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 143,
+      "type": "VAEDecode",
+      "pos": {
+        "0": 2550,
+        "1": 2180
+      },
+      "size": {
+        "0": 277.8810119628906,
+        "1": 51.32400131225586
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 38,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "Latent",
+          "name": "samples",
+          "type": "LATENT",
+          "link": 755
+        },
+        {
+          "label": "VAE",
+          "name": "vae",
+          "type": "VAE",
+          "link": 759
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            758
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "VAEDecode",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.48",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 145,
+      "type": "KSampler",
+      "pos": {
+        "0": 2220,
+        "1": 2170
+      },
+      "size": {
+        "0": 278.82501220703125,
+        "1": 277.5211181640625
+      },
+      "flags": {},
+      "order": 30,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "模型",
+          "name": "model",
+          "type": "MODEL",
+          "link": 760
+        },
+        {
+          "label": "正面条件",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 757
+        },
+        {
+          "label": "负面条件",
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 761
+        },
+        {
+          "label": "Latent",
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 762
+        }
+      ],
+      "outputs": [
+        {
+          "label": "Latent",
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            755
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "KSampler",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.48",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        944307998842197,
+        "randomize",
+        4,
+        1,
+        "euler",
+        "simple",
+        1
+      ]
+    },
+    {
+      "id": 140,
+      "type": "TextEncodeQwenImageEdit",
+      "pos": {
+        "0": 2530,
+        "1": 1630
+      },
+      "size": {
+        "0": 254.428466796875,
+        "1": 98
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 18,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "clip",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 750
+        },
+        {
+          "label": "vae",
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": 751
+        },
+        {
+          "label": "image",
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 833
+        },
+        {
+          "label": "prompt",
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 753
+        }
+      ],
+      "outputs": [
+        {
+          "label": "CONDITIONING",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            747
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "TextEncodeQwenImageEdit",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.51"
+      },
+      "widgets_values": [
+        "一个22岁长头发双马尾的中国女人穿着图片中的服装，展示不同的角色，全身照，背景是纯白色空间背景，电影感，现实照片，超高清，32K"
+      ]
+    },
+    {
+      "id": 144,
+      "type": "TextEncodeQwenImageEdit",
+      "pos": {
+        "0": 2570,
+        "1": 2330
+      },
+      "size": {
+        "0": 254.428466796875,
+        "1": 98
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 19,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "clip",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 764
+        },
+        {
+          "label": "vae",
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": 763
+        },
+        {
+          "label": "image",
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 834
+        },
+        {
+          "label": "prompt",
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 756
+        }
+      ],
+      "outputs": [
+        {
+          "label": "CONDITIONING",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            757
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "TextEncodeQwenImageEdit",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.51"
+      },
+      "widgets_values": [
+        "一个22岁长头发双马尾的中国女人穿着图片中的服装，展示不同的角色，全身照，背景是纯白色空间背景，电影感，现实照片，超高清，32K"
+      ]
+    },
+    {
+      "id": 146,
+      "type": "Text Multiline",
+      "pos": {
+        "0": 2210,
+        "1": 2510
+      },
+      "size": {
+        "0": 589.1437377929688,
+        "1": 182.00450134277344
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 3,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "字符串",
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            756
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "Text Multiline",
+        "cnr_id": "was-node-suite-comfyui",
+        "ver": "056badacda52e88d29d6a65f9509cd3115ace0f2"
+      },
+      "widgets_values": [
+        "这个角色在跳舞，展示优美的舞姿，活力微笑，人脸保持一致。"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 137,
+      "type": "SaveImage",
+      "pos": {
+        "0": 2880,
+        "1": 1420
+      },
+      "size": {
+        "0": 283.9740295410156,
+        "1": 534.56689453125
+      },
+      "flags": {},
+      "order": 45,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 745
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "SaveImage",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "ue_properties": {
+          "version": "7.0.1",
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": [
+        "libu/qwen-aijuxi"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 147,
+      "type": "SaveImage",
+      "pos": {
+        "0": 2870,
+        "1": 2140
+      },
+      "size": {
+        "0": 265.15179443359375,
+        "1": 561.4557495117188
+      },
+      "flags": {},
+      "order": 46,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 758
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "SaveImage",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "ue_properties": {
+          "version": "7.0.1",
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": [
+        "libu/qwen-aijuxi"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 152,
+      "type": "SaveImage",
+      "pos": {
+        "0": 2870,
+        "1": 2820
+      },
+      "size": {
+        "0": 265.15179443359375,
+        "1": 561.4557495117188
+      },
+      "flags": {},
+      "order": 47,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 769
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "SaveImage",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "ue_properties": {
+          "version": "7.0.1",
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": [
+        "libu/qwen-aijuxi"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 148,
+      "type": "VAEDecode",
+      "pos": {
+        "0": 2550,
+        "1": 2860
+      },
+      "size": {
+        "0": 277.8810119628906,
+        "1": 51.32400131225586
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 39,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "Latent",
+          "name": "samples",
+          "type": "LATENT",
+          "link": 766
+        },
+        {
+          "label": "VAE",
+          "name": "vae",
+          "type": "VAE",
+          "link": 772
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            769
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "VAEDecode",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.48",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 151,
+      "type": "Text Multiline",
+      "pos": {
+        "0": 2210,
+        "1": 3190
+      },
+      "size": {
+        "0": 589.1437377929688,
+        "1": 182.00450134277344
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "字符串",
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            768
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "Text Multiline",
+        "cnr_id": "was-node-suite-comfyui",
+        "ver": "056badacda52e88d29d6a65f9509cd3115ace0f2"
+      },
+      "widgets_values": [
+        "这个角色俯身手叉腰，抬手遮阳，活力微笑，人脸保持一致。"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 149,
+      "type": "KSampler",
+      "pos": {
+        "0": 2220,
+        "1": 2850
+      },
+      "size": {
+        "0": 278.82501220703125,
+        "1": 277.5211181640625
+      },
+      "flags": {},
+      "order": 31,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "模型",
+          "name": "model",
+          "type": "MODEL",
+          "link": 770
+        },
+        {
+          "label": "正面条件",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 767
+        },
+        {
+          "label": "负面条件",
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 775
+        },
+        {
+          "label": "Latent",
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 771
+        }
+      ],
+      "outputs": [
+        {
+          "label": "Latent",
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            766
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "KSampler",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.48",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        854421451444556,
+        "randomize",
+        4,
+        1,
+        "euler",
+        "simple",
+        1
+      ]
+    },
+    {
+      "id": 156,
+      "type": "Text Multiline",
+      "pos": {
+        "0": 4760,
+        "1": 3870
+      },
+      "size": {
+        "0": 589.1437377929688,
+        "1": 182.00450134277344
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 5,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "字符串",
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            778
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "Text Multiline",
+        "cnr_id": "was-node-suite-comfyui",
+        "ver": "056badacda52e88d29d6a65f9509cd3115ace0f2"
+      },
+      "widgets_values": [
+        "一支脚抬起，双手举高做比心手势，活力微笑，人脸保持一致。"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 155,
+      "type": "TextEncodeQwenImageEdit",
+      "pos": {
+        "0": 5120,
+        "1": 3690
+      },
+      "size": {
+        "0": 254.428466796875,
+        "1": 98
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 21,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "clip",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 781
+        },
+        {
+          "label": "vae",
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": 785
+        },
+        {
+          "label": "image",
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 836
+        },
+        {
+          "label": "prompt",
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 778
+        }
+      ],
+      "outputs": [
+        {
+          "label": "CONDITIONING",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            779
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "TextEncodeQwenImageEdit",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.51"
+      },
+      "widgets_values": [
+        "一个22岁长头发双马尾的中国女人穿着图片中的服装，展示不同的角色，全身照，背景是纯白色空间背景，电影感，现实照片，超高清，32K"
+      ]
+    },
+    {
+      "id": 134,
+      "type": "CLIPLoader",
+      "pos": {
+        "0": 1044.8125,
+        "1": 3808.27294921875
+      },
+      "size": {
+        "0": 330,
+        "1": 110
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "CLIP",
+          "name": "CLIP",
+          "type": "CLIP",
+          "slot_index": 0,
+          "links": [
+            750,
+            754,
+            764,
+            781,
+            792,
+            806,
+            818,
+            828,
+            830
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "CLIPLoader",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.48",
+        "models": [
+          {
+            "name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors",
+            "directory": "text_encoders"
+          }
+        ],
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+        "qwen_image",
+        "default"
+      ]
+    },
+    {
+      "id": 141,
+      "type": "CLIPTextEncode",
+      "pos": {
+        "0": 1495.4066162109375,
+        "1": 4065.277587890625
+      },
+      "size": {
+        "0": 243.14109802246094,
+        "1": 88
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "CLIP",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 754
+        }
+      ],
+      "outputs": [
+        {
+          "label": "条件",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            748,
+            761,
+            775,
+            784,
+            793,
+            802,
+            814,
+            824
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "CLIPTextEncode",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.48",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 159,
+      "type": "KSampler",
+      "pos": {
+        "0": 3790,
+        "1": 4250
+      },
+      "size": {
+        "0": 278.82501220703125,
+        "1": 277.5211181640625
+      },
+      "flags": {},
+      "order": 33,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "模型",
+          "name": "model",
+          "type": "MODEL",
+          "link": 791
+        },
+        {
+          "label": "正面条件",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 787
+        },
+        {
+          "label": "负面条件",
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 793
+        },
+        {
+          "label": "Latent",
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 794
+        }
+      ],
+      "outputs": [
+        {
+          "label": "Latent",
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            786
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "KSampler",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.48",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        14488413526960,
+        "randomize",
+        4,
+        1,
+        "euler",
+        "simple",
+        1
+      ]
+    },
+    {
+      "id": 129,
+      "type": "EmptySD3LatentImage",
+      "pos": {
+        "0": 1141.7843017578125,
+        "1": 3520.836181640625
+      },
+      "size": {
+        "0": 270,
+        "1": 106
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "宽度",
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 842
+        },
+        {
+          "label": "高度",
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 843
+        }
+      ],
+      "outputs": [
+        {
+          "label": "Latent",
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            749,
+            762,
+            771,
+            783,
+            794,
+            803,
+            813,
+            825
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "EmptySD3LatentImage",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.50"
+      },
+      "widgets_values": [
+        720,
+        1280,
+        1
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 158,
+      "type": "VAEDecode",
+      "pos": {
+        "0": 4120,
+        "1": 4250
+      },
+      "size": {
+        "0": 277.8810119628906,
+        "1": 51.32400131225586
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 41,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "Latent",
+          "name": "samples",
+          "type": "LATENT",
+          "link": 786
+        },
+        {
+          "label": "VAE",
+          "name": "vae",
+          "type": "VAE",
+          "link": 795
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            789
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "VAEDecode",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.48",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 161,
+      "type": "TextEncodeQwenImageEdit",
+      "pos": {
+        "0": 4140,
+        "1": 4400
+      },
+      "size": {
+        "0": 254.428466796875,
+        "1": 98
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 22,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "clip",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 792
+        },
+        {
+          "label": "vae",
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": 796
+        },
+        {
+          "label": "image",
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 837
+        },
+        {
+          "label": "prompt",
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 788
+        }
+      ],
+      "outputs": [
+        {
+          "label": "CONDITIONING",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            787
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "TextEncodeQwenImageEdit",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.51"
+      },
+      "widgets_values": [
+        "一个22岁长头发双马尾的中国女人穿着图片中的服装，展示不同的角色，全身照，背景是纯白色空间背景，电影感，现实照片，超高清，32K"
+      ]
+    },
+    {
+      "id": 160,
+      "type": "Text Multiline",
+      "pos": {
+        "0": 3780,
+        "1": 4580
+      },
+      "size": {
+        "0": 589.1437377929688,
+        "1": 182.00450134277344
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 7,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "字符串",
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            788
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "Text Multiline",
+        "cnr_id": "was-node-suite-comfyui",
+        "ver": "056badacda52e88d29d6a65f9509cd3115ace0f2"
+      },
+      "widgets_values": [
+        "改变人物姿势，人物坐着，人物坐在地上，手托住下巴，全身照，人物保持不变。"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 157,
+      "type": "KSampler",
+      "pos": {
+        "0": 4770,
+        "1": 3530
+      },
+      "size": {
+        "0": 278.82501220703125,
+        "1": 277.5211181640625
+      },
+      "flags": {},
+      "order": 32,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "模型",
+          "name": "model",
+          "type": "MODEL",
+          "link": 782
+        },
+        {
+          "label": "正面条件",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 779
+        },
+        {
+          "label": "负面条件",
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 784
+        },
+        {
+          "label": "Latent",
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 783
+        }
+      ],
+      "outputs": [
+        {
+          "label": "Latent",
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            777
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "KSampler",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.48",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        127213155324278,
+        "randomize",
+        4,
+        1,
+        "euler",
+        "simple",
+        1
+      ]
+    },
+    {
+      "id": 163,
+      "type": "SaveImage",
+      "pos": {
+        "0": 4380,
+        "1": 3480
+      },
+      "size": {
+        "0": 265.15179443359375,
+        "1": 561.4557495117188
+      },
+      "flags": {},
+      "order": 50,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 797
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "SaveImage",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "ue_properties": {
+          "version": "7.0.1",
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": [
+        "libu/qwen-aijuxi"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 165,
+      "type": "VAEDecode",
+      "pos": {
+        "0": 4060,
+        "1": 3520
+      },
+      "size": {
+        "0": 277.8810119628906,
+        "1": 51.32400131225586
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 42,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "Latent",
+          "name": "samples",
+          "type": "LATENT",
+          "link": 799
+        },
+        {
+          "label": "VAE",
+          "name": "vae",
+          "type": "VAE",
+          "link": 804
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            797
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "VAEDecode",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.48",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 166,
+      "type": "TextEncodeQwenImageEdit",
+      "pos": {
+        "0": 4080,
+        "1": 3670
+      },
+      "size": {
+        "0": 254.428466796875,
+        "1": 98
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 23,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "clip",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 806
+        },
+        {
+          "label": "vae",
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": 805
+        },
+        {
+          "label": "image",
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 838
+        },
+        {
+          "label": "prompt",
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 800
+        }
+      ],
+      "outputs": [
+        {
+          "label": "CONDITIONING",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            798
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "TextEncodeQwenImageEdit",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.51"
+      },
+      "widgets_values": [
+        "一个22岁长头发双马尾的中国女人穿着图片中的服装，展示不同的角色，全身照，背景是纯白色空间背景，电影感，现实照片，超高清，32K"
+      ]
+    },
+    {
+      "id": 167,
+      "type": "Text Multiline",
+      "pos": {
+        "0": 3720,
+        "1": 3850
+      },
+      "size": {
+        "0": 589.1437377929688,
+        "1": 182.00450134277344
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 8,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "字符串",
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            800
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "Text Multiline",
+        "cnr_id": "was-node-suite-comfyui",
+        "ver": "056badacda52e88d29d6a65f9509cd3115ace0f2"
+      },
+      "widgets_values": [
+        "视角改变，展示背面，展示后面，双手叉腰。"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 164,
+      "type": "KSampler",
+      "pos": {
+        "0": 3740,
+        "1": 3530
+      },
+      "size": {
+        "0": 278.82501220703125,
+        "1": 277.5211181640625
+      },
+      "flags": {},
+      "order": 34,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "模型",
+          "name": "model",
+          "type": "MODEL",
+          "link": 801
+        },
+        {
+          "label": "正面条件",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 798
+        },
+        {
+          "label": "负面条件",
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 802
+        },
+        {
+          "label": "Latent",
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 803
+        }
+      ],
+      "outputs": [
+        {
+          "label": "Latent",
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            799
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "KSampler",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.48",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        193901560170625,
+        "randomize",
+        4,
+        1,
+        "euler",
+        "simple",
+        1
+      ]
+    },
+    {
+      "id": 169,
+      "type": "SaveImage",
+      "pos": {
+        "0": 2840,
+        "1": 4380
+      },
+      "size": {
+        "0": 265.15179443359375,
+        "1": 561.4557495117188
+      },
+      "flags": {},
+      "order": 51,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 808
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "SaveImage",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "ue_properties": {
+          "version": "7.0.1",
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": [
+        "libu/qwen-aijuxi"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 133,
+      "type": "CFGNorm",
+      "pos": {
+        "0": 1548.9256591796875,
+        "1": 3441.395751953125
+      },
+      "size": {
+        "0": 270,
+        "1": 58
+      },
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "model",
+          "name": "model",
+          "type": "MODEL",
+          "link": 743
+        }
+      ],
+      "outputs": [
+        {
+          "label": "patched_model",
+          "name": "patched_model",
+          "type": "MODEL",
+          "links": [
+            746,
+            760,
+            770,
+            782,
+            791,
+            801,
+            812,
+            823
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "CFGNorm",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.51"
+      },
+      "widgets_values": [
+        1
+      ]
+    },
+    {
+      "id": 135,
+      "type": "VAELoader",
+      "pos": {
+        "0": 1494.54931640625,
+        "1": 3750.58984375
+      },
+      "size": {
+        "0": 330,
+        "1": 60
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "slot_index": 0,
+          "links": [
+            740,
+            751,
+            759,
+            763,
+            772,
+            773,
+            785,
+            795,
+            796,
+            804,
+            805,
+            815,
+            816,
+            826,
+            827,
+            831
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "VAELoader",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.48",
+        "models": [
+          {
+            "name": "qwen_image_vae.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/vae/qwen_image_vae.safetensors",
+            "directory": "vae"
+          }
+        ],
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "qwen_image_vae.safetensors"
+      ]
+    },
+    {
+      "id": 170,
+      "type": "VAEDecode",
+      "pos": {
+        "0": 2520,
+        "1": 4420
+      },
+      "size": {
+        "0": 277.8810119628906,
+        "1": 51.32400131225586
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 43,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "Latent",
+          "name": "samples",
+          "type": "LATENT",
+          "link": 809
+        },
+        {
+          "label": "VAE",
+          "name": "vae",
+          "type": "VAE",
+          "link": 815
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            808
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "VAEDecode",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.48",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 172,
+      "type": "Text Multiline",
+      "pos": {
+        "0": 2180,
+        "1": 4750
+      },
+      "size": {
+        "0": 589.1437377929688,
+        "1": 182.00450134277344
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 10,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "字符串",
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            810
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "Text Multiline",
+        "cnr_id": "was-node-suite-comfyui",
+        "ver": "056badacda52e88d29d6a65f9509cd3115ace0f2"
+      },
+      "widgets_values": [
+        "展示人物侧面，侧面视角，闭着眼睛，不露出双手。"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 173,
+      "type": "KSampler",
+      "pos": {
+        "0": 2200,
+        "1": 4400
+      },
+      "size": {
+        "0": 278.82501220703125,
+        "1": 277.5211181640625
+      },
+      "flags": {},
+      "order": 35,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "模型",
+          "name": "model",
+          "type": "MODEL",
+          "link": 812
+        },
+        {
+          "label": "正面条件",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 811
+        },
+        {
+          "label": "负面条件",
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 814
+        },
+        {
+          "label": "Latent",
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 813
+        }
+      ],
+      "outputs": [
+        {
+          "label": "Latent",
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            809
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "KSampler",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.48",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        193283474605612,
+        "randomize",
+        4,
+        1,
+        "euler",
+        "simple",
+        1
+      ]
+    },
+    {
+      "id": 171,
+      "type": "TextEncodeQwenImageEdit",
+      "pos": {
+        "0": 2530,
+        "1": 4560
+      },
+      "size": {
+        "0": 254.428466796875,
+        "1": 98
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "clip",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 818
+        },
+        {
+          "label": "vae",
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": 816
+        },
+        {
+          "label": "image",
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 839
+        },
+        {
+          "label": "prompt",
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 810
+        }
+      ],
+      "outputs": [
+        {
+          "label": "CONDITIONING",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            811
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "TextEncodeQwenImageEdit",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.51"
+      },
+      "widgets_values": [
+        "一个22岁长头发双马尾的中国女人穿着图片中的服装，展示不同的角色，全身照，背景是纯白色空间背景，电影感，现实照片，超高清，32K"
+      ]
+    },
+    {
+      "id": 175,
+      "type": "SaveImage",
+      "pos": {
+        "0": 2856.771240234375,
+        "1": 3632.35791015625
+      },
+      "size": {
+        "0": 265.15179443359375,
+        "1": 561.4557495117188
+      },
+      "flags": {},
+      "order": 52,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 819
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "SaveImage",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "ue_properties": {
+          "version": "7.0.1",
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": [
+        "libu/qwen-aijuxi"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 178,
+      "type": "KSampler",
+      "pos": {
+        "0": 2216.771240234375,
+        "1": 3652.35791015625
+      },
+      "size": {
+        "0": 278.82501220703125,
+        "1": 277.5211181640625
+      },
+      "flags": {},
+      "order": 36,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "模型",
+          "name": "model",
+          "type": "MODEL",
+          "link": 823
+        },
+        {
+          "label": "正面条件",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 821
+        },
+        {
+          "label": "负面条件",
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 824
+        },
+        {
+          "label": "Latent",
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 825
+        }
+      ],
+      "outputs": [
+        {
+          "label": "Latent",
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            820
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "KSampler",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.48",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        553616248153450,
+        "randomize",
+        4,
+        1,
+        "euler",
+        "simple",
+        1
+      ]
+    },
+    {
+      "id": 176,
+      "type": "VAEDecode",
+      "pos": {
+        "0": 2535.630859375,
+        "1": 3643.849365234375
+      },
+      "size": {
+        "0": 277.8810119628906,
+        "1": 51.32400131225586
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 44,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "Latent",
+          "name": "samples",
+          "type": "LATENT",
+          "link": 820
+        },
+        {
+          "label": "VAE",
+          "name": "vae",
+          "type": "VAE",
+          "link": 826
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            819
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "VAEDecode",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.48",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 179,
+      "type": "TextEncodeQwenImageEdit",
+      "pos": {
+        "0": 2551.332763671875,
+        "1": 3827.18212890625
+      },
+      "size": {
+        "0": 254.428466796875,
+        "1": 98
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "clip",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 828
+        },
+        {
+          "label": "vae",
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": 827
+        },
+        {
+          "label": "image",
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 840
+        },
+        {
+          "label": "prompt",
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 822
+        }
+      ],
+      "outputs": [
+        {
+          "label": "CONDITIONING",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            821
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "TextEncodeQwenImageEdit",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.51"
+      },
+      "widgets_values": [
+        "一个22岁长头发双马尾的中国女人穿着图片中的服装，展示不同的角色，全身照，背景是纯白色空间背景，电影感，现实照片，超高清，32K"
+      ]
+    },
+    {
+      "id": 177,
+      "type": "Text Multiline",
+      "pos": {
+        "0": 2196.771240234375,
+        "1": 4002.35791015625
+      },
+      "size": {
+        "0": 589.1437377929688,
+        "1": 182.00450134277344
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 11,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "字符串",
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            822
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "Text Multiline",
+        "cnr_id": "was-node-suite-comfyui",
+        "ver": "056badacda52e88d29d6a65f9509cd3115ace0f2"
+      },
+      "widgets_values": [
+        "视角改变，从上往下看，这个角色手伸向镜头，半身照，人脸保持一致。"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 153,
+      "type": "SaveImage",
+      "pos": {
+        "0": 5430.73681640625,
+        "1": 3460.632080078125
+      },
+      "size": {
+        "0": 265.15179443359375,
+        "1": 561.4557495117188
+      },
+      "flags": {},
+      "order": 48,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 776
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "SaveImage",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "ue_properties": {
+          "version": "7.0.1",
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": [
+        "libu/qwen-aijuxi"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 162,
+      "type": "SaveImage",
+      "pos": {
+        "0": 4461.47265625,
+        "1": 4227.89404296875
+      },
+      "size": {
+        "0": 265.15179443359375,
+        "1": 561.4557495117188
+      },
+      "flags": {},
+      "order": 49,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 789
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "SaveImage",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "ue_properties": {
+          "version": "7.0.1",
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": [
+        "libu/qwen-aijuxi"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 150,
+      "type": "TextEncodeQwenImageEdit",
+      "pos": {
+        "0": 2570,
+        "1": 3010
+      },
+      "size": {
+        "0": 254.428466796875,
+        "1": 98
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "clip",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 830
+        },
+        {
+          "label": "vae",
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": 773
+        },
+        {
+          "label": "image",
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 835
+        },
+        {
+          "label": "prompt",
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 768
+        }
+      ],
+      "outputs": [
+        {
+          "label": "CONDITIONING",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            767
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "TextEncodeQwenImageEdit",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.51"
+      },
+      "widgets_values": [
+        "一个22岁长头发双马尾的中国女人穿着图片中的服装，展示不同的角色，全身照，背景是纯白色空间背景，电影感，现实照片，超高清，32K"
+      ]
+    },
+    {
+      "id": 154,
+      "type": "VAEDecode",
+      "pos": {
+        "0": 5100,
+        "1": 3540
+      },
+      "size": {
+        "0": 277.8810119628906,
+        "1": 51.32400131225586
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 40,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "Latent",
+          "name": "samples",
+          "type": "LATENT",
+          "link": 777
+        },
+        {
+          "label": "VAE",
+          "name": "vae",
+          "type": "VAE",
+          "link": 831
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            776
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "VAEDecode",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.48",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 181,
+      "type": "ImageResizeKJv2",
+      "pos": {
+        "0": 1029.591552734375,
+        "1": 4044.79638671875
+      },
+      "size": {
+        "0": 315,
+        "1": 286
+      },
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 841
+        },
+        {
+          "label": "mask",
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "label": "width",
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 844
+        },
+        {
+          "label": "height",
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 850
+        }
+      ],
+      "outputs": [
+        {
+          "label": "IMAGE",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            833,
+            834,
+            835,
+            836,
+            837,
+            838,
+            839,
+            840
+          ]
+        },
+        {
+          "label": "width",
+          "name": "width",
+          "type": "INT",
+          "links": [
+            842
+          ]
+        },
+        {
+          "label": "height",
+          "name": "height",
+          "type": "INT",
+          "links": [
+            843
+          ]
+        },
+        {
+          "label": "mask",
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "ImageResizeKJv2"
+      },
+      "widgets_values": [
+        512,
+        512,
+        "lanczos",
+        "resize",
+        "0, 0, 0",
+        "center",
+        2,
+        "cpu"
+      ]
+    },
+    {
+      "id": 139,
+      "type": "LoadImage",
+      "pos": {
+        "0": 337.7058410644531,
+        "1": 3772.540283203125
+      },
+      "size": {
+        "0": 366.3247375488281,
+        "1": 807.9788208007812
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            841
+          ]
+        },
+        {
+          "label": "遮罩",
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LoadImage",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.50"
+      },
+      "widgets_values": [
+        "Qedit-aijuxi_00079_.png",
+        "image",
+        ""
+      ],
+      "color": "#232",
+      "bgcolor": "#353",
+      "_widget_cache_map": {
+        "yi.png": {
+          "value": "img/32e8879effb0428da72b6b7bd11be50f/7e1695fdc1ed5ebfeae93da695fada6de3c2ededae98f590976257a84c53abb6.png",
+          "name": "yi.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/32e8879effb0428da72b6b7bd11be50f/7e1695fdc1ed5ebfeae93da695fada6de3c2ededae98f590976257a84c53abb6.png",
+          "width": 496,
+          "height": 681
+        },
+        "1741833216518-1141173678.jpg": {
+          "value": "img/32e8879effb0428da72b6b7bd11be50f/12014e78a2618696c5ace6fd4f7adb7a3bf1954e60cae49642d8603e387784c8.jpg",
+          "name": "1741833216518-1141173678.jpg",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/32e8879effb0428da72b6b7bd11be50f/12014e78a2618696c5ace6fd4f7adb7a3bf1954e60cae49642d8603e387784c8.jpg",
+          "width": 1500,
+          "height": 1500
+        },
+        "tb_image_share_1744600938352.jpg.png": {
+          "value": "img/32e8879effb0428da72b6b7bd11be50f/1e3948d9e6f106d007701c1274b61706b2b38164775857ed50d769fb75dcafcd.png",
+          "name": "tb_image_share_1744600938352.jpg.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/32e8879effb0428da72b6b7bd11be50f/1e3948d9e6f106d007701c1274b61706b2b38164775857ed50d769fb75dcafcd.png",
+          "width": 800,
+          "height": 800
+        },
+        "Qedit-aijuxi_00079_.png": {
+          "value": "img/32e8879effb0428da72b6b7bd11be50f/129b5d66af892cf48c6d6ea308571b2979238d9d721099f004a4ac33d8f2b29b.png",
+          "name": "Qedit-aijuxi_00079_.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/32e8879effb0428da72b6b7bd11be50f/129b5d66af892cf48c6d6ea308571b2979238d9d721099f004a4ac33d8f2b29b.png",
+          "width": 768,
+          "height": 1360
+        }
+      }
+    },
+    {
+      "id": 182,
+      "type": "Int",
+      "pos": {
+        "0": 819.4885864257812,
+        "1": 4463.37890625
+      },
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "整数",
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            844,
+            850
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "Int"
+      },
+      "widgets_values": [
+        "1280"
+      ]
+    }
+  ],
+  "links": [
+    [
+      723,
+      38,
+      0,
+      77,
+      0,
+      "CLIP"
+    ],
+    [
+      724,
+      113,
+      0,
+      77,
+      2,
+      "IMAGE"
+    ],
+    [
+      725,
+      76,
+      0,
+      103,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      726,
+      77,
+      0,
+      103,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      727,
+      113,
+      0,
+      109,
+      1,
+      "IMAGE"
+    ],
+    [
+      728,
+      38,
+      0,
+      76,
+      0,
+      "CLIP"
+    ],
+    [
+      729,
+      113,
+      0,
+      76,
+      2,
+      "IMAGE"
+    ],
+    [
+      730,
+      113,
+      0,
+      88,
+      0,
+      "IMAGE"
+    ],
+    [
+      739,
+      138,
+      0,
+      130,
+      0,
+      "LATENT"
+    ],
+    [
+      740,
+      135,
+      0,
+      130,
+      1,
+      "VAE"
+    ],
+    [
+      741,
+      132,
+      0,
+      131,
+      0,
+      "MODEL"
+    ],
+    [
+      742,
+      136,
+      0,
+      132,
+      0,
+      "MODEL"
+    ],
+    [
+      743,
+      131,
+      0,
+      133,
+      0,
+      "MODEL"
+    ],
+    [
+      744,
+      127,
+      0,
+      136,
+      0,
+      "MODEL"
+    ],
+    [
+      745,
+      130,
+      0,
+      137,
+      0,
+      "IMAGE"
+    ],
+    [
+      746,
+      133,
+      0,
+      138,
+      0,
+      "MODEL"
+    ],
+    [
+      747,
+      140,
+      0,
+      138,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      748,
+      141,
+      0,
+      138,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      749,
+      129,
+      0,
+      138,
+      3,
+      "LATENT"
+    ],
+    [
+      750,
+      134,
+      0,
+      140,
+      0,
+      "CLIP"
+    ],
+    [
+      751,
+      135,
+      0,
+      140,
+      1,
+      "VAE"
+    ],
+    [
+      753,
+      142,
+      0,
+      140,
+      3,
+      "STRING"
+    ],
+    [
+      754,
+      134,
+      0,
+      141,
+      0,
+      "CLIP"
+    ],
+    [
+      755,
+      145,
+      0,
+      143,
+      0,
+      "LATENT"
+    ],
+    [
+      756,
+      146,
+      0,
+      144,
+      3,
+      "STRING"
+    ],
+    [
+      757,
+      144,
+      0,
+      145,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      758,
+      143,
+      0,
+      147,
+      0,
+      "IMAGE"
+    ],
+    [
+      759,
+      135,
+      0,
+      143,
+      1,
+      "VAE"
+    ],
+    [
+      760,
+      133,
+      0,
+      145,
+      0,
+      "MODEL"
+    ],
+    [
+      761,
+      141,
+      0,
+      145,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      762,
+      129,
+      0,
+      145,
+      3,
+      "LATENT"
+    ],
+    [
+      763,
+      135,
+      0,
+      144,
+      1,
+      "VAE"
+    ],
+    [
+      764,
+      134,
+      0,
+      144,
+      0,
+      "CLIP"
+    ],
+    [
+      766,
+      149,
+      0,
+      148,
+      0,
+      "LATENT"
+    ],
+    [
+      767,
+      150,
+      0,
+      149,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      768,
+      151,
+      0,
+      150,
+      3,
+      "STRING"
+    ],
+    [
+      769,
+      148,
+      0,
+      152,
+      0,
+      "IMAGE"
+    ],
+    [
+      770,
+      133,
+      0,
+      149,
+      0,
+      "MODEL"
+    ],
+    [
+      771,
+      129,
+      0,
+      149,
+      3,
+      "LATENT"
+    ],
+    [
+      772,
+      135,
+      0,
+      148,
+      1,
+      "VAE"
+    ],
+    [
+      773,
+      135,
+      0,
+      150,
+      1,
+      "VAE"
+    ],
+    [
+      775,
+      141,
+      0,
+      149,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      776,
+      154,
+      0,
+      153,
+      0,
+      "IMAGE"
+    ],
+    [
+      777,
+      157,
+      0,
+      154,
+      0,
+      "LATENT"
+    ],
+    [
+      778,
+      156,
+      0,
+      155,
+      3,
+      "STRING"
+    ],
+    [
+      779,
+      155,
+      0,
+      157,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      781,
+      134,
+      0,
+      155,
+      0,
+      "CLIP"
+    ],
+    [
+      782,
+      133,
+      0,
+      157,
+      0,
+      "MODEL"
+    ],
+    [
+      783,
+      129,
+      0,
+      157,
+      3,
+      "LATENT"
+    ],
+    [
+      784,
+      141,
+      0,
+      157,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      785,
+      135,
+      0,
+      155,
+      1,
+      "VAE"
+    ],
+    [
+      786,
+      159,
+      0,
+      158,
+      0,
+      "LATENT"
+    ],
+    [
+      787,
+      161,
+      0,
+      159,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      788,
+      160,
+      0,
+      161,
+      3,
+      "STRING"
+    ],
+    [
+      789,
+      158,
+      0,
+      162,
+      0,
+      "IMAGE"
+    ],
+    [
+      791,
+      133,
+      0,
+      159,
+      0,
+      "MODEL"
+    ],
+    [
+      792,
+      134,
+      0,
+      161,
+      0,
+      "CLIP"
+    ],
+    [
+      793,
+      141,
+      0,
+      159,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      794,
+      129,
+      0,
+      159,
+      3,
+      "LATENT"
+    ],
+    [
+      795,
+      135,
+      0,
+      158,
+      1,
+      "VAE"
+    ],
+    [
+      796,
+      135,
+      0,
+      161,
+      1,
+      "VAE"
+    ],
+    [
+      797,
+      165,
+      0,
+      163,
+      0,
+      "IMAGE"
+    ],
+    [
+      798,
+      166,
+      0,
+      164,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      799,
+      164,
+      0,
+      165,
+      0,
+      "LATENT"
+    ],
+    [
+      800,
+      167,
+      0,
+      166,
+      3,
+      "STRING"
+    ],
+    [
+      801,
+      133,
+      0,
+      164,
+      0,
+      "MODEL"
+    ],
+    [
+      802,
+      141,
+      0,
+      164,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      803,
+      129,
+      0,
+      164,
+      3,
+      "LATENT"
+    ],
+    [
+      804,
+      135,
+      0,
+      165,
+      1,
+      "VAE"
+    ],
+    [
+      805,
+      135,
+      0,
+      166,
+      1,
+      "VAE"
+    ],
+    [
+      806,
+      134,
+      0,
+      166,
+      0,
+      "CLIP"
+    ],
+    [
+      808,
+      170,
+      0,
+      169,
+      0,
+      "IMAGE"
+    ],
+    [
+      809,
+      173,
+      0,
+      170,
+      0,
+      "LATENT"
+    ],
+    [
+      810,
+      172,
+      0,
+      171,
+      3,
+      "STRING"
+    ],
+    [
+      811,
+      171,
+      0,
+      173,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      812,
+      133,
+      0,
+      173,
+      0,
+      "MODEL"
+    ],
+    [
+      813,
+      129,
+      0,
+      173,
+      3,
+      "LATENT"
+    ],
+    [
+      814,
+      141,
+      0,
+      173,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      815,
+      135,
+      0,
+      170,
+      1,
+      "VAE"
+    ],
+    [
+      816,
+      135,
+      0,
+      171,
+      1,
+      "VAE"
+    ],
+    [
+      818,
+      134,
+      0,
+      171,
+      0,
+      "CLIP"
+    ],
+    [
+      819,
+      176,
+      0,
+      175,
+      0,
+      "IMAGE"
+    ],
+    [
+      820,
+      178,
+      0,
+      176,
+      0,
+      "LATENT"
+    ],
+    [
+      821,
+      179,
+      0,
+      178,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      822,
+      177,
+      0,
+      179,
+      3,
+      "STRING"
+    ],
+    [
+      823,
+      133,
+      0,
+      178,
+      0,
+      "MODEL"
+    ],
+    [
+      824,
+      141,
+      0,
+      178,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      825,
+      129,
+      0,
+      178,
+      3,
+      "LATENT"
+    ],
+    [
+      826,
+      135,
+      0,
+      176,
+      1,
+      "VAE"
+    ],
+    [
+      827,
+      135,
+      0,
+      179,
+      1,
+      "VAE"
+    ],
+    [
+      828,
+      134,
+      0,
+      179,
+      0,
+      "CLIP"
+    ],
+    [
+      830,
+      134,
+      0,
+      150,
+      0,
+      "CLIP"
+    ],
+    [
+      831,
+      135,
+      0,
+      154,
+      1,
+      "VAE"
+    ],
+    [
+      833,
+      181,
+      0,
+      140,
+      2,
+      "IMAGE"
+    ],
+    [
+      834,
+      181,
+      0,
+      144,
+      2,
+      "IMAGE"
+    ],
+    [
+      835,
+      181,
+      0,
+      150,
+      2,
+      "IMAGE"
+    ],
+    [
+      836,
+      181,
+      0,
+      155,
+      2,
+      "IMAGE"
+    ],
+    [
+      837,
+      181,
+      0,
+      161,
+      2,
+      "IMAGE"
+    ],
+    [
+      838,
+      181,
+      0,
+      166,
+      2,
+      "IMAGE"
+    ],
+    [
+      839,
+      181,
+      0,
+      171,
+      2,
+      "IMAGE"
+    ],
+    [
+      840,
+      181,
+      0,
+      179,
+      2,
+      "IMAGE"
+    ],
+    [
+      841,
+      139,
+      0,
+      181,
+      0,
+      "IMAGE"
+    ],
+    [
+      842,
+      181,
+      1,
+      129,
+      0,
+      "INT"
+    ],
+    [
+      843,
+      181,
+      2,
+      129,
+      1,
+      "INT"
+    ],
+    [
+      844,
+      182,
+      0,
+      181,
+      2,
+      "INT"
+    ],
+    [
+      850,
+      182,
+      0,
+      181,
+      3,
+      "INT"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 13,
+      "title": "Step1 - Load models",
+      "bounding": [
+        323.0102233886719,
+        1700.0579833984375,
+        360.75799560546875,
+        823
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 14,
+      "title": "Step3 - Prompt",
+      "bounding": [
+        1089.16455078125,
+        1725.4029541015625,
+        453.6300048828125,
+        724.0999755859375
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 15,
+      "title": "Qwen edit 图片修改+提示词改图=B站艾橘溪",
+      "bounding": [
+        328.568115234375,
+        1318.541748046875,
+        1741.1114501953125,
+        340.4000549316406
+      ],
+      "color": "#b58b2a",
+      "font_size": 60,
+      "flags": {
+        "pinned": true
+      }
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.1734944802432893,
+      "offset": [
+        2630.310167406814,
+        -709.1768539400467
+      ]
+    },
+    "frontendVersion": "1.25.9",
+    "ue_links": [],
+    "links_added_by_ue": [
+      707,
+      708,
+      709,
+      710,
+      711,
+      712,
+      713,
+      714,
+      715,
+      716,
+      717,
+      718,
+      719
+    ],
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4,
+  "widget_idx_map": {
+    "138": {
+      "seed": 0,
+      "sampler_name": 4,
+      "scheduler": 5
+    },
+    "145": {
+      "seed": 0,
+      "sampler_name": 4,
+      "scheduler": 5
+    },
+    "149": {
+      "seed": 0,
+      "sampler_name": 4,
+      "scheduler": 5
+    },
+    "157": {
+      "seed": 0,
+      "sampler_name": 4,
+      "scheduler": 5
+    },
+    "159": {
+      "seed": 0,
+      "sampler_name": 4,
+      "scheduler": 5
+    },
+    "164": {
+      "seed": 0,
+      "sampler_name": 4,
+      "scheduler": 5
+    },
+    "173": {
+      "seed": 0,
+      "sampler_name": 4,
+      "scheduler": 5
+    },
+    "178": {
+      "seed": 0,
+      "sampler_name": 4,
+      "scheduler": 5
+    }
+  },
+  "seed_widgets": {
+    "138": 0,
+    "145": 0,
+    "149": 0,
+    "157": 0,
+    "159": 0,
+    "164": 0,
+    "173": 0,
+    "178": 0
+  }
+}

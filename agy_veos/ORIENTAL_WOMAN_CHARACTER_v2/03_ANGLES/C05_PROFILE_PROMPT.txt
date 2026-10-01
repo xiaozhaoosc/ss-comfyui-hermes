@@ -1,0 +1,20 @@
+[CHARACTER IDENTITY LOCK — HIGHEST PRIORITY]
+Use the uploaded reference images:
+Image 1: C01 Face Front Master — primary facial identity reference.
+Image 2: C02 Full Body Master — body anatomy, proportions, and costume reference.
+Image 3: C03 Left 3/4 View — perspective and contour transition reference.
+Generate the strict 90-degree complete side profile view of the exact same East Asian woman.
+She must be unmistakably the exact same person as in C01, C02, and C03.
+
+[C05 CLEAN 90-DEGREE SIDE PROFILE VIEW]
+Camera position: strictly 90 degrees directly to her side.
+Both head and body face directly to the side (true profile).
+Requirements:
+- True, clean 90-degree side profile. NOT a three-quarter angle. Only one side of the face is visible.
+- Crisp silhouette of forehead, nose bridge, nose tip, lips, chin, and jawline. The facial profile must mathematically and anatomically match C01.
+- Slender neck, throat contour, shoulders, and feminine posture.
+- Dark brown/black hair in the exact same elegant soft bun with delicate wispy bangs and tendrils framing the temple. The shape of the bun and back of the head clearly defined.
+- Side view of the exact same cream-white floral fitted mini dress from C02/C03, showing bust curve, waist taper, and skirt hem.
+- Lighting: Neutral commercial studio portrait lighting, soft shadows defining profile contours.
+- Background: Solid neutral grey studio backdrop with zero distractions.
+Purpose: Lock the 90° face profile, nasal angle, jawline silhouette, and side body contours for 360° video turnaround. Ultra-photorealistic.

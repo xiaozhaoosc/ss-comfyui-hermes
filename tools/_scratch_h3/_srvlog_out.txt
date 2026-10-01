@@ -1,0 +1,174 @@
+server log total lines=1881
+=== 命中告警/关键字的行（最多 120 条）===
+  1549 | _223' Status Message: E:\_work\1\s\onnxruntime\core\provider
+  1552 |  00007FFEA25DB597) Exception(117) tid(925c) 80070057 ????????
+  1555 | [ReActor] 23:16:05 - [0;31mERROR[0m - No faces found
+  1558 | ial_executor.cc:572 onnxruntime::ExecuteKernel] Non-zero sta
+  1560 | _223' Status Message: E:\_work\1\s\onnxruntime\core\provider
+  1563 |  00007FFEA25DB597) Exception(118) tid(925c) 80070057 ????????
+  1566 | [ReActor] 23:16:05 - [0;31mERROR[0m - No faces found
+  1569 | ial_executor.cc:572 onnxruntime::ExecuteKernel] Non-zero sta
+  1571 | _223' Status Message: E:\_work\1\s\onnxruntime\core\provider
+  1574 |  00007FFEA25DB597) Exception(119) tid(925c) 80070057 ????????
+  1577 | [ReActor] 23:16:05 - [0;31mERROR[0m - No faces found
+  1580 | ial_executor.cc:572 onnxruntime::ExecuteKernel] Non-zero sta
+  1582 | _223' Status Message: E:\_work\1\s\onnxruntime\core\provider
+  1585 |  00007FFEA25DB597) Exception(120) tid(925c) 80070057 ????????
+  1588 | [ReActor] 23:16:05 - [0;31mERROR[0m - No faces found
+  1591 | ial_executor.cc:572 onnxruntime::ExecuteKernel] Non-zero sta
+  1593 | _223' Status Message: E:\_work\1\s\onnxruntime\core\provider
+  1596 |  00007FFEA25DB597) Exception(121) tid(925c) 80070057 ????????
+  1599 | [ReActor] 23:16:05 - [0;31mERROR[0m - No faces found
+  1602 | ial_executor.cc:572 onnxruntime::ExecuteKernel] Non-zero sta
+  1604 | _223' Status Message: E:\_work\1\s\onnxruntime\core\provider
+  1607 |  00007FFEA25DB597) Exception(122) tid(925c) 80070057 ????????
+  1610 | [ReActor] 23:16:05 - [0;31mERROR[0m - No faces found
+  1613 | ial_executor.cc:572 onnxruntime::ExecuteKernel] Non-zero sta
+  1615 | _223' Status Message: E:\_work\1\s\onnxruntime\core\provider
+  1618 |  00007FFEA25DB597) Exception(123) tid(925c) 80070057 ????????
+  1621 | [ReActor] 23:16:05 - [0;31mERROR[0m - No faces found
+  1624 | ial_executor.cc:572 onnxruntime::ExecuteKernel] Non-zero sta
+  1626 | _223' Status Message: E:\_work\1\s\onnxruntime\core\provider
+  1629 |  00007FFEA25DB597) Exception(124) tid(925c) 80070057 ????????
+  1632 | [ReActor] 23:16:05 - [0;31mERROR[0m - No faces found
+  1635 | ial_executor.cc:572 onnxruntime::ExecuteKernel] Non-zero sta
+  1637 | _223' Status Message: E:\_work\1\s\onnxruntime\core\provider
+  1640 |  00007FFEA25DB597) Exception(125) tid(925c) 80070057 ????????
+  1643 | [ReActor] 23:16:05 - [0;31mERROR[0m - No faces found
+  1646 | ial_executor.cc:572 onnxruntime::ExecuteKernel] Non-zero sta
+  1648 | _223' Status Message: E:\_work\1\s\onnxruntime\core\provider
+  1651 |  00007FFEA25DB597) Exception(126) tid(925c) 80070057 ????????
+  1654 | [ReActor] 23:16:05 - [0;31mERROR[0m - No faces found
+  1657 | ial_executor.cc:572 onnxruntime::ExecuteKernel] Non-zero sta
+  1659 | _223' Status Message: E:\_work\1\s\onnxruntime\core\provider
+  1662 |  00007FFEA25DB597) Exception(127) tid(925c) 80070057 ????????
+  1665 | [ReActor] 23:16:05 - [0;31mERROR[0m - No faces found
+  1668 | ial_executor.cc:572 onnxruntime::ExecuteKernel] Non-zero sta
+  1670 | _223' Status Message: E:\_work\1\s\onnxruntime\core\provider
+  1673 |  00007FFEA25DB597) Exception(128) tid(925c) 80070057 ????????
+  1676 | [ReActor] 23:16:05 - [0;31mERROR[0m - No faces found
+  1679 | ial_executor.cc:572 onnxruntime::ExecuteKernel] Non-zero sta
+  1681 | _223' Status Message: E:\_work\1\s\onnxruntime\core\provider
+  1684 |  00007FFEA25DB597) Exception(129) tid(925c) 80070057 ????????
+  1687 | [ReActor] 23:16:05 - [0;31mERROR[0m - No faces found
+  1690 | ial_executor.cc:572 onnxruntime::ExecuteKernel] Non-zero sta
+  1692 | _223' Status Message: E:\_work\1\s\onnxruntime\core\provider
+  1695 |  00007FFEA25DB597) Exception(130) tid(925c) 80070057 ????????
+  1698 | [ReActor] 23:16:05 - [0;31mERROR[0m - No faces found
+  1701 | ial_executor.cc:572 onnxruntime::ExecuteKernel] Non-zero sta
+  1703 | _223' Status Message: E:\_work\1\s\onnxruntime\core\provider
+  1706 |  00007FFEA25DB597) Exception(131) tid(925c) 80070057 ????????
+  1709 | [ReActor] 23:16:05 - [0;31mERROR[0m - No faces found
+  1712 | ial_executor.cc:572 onnxruntime::ExecuteKernel] Non-zero sta
+  1714 | _223' Status Message: E:\_work\1\s\onnxruntime\core\provider
+  1717 |  00007FFEA25DB597) Exception(132) tid(925c) 80070057 ????????
+  1720 | [ReActor] 23:16:05 - [0;31mERROR[0m - No faces found
+  1723 | ial_executor.cc:572 onnxruntime::ExecuteKernel] Non-zero sta
+  1725 | _223' Status Message: E:\_work\1\s\onnxruntime\core\provider
+  1728 |  00007FFEA25DB597) Exception(133) tid(925c) 80070057 ????????
+  1731 | [ReActor] 23:16:05 - [0;31mERROR[0m - No faces found
+  1734 | ial_executor.cc:572 onnxruntime::ExecuteKernel] Non-zero sta
+  1736 | _223' Status Message: E:\_work\1\s\onnxruntime\core\provider
+  1739 |  00007FFEA25DB597) Exception(134) tid(925c) 80070057 ????????
+  1742 | [ReActor] 23:16:05 - [0;31mERROR[0m - No faces found
+  1745 | ial_executor.cc:572 onnxruntime::ExecuteKernel] Non-zero sta
+  1747 | _223' Status Message: E:\_work\1\s\onnxruntime\core\provider
+  1750 |  00007FFEA25DB597) Exception(135) tid(925c) 80070057 ????????
+  1753 | [ReActor] 23:16:05 - [0;31mERROR[0m - No faces found
+  1756 | ial_executor.cc:572 onnxruntime::ExecuteKernel] Non-zero sta
+  1758 | _223' Status Message: E:\_work\1\s\onnxruntime\core\provider
+  1761 |  00007FFEA25DB597) Exception(136) tid(925c) 80070057 ????????
+  1764 | [ReActor] 23:16:05 - [0;31mERROR[0m - No faces found
+  1767 | ial_executor.cc:572 onnxruntime::ExecuteKernel] Non-zero sta
+  1769 | _223' Status Message: E:\_work\1\s\onnxruntime\core\provider
+  1772 |  00007FFEA25DB597) Exception(137) tid(925c) 80070057 ????????
+  1775 | [ReActor] 23:16:05 - [0;31mERROR[0m - No faces found
+  1778 | ial_executor.cc:572 onnxruntime::ExecuteKernel] Non-zero sta
+  1780 | _223' Status Message: E:\_work\1\s\onnxruntime\core\provider
+  1783 |  00007FFEA25DB597) Exception(138) tid(925c) 80070057 ????????
+  1786 | [ReActor] 23:16:05 - [0;31mERROR[0m - No faces found
+  1789 | ial_executor.cc:572 onnxruntime::ExecuteKernel] Non-zero sta
+  1791 | _223' Status Message: E:\_work\1\s\onnxruntime\core\provider
+  1794 |  00007FFEA25DB597) Exception(139) tid(925c) 80070057 ????????
+  1797 | [ReActor] 23:16:05 - [0;31mERROR[0m - No faces found
+  1800 | ial_executor.cc:572 onnxruntime::ExecuteKernel] Non-zero sta
+  1802 | _223' Status Message: E:\_work\1\s\onnxruntime\core\provider
+  1805 |  00007FFEA25DB597) Exception(140) tid(925c) 80070057 ????????
+  1808 | [ReActor] 23:16:05 - [0;31mERROR[0m - No faces found
+  1811 | ial_executor.cc:572 onnxruntime::ExecuteKernel] Non-zero sta
+  1813 | _223' Status Message: E:\_work\1\s\onnxruntime\core\provider
+  1816 |  00007FFEA25DB597) Exception(141) tid(925c) 80070057 ????????
+  1819 | [ReActor] 23:16:05 - [0;31mERROR[0m - No faces found
+  1822 | ial_executor.cc:572 onnxruntime::ExecuteKernel] Non-zero sta
+  1824 | _223' Status Message: E:\_work\1\s\onnxruntime\core\provider
+  1827 |  00007FFEA25DB597) Exception(142) tid(925c) 80070057 ????????
+  1830 | [ReActor] 23:16:05 - [0;31mERROR[0m - No faces found
+  1833 | ial_executor.cc:572 onnxruntime::ExecuteKernel] Non-zero sta
+  1835 | _223' Status Message: E:\_work\1\s\onnxruntime\core\provider
+  1838 |  00007FFEA25DB597) Exception(143) tid(925c) 80070057 ????????
+  1841 | [ReActor] 23:16:05 - [0;31mERROR[0m - No faces found
+  1844 | ial_executor.cc:572 onnxruntime::ExecuteKernel] Non-zero sta
+  1846 | _223' Status Message: E:\_work\1\s\onnxruntime\core\provider
+  1849 |  00007FFEA25DB597) Exception(144) tid(925c) 80070057 ????????
+  1852 | [ReActor] 23:16:05 - [0;31mERROR[0m - No faces found
+  1855 | ial_executor.cc:572 onnxruntime::ExecuteKernel] Non-zero sta
+  1857 | _223' Status Message: E:\_work\1\s\onnxruntime\core\provider
+  1860 |  00007FFEA25DB597) Exception(145) tid(925c) 80070057 ????????
+  1863 | [ReActor] 23:16:05 - [0;31mERROR[0m - No faces found
+  1866 | ial_executor.cc:572 onnxruntime::ExecuteKernel] Non-zero sta
+  1868 | _223' Status Message: E:\_work\1\s\onnxruntime\core\provider
+  1871 |  00007FFEA25DB597) Exception(146) tid(925c) 80070057 ????????
+  1874 | [ReActor] 23:16:05 - [0;31mERROR[0m - No faces found
+  1879 | Speed: 4.1ms preprocess, 61.6ms inference, 3.1ms postprocess per image at shape (1, 3, 640, 384)
+
+=== 最后 50 行（原样）===
+[ReActor] 23:16:05 - [38;5;173mSTATUS[0m - Trying to halve 'det_size' parameter
+[1;31m2026-09-22 23:16:05.7074576 [E:onnxruntime:, sequent
+ial_executor.cc:572 onnxruntime::ExecuteKernel] Non-zero sta
+tus code returned while running Reshape node. Name:'Reshape
+_223' Status Message: E:\_work\1\s\onnxruntime\core\provider
+s\dml\DmlExecutionProvider\src\MLOperatorAuthorImpl.cpp(285
+3)\onnxruntime_pybind11_state.pyd!00007FFEA26109AC: (caller:
+ 00007FFEA25DB597) Exception(143) tid(925c) 80070057 ????????
+
+[m
+[ReActor] 23:16:05 - [0;31mERROR[0m - No faces found
+[ReActor] 23:16:05 - [38;5;173mSTATUS[0m - Trying to halve 'det_size' parameter
+[1;31m2026-09-22 23:16:05.7180974 [E:onnxruntime:, sequent
+ial_executor.cc:572 onnxruntime::ExecuteKernel] Non-zero sta
+tus code returned while running Reshape node. Name:'Reshape
+_223' Status Message: E:\_work\1\s\onnxruntime\core\provider
+s\dml\DmlExecutionProvider\src\MLOperatorAuthorImpl.cpp(285
+3)\onnxruntime_pybind11_state.pyd!00007FFEA26109AC: (caller:
+ 00007FFEA25DB597) Exception(144) tid(925c) 80070057 ????????
+
+[m
+[ReActor] 23:16:05 - [0;31mERROR[0m - No faces found
+[ReActor] 23:16:05 - [38;5;173mSTATUS[0m - Trying to halve 'det_size' parameter
+[1;31m2026-09-22 23:16:05.7291067 [E:onnxruntime:, sequent
+ial_executor.cc:572 onnxruntime::ExecuteKernel] Non-zero sta
+tus code returned while running Reshape node. Name:'Reshape
+_223' Status Message: E:\_work\1\s\onnxruntime\core\provider
+s\dml\DmlExecutionProvider\src\MLOperatorAuthorImpl.cpp(285
+3)\onnxruntime_pybind11_state.pyd!00007FFEA26109AC: (caller:
+ 00007FFEA25DB597) Exception(145) tid(925c) 80070057 ????????
+
+[m
+[ReActor] 23:16:05 - [0;31mERROR[0m - No faces found
+[ReActor] 23:16:05 - [38;5;173mSTATUS[0m - Trying to halve 'det_size' parameter
+[1;31m2026-09-22 23:16:05.7400732 [E:onnxruntime:, sequent
+ial_executor.cc:572 onnxruntime::ExecuteKernel] Non-zero sta
+tus code returned while running Reshape node. Name:'Reshape
+_223' Status Message: E:\_work\1\s\onnxruntime\core\provider
+s\dml\DmlExecutionProvider\src\MLOperatorAuthorImpl.cpp(285
+3)\onnxruntime_pybind11_state.pyd!00007FFEA26109AC: (caller:
+ 00007FFEA25DB597) Exception(146) tid(925c) 80070057 ????????
+
+[m
+[ReActor] 23:16:05 - [0;31mERROR[0m - No faces found
+[ReActor] 23:16:05 - [38;5;173mSTATUS[0m - --Done!--
+[ReActor] 23:16:06 - [38;5;173mSTATUS[0m - Restoring with codeformer.pth | Face Size is set to 512
+
+0: 640x384 (no detections), 61.6ms
+Speed: 4.1ms preprocess, 61.6ms inference, 3.1ms postprocess per image at shape (1, 3, 640, 384)
+[32m[INFO][0m [32mPrompt executed in 00:10:21[0m

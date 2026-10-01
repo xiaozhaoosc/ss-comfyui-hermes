@@ -1,0 +1,146 @@
+{
+  "outfits": [
+    {
+      "id": "outfit_01_quiet_luxury_blazer",
+      "title": "老钱风静奢廓形西装套裙",
+      "filename": "outfit_01_quiet_luxury_blazer_00001_.png",
+      "path": "D:\\ai_projects\\ComfyUI\\output\\2026-09-28\\outfit_01_quiet_luxury_blazer_00001_.png",
+      "artifact": "C:\\Users\\kenzhao\\.gemini\\antigravity-ide\\brain\\eff45711-cf9b-45db-9603-8b64b900c0e7\\outfit_01_quiet_luxury_blazer_00001_.png"
+    },
+    {
+      "id": "outfit_02_silk_slip_dress",
+      "title": "纯欲法式香槟真丝吊带裙",
+      "filename": "outfit_02_silk_slip_dress_00001_.png",
+      "path": "D:\\ai_projects\\ComfyUI\\output\\2026-09-28\\outfit_02_silk_slip_dress_00001_.png",
+      "artifact": "C:\\Users\\kenzhao\\.gemini\\antigravity-ide\\brain\\eff45711-cf9b-45db-9603-8b64b900c0e7\\outfit_02_silk_slip_dress_00001_.png"
+    },
+    {
+      "id": "outfit_03_tennis_athleisure",
+      "title": "复古网球老钱运动风",
+      "filename": "outfit_03_tennis_athleisure_00001_.png",
+      "path": "D:\\ai_projects\\ComfyUI\\output\\2026-09-28\\outfit_03_tennis_athleisure_00001_.png",
+      "artifact": "C:\\Users\\kenzhao\\.gemini\\antigravity-ide\\brain\\eff45711-cf9b-45db-9603-8b64b900c0e7\\outfit_03_tennis_athleisure_00001_.png"
+    },
+    {
+      "id": "outfit_04_retro_denim_flare",
+      "title": "美式复古长腿喇叭牛仔裤",
+      "filename": "outfit_04_retro_denim_flare_00001_.png",
+      "path": "D:\\ai_projects\\ComfyUI\\output\\2026-09-28\\outfit_04_retro_denim_flare_00001_.png",
+      "artifact": "C:\\Users\\kenzhao\\.gemini\\antigravity-ide\\brain\\eff45711-cf9b-45db-9603-8b64b900c0e7\\outfit_04_retro_denim_flare_00001_.png"
+    },
+    {
+      "id": "outfit_05_chaebol_tweed",
+      "title": "财阀千金小香风粗花呢套装",
+      "filename": "outfit_05_chaebol_tweed_00001_.png",
+      "path": "D:\\ai_projects\\ComfyUI\\output\\2026-09-28\\outfit_05_chaebol_tweed_00001_.png",
+      "artifact": "C:\\Users\\kenzhao\\.gemini\\antigravity-ide\\brain\\eff45711-cf9b-45db-9603-8b64b900c0e7\\outfit_05_chaebol_tweed_00001_.png"
+    },
+    {
+      "id": "outfit_06_urban_cargo_chic",
+      "title": "松弛感工装街头露腰风",
+      "filename": "outfit_06_urban_cargo_chic_00001_.png",
+      "path": "D:\\ai_projects\\ComfyUI\\output\\2026-09-28\\outfit_06_urban_cargo_chic_00001_.png",
+      "artifact": "C:\\Users\\kenzhao\\.gemini\\antigravity-ide\\brain\\eff45711-cf9b-45db-9603-8b64b900c0e7\\outfit_06_urban_cargo_chic_00001_.png"
+    },
+    {
+      "id": "outfit_07_boyfriend_white_shirt",
+      "title": "经典男友风纯白府绸衬衫",
+      "filename": "outfit_07_boyfriend_white_shirt_00001_.png",
+      "path": "D:\\ai_projects\\ComfyUI\\output\\2026-09-28\\outfit_07_boyfriend_white_shirt_00001_.png",
+      "artifact": "C:\\Users\\kenzhao\\.gemini\\antigravity-ide\\brain\\eff45711-cf9b-45db-9603-8b64b900c0e7\\outfit_07_boyfriend_white_shirt_00001_.png"
+    },
+    {
+      "id": "outfit_08_audrey_little_black_dress",
+      "title": "赫本风一字肩紧身小黑裙",
+      "filename": "outfit_08_audrey_little_black_dress_00001_.png",
+      "path": "D:\\ai_projects\\ComfyUI\\output\\2026-09-28\\outfit_08_audrey_little_black_dress_00001_.png",
+      "artifact": "C:\\Users\\kenzhao\\.gemini\\antigravity-ide\\brain\\eff45711-cf9b-45db-9603-8b64b900c0e7\\outfit_08_audrey_little_black_dress_00001_.png"
+    },
+    {
+      "id": "outfit_09_autumn_trench_leather",
+      "title": "早秋长款风衣配高腰皮短裤",
+      "filename": "outfit_09_autumn_trench_leather_00001_.png",
+      "path": "D:\\ai_projects\\ComfyUI\\output\\2026-09-28\\outfit_09_autumn_trench_leather_00001_.png",
+      "artifact": "C:\\Users\\kenzhao\\.gemini\\antigravity-ide\\brain\\eff45711-cf9b-45db-9603-8b64b900c0e7\\outfit_09_autumn_trench_leather_00001_.png"
+    },
+    {
+      "id": "outfit_10_cashmere_cozy_knit",
+      "title": "软糯羊绒开衫温感针织短裤",
+      "filename": "outfit_10_cashmere_cozy_knit_00001_.png",
+      "path": "D:\\ai_projects\\ComfyUI\\output\\2026-09-28\\outfit_10_cashmere_cozy_knit_00001_.png",
+      "artifact": "C:\\Users\\kenzhao\\.gemini\\antigravity-ide\\brain\\eff45711-cf9b-45db-9603-8b64b900c0e7\\outfit_10_cashmere_cozy_knit_00001_.png"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene_01_penthouse_sunset",
+      "title": "顶层豪宅全景落地窗夕阳",
+      "filename": "scene_01_penthouse_sunset_00001_.png",
+      "path": "D:\\ai_projects\\ComfyUI\\output\\2026-09-28\\scene_01_penthouse_sunset_00001_.png",
+      "artifact": "C:\\Users\\kenzhao\\.gemini\\antigravity-ide\\brain\\eff45711-cf9b-45db-9603-8b64b900c0e7\\scene_01_penthouse_sunset_00001_.png"
+    },
+    {
+      "id": "scene_02_luxury_boutique_vip",
+      "title": "清潭洞奢侈品旗舰店VIP沙龙",
+      "filename": "scene_02_luxury_boutique_vip_00001_.png",
+      "path": "D:\\ai_projects\\ComfyUI\\output\\2026-09-28\\scene_02_luxury_boutique_vip_00001_.png",
+      "artifact": "C:\\Users\\kenzhao\\.gemini\\antigravity-ide\\brain\\eff45711-cf9b-45db-9603-8b64b900c0e7\\scene_02_luxury_boutique_vip_00001_.png"
+    },
+    {
+      "id": "scene_03_modern_art_gallery",
+      "title": "极简水泥现代艺术画廊长廊",
+      "filename": "scene_03_modern_art_gallery_00001_.png",
+      "path": "D:\\ai_projects\\ComfyUI\\output\\2026-09-28\\scene_03_modern_art_gallery_00001_.png",
+      "artifact": "C:\\Users\\kenzhao\\.gemini\\antigravity-ide\\brain\\eff45711-cf9b-45db-9603-8b64b900c0e7\\scene_03_modern_art_gallery_00001_.png"
+    },
+    {
+      "id": "scene_04_french_balcony_apartment",
+      "title": "巴黎奥斯曼公寓复古落地镜",
+      "filename": "scene_04_french_balcony_apartment_00001_.png",
+      "path": "D:\\ai_projects\\ComfyUI\\output\\2026-09-28\\scene_04_french_balcony_apartment_00001_.png",
+      "artifact": "C:\\Users\\kenzhao\\.gemini\\antigravity-ide\\brain\\eff45711-cf9b-45db-9603-8b64b900c0e7\\scene_04_french_balcony_apartment_00001_.png"
+    },
+    {
+      "id": "scene_05_hotel_brass_elevator",
+      "title": "五星级奢华酒店黄铜镜面电梯",
+      "filename": "scene_05_hotel_brass_elevator_00001_.png",
+      "path": "D:\\ai_projects\\ComfyUI\\output\\2026-09-28\\scene_05_hotel_brass_elevator_00001_.png",
+      "artifact": "C:\\Users\\kenzhao\\.gemini\\antigravity-ide\\brain\\eff45711-cf9b-45db-9603-8b64b900c0e7\\scene_05_hotel_brass_elevator_00001_.png"
+    },
+    {
+      "id": "scene_06_tropical_villa_poolside",
+      "title": "海岛独栋别墅无边泳池畔",
+      "filename": "scene_06_tropical_villa_poolside_00001_.png",
+      "path": "D:\\ai_projects\\ComfyUI\\output\\2026-09-28\\scene_06_tropical_villa_poolside_00001_.png",
+      "artifact": "C:\\Users\\kenzhao\\.gemini\\antigravity-ide\\brain\\eff45711-cf9b-45db-9603-8b64b900c0e7\\scene_06_tropical_villa_poolside_00001_.png"
+    },
+    {
+      "id": "scene_07_seongsu_industrial_cafe",
+      "title": "圣水洞工业风设计师概念空间",
+      "filename": "scene_07_seongsu_industrial_cafe_00001_.png",
+      "path": "D:\\ai_projects\\ComfyUI\\output\\2026-09-28\\scene_07_seongsu_industrial_cafe_00001_.png",
+      "artifact": "C:\\Users\\kenzhao\\.gemini\\antigravity-ide\\brain\\eff45711-cf9b-45db-9603-8b64b900c0e7\\scene_07_seongsu_industrial_cafe_00001_.png"
+    },
+    {
+      "id": "scene_08_spiral_staircase_foyer",
+      "title": "极简独栋别墅旋转楼梯前厅",
+      "filename": "scene_08_spiral_staircase_foyer_00001_.png",
+      "path": "D:\\ai_projects\\ComfyUI\\output\\2026-09-28\\scene_08_spiral_staircase_foyer_00001_.png",
+      "artifact": "C:\\Users\\kenzhao\\.gemini\\antigravity-ide\\brain\\eff45711-cf9b-45db-9603-8b64b900c0e7\\scene_08_spiral_staircase_foyer_00001_.png"
+    },
+    {
+      "id": "scene_09_luxury_yacht_stateroom",
+      "title": "私人游艇海景主卧特大圆镜",
+      "filename": "scene_09_luxury_yacht_stateroom_00001_.png",
+      "path": "D:\\ai_projects\\ComfyUI\\output\\2026-09-28\\scene_09_luxury_yacht_stateroom_00001_.png",
+      "artifact": "C:\\Users\\kenzhao\\.gemini\\antigravity-ide\\brain\\eff45711-cf9b-45db-9603-8b64b900c0e7\\scene_09_luxury_yacht_stateroom_00001_.png"
+    },
+    {
+      "id": "scene_10_grand_theater_backstage",
+      "title": "大剧院后台复古好莱坞灯泡化妆间",
+      "filename": "scene_10_grand_theater_backstage_00001_.png",
+      "path": "D:\\ai_projects\\ComfyUI\\output\\2026-09-28\\scene_10_grand_theater_backstage_00001_.png",
+      "artifact": "C:\\Users\\kenzhao\\.gemini\\antigravity-ide\\brain\\eff45711-cf9b-45db-9603-8b64b900c0e7\\scene_10_grand_theater_backstage_00001_.png"
+    }
+  ]
+}

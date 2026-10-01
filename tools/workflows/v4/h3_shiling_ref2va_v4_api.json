@@ -1,0 +1,252 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "minimax_h3_fused_refdelta_r1024_turbo8_mystic07_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_32b_heretic_minimax_h3_nvfp4.safetensors",
+      "type": "minimax"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_video_vae_fp16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_audio_vae_fp32.safetensors"
+    }
+  },
+  "5": {
+    "class_type": "MiniMaxChunkFeedForward",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "chunks": 4,
+      "seq_threshold": 4096
+    }
+  },
+  "6": {
+    "class_type": "H3SLAAttention",
+    "inputs": {
+      "model": [
+        "5",
+        0
+      ],
+      "sparsity_ratio": 0.9,
+      "block_size": "64",
+      "chunk_size": 8192,
+      "pad_to": 0,
+      "apply_to_self": true,
+      "apply_to_cross": true
+    }
+  },
+  "7": {
+    "class_type": "MiniMaxH3SigmaShift",
+    "inputs": {
+      "model": [
+        "6",
+        0
+      ],
+      "shift_video": 12.0,
+      "shift_audio": 3.0
+    }
+  },
+  "8": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "characters/v3/C02_BODY_FRONT.png"
+    }
+  },
+  "9": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "bg_paris_terrace.jpg"
+    }
+  },
+  "10": {
+    "class_type": "VHS_LoadVideo",
+    "inputs": {
+      "video": "shiling_say_yes.mp4",
+      "force_rate": 24.0,
+      "custom_width": 448,
+      "custom_height": 768,
+      "frame_load_cap": 73,
+      "skip_first_frames": 0,
+      "select_every_nth": 1,
+      "format": "AnimateDiff"
+    }
+  },
+  "11": {
+    "class_type": "MiniMaxH3ReferenceToVideo",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "audio_vae": [
+        "4",
+        0
+      ],
+      "prompt": "'subject_definitions:\n<Subject 1> is the young woman shown in <Picture 1>, featuring long wavy dark hair with delicate front bangs, refined almond-shaped eyes, clear porcelain skin, and a slender curvy hourglass body figure.\n<Subject 2> is the elegant Parisian outdoor street cafe shown in <Picture 2>, with Parisian facade, cafe seating, green foliage, and natural daylight.\n<Video 1> is the source motion reference video providing the full body rhythmic dance performance, torso turns, and arm gestures.\n\nsummary:\n[reference generation + video editing] The target video recreates the continuous dance performance from <Video 1>, replacing the performer's face, body figure, and hairstyle with <Subject 1>, and placing her in <Subject 2>.\n\nretention_analysis:\n<Subject 1> (appears in [Shot 1]): fully_preserved - facial features, body shape, and long wavy hairstyle with front bangs are fully preserved.\n<Subject 2> (appears in [Shot 1]): fully_preserved - Parisian cafe architecture and ambient outdoor daylight are fully preserved.\n<Video 1> (motion and timing structure): fully_preserved - dance choreography, arm movements, and bodily rhythm are replicated.\n\ndetailed_description:\nThe target video uses a high-end cinematic vertical dance lookbook style with realistic skin texture, volumetric daylight, and natural hair physics.\n[Shot 1] A medium full-length vertical shot frames <Subject 1> performing the dance from <Video 1> in <Subject 2>. Her long dark wavy hair with neat bangs sways gracefully as she sways her hips and moves her arms rhythmically. Her expression is charming and engaging, looking toward the camera with natural confidence.\n\noverall_soundscape:\nGentle fabric rustle and ambient outdoor atmosphere continue smoothly.\n\nnon_diegetic_music:\nN/A",
+      "width": 448,
+      "height": 768,
+      "length": 73,
+      "ref_image_size": "match",
+      "ref_images.ref_image_0": [
+        "8",
+        0
+      ],
+      "ref_images.ref_image_1": [
+        "9",
+        0
+      ],
+      "ref_videos.ref_video_0": [
+        "10",
+        0
+      ]
+    }
+  },
+  "12": {
+    "class_type": "BasicScheduler",
+    "inputs": {
+      "model": [
+        "7",
+        0
+      ],
+      "scheduler": "simple",
+      "steps": 4,
+      "denoise": 1.0
+    }
+  },
+  "13": {
+    "class_type": "BasicGuider",
+    "inputs": {
+      "model": [
+        "7",
+        0
+      ],
+      "conditioning": [
+        "11",
+        0
+      ]
+    }
+  },
+  "14": {
+    "class_type": "KSamplerSelect",
+    "inputs": {
+      "sampler_name": "res_multistep"
+    }
+  },
+  "15": {
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 42
+    }
+  },
+  "16": {
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "noise": [
+        "15",
+        0
+      ],
+      "guider": [
+        "13",
+        0
+      ],
+      "sampler": [
+        "14",
+        0
+      ],
+      "sigmas": [
+        "12",
+        0
+      ],
+      "latent_image": [
+        "11",
+        1
+      ]
+    }
+  },
+  "17": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "16",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "20": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "characters/v3/C01_FACE_FRONT.png"
+    }
+  },
+  "21": {
+    "class_type": "ReActorFaceSwap",
+    "inputs": {
+      "input_image": [
+        "17",
+        0
+      ],
+      "source_image": [
+        "20",
+        0
+      ],
+      "enabled": true,
+      "swap_model": "inswapper_128.onnx",
+      "facedetection": "YOLOv5l",
+      "face_restore_model": "codeformer.pth",
+      "face_restore_visibility": 1.0,
+      "codeformer_weight": 0.95,
+      "detect_gender_input": "no",
+      "detect_gender_source": "no",
+      "input_faces_index": "0",
+      "source_faces_index": "0",
+      "console_log_level": 1
+    }
+  },
+  "19": {
+    "class_type": "VHS_VideoCombine",
+    "inputs": {
+      "images": [
+        "21",
+        0
+      ],
+      "audio": [
+        "10",
+        2
+      ],
+      "frame_rate": 24.0,
+      "loop_count": 0,
+      "filename_prefix": "2026-09-21/shiling_sayyes_h3_yolo",
+      "format": "video/h264-mp4",
+      "pix_fmt": "yuv420p",
+      "crf": 19,
+      "save_metadata": true,
+      "trim_to_audio": false,
+      "pingpong": false,
+      "save_output": true
+    }
+  }
+}

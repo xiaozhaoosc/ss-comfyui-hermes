@@ -1,0 +1,736 @@
+{
+  "id": "97ab88df-c4ed-4b0d-b73f-923a2dc8d6d3",
+  "revision": 0,
+  "last_node_id": 19,
+  "last_link_id": 17,
+  "nodes": [
+    {
+      "id": 12,
+      "type": "LayerUtility: ImageScaleByAspectRatio V2",
+      "pos": {
+        "0": 108.38148498535156,
+        "1": 108.22107696533203
+      },
+      "size": {
+        "0": 315,
+        "1": 330
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 10
+        },
+        {
+          "label": "遮罩",
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            12
+          ]
+        },
+        {
+          "label": "遮罩",
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        },
+        {
+          "label": "原始大小",
+          "name": "original_size",
+          "type": "BOX",
+          "links": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LayerUtility: ImageScaleByAspectRatio V2"
+      },
+      "widgets_values": [
+        "original",
+        1,
+        1,
+        "letterbox",
+        "lanczos",
+        "8",
+        "None",
+        1024,
+        "#000000"
+      ],
+      "color": "rgba(38, 73, 116, 0.7)"
+    },
+    {
+      "id": 14,
+      "type": "LayerUtility: ImageScaleByAspectRatio V2",
+      "pos": {
+        "0": 73.33247375488281,
+        "1": 539.8836059570312
+      },
+      "size": {
+        "0": 315,
+        "1": 330
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 11
+        },
+        {
+          "label": "遮罩",
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            13
+          ]
+        },
+        {
+          "label": "遮罩",
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        },
+        {
+          "label": "原始大小",
+          "name": "original_size",
+          "type": "BOX",
+          "links": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LayerUtility: ImageScaleByAspectRatio V2"
+      },
+      "widgets_values": [
+        "original",
+        1,
+        1,
+        "letterbox",
+        "lanczos",
+        "8",
+        "None",
+        1024,
+        "#000000"
+      ],
+      "color": "rgba(38, 73, 116, 0.7)"
+    },
+    {
+      "id": 16,
+      "type": "LayerUtility: ImageScaleByAspectRatio V2",
+      "pos": {
+        "0": 797.9910278320312,
+        "1": 253.5448455810547
+      },
+      "size": {
+        "0": 315,
+        "1": 330
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 14
+        },
+        {
+          "label": "遮罩",
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            15
+          ]
+        },
+        {
+          "label": "遮罩",
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        },
+        {
+          "label": "原始大小",
+          "name": "original_size",
+          "type": "BOX",
+          "links": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LayerUtility: ImageScaleByAspectRatio V2"
+      },
+      "widgets_values": [
+        "original",
+        1,
+        1,
+        "letterbox",
+        "lanczos",
+        "8",
+        "None",
+        1024,
+        "#000000"
+      ],
+      "color": "rgba(38, 73, 116, 0.7)"
+    },
+    {
+      "id": 18,
+      "type": "easy showAnything",
+      "pos": {
+        "0": 1390.013916015625,
+        "1": 65.05702209472656
+      },
+      "size": {
+        "0": 210,
+        "1": 76
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "输入任何",
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 17
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": ""
+      },
+      "widgets_values": [
+        "成功生成1张图片"
+      ]
+    },
+    {
+      "id": 15,
+      "type": "NineGridMosaicNode",
+      "pos": {
+        "0": 540.73095703125,
+        "1": 267.59588623046875
+      },
+      "size": {
+        "0": 210,
+        "1": 350
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像1",
+          "name": "图像1",
+          "type": "IMAGE",
+          "link": 12
+        },
+        {
+          "label": "图像2",
+          "name": "图像2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 13
+        },
+        {
+          "label": "图像3",
+          "name": "图像3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "图像4",
+          "name": "图像4",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "图像5",
+          "name": "图像5",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "图像6",
+          "name": "图像6",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "图像7",
+          "name": "图像7",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "图像8",
+          "name": "图像8",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "图像9",
+          "name": "图像9",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "九宫格结果",
+          "name": "九宫格结果",
+          "type": "IMAGE",
+          "links": [
+            14
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "NineGridMosaicNode"
+      },
+      "widgets_values": [
+        3,
+        3,
+        "#ffffff",
+        0,
+        false,
+        0
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 10,
+      "type": "GeminiImageNode",
+      "pos": {
+        "0": 1189.8289794921875,
+        "1": 239.3804168701172
+      },
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "images",
+          "name": "images",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 15
+        },
+        {
+          "label": "files",
+          "name": "files",
+          "shape": 7,
+          "type": "GEMINI_INPUT_FILES",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "IMAGE",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            16
+          ]
+        },
+        {
+          "label": "STRING",
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            17
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "GeminiImageNode"
+      },
+      "widgets_values": [
+        "让图1的女性穿上图2的套装服饰，保持动作姿势不变，生成全身照",
+        "gemini-2.5-flash-image-preview",
+        647372937309965,
+        "randomize"
+      ]
+    },
+    {
+      "id": 11,
+      "type": "LoadImage",
+      "pos": {
+        "0": -330.2742919921875,
+        "1": 79.72238159179688
+      },
+      "size": {
+        "0": 367.1846618652344,
+        "1": 452.9566650390625
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            10
+          ]
+        },
+        {
+          "label": "遮罩",
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "07bffed4ea079025bb7fe4f7fb669bdd441439494b273-PQVX3k_fw1200.jpg",
+        "image",
+        ""
+      ],
+      "_widget_cache_map": {
+        "13af53392a02d303b1e68d38e63f432aa9f72a6e6550d9-nqX9fS.png": {
+          "value": "img/7837423861af4759bd49849a2ba8bffc/50b2d93c11d32cbdc7959186439f26d779e790ba1c1d42874338f24642013517.png",
+          "name": "13af53392a02d303b1e68d38e63f432aa9f72a6e6550d9-nqX9fS.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/7837423861af4759bd49849a2ba8bffc/50b2d93c11d32cbdc7959186439f26d779e790ba1c1d42874338f24642013517.png",
+          "width": 2160,
+          "height": 3840
+        },
+        "07bffed4ea079025bb7fe4f7fb669bdd441439494b273-PQVX3k_fw1200.jpg": {
+          "value": "img/7837423861af4759bd49849a2ba8bffc/84ae66b15a74b4a75af40cfdf52c1d7637586afcffbf181e58ee7b70e01733f7.jpg",
+          "name": "07bffed4ea079025bb7fe4f7fb669bdd441439494b273-PQVX3k_fw1200.jpg",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/7837423861af4759bd49849a2ba8bffc/84ae66b15a74b4a75af40cfdf52c1d7637586afcffbf181e58ee7b70e01733f7.jpg",
+          "width": 750,
+          "height": 1290
+        }
+      }
+    },
+    {
+      "id": 13,
+      "type": "LoadImage",
+      "pos": {
+        "0": -386.101806640625,
+        "1": 660.3349609375
+      },
+      "size": {
+        "0": 315,
+        "1": 314
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            11
+          ]
+        },
+        {
+          "label": "遮罩",
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "9dc388f022d5c704aba38986553b0a9f27ea1950f688-zoSspT_fw1200.webp.png",
+        "image",
+        ""
+      ],
+      "_widget_cache_map": {
+        "311b46d192670fb37200ab231d658405c16a0b4b2f495-RFnwor_fw1200.jpg": {
+          "value": "img/7837423861af4759bd49849a2ba8bffc/1c1d3afdf198ba20aa854c92011f76bb503ab861a850a08a3d0a6601eef709f6.jpg",
+          "name": "311b46d192670fb37200ab231d658405c16a0b4b2f495-RFnwor_fw1200.jpg",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/7837423861af4759bd49849a2ba8bffc/1c1d3afdf198ba20aa854c92011f76bb503ab861a850a08a3d0a6601eef709f6.jpg",
+          "width": 1200,
+          "height": 1600
+        },
+        "9dc388f022d5c704aba38986553b0a9f27ea1950f688-zoSspT_fw1200.webp.png": {
+          "value": "img/7837423861af4759bd49849a2ba8bffc/2eb482dee53467ef652a5cd8aa7e24f4b0c9efdfc7252a517e75bfbef393c101.png",
+          "name": "9dc388f022d5c704aba38986553b0a9f27ea1950f688-zoSspT_fw1200.webp.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/7837423861af4759bd49849a2ba8bffc/2eb482dee53467ef652a5cd8aa7e24f4b0c9efdfc7252a517e75bfbef393c101.png",
+          "width": 1080,
+          "height": 1440
+        }
+      }
+    },
+    {
+      "id": 17,
+      "type": "SaveImage",
+      "pos": {
+        "0": -801.9634399414062,
+        "1": 633.580078125
+      },
+      "size": {
+        "0": 383.30133056640625,
+        "1": 523.473876953125
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 16
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "ComfyUI",
+        ""
+      ]
+    }
+  ],
+  "links": [
+    [
+      10,
+      11,
+      0,
+      12,
+      0,
+      "IMAGE"
+    ],
+    [
+      11,
+      13,
+      0,
+      14,
+      0,
+      "IMAGE"
+    ],
+    [
+      12,
+      12,
+      0,
+      15,
+      0,
+      "IMAGE"
+    ],
+    [
+      13,
+      14,
+      0,
+      15,
+      1,
+      "IMAGE"
+    ],
+    [
+      14,
+      15,
+      0,
+      16,
+      0,
+      "IMAGE"
+    ],
+    [
+      15,
+      16,
+      0,
+      10,
+      0,
+      "IMAGE"
+    ],
+    [
+      16,
+      10,
+      0,
+      17,
+      0,
+      "IMAGE"
+    ],
+    [
+      17,
+      10,
+      1,
+      18,
+      0,
+      "*"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1.0610764609500132,
+      "offset": [
+        1380.5443282893395,
+        -604.1625556839164
+      ]
+    },
+    "ue_links": [],
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4,
+  "seed_widgets": {
+    "10": 2
+  },
+  "widget_idx_map": {
+    "10": {
+      "seed": 2
+    }
+  }
+}

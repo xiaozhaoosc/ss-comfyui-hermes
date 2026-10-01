@@ -1,0 +1,19 @@
+[CHARACTER IDENTITY LOCK — HIGHEST PRIORITY]
+Use the uploaded reference images:
+Image 1: C02 Full Body Master v3 (d:\ai_projects\ComfyUI\agy_veos\ORIENTAL_WOMAN_CHARACTER_v3\02_BODY\C02_BODY_FRONT.png) — body proportions, height, and heather-grey ribbed loungewear outfit reference.
+Image 2: C05 Side Profile Master v3 (d:\ai_projects\ComfyUI\agy_veos\ORIENTAL_WOMAN_CHARACTER_v3\03_ANGLES\C05_PROFILE.png) — long loose hair, posture, and side curves reference.
+Image 3: Back Anatomy Reference (sexy-young-woman-green-bikini-600w-2705091083.webp) — anatomical reference for the toned back contour, spinal groove, narrow waist taper, shapely feminine glutes, and slender legs.
+Generate the complete back-facing full-body Character Master Reference of the exact same East Asian woman.
+
+[C06 COMPLETE FULL-BODY BACK VIEW]
+The woman stands naturally with her back completely facing the camera.
+Framing: Complete full-length head-to-toe view, showing her entire figure from the top of her hair down to her bare feet.
+Requirements:
+- Back of the head showing her thick, silky long dark brown/black hair worn loose, cascading gracefully down her back past her shoulder blades.
+- Slender neck, graceful back of shoulders, and natural feminine spine/back contours inspired by the toned physique in Image 3.
+- Hourglass body proportions strictly matching C02: identical height, narrow waistline, curvy feminine hips, and long shapely legs.
+- Rear view of the exact same heather-grey ribbed short-sleeved top and fitted high-waisted shorts from C02/C03/C05, fitting closely around her waist and hips.
+- Bare feet standing on the floor, matching C02.
+- Lighting: Clean commercial studio lighting, soft subtle shadows defining the contours of her back and limbs.
+- Background: Solid neutral grey studio backdrop with zero distractions.
+Purpose: Lock the back hair silhouette, rear hourglass anatomy, and rear outfit structure to finalize the 360-degree turnaround sheet for ORIENTAL_WOMAN_CHARACTER_v3. Ultra-photorealistic.

@@ -1,0 +1,24 @@
+﻿[CHARACTER IDENTITY LOCK]
+Use C01, C02, C03, C04, C05 as character and costume references.
+Generate the complete back-facing full body view of the exact same character.
+The woman has her back to the camera, standing naturally.
+Must show:
+back of the head
+long straight black hair
+hair length
+back of the neck
+shoulders
+back
+waist
+hip contour
+legs
+full dress trail/hem
+back structure of the golden robe
+back embroidery of the costume
+back structure of the waist belt.
+The costume must appear as a natural backward extension of the front costume, NOT a newly redesigned outfit.
+Maintain the exact same: colors, materials, embroidery style, belt, golden robe, tassels, long hair.
+Hair should naturally cover part of the back, but must not completely obscure the costume structure.
+Body proportions must perfectly match C02.
+Do not change height, waistline, leg length, or body structure.
+This is the Back Costume Master + Full Body Reference.

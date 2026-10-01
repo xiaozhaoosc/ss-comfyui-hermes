@@ -1,0 +1,218 @@
+{
+  "1": {
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load SDXL"
+    },
+    "inputs": {
+      "ckpt_name": "sd_xl_base_1.0.safetensors"
+    }
+  },
+  "2": {
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Input Image"
+    },
+    "inputs": {
+      "image": "sdxl_00001__1.png"
+    }
+  },
+  "3": {
+    "class_type": "GetImageSize+",
+    "_meta": {
+      "title": "Get Size"
+    },
+    "inputs": {
+      "image": [
+        "2",
+        0
+      ]
+    }
+  },
+  "4": {
+    "class_type": "SolidMask",
+    "_meta": {
+      "title": "Solid Mask"
+    },
+    "inputs": {
+      "value": 1.0,
+      "width": 500,
+      "height": 600
+    }
+  },
+  "5": {
+    "class_type": "MaskComposite",
+    "_meta": {
+      "title": "Position Mask"
+    },
+    "inputs": {
+      "destination": [
+        "10",
+        0
+      ],
+      "source": [
+        "4",
+        0
+      ],
+      "x": 262,
+      "y": 300,
+      "operation": "add"
+    }
+  },
+  "10": {
+    "class_type": "SolidMask",
+    "_meta": {
+      "title": "Empty Base Mask"
+    },
+    "inputs": {
+      "value": 0.0,
+      "width": 1024,
+      "height": 1024
+    }
+  },
+  "6": {
+    "class_type": "GrowMask",
+    "_meta": {
+      "title": "Grow Mask"
+    },
+    "inputs": {
+      "mask": [
+        "5",
+        0
+      ],
+      "expand": 15,
+      "tapered_corners": true
+    }
+  },
+  "7": {
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Positive Prompt"
+    },
+    "inputs": {
+      "text": "elegant white silk blouse with golden embroidery, fashion photography, studio lighting, beautiful fabric texture, high quality",
+      "clip": [
+        "1",
+        1
+      ]
+    }
+  },
+  "8": {
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Negative Prompt"
+    },
+    "inputs": {
+      "text": "ugly, blurry, low quality, deformed, bad anatomy, bad proportions, watermark",
+      "clip": [
+        "1",
+        1
+      ]
+    }
+  },
+  "9": {
+    "class_type": "VAEEncodeForInpaint",
+    "_meta": {
+      "title": "VAE Inpaint Encode"
+    },
+    "inputs": {
+      "pixels": [
+        "2",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ],
+      "mask": [
+        "6",
+        0
+      ],
+      "grow_mask_by": 6
+    }
+  },
+  "11": {
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    },
+    "inputs": {
+      "seed": 42,
+      "steps": 25,
+      "cfg": 7.0,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 0.75,
+      "model": [
+        "1",
+        0
+      ],
+      "positive": [
+        "7",
+        0
+      ],
+      "negative": [
+        "8",
+        0
+      ],
+      "latent_image": [
+        "9",
+        0
+      ]
+    }
+  },
+  "12": {
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    },
+    "inputs": {
+      "samples": [
+        "11",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    }
+  },
+  "13": {
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Result"
+    },
+    "inputs": {
+      "filename_prefix": "inpaint_outfit",
+      "images": [
+        "12",
+        0
+      ]
+    }
+  },
+  "14": {
+    "class_type": "MaskToImage",
+    "_meta": {
+      "title": "Mask Preview"
+    },
+    "inputs": {
+      "mask": [
+        "6",
+        0
+      ]
+    }
+  },
+  "15": {
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Mask"
+    },
+    "inputs": {
+      "filename_prefix": "inpaint_mask",
+      "images": [
+        "14",
+        0
+      ]
+    }
+  }
+}

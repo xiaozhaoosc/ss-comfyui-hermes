@@ -1,0 +1,21 @@
+[CHARACTER MASTER REFERENCE — CANONICAL FRONT-FACING IDENTITY PORTRAIT (C01 V3)]
+Use the uploaded reference images (ChatGPT Image 2026年9月14日 10_43_16.png, 10_42_58.png, 10_42_50.png) as primary facial identity and hairstyle references.
+Generate the canonical front-facing identity portrait of this exact same adult East Asian woman.
+This is a Character Master Reference, not an artistic snapshot.
+
+FACIAL IDENTITY LOCK:
+Strictly preserve and replicate her facial identity from the three reference images:
+- Delicate oval/heart-shaped face, soft youthful jawline and chin curvature
+- Beautiful expressive almond eyes with soft natural double eyelid folds, subtle aegyo-sal, and clear eye gaze
+- Straight, slender nose bridge with a delicate, refined tip
+- Soft, naturally plump pink lips with subtle gentle mouth corners
+- Fair, glowing, translucent porcelain skin tone with realistic micro-pores and healthy texture
+- SIGNATURE HAIRSTYLE: Thick, silky, voluminous long jet-black/dark-brown hair worn DOWN, cascading gracefully over her shoulders and chest, with delicate wispy bangs and curtain fringe framing her forehead and temples.
+
+COMPOSITION & LIGHTING:
+- Front-facing head-and-shoulders portrait
+- Symmetrical composition, head centered naturally, eyes looking directly into the lens with a calm, gentle, confident expression
+- Camera at eye level, 85mm portrait perspective, natural focal length, zero wide-angle distortion
+- Soft, even studio commercial portrait lighting with subtle catchlights in the eyes
+- Clean, simple, solid neutral grey studio backdrop with zero background clutter
+Purpose: Establish and lock the facial DNA and signature long-hair identity for ORIENTAL_WOMAN_CHARACTER_v3. Ultra-photorealistic.

@@ -1,0 +1,88 @@
+{
+  "_comment": "以图生图 (img2img) + 图片识别。链路: LoadImage -> 视觉LLM识别提取提示词 -> FLUX img2img(VAEEncode+KSampler denoise) -> SaveImage。提交: POST http://127.0.0.1:8188/prompt {'prompt': <本JSON>}。前提: llama-server(Qwen3.8) 已启动在 8113。⚠️16GB显存: 识别与生图无法同时驻留, 建议分两步或识别完先停 llama-server。",
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": { "unet_name": "flux1-dev-fp8.safetensors", "weight_dtype": "fp8_e4m3fn" }
+  },
+  "2": {
+    "class_type": "DualCLIPLoader",
+    "inputs": { "clip_name1": "t5xxl_fp8_e4m3fn.safetensors", "clip_name2": "clip_l.safetensors", "type": "flux" }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": { "vae_name": "flux-vae-bf16.safetensors" }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": { "image": "scene_08_spiral_staircase_foyer_00001_.png" }
+  },
+  "5": {
+    "class_type": "GetImageSize",
+    "inputs": { "image": ["4", 0] }
+  },
+  "6": {
+    "class_type": "BridgeLLMConfig",
+    "inputs": {
+      "base_url": "http://127.0.0.1:8113",
+      "api_key": "",
+      "model": "Qwen3.8-27B-GSQ-RCO-IQ3_S-mtp",
+      "max_tokens": 512,
+      "temperature": 0.5,
+      "stream": "True",
+      "response_format": "text"
+    }
+  },
+  "7": {
+    "class_type": "BridgeLLMImagePrompt",
+    "inputs": {
+      "config": ["6", 0],
+      "image": ["4", 0],
+      "width": ["5", 0],
+      "height": ["5", 1],
+      "prompt_hint": "保持原图构图与主体, 提升质感与细节"
+    }
+  },
+  "8": {
+    "class_type": "CLIPTextEncode",
+    "inputs": { "text": ["7", 0], "clip": ["2", 0] }
+  },
+  "9": {
+    "class_type": "CLIPTextEncode",
+    "inputs": { "text": "blurry, low quality, deformed, extra limbs, watermark, text", "clip": ["2", 0] }
+  },
+  "10": {
+    "class_type": "FluxGuidance",
+    "inputs": { "guidance": 3.5, "conditioning": ["8", 0] }
+  },
+  "11": {
+    "class_type": "FluxGuidance",
+    "inputs": { "guidance": 1.0, "conditioning": ["9", 0] }
+  },
+  "12": {
+    "class_type": "VAEEncode",
+    "inputs": { "pixels": ["4", 0], "vae": ["3", 0] }
+  },
+  "13": {
+    "class_type": "KSampler",
+    "inputs": {
+      "seed": 123456,
+      "steps": 20,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 0.6,
+      "model": ["1", 0],
+      "positive": ["10", 0],
+      "negative": ["11", 0],
+      "latent_image": ["12", 0]
+    }
+  },
+  "14": {
+    "class_type": "VAEDecode",
+    "inputs": { "samples": ["13", 0], "vae": ["3", 0] }
+  },
+  "15": {
+    "class_type": "SaveImage",
+    "inputs": { "filename_prefix": "img2img/from_recognition", "images": ["14", 0] }
+  }
+}

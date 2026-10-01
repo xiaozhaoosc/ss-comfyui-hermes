@@ -1,0 +1,15 @@
+[CHARACTER IDENTITY LOCK — HIGHEST PRIORITY]
+Use the uploaded reference images:
+Primary Face Reference: Image 1 (C01 Face Front Master v3) — strictly lock her exact facial identity, eyes, nose, lips, jawline, bangs, and porcelain skin tone.
+Body & Outfit Reference: Image 2 and Image 3 — lock her voluptuous hourglass body proportions, long loose hair, and casual chic grey ribbed loungewear top and matching shorts.
+She must be unmistakably the exact same young East Asian woman across all views.
+
+[C02 FULL BODY CANONICAL MASTER REFERENCE]
+Create the canonical front-facing full-body Character Master Reference of this exact woman.
+- Pose: Neutral, relaxed standing posture, facing camera directly, head centered, eyes looking calmly into the lens, natural gentle expression.
+- Framing: Complete full-length head-to-toe view, from the crown of her head down to her bare feet or stylish house slides. Full figure fully visible in frame.
+- Body Anatomy & Proportions: Slender neck, graceful collarbones, voluptuous bust, tiny narrow waistline, feminine curvaceous hips, long slender legs.
+- Hairstyle: Signature thick, silky long dark hair worn loose and naturally flowing over her shoulders down to her chest, with wispy face-framing bangs.
+- Costume: Stylish heather-grey ribbed fitted button-down short-sleeved top and matching high-waisted loungewear shorts, exactly matching Image 2 (`10_43_16.png`).
+- Lighting & Background: Studio commercial portrait lighting, soft even illumination, solid neutral grey backdrop with zero background clutter.
+Purpose: Lock the official full-body height, hourglass anatomy, long-hair silhouette, and costume baseline for ORIENTAL_WOMAN_CHARACTER_v3. Ultra-photorealistic, 8k resolution.

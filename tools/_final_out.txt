@@ -1,0 +1,13 @@
+now=2026-09-28 12:39:03
+
+OK        247263  D:\ai_projects\ComfyUI\output\2026-09-22_wb\h3_guard\h3v5_00001_.mp4
+OK        258067  D:\ai_projects\ComfyUI\output\2026-09-22_wb\h3_guard\h3v5_pass1baseline_00001_.mp4
+OK         15124  D:\ai_projects\ComfyUI\output\2026-09-22_wb\h3_guard\H3人物迁移优化方案_v5.md
+OK          2904  D:\ai_projects\ComfyUI\output\2026-09-22_wb\h3_guard\H3_v5_AB对比报告.md
+OK          2245  D:\ai_projects\ComfyUI\output\2026-09-22_wb\h3_guard\measure_ab.json
+OK          2921  D:\ai_projects\ComfyUI\output\2026-09-22_wb\h3_guard\calib_baseline_report.md
+OK        287925  D:\ai_projects\ComfyUI\output\2026-09-23_wb\h3_guard\h3v5base_00001_.mp4
+OK         49153  D:\ai_projects\ComfyUI\tools\run_h3_guard_v5.py
+OK         33276  D:\ai_projects\ComfyUI\tools\h3_rope_common.py
+OK         17517  D:\ai_projects\ComfyUI\workflows\v5\h3_guard_v5_full_api.json
+OK          8672  D:\ai_projects\ComfyUI\workflows\v5\h3_guard_v5_base_api.json

@@ -1,0 +1,21 @@
+﻿[CHARACTER IDENTITY LOCK]
+Use:
+Image 1: C01_FACE_FRONT
+Image 2: Original Reference
+As combined references.
+Generate the exact same adult woman as a Character Master Reference (Front-facing Full Body).
+She must be unmistakably the same person.
+Strictly lock the facial identity established in C01.
+Show entirely:
+head, long hair, shoulders, upper body, waist, hips, legs, shoes, complete costume.
+The woman stands naturally, body facing the camera directly.
+Pose should be neutral, natural, relaxed.
+Do not introduce complex actions. This image establishes body proportion and costume structure baseline.
+Strictly preserve:
+height ratio, shoulder width, waistline, waist-to-hip ratio, leg length, hair length.
+deep crimson oriental haute couture gown + golden long-sleeved robe + emerald gemstone + gold waist belt + gold tassels + all primary jewelry.
+Keep the background simple.
+Use even, professional commercial photography lighting.
+No exaggerated wide-angle lens.
+Do not change facial shape. Do not change body proportions. Do not redesign costume.
+This is the Body + Costume Master Reference.

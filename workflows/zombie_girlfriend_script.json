@@ -1,0 +1,174 @@
+{
+  "title": "我的女友是丧尸",
+  "character": {
+    "name": "小雨",
+    "description": "east asian young woman with long black hair, fair skin, around 25 years old, beautiful face",
+    "base_prompt": "east asian young woman with long black hair, fair skin, cinematic lighting, 4k quality, movie scene"
+  },
+  "episodes": [
+    {
+      "episode": 1,
+      "title": "相遇",
+      "scenes": [
+        {
+          "id": "EP1-S01",
+          "prompt": "east asian young woman with long black hair, waking up confused in dark abandoned hospital room, dim lighting, looking around nervously, dramatic atmosphere",
+          "subtitle": "我在哪来？这咋回事啊...",
+          "tts_text": "我在哪来？这咋回事啊...",
+          "notes": "徐州方言：'哪来'代替'哪里'，'咋'代替'怎么'"
+        },
+        {
+          "id": "EP1-S02",
+          "prompt": "east asian young woman with long black hair, walking slowly through dark hospital corridor, flickering fluorescent lights, zombie-like slow movement, eerie atmosphere",
+          "subtitle": "俺好饿...得找点吃的...",
+          "tts_text": "俺好饿...得找点吃的...",
+          "notes": "徐州方言：'俺'代替'我'，'得'表示需要"
+        },
+        {
+          "id": "EP1-S03",
+          "prompt": "east asian young woman with long black hair, looking at mirror in bathroom, shocked expression, pale skin, dramatic lighting, horror atmosphere",
+          "subtitle": "这...这是俺吗？咋成这样了！",
+          "tts_text": "这...这是俺吗？咋成这样了！",
+          "notes": "表达震惊"
+        },
+        {
+          "id": "EP1-S04",
+          "prompt": "east asian young woman with long black hair, accidentally breaking door handle with super strength, surprised expression, dramatic lighting",
+          "subtitle": "乖乖！这劲儿也太大了吧！",
+          "tts_text": "乖乖！这劲儿也太大了吧！",
+          "notes": "徐州方言：'乖乖'表示惊叹"
+        },
+        {
+          "id": "EP1-S05",
+          "prompt": "east asian young woman with long black hair, running super fast through empty street at night, athletic movement, dramatic lighting, action scene",
+          "subtitle": "俺啥时候跑这么快了？这也太离谱了！",
+          "tts_text": "俺啥时候跑这么快了？这也太离谱了！",
+          "notes": "徐州方言：'啥时候'代替'什么时候'"
+        }
+      ]
+    },
+    {
+      "episode": 2,
+      "title": "适应",
+      "scenes": [
+        {
+          "id": "EP2-S01",
+          "prompt": "east asian young woman with long black hair, trying to eat food but disgusted, kitchen scene, dramatic lighting, struggling expression",
+          "subtitle": "这饭咋没味儿呢...吃不下去...",
+          "tts_text": "这饭咋没味儿呢...吃不下去...",
+          "notes": "徐州方言：'没味儿'表示没味道"
+        },
+        {
+          "id": "EP2-S02",
+          "prompt": "east asian young woman with long black hair, sitting on bed staring at ceiling all night, can't sleep, worried expression, moonlight through window",
+          "subtitle": "都三天了，俺一点不困...这不正常啊...",
+          "tts_text": "都三天了，俺一点不困...这不正常啊...",
+          "notes": "表达困惑"
+        },
+        {
+          "id": "EP2-S03",
+          "prompt": "east asian young woman with long black hair, watching wound heal instantly on hand, amazed expression, dramatic lighting, close-up",
+          "subtitle": "我滴个娘来！伤口自己长好了？",
+          "tts_text": "我滴个娘来！伤口自己长好了？",
+          "notes": "徐州方言：'我滴个娘来'表示极度惊讶"
+        },
+        {
+          "id": "EP2-S04",
+          "prompt": "east asian young woman with long black hair, researching zombies on computer late at night, screen glow on face, worried expression, dark room",
+          "subtitle": "俺到底变成啥了...该不会真是丧尸吧...",
+          "tts_text": "俺到底变成啥了...该不会真是丧尸吧...",
+          "notes": "徐州方言：'该不会'表示推测"
+        },
+        {
+          "id": "EP2-S05",
+          "prompt": "east asian young woman with long black hair, practicing controlling strength in empty parking lot, focused expression, night scene, training montage",
+          "subtitle": "得学着控制这股劲儿，不然早晚出事儿...",
+          "tts_text": "得学着控制这股劲儿，不然早晚出事儿...",
+          "notes": "徐州方言：'劲儿'代替'力量'，'出事儿'代替'出问题'"
+        }
+      ]
+    },
+    {
+      "episode": 3,
+      "title": "危险",
+      "scenes": [
+        {
+          "id": "EP3-S01",
+          "prompt": "east asian young woman with long black hair, encountering real zombie in dark alley, defensive stance, scared but determined, dramatic lighting, horror scene",
+          "subtitle": "俺滴个娘来！那是啥玩意儿？！",
+          "tts_text": "俺滴个娘来！那是啥玩意儿？！",
+          "notes": "徐州方言：'啥玩意儿'表示什么东西"
+        },
+        {
+          "id": "EP3-S02",
+          "prompt": "east asian young woman with long black hair, fighting zombie with bare hands, action scene, intense expression, dramatic lighting, combat",
+          "subtitle": "俺不能死在这儿！拼了！",
+          "tts_text": "俺不能死在这儿！拼了！",
+          "notes": "徐州方言：'拼了'表示全力以赴"
+        },
+        {
+          "id": "EP3-S03",
+          "prompt": "east asian young woman with long black hair, sensing zombies nearby with supernatural ability, concentrating with closed eyes, dramatic lighting, mystical scene",
+          "subtitle": "俺能感觉到...它们就在附近...",
+          "tts_text": "俺能感觉到...它们就在附近...",
+          "notes": "表达超能力觉醒"
+        },
+        {
+          "id": "EP3-S04",
+          "prompt": "east asian young woman with long black hair, saving human from zombie attack, heroic pose, dramatic lighting, action scene, protecting someone",
+          "subtitle": "快跑！这边交给俺！",
+          "tts_text": "快跑！这边交给俺！",
+          "notes": "徐州方言：'交给俺'表示由我来处理"
+        },
+        {
+          "id": "EP3-S05",
+          "prompt": "east asian young woman with long black hair, looking at city skyline at dawn, contemplative expression, dramatic lighting, peaceful moment after battle",
+          "subtitle": "也许...这就是俺的命吧。",
+          "tts_text": "也许...这就是俺的命吧。",
+          "notes": "表达觉悟"
+        }
+      ]
+    },
+    {
+      "episode": 4,
+      "title": "抉择",
+      "scenes": [
+        {
+          "id": "EP4-S01",
+          "prompt": "east asian young woman with long black hair, meeting survivors who are afraid of her, hurt expression, dramatic lighting, emotional scene",
+          "subtitle": "别怕俺...俺不会害你们的...",
+          "tts_text": "别怕俺...俺不会害你们的...",
+          "notes": "表达被误解的痛苦"
+        },
+        {
+          "id": "EP4-S02",
+          "prompt": "east asian young woman with long black hair, helping survivors carry supplies, determined expression, dramatic lighting, proving herself",
+          "subtitle": "让俺来帮你们，俺是认真的。",
+          "tts_text": "让俺来帮你们，俺是认真的。",
+          "notes": "徐州方言：'认真的'强调诚意"
+        },
+        {
+          "id": "EP4-S03",
+          "prompt": "east asian young woman with long black hair, facing horde of zombies protecting survivors, battle stance, dramatic lighting, epic action scene",
+          "subtitle": "你们先走！这群玩意儿交给俺！",
+          "tts_text": "你们先走！这群玩意儿交给俺！",
+          "notes": "徐州方言：'这群玩意儿'指代丧尸群"
+        },
+        {
+          "id": "EP4-S04",
+          "prompt": "east asian young woman with long black hair, severely injured after battle, slowly healing, exhausted expression, dramatic lighting, vulnerability",
+          "subtitle": "还没完...俺还能撑住...",
+          "tts_text": "还没完...俺还能撑住...",
+          "notes": "徐州方言：'撑住'表示坚持住"
+        },
+        {
+          "id": "EP4-S05",
+          "prompt": "east asian young woman with long black hair, standing with survivors watching sunrise, hopeful expression, dramatic lighting, ending scene, emotional",
+          "subtitle": "天亮了...新的一天，新的开始。",
+          "tts_text": "天亮了...新的一天，新的开始。",
+          "notes": "大结局：希望"
+        }
+      ]
+    }
+  ]
+}

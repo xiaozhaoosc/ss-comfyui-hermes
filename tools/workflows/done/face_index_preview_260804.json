@@ -1,0 +1,403 @@
+{
+  "id": "face-index-preview-260804",
+  "revision": 0,
+  "last_node_id": 8,
+  "last_link_id": 7,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "VHS_LoadVideo",
+      "pos": [
+        -760,
+        -100
+      ],
+      "size": [
+        320,
+        848
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            1,
+            6
+          ]
+        },
+        {
+          "name": "frame_count",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "name": "video_info",
+          "type": "VHS_VIDEOINFO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_LoadVideo"
+      },
+      "widgets_values": {
+        "video": "20260518_122327_各位军师，遇到这种场景该如何应对？.mp4",
+        "force_rate": 0,
+        "custom_width": 960,
+        "custom_height": 540,
+        "frame_load_cap": 1,
+        "skip_first_frames": 0,
+        "select_every_nth": 1,
+        "format": "AnimateDiff",
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "20260518_122327_各位军师，遇到这种场景该如何应对？.mp4",
+            "type": "input",
+            "format": "video/mp4",
+            "force_rate": 0,
+            "custom_width": 960,
+            "custom_height": 540,
+            "frame_load_cap": 1,
+            "skip_first_frames": 0,
+            "select_every_nth": 1
+          }
+        }
+      }
+    },
+    {
+      "id": 2,
+      "type": "UltralyticsDetectorProvider",
+      "pos": [
+        -380,
+        -100
+      ],
+      "size": [
+        280,
+        78
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "BBOX_DETECTOR",
+          "type": "BBOX_DETECTOR",
+          "shape": 3,
+          "slot_index": 0,
+          "links": [
+            2
+          ]
+        },
+        {
+          "name": "SEGM_DETECTOR",
+          "type": "SEGM_DETECTOR",
+          "shape": 3,
+          "links": null
+        }
+      ],
+      "title": "人脸检测模型 (face_yolov8m)",
+      "properties": {
+        "Node name for S&R": "UltralyticsDetectorProvider"
+      },
+      "widgets_values": [
+        "bbox/face_yolov8m.pt"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 3,
+      "type": "BboxDetectorForEach",
+      "pos": [
+        -60,
+        -100
+      ],
+      "size": [
+        300,
+        170
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "bbox_detector",
+          "type": "BBOX_DETECTOR",
+          "link": 2
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SEGS",
+          "type": "SEGS",
+          "slot_index": 0,
+          "links": [
+            3,
+            5
+          ]
+        }
+      ],
+      "title": "逐个人脸检测 → SEGS",
+      "properties": {
+        "Node name for S&R": "BboxDetectorForEach"
+      },
+      "widgets_values": [
+        0.5,
+        10,
+        3.0,
+        10,
+        "all"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 4,
+      "type": "SEGSPreview",
+      "pos": [
+        280,
+        -100
+      ],
+      "size": [
+        320,
+        320
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "segs",
+          "type": "SEGS",
+          "link": 3
+        },
+        {
+          "name": "fallback_image_opt",
+          "type": "IMAGE",
+          "shape": 7,
+          "link": 6
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "shape": 6,
+          "links": null
+        }
+      ],
+      "title": "预览1：原图 + 人脸位置色块",
+      "properties": {
+        "Node name for S&R": "SEGSPreview"
+      },
+      "widgets_values": [
+        true,
+        0.2
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 5,
+      "type": "SEGSToImageList",
+      "pos": [
+        -60,
+        120
+      ],
+      "size": [
+        300,
+        78
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "segs",
+          "type": "SEGS",
+          "link": 5
+        },
+        {
+          "name": "fallback_image_opt",
+          "type": "IMAGE",
+          "shape": 7,
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            4
+          ]
+        }
+      ],
+      "title": "SEGS → 人脸图像列表（按索引 0,1,2...）",
+      "properties": {
+        "Node name for S&R": "SEGSToImageList"
+      },
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 6,
+      "type": "SaveImage",
+      "pos": [
+        280,
+        260
+      ],
+      "size": [
+        320,
+        320
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 4
+        }
+      ],
+      "outputs": [],
+      "title": "预览2：每个人脸单独保存（文件名即索引）",
+      "properties": {},
+      "widgets_values": [
+        "face_index_preview"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 7,
+      "type": "Note",
+      "pos": [
+        640,
+        -100
+      ],
+      "size": [
+        420,
+        380
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "【人脸索引预览工具 使用说明】\n\n目的：先看到视频里检测到几张人脸、分别在什么位置、长什么样，\n     再去 V3 工作流里填写 input_faces_index。\n\n========================================\n使用步骤\n========================================\n\n1. 调整 VHS_LoadVideo：\n   - skip_first_frames：跳到包含所有人脸的帧（默认 0 = 第 1 帧）\n   - frame_load_cap 保持 1（只取 1 帧用于预览）\n\n2. 点 Queue Prompt 运行\n\n3. 看两个预览：\n\n   ● 预览1（SEGSPreview 节点）\n     原图上叠加半透明色块，标出每个人脸的位置。\n     色块顺序 = 检测顺序 = 索引顺序（0,1,2...）\n\n   ● 预览2（SaveImage 节点，输出目录 output\\face_index_preview_*.png）\n     每个人脸单独裁剪出来，按索引顺序保存：\n       face_index_preview_00001_.png = 索引 0\n       face_index_preview_00002_.png = 索引 1\n       face_index_preview_00003_.png = 索引 2\n       ...以此类推\n\n4. 对照位置 + 长相，确定要换哪些索引，\n   回到 V3 工作流修改 input_faces_index：\n     - 只换第 1 张：\"0\"\n     - 换前 2 张：\"0,1\"\n     - 只换第 2 张：\"1\"\n     - 换第 1 和第 3 张：\"0,2\"\n\n========================================\n重要：排序规则差异\n========================================\n\n本预览工作流的索引顺序按 YOLO 检测置信度排序。\nV3 工作流（ReActor）的 input_faces_index 按面积从大到小排序。\n\n两者顺序可能不同！请以「预览2 长相」+「预览1 位置」对照判断，\n不要只看索引号。\n\n如果对不上，可在 V3 的 ReActorFaceSwap 节点里把\nconsole_log_level 改成 2，运行后看控制台输出的检测顺序，\n那才是 ReActor 实际使用的索引顺序。\n\n========================================\n参数说明\n========================================\n\nBboxDetectorForEach 节点：\n  - threshold: 0.5（检测阈值，越小越严格；人脸模糊可降到 0.3）\n  - dilation: 10（人脸框向外扩展像素，让裁剪更完整）\n  - crop_factor: 3.0（裁剪比例，3.0 = 脸部 3 倍范围）\n  - drop_size: 10（小于此像素的人脸丢弃，过滤远处小脸）"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      0,
+      3,
+      1,
+      "IMAGE"
+    ],
+    [
+      2,
+      2,
+      0,
+      3,
+      0,
+      "BBOX_DETECTOR"
+    ],
+    [
+      3,
+      3,
+      0,
+      4,
+      0,
+      "SEGS"
+    ],
+    [
+      4,
+      5,
+      0,
+      6,
+      0,
+      "IMAGE"
+    ],
+    [
+      5,
+      3,
+      0,
+      5,
+      0,
+      "SEGS"
+    ],
+    [
+      6,
+      1,
+      0,
+      4,
+      1,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "人脸索引预览工具 (Impact Pack + face_yolov8m)",
+      "bounding": [
+        -780,
+        -180,
+        1880,
+        880
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.7,
+      "offset": [
+        400,
+        200
+      ]
+    },
+    "frontendVersion": "1.44.19"
+  },
+  "version": 0.4
+}

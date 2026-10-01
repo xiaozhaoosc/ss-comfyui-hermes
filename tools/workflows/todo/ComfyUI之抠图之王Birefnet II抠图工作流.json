@@ -1,0 +1,567 @@
+{
+  "id": "5ae5b56d-3efc-4c34-b128-02886607c9e5",
+  "revision": 0,
+  "last_node_id": 36,
+  "last_link_id": 66,
+  "nodes": [
+    {
+      "id": 26,
+      "type": "RembgByBiRefNet",
+      "pos": [
+        -510,
+        -390
+      ],
+      "size": [
+        157.38925170898438,
+        46
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "model",
+          "name": "model",
+          "type": "BIREFNET",
+          "link": 49
+        },
+        {
+          "label": "images",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 50
+        }
+      ],
+      "outputs": [
+        {
+          "label": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            54,
+            56,
+            66
+          ]
+        },
+        {
+          "label": "mask",
+          "name": "mask",
+          "type": "MASK",
+          "links": [
+            64
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "lldacing/ComfyUI_BiRefNet_ll",
+        "ver": "5443a2aa16cfbd98bb2f7dcc8bdcb70439e08529",
+        "Node name for S&R": "RembgByBiRefNet",
+        "cnr_id": "comfyui_birefnet_ll",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 27,
+      "type": "LoadRembgByBiRefNetModel",
+      "pos": [
+        -1170,
+        -510
+      ],
+      "size": [
+        286.6646423339844,
+        130
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "model",
+          "name": "model",
+          "type": "BIREFNET",
+          "links": [
+            49
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "lldacing/ComfyUI_BiRefNet_ll",
+        "ver": "5443a2aa16cfbd98bb2f7dcc8bdcb70439e08529",
+        "Node name for S&R": "LoadRembgByBiRefNetModel",
+        "cnr_id": "comfyui_birefnet_ll",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "General.safetensors",
+        "AUTO",
+        false,
+        "float32"
+      ]
+    },
+    {
+      "id": 28,
+      "type": "LoadImage",
+      "pos": [
+        -1170,
+        -300
+      ],
+      "size": [
+        270,
+        450
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            50,
+            57,
+            61
+          ]
+        },
+        {
+          "label": "遮罩",
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.47",
+        "Node name for S&R": "LoadImage",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "NM (3).jpeg",
+        "image"
+      ]
+    },
+    {
+      "id": 30,
+      "type": "Image Comparer (rgthree)",
+      "pos": [
+        -120,
+        -270
+      ],
+      "size": [
+        388.76513671875,
+        458.7571716308594
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "label": "图像_A",
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 56
+        },
+        {
+          "dir": 3,
+          "label": "图像_B",
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 57
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "944d5353a1b0a668f40844018c3dc956b95a67d7",
+        "comparer_mode": "Slide",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_xkdgi_00041_.png&type=temp&subfolder=&rand=0.7871427603622309"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_xkdgi_00042_.png&type=temp&subfolder=&rand=0.8056507009092445"
+          }
+        ]
+      ]
+    },
+    {
+      "id": 31,
+      "type": "SaveImage",
+      "pos": [
+        -870,
+        -300
+      ],
+      "size": [
+        267.9266357421875,
+        473.18988037109375
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 54
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.47",
+        "Node name for S&R": "SaveImage",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 32,
+      "type": "Note",
+      "pos": [
+        -1791.967529296875,
+        -529.0567626953125
+      ],
+      "size": [
+        567.1134033203125,
+        724.5138549804688
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "github地址\nhttps://github.com/lldacing/ComfyUI_BiRefNet_ll/blob/main/README_CN.md\n\n\n最新的模型:\nGeneral: 用于一般用例的预训练模型，大多数图像使用这个模型抠图即可，半透明除外。\nGeneral-HR: 用于一般用例的预训练模型，在更高分辨率的图像上表现出色(训练分辨率2048x2048)。\nGeneral-Lite: 用于一般用例的轻量级预训练模型。\nGeneral-Lite-2K: 用于一般用例的轻量级预训练模型，适用于高分辨率图像(最佳分辨率2560x1440)。\nGeneral-dynamic: 用于动态分辨率的预训练模型，基于256x256到2304x2304的图片分辨率进行训练。\nGeneral-reso_512: 一个更快、更准确的低分辨率预训练模型，基于512x512的图像训练。\nGeneral-legacy: 一般用例的预训练模型，基于DIS5K-TR,DIS-TEs, DUTS-TR_TE,HRSOD-TR_TE,UHRSD-TR_TE, HRS10K-TR_TE (w/o portrait seg data)。\nPortrait: 人物肖像预训练模型。\nMatting: 一种使用无过渡遮罩抠图的预训练模型，适合抠半透明的图像。\nMatting-HR: 在更高分辨率的图像上显示出出色的性能的预训练模型 (2048x2048)。\nMatting-Lite: 用一般用例的无过渡遮罩抠图的轻量级预训练模型。\nDIS: 一种用于二分图像分割（DIS）的预训练模型。\nHRSOD: 一种用于高分辨率显著目标检测（HRSOD）的预训练模型。\nCOD: 一种用于隐蔽目标检测（COD）的预训练模型。\nDIS-TR_TEs: 具有大量数据集的预训练模型。\n\n下面用大白话给你解释每个模型适合抠哪种图，再举些例子，小白也能看明白：\nGeneral 系列：万能基础款\n\n    General：最常用的基础款，啥都能抠，日常图片（比如风景、物品、人物混合场景）用它就行。\n    举例：想把旅游照里的花、路边的小猫抠出来，用这个基本没问题。\n    General-HR：和上面一样万能，但擅长处理高清大图（比如 2048x2048 像素，差不多是电脑壁纸大小），抠出来边缘更清晰。\n    举例：婚纱照、大幅海报里的人物或物体，用它抠不会模糊。\n    General-Lite：轻量级万能款，适合手机、低配电脑用，速度快，虽然精度稍逊，但日常简单抠图够了。\n    举例：手机里拍的美食、小物件，快速抠出来发朋友圈，用这个省时间。\n    General-Lite-2K：轻量级里的 “高清选手”，专门处理 2560x1440 像素（常见的电脑高清屏尺寸）的图，兼顾速度和高清。\n    举例：电脑里存的高清风景图，想抠掉其中的云朵，用这个又快又清楚。\n    General-dynamic：“全能适应型”，不管图是小到 256x256（像微信头像）还是大到 2304x2304（超大海报），它都能自动适配处理。\n    举例：一会儿抠手机里的小截图，一会儿抠大幅设计图，不用换模型，它自己搞定。\n    General-reso_512：专门抠小图（512x512 像素，比如普通自拍尺寸），速度超快，精度还不错。\n    举例：从聊天记录里截的小图，想抠出里面的表情包，用它秒出结果。\n    General-legacy：老版万能款，训练时没加人物肖像数据，所以抠风景、物品更顺手，抠人可能稍差。\n    举例：抠一张只有花草树木的图，用这个比新版更合适。\n\nPortrait：专门抠人\n\n    只擅长抠人物肖像，不管是全身、半身还是脸部特写，边缘（比如头发丝）抠得更细腻。\n    举例：想把证件照里的人抠出来换背景，用这个准没错。\n\nMatting 系列：抠 “半透明” 物体\n“无过渡遮罩” 简单说就是能处理半透明的东西（比如玻璃、烟雾、婚纱纱裙），抠出来不会生硬。\n\n    Matting：基础款，专门抠半透明物体。\n    举例：抠婚纱的蕾丝边、玻璃杯里的水，边缘不会像被 “一刀切”。\n    Matting-HR：高清版，处理 2048x2048 的大图里的半透明物体，比如大幅婚纱海报里的纱裙。\n    Matting-Lite：轻量版，手机上用也不卡，适合快速抠小图里的半透明物体，比如手机拍的带雾气的窗户。\n\nDIS：二选一 “分割”\n“二分图像分割” 就是把图分成 “目标” 和 “背景” 两部分，非黑即白，适合明确区分 “要的” 和 “不要的”。\n举例：一张图里只有一只狗和草地，用它能精准把狗（目标）和草地（背景）分开。\nHRSOD：找高清图里的 “显眼包”\n“高分辨率显著目标检测”，就是在高清大图里，自动找到最显眼的东西（比如一堆花里最鲜艳的那朵）并抠出来。\n举例：一张高清的街拍照，最显眼的是穿红衣服的人，用它能快速抠出这个人。\nCOD：找 “藏起来” 的东西\n“隐蔽目标检测”，专门抠那些和背景很像、不容易发现的物体（比如草丛里的蛇、雪地中的兔子）。\n举例：一张图里，枯叶堆里藏着一只颜色相近的蚂蚱，用它能把蚂蚱抠出来。\nDIS-TR_TEs：数据多，更靠谱\n用了超多数据集训练的 “二分分割” 模型，不管抠啥（只要是分目标和背景），都比普通 DIS 更精准。\n举例：复杂场景（比如菜市场里的一堆菜，只想抠出其中的西红柿），用它不容易出错。\n\n\n\n\n    AutoDownloadBiRefNetModel\n        自动下载模型到 ${comfyui_rootpath}/models/BiRefNet，不支持权重\n    LoadRembgByBiRefNetModel\n        从 ${comfyui_rootpath}/models/BiRefNet 和 在extra YAML 文件中通过birefnet配置的路径中选择模型\n        支持 BiRefNet Releases 中的新模型 和 老的模型BiRefNet-DIS_ep580.pth 与 BiRefNet-ep480.pth\n        参数use_weight设为True时, 需要下载权重模型，General-Lite、General-Lite-2K和Matting-Lite模型使用swin_tiny_patch4_window7_224_22kto1k_finetune.pth，其它模型使用 swin_large_patch4_window12_384_22kto1k.pth\n    RembgByBiRefNet\n        输出透明前景图和遮罩\n    RembgByBiRefNetAdvanced\n        输出前景图和遮罩，提供一些微调参数\n    GetMaskByBiRefNet\n        仅输出遮罩\n    BlurFusionForegroundEstimation\n        使用fast-foreground-estimation方法预估前景图\n"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 33,
+      "type": "LayerUtility: ColorImage",
+      "pos": [
+        -510,
+        -570
+      ],
+      "size": [
+        270,
+        106
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 62
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 63
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            58
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LayerUtility: ColorImage"
+      },
+      "widgets_values": [
+        512,
+        512,
+        "#0000FF"
+      ],
+      "color": "rgba(38, 73, 116, 0.7)"
+    },
+    {
+      "id": 34,
+      "type": "LayerStyle: ColorOverlay V2",
+      "pos": [
+        -150,
+        -510
+      ],
+      "size": [
+        270,
+        170
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "background_image",
+          "type": "IMAGE",
+          "link": 58
+        },
+        {
+          "name": "layer_image",
+          "type": "IMAGE",
+          "link": 66
+        },
+        {
+          "name": "layer_mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": 64
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            60
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LayerStyle: ColorOverlay V2"
+      },
+      "widgets_values": [
+        false,
+        "normal",
+        0,
+        "#000000"
+      ],
+      "color": "rgba(20, 95, 121, 0.7)"
+    },
+    {
+      "id": 35,
+      "type": "PreviewImage",
+      "pos": [
+        -510,
+        -270
+      ],
+      "size": [
+        330,
+        450
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 60
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.56",
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 36,
+      "type": "GetImageSize",
+      "pos": [
+        -840,
+        -510
+      ],
+      "size": [
+        140,
+        124
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 61
+        }
+      ],
+      "outputs": [
+        {
+          "label": "宽度",
+          "name": "width",
+          "type": "INT",
+          "links": [
+            62
+          ]
+        },
+        {
+          "label": "高度",
+          "name": "height",
+          "type": "INT",
+          "links": [
+            63
+          ]
+        },
+        {
+          "name": "batch_size",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.56",
+        "Node name for S&R": "GetImageSize"
+      },
+      "widgets_values": [
+        "width: 1144, height: 1425\n batch size: 1"
+      ]
+    }
+  ],
+  "links": [
+    [
+      49,
+      27,
+      0,
+      26,
+      0,
+      "BIREFNET"
+    ],
+    [
+      50,
+      28,
+      0,
+      26,
+      1,
+      "IMAGE"
+    ],
+    [
+      54,
+      26,
+      0,
+      31,
+      0,
+      "IMAGE"
+    ],
+    [
+      56,
+      26,
+      0,
+      30,
+      0,
+      "IMAGE"
+    ],
+    [
+      57,
+      28,
+      0,
+      30,
+      1,
+      "IMAGE"
+    ],
+    [
+      58,
+      33,
+      0,
+      34,
+      0,
+      "IMAGE"
+    ],
+    [
+      60,
+      34,
+      0,
+      35,
+      0,
+      "IMAGE"
+    ],
+    [
+      61,
+      28,
+      0,
+      36,
+      0,
+      "IMAGE"
+    ],
+    [
+      62,
+      36,
+      0,
+      33,
+      0,
+      "INT"
+    ],
+    [
+      63,
+      36,
+      1,
+      33,
+      1,
+      "INT"
+    ],
+    [
+      64,
+      26,
+      1,
+      34,
+      2,
+      "MASK"
+    ],
+    [
+      66,
+      26,
+      0,
+      34,
+      1,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.7247295000000022,
+      "offset": [
+        1891.967529296875,
+        670
+      ]
+    },
+    "frontendVersion": "1.25.11",
+    "workspace_info": {
+      "id": "mJpqWc0YMHXCo6Wl7romf",
+      "saveLock": false,
+      "cloudID": null,
+      "coverMediaPath": null
+    },
+    "ue_links": [],
+    "links_added_by_ue": [],
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}

@@ -1,0 +1,19 @@
+[CHARACTER IDENTITY LOCK — HIGHEST PRIORITY]
+Use the uploaded reference images:
+Image 1: C01 Face Front Master v3 — facial identity and bangs reference.
+Image 2: C02 Full Body Master v3 — hourglass anatomy, proportions, long loose hair, and grey ribbed loungewear outfit reference.
+Image 3: Side facial profile reference (10_43_07.png) — cheekbone, nose bridge angle, and jawline contour reference.
+Generate the left three-quarter (3/4) view of the exact same young East Asian woman.
+She must be unmistakably the same person as in C01 and C02.
+
+[C03 LEFT THREE-QUARTER VIEW (45 DEGREES)]
+Camera position: approximately 45 degrees to the woman's left front side.
+Show:
+- Left-side facial structure, nose bridge profile, cheekbone contour, jawline, chin, and ear.
+- Left-side perspective of her almond eyes, soft eyebrows, and gentle expression.
+- Thick, silky long dark hair worn down, flowing naturally over her shoulders and chest with wispy face-framing fringe.
+- Slender neck, collarbones, and feminine hourglass figure.
+- Left side of the same heather-grey ribbed fitted button-down top and matching shorts from C02.
+- Neutral, standing pose, looking naturally slightly off-center or toward camera.
+- Same studio commercial portrait lighting, soft neutral solid grey backdrop.
+Maintain identical identity, proportions, and style. Only the camera angle changes to 45° left front. Ultra-photorealistic.

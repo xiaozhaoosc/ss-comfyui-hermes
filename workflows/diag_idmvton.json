@@ -1,0 +1,139 @@
+{
+  "prompt": {
+    "1": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "todo/face/dasiy.png"
+      }
+    },
+    "2": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "demo_cropped.jpg"
+      }
+    },
+    "7": {
+      "class_type": "DensePosePreprocessor",
+      "inputs": {
+        "image": [
+          "1",
+          0
+        ],
+        "model": "densepose_r50_fpn_dl.torchscript",
+        "cmap": "Parula (CivitAI)",
+        "resolution": 768
+      }
+    },
+    "13": {
+      "class_type": "FaceProtectMask",
+      "inputs": {
+        "image": [
+          "1",
+          0
+        ],
+        "clothing_labels": "4,5,6,7,8",
+        "protect_labels": "2,3,11",
+        "protect_expand": 5,
+        "feather": 3
+      }
+    },
+    "15": {
+      "class_type": "InvertMask",
+      "inputs": {
+        "mask": [
+          "13",
+          0
+        ]
+      }
+    },
+    "14": {
+      "class_type": "MaskToImage",
+      "inputs": {
+        "mask": [
+          "15",
+          0
+        ]
+      }
+    },
+    "8": {
+      "class_type": "PipelineLoader",
+      "inputs": {
+        "weight_dtype": "float16"
+      }
+    },
+    "9": {
+      "class_type": "IDM-VTON",
+      "inputs": {
+        "pipeline": [
+          "8",
+          0
+        ],
+        "human_img": [
+          "1",
+          0
+        ],
+        "pose_img": [
+          "7",
+          0
+        ],
+        "mask_img": [
+          "14",
+          0
+        ],
+        "garment_img": [
+          "2",
+          0
+        ],
+        "garment_description": "a person wearing this garment, full body, natural fit, high quality fabric texture, proper lighting",
+        "negative_prompt": "monochrome, lowres, bad anatomy, worst quality, low quality",
+        "width": 768,
+        "height": 1024,
+        "num_inference_steps": 15,
+        "guidance_scale": 2.0,
+        "strength": 1.0,
+        "seed": 42
+      }
+    },
+    "100": {
+      "class_type": "SaveImage",
+      "inputs": {
+        "images": [
+          "9",
+          0
+        ],
+        "filename_prefix": "debug_idmvton_output"
+      }
+    },
+    "101": {
+      "class_type": "SaveImage",
+      "inputs": {
+        "images": [
+          "14",
+          0
+        ],
+        "filename_prefix": "debug_idmvton_mask"
+      }
+    },
+    "102": {
+      "class_type": "SaveImage",
+      "inputs": {
+        "images": [
+          "7",
+          0
+        ],
+        "filename_prefix": "debug_densepose"
+      }
+    },
+    "103": {
+      "class_type": "SaveImage",
+      "inputs": {
+        "images": [
+          "1",
+          0
+        ],
+        "filename_prefix": "debug_original_dasiy"
+      }
+    }
+  },
+  "client_id": "diag-idmvton"
+}

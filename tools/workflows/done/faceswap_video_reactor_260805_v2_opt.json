@@ -1,0 +1,522 @@
+{
+  "id": "f98dd259-268f-4e4b-927a-aa9969adf232-v2-opt",
+  "revision": 0,
+  "last_node_id": 13,
+  "last_link_id": 12,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "VHS_LoadVideo",
+      "pos": [
+        -110,
+        -260
+      ],
+      "size": [
+        315,
+        848
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            1
+          ]
+        },
+        {
+          "name": "frame_count",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "slot_index": 2,
+          "links": [
+            12
+          ]
+        },
+        {
+          "name": "video_info",
+          "type": "VHS_VIDEOINFO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_LoadVideo"
+      },
+      "widgets_values": {
+        "video": "20260518_122327_各位军师，遇到这种场景该如何应对？.mp4",
+        "force_rate": 0,
+        "custom_width": 960,
+        "custom_height": 540,
+        "frame_load_cap": 0,
+        "skip_first_frames": 0,
+        "select_every_nth": 1,
+        "format": "AnimateDiff",
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "20260518_122327_各位军师，遇到这种场景该如何应对？.mp4",
+            "type": "input",
+            "format": "video/mp4",
+            "force_rate": 0,
+            "custom_width": 960,
+            "custom_height": 540,
+            "frame_load_cap": 0,
+            "skip_first_frames": 0,
+            "select_every_nth": 1
+          }
+        }
+      }
+    },
+    {
+      "id": 2,
+      "type": "LoadImage",
+      "pos": [
+        -720,
+        -120
+      ],
+      "size": [
+        315,
+        314
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            2
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "源图 1：全身/半身 overview",
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "ref_1_overview.png",
+        "image"
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 3,
+      "type": "LoadImage",
+      "pos": [
+        -720,
+        220
+      ],
+      "size": [
+        315,
+        314
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            3
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "源图 2：正脸 front（主特征）",
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "ref_2_front.png",
+        "image"
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 6,
+      "type": "ImageBatch",
+      "pos": [
+        -330,
+        60
+      ],
+      "size": [
+        210,
+        78
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image1",
+          "type": "IMAGE",
+          "link": 2
+        },
+        {
+          "name": "image2",
+          "type": "IMAGE",
+          "link": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            8
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageBatch"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 9,
+      "type": "ReActorBuildFaceModel",
+      "pos": [
+        -330,
+        220
+      ],
+      "size": [
+        315,
+        250
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 8
+        }
+      ],
+      "outputs": [
+        {
+          "name": "FACE_MODEL",
+          "type": "FACE_MODEL",
+          "slot_index": 0,
+          "links": [
+            9
+          ]
+        }
+      ],
+      "title": "BuildFaceModel（Mean 融合，2 张正脸）",
+      "properties": {
+        "Node name for S&R": "ReActorBuildFaceModel"
+      },
+      "widgets_values": [
+        false,
+        false,
+        "Mean",
+        "Mean"
+      ]
+    },
+    {
+      "id": 10,
+      "type": "ReActorFaceSwap",
+      "pos": [
+        60,
+        100
+      ],
+      "size": [
+        320,
+        400
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "input_image",
+          "type": "IMAGE",
+          "link": 1
+        },
+        {
+          "name": "source_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "face_model",
+          "shape": 7,
+          "type": "FACE_MODEL",
+          "link": 9
+        },
+        {
+          "name": "face_boost",
+          "shape": 7,
+          "type": "FACE_BOOST",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SWAPPED_IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            11
+          ]
+        },
+        {
+          "name": "FACE_MODEL",
+          "type": "FACE_MODEL",
+          "links": null
+        },
+        {
+          "name": "ORIGINAL_IMAGE",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "title": "ReActor 换脸（看 Note 改 input_faces_index）",
+      "properties": {
+        "Node name for S&R": "ReActorFaceSwap"
+      },
+      "widgets_values": [
+        true,
+        "inswapper_128.onnx",
+        "retinaface_resnet50",
+        "GFPGANv1.4.pth",
+        0.5,
+        0.5,
+        "no",
+        "no",
+        "0",
+        "0",
+        1
+      ]
+    },
+    {
+      "id": 11,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        450,
+        100
+      ],
+      "size": [
+        315,
+        872.4444444444445
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 11
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 12
+        },
+        {
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 30,
+        "loop_count": 0,
+        "filename_prefix": "faceswap_video_v2_opt",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 19,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "faceswap_video_v2_opt_00001-audio.mp4",
+            "subfolder": "",
+            "type": "output",
+            "format": "video/h264-mp4",
+            "frame_rate": 30,
+            "workflow": "faceswap_video_v2_opt_00001.png",
+            "fullpath": "D:\\ai_projects\\ComfyUI\\output\\faceswap_video_v2_opt_00001-audio.mp4"
+          }
+        }
+      }
+    },
+    {
+      "id": 13,
+      "type": "Note",
+      "pos": [
+        420,
+        460
+      ],
+      "size": [
+        380,
+        360
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "【V2-opt 优化版 使用说明】\n\n基于 faceswap_video_reactor_260801_v2.json 优化\n不覆盖原 V2 结果，输出到 faceswap_video_v2_opt_*\n\n========================================\n相对原 V2 的改动\n========================================\n\n1. 删除冗余 source_image 直连\n   原 V2 同时连了 source_image 和 face_model\n   ReActor 优先用 face_model，source_image 被忽略\n   → 删除 link 10（ref_2_front → ReActor.source_image）\n\n2. face_restore_visibility 从 1.0 → 0.5\n   原值过强导致塑料感、磨皮过度\n   → 和 V3/V4 对齐\n\n3. 精简参考图：4 张 → 2 张\n   删除 ref_3_side.png、ref_4_side_right.png\n   原因：inswapper_128 对正脸源图效果最佳\n   侧脸图反而会稀释 Mean 融合的正脸特征\n   → 保留 overview + front 两张正脸\n\n4. BuildFaceModel: character_3view → Mean\n   character_3view 是二次元三视图设计\n   真人场景用 Mean 更稳定\n\n5. 删除 2 个 ImageBatch 节点（id=7, id=8）\n   只剩 1 个 ImageBatch 合并 2 张图\n\n========================================\n核心操作：调 input_faces_index\n========================================\n\n在右侧 ReActorFaceSwap 节点中找到\ninput_faces_index 输入框（widgets_values 第 9 位）\n\n● 填写规则（字符串，逗号分隔）：\n  \"0\"      只替换第 1 张人脸（默认，按面积从大到小排序）\n  \"0,1\"    替换前 2 张人脸\n  \"1\"      只替换第 2 张人脸\n\n● 人脸排序：按面积从大到小\n  画面中靠镜头、脸最大的人 = 索引 0\n\n● 调试技巧：\n  把 ReActorFaceSwap 的 console_log_level 改为 2\n  运行一帧查看控制台输出的人脸检测顺序\n\n========================================\n输出\n========================================\n\n输出文件：output\\faceswap_video_v2_opt_00001-audio.mp4\n不会覆盖原 V2 结果（faceswap_video_v2_*.mp4）"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      0,
+      10,
+      0,
+      "IMAGE"
+    ],
+    [
+      2,
+      2,
+      0,
+      6,
+      0,
+      "IMAGE"
+    ],
+    [
+      3,
+      3,
+      0,
+      6,
+      1,
+      "IMAGE"
+    ],
+    [
+      8,
+      6,
+      0,
+      9,
+      0,
+      "IMAGE"
+    ],
+    [
+      9,
+      9,
+      0,
+      10,
+      2,
+      "FACE_MODEL"
+    ],
+    [
+      11,
+      10,
+      0,
+      11,
+      0,
+      "IMAGE"
+    ],
+    [
+      12,
+      1,
+      2,
+      11,
+      1,
+      "VHS_AUDIO"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "ReActor 双正脸融合换脸 V2-opt (VHS)",
+      "bounding": [
+        -730,
+        -260,
+        1520,
+        1100
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.66115702479339,
+      "offset": [
+        622.4200500693695,
+        443.0867919073174
+      ]
+    },
+    "frontendVersion": "1.44.19",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}

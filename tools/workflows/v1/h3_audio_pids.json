@@ -1,0 +1,37 @@
+[
+  {
+    "name": "seg01_0-4s_边城远景",
+    "length": 96,
+    "pid": "3db6cbb3-a8b7-4ccf-be2d-41474b141516"
+  },
+  {
+    "name": "seg02_4-8s_女将奔马",
+    "length": 96,
+    "pid": "9d5e7ff5-3a34-484e-ad28-e6f7c5854c5f"
+  },
+  {
+    "name": "seg03_8-12s_城门戒备",
+    "length": 96,
+    "pid": "d98e6196-7161-436e-80ba-4646043130a3"
+  },
+  {
+    "name": "seg04_12-16s_战争爆发",
+    "length": 96,
+    "pid": "9f75376a-87ae-44f3-933a-8aa4e75ebcdb"
+  },
+  {
+    "name": "seg05_16-21s_战争蒙太奇",
+    "length": 120,
+    "pid": "4a4a44c2-29de-4bf1-aee1-eae7f9f8c2e1"
+  },
+  {
+    "name": "seg06_21-26s_女将蓄势",
+    "length": 120,
+    "pid": "96210b74-ec1f-44d8-9b89-2b567962078b"
+  },
+  {
+    "name": "seg07_26-30s_骑兵冲锋",
+    "length": 96,
+    "pid": "efda3d06-1939-4cce-885b-6835ad493404"
+  }
+]

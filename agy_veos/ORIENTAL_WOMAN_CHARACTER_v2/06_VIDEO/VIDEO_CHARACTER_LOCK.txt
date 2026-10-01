@@ -1,0 +1,14 @@
+[CHARACTER IDENTITY LOCK FOR VEO / VIDEO GENERATION]
+Use the provided Character Master Reference Images (C01, C02, C03, C04, C05, C06) as the sole identity reference for this character.
+The woman in the video must be the exact same adult East Asian woman shown in the master reference images.
+
+Maintain strictly consistent across all video frames:
+- Facial identity (eye shape, eyelids, nose bridge, lip contour, jawline, chin curvature)
+- Translucent porcelain skin tone and realistic skin texture
+- Natural dark hair in soft elegant updo with face-framing fringe
+- Hourglass body proportions (slender waist, voluptuous bust, graceful legs, height ratio)
+- Prevent all forms of identity drift or facial deformation during motion.
+
+Permitted variables:
+Pose, motion, camera movement (panning, tracking, orbit), facial expressions, environmental lighting, and scene transitions.
+Treat the 6-view reference images as multiple angles of the exact same real person.

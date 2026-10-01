@@ -1,0 +1,275 @@
+{
+  "1": {
+    "inputs": {
+      "unet_name": "qwen-image-2.1-UC-Q4_K_M.gguf"
+    },
+    "class_type": "UnetLoaderGGUF",
+    "_meta": {
+      "title": "1. 视觉扩散模型 (DiT GGUF) [inject:unet]"
+    }
+  },
+  "2": {
+    "inputs": {
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors",
+      "type": "qwen_image"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "2. 文本编码器 (官方 int8, 修复走视觉塔故不能用 GGUF) [inject:clip]"
+    }
+  },
+  "3": {
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "3. 图像编解码器 (VAE) [inject:vae]"
+    }
+  },
+  "4": {
+    "inputs": {
+      "image": "qwen_test_source.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "4. 加载待修复的图 (低清/老照片/AI出图) [inject:image]"
+    }
+  },
+  "5": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "megapixels": 1.0,
+      "resolution_steps": 8,
+      "image": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "5. 归一到 1.0MP (8 的倍数) — Qwen 修复的工作分辨率 [inject:resize]"
+    }
+  },
+  "6": {
+    "inputs": {
+      "pixels": [
+        "5",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "6. 原图编码为初始潜变量 (低 denoise 精修, 保留构图)"
+    }
+  },
+  "7": {
+    "inputs": {
+      "prompt": "Restore and enhance this image to high definition. Remove blur, noise, grain, scratches and compression artifacts. Recover crisp fine details: skin texture, hair strands, eyelashes, fabric weave, sharp edges. Keep the subject's identity, facial features, expression, pose, clothing and composition exactly unchanged. Natural colors, accurate white balance, clean sharp focus, photographic quality.",
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "image1": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "7. 修复指令 + 图像参考 (Plus 多图编码) [inject:prompt]"
+    }
+  },
+  "8": {
+    "inputs": {
+      "prompt": "blurry, out of focus, noise, film grain, jpeg artifacts, compression artifacts, oversmoothed, plastic skin, waxy skin, over-sharpened halos, deformed, distorted face, changed identity, extra fingers, watermark, text, logo, low resolution",
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "image1": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "8. 负向提示词 (cfg>1 时生效) [inject:negative]"
+    }
+  },
+  "9": {
+    "inputs": {
+      "reference_latents_method": "index_timestep_zero",
+      "conditioning": [
+        "7",
+        0
+      ]
+    },
+    "class_type": "FluxKontextMultiReferenceLatentMethod",
+    "_meta": {
+      "title": "9. 参考潜变量注入方式 (第三方重打包模型必需)"
+    }
+  },
+  "10": {
+    "inputs": {
+      "reference_latents_method": "index_timestep_zero",
+      "conditioning": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "FluxKontextMultiReferenceLatentMethod",
+    "_meta": {
+      "title": "10. 负向参考潜变量注入方式"
+    }
+  },
+  "11": {
+    "inputs": {
+      "shift": 3.1,
+      "model": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "11. 采样位移对齐官方 edit 模板 (shift 3.1) [inject:shift]"
+    }
+  },
+  "12": {
+    "inputs": {
+      "strength": 1.0,
+      "model": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "CFGNorm",
+    "_meta": {
+      "title": "12. CFG 归一化 (官方 edit 模板同款)"
+    }
+  },
+  "13": {
+    "inputs": {
+      "seed": 42,
+      "steps": 25,
+      "cfg": 3.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 0.6,
+      "model": [
+        "12",
+        0
+      ],
+      "positive": [
+        "9",
+        0
+      ],
+      "negative": [
+        "10",
+        0
+      ],
+      "latent_image": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "13. KSampler 精修重绘 (25步 / CFG 3.0 / Denoise 0.6) [inject:sampler]"
+    }
+  },
+  "14": {
+    "inputs": {
+      "samples": [
+        "13",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "14. VAE 解码为修复后的图像 (Qwen VAE 输出是 RGBA)"
+    }
+  },
+  "15": {
+    "inputs": {
+      "image": [
+        "14",
+        0
+      ]
+    },
+    "class_type": "SplitImageWithAlpha",
+    "_meta": {
+      "title": "15. 剥离 alpha 取 RGB (ESRGAN 只吃 3 通道, 不剥会报 channels 错误)"
+    }
+  },
+  "16": {
+    "inputs": {
+      "model_name": "RealESRGAN_x4plus.pth"
+    },
+    "class_type": "UpscaleModelLoader",
+    "_meta": {
+      "title": "16. 加载放大模型 (ESRGAN x4) [inject:upscaler]"
+    }
+  },
+  "17": {
+    "inputs": {
+      "upscale_model": [
+        "16",
+        0
+      ],
+      "image": [
+        "15",
+        0
+      ]
+    },
+    "class_type": "ImageUpscaleWithModel",
+    "_meta": {
+      "title": "17. 4x 放大 (核心节点自动分块, 16G 卡安全)"
+    }
+  },
+  "18": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "megapixels": 2.0,
+      "resolution_steps": 8,
+      "image": [
+        "17",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "18. 输出尺寸收口 (默认 2.0MP, 8 的倍数) [inject:final_mp]"
+    }
+  },
+  "19": {
+    "inputs": {
+      "filename_prefix": "2026-10-01/qwen_restore",
+      "images": [
+        "18",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "19. 保存图像 (按日期归档) [inject:output]"
+    }
+  }
+}

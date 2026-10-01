@@ -1,0 +1,52 @@
+{
+ "ts": 1788053416.192513,
+ "results": {
+  "batch2": "submitted",
+  "batch3": "submitted",
+  "batch4": "submitted",
+  "batch5": "submitted",
+  "batch6": "submitted",
+  "final_idle": "OK",
+  "finish": {
+   "batch1": {
+    "png_count": 50,
+    "size_mb": 56.1,
+    "avg_kb": 1149.0,
+    "done_at": "2026-08-30 06:42:31"
+   },
+   "batch2": {
+    "png_count": 50,
+    "size_mb": 56.6,
+    "avg_kb": 1159.0,
+    "done_at": "2026-08-30 07:10:51"
+   },
+   "batch3": {
+    "png_count": 50,
+    "size_mb": 55.2,
+    "avg_kb": 1130.0,
+    "done_at": "2026-08-30 07:39:14"
+   },
+   "batch4": {
+    "png_count": 50,
+    "size_mb": 57.4,
+    "avg_kb": 1175.0,
+    "done_at": "2026-08-30 08:07:25"
+   },
+   "batch5": {
+    "png_count": 50,
+    "size_mb": 56.5,
+    "avg_kb": 1158.0,
+    "done_at": "2026-08-30 08:34:24"
+   },
+   "batch6": {
+    "png_count": 50,
+    "size_mb": 55.9,
+    "avg_kb": 1144.0,
+    "done_at": "2026-08-30 09:00:48"
+   },
+   "report_written": "D:\\obsidian\\obsidian\\ComfyUI\\50写真批次prompts\\BATCH_RUN_REPORT.md",
+   "cron_paused": true,
+   "cron_output": "Paused job: LTX完→6批写真流水线 (a03fc445e512)\n"
+  }
+ }
+}

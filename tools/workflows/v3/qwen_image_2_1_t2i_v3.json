@@ -1,0 +1,126 @@
+{
+  "1": {
+    "inputs": {
+      "unet_name": "qwen-image-2.1-UC-Q4_K_M.gguf"
+    },
+    "class_type": "UnetLoaderGGUF",
+    "_meta": {
+      "title": "1. 视觉扩散模型 (DiT Q4_K_M)"
+    }
+  },
+  "2": {
+    "inputs": {
+      "clip_name": "qwen3vl_8b_heretic-Q4_K_M.gguf",
+      "type": "qwen_image"
+    },
+    "class_type": "CLIPLoaderGGUF",
+    "_meta": {
+      "title": "2. 破壁文本编码器 (CLIP Q4_K_M)"
+    }
+  },
+  "3": {
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "3. 图像编解码器 (VAE)"
+    }
+  },
+  "4": {
+    "inputs": {
+      "prompt": "masterpiece, ultra-detailed, cinematic lighting, 8k wallpaper, a futuristic cyberpunk girl standing in a neon-lit rain street of Neo-Tokyo, reflective puddles, soft ambient volumetric haze, intricately detailed jacket, vibrant blue and magenta neon lights",
+      "clip": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEdit",
+    "_meta": {
+      "title": "4. 正向提示词编码 (Positive Prompt)"
+    }
+  },
+  "5": {
+    "inputs": {
+      "prompt": "worst quality, low quality, blurry, deformed, distorted, bad anatomy",
+      "clip": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEdit",
+    "_meta": {
+      "title": "5. 负向提示词编码 (Negative Prompt)"
+    }
+  },
+  "6": {
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "6. 空潜空间尺寸 (Empty Latent 1024x1024)"
+    }
+  },
+  "7": {
+    "inputs": {
+      "seed": 42,
+      "steps": 35,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "1",
+        0
+      ],
+      "positive": [
+        "4",
+        0
+      ],
+      "negative": [
+        "5",
+        0
+      ],
+      "latent_image": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "7. KSampler (Euler + Simple 35步/CFG 1.0)"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "7",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "8. VAE 解码为图像"
+    }
+  },
+  "9": {
+    "inputs": {
+      "filename_prefix": "2026-09-30/qwen_t2i",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "9. 保存图像 (当日归档目录)"
+    }
+  }
+}

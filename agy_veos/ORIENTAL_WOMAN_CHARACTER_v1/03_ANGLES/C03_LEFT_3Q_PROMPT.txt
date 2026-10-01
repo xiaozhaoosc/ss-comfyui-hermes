@@ -1,0 +1,21 @@
+﻿[CHARACTER IDENTITY LOCK]
+Use the following reference images:
+Image 1 = C01 (Facial Identity)
+Image 2 = C02 (Body & Costume Identity)
+Generate the left 3/4 view of the exact same character.
+Must maintain the exact same identity as C01 and C02.
+Camera position: approximately 45 degrees to the woman's left front side.
+Show:
+left-side facial profile
+nose bridge
+side structure of eyes
+jawline
+natural hair framing
+shoulders
+waist
+left side structure of costume.
+Preserve the exact same red-gold costume, jewelry, hair length, and hair texture.
+Do not create new facial features. Do not change eyes, nose, mouth, and face shape.
+This is the same person photographed from a different angle.
+Use the same photography style and color palette as C01/C02.
+Only change the Camera Angle, NOT the Character Identity.

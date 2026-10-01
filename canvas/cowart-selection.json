@@ -1,0 +1,77 @@
+{
+  "selectedShapes": [
+    {
+      "id": "shape:s_gyZYx34-ocZwEl3aF6W",
+      "type": "image",
+      "parentId": "page:page",
+      "x": -457.47087378640776,
+      "y": -915.2427184466019,
+      "rotation": 0,
+      "meta": {},
+      "isAiImageHolder": false,
+      "isAiDraftHolder": false,
+      "isAiSlides": false,
+      "isHtmlDraft": false,
+      "props": {
+        "w": 1536,
+        "h": 2736,
+        "assetId": "asset:-1496435381",
+        "playing": true,
+        "url": "",
+        "crop": null,
+        "flipX": false,
+        "flipY": false,
+        "altText": ""
+      },
+      "asset": {
+        "id": "asset:-1496435381",
+        "type": "image",
+        "name": "asset--1496435381.png",
+        "src": "/page-assets/page/asset--1496435381.png",
+        "w": 1536,
+        "h": 2736,
+        "mimeType": "image/png",
+        "fileSize": 6767354
+      }
+    },
+    {
+      "id": "shape:annotation-edit-20260819-073752",
+      "type": "image",
+      "parentId": "page:page",
+      "x": 1118.5291262135922,
+      "y": -915.2427184466019,
+      "rotation": 0,
+      "meta": {
+        "cowartGeneratedFromAnnotationEdit": true,
+        "cowartAnnotationSourceShapeId": "shape:s_gyZYx34-ocZwEl3aF6W",
+        "cowartAnnotationScreenshot": "annotation-edit-20260819T073752Z.png"
+      },
+      "isAiImageHolder": false,
+      "isAiDraftHolder": false,
+      "isAiSlides": false,
+      "isHtmlDraft": false,
+      "props": {
+        "w": 1536,
+        "h": 2736,
+        "assetId": "asset:annotation-edit-20260819-073752",
+        "playing": true,
+        "url": "",
+        "flipX": false,
+        "flipY": false,
+        "altText": "按两处 Cowart 标注增加美人痣的修订图",
+        "crop": null
+      },
+      "asset": {
+        "id": "asset:annotation-edit-20260819-073752",
+        "type": "image",
+        "name": "annotation-edit-20260819-073752.png",
+        "src": "/page-assets/page/annotation-edit-20260819-073752.png",
+        "w": 1536,
+        "h": 2736,
+        "mimeType": "image/png",
+        "fileSize": 5424506
+      }
+    }
+  ],
+  "updatedAt": "2026-08-19T07:44:26.429Z"
+}

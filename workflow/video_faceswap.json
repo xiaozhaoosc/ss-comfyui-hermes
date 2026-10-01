@@ -1,0 +1,78 @@
+{
+  "1": {
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Source Face"
+    },
+    "inputs": {
+      "image": "face_source.png"
+    }
+  },
+  "2": {
+    "class_type": "LoadVideo",
+    "_meta": {
+      "title": "Load Video"
+    },
+    "inputs": {
+      "file": "test_video.mp4"
+    }
+  },
+  "3": {
+    "class_type": "GetVideoComponents",
+    "_meta": {
+      "title": "Extract Frames"
+    },
+    "inputs": {
+      "video": [
+        "2",
+        0
+      ]
+    }
+  },
+  "4": {
+    "class_type": "ReActorFaceSwap",
+    "_meta": {
+      "title": "Face Swap"
+    },
+    "inputs": {
+      "enabled": true,
+      "input_image": [
+        "3",
+        0
+      ],
+      "swap_model": "inswapper_128.onnx",
+      "facedetection": "retinaface_resnet50",
+      "face_restore_model": "GFPGANv1.4.pth",
+      "face_restore_visibility": 0.9,
+      "codeformer_weight": 0.5,
+      "detect_gender_input": "no",
+      "detect_gender_source": "no",
+      "input_faces_index": "0",
+      "source_faces_index": "0",
+      "console_log_level": 1,
+      "source_image": [
+        "1",
+        0
+      ]
+    },
+    "inputs_extra": {
+      "source_image": [
+        "1",
+        0
+      ]
+    }
+  },
+  "5": {
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Frames"
+    },
+    "inputs": {
+      "filename_prefix": "video_swap",
+      "images": [
+        "4",
+        0
+      ]
+    }
+  }
+}

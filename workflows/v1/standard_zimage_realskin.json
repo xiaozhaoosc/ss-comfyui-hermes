@@ -1,0 +1,283 @@
+{
+  "prompt": {
+    "1": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "input_portrait.png",
+        "upload": "image"
+      },
+      "_meta": {
+        "title": "Load Reference Portrait"
+      }
+    },
+    "2": {
+      "class_type": "LayerUtility: ImageScaleByAspectRatio V2",
+      "inputs": {
+        "image": [
+          "1",
+          0
+        ],
+        "aspect_ratio": "original",
+        "proportional_width": 1,
+        "proportional_height": 1,
+        "fit": "letterbox",
+        "method": "lanczos",
+        "round_to_multiple": "None",
+        "scale_to_side": "longest",
+        "scale_to_length": 1280,
+        "background_color": "#000000"
+      },
+      "_meta": {
+        "title": "Scale Reference Image"
+      }
+    },
+    "3": {
+      "class_type": "AILab_QwenVL",
+      "inputs": {
+        "image": [
+          "2",
+          0
+        ],
+        "model_name": "Qwen3-VL-8B-Instruct-FP8",
+        "quantization": "4-bit (VRAM-friendly)",
+        "attention_mode": "auto",
+        "preset_prompt": "🖼️ Detailed Description",
+        "custom_prompt": "",
+        "max_tokens": 512,
+        "keep_model_loaded": true,
+        "seed": 1
+      },
+      "_meta": {
+        "title": "QwenVL Extract Prompt from Image"
+      }
+    },
+    "4": {
+      "class_type": "JjkText",
+      "inputs": {
+        "text": "photorealistic high-end editorial portrait, natural skin texture with visible pores and fine details, soft studio lighting, sharp focus"
+      },
+      "_meta": {
+        "title": "User Style Prompt"
+      }
+    },
+    "5": {
+      "class_type": "JoinStrings",
+      "inputs": {
+        "string1": [
+          "4",
+          0
+        ],
+        "string2": [
+          "3",
+          0
+        ],
+        "delimiter": " "
+      },
+      "_meta": {
+        "title": "Combine Prompts"
+      }
+    },
+    "6": {
+      "class_type": "UNETLoader",
+      "inputs": {
+        "unet_name": "z_image_turbo_bf16.safetensors",
+        "weight_dtype": "default"
+      },
+      "_meta": {
+        "title": "Load Z-Image Turbo UNet"
+      }
+    },
+    "7": {
+      "class_type": "CLIPLoader",
+      "inputs": {
+        "clip_name": "qwen_3_4b.safetensors",
+        "type": "qwen_image",
+        "device": "default"
+      },
+      "_meta": {
+        "title": "Load Qwen3 4B Text Encoder"
+      }
+    },
+    "8": {
+      "class_type": "Lora Loader",
+      "inputs": {
+        "model": [
+          "6",
+          0
+        ],
+        "clip": [
+          "7",
+          0
+        ],
+        "lora_name": "unfiltered_realism_v2.safetensors",
+        "strength_model": 0.25,
+        "strength_clip": 0.6
+      },
+      "_meta": {
+        "title": "Realism LoRA"
+      }
+    },
+    "9": {
+      "class_type": "Lora Loader",
+      "inputs": {
+        "model": [
+          "8",
+          0
+        ],
+        "clip": [
+          "8",
+          1
+        ],
+        "lora_name": "kook_zimage_realistic_fantasy_turbo.safetensors",
+        "strength_model": 0.1,
+        "strength_clip": 0.4
+      },
+      "_meta": {
+        "title": "Kook Fantasy Turbo LoRA"
+      }
+    },
+    "10": {
+      "class_type": "CLIPTextEncode",
+      "inputs": {
+        "clip": [
+          "9",
+          1
+        ],
+        "text": [
+          "5",
+          0
+        ]
+      },
+      "_meta": {
+        "title": "Encode Positive Prompt"
+      }
+    },
+    "11": {
+      "class_type": "ConditioningZeroOut",
+      "inputs": {
+        "conditioning": [
+          "10",
+          0
+        ]
+      },
+      "_meta": {
+        "title": "Negative Conditioning (Zero)"
+      }
+    },
+    "12": {
+      "class_type": "FluxGuidance",
+      "inputs": {
+        "conditioning": [
+          "10",
+          0
+        ],
+        "guidance": 2.5
+      },
+      "_meta": {
+        "title": "Flux Guidance"
+      }
+    },
+    "13": {
+      "class_type": "VAELoader",
+      "inputs": {
+        "vae_name": "ae.safetensors"
+      },
+      "_meta": {
+        "title": "Load Z-Image VAE"
+      }
+    },
+    "14": {
+      "class_type": "EmptyLatentImage",
+      "inputs": {
+        "width": 960,
+        "height": 1280,
+        "batch_size": 1
+      },
+      "_meta": {
+        "title": "Empty Latent 960x1280"
+      }
+    },
+    "15": {
+      "class_type": "KSampler",
+      "inputs": {
+        "model": [
+          "9",
+          0
+        ],
+        "positive": [
+          "12",
+          0
+        ],
+        "negative": [
+          "11",
+          0
+        ],
+        "latent_image": [
+          "14",
+          0
+        ],
+        "seed": 696069112650183,
+        "control_after_generate": "randomize",
+        "steps": 15,
+        "cfg": 1,
+        "sampler_name": "euler_ancestral",
+        "scheduler": "normal",
+        "denoise": 1
+      },
+      "_meta": {
+        "title": "KSampler (euler_ancestral)"
+      }
+    },
+    "16": {
+      "class_type": "VAEDecode",
+      "inputs": {
+        "samples": [
+          "15",
+          0
+        ],
+        "vae": [
+          "13",
+          0
+        ]
+      },
+      "_meta": {
+        "title": "VAE Decode"
+      }
+    },
+    "17": {
+      "class_type": "LayerColor: AutoAdjust",
+      "inputs": {
+        "image": [
+          "16",
+          0
+        ],
+        "strength": 20,
+        "brightness": 10,
+        "saturation": 0,
+        "contrast": 0,
+        "gamma": 0,
+        "hue": 0,
+        "shadows": 0,
+        "red": 0,
+        "green": 0,
+        "blue": 0
+      },
+      "_meta": {
+        "title": "Auto Color Adjust"
+      }
+    },
+    "18": {
+      "class_type": "SaveImage",
+      "inputs": {
+        "images": [
+          "17",
+          0
+        ],
+        "filename_prefix": "zimage_realskin_output"
+      },
+      "_meta": {
+        "title": "Save Output"
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "street_dance",
+  "title": "自信女生的活力街舞",
+  "date": "2026-09-12",
+  "style_mode": "real",
+  "width": 544,
+  "height": 960,
+  "frames": 124,
+  "steps": 34,
+  "shift_video": 14.0,
+  "shift_audio": 3.5,
+  "seed_base": 20261200,
+  "ref_image": "gemini_ken1/C02_PADDED.png",
+  "style": "Style: realistic street-dance performance shot on a standard lens, medium shot at eye level, fixed camera, centered composition, bright and fresh color grading, medium saturation, clean crisp image, shallow depth of field, subtle film grain, realistic skin texture. ",
+  "character": "Character: the same young East Asian woman as the reference image, identical face and body, delicate features, refined light makeup with defined eye area and natural nude-pink lips, fair luminous skin, black long hair pulled up into a neat high bun with a few soft strands loose at her temples, no jewelry, no accessories. ",
+  "outfit": "Outfit: a fitted purple short-sleeve t-shirt with a slightly cropped hem and a gray high-waisted bodycon mini skirt that hugs her hips and ends at mid-thigh, the purple cotton fabric stretching with her movement, a slim defined waist, hot-girl casual street-dance styling, black ankle socks and white low-top sneakers. ",
+  "setting": "Setting: a bright clean indoor space with a plain light wall behind her and a smooth floor under her feet, soft even daylight from the front, no props, no other people, the background softly blurred so she stays the single visual focus. ",
+  "neg": "changing outfit, changing face, wobbling background",
+  "segments": [
+    {
+      "camera": "Camera: fixed camera, eye level, medium shot on a standard lens, she stays centered in the frame with her whole body from the head down to the sneakers inside the frame, the camera does not move, no cuts except a hard cut at the start. ",
+      "motion": "Action: hip-hop freestyle groove. She starts on the beat with a light bounce in her knees, her shoulders loose, both hands rolling in a smooth wave in front of her chest, one hand after the other, her hips swinging gently in counter-rotation to her chest; then her arms open outward and her head nods slightly to the rhythm. ",
+      "micro": "She smiles the whole time and keeps her eyes locked on the camera with calm confidence, chin relaxed, the corners of her mouth lifted.",
+      "audio": "Audio: high-energy electronic dance music, dense punchy drum pattern on a steady fast four-on-the-floor beat, driving bass line, bright synth stabs, purely instrumental with no vocals and no speech; the movement hits the beat. "
+    },
+    {
+      "camera": "Camera: fixed camera, eye level, medium shot on a standard lens, she stays centered in the frame with her whole body inside the frame, the camera does not move and there are no cuts. ",
+      "motion": "Action: the groove continues without a break and grows bigger — her right arm shoots forward and snaps back to her chest, her left arm sweeps out behind her, her weight bounces from one foot to the other with small quick steps in place, her torso twisting and dipping, the purple t-shirt and the gray skirt following the motion, her bun staying neat while loose strands swing. ",
+      "micro": "Her expression stays bright, smiling, chin up, eyes on the camera, a quick blink on the accent beat.",
+      "audio": "Audio: the same energetic electronic dance track keeps rolling with a dense beat and bass groove, instrumental only, no vocals; her body stays locked to the drums. "
+    },
+    {
+      "camera": "Camera: fixed camera, eye level, medium shot on a standard lens, centered composition, the camera does not move and there are no cuts. ",
+      "motion": "Action: she pushes the tempo harder — both arms pump up and down in alternating waves above shoulder height, her body rocking front and back with quick footwork in place, hips circling once, then she lands the last beat with a confident finishing pose, feet apart, one hand on her hip, the other arm hanging loose, chest lifted. ",
+      "micro": "She finishes facing the camera with a big genuine smile, eyes crinkling slightly, chin lifted with quiet pride.",
+      "audio": "Audio: the dance track drives to its peak with louder drums and a short snappy fill on the final beat, still instrumental, no vocals, then cuts off cleanly at the end. "
+    }
+  ]
+}
