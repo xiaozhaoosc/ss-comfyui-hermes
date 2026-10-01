@@ -1,0 +1,323 @@
+{
+    "generated_at":  "2026-10-01",
+    "root":  "custom_nodes",
+    "count":  35,
+    "note":  "custom_nodes 目录被 .gitignore 忽略（见 .gitignore 第 9 行）。本清单记录每个节点的来源仓库与 commit SHA，用于换机/协作时复现；type=git 表示可用 url+commit 重新 clone 并检出，type=local 表示该目录没有可用 git 上游（本地开发或手动放置），需另行备份。dirty=true 表示该节点有未提交的本地改动。",
+    "nodes":  [
+                  {
+                      "dir":  "CharacterFaceSwap.disabled",
+                      "type":  "git",
+                      "url":  "https://github.com/ArtBot2023/CharacterFaceSwap",
+                      "branch":  "main",
+                      "commit":  "f395496e5bf50d88579934ec2f776cd81866e8e9",
+                      "subject":  "readme",
+                      "dirty":  false
+                  },
+                  {
+                      "dir":  "ComfyUI_Comfyroll_CustomNodes.disabled",
+                      "type":  "git",
+                      "url":  "https://gitclone.com/github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes",
+                      "branch":  "main",
+                      "commit":  "d78b780ae43fcf8c6b7c6505e6ffb4584281ceca",
+                      "subject":  "version 1.76",
+                      "dirty":  true
+                  },
+                  {
+                      "dir":  "comfyui_controlnet_aux",
+                      "type":  "git",
+                      "url":  "https://github.com/Fannovel16/comfyui_controlnet_aux",
+                      "branch":  "main",
+                      "commit":  "0cd290477128d42cdc3e76a826a402d866e8c684",
+                      "subject":  "Update pyproject.toml",
+                      "dirty":  false
+                  },
+                  {
+                      "dir":  "ComfyUI_essentials.disabled",
+                      "type":  "local",
+                      "url":  null,
+                      "branch":  null,
+                      "commit":  null,
+                      "subject":  null,
+                      "dirty":  null
+                  },
+                  {
+                      "dir":  "ComfyUI_IPAdapter_plus.disabled",
+                      "type":  "git",
+                      "url":  "https://github.com/cubiq/ComfyUI_IPAdapter_plus.git",
+                      "branch":  "main",
+                      "commit":  "a0f451a5113cf9becb0847b92884cb10cbdec0ef",
+                      "subject":  "wording",
+                      "dirty":  false
+                  },
+                  {
+                      "dir":  "ComfyUI_LayerStyle.disabled",
+                      "type":  "git",
+                      "url":  "https://github.com/chflame163/ComfyUI_LayerStyle.git",
+                      "branch":  "main",
+                      "commit":  "a3459a7638c4c2839878089c105c73af0eb2edd2",
+                      "subject":  "Merge pull request #610 from li-lizhe/feat/device-auto-list",
+                      "dirty":  false
+                  },
+                  {
+                      "dir":  "comfyui_segment_anything.disabled",
+                      "type":  "git",
+                      "url":  "https://github.com/storyicon/comfyui_segment_anything.git",
+                      "branch":  "main",
+                      "commit":  "ab6395596399d5048639cdab7e44ec9fae857a93",
+                      "subject":  "Merge pull request #54 from frantic/patch-1",
+                      "dirty":  false
+                  },
+                  {
+                      "dir":  "ComfyUI-AnimateDiff-Evolved.disabled",
+                      "type":  "git",
+                      "url":  "https://github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved.git",
+                      "branch":  "main",
+                      "commit":  "9257651221002dcba0a12f9cff37e1944e58fb60",
+                      "subject":  "Merge pull request #579 from Kosinkadink/chore/bump-version-1.6.0",
+                      "dirty":  false
+                  },
+                  {
+                      "dir":  "comfyui-bridge-llm",
+                      "type":  "local",
+                      "url":  null,
+                      "branch":  null,
+                      "commit":  null,
+                      "subject":  null,
+                      "dirty":  null
+                  },
+                  {
+                      "dir":  "ComfyUI-CatVTON.disabled",
+                      "type":  "local",
+                      "url":  null,
+                      "branch":  null,
+                      "commit":  null,
+                      "subject":  null,
+                      "dirty":  null
+                  },
+                  {
+                      "dir":  "ComfyUI-GGUF",
+                      "type":  "git",
+                      "url":  "https://github.com/RealRebelAI/ComfyUI-GGUF_KREA-2.git",
+                      "branch":  "main",
+                      "commit":  "844ddc686ecda7d6bb494c46d197b3064f739a67",
+                      "subject":  "Merge pull request #1 from Hush3065/patch-1",
+                      "dirty":  true
+                  },
+                  {
+                      "dir":  "ComfyUI-GGUF.backup.disabled",
+                      "type":  "git",
+                      "url":  "https://github.com/city96/ComfyUI-GGUF.git",
+                      "branch":  "main",
+                      "commit":  "6ea2651e7df66d7585f6ffee804b20e92fb38b8a",
+                      "subject":  "Only include metadata on new comfy versions",
+                      "dirty":  false
+                  },
+                  {
+                      "dir":  "ComfyUI-IDM-VTON",
+                      "type":  "git",
+                      "url":  "https://github.com/TemryL/ComfyUI-IDM-VTON.git",
+                      "branch":  "main",
+                      "commit":  "5a8334c58c390381e31a8023cb7ba398ade40b39",
+                      "subject":  "Merge pull request #73 from WAS-PlaiLabs/patch-2",
+                      "dirty":  true
+                  },
+                  {
+                      "dir":  "ComfyUI-Impact-Pack.disabled",
+                      "type":  "local",
+                      "url":  null,
+                      "branch":  null,
+                      "commit":  null,
+                      "subject":  null,
+                      "dirty":  null
+                  },
+                  {
+                      "dir":  "ComfyUI-Jjk-Nodes.disabled",
+                      "type":  "git",
+                      "url":  "https://github.com/jjkramhoeft/ComfyUI-Jjk-Nodes.git",
+                      "branch":  "main",
+                      "commit":  "b3c99bb78a99551776b5eab1a820e1cd58f84f31",
+                      "subject":  "Got UI script working for updating text widget",
+                      "dirty":  true
+                  },
+                  {
+                      "dir":  "ComfyUI-KJNodes",
+                      "type":  "git",
+                      "url":  "https://github.com/kijai/ComfyUI-KJNodes.git",
+                      "branch":  "main",
+                      "commit":  "d3cfe21625e5170126ce06fbfcfe1d88108688c3",
+                      "subject":  "version 1.5.2",
+                      "dirty":  true
+                  },
+                  {
+                      "dir":  "ComfyUI-LLM-Session",
+                      "type":  "git",
+                      "url":  "https://github.com/kantan-kanto/ComfyUI-LLM-Session",
+                      "branch":  "main",
+                      "commit":  "a1cc725a40703eab1376e17fa2a1ff3757ee4c14",
+                      "subject":  "release: Prepare v1.6.0",
+                      "dirty":  false
+                  },
+                  {
+                      "dir":  "ComfyUI-MagicAnimate.disabled",
+                      "type":  "git",
+                      "url":  "https://github.com/thecooltechguy/ComfyUI-MagicAnimate.git",
+                      "branch":  "main",
+                      "commit":  "fc6e02bf88c2eb378d810c5fa446e7d2d1b24276",
+                      "subject":  "Merge pull request #16 from SLAPaper/main",
+                      "dirty":  true
+                  },
+                  {
+                      "dir":  "ComfyUI-MAINodes",
+                      "type":  "local",
+                      "url":  null,
+                      "branch":  null,
+                      "commit":  null,
+                      "subject":  null,
+                      "dirty":  null
+                  },
+                  {
+                      "dir":  "ComfyUI-MimicMotionWrapper",
+                      "type":  "git",
+                      "url":  "https://github.com/kijai/ComfyUI-MimicMotionWrapper.git",
+                      "branch":  "main",
+                      "commit":  "89d0ed551dbb1e0a14e89a01d42a39e9ed755d9c",
+                      "subject":  "small fix, refresh version",
+                      "dirty":  false
+                  },
+                  {
+                      "dir":  "ComfyUI-OOTDiffusion.disabled",
+                      "type":  "git",
+                      "url":  "https://github.com/AuroBit/ComfyUI-OOTDiffusion.git",
+                      "branch":  "diffusers-0.26",
+                      "commit":  "8eddf6ed3d8adfe81f94b50e0464c674207e488d",
+                      "subject":  "Merge pull request #24 from longgui0318/main",
+                      "dirty":  true
+                  },
+                  {
+                      "dir":  "ComfyUI-PlagueKind-Nodes",
+                      "type":  "local",
+                      "url":  null,
+                      "branch":  null,
+                      "commit":  null,
+                      "subject":  null,
+                      "dirty":  null
+                  },
+                  {
+                      "dir":  "ComfyUI-Portrait-Maker.disabled",
+                      "type":  "git",
+                      "url":  "https://gh-proxy.com/https://github.com/THtianhao/ComfyUI-Portrait-Maker",
+                      "branch":  "master",
+                      "commit":  "fde067c9f56e565229da523bd87e987b7c45500e",
+                      "subject":  "update node exception",
+                      "dirty":  true
+                  },
+                  {
+                      "dir":  "ComfyUI-PuLID-Flux.disabled",
+                      "type":  "git",
+                      "url":  "https://github.com/balazik/ComfyUI-PuLID-Flux.git",
+                      "branch":  "master",
+                      "commit":  "a80912fc3435c358607bf4b43a58dbcbebdb09ff",
+                      "subject":  "Added more installation details to README.md",
+                      "dirty":  false
+                  },
+                  {
+                      "dir":  "ComfyUI-QwenVL.disabled",
+                      "type":  "git",
+                      "url":  "https://github.com/1038lab/ComfyUI-QwenVL.git",
+                      "branch":  "main",
+                      "commit":  "1b67b443918801f571714bab636edc1845b7002a",
+                      "subject":  "Update pyproject.toml for version and icon",
+                      "dirty":  true
+                  },
+                  {
+                      "dir":  "ComfyUI-ReActor.disabled",
+                      "type":  "git",
+                      "url":  "https://github.com/Gourieff/ComfyUI-ReActor.git",
+                      "branch":  "main",
+                      "commit":  "a12c5b19dcac9ae8b47e592da39c9711c8f8c756",
+                      "subject":  "UPD: Comfy Registry",
+                      "dirty":  true
+                  },
+                  {
+                      "dir":  "ComfyUI-ReActor-Nodes",
+                      "type":  "local",
+                      "url":  null,
+                      "branch":  null,
+                      "commit":  null,
+                      "subject":  null,
+                      "dirty":  null
+                  },
+                  {
+                      "dir":  "ComfyUI-SeedVR2_VideoUpscaler.disabled",
+                      "type":  "git",
+                      "url":  "https://github.com/numz/ComfyUI-SeedVR2_VideoUpscaler.git",
+                      "branch":  "main",
+                      "commit":  "4490bd1f482e026674543386bb2a4d176da245b9",
+                      "subject":  "Merge pull request #441 from AInVFX/main",
+                      "dirty":  false
+                  },
+                  {
+                      "dir":  "comfyui-sg-llama-cpp",
+                      "type":  "git",
+                      "url":  "https://github.com/sebagallo/comfyui-sg-llama-cpp",
+                      "branch":  "master",
+                      "commit":  "541ad78b522f03557b802c81a033dc2cc36f75ae",
+                      "subject":  "fix: user prompt for non vision models",
+                      "dirty":  false
+                  },
+                  {
+                      "dir":  "ComfyUI-VFI",
+                      "type":  "git",
+                      "url":  "https://github.com/GACLove/ComfyUI-VFI.git",
+                      "branch":  "main",
+                      "commit":  "6176a430f12cd16003f4664c1e3c6af8e96cc3c6",
+                      "subject":  "fix: set default use_fp16 to True in RIFE interpolation",
+                      "dirty":  false
+                  },
+                  {
+                      "dir":  "ComfyUI-VideoHelperSuite",
+                      "type":  "git",
+                      "url":  "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite.git",
+                      "branch":  "main",
+                      "commit":  "4d907bee61e92c2e65af3bd6383a4e4d356126d1",
+                      "subject":  "Add fallback value for step",
+                      "dirty":  false
+                  },
+                  {
+                      "dir":  "ComfyUI-WanVideoWrapper.disabled",
+                      "type":  "git",
+                      "url":  "https://github.com/kijai/ComfyUI-WanVideoWrapper.git",
+                      "branch":  "main",
+                      "commit":  "088128b224242e110d3906c6750e9a3a348a659b",
+                      "subject":  "Don\u0027t count .disabled as duplicate",
+                      "dirty":  false
+                  },
+                  {
+                      "dir":  "efficiency-nodes-comfyui.disabled",
+                      "type":  "git",
+                      "url":  "https://gitclone.com/github.com/jags111/efficiency-nodes-comfyui",
+                      "branch":  "main",
+                      "commit":  "4579b7d6076b2870998a08f5d37883fbc8261ff2",
+                      "subject":  "Fix Image Overlay crash on batch image inputs (#365)",
+                      "dirty":  false
+                  },
+                  {
+                      "dir":  "rgthree-comfy",
+                      "type":  "git",
+                      "url":  "https://github.com/rgthree/rgthree-comfy.git",
+                      "branch":  "main",
+                      "commit":  "449c58fcdd612f7733e54c51f6758ead63fa180b",
+                      "subject":  "Merge pull request #769 from stuttlepress/fix-image-comparer-empty-output",
+                      "dirty":  false
+                  },
+                  {
+                      "dir":  "WAS-Node-Suite-ComfyUI.disabled",
+                      "type":  "local",
+                      "url":  null,
+                      "branch":  null,
+                      "commit":  null,
+                      "subject":  null,
+                      "dirty":  null
+                  }
+              ]
+}
