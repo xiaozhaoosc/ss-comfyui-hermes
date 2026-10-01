@@ -6,8 +6,18 @@ __pycache__/
 !/input/example.png
 /models/
 /temp/
-/custom_nodes/
-!custom_nodes/example_node.py.example
+# custom_nodes 默认整目录忽略；用 /custom_nodes/* 逐项放行下面这 8 个
+# 无 git 上游的节点，否则它们的源码没有任何其它备份来源。
+/custom_nodes/*
+!/custom_nodes/example_node.py.example
+!/custom_nodes/ComfyUI_essentials.disabled/
+!/custom_nodes/comfyui-bridge-llm/
+!/custom_nodes/ComfyUI-CatVTON.disabled/
+!/custom_nodes/ComfyUI-Impact-Pack.disabled/
+!/custom_nodes/ComfyUI-MAINodes/
+!/custom_nodes/ComfyUI-PlagueKind-Nodes/
+!/custom_nodes/ComfyUI-ReActor-Nodes/
+!/custom_nodes/WAS-Node-Suite-ComfyUI.disabled/
 extra_model_paths.yaml
 /.vs
 .vscode/
@@ -41,6 +51,10 @@ uv.lock
 *.exe
 /tools/models/
 /gfpgan/
+
+# 自定义节点里的演示视频与 notebook 检查点缓存（非源码）
+/custom_nodes/**/*.mp4
+.ipynb_checkpoints/
 
 # Python 打包产物
 dist/

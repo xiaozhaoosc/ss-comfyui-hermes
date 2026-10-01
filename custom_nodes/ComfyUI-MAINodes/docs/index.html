@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ComfyUI-MAINodes: Motion Lab demos</title>
+<style>
+  :root { color-scheme: dark; }
+  body { background:#101014; color:#e8e8ea; font:16px/1.55 system-ui, sans-serif;
+         max-width: 980px; margin: 0 auto; padding: 24px 16px 80px; }
+  h1 { font-size: 1.5rem; margin-bottom: .2em; }
+  h2 { font-size: 1.15rem; margin-top: 2.2em; border-bottom: 1px solid #2a2a33; padding-bottom: .3em; }
+  a { color:#8ab4ff; }
+  p.sub { color:#9a9aa5; margin-top: 0; }
+  video { width: 100%; border-radius: 8px; background:#000; display:block; }
+  .cap { color:#9a9aa5; font-size:.92rem; margin: .5em 0 0; }
+  .repo { display:inline-block; margin-top:.6em; padding:.45em .9em; background:#1c1c24;
+          border:1px solid #33333e; border-radius:8px; text-decoration:none; }
+  table { border-collapse: collapse; width: 100%; margin: 1em 0 .4em; font-size: .95rem; }
+  th, td { text-align: left; padding: .45em .8em; border-bottom: 1px solid #2a2a33; }
+  th { color:#9a9aa5; font-weight: 600; }
+</style>
+</head>
+<body>
+<h1>ComfyUI-MAINodes: Motion Lab</h1>
+<p class="sub">A test-time fix for MiniMax H3 smearing fast motion ("roping").
+The clip regenerates as slow motion seeded from your own render, a jerk
+oracle picks where, and exact frame selection recovers realtime. No
+training. Every number below comes from a measured comparison.</p>
+<a class="repo" href="https://github.com/matlowai/ComfyUI-MAINodes">github.com/matlowai/ComfyUI-MAINodes</a>
+
+<h2 id="kitsune">Before and after, fresh scene, default knobs</h2>
+<video controls loop muted playsinline preload="metadata"
+  src="https://github.com/matlowai/ComfyUI-MAINodes/raw/main/assets/kitsune_threeway_sbs.mp4"></video>
+<p class="cap">Baseline smears the aerial spin into a blob; both regenerated
+settings render it clean and keep the choreography. New scene, no per-clip
+tuning.</p>
+
+<h2 id="panrun">Fast motion under a panning camera</h2>
+<video controls loop playsinline preload="metadata"
+  src="https://github.com/matlowai/ComfyUI-MAINodes/raw/main/assets/panrun_sbs.mp4"></video>
+<p class="cap">A lateral tracking shot with a parasol burst mid-pan.
+Baseline left, pipeline right: the parasol grows ribs and the hands
+articulate through the burst. Detailed backgrounds can re-roll during
+dilated spans (watch the laundry line); that limitation and its dials
+are documented in TUNING.md.</p>
+
+<h2 id="ladder">Nine tiers, one seed, with render times</h2>
+<video controls loop playsinline preload="metadata"
+  src="https://github.com/matlowai/ComfyUI-MAINodes/raw/main/assets/preview_ladder_grid.mp4"></video>
+<p class="cap">Every quality/speed rung from a one-minute turbo scout to the
+full pipeline. Times in the header, ws-normalized, 5 s 1024&#178; clip.
+The three paths to know: pipeline at inject 0.70 (~19 min incl. its
+baseline, the default), inject 0.50 (~15 min, sharper, closer motion
+tracking), and probe + expert turbo (~8.5 min, no full baseline). Start
+with a 2 to 3 second clip and scale up; cost follows the burst spans,
+not the runtime.</p>
+
+<h2 id="derope">Baseline vs regenerated, same seed, real time</h2>
+<video controls loop playsinline preload="metadata"
+  src="https://github.com/matlowai/ComfyUI-MAINodes/raw/main/assets/baseline_vs_regenerated_sbs.mp4"></video>
+<p class="cap">Left smears through the backflip, right doesn't.</p>
+
+<h2 id="oracle">The oracle, watching</h2>
+<video controls loop muted playsinline preload="metadata"
+  src="https://github.com/matlowai/ComfyUI-MAINodes/raw/main/assets/oracle_map.mp4"></video>
+<p class="cap">Heat pools where motion runs too hot; the strip lights up as
+the burst arrives. This map is what decides where the timeline dilates.</p>
+
+<h2 id="adaptive">Uniform vs adaptive hold maps</h2>
+<video controls loop playsinline preload="metadata"
+  src="https://github.com/matlowai/ComfyUI-MAINodes/raw/main/assets/uniform_vs_adaptive_sbs.mp4"></video>
+<p class="cap">Already good, and slightly better: uniform dilation, then the
+adaptive map without and with bridge. Same seed all three.</p>
+
+<h2 id="featherweight">The featherweight stack, for 24 to 32 GB cards</h2>
+<video controls loop playsinline preload="metadata"
+  src="https://github.com/matlowai/ComfyUI-MAINodes/raw/main/assets/featherweight_ref_triptych.mp4"></video>
+<p class="cap">The whole pipeline on the smallest community models (w4a8
+DiT, int8 VAE, nvfp4 text encoder, ComfyUI 0.31+). This one is Ref2VA:
+the courier girl is defined from two reference stills and dropped into a
+scene she has never been in, then de-roped. Baseline, recovered, and the
+oracle map that steered it. A 5 s, 1.0 MP de-rope fits a 32 GB card;
+measured numbers in TUNING.md.</p>
+
+<video controls loop playsinline preload="metadata"
+  src="https://github.com/matlowai/ComfyUI-MAINodes/raw/main/assets/featherweight_flf_triptych.mp4"></video>
+<p class="cap">First-and-last-frame conditioning through the same pipeline.
+The end anchor names a timestamp that lands mid-clip on the dilated
+regeneration's clock, and it simply does not fight: the injected
+trajectory owns the timing and the clip still lands on the anchor pose.
+Image-to-video works the same way
+(<a href="https://github.com/matlowai/ComfyUI-MAINodes/raw/main/assets/featherweight_i2v_triptych.mp4">clip</a>).</p>
+
+<video controls loop playsinline preload="metadata"
+  src="https://github.com/matlowai/ComfyUI-MAINodes/raw/main/assets/featherweight_int8_vs_w4a8_quad.mp4"></video>
+<p class="cap">One honest caveat: int8 and w4a8 render different takes from
+the same seed, because quantization bends the trajectory. Both coherent,
+both de-rope cleanly. Compare quality, not pixels.</p>
+
+<h2 id="adapter">The motion adapter (pilot), what it does and where it does not</h2>
+<video controls loop playsinline preload="metadata"
+  src="https://github.com/matlowai/ComfyUI-MAINodes/raw/main/assets/adapter_t2c_insert_quad.mp4"></video>
+<p class="cap">Temporal insertion, the task it was trained on: a window of a
+fight is refilled on a slowed clock. Source plate; the full-clip de-rope on
+the base model (140 s); the windowed pass without the adapter at inject
+0.45 (64 s); the windowed pass with the adapter at 0.75 and inject 0.30
+(50 s), which won on both alternation and rate. Blind picks on unseen
+clips went 7 to 0 for the adapter.</p>
+<video controls playsinline preload="metadata"
+  src="https://github.com/matlowai/ComfyUI-MAINodes/raw/main/assets/adapter_mage_pinned_quad.mp4"></video>
+<p class="cap">A rank-16 LoRA trained on our own de-rope task, applied to the
+de-rope pass only. Why the anchors and the adapter both matter: source
+plate; the windowed de-rope at denoise 0.70 with nothing anchoring the
+window, which lands off the plate and jumps at both splices; the same
+graph with the window's first and last frames pinned, which removes the
+jump for free; and pins plus the adapter at 0.75. Same seed throughout.
+The card at the end lists every setting and the wall time per tile
+(10m41s, 10m41s, 11m20s at 1024 px). Numbers on the
+<a href="https://huggingface.co/matlowai/MiniMax-H3-Motion-Adapter">model
+card</a>.</p>
+<p class="cap"><b>Which graph.</b> Two are in the repo, both API format,
+loadable through the API or the frontend's API import. For a clip you
+already have, the graph behind this exhibit is
+<a href="https://github.com/matlowai/ComfyUI-MAINodes/blob/main/examples/experimental/motion_window_pinned_adapter_api.json"><code>examples/experimental/motion_window_pinned_adapter_api.json</code></a>:
+load the plate, the window is regenerated at denoise 0.70 with its first
+and last frames pinned, the adapter sits on the pass-2 model. To generate
+from text and de-rope in one go, use
+<a href="https://github.com/matlowai/ComfyUI-MAINodes/blob/main/examples/experimental/motion_pipeline_adapter_api.json"><code>examples/experimental/motion_pipeline_adapter_api.json</code></a>:
+the standard Motion Lab pipeline with one <code>LoraLoaderModelOnly</code>
+on the pass-2 model at strength 1.0, inject 0.45. Put the weights in
+<code>models/loras/minimax_h3/</code>; the LoRA node's file name already
+matches the Hugging Face file.</p>
+<video controls loop playsinline preload="metadata"
+  src="https://github.com/matlowai/ComfyUI-MAINodes/raw/main/assets/adapter_chaos_derope_triptych.mp4"></video>
+<p class="cap">A windowed de-rope on a chaotic burst: first generation, the
+de-rope, the de-rope with the adapter. The creature keeps its colour and
+its sparkle here; what the adapter changes is the motion, which stops
+alternating between advance and snap.</p>
+<video controls playsinline preload="metadata"
+  src="https://github.com/matlowai/ComfyUI-MAINodes/raw/main/assets/adapter_rooftop_ood_triptych.mp4"></video>
+<p class="cap">The shipped graphs, end to end, on a scene the adapter never
+saw: the fight choreography moved to a rain-soaked neon rooftop, same seed
+for both arms. Stage 1 plate; the standard de-rope at inject 0.70; the
+de-rope with the adapter at inject 0.45. The adapter pass is smoother
+(alternation 0.24 to 0.19, jitter 0.09 to 0.04) and keeps the plate's
+signage where the 0.70 pass rewrote it. Wall times are in the headers,
+with the GPU each arm ran on; the card at the end has every setting. Each
+graph is at its own shipped inject, so this is a smoke test rather than an
+inject-matched study.</p>
+<video controls loop playsinline preload="metadata"
+  src="https://github.com/matlowai/ComfyUI-MAINodes/raw/main/assets/adapter_ref2va_colour_muting.mp4"></video>
+<p class="cap">Where it is not great, one. The adapter transfers to the Ref2VA
+checkpoint and keeps its motion wins there, but it mutes colour: the
+prismatic creature comes back as a plain calico, at both denoise 0.40 and
+0.70 (saturation 46 to 38 and 54 to 40).</p>
+<video controls loop playsinline preload="metadata"
+  src="https://github.com/matlowai/ComfyUI-MAINodes/raw/main/assets/adapter_drop_full3x_triptych.mp4"></video>
+<p class="cap">Where it is not great, two. The same muting on the fl2va
+checkpoint when the whole clip is de-roped at 3x: first generation, full
+3x de-rope, full 3x with the adapter. The creature loses its colour and
+the particle trail thins out even though the motion itself is smoother.
+So the rule is about content, not checkpoint: strong colour and particle
+effects are at risk, worst on Ref2VA and on full-clip passes. It also
+over-corrects calm chains and costs about a decibel of anchor fidelity on
+native keyframes. Keep it off calm content; on strong-colour subjects
+lower it or accept the trade. This is a pilot released as an intermediate
+option while we try something considerably more ambitious that may not
+work.</p>
+
+<h2 id="vram">What it costs, measured</h2>
+<table>
+<tr><th>featherweight run</th><th>wall time</th><th>peak VRAM you'd see</th></tr>
+<tr><td>3 s at 0.4 MP</td><td>4 min</td><td>~19 GB</td></tr>
+<tr><td>3 s at 0.7 MP</td><td>6.5 min</td><td>~20 GB</td></tr>
+<tr><td>5 s at 1.0 MP</td><td>29 min</td><td>~28 GB brief peak, ~20 GB sustained</td></tr>
+</table>
+<p class="cap">Full pipeline including its own baseline render, w4a8 stack
+on ComfyUI 0.31+, text encoder offloaded after encoding (the default).
+These are one clip's numbers, not a promise: the oracle decides how much
+of your clip gets time-dilated, and the dilated span is what costs. A
+calm clip with one short burst runs well under these figures; wall-to-wall
+action runs at them. Resolution barely moves the peak. Full table, the
+dials, and the exact known-good environment (torch nightly cu132,
+CUDA 13.2, ComfyUI 0.31.1, measured on Blackwell) in
+<a href="https://github.com/matlowai/ComfyUI-MAINodes/blob/main/TUNING.md">TUNING.md</a>.</p>
+
+<p style="margin-top:3em">Docs: <a href="https://github.com/matlowai/ComfyUI-MAINodes/blob/main/TUNING.md">TUNING.md</a>
+&middot; workflows in <a href="https://github.com/matlowai/ComfyUI-MAINodes/tree/main/examples">examples/</a>
+&middot; MIT</p>
+<h2>A6 precision review</h2>
+<p class="cap">Same-seed A/B pages: NVFP4 / FP8 activation arms and real NVFP4 checkpoints
+next to their pixel, flow and audio rulers, with synced head-to-head playback.
+<a href="a6-review/index.html">Open the review pages</a>.</p>
+</body>
+</html>

@@ -2,11 +2,12 @@
     "generated_at":  "2026-10-01",
     "root":  "custom_nodes",
     "count":  35,
-    "note":  "custom_nodes 目录被 .gitignore 忽略（见 .gitignore 第 9 行）。本清单记录每个节点的来源仓库与 commit SHA，用于换机/协作时复现；type=git 表示可用 url+commit 重新 clone 并检出，type=local 表示该目录没有可用 git 上游（本地开发或手动放置），需另行备份。dirty=true 表示该节点有未提交的本地改动。",
+    "note":  "custom_nodes 默认被 .gitignore 忽略（/custom_nodes/*），其中 8 个无 git 上游的节点已例外放行、源码随本仓库一起版本化（in_repo=true）。type=git 的节点可用 url+commit 重新 clone 并检出；type=local 且 in_repo=false 表示无上游且未入库。各节点未提交的本地改动已导出为补丁，见 custom_nodes_patches/。",
     "nodes":  [
                   {
                       "dir":  "CharacterFaceSwap.disabled",
                       "type":  "git",
+                      "in_repo":  false,
                       "url":  "https://github.com/ArtBot2023/CharacterFaceSwap",
                       "branch":  "main",
                       "commit":  "f395496e5bf50d88579934ec2f776cd81866e8e9",
@@ -16,6 +17,7 @@
                   {
                       "dir":  "ComfyUI_Comfyroll_CustomNodes.disabled",
                       "type":  "git",
+                      "in_repo":  false,
                       "url":  "https://gitclone.com/github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes",
                       "branch":  "main",
                       "commit":  "d78b780ae43fcf8c6b7c6505e6ffb4584281ceca",
@@ -25,6 +27,7 @@
                   {
                       "dir":  "comfyui_controlnet_aux",
                       "type":  "git",
+                      "in_repo":  false,
                       "url":  "https://github.com/Fannovel16/comfyui_controlnet_aux",
                       "branch":  "main",
                       "commit":  "0cd290477128d42cdc3e76a826a402d866e8c684",
@@ -34,6 +37,7 @@
                   {
                       "dir":  "ComfyUI_essentials.disabled",
                       "type":  "local",
+                      "in_repo":  true,
                       "url":  null,
                       "branch":  null,
                       "commit":  null,
@@ -43,6 +47,7 @@
                   {
                       "dir":  "ComfyUI_IPAdapter_plus.disabled",
                       "type":  "git",
+                      "in_repo":  false,
                       "url":  "https://github.com/cubiq/ComfyUI_IPAdapter_plus.git",
                       "branch":  "main",
                       "commit":  "a0f451a5113cf9becb0847b92884cb10cbdec0ef",
@@ -52,6 +57,7 @@
                   {
                       "dir":  "ComfyUI_LayerStyle.disabled",
                       "type":  "git",
+                      "in_repo":  false,
                       "url":  "https://github.com/chflame163/ComfyUI_LayerStyle.git",
                       "branch":  "main",
                       "commit":  "a3459a7638c4c2839878089c105c73af0eb2edd2",
@@ -61,6 +67,7 @@
                   {
                       "dir":  "comfyui_segment_anything.disabled",
                       "type":  "git",
+                      "in_repo":  false,
                       "url":  "https://github.com/storyicon/comfyui_segment_anything.git",
                       "branch":  "main",
                       "commit":  "ab6395596399d5048639cdab7e44ec9fae857a93",
@@ -70,6 +77,7 @@
                   {
                       "dir":  "ComfyUI-AnimateDiff-Evolved.disabled",
                       "type":  "git",
+                      "in_repo":  false,
                       "url":  "https://github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved.git",
                       "branch":  "main",
                       "commit":  "9257651221002dcba0a12f9cff37e1944e58fb60",
@@ -79,6 +87,7 @@
                   {
                       "dir":  "comfyui-bridge-llm",
                       "type":  "local",
+                      "in_repo":  true,
                       "url":  null,
                       "branch":  null,
                       "commit":  null,
@@ -88,6 +97,7 @@
                   {
                       "dir":  "ComfyUI-CatVTON.disabled",
                       "type":  "local",
+                      "in_repo":  true,
                       "url":  null,
                       "branch":  null,
                       "commit":  null,
@@ -97,6 +107,7 @@
                   {
                       "dir":  "ComfyUI-GGUF",
                       "type":  "git",
+                      "in_repo":  false,
                       "url":  "https://github.com/RealRebelAI/ComfyUI-GGUF_KREA-2.git",
                       "branch":  "main",
                       "commit":  "844ddc686ecda7d6bb494c46d197b3064f739a67",
@@ -106,6 +117,7 @@
                   {
                       "dir":  "ComfyUI-GGUF.backup.disabled",
                       "type":  "git",
+                      "in_repo":  false,
                       "url":  "https://github.com/city96/ComfyUI-GGUF.git",
                       "branch":  "main",
                       "commit":  "6ea2651e7df66d7585f6ffee804b20e92fb38b8a",
@@ -115,6 +127,7 @@
                   {
                       "dir":  "ComfyUI-IDM-VTON",
                       "type":  "git",
+                      "in_repo":  false,
                       "url":  "https://github.com/TemryL/ComfyUI-IDM-VTON.git",
                       "branch":  "main",
                       "commit":  "5a8334c58c390381e31a8023cb7ba398ade40b39",
@@ -124,6 +137,7 @@
                   {
                       "dir":  "ComfyUI-Impact-Pack.disabled",
                       "type":  "local",
+                      "in_repo":  true,
                       "url":  null,
                       "branch":  null,
                       "commit":  null,
@@ -133,6 +147,7 @@
                   {
                       "dir":  "ComfyUI-Jjk-Nodes.disabled",
                       "type":  "git",
+                      "in_repo":  false,
                       "url":  "https://github.com/jjkramhoeft/ComfyUI-Jjk-Nodes.git",
                       "branch":  "main",
                       "commit":  "b3c99bb78a99551776b5eab1a820e1cd58f84f31",
@@ -142,6 +157,7 @@
                   {
                       "dir":  "ComfyUI-KJNodes",
                       "type":  "git",
+                      "in_repo":  false,
                       "url":  "https://github.com/kijai/ComfyUI-KJNodes.git",
                       "branch":  "main",
                       "commit":  "d3cfe21625e5170126ce06fbfcfe1d88108688c3",
@@ -151,6 +167,7 @@
                   {
                       "dir":  "ComfyUI-LLM-Session",
                       "type":  "git",
+                      "in_repo":  false,
                       "url":  "https://github.com/kantan-kanto/ComfyUI-LLM-Session",
                       "branch":  "main",
                       "commit":  "a1cc725a40703eab1376e17fa2a1ff3757ee4c14",
@@ -160,6 +177,7 @@
                   {
                       "dir":  "ComfyUI-MagicAnimate.disabled",
                       "type":  "git",
+                      "in_repo":  false,
                       "url":  "https://github.com/thecooltechguy/ComfyUI-MagicAnimate.git",
                       "branch":  "main",
                       "commit":  "fc6e02bf88c2eb378d810c5fa446e7d2d1b24276",
@@ -169,6 +187,7 @@
                   {
                       "dir":  "ComfyUI-MAINodes",
                       "type":  "local",
+                      "in_repo":  true,
                       "url":  null,
                       "branch":  null,
                       "commit":  null,
@@ -178,6 +197,7 @@
                   {
                       "dir":  "ComfyUI-MimicMotionWrapper",
                       "type":  "git",
+                      "in_repo":  false,
                       "url":  "https://github.com/kijai/ComfyUI-MimicMotionWrapper.git",
                       "branch":  "main",
                       "commit":  "89d0ed551dbb1e0a14e89a01d42a39e9ed755d9c",
@@ -187,6 +207,7 @@
                   {
                       "dir":  "ComfyUI-OOTDiffusion.disabled",
                       "type":  "git",
+                      "in_repo":  false,
                       "url":  "https://github.com/AuroBit/ComfyUI-OOTDiffusion.git",
                       "branch":  "diffusers-0.26",
                       "commit":  "8eddf6ed3d8adfe81f94b50e0464c674207e488d",
@@ -196,6 +217,7 @@
                   {
                       "dir":  "ComfyUI-PlagueKind-Nodes",
                       "type":  "local",
+                      "in_repo":  true,
                       "url":  null,
                       "branch":  null,
                       "commit":  null,
@@ -205,6 +227,7 @@
                   {
                       "dir":  "ComfyUI-Portrait-Maker.disabled",
                       "type":  "git",
+                      "in_repo":  false,
                       "url":  "https://gh-proxy.com/https://github.com/THtianhao/ComfyUI-Portrait-Maker",
                       "branch":  "master",
                       "commit":  "fde067c9f56e565229da523bd87e987b7c45500e",
@@ -214,6 +237,7 @@
                   {
                       "dir":  "ComfyUI-PuLID-Flux.disabled",
                       "type":  "git",
+                      "in_repo":  false,
                       "url":  "https://github.com/balazik/ComfyUI-PuLID-Flux.git",
                       "branch":  "master",
                       "commit":  "a80912fc3435c358607bf4b43a58dbcbebdb09ff",
@@ -223,6 +247,7 @@
                   {
                       "dir":  "ComfyUI-QwenVL.disabled",
                       "type":  "git",
+                      "in_repo":  false,
                       "url":  "https://github.com/1038lab/ComfyUI-QwenVL.git",
                       "branch":  "main",
                       "commit":  "1b67b443918801f571714bab636edc1845b7002a",
@@ -232,6 +257,7 @@
                   {
                       "dir":  "ComfyUI-ReActor.disabled",
                       "type":  "git",
+                      "in_repo":  false,
                       "url":  "https://github.com/Gourieff/ComfyUI-ReActor.git",
                       "branch":  "main",
                       "commit":  "a12c5b19dcac9ae8b47e592da39c9711c8f8c756",
@@ -241,6 +267,7 @@
                   {
                       "dir":  "ComfyUI-ReActor-Nodes",
                       "type":  "local",
+                      "in_repo":  true,
                       "url":  null,
                       "branch":  null,
                       "commit":  null,
@@ -250,6 +277,7 @@
                   {
                       "dir":  "ComfyUI-SeedVR2_VideoUpscaler.disabled",
                       "type":  "git",
+                      "in_repo":  false,
                       "url":  "https://github.com/numz/ComfyUI-SeedVR2_VideoUpscaler.git",
                       "branch":  "main",
                       "commit":  "4490bd1f482e026674543386bb2a4d176da245b9",
@@ -259,6 +287,7 @@
                   {
                       "dir":  "comfyui-sg-llama-cpp",
                       "type":  "git",
+                      "in_repo":  false,
                       "url":  "https://github.com/sebagallo/comfyui-sg-llama-cpp",
                       "branch":  "master",
                       "commit":  "541ad78b522f03557b802c81a033dc2cc36f75ae",
@@ -268,6 +297,7 @@
                   {
                       "dir":  "ComfyUI-VFI",
                       "type":  "git",
+                      "in_repo":  false,
                       "url":  "https://github.com/GACLove/ComfyUI-VFI.git",
                       "branch":  "main",
                       "commit":  "6176a430f12cd16003f4664c1e3c6af8e96cc3c6",
@@ -277,6 +307,7 @@
                   {
                       "dir":  "ComfyUI-VideoHelperSuite",
                       "type":  "git",
+                      "in_repo":  false,
                       "url":  "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite.git",
                       "branch":  "main",
                       "commit":  "4d907bee61e92c2e65af3bd6383a4e4d356126d1",
@@ -286,6 +317,7 @@
                   {
                       "dir":  "ComfyUI-WanVideoWrapper.disabled",
                       "type":  "git",
+                      "in_repo":  false,
                       "url":  "https://github.com/kijai/ComfyUI-WanVideoWrapper.git",
                       "branch":  "main",
                       "commit":  "088128b224242e110d3906c6750e9a3a348a659b",
@@ -295,6 +327,7 @@
                   {
                       "dir":  "efficiency-nodes-comfyui.disabled",
                       "type":  "git",
+                      "in_repo":  false,
                       "url":  "https://gitclone.com/github.com/jags111/efficiency-nodes-comfyui",
                       "branch":  "main",
                       "commit":  "4579b7d6076b2870998a08f5d37883fbc8261ff2",
@@ -304,6 +337,7 @@
                   {
                       "dir":  "rgthree-comfy",
                       "type":  "git",
+                      "in_repo":  false,
                       "url":  "https://github.com/rgthree/rgthree-comfy.git",
                       "branch":  "main",
                       "commit":  "449c58fcdd612f7733e54c51f6758ead63fa180b",
@@ -313,6 +347,7 @@
                   {
                       "dir":  "WAS-Node-Suite-ComfyUI.disabled",
                       "type":  "local",
+                      "in_repo":  true,
                       "url":  null,
                       "branch":  null,
                       "commit":  null,
