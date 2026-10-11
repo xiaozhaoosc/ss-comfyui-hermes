@@ -1,0 +1,151 @@
+{
+  "1": {
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Input Image"
+    },
+    "inputs": {
+      "image": "input_outfit.jpg",
+      "upload": "image"
+    }
+  },
+  "8": {
+    "class_type": "FaceProtectMask",
+    "_meta": {
+      "title": "Face-Protected Clothing Mask"
+    },
+    "inputs": {
+      "image": ["1", 0],
+      "clothing_labels": "4,7,8",
+      "protect_labels": "2,3,11",
+      "protect_expand": 10,
+      "feather": 5
+    }
+  },
+  "5": {
+    "class_type": "GrowMask",
+    "_meta": {
+      "title": "Expand Mask"
+    },
+    "inputs": {
+      "mask": ["8", 0],
+      "expand": 20,
+      "tapered_corners": true
+    }
+  },
+  "6": {
+    "class_type": "ImpactGaussianBlurMask",
+    "_meta": {
+      "title": "Blur Mask"
+    },
+    "inputs": {
+      "mask": ["5", 0],
+      "kernel_size": 11,
+      "sigma": 5.0
+    }
+  },
+  "7": {
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load SDXL"
+    },
+    "inputs": {
+      "ckpt_name": "sd_xl_base_1.0.safetensors"
+    }
+  },
+  "80": {
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Positive Prompt"
+    },
+    "inputs": {
+      "text": "beautiful woman wearing elegant red evening dress, intricate embroidery, silk fabric, studio lighting, high fashion photography, 8k, sharp focus",
+      "clip": ["7", 1]
+    }
+  },
+  "90": {
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Negative Prompt"
+    },
+    "inputs": {
+      "text": "ugly, blurry, low quality, deformed, disfigured, watermark, text, logo, bad anatomy, extra limbs",
+      "clip": ["7", 1]
+    }
+  },
+  "11": {
+    "class_type": "VAEEncodeForInpaint",
+    "_meta": {
+      "title": "Inpaint Encode"
+    },
+    "inputs": {
+      "pixels": ["1", 0],
+      "vae": ["7", 2],
+      "mask": ["6", 0],
+      "grow_mask_by": 8
+    }
+  },
+  "12": {
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    },
+    "inputs": {
+      "model": ["7", 0],
+      "positive": ["80", 0],
+      "negative": ["90", 0],
+      "latent_image": ["11", 0],
+      "seed": 42,
+      "control_after_generate": "fixed",
+      "steps": 25,
+      "cfg": 7.5,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 0.9
+    }
+  },
+  "13": {
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    },
+    "inputs": {
+      "samples": ["12", 0],
+      "vae": ["7", 2]
+    }
+  },
+  "14": {
+    "class_type": "ImageCompositeMasked",
+    "_meta": {
+      "title": "Composite"
+    },
+    "inputs": {
+      "destination": ["1", 0],
+      "source": ["13", 0],
+      "mask": ["6", 0],
+      "x": 0,
+      "y": 0,
+      "resize_source": false
+    }
+  },
+  "15": {
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Output"
+    },
+    "inputs": {
+      "images": ["14", 0],
+      "filename_prefix": "outfit_swap_output"
+    }
+  },
+  "99": {
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Parsing Preview"
+    },
+    "inputs": {
+      "images": ["8", 1],
+      "filename_prefix": "parsing_preview"
+    }
+  }
+}

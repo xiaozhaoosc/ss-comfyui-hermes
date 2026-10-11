@@ -1,0 +1,44 @@
+{
+  "name": "yunxiao_gesture",
+  "title": "云霄·古风手势舞",
+  "date": "2026-09-12",
+  "style_mode": "real",
+  "width": 544,
+  "height": 960,
+  "frames": 90,
+  "steps": 34,
+  "shift_video": 14.0,
+  "shift_audio": 3.5,
+  "seed_base": 20261300,
+  "style": "Style: photorealistic live-action cosplay cinematography, real human actress, ultra high detail, cinematic night lighting with a violet-blue color grade, mystical and dreamy fairy atmosphere, realistic skin texture, realistic hair strands, realistic silk and gauze fabric physics, shallow depth of field, subtle film grain. ",
+  "character": "Character: a young East Asian woman in her early twenties, delicate oval face, fair luminous skin, long straight violet-purple hair reaching her waist with wispy air bangs and softly curled ends, elegant ancient-Chinese makeup with slender thin brows, violet eyeshadow, long lashes and matte red lips, a gorgeous black hair crown with sharp spike ornaments on top of her head, a slim collarbone necklace, a black wrist guard on her left wrist. ",
+  "outfit": "Costume: a pale lavender deep-V cross-collar hanfu with silk sleeves, a matching sheer gauze shawl draped over her arms, a wide black belt decorated with golden patterns cinching her waist, and a slit skirt that reveals her leg when she moves. ",
+  "setting": "Setting: night in an ancient Chinese garden, deep blue-violet night sky, faint mist drifting close to the ground, distant silhouetted trees, soft moonlight rimming her hair and shoulders, a quiet exotic and romantic atmosphere. ",
+  "neg": "outfit change, face change",
+  "segments": [
+    {
+      "camera": "Camera: fixed camera, eye level, medium shot framing her upper body and part of her legs, centered composition with her in the middle of the frame, no camera movement, no pull or push, no cuts, the whole take is continuous. ",
+      "motion": "Action: she presses both palms together in front of her chest, then slowly separates her hands and lifts them upward until her fingertips point toward each other above her head, sleeves sliding down her forearms, her body swaying softly to the rhythm. ",
+      "micro": "She smiles gently and keeps her gaze lively and sweet, chin slightly lifted, eyes on the camera.",
+      "audio": "Audio: a light catchy Chinese female pop song, a young woman singing in Mandarin the hook line \"亲爱的，你是否还记得\", soft airy voice over an easy mid-tempo pop beat with plucked strings and light electronic percussion, romantic and sweet, no other voices. "
+    },
+    {
+      "camera": "Camera: fixed camera, eye level, medium shot framing her upper body and part of her legs, centered composition, no camera movement and no cuts. ",
+      "motion": "Action: her hands roll in a smooth wave in front of her chest, wrists loose, then her right hand sweeps outward to the side while her left hand comes up to support her chin, her head tilting slightly. ",
+      "micro": "Her eyes stay bright and a little flirtatious, a small smile on her lips, a quick soft blink as she tilts her head.",
+      "audio": "Audio: the same female Mandarin pop song continues smoothly, her vocal melody riding the light beat, guzheng and synth accents behind it, sweet and dreamy, no other speech. "
+    },
+    {
+      "camera": "Camera: fixed camera, eye level, medium shot framing her upper body and part of her legs, centered composition, no camera movement and no cuts. ",
+      "motion": "Action: both hands cross in front of her chest, then open outward to the two sides with palms facing out, the gauze shawl spreading with the movement, her waist twisting gently. ",
+      "micro": "Her expression stays confident and charming with a soft smile, chin level, eyes holding the camera.",
+      "audio": "Audio: the song keeps its gentle groove, the female vocal carrying the chorus, soft percussion and strings, warm and romantic night mood, no other speech. "
+    },
+    {
+      "camera": "Camera: fixed camera, eye level, medium shot framing her upper body and part of her legs, centered composition, no camera movement and no cuts. ",
+      "motion": "Action: her hands draw back toward her chest with fingers curled like soft claws, then close into loose fists that rise up to the sides of her cheeks while she twists her upper body slightly to the beat. ",
+      "micro": "Her eyes sparkle, ending with a sweet bright smile facing the camera, chin tucked a little, mouth corners lifted.",
+      "audio": "Audio: the same female Mandarin pop song reaches its final sweet phrase and ends on a soft sustained note with the beat tapering out, no other speech. "
+    }
+  ]
+}

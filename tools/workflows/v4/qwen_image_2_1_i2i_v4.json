@@ -1,0 +1,181 @@
+{
+  "1": {
+    "inputs": {
+      "unet_name": "qwen-image-2.1-UC-Q4_K_M.gguf"
+    },
+    "class_type": "UnetLoaderGGUF",
+    "_meta": {
+      "title": "1. 视觉扩散模型 (DiT GGUF) [inject:unet]"
+    }
+  },
+  "2": {
+    "inputs": {
+      "clip_name": "qwen3vl_8b_heretic-Q4_K_M.gguf",
+      "type": "qwen_image"
+    },
+    "class_type": "CLIPLoaderGGUF",
+    "_meta": {
+      "title": "2. 文本编码器 (CLIP GGUF) [inject:clip]"
+    }
+  },
+  "3": {
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "3. 图像编解码器 (VAE) [inject:vae]"
+    }
+  },
+  "4": {
+    "inputs": {
+      "image": "qwen_test_source.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "4. 加载输入参考图像 [inject:image]"
+    }
+  },
+  "5": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "megapixels": 1.5,
+      "resolution_steps": 8,
+      "image": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "5. 归一到 1.5MP (8 的倍数) [inject:resize]"
+    }
+  },
+  "6": {
+    "inputs": {
+      "pixels": [
+        "5",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "6. 原图编码为初始潜变量 (替代 v3 的定尺空潜空间)"
+    }
+  },
+  "7": {
+    "inputs": {
+      "text": "masterpiece, anime aesthetic, vibrant fantasy art, a beautiful goddess surrounded by glowing magical runes and stardust, intricate dress, highly detailed lighting",
+      "clip": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "7. 正向提示词 (纯文本条件, 不走参考潜变量) [inject:prompt]"
+    }
+  },
+  "8": {
+    "inputs": {
+      "text": "worst quality, low quality, blurry, deformed, distorted, bad anatomy, jpeg artifacts, watermark, text",
+      "clip": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "8. 负向提示词 (cfg>1 时生效) [inject:negative]"
+    }
+  },
+  "9": {
+    "inputs": {
+      "shift": 3.0,
+      "model": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "9. 采样位移对齐官方 edit 模板 (shift 3.0) [inject:shift]"
+    }
+  },
+  "10": {
+    "inputs": {
+      "strength": 1.0,
+      "model": [
+        "9",
+        0
+      ]
+    },
+    "class_type": "CFGNorm",
+    "_meta": {
+      "title": "10. CFG 归一化 (官方 edit 模板同款)"
+    }
+  },
+  "11": {
+    "inputs": {
+      "seed": 42,
+      "steps": 20,
+      "cfg": 2.5,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 0.6,
+      "model": [
+        "10",
+        0
+      ],
+      "positive": [
+        "7",
+        0
+      ],
+      "negative": [
+        "8",
+        0
+      ],
+      "latent_image": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "11. KSampler 重绘 (20步 / CFG 2.5 / Denoise 0.6) [inject:sampler]"
+    }
+  },
+  "12": {
+    "inputs": {
+      "samples": [
+        "11",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "12. VAE 解码为重绘图像"
+    }
+  },
+  "13": {
+    "inputs": {
+      "filename_prefix": "2026-09-30/qwen_i2i",
+      "images": [
+        "12",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "13. 保存图像 (按日期归档) [inject:output]"
+    }
+  }
+}

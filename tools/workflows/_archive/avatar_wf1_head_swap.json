@@ -1,0 +1,71 @@
+{
+  "prompt": {
+    "1": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "todo/face/dasiy.png"
+      }
+    },
+    "2": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "todo/face/ken4.png"
+      }
+    },
+    "3": {
+      "class_type": "ReActorFaceSwap",
+      "inputs": {
+        "enabled": true,
+        "input_image": ["1", 0],
+        "swap_model": "inswapper_128.onnx",
+        "facedetection": "YOLOv5l",
+        "face_restore_model": "codeformer.pth",
+        "face_restore_visibility": 0.75,
+        "codeformer_weight": 0.5,
+        "detect_gender_input": "no",
+        "detect_gender_source": "no",
+        "input_faces_index": "0",
+        "source_faces_index": "0",
+        "console_log_level": 1,
+        "source_image": ["2", 0]
+      }
+    },
+    "4": {
+      "class_type": "ReActorMaskHelper",
+      "inputs": {
+        "image": ["1", 0],
+        "swapped_image": ["3", 0],
+        "bbox_model_name": "bbox/face_yolov8m.pt",
+        "bbox_threshold": 0.5,
+        "bbox_dilation": 10,
+        "bbox_crop_factor": 3.0,
+        "bbox_drop_size": 10,
+        "sam_model_name": "sam_vit_b_01ec64.pth",
+        "sam_dilation": 0,
+        "sam_threshold": 0.93,
+        "bbox_expansion": 0,
+        "mask_hint_threshold": 0.7,
+        "mask_hint_use_negative": "False",
+        "morphology_operation": "close",
+        "morphology_distance": 5,
+        "blur_radius": 9,
+        "sigma_factor": 1.0
+      }
+    },
+    "5": {
+      "class_type": "SaveImage",
+      "inputs": {
+        "images": ["4", 0],
+        "filename_prefix": "avatar_wf1_head_swap"
+      }
+    },
+    "6": {
+      "class_type": "SaveImage",
+      "inputs": {
+        "images": ["4", 2],
+        "filename_prefix": "avatar_wf1_head_mask"
+      }
+    }
+  },
+  "client_id": "avatar-wf1-head-swap"
+}

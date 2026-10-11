@@ -1,0 +1,19 @@
+[CHARACTER IDENTITY LOCK — HIGHEST PRIORITY]
+Use the uploaded reference images:
+Image 1: C01 Face Front Master — facial identity reference.
+Image 2: C02 Full Body Master — body anatomy, height, and costume reference.
+Image 3: C03 Left 3/4 View — perspective and angle reference.
+Generate the exact same East Asian woman from a right three-quarter (3/4) angle.
+The woman must be unmistakably the exact same person as in C01, C02, and C03.
+
+[C04 RIGHT THREE-QUARTER VIEW (45 DEGREES)]
+Camera position: approximately 45 degrees to the woman's right front side.
+Show:
+- Right-side facial structure, nose bridge profile, cheekbone contour, jawline, chin, and ear.
+- Right-side perspective of her almond eyes, soft eyebrows, and gentle calm expression.
+- Dark brown/black hair tied in the exact same soft elegant bun with wispy face-framing tendrils and bangs around temples.
+- Slender neck, collarbones, and feminine hourglass figure.
+- Right side of the same floral cream mini dress from C02/C03.
+- Standing posture, looking naturally slightly off-center or toward camera.
+- Same studio commercial portrait lighting, soft neutral solid grey backdrop.
+Maintain identical facial identity, body proportions, and costume. Only the camera angle mirrors to 45° right front side. Ultra-photorealistic.

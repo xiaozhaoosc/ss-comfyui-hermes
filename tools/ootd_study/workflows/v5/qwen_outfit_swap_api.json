@@ -1,0 +1,180 @@
+{
+  "1": {
+    "class_type": "UnetLoaderGGUF",
+    "inputs": {
+      "unet_name": "qwen-image-2.1-UC-Q4_K_M.gguf"
+    },
+    "_meta": {
+      "title": "1. 视觉扩散模型 (Qwen-Image-2.1 DiT GGUF)"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors",
+      "type": "qwen_image"
+    },
+    "_meta": {
+      "title": "2. 文本编码器 (官方 int8; 编辑含视觉塔, 不可用 GGUF)"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    },
+    "_meta": {
+      "title": "3. 图像 VAE (bf16)"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "[inject:image]"
+    },
+    "_meta": {
+      "title": "4. 人物原图 (output 比例跟随此图) · 占位符: image"
+    }
+  },
+  "16": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "[inject:garment]"
+    },
+    "_meta": {
+      "title": "16. 服装参考图 (模特上身/平铺产品图) · 占位符: garment"
+    }
+  },
+  "5": {
+    "class_type": "FluxKontextImageScale",
+    "inputs": {
+      "image": ["4", 0]
+    },
+    "_meta": {
+      "title": "5. 人物图归一到 Kontext 优选分辨率"
+    }
+  },
+  "17": {
+    "class_type": "FluxKontextImageScale",
+    "inputs": {
+      "image": ["16", 0]
+    },
+    "_meta": {
+      "title": "17. 服装图归一到 Kontext 优选分辨率"
+    }
+  },
+  "6": {
+    "class_type": "VAEEncode",
+    "inputs": {
+      "pixels": ["5", 0],
+      "vae": ["3", 0]
+    },
+    "_meta": {
+      "title": "6. 人物原图编码为初始潜变量"
+    }
+  },
+  "7": {
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "inputs": {
+      "prompt": "[inject:prompt]",
+      "clip": ["2", 0],
+      "vae": ["3", 0],
+      "image1": ["5", 0],
+      "image2": ["17", 0]
+    },
+    "_meta": {
+      "title": "7. 换装指令 + 双图参考 (人物 image1 / 服装 image2) · 占位符: prompt"
+    }
+  },
+  "8": {
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "inputs": {
+      "prompt": "worst quality, low quality, deformed, distorted, blurry, bad anatomy, extra limbs, jpeg artifacts, watermark, text",
+      "clip": ["2", 0],
+      "vae": ["3", 0],
+      "image1": ["5", 0],
+      "image2": ["17", 0]
+    },
+    "_meta": {
+      "title": "8. 负向提示词 (固定)"
+    }
+  },
+  "9": {
+    "class_type": "FluxKontextMultiReferenceLatentMethod",
+    "inputs": {
+      "reference_latents_method": "index_timestep_zero",
+      "conditioning": ["7", 0]
+    },
+    "_meta": {
+      "title": "9. 正向参考潜变量注入 (index_timestep_zero, 必需)"
+    }
+  },
+  "10": {
+    "class_type": "FluxKontextMultiReferenceLatentMethod",
+    "inputs": {
+      "reference_latents_method": "index_timestep_zero",
+      "conditioning": ["8", 0]
+    },
+    "_meta": {
+      "title": "10. 负向参考潜变量注入"
+    }
+  },
+  "11": {
+    "class_type": "ModelSamplingAuraFlow",
+    "inputs": {
+      "shift": 3.1,
+      "model": ["1", 0]
+    },
+    "_meta": {
+      "title": "11. 采样位移对齐官方 edit 模板 (shift 3.1)"
+    }
+  },
+  "12": {
+    "class_type": "CFGNorm",
+    "inputs": {
+      "strength": 1.0,
+      "model": ["11", 0]
+    },
+    "_meta": {
+      "title": "12. CFG 归一化 (官方 edit 模板同款)"
+    }
+  },
+  "13": {
+    "class_type": "KSampler",
+    "inputs": {
+      "seed": "[inject:seed]",
+      "steps": 40,
+      "cfg": 3.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": ["12", 0],
+      "positive": ["9", 0],
+      "negative": ["10", 0],
+      "latent_image": ["6", 0]
+    },
+    "_meta": {
+      "title": "13. KSampler (40 步 / CFG 3.0 / euler simple) · 占位符: seed"
+    }
+  },
+  "14": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": ["13", 0],
+      "vae": ["3", 0]
+    },
+    "_meta": {
+      "title": "14. VAE 解码为换装后图像"
+    }
+  },
+  "15": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "[inject:output]",
+      "images": ["14", 0]
+    },
+    "_meta": {
+      "title": "15. 保存图像 (按日期/项目归档) · 占位符: output"
+    }
+  }
+}

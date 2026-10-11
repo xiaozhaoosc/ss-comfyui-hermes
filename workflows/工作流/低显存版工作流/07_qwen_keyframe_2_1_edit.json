@@ -1,0 +1,818 @@
+{
+ "id": "00000000-0000-0000-0000-000000000000",
+ "revision": 0,
+ "last_node_id": 16,
+ "last_link_id": 20,
+ "nodes": [
+  {
+   "id": 1,
+   "type": "UnetLoaderGGUF",
+   "pos": [
+    40,
+    40
+   ],
+   "size": [
+    400,
+    98
+   ],
+   "flags": {},
+   "order": 0,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "MODEL",
+     "type": "MODEL",
+     "links": [
+      7
+     ],
+     "slot_index": 0
+    }
+   ],
+   "title": "1. 关键帧扩散模型 (DiT GGUF)",
+   "properties": {
+    "Node name for S&R": "UnetLoaderGGUF"
+   },
+   "widgets_values": [
+    "qwen-image-2.1-UC-Q4_K_M.gguf"
+   ]
+  },
+  {
+   "id": 2,
+   "type": "CLIPLoader",
+   "pos": [
+    40,
+    178
+   ],
+   "size": [
+    400,
+    154
+   ],
+   "flags": {},
+   "order": 1,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "CLIP",
+     "type": "CLIP",
+     "links": [
+      1,
+      2
+     ],
+     "slot_index": 0
+    }
+   ],
+   "title": "2. 文本编码器 (官方 int8, 编辑需视觉塔故不能用 GGUF)",
+   "properties": {
+    "Node name for S&R": "CLIPLoader"
+   },
+   "widgets_values": [
+    "qwen3vl_8b_int8_convrot.safetensors",
+    "qwen_image",
+    "default"
+   ]
+  },
+  {
+   "id": 3,
+   "type": "VAELoader",
+   "pos": [
+    40,
+    372
+   ],
+   "size": [
+    400,
+    98
+   ],
+   "flags": {},
+   "order": 2,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "VAE",
+     "type": "VAE",
+     "links": [
+      3,
+      4,
+      5,
+      6
+     ],
+     "slot_index": 0
+    }
+   ],
+   "title": "3. 图像编解码器 (VAE)",
+   "properties": {
+    "Node name for S&R": "VAELoader"
+   },
+   "widgets_values": [
+    "qwen_image_2.1_vae_bf16.safetensors"
+   ]
+  },
+  {
+   "id": 4,
+   "type": "LoadImage",
+   "pos": [
+    40,
+    510
+   ],
+   "size": [
+    400,
+    314
+   ],
+   "flags": {},
+   "order": 3,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      8
+     ],
+     "slot_index": 0
+    },
+    {
+     "name": "MASK",
+     "type": "MASK",
+     "links": null,
+     "slot_index": 1
+    }
+   ],
+   "title": "4. 加载参考人物图 (输出比例跟随此图)",
+   "properties": {
+    "Node name for S&R": "LoadImage"
+   },
+   "widgets_values": [
+    "reference_person.png"
+   ]
+  },
+  {
+   "id": 5,
+   "type": "FluxKontextImageScale",
+   "pos": [
+    500,
+    510
+   ],
+   "size": [
+    400,
+    98
+   ],
+   "flags": {},
+   "order": 4,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "image",
+     "type": "IMAGE",
+     "link": 8
+    }
+   ],
+   "outputs": [
+    {
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      9,
+      10,
+      11
+     ],
+     "slot_index": 0
+    }
+   ],
+   "title": "5. 归一到 Kontext 优选分辨率 (官方 edit 模板做法)",
+   "properties": {
+    "Node name for S&R": "FluxKontextImageScale"
+   },
+   "widgets_values": []
+  },
+  {
+   "id": 6,
+   "type": "VAEEncode",
+   "pos": [
+    500,
+    648
+   ],
+   "size": [
+    400,
+    98
+   ],
+   "flags": {},
+   "order": 5,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "pixels",
+     "type": "IMAGE",
+     "link": 9
+    },
+    {
+     "name": "vae",
+     "type": "VAE",
+     "link": 3
+    }
+   ],
+   "outputs": [
+    {
+     "name": "LATENT",
+     "type": "LATENT",
+     "links": [
+      12
+     ],
+     "slot_index": 0
+    }
+   ],
+   "title": "6. 参考人物编码为初始潜变量 (关键帧比例跟随参考图)",
+   "properties": {
+    "Node name for S&R": "VAEEncode"
+   },
+   "widgets_values": []
+  },
+  {
+   "id": 7,
+   "type": "TextEncodeQwenImageEditPlus",
+   "pos": [
+    960,
+    40
+   ],
+   "size": [
+    440,
+    240
+   ],
+   "flags": {},
+   "order": 6,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "clip",
+     "type": "CLIP",
+     "link": 1
+    },
+    {
+     "name": "vae",
+     "type": "VAE",
+     "link": 4
+    },
+    {
+     "name": "image1",
+     "type": "IMAGE",
+     "link": 10
+    }
+   ],
+   "outputs": [
+    {
+     "name": "CONDITIONING",
+     "type": "CONDITIONING",
+     "links": [
+      13
+     ],
+     "slot_index": 0
+    }
+   ],
+   "title": "7. 关键帧描述 + 人物参考 (Plus 多图编码, 保身份)",
+   "properties": {
+    "Node name for S&R": "TextEncodeQwenImageEditPlus"
+   },
+   "widgets_values": [
+    "Generate a cinematic keyframe of the reference person: medium shot, standing on a neon-lit rainy street at night, looking slightly to the left with a confident expression, cinematic lighting, shallow depth of field, photorealistic, vertical 9:16 composition. Keep the person's face, identity and hairstyle consistent with the reference image."
+   ]
+  },
+  {
+   "id": 8,
+   "type": "TextEncodeQwenImageEditPlus",
+   "pos": [
+    960,
+    320
+   ],
+   "size": [
+    440,
+    200
+   ],
+   "flags": {},
+   "order": 7,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "clip",
+     "type": "CLIP",
+     "link": 2
+    },
+    {
+     "name": "vae",
+     "type": "VAE",
+     "link": 5
+    },
+    {
+     "name": "image1",
+     "type": "IMAGE",
+     "link": 11
+    }
+   ],
+   "outputs": [
+    {
+     "name": "CONDITIONING",
+     "type": "CONDITIONING",
+     "links": [
+      14
+     ],
+     "slot_index": 0
+    }
+   ],
+   "title": "8. 负向提示词 (cfg>1 时生效)",
+   "properties": {
+    "Node name for S&R": "TextEncodeQwenImageEditPlus"
+   },
+   "widgets_values": [
+    "worst quality, low quality, deformed, distorted, blurry, bad anatomy, jpeg artifacts, watermark"
+   ]
+  },
+  {
+   "id": 9,
+   "type": "FluxKontextMultiReferenceLatentMethod",
+   "pos": [
+    1420,
+    40
+   ],
+   "size": [
+    400,
+    98
+   ],
+   "flags": {},
+   "order": 8,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "conditioning",
+     "type": "CONDITIONING",
+     "link": 13
+    }
+   ],
+   "outputs": [
+    {
+     "name": "CONDITIONING",
+     "type": "CONDITIONING",
+     "links": [
+      15
+     ],
+     "slot_index": 0
+    }
+   ],
+   "title": "9. 正向参考潜变量注入方式 (第三方重打包模型必需)",
+   "properties": {
+    "Node name for S&R": "FluxKontextMultiReferenceLatentMethod"
+   },
+   "widgets_values": [
+    "index_timestep_zero"
+   ]
+  },
+  {
+   "id": 10,
+   "type": "FluxKontextMultiReferenceLatentMethod",
+   "pos": [
+    1420,
+    178
+   ],
+   "size": [
+    400,
+    98
+   ],
+   "flags": {},
+   "order": 9,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "conditioning",
+     "type": "CONDITIONING",
+     "link": 14
+    }
+   ],
+   "outputs": [
+    {
+     "name": "CONDITIONING",
+     "type": "CONDITIONING",
+     "links": [
+      16
+     ],
+     "slot_index": 0
+    }
+   ],
+   "title": "10. 负向参考潜变量注入方式",
+   "properties": {
+    "Node name for S&R": "FluxKontextMultiReferenceLatentMethod"
+   },
+   "widgets_values": [
+    "index_timestep_zero"
+   ]
+  },
+  {
+   "id": 11,
+   "type": "ModelSamplingAuraFlow",
+   "pos": [
+    1420,
+    316
+   ],
+   "size": [
+    400,
+    98
+   ],
+   "flags": {},
+   "order": 10,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "model",
+     "type": "MODEL",
+     "link": 7
+    }
+   ],
+   "outputs": [
+    {
+     "name": "MODEL",
+     "type": "MODEL",
+     "links": [
+      17
+     ],
+     "slot_index": 0
+    }
+   ],
+   "title": "11. 采样位移对齐官方 edit 模板 (shift 3.1)",
+   "properties": {
+    "Node name for S&R": "ModelSamplingAuraFlow"
+   },
+   "widgets_values": [
+    3.1
+   ]
+  },
+  {
+   "id": 12,
+   "type": "CFGNorm",
+   "pos": [
+    1880,
+    316
+   ],
+   "size": [
+    400,
+    98
+   ],
+   "flags": {},
+   "order": 11,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "model",
+     "type": "MODEL",
+     "link": 17
+    }
+   ],
+   "outputs": [
+    {
+     "name": "patched_model",
+     "type": "MODEL",
+     "links": [
+      18
+     ],
+     "slot_index": 0
+    }
+   ],
+   "title": "12. CFG 归一化 (官方 edit 模板同款)",
+   "properties": {
+    "Node name for S&R": "CFGNorm"
+   },
+   "widgets_values": [
+    1.0
+   ]
+  },
+  {
+   "id": 13,
+   "type": "KSampler",
+   "pos": [
+    1880,
+    454
+   ],
+   "size": [
+    400,
+    262
+   ],
+   "flags": {},
+   "order": 12,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "model",
+     "type": "MODEL",
+     "link": 18
+    },
+    {
+     "name": "positive",
+     "type": "CONDITIONING",
+     "link": 15
+    },
+    {
+     "name": "negative",
+     "type": "CONDITIONING",
+     "link": 16
+    },
+    {
+     "name": "latent_image",
+     "type": "LATENT",
+     "link": 12
+    }
+   ],
+   "outputs": [
+    {
+     "name": "LATENT",
+     "type": "LATENT",
+     "links": [
+      19
+     ],
+     "slot_index": 0
+    }
+   ],
+   "title": "13. KSampler 关键帧生成 (40步 / CFG 3.0 / Denoise 1.0)",
+   "properties": {
+    "Node name for S&R": "KSampler"
+   },
+   "widgets_values": [
+    42,
+    "fixed",
+    40,
+    3.0,
+    "euler",
+    "simple",
+    1.0
+   ]
+  },
+  {
+   "id": 14,
+   "type": "VAEDecode",
+   "pos": [
+    2340,
+    454
+   ],
+   "size": [
+    400,
+    98
+   ],
+   "flags": {},
+   "order": 13,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "samples",
+     "type": "LATENT",
+     "link": 19
+    },
+    {
+     "name": "vae",
+     "type": "VAE",
+     "link": 6
+    }
+   ],
+   "outputs": [
+    {
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      20
+     ],
+     "slot_index": 0
+    }
+   ],
+   "title": "14. VAE 解码为关键帧图像",
+   "properties": {
+    "Node name for S&R": "VAEDecode"
+   },
+   "widgets_values": []
+  },
+  {
+   "id": 15,
+   "type": "SaveImage",
+   "pos": [
+    2340,
+    592
+   ],
+   "size": [
+    400,
+    450
+   ],
+   "flags": {},
+   "order": 14,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "images",
+     "type": "IMAGE",
+     "link": 20
+    }
+   ],
+   "outputs": [
+    {
+     "name": "images",
+     "type": "IMAGE",
+     "links": null,
+     "slot_index": 0
+    }
+   ],
+   "title": "15. 保存关键帧 (按日期归档)",
+   "properties": {
+    "Node name for S&R": "SaveImage"
+   },
+   "widgets_values": [
+    "2026-10-02/keyframe/kf"
+   ]
+  },
+  {
+   "id": 16,
+   "type": "Note",
+   "pos": [
+    500,
+    40
+   ],
+   "size": [
+    430,
+    420
+   ],
+   "flags": {},
+   "order": 15,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [],
+   "title": "手动执行步骤 (Qwen-Image-2.1 关键帧生成)",
+   "properties": {
+    "Node name for S&R": "Note"
+   },
+   "widgets_values": [
+    "手动执行步骤（Qwen-Image-2.1 关键帧生成）：\n1) 换参考人物图 (LoadImage)；\n2) 改提示词为想要的关键帧构图/动作/表情/场景；\n3) 输出比例跟随参考图——要 9:16 就用竖构图参考图；\n4) 点 Queue 执行，结果保存到 2026-10-02/keyframe/kf。\n提示：编辑必须用官方 int8 编码器（不能用 GGUF），且 comfy/sd.py 的 Qwen3VL 视觉塔补丁必须在位。"
+   ],
+   "color": "#432",
+   "bgcolor": "#653"
+  }
+ ],
+ "links": [
+  [
+   1,
+   2,
+   0,
+   7,
+   0,
+   "CLIP"
+  ],
+  [
+   2,
+   2,
+   0,
+   8,
+   0,
+   "CLIP"
+  ],
+  [
+   3,
+   3,
+   0,
+   6,
+   1,
+   "VAE"
+  ],
+  [
+   4,
+   3,
+   0,
+   7,
+   1,
+   "VAE"
+  ],
+  [
+   5,
+   3,
+   0,
+   8,
+   1,
+   "VAE"
+  ],
+  [
+   6,
+   3,
+   0,
+   14,
+   1,
+   "VAE"
+  ],
+  [
+   7,
+   1,
+   0,
+   11,
+   0,
+   "MODEL"
+  ],
+  [
+   8,
+   4,
+   0,
+   5,
+   0,
+   "IMAGE"
+  ],
+  [
+   9,
+   5,
+   0,
+   6,
+   0,
+   "IMAGE"
+  ],
+  [
+   10,
+   5,
+   0,
+   7,
+   2,
+   "IMAGE"
+  ],
+  [
+   11,
+   5,
+   0,
+   8,
+   2,
+   "IMAGE"
+  ],
+  [
+   12,
+   6,
+   0,
+   13,
+   3,
+   "LATENT"
+  ],
+  [
+   13,
+   7,
+   0,
+   9,
+   0,
+   "CONDITIONING"
+  ],
+  [
+   14,
+   8,
+   0,
+   10,
+   0,
+   "CONDITIONING"
+  ],
+  [
+   15,
+   9,
+   0,
+   13,
+   1,
+   "CONDITIONING"
+  ],
+  [
+   16,
+   10,
+   0,
+   13,
+   2,
+   "CONDITIONING"
+  ],
+  [
+   17,
+   11,
+   0,
+   12,
+   0,
+   "MODEL"
+  ],
+  [
+   18,
+   12,
+   0,
+   13,
+   0,
+   "MODEL"
+  ],
+  [
+   19,
+   13,
+   0,
+   14,
+   0,
+   "LATENT"
+  ],
+  [
+   20,
+   14,
+   0,
+   15,
+   0,
+   "IMAGE"
+  ]
+ ],
+ "groups": [],
+ "config": {},
+ "extra": {},
+ "version": 0.4
+}

@@ -1,0 +1,71 @@
+{
+  "1": {
+    "class_type": "LoadVideo",
+    "inputs": {
+      "file": "[inject:video]"
+    },
+    "_meta": {
+      "title": "1. 载入待抠像视频分块（input 目录下文件名）· 占位符: video"
+    }
+  },
+  "2": {
+    "class_type": "GetVideoComponents",
+    "inputs": {
+      "video": ["1", 0]
+    },
+    "_meta": {
+      "title": "2. 拆分为逐帧 IMAGE 批次（输出 IMAGE/AUDIO/FLOAT/INT）"
+    }
+  },
+  "7": {
+    "class_type": "ImageScale",
+    "inputs": {
+      "image": ["2", 0],
+      "upscale_method": "lanczos",
+      "width": "[inject:width]",
+      "height": "[inject:height]",
+      "crop": "disabled"
+    },
+    "_meta": {
+      "title": "7. 降分辨率（lanczos）后再送抠像，降低显存峰值 · 占位符: width/height"
+    }
+  },
+  "3": {
+    "class_type": "LoadBackgroundRemovalModel",
+    "inputs": {
+      "bg_removal_name": "BiRefNet-general.safetensors"
+    },
+    "_meta": {
+      "title": "3. BiRefNet-general 抠像模型"
+    }
+  },
+  "4": {
+    "class_type": "RemoveBackground",
+    "inputs": {
+      "bg_removal_model": ["3", 0],
+      "image": ["7", 0]
+    },
+    "_meta": {
+      "title": "4. 逐帧前景 alpha（输出 MASK，分辨率=输入缩放后尺寸）"
+    }
+  },
+  "5": {
+    "class_type": "MaskToImage",
+    "inputs": {
+      "mask": ["4", 0]
+    },
+    "_meta": {
+      "title": "5. MASK -> 灰度 IMAGE（SaveImage 仅接受 IMAGE）"
+    }
+  },
+  "6": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "[inject:output]",
+      "images": ["5", 0]
+    },
+    "_meta": {
+      "title": "6. 保存 alpha 序列（<prefix>_00001_.png …）· 占位符: output"
+    }
+  }
+}

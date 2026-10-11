@@ -1,0 +1,13 @@
+{
+  "name": "赤霄",
+  "seed": 20261014,
+  "model": "Counterfeit-V3.0_fp16.safetensors",
+  "lora": null,
+  "gender": "female",
+  "traits": {
+    "hair": "long crimson hair, high ponytail, phoenix hairpin",
+    "clothes": "red and gold dress with flame embroidery",
+    "prop": "flame spear"
+  },
+  "sheet_path": "01_assets/char_chixiao_sheet.png"
+}

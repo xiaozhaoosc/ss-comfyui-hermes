@@ -1,0 +1,41 @@
+{
+  "_comment": "图片识别 → 提取高精度生图提示词。用法: 把图片拖到 LoadImage(或改 widgets 里的文件名), 填 BridgeLLMConfig 的 base_url/model, 运行。输出=生图提示词(含精确分辨率)。",
+  "5": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "example.png"
+    },
+    "_meta": {"title": "📷 输入图片"}
+  },
+  "6": {
+    "class_type": "GetImageSize",
+    "inputs": {
+      "image": ["5", 0]
+    },
+    "_meta": {"title": "📐 精确分辨率"}
+  },
+  "7": {
+    "class_type": "BridgeLLMConfig",
+    "inputs": {
+      "base_url": "http://127.0.0.1:8112",
+      "api_key": "",
+      "model": "Qwen3.8-27B-GSQ-RCO-IQ3_S",
+      "max_tokens": 512,
+      "temperature": 0.5,
+      "stream": "True",
+      "response_format": "text"
+    },
+    "_meta": {"title": "⚙️ LLM 配置"}
+  },
+  "8": {
+    "class_type": "BridgeLLMImagePrompt",
+    "inputs": {
+      "config": ["7", 0],
+      "image": ["5", 0],
+      "width": ["6", 0],
+      "height": ["6", 1],
+      "prompt_hint": "室内大厅, 现代奢华风格, 柔光"
+    },
+    "_meta": {"title": "🤖 看图提取提示词(含精确像素)"}
+  }
+}

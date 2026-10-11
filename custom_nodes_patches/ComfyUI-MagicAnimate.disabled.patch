@@ -1,0 +1,293 @@
+diff --git a/libs/magicanimate/models/appearance_encoder.py b/libs/magicanimate/models/appearance_encoder.py
+index 81736db..1652b91 100644
+--- a/libs/magicanimate/models/appearance_encoder.py
++++ b/libs/magicanimate/models/appearance_encoder.py
+@@ -41,20 +41,32 @@ from diffusers.models.embeddings import (
+     ImageHintTimeEmbedding,
+     ImageProjection,
+     ImageTimeEmbedding,
+-    PositionNet,
+     TextImageProjection,
+     TextImageTimeEmbedding,
+     TextTimeEmbedding,
+     TimestepEmbedding,
+     Timesteps,
+ )
++try:
++    from diffusers.models.embeddings import PositionNet
++except ImportError:
++    # PositionNet was removed from diffusers >= 0.21; use local backport
++    from .embeddings import PositionNet
+ from diffusers.models.modeling_utils import ModelMixin
+-from diffusers.models.unet_2d_blocks import (
+-    UNetMidBlock2DCrossAttn,
+-    UNetMidBlock2DSimpleCrossAttn,
+-    get_down_block,
+-    get_up_block,
+-)
++try:
++    from diffusers.models.unet_2d_blocks import (
++        UNetMidBlock2DCrossAttn,
++        UNetMidBlock2DSimpleCrossAttn,
++        get_down_block,
++        get_up_block,
++    )
++except ImportError:
++    from diffusers.models.unets.unet_2d_blocks import (
++        UNetMidBlock2DCrossAttn,
++        UNetMidBlock2DSimpleCrossAttn,
++        get_down_block,
++        get_up_block,
++    )
+ 
+ 
+ logger = logging.get_logger(__name__)  # pylint: disable=invalid-name
+diff --git a/libs/magicanimate/models/controlnet.py b/libs/magicanimate/models/controlnet.py
+index 0dd7eaf..a7c4a84 100644
+--- a/libs/magicanimate/models/controlnet.py
++++ b/libs/magicanimate/models/controlnet.py
+@@ -28,13 +28,24 @@ from diffusers.configuration_utils import ConfigMixin, register_to_config
+ from diffusers.utils import BaseOutput, logging
+ from .embeddings import TimestepEmbedding, Timesteps
+ from diffusers.models.modeling_utils import ModelMixin
+-from diffusers.models.unet_2d_blocks import (
+-    CrossAttnDownBlock2D,
+-    DownBlock2D,
+-    UNetMidBlock2DCrossAttn,
+-    get_down_block,
+-)
+-from diffusers.models.unet_2d_condition import UNet2DConditionModel
++try:
++    from diffusers.models.unet_2d_blocks import (
++        CrossAttnDownBlock2D,
++        DownBlock2D,
++        UNetMidBlock2DCrossAttn,
++        get_down_block,
++    )
++except ImportError:
++    from diffusers.models.unets.unet_2d_blocks import (
++        CrossAttnDownBlock2D,
++        DownBlock2D,
++        UNetMidBlock2DCrossAttn,
++        get_down_block,
++    )
++try:
++    from diffusers.models.unet_2d_condition import UNet2DConditionModel
++except ImportError:
++    from diffusers.models.unets.unet_2d_condition import UNet2DConditionModel
+ 
+ 
+ logger = logging.get_logger(__name__)  # pylint: disable=invalid-name
+diff --git a/libs/magicanimate/models/embeddings.py b/libs/magicanimate/models/embeddings.py
+index 25fb3b2..b43df64 100644
+--- a/libs/magicanimate/models/embeddings.py
++++ b/libs/magicanimate/models/embeddings.py
+@@ -382,4 +382,101 @@ class CombinedTimestepLabelEmbeddings(nn.Module):
+ 
+         conditioning = timesteps_emb + class_labels  # (N, D)
+ 
+-        return conditioning
+\ No newline at end of file
++        return conditioning
++
++
++# PositionNet: backported from diffusers 0.18 for compatibility with diffusers >= 0.21
++# Original source: diffusers/models/embeddings.py (removed in later versions)
++class PositionNet(nn.Module):
++    """
++    Adapted from GLIGEN: Open-Set Grounded Text-to-Image Generation
++    (https://arxiv.org/abs/2301.07093)
++    """
++
++    def __init__(self, positive_len, out_dim, feature_type="text-only", fourier_freqs=8):
++        super().__init__()
++        self.positive_len = positive_len
++        self.out_dim = out_dim
++
++        self.fourier_embedder_dim = fourier_freqs
++        self.position_dim = fourier_freqs * 2 * 4  # 2: sin/cos, 4: xyxy
++
++        if isinstance(out_dim, tuple):
++            out_dim = out_dim[0]
++
++        if feature_type == "text-only":
++            self.linears = nn.Sequential(
++                nn.Linear(self.positive_len + self.position_dim, 512),
++                nn.SiLU(),
++                nn.Linear(512, 512),
++                nn.SiLU(),
++                nn.Linear(512, out_dim),
++            )
++            self.null_positive_feature = nn.Parameter(torch.zeros([self.positive_len]))
++        elif feature_type == "text-image":
++            self.linears_text = nn.Sequential(
++                nn.Linear(self.positive_len + self.position_dim, 512),
++                nn.SiLU(),
++                nn.Linear(512, 512),
++                nn.SiLU(),
++                nn.Linear(512, out_dim),
++            )
++            self.linears_image = nn.Sequential(
++                nn.Linear(self.positive_len + self.position_dim, 512),
++                nn.SiLU(),
++                nn.Linear(512, 512),
++                nn.SiLU(),
++                nn.Linear(512, out_dim),
++            )
++            self.null_text_feature = nn.Parameter(torch.zeros([self.positive_len]))
++            self.null_image_feature = nn.Parameter(torch.zeros([self.positive_len]))
++
++        self.null_position_feature = nn.Parameter(torch.zeros([self.position_dim]))
++
++    def get_sine_embedding(self, boxes):
++        x_min, y_min, x_max, y_max = boxes.unbind(-1)
++        freqs = torch.exp(
++            -math.log(10000)
++            * torch.arange(start=0, end=self.fourier_embedder_dim, dtype=torch.float32)
++            / self.fourier_embedder_dim
++        ).to(boxes.device)
++        xs = [x_min, x_max]
++        ys = [y_min, y_max]
++        out = []
++        for x in xs:
++            for freq in freqs:
++                out.append(torch.sin(x.unsqueeze(-1) * freq))
++                out.append(torch.cos(x.unsqueeze(-1) * freq))
++        for y in ys:
++            for freq in freqs:
++                out.append(torch.sin(y.unsqueeze(-1) * freq))
++                out.append(torch.cos(y.unsqueeze(-1) * freq))
++        return torch.cat(out, dim=-1)
++
++    def forward(
++        self,
++        boxes,
++        masks,
++        positive_embeddings=None,
++        phrases_masks=None,
++        image_masks=None,
++        phrases_embeddings=None,
++        image_embeddings=None,
++    ):
++        masks = masks.unsqueeze(-1)
++        sine_encoding = self.get_sine_embedding(boxes)
++        sine_encoding = sine_encoding * masks + (1 - masks) * self.null_position_feature
++
++        if positive_embeddings is not None:
++            positive_embeddings = positive_embeddings * masks + (1 - masks) * self.null_positive_feature
++            objs = self.linears(torch.cat([positive_embeddings, sine_encoding], dim=-1))
++        else:
++            phrases_masks = phrases_masks.unsqueeze(-1)
++            image_masks = image_masks.unsqueeze(-1)
++            phrases_embeddings = phrases_embeddings * phrases_masks + (1 - phrases_masks) * self.null_text_feature
++            image_embeddings = image_embeddings * image_masks + (1 - image_masks) * self.null_image_feature
++            objs_text = self.linears_text(torch.cat([phrases_embeddings, sine_encoding], dim=-1))
++            objs_image = self.linears_image(torch.cat([image_embeddings, sine_encoding], dim=-1))
++            objs = torch.cat([objs_text, objs_image], dim=1)
++
++        return objs
+\ No newline at end of file
+diff --git a/libs/magicanimate/models/mutual_self_attention.py b/libs/magicanimate/models/mutual_self_attention.py
+index 688332e..23a8c9d 100644
+--- a/libs/magicanimate/models/mutual_self_attention.py
++++ b/libs/magicanimate/models/mutual_self_attention.py
+@@ -17,7 +17,10 @@ from typing import Any, Callable, Dict, List, Optional, Tuple, Union
+ 
+ from diffusers.models.attention import BasicTransformerBlock
+ from magicanimate.models.attention import BasicTransformerBlock as _BasicTransformerBlock
+-from diffusers.models.unet_2d_blocks import CrossAttnDownBlock2D, CrossAttnUpBlock2D, DownBlock2D, UpBlock2D
++try:
++    from diffusers.models.unet_2d_blocks import CrossAttnDownBlock2D, CrossAttnUpBlock2D, DownBlock2D, UpBlock2D
++except ImportError:
++    from diffusers.models.unets.unet_2d_blocks import CrossAttnDownBlock2D, CrossAttnUpBlock2D, DownBlock2D, UpBlock2D
+ from .stable_diffusion_controlnet_reference import torch_dfs
+ 
+ 
+diff --git a/libs/magicanimate/models/stable_diffusion_controlnet_reference.py b/libs/magicanimate/models/stable_diffusion_controlnet_reference.py
+index 436e74c..63f7ec2 100644
+--- a/libs/magicanimate/models/stable_diffusion_controlnet_reference.py
++++ b/libs/magicanimate/models/stable_diffusion_controlnet_reference.py
+@@ -14,7 +14,10 @@ import torch
+ from diffusers import StableDiffusionControlNetPipeline
+ from diffusers.models import ControlNetModel
+ from diffusers.models.attention import BasicTransformerBlock
+-from diffusers.models.unet_2d_blocks import CrossAttnDownBlock2D, CrossAttnUpBlock2D, DownBlock2D, UpBlock2D
++try:
++    from diffusers.models.unet_2d_blocks import CrossAttnDownBlock2D, CrossAttnUpBlock2D, DownBlock2D, UpBlock2D
++except ImportError:
++    from diffusers.models.unets.unet_2d_blocks import CrossAttnDownBlock2D, CrossAttnUpBlock2D, DownBlock2D, UpBlock2D
+ from diffusers.pipelines.controlnet.multicontrolnet import MultiControlNetModel
+ from diffusers.pipelines.stable_diffusion import StableDiffusionPipelineOutput
+ from diffusers.utils import logging
+diff --git a/prestartup_script.py b/prestartup_script.py
+deleted file mode 100644
+index a473be6..0000000
+--- a/prestartup_script.py
++++ /dev/null
+@@ -1,66 +0,0 @@
+-import os
+-import folder_paths
+-import sys
+-import urllib.request
+-
+-magic_animate_models_dir = os.path.join(folder_paths.models_dir, "MagicAnimate")
+-os.makedirs(magic_animate_models_dir, exist_ok=True)
+-
+-appearance_encoder_path = os.path.join(magic_animate_models_dir, "appearance_encoder")
+-densepose_controlnet_path = os.path.join(magic_animate_models_dir, "densepose_controlnet")
+-temporal_attention_path = os.path.join(magic_animate_models_dir, "temporal_attention")
+-
+-def download_file(url, save_path):
+-    with urllib.request.urlopen(url) as dl_file:
+-        with open(save_path, 'wb') as out_file:
+-            out_file.write(dl_file.read())
+-
+-if not os.path.exists(appearance_encoder_path):
+-    print("Downloading Magic Animate's appearance encoder...")
+-    os.makedirs(appearance_encoder_path, exist_ok=True)
+-    download_file('https://huggingface.co/zcxu-eric/MagicAnimate/resolve/main/appearance_encoder/diffusion_pytorch_model.safetensors?download=true', os.path.join(appearance_encoder_path, 'diffusion_pytorch_model.safetensors'))
+-    download_file('https://huggingface.co/zcxu-eric/MagicAnimate/resolve/main/appearance_encoder/config.json?download=true', os.path.join(appearance_encoder_path, 'config.json'))
+-
+-if not os.path.exists(densepose_controlnet_path):
+-    print("Downloading Magic Animate's densepose controlnet...")
+-    os.makedirs(densepose_controlnet_path, exist_ok=True)
+-    download_file('https://huggingface.co/zcxu-eric/MagicAnimate/resolve/main/densepose_controlnet/diffusion_pytorch_model.safetensors?download=true', os.path.join(densepose_controlnet_path, 'diffusion_pytorch_model.safetensors'))
+-    download_file('https://huggingface.co/zcxu-eric/MagicAnimate/resolve/main/densepose_controlnet/config.json?download=true', os.path.join(densepose_controlnet_path, 'config.json'))
+-
+-if not os.path.exists(temporal_attention_path):
+-    print("Downloading Magic Animate's temporal attention...")
+-    os.makedirs(temporal_attention_path, exist_ok=True)
+-    download_file('https://huggingface.co/zcxu-eric/MagicAnimate/resolve/main/temporal_attention/temporal_attention.ckpt?download=true', os.path.join(temporal_attention_path, 'temporal_attention.ckpt'))
+-
+-sd_15_path = os.path.join(magic_animate_models_dir, "stable-diffusion-v1-5")
+-if not os.path.exists(sd_15_path):
+-    print("Downloading stable-diffusion-v1-5 checkpoints from Huggingface...")
+-    os.makedirs(sd_15_path, exist_ok=True)
+-    os.makedirs(os.path.join(sd_15_path, "text_encoder"), exist_ok=True)
+-    os.makedirs(os.path.join(sd_15_path, "tokenizer"), exist_ok=True)
+-    os.makedirs(os.path.join(sd_15_path, "unet"), exist_ok=True)
+-
+-    download_file('https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/text_encoder/config.json?download=true', os.path.join(sd_15_path, 'text_encoder', 'config.json'))
+-    download_file('https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/text_encoder/model.safetensors?download=true', os.path.join(sd_15_path, 'text_encoder', 'model.safetensors'))
+-    
+-    download_file('https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/tokenizer/merges.txt?download=true', os.path.join(sd_15_path, 'tokenizer', 'merges.txt'))
+-    download_file('https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/tokenizer/special_tokens_map.json?download=true', os.path.join(sd_15_path, 'tokenizer', 'special_tokens_map.json'))
+-    download_file('https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/tokenizer/tokenizer_config.json?download=true', os.path.join(sd_15_path, 'tokenizer', 'tokenizer_config.json'))
+-    download_file('https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/tokenizer/vocab.json?download=true', os.path.join(sd_15_path, 'tokenizer', 'vocab.json'))
+-
+-    download_file('https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/unet/config.json?download=true', os.path.join(sd_15_path, 'unet', 'config.json'))
+-    download_file('https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/unet/diffusion_pytorch_model.bin?download=true', os.path.join(sd_15_path, 'unet', 'diffusion_pytorch_model.bin'))
+-
+-sd_vae_ft_mse_path = os.path.join(magic_animate_models_dir, "sd-vae-ft-mse")
+-if not os.path.exists(sd_vae_ft_mse_path):
+-    print("Downloading sd-vae-ft-mse model from Huggingface...")
+-    os.makedirs(sd_vae_ft_mse_path, exist_ok=True)
+-    download_file('https://huggingface.co/stabilityai/sd-vae-ft-mse/resolve/main/config.json?download=true', os.path.join(sd_vae_ft_mse_path, 'config.json'))
+-    download_file('https://huggingface.co/stabilityai/sd-vae-ft-mse/resolve/main/diffusion_pytorch_model.safetensors?download=true', os.path.join(sd_vae_ft_mse_path, 'diffusion_pytorch_model.safetensors'))
+-
+-control_v11p_sd15_openpose_path = os.path.join(magic_animate_models_dir, "control_v11p_sd15_openpose")
+-if not os.path.exists(control_v11p_sd15_openpose_path):
+-    print("Downloading control_v11p_sd15_openpose model from Huggingface...")
+-    os.makedirs(control_v11p_sd15_openpose_path, exist_ok=True)
+-    download_file('https://huggingface.co/lllyasviel/control_v11p_sd15_openpose/resolve/main/diffusion_pytorch_model.safetensors?download=true', os.path.join(control_v11p_sd15_openpose_path, 'diffusion_pytorch_model.safetensors'))
+-    download_file('https://huggingface.co/lllyasviel/control_v11p_sd15_openpose/resolve/main/config.json?download=true', os.path.join(control_v11p_sd15_openpose_path, 'config.json'))

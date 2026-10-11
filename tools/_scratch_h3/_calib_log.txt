@@ -1,0 +1,83 @@
+=== calib3 start ===
+step1: import h3_rope_common
+step1: ok
+step2: probe ffmpeg / cv2 / insightface
+  cv2 4.13.0
+  insightface 0.7.3
+step3: locate baseline clips
+  found 5/5
+    shiling_sayyes_h3_yolo_00001-audio.mp4 -> 0.8 MB
+    shiling_sayyes_h3_c3_00001-audio.mp4 -> 1.1 MB
+    shiling_sayyes_h3_opt_00001-audio.mp4 -> 0.8 MB
+    shiling_h3_c3_test_00001-audio.mp4 -> 1.0 MB
+    shiling_whiskey_h3_c3_00001-audio.mp4 -> 0.9 MB
+step4: measure
+[1/5] shiling_sayyes_h3_yolo_00001-audio.mp4
+  -> {"label": "shiling_sayyes_h3_yolo_00001-audio.mp4", "path": "D:\\ai_projects\\ComfyUI\\output\\2026-09-21\\shiling_sayyes_h3_yolo_00001-audio.mp4", "frames": 73, "fps": 24.0, "size": [448, 768], "detector": "insightface/retinaface(det_10g)", "detect_rate": 1.0, "jitter_ratio": 3.9353, "flicker_rate": 0.25, "chroma_var": 0.295, "detail_var": 0.2162, "identity": 0.9865, "mar_std": 0.0255, "frame_sharp": 264.4862, "holds_parsed": 0, "sec_total": 29.3, "sec_detect": 28.7, "clip": "shiling_sayyes_h3_yolo_00001-audio.mp4"}
+[2/5] shiling_sayyes_h3_c3_00001-audio.mp4
+  -> {"label": "shiling_sayyes_h3_c3_00001-audio.mp4", "path": "D:\\ai_projects\\ComfyUI\\output\\2026-09-21\\shiling_sayyes_h3_c3_00001-audio.mp4", "frames": 73, "fps": 24.0, "size": [448, 768], "detector": "insightface/retinaface(det_10g)", "detect_rate": 1.0, "jitter_ratio": 4.0081, "flicker_rate": 0.2222, "chroma_var": 0.2856, "detail_var": 0.0172, "identity": 0.9855, "mar_std": 0.0221, "frame_sharp": 584.1157, "holds_parsed": 0, "sec_total": 27.0, "sec_detect": 26.7, "clip": "shiling_sayyes_h3_c3_00001-audio.mp4"}
+[3/5] shiling_sayyes_h3_opt_00001-audio.mp4
+  -> {"label": "shiling_sayyes_h3_opt_00001-audio.mp4", "path": "D:\\ai_projects\\ComfyUI\\output\\2026-09-21\\shiling_sayyes_h3_opt_00001-audio.mp4", "frames": 73, "fps": 24.0, "size": [448, 768], "detector": "insightface/retinaface(det_10g)", "detect_rate": 1.0, "jitter_ratio": 3.9131, "flicker_rate": 0.2361, "chroma_var": 0.292, "detail_var": 0.2139, "identity": 0.9861, "mar_std": 0.0255, "frame_sharp": 264.2838, "holds_parsed": 0, "sec_total": 27.5, "sec_detect": 27.0, "clip": "shiling_sayyes_h3_opt_00001-audio.mp4"}
+[4/5] shiling_h3_c3_test_00001-audio.mp4
+  -> {"label": "shiling_h3_c3_test_00001-audio.mp4", "path": "D:\\ai_projects\\ComfyUI\\output\\2026-09-21\\shiling_h3_c3_test_00001-audio.mp4", "frames": 73, "fps": 24.0, "size": [448, 768], "detector": "insightface/retinaface(det_10g)", "detect_rate": 1.0, "jitter_ratio": 7.332, "flicker_rate": 0.0694, "chroma_var": 0.2121, "detail_var": 0.0305, "identity": 0.9738, "mar_std": 0.0265, "frame_sharp": 981.0406, "holds_parsed": 0, "sec_total": 26.7, "sec_detect": 26.2, "clip": "shiling_h3_c3_test_00001-audio.mp4"}
+[5/5] shiling_whiskey_h3_c3_00001-audio.mp4
+  -> {"label": "shiling_whiskey_h3_c3_00001-audio.mp4", "path": "D:\\ai_projects\\ComfyUI\\output\\2026-09-21\\shiling_whiskey_h3_c3_00001-audio.mp4", "frames": 73, "fps": 24.0, "size": [448, 768], "detector": "insightface/retinaface(det_10g)", "detect_rate": 1.0, "jitter_ratio": 4.1574, "flicker_rate": 0.125, "chroma_var": 0.1828, "detail_var": 0.0751, "identity": 0.9852, "mar_std": 0.0394, "frame_sharp": 844.0394, "holds_parsed": 0, "sec_total": 28.2, "sec_detect": 27.7, "clip": "shiling_whiskey_h3_c3_00001-audio.mp4"}
+step5: score
+[
+  {
+    "label": "shiling_sayyes_h3_yolo_00001-audio.mp4",
+    "detect_rate": 1.0,
+    "identity": 0.9865315939790162,
+    "jitter_ratio": 3.935320543443142,
+    "flicker_rate": 0.25,
+    "chroma_var": 0.29497567120944573,
+    "detail_var": 0.2162020131264216,
+    "mar_std": 0.025466045700722972,
+    "frame_sharp": 264.4861755371094
+  },
+  {
+    "label": "shiling_sayyes_h3_c3_00001-audio.mp4",
+    "detect_rate": 1.0,
+    "identity": 0.9854692287575422,
+    "jitter_ratio": 4.008119530546334,
+    "flicker_rate": 0.2222222222222222,
+    "chroma_var": 0.28558256409282506,
+    "detail_var": 0.01715025950912931,
+    "mar_std": 0.02213141892445315,
+    "frame_sharp": 584.11572265625
+  },
+  {
+    "label": "shiling_sayyes_h3_opt_00001-audio.mp4",
+    "detect_rate": 1.0,
+    "identity": 0.9860699542624782,
+    "jitter_ratio": 3.913066258499084,
+    "flicker_rate": 0.2361111111111111,
+    "chroma_var": 0.29201669400786995,
+    "detail_var": 0.21389659089581958,
+    "mar_std": 0.025484529932522367,
+    "frame_sharp": 264.28375244140625
+  },
+  {
+    "label": "shiling_h3_c3_test_00001-audio.mp4",
+    "detect_rate": 1.0,
+    "identity": 0.9737874872186452,
+    "jitter_ratio": 7.3319829700973305,
+    "flicker_rate": 0.06944444444444445,
+    "chroma_var": 0.2120855808902765,
+    "detail_var": 0.03052411441655295,
+    "mar_std": 0.026475728109082844,
+    "frame_sharp": 981.0406494140625
+  },
+  {
+    "label": "shiling_whiskey_h3_c3_00001-audio.mp4",
+    "detect_rate": 1.0,
+    "identity": 0.9851953642876868,
+    "jitter_ratio": 4.15744844146592,
+    "flicker_rate": 0.125,
+    "chroma_var": 0.18283694768598874,
+    "detail_var": 0.07506007656066799,
+    "mar_std": 0.03942405514263367,
+    "frame_sharp": 844.0393676757812
+  }
+]
+=== calib3 done ===

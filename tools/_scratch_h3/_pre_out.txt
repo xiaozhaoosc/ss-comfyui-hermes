@@ -1,0 +1,27 @@
+compile  OK    h3_rope_common.py
+compile  OK    run_h3_guard_v5.py
+server   OK    /queue status=200 body=b'{"queue_running": [], "queue_pending": []}'
+profiles : ['base', 'derope', 'sla', 'lock', 'full', 'quality', 'upscale']
+    base       忠实复刻 daily_report 里的 run_h3_shiling_c3 结构：单次 Ref2VA + 4 步 res_multistep + ReActor(YOLOv5l, codeformer 0.95)。仅用于 A/B 对照，不是优化方案。
+    derope     用 ComfyUI-MAINodes「Motion Lab」的时间域方案替代空间切块：快速动作帧被保持(dilate)后以部分降噪重绘，再按 hold_map 精确取回原帧率。社区实测可把'空中转体糊成一团'变成清晰动作，同时因为重绘是**时序扩散**（H3 注意力本身带时序建模），不引入逐帧独立抖动。
+    sla        H3SLAAttention 跳过 90% 的 key block（实测 1.4~1.75x 加速，官方在一个 5090 上 44s/it→25s/it），把省下的时间换成 18~20 步采样。注意官方结论：**H3 的语音/细节伪影由步数驱动，不是 sparsity 驱动**，所以应该'提步数'而不是'降 sparsity'。dense_last_steps=2 让最后两步走全注意力，把'最终那一步的误差'补回来——这一步对画质最关键。
+    lock       针对报告里诊断的两大闪烁机理逐条出手：
+  (1) CodeFormer 逐帧独立脑补 → 把权重从 0.95 降到 0.65、visibility 降到 0.85，让它'少发明、多信原图'；
+  (2) ReActor 逐帧 2D 漂移 → 用 ReActorOptions 的 restore_swapped_only=True 只修复换过的那张脸（避免把周围皮肤也一起重绘），并换成 ReActorFaceSwapOpt 让参数更干净；
+  (3) 可选：用 SAM(face_yolov8m) 抠出脸部区域 + 大羽化(24) 混合，让换脸边界在时间上更软，消除'贴片感/边界跳'。
+    full       derope(时序去抖) + lock(面部锁定) 叠加。
+分工：derope 解决'快动作糊'并保持时序一致；lock 收尾把脸钉死。
+⚠️ 刻意**不含 SLA**：H3SLAAttention 的真实稀疏路径只在 engine='triton' 时启用，而本机未装 triton。本档保证开箱即跑，不引入无法满足的依赖。
+⚠️ 也**不含 MiniMaxLowVRAMAttention**：该节点标称'不改数学'，但实测在本机会让产物全黑（73 帧 mean/std 全为 0，ReActor 报 'No faces found'）。省显存改由 MiniMaxChunkFeedForward 承担。
+若日后装了 triton，可改跑 --profile sla 拿到 1.4~1.75x 加速。
+    quality    3 个质量档位全开：
+  - 视频 VAE 用 fp16（4.85GB）而不是 int8_convrot（2.95GB）——int8 VAE 解码快 1.5x 但有量化损失，成品推荐 fp16；
+  - pass1 保持 12 步 turbo（快），pass2 走 25 步**非 turbo 裸模型**（质量最高的一条路，官方文档明确说'pipeline 是给 keeper 用的'）；
+  - 面部用 lock 档同款低权重链路。
+代价：明显更慢，适合最终成品。
+    upscale    本机 16GB 显存跑 1.0MP 的 73 帧会非常吃力（官方测：32GB 卡跑 5s 片段的重绘 pass 就要 ~30GB）。
+所以这条路的思路是'小图生成、大图出片'：
+  - 生成阶段用 0.5MP（本机舒适区）；
+  - 用 H3LatentUpscale 把**潜空间**放大到 ~1.0MP 再解码——比像素域放大保留更多真实细节；
+  - 面部链路放最后，在放大后的高分辨率上换脸，脸的清晰度直接受益。
+out_root : D:\ai_projects\ComfyUI\output\2026-09-22_wb

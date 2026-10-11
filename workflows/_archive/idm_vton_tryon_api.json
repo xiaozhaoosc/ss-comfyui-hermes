@@ -1,0 +1,84 @@
+{
+  "prompt": {
+    "1": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "idm_vton_human.jpg"
+      }
+    },
+    "2": {
+      "class_type": "LoadImage",
+      "inputs": {
+        "image": "idm_vton_garment.jpg"
+      }
+    },
+    "3": {
+      "class_type": "SAMModelLoader (segment anything)",
+      "inputs": {
+        "model_name": "sam_vit_b (375MB)"
+      }
+    },
+    "4": {
+      "class_type": "GroundingDinoModelLoader (segment anything)",
+      "inputs": {
+        "model_name": "GroundingDINO_SwinB (938MB)"
+      }
+    },
+    "5": {
+      "class_type": "GroundingDinoSAMSegment (segment anything)",
+      "inputs": {
+        "sam_model": ["3", 0],
+        "grounding_dino_model": ["4", 0],
+        "image": ["1", 0],
+        "prompt": "clothing",
+        "threshold": 0.3
+      }
+    },
+    "6": {
+      "class_type": "MaskToImage",
+      "inputs": {
+        "mask": ["5", 1]
+      }
+    },
+    "7": {
+      "class_type": "DensePosePreprocessor",
+      "inputs": {
+        "image": ["1", 0],
+        "model": "densepose_r50_fpn_dl.torchscript",
+        "cmap": "Parula (CivitAI)",
+        "resolution": 768
+      }
+    },
+    "8": {
+      "class_type": "PipelineLoader",
+      "inputs": {
+        "weight_dtype": "float16"
+      }
+    },
+    "9": {
+      "class_type": "IDM-VTON",
+      "inputs": {
+        "pipeline": ["8", 0],
+        "human_img": ["1", 0],
+        "pose_img": ["7", 0],
+        "mask_img": ["6", 0],
+        "garment_img": ["2", 0],
+        "garment_description": "a white t-shirt",
+        "negative_prompt": "monochrome, lowres, bad anatomy, worst quality, low quality",
+        "width": 768,
+        "height": 1024,
+        "num_inference_steps": 30,
+        "guidance_scale": 2.0,
+        "strength": 1.0,
+        "seed": 42
+      }
+    },
+    "10": {
+      "class_type": "SaveImage",
+      "inputs": {
+        "images": ["9", 0],
+        "filename_prefix": "idm_vton_test"
+      }
+    }
+  }
+}

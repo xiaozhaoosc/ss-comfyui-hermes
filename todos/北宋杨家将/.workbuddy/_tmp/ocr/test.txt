@@ -1,0 +1,9 @@
+import OK
+engine init 1.1s
+--- page 6  (10.91s) ---
+FATAL
+Traceback (most recent call last):
+  File "D:\BaiduNetdiskDownload\北宋杨家将\.workbuddy\_tmp\ocr_test.py", line 24, in <module>
+    lines.append("  y=%4d s=%.2f  %s" % (y, score, text))
+                 ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+TypeError: must be real number, not str

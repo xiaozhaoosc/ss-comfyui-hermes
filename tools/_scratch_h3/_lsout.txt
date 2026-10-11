@@ -1,0 +1,8 @@
+now=2026-09-22 00:26:44
+ROOT exists=True
+
+[.]
+
+[h3_guard]
+   calib_baseline.json                                        1912
+   calib_baseline_report.md                                   2921

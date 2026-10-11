@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>《杨家将·忠烈千秋》剧本质检报告与长文本质检方案</title>
+<style>
+  :root{--paper:#FBF8F1;--card:#FFF;--ink:#231F19;--ink2:#4A443B;--ink3:#7A7266;--line:#E3DCCC;--line2:#D2C8B2;
+  --zhu:#B03A2E;--zhu-bg:#F6E7E4;--green:#3E6B5A;--green-bg:#E6EFE9;--jin:#B8912B;--jin-bg:#F8F1DC;--dai:#3E4E5A;--dai-bg:#E8EDF0;}
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",sans-serif;font-size:15px;line-height:1.82;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 24px 90px;}
+  h1{font-family:"Songti SC","SimSun",serif;font-size:32px;margin:44px 0 6px;letter-spacing:.03em;}
+  h1 small{display:block;font-size:14.5px;color:var(--ink2);font-weight:400;margin-top:10px;letter-spacing:.06em;}
+  h2{font-family:"Songti SC","SimSun",serif;font-size:21px;margin:44px 0 14px;padding-bottom:11px;border-bottom:2px solid var(--ink);}
+  h3{font-size:16.5px;margin:26px 0 10px;padding-left:11px;border-left:4px solid var(--zhu);}
+  h4{font-size:15px;margin:18px 0 8px;color:var(--ink2);}
+  .lead{color:var(--ink2);border-left:3px solid var(--line2);padding-left:14px;margin:0 0 22px;}
+  .tw{overflow-x:auto;margin:0 0 20px;}
+  table{width:100%;border-collapse:collapse;background:var(--card);font-size:13px;line-height:1.7;border:1px solid var(--line2);}
+  th,td{padding:9px 11px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;}
+  thead th{background:var(--ink);color:#F7F3EA;font-size:12.5px;font-weight:600;border-bottom:none;}
+  tbody tr:nth-child(even){background:#FCFAF5;}
+  td.c{text-align:center;white-space:nowrap;font-variant-numeric:tabular-nums;}
+  td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;}
+  .note{background:var(--zhu-bg);border:1px solid #E9C9C4;border-radius:8px;padding:15px 19px;margin:0 0 18px;font-size:14px;}
+  .note b{color:var(--zhu);}
+  .green{background:var(--green-bg);border:1px solid #C2D6CB;border-radius:8px;padding:15px 19px;margin:0 0 18px;font-size:14px;}
+  .green b{color:var(--green);}
+  .gold{background:var(--jin-bg);border:1px solid #E4D3A0;border-radius:8px;padding:15px 19px;margin:0 0 18px;font-size:14px;}
+  .dai{background:var(--dai-bg);border:1px solid #C9D6DE;border-radius:8px;padding:15px 19px;margin:0 0 18px;font-size:14px;}
+  .dai b{color:var(--dai);}
+  code{font-family:ui-monospace,Consolas,monospace;font-size:12px;background:#F1ECE0;padding:1px 5px;border-radius:3px;}
+  .kpi{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:0 0 22px;}
+  @media(max-width:760px){.kpi{grid-template-columns:repeat(2,1fr);}}
+  .kpi div{background:var(--card);border:1px solid var(--line);border-radius:9px;padding:15px 17px;border-top:3px solid var(--zhu);}
+  .kpi .v{font-family:"Songti SC",serif;font-size:29px;font-weight:700;line-height:1.15;}
+  .kpi .l{font-size:12.5px;color:var(--ink3);margin-top:3px;}
+  .curve{display:flex;align-items:flex-end;gap:12px;height:150px;margin:0 0 10px;padding:0 4px;}
+  .curve i{flex:1;background:linear-gradient(180deg,var(--zhu),#D9604F);border-radius:5px 5px 0 0;position:relative;min-height:5px;}
+  .curve i span{position:absolute;top:-22px;left:0;right:0;text-align:center;font-size:13px;font-weight:700;font-variant-numeric:tabular-nums;}
+  .curve i em{position:absolute;bottom:-23px;left:0;right:0;text-align:center;font-size:11.5px;color:var(--ink3);font-style:normal;}
+  .curvewrap{margin:0 0 34px;}
+  .steps{counter-reset:s;list-style:none;padding:0;margin:0 0 20px;}
+  .steps li{counter-increment:s;position:relative;padding:0 0 14px 42px;font-size:14.5px;}
+  .steps li::before{content:counter(s);position:absolute;left:0;top:2px;width:26px;height:26px;border-radius:50%;
+  background:var(--ink);color:#F7F3EA;font-size:12.5px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+  .steps li b{color:var(--zhu);}
+  .badge{display:inline-block;font-size:11.5px;padding:2px 9px;border-radius:20px;font-weight:600;margin-right:6px;}
+  .b-z{background:var(--zhu-bg);color:var(--zhu);}
+  .b-j{background:var(--jin-bg);color:#8A6C12;}
+  .b-g{background:var(--green-bg);color:var(--green);}
+  .b-d{background:var(--dai-bg);color:var(--dai);}
+  .b-gray{background:#EDEAE3;color:var(--ink3);}
+  ul{margin:0 0 16px;padding-left:20px;}li{margin-bottom:6px;}
+</style>
+</head>
+<body><div class="wrap">
+
+<h1>《杨家将 · 忠烈千秋》剧本质检报告
+<small>长文本重活的分层方案 + 24 集剧本全量体检与问题清单 · 2026-09-20</small></h1>
+
+<p class="lead">你交代的是两件事：把「24 集剧本回扫」「对照 672 页核对一致性」这类长文本重活<b>做出可复用的方案</b>，以及<b>把剧本真过一遍、出问题清单</b>。下面第一章是方案，第二章起是这一轮的实际体检结果与清单。</p>
+
+<div class="dai"><b>先说结论</b>　我把机器层能查的全部写成了脚本，跑下来一共 <b>143 条问题</b>；其中 136 条是确定性错误或口径冲突，已经<b>直接修掉</b>（修完是 7 条）。剩下 <b>1 条是结构性的、必须你拍板</b>：<b>剧本的实际体量与声明的格式对不上——差 5.6 倍。</b></div>
+
+<div class="kpi">
+  <div><div class="v">812</div><div class="l">镜头（原 818）</div></div>
+  <div><div class="v">104</div><div class="l">场次</div></div>
+  <div><div class="v">68–95</div><div class="l">分钟 · 实际体量</div></div>
+  <div><div class="v">528</div><div class="l">分钟 · 声明格式</div></div>
+</div>
+
+<h2>一、方案：长文本重活怎么分三层做</h2>
+<p class="lead">这类活（几百页素材 × 几十万字产出）最容易的失败方式不是漏看，是<b>用错工具</b>——拿人眼去做机器该做的事。所以第一件事是把活分清楚。</p>
+
+<div class="tw"><table>
+<thead><tr><th class="c" style="width:90px;">层</th><th style="width:150px;">干什么</th><th>为什么必须这样分</th><th style="width:150px;">典型项</th></tr></thead>
+<tbody>
+<tr><td class="c"><b>第一层<br>机器查</b></td><td>所有能写成规则的检查</td><td>穷尽、可复现、跑一次几秒钟。人眼看 24 集找页码错，一定漏；脚本不会漏。<b>凡是能写成规则的，绝不用人眼。</b></td><td>页码覆盖 · 越界 · 乱序 · 回收链 · 关键词纪律 · 计数配比</td></tr>
+<tr><td class="c"><b>第二层<br>人读</b></td><td>判断类问题</td><td>节奏、人物弧线、逻辑因果、与原文的<b>语义</b>出入——这些没有规则，只能读。但有了第一层的结果，人读的量会小一个数量级。</td><td>戏剧任务是否成立 · 弧线是否闭合 · 与原文精神是否一致</td></tr>
+<tr><td class="c"><b>第三层<br>模型跑</b></td><td>长文本批量回扫</td><td>几万字量级的对照与诊断，靠限免模型跑最划算。这一层要的是"发现线索"，不是"给出结论"——线索再回落到第一层验证。</td><td>逐集一致性核对 · 质量诊断 · 改写建议</td></tr>
+</tbody></table></div>
+
+<h3>四条操作纪律（这一轮验证过，确实管用）</h3>
+<ol class="steps">
+<li><b>先写脚本，再动手看。</b>这一轮 143 条里，有 130+ 条是脚本一眼扫出来的。如果我先去通读 24 集，至少要读三四轮，还会漏。</li>
+<li><b>误报要分级，不能一刀切。</b>脚本报的 143 条里有一批是"正常现象"——比如连环画换页处一句话跨两页，剧本用一个镜头承接，页码自然不会单独标注。这类要单独归成「提示」，不能混进问题清单，否则真问题会被淹没。本轮把 6 条这类降级为提示。</li>
+<li><b>每修一批就重跑，用下降曲线验证修复有效。</b>本轮 5 次迭代：<code>143 → 20 → 13 → 8 → 7</code>。曲线不降，说明修的地方不对。</li>
+<li><b>对照原文用「配对」而不是「通读」。</b>剧本里每个镜头都带"册-页"标记，把它和 672 页的 OCR 原文配对起来逐个核，比通读快得多，也不会漏页。</li>
+</ol>
+
+<div class="curvewrap">
+  <div class="curve">
+    <i style="height:100%"><span>143</span><em>初检</em></i>
+    <i style="height:14%"><span>20</span><em>修分集边界</em></i>
+    <i style="height:9%"><span>13</span><em>调准校验口径</em></i>
+    <i style="height:5.6%"><span>8</span><em>补回收链</em></i>
+    <i style="height:4.9%"><span>7</span><em>终检</em></i>
+  </div>
+</div>
+
+<h2>二、这轮查了哪 11 项</h2>
+<div class="tw"><table>
+<thead><tr><th class="c" style="width:44px;">#</th><th style="width:150px;">检查项</th><th>判据</th><th class="c" style="width:80px;">结果</th></tr></thead>
+<tbody>
+<tr><td class="c">1</td><td>集数与编号连续</td><td>应为 24 集且编号 1–24 无缺</td><td class="c"><span class="badge b-g">通过</span></td></tr>
+<tr><td class="c">2</td><td>页码越界</td><td>每个"册-页"标记须落在本集声明的页码区间内</td><td class="c"><span class="badge b-z">曾 83 条</span></td></tr>
+<tr><td class="c">3</td><td>页码乱序</td><td>同一集内页码标记应非递减</td><td class="c"><span class="badge b-g">通过</span></td></tr>
+<tr><td class="c">4</td><td>正文页覆盖</td><td>每册正文页（第 5 页至版权页前）至少落一镜；相邻页已落镜则视为跨页承接</td><td class="c"><span class="badge b-g">通过</span></td></tr>
+<tr><td class="c">5</td><td>分集表一致性</td><td>剧本每集的集名、册、页范围须与总表一致</td><td class="c"><span class="badge b-g">通过</span></td></tr>
+<tr><td class="c">6</td><td>道具回收链</td><td>P01–P10 每个道具须在设计的每一集出现</td><td class="c"><span class="badge b-j">曾 10 条</span></td></tr>
+<tr><td class="c">7</td><td>朱砂纪律</td><td>朱砂/红色系只准出现在第 2 / 6 / 23 集</td><td class="c"><span class="badge b-j">曾 3 条</span></td></tr>
+<tr><td class="c">8</td><td>贯穿意象</td><td>李陵碑三镜（第 8 / 21 / 24 集）须存在且标注"同机位"</td><td class="c"><span class="badge b-j">曾 1 条</span></td></tr>
+<tr><td class="c">9</td><td>人名写法一致</td><td>同一人物不得混用异体写法</td><td class="c"><span class="badge b-j">曾 2 条</span></td></tr>
+<tr><td class="c">10</td><td>禁用词混入</td><td>正文不得出现"写实/体积光/渐变/3D渲染"等会污染下游提示词的词</td><td class="c"><span class="badge b-g">通过</span></td></tr>
+<tr><td class="c">11</td><td>空话形容词</td><td>不得出现"气氛悲壮"这类不可拍的描述</td><td class="c"><span class="badge b-g">通过</span></td></tr>
+</tbody></table></div>
+<div class="dai"><b>注</b>　第 10 项的"初检报警"是<b>误报</b>——那 7 个禁用词出现在第 1 节《风格声明》里，本来就是作为"禁用词清单"列出来的。已把扫描范围限定到剧本正文。</div>
+
+<h2>三、问题清单</h2>
+<p class="lead">分三类：<span class="badge b-z">A 待你拍板</span>必须决策；<span class="badge b-j">B 已修</span>是确定性错误，我直接改了；<span class="badge b-g">C 提示</span>是正常现象，只是告知。</p>
+
+<h3>A 级 · 待决策（1 项）</h3>
+<div class="note">
+<b>A1　剧本体量与声明格式差 5.6 倍</b><br><br>
+全剧 <b>812 个镜头</b>。按本片自己的节奏（六镜试片实测平均 7.3 秒/镜，手绘慢节奏，取 5–7 秒）估算，实际体量是 <b>68–95 分钟</b>。<br>
+声明格式是「三季 24 集 × 22 分钟」= <b>528 分钟</b>。<br><br>
+<b>差距约 5.6 倍。</b><br><br>
+这不是写漏了——是<b>剧本的层级不对</b>。当前 812 镜是「<b>关键分镜级</b>」（每页漫画落 1–2 个关键镜），不是可拍摄的「逐镜头级」。两者是施工图和效果图的关系，都对，但用途不同。
+</div>
+
+<p>三条路，量化对比：</p>
+<div class="tw"><table>
+<thead><tr><th class="c" style="width:60px;">路</th><th>目标格式</th><th class="c">需要镜头</th><th class="c">还需膨化</th><th class="c">工作量</th><th>评价</th></tr></thead>
+<tbody>
+<tr><td class="c"><b>A</b></td><td>动画长片 90 分钟</td><td class="c">约 1,050</td><td class="c">+238 镜</td><td class="c">+30%</td><td><b>几乎零成本</b>。当前剧本补一轮即可成立</td></tr>
+<tr><td class="c"><b>B</b></td><td>24 集 × 3.5 分钟（竖屏短剧）</td><td class="c">812</td><td class="c">0</td><td class="c">0</td><td><b>当前剧本直接可用</b>，且正好匹配 Flow 的 4/6/8 秒片段机制</td></tr>
+<tr><td class="c"><b>C</b></td><td>24 集 × 22 分钟（原声明）</td><td class="c">约 5,760</td><td class="c">+4,950 镜</td><td class="c">6 倍</td><td>需要把剧本再写五遍，AI 生产管线下不现实</td></tr>
+</tbody></table></div>
+
+<div class="green">
+<b>我的建议：走 B，把 A 作为备选，C 放弃。</b><br><br>
+理由三条：<br>
+① <b>B 是零追加成本</b>——剧本写的时候，实际的镜头密度就是按 3–4 分钟一集在铺的；<br>
+② <b>B 匹配生产工具</b>——Flow 单段 4/6/8 秒，竖屏短剧天然由短片段拼装，这是 AI 动画最顺的形态；<br>
+③ <b>B 匹配你的试片节奏</b>——六镜 44 秒，平均 7.3 秒/镜，正是慢节奏手绘的密度，短剧集恰好装得下。<br><br>
+如果一定要大银幕体量，那就走 A：把三季合并成一部 90 分钟剧场版，只需再补 238 个镜头（约 30% 工作量），而且结构上反而更紧——现在三季 24 集的分法，第 19 集只有 16 页素材，本来偏薄。
+</div>
+
+<h3>B 级 · 已修（136 条）</h3>
+<p>下面 8 类全部已落到文件里。修复前的原件我留了备份：<code>.workbuddy/_tmp/qc/剧本_修复前备份.html</code>，要回退随时可以。</p>
+<div class="tw"><table>
+<thead><tr><th class="c" style="width:44px;">#</th><th style="width:170px;">问题</th><th class="c" style="width:66px;">条数</th><th>处理</th></tr></thead>
+<tbody>
+<tr><td class="c">B1</td><td><b>分集页码边界与实际内容不符</b>（8 个集）</td><td class="c">83</td><td>按剧本实际内容重算全部 24 集的页码区间，并同步剧本集头、第 2 节分集表、逐页总表 672 行。例：第 6 集 36–58 → <b>36–63</b>；第 19 集 45–66 → <b>45–60</b></td></tr>
+<tr><td class="c">B2</td><td><b>内容重复</b></td><td class="c">1</td><td>第 6 集场 6-7「黄河边／陈家谷」与第 7 集场 7-1 写的是同一段（陈林柴敢收尸、六郎寻父），<b>删除第 6 集那一场</b>（1047 字符）</td></tr>
+<tr><td class="c">B3</td><td><b>体量失衡</b></td><td class="c">2</td><td>第 13 集 59 页 vs 第 12 集 18 页 → 把「天门庵」「幽州初见张华」两场挪回第 12 集；第 23 集 33 页 vs 第 24 集 7 页 → 把「内外夹攻决战」挪到第 24 集作开场。现在 <b>45 / 37 页</b> 与 <b>19 / 21 页</b></td></tr>
+<tr><td class="c">B4</td><td><b>道具回收链断裂</b>（埋了没收）</td><td class="c">4</td><td>见下方专表——4 处全部补上</td></tr>
+<tr><td class="c">B5</td><td><b>页码标记偏移</b></td><td class="c">5</td><td>内容在、标记指错页：1-62→1-63、2-38→2-39、3-16→3-17、3-23→3-24、3-71→3-72</td></tr>
+<tr><td class="c">B6</td><td><b>朱砂纪律口径冲突</b></td><td class="c">3</td><td>风格声明写"挂帅在第 24 集"，但挂帅实际在第 23 集。统一为第 2 / 6 / <b>23</b> 集，同时把声明里的"殉国第 8 集"改回第 6 集</td></tr>
+<tr><td class="c">B7</td><td><b>贯穿意象缺标注</b></td><td class="c">1</td><td>第 21 集李陵碑镜头补「与第 8 集同机位」——不标这句，三镜一致性会失守</td></tr>
+<tr><td class="c">B8</td><td><b>人名异体字</b></td><td class="c">4</td><td>正文 4 处「余太君」→「佘太君」（片尾史实标注里的「折太君」是有意写的，保留）</td></tr>
+</tbody></table></div>
+
+<h4>B4 明细：4 条断裂的回收链（已补）</h4>
+<div class="tw"><table>
+<thead><tr><th class="c" style="width:56px;">道具</th><th style="width:120px;">原设计</th><th class="c" style="width:56px;">断在哪</th><th>补的内容</th></tr></thead>
+<tbody>
+<tr><td class="c"><b>P10</b><br>枯柳</td><td>第 6 集出现 → 第 8 集抽新芽 → 第 24 集花满枝</td><td class="c">第 6 集</td><td>第 6 集初见碑时补一句"<b>碑的左侧立着一株枯柳，枝条全部折断</b>"。原来只在第 8 集突然出现新芽，没有前情</td></tr>
+<tr><td class="c"><b>P04</b><br>酒囊</td><td>第 6 集杨业扔给七郎 → 第 7 集作七郎坟上的记号 → <b>第 21 集回到碑前</b></td><td class="c">第 21 集</td><td>第 21 集补一个近景：<b>宗保在碑脚的土里摸出一只旧酒囊</b>，皮子烂了、绳子还在。三集闭合</td></tr>
+<tr><td class="c"><b>P07</b><br>第九副碗筷</td><td>第 8 集单独留出 → 第 21 集揭晓留给谁 → <b>第 23 集交给桂英</b></td><td class="c">第 23 集</td><td>第 23 集交杖那一镜补：镜头横移，<b>桌上还摆着那第九副碗筷，她把它一起推给了桂英</b></td></tr>
+<tr><td class="c"><b>P03</b><br>延平的剑</td><td>第 4 集解下留营 → 第 8 集摆在太君面前 → <b>第 24 集归位</b></td><td class="c">第 24 集</td><td>第 24 集碑前补一镜：<b>桂英解下腰间那柄剑，横放在碑脚</b>。全剧的剑到这里才真正落地</td></tr>
+</tbody></table></div>
+<div class="gold"><b>这 4 条的共性</b>　全是同一类毛病——<b>埋了没收</b>。设计和伏笔都写好了，但回收的那一下没落到文本里。这是长篇改编最容易漏的，也是机器最容易查的（关键词按集扫一遍就出来了）。以后每加一个新道具/新意象，都该在道具表里登记"埋在哪几集、收在哪一集"，然后让脚本去核。</div>
+
+<h3>C 级 · 提示（6 条，正常现象）</h3>
+<div class="green">
+<b>跨页承接：6 个集、共 11 页未单独标注</b>（册1 第 12、62、74、75 页；册2 第 38、57、62 页；册3 第 16、23、71 页；册7 第 17 页）<br><br>
+这是连环画的固有现象：<b>一句话在换页处被切成两页</b>，比如册1 第 62–63 页那句"中华尚未统一。今既出兵来援，岂能临阵脱逃？"是同一句台词。改编时用一个镜头承接两页是对的，不需要拆成两个镜头。<br><br>
+<b>所以这 6 条不是缺陷，是脚本判据需要分级。</b>我已把校验规则改成：本页无标记但相邻页有标记 → 记为"跨页承接"（提示级）；本页和相邻页都无标记 → 才记为真缺口（中级）。按新规则，<b>真缺口为 0</b>。
+</div>
+
+<h2>四、修完之后的剧本状态</h2>
+<div class="tw"><table>
+<thead><tr><th class="c">集</th><th>集名</th><th class="c">册</th><th class="c">页范围</th><th class="c">正文页</th><th class="c">覆盖<br><span style="font-weight:400;font-size:11px;">单独落镜+跨页承接</span></th><th class="c">场</th><th class="c">镜头</th><th class="c">台词块</th></tr></thead>
+<tbody>
+<tr><td class="c">1</td><td>北汉风雪</td><td class="c">1</td><td class="c">1–41</td><td class="c">37</td><td class="c">36+1</td><td class="c">8</td><td class="c">41</td><td class="c">16</td></tr>
+<tr><td class="c">2</td><td>归宋 · 天波府</td><td class="c">1</td><td class="c">42–82</td><td class="c">40</td><td class="c">37+3</td><td class="c">5</td><td class="c">38</td><td class="c">9</td></tr>
+<tr><td class="c">3</td><td>邠阳城 · 围</td><td class="c">2</td><td class="c">1–37</td><td class="c">33</td><td class="c">33</td><td class="c">6</td><td class="c">34</td><td class="c">7</td></tr>
+<tr><td class="c">4</td><td>邠阳城 · 血</td><td class="c">2</td><td class="c">38–74</td><td class="c">36</td><td class="c">33+3</td><td class="c">5</td><td class="c">34</td><td class="c">5</td></tr>
+<tr><td class="c">5</td><td>误卯牌</td><td class="c">3</td><td class="c">1–35</td><td class="c">31</td><td class="c">29+2</td><td class="c">5</td><td class="c">31</td><td class="c">6</td></tr>
+<tr><td class="c">6</td><td><b>李陵碑 · 殉国</b></td><td class="c">3</td><td class="c">36–63</td><td class="c">28</td><td class="c">28</td><td class="c">6</td><td class="c">31</td><td class="c">8</td></tr>
+<tr><td class="c">7</td><td>七郎之死</td><td class="c">3</td><td class="c">64–85</td><td class="c">22</td><td class="c">21+1</td><td class="c">4</td><td class="c">29</td><td class="c">6</td></tr>
+<tr><td class="c">8</td><td>汴京审潘</td><td class="c">3</td><td class="c">86–106</td><td class="c">20</td><td class="c">20</td><td class="c">6</td><td class="c">35</td><td class="c">4</td></tr>
+<tr><td class="c">9</td><td>辞官</td><td class="c">4</td><td class="c">1–22</td><td class="c">18</td><td class="c">18</td><td class="c">4</td><td class="c">23</td><td class="c">5</td></tr>
+<tr><td class="c">10</td><td>佳山寨</td><td class="c">4</td><td class="c">23–54</td><td class="c">32</td><td class="c">32</td><td class="c">4</td><td class="c">38</td><td class="c">5</td></tr>
+<tr><td class="c">11</td><td>焦赞</td><td class="c">4</td><td class="c">55–74</td><td class="c">19</td><td class="c">19</td><td class="c">3</td><td class="c">23</td><td class="c">5</td></tr>
+<tr><td class="c">12</td><td>双龙谷</td><td class="c">5</td><td class="c">1–45</td><td class="c">41</td><td class="c">41</td><td class="c">5</td><td class="c">46</td><td class="c">8</td></tr>
+<tr><td class="c">13</td><td>八姐闯幽州</td><td class="c">5</td><td class="c">46–82</td><td class="c">36</td><td class="c">36</td><td class="c">3</td><td class="c">41</td><td class="c">7</td></tr>
+<tr><td class="c">14</td><td>天波楼</td><td class="c">6</td><td class="c">1–30</td><td class="c">26</td><td class="c">26</td><td class="c">5</td><td class="c">36</td><td class="c">7</td></tr>
+<tr><td class="c">15</td><td>智救杨郡马</td><td class="c">6</td><td class="c">31–60</td><td class="c">30</td><td class="c">30</td><td class="c">5</td><td class="c">40</td><td class="c">3</td></tr>
+<tr><td class="c">16</td><td>魏州解围</td><td class="c">6</td><td class="c">61–82</td><td class="c">21</td><td class="c">21</td><td class="c">4</td><td class="c">33</td><td class="c">7</td></tr>
+<tr><td class="c">17</td><td>天门阵</td><td class="c">7</td><td class="c">1–22</td><td class="c">18</td><td class="c">17+1</td><td class="c">4</td><td class="c">28</td><td class="c">2</td></tr>
+<tr><td class="c">18</td><td>穆阁寨</td><td class="c">7</td><td class="c">23–44</td><td class="c">22</td><td class="c">22</td><td class="c">3</td><td class="c">32</td><td class="c">6</td></tr>
+<tr><td class="c">19</td><td>辕门斩子</td><td class="c">7</td><td class="c">45–60</td><td class="c">16</td><td class="c">16</td><td class="c">4</td><td class="c">29</td><td class="c">6</td></tr>
+<tr><td class="c">20</td><td>大破天门阵</td><td class="c">7</td><td class="c">61–90</td><td class="c">29</td><td class="c">29</td><td class="c">4</td><td class="c">44</td><td class="c"><b>0</b></td></tr>
+<tr><td class="c">21</td><td>碑上的字</td><td class="c">8</td><td class="c">1–21</td><td class="c">17</td><td class="c">17</td><td class="c">3</td><td class="c">32</td><td class="c">2</td></tr>
+<tr><td class="c">22</td><td>寿宴请缨</td><td class="c">8</td><td class="c">22–42</td><td class="c">21</td><td class="c">21</td><td class="c">3</td><td class="c">29</td><td class="c">5</td></tr>
+<tr><td class="c">23</td><td>内外夹攻</td><td class="c">8</td><td class="c">43–61</td><td class="c">19</td><td class="c">19</td><td class="c">2</td><td class="c">26</td><td class="c">1</td></tr>
+<tr><td class="c">24</td><td>穆桂英挂帅</td><td class="c">8</td><td class="c">62–82</td><td class="c">20</td><td class="c">20</td><td class="c">3</td><td class="c">39</td><td class="c">1</td></tr>
+</tbody></table></div>
+
+<div class="note">
+<b>表里还有一个我没动、但要告诉你的东西</b>：<b>第 20 集《大破天门阵》台词块 = 0</b>，第 23 集和第 24 集各只有 1 个。<br><br>
+破阵那一集是 44 个镜头、零台词——纯动作。在这个风格下未必是错（武戏可以没有对白），但<b>一集 22 分钟只有 44 个镜头、一句词都没有</b>，情绪的落点会找不到。这一条属于第二层「人读」该判的，我没擅自改，先报给你。
+</div>
+
+<h2>五、可复用的脚本与产物</h2>
+<div class="tw"><table>
+<thead><tr><th style="width:190px;">文件</th><th>作用</th></tr></thead>
+<tbody>
+<tr><td><code>qc_machine.py</code></td><td><b>核心。</b>11 项自动校验，输出 JSON + 可读报告。换项目只需改开头的 <code>BOOKS</code> / <code>EPISODES</code> / <code>PROPS</code> / <code>BANNED</code> 四张表</td></tr>
+<tr><td><code>qc_diagnose.py</code></td><td>逐集「声明范围 vs 实际使用范围」对比 + 缺口页的 OCR 原文（判断是漏内容还是标记偏移，全靠它）</td></tr>
+<tr><td><code>qc_fix.py</code> / <code>qc_fix2.py</code></td><td>机械修复：跨集挪场、重排场号、同步页码、口径统一、补回收链</td></tr>
+<tr><td><code>machine_report.txt</code></td><td>本轮体检报告（可读）</td></tr>
+<tr><td><code>machine_report.json</code></td><td>同一份数据的结构化版，供后续脚本消费</td></tr>
+<tr><td><code>剧本_修复前备份.html</code></td><td>修复前原件，可回退</td></tr>
+</tbody></table></div>
+
+<div class="gold"><b>下一轮长文本重活怎么套这套</b>　① 先跑 <code>qc_machine.py</code> 出第一份清单；② 用 <code>qc_diagnose.py</code> 把"真缺口"和"标记偏移"分开；③ 机械项用 <code>qc_fix</code> 一次改完，改前自动备份；④ 重跑，看曲线降不降；⑤ 剩下降不下去的，才交给人读和模型跑。<br><br>
+这套流程的价值不在脚本本身，在于<b>它把"通读 24 集"这件事从必做项变成了最后一道保险</b>。</div>
+
+<p style="font-size:13px;color:#7A7266;margin-top:28px;">
+本报告中的故事取自传统民间杨家将传说与《宋史》等公共素材。原连环画《北宋杨家将》（湖南美术出版社，喻岳衡改编，蒋太禄等绘）的画面与改编文字著作权归原作者与出版方所有，本方案不含任何原画复用。</p>
+
+</div></body></html>

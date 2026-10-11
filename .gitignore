@@ -24,3 +24,17 @@ web_custom_versions/
 filtered-openapi.yaml
 uv.lock
 .comfy_environment
+
+# === 本地专有排除（升级 v0.39.1 时迁入，避免敏感/大体积内容入库）===
+# Chrome 自动化配置：含 cookie/登录态，约 5GB，严禁提交
+/flow_chrome_profile/
+# 下载的可执行文件，可重新获取
+/tools/yt-dlp/
+# 编辑器 / 代理 / 缓存目录
+/.workbuddy/
+/.trae/
+/.trae_tmp/
+/.agent/
+/.agents/
+/.cache/
+/.cowart-compat-marketplace/

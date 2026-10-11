@@ -1,0 +1,144 @@
+{
+  "1": {
+    "inputs": {
+      "unet_name": "qwen-image-2.1-UC-Q4_K_M.gguf"
+    },
+    "class_type": "UnetLoaderGGUF",
+    "_meta": {
+      "title": "1. 视觉扩散模型 (DiT Q4_K_M)"
+    }
+  },
+  "2": {
+    "inputs": {
+      "clip_name": "qwen3vl_8b_heretic-Q4_K_M.gguf",
+      "type": "qwen_image"
+    },
+    "class_type": "CLIPLoaderGGUF",
+    "_meta": {
+      "title": "2. 破壁文本编码器 (CLIP Q4_K_M)"
+    }
+  },
+  "3": {
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "3. 图像编解码器 (VAE)"
+    }
+  },
+  "4": {
+    "inputs": {
+      "image": "qwen_test_source.png",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "4. 加载待编辑的原图 (Input Image)"
+    }
+  },
+  "5": {
+    "inputs": {
+      "prompt": "Change the background into a vibrant sunset beach with rolling ocean waves and palm trees, keep the character's appearance, face, and pose unchanged",
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "image": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEdit",
+    "_meta": {
+      "title": "5. Qwen 图像编辑指令编码 (Text + Image Conditioning)"
+    }
+  },
+  "6": {
+    "inputs": {
+      "prompt": "worst quality, low quality, deformed, distorted, blurry, bad anatomy",
+      "clip": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEdit",
+    "_meta": {
+      "title": "6. 负向提示词 (Negative Prompt)"
+    }
+  },
+  "7": {
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "7. 输出分辨率空间 (Empty Latent 1024x1024)"
+    }
+  },
+  "8": {
+    "inputs": {
+      "seed": 42,
+      "steps": 35,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "1",
+        0
+      ],
+      "positive": [
+        "5",
+        0
+      ],
+      "negative": [
+        "6",
+        0
+      ],
+      "latent_image": [
+        "7",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "8. KSampler (指令生成 Denoise: 1.0)"
+    }
+  },
+  "9": {
+    "inputs": {
+      "samples": [
+        "8",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "9. VAE 解码为编辑后的图像"
+    }
+  },
+  "10": {
+    "inputs": {
+      "filename_prefix": "2026-09-30/qwen_edit",
+      "images": [
+        "9",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "10. 保存编辑后图像 (当日归档目录)"
+    }
+  }
+}

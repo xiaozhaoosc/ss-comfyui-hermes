@@ -1,0 +1,16 @@
+[CHARACTER IDENTITY LOCK — HIGHEST PRIORITY]
+Use the uploaded reference image (Gemini_Generated_Image_tyqd9xtyqd9xtyqd.jpg) as the primary facial identity reference.
+The woman in the generated image must be the exact same young East Asian woman from the reference image.
+Strictly lock and preserve her unique facial features: her delicate facial proportions, soft natural eyebrows, gentle eye shape and eyelid crease, slender nose bridge and refined nose tip, soft natural lip contour, smooth jawline, fair translucent skin tone, and long voluminous dark hair.
+Do NOT replace her with a generic AI face or redesign her五官. Preserve her specific personal identity and youthfulness.
+
+[SCENE & PHOTOGRAPHY STYLE — V4 RAINY NIGHT FLASH SELFIE]
+High-angle selfie perspective, arm extended forward and upward toward the camera, capturing a 24mm wide angle lens perspective.
+Direct on-camera hard flash photography, capturing an authentic candid moment.
+The woman is smiling sweetly and naturally, looking up into the camera lens.
+Scene: Rainy night city street background, glistening wet asphalt pavement reflecting vibrant warm golden streetlights, colorful neon signs, and blurry city bokeh in the background.
+Fine raindrops and moisture glistening on her skin, collarbones, and dress.
+Her long dark hair is slightly damp, with realistic fine strands blowing gently in the night breeze.
+Outfit: Elegant deep crimson red dress.
+Luminous, healthy, realistic skin texture with authentic pores and subtle moisture sheen.
+Sharp focus on the woman with shallow depth of field in the background, high contrast, cinematic photorealism, snapshot aesthetic.

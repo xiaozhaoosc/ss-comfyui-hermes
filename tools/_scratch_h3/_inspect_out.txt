@@ -1,0 +1,20 @@
+h3_full_00001_.mp4
+   frames=73 fps=24.0 448x768 file=82917 bytes
+   frame 0    mean=0.00 std=0.00 min=0 max=0
+   frame 36   mean=0.00 std=0.00 min=0 max=0
+   frame 72   mean=0.00 std=0.00 min=0 max=0
+   actually read 73 frames
+h3_full_noswblend_00001_.mp4
+   frames=73 fps=24.0 448x768 file=82917 bytes
+   frame 0    mean=0.00 std=0.00 min=0 max=0
+   frame 36   mean=0.00 std=0.00 min=0 max=0
+   frame 72   mean=0.00 std=0.00 min=0 max=0
+   actually read 73 frames
+h3_full_pass1baseline_00001_.mp4
+   frames=73 fps=24.0 448x768 file=82923 bytes
+   frame 0    mean=0.00 std=0.00 min=0 max=0
+   frame 36   mean=0.00 std=0.00 min=0 max=0
+   frame 72   mean=0.00 std=0.00 min=0 max=0
+   actually read 73 frames
+
+holdmap: {"holds": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 3, 3, 3, 3, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 19], "world_len": 73}

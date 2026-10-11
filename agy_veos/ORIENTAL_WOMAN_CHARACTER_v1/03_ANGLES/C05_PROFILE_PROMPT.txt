@@ -1,0 +1,19 @@
+﻿[CHARACTER IDENTITY LOCK]
+Use C01, C02, C03, C04 as combined references.
+Generate a strict 90-degree complete side profile portrait of the exact same character.
+Both head and body face the same direction.
+Requirements:
+90° clean side profile
+clear nose bridge profile
+clear lip profile
+clear jawline
+clear chin profile
+accurate neck length
+accurate shoulder structure
+natural waist curve
+Do NOT generate a 3/4 view. It must be a true profile view.
+Strictly maintain the facial identity from C01.
+Pay special attention: the proportions between nose, lips, chin, and forehead MUST match C01.
+Hair falls naturally due to gravity, but maintains the same length and texture.
+Costume remains exactly the same.
+This image serves as: Face Profile Reference + Body Profile Reference + Video Camera Angle Reference.

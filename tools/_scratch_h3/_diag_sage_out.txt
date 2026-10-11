@@ -1,0 +1,52 @@
+======== 完整 _run_full.log ========
+==============================================================================
+Profile: full  |  鈽呪槄D 缁勫悎鎷筹紙鎺ㄨ崘涓诲姏锛?
+==============================================================================
+宸ヤ綔娴佸凡淇濆瓨: D:\ai_projects\ComfyUI\workflows\v5\h3_guard_v5_full_api.json  (53 鑺傜偣)
+[鈭歖 宸叉彁浜? prompt_id = af183639-23c3-41f7-b0dd-17691e16c9f7
+    ... 宸茶繍琛?0s
+    ... 宸茶繍琛?30s
+    ... 宸茶繍琛?61s
+
+[X] 鏈畬鎴? [["execution_start", {"prompt_id": "af183639-23c3-41f7-b0dd-17691e16c9f7", "timestamp": 1790089251592}], ["execution_cached", {"nodes": [], "prompt_id": "af183639-23c3-41f7-b0dd-17691e16c9f7", "timestamp": 1790089251822}], ["execution_error", {"prompt_id": "af183639-23c3-41f7-b0dd-17691e16c9f7", "node_id": "6", "node_type": "PathchSageAttentionKJ", "executed": ["5", "18", "1", "4", "16", "3", "17"], "exception_message": "No module named 'sageattention'\n", "exception_type": "ModuleNotFoundError", "traceback": ["  File \"D:\\ai_projects\\ComfyUI\\execution.py\", line 545, in execute\n    output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n", "  File \"D:\\ai_projects\\ComfyUI\\execution.py\", line 344, in get_output_data\n    return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n", "  File \"D:\\ai_projects\\ComfyUI\\execution.py\", line 318, in _async_map_node_over_list\n    await process_inputs(input_dict, i)\n", "  File \"D:\\ai_projects\\ComfyUI\\execution.py\", line 306, in process_inputs\n    result = f(**inputs)\n             ^^^^^^^^^^^\n", "  File \"D:\\ai_projects\\ComfyUI\\custom_nodes\\ComfyUI-KJNodes\\nodes\\model_optimization_nodes.py\", line 129, in patch\n    new_attention = get_sage_func(sage_attention, allow_compile=allow_compile)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n", "  File \"D:\\ai_projects\\ComfyUI\\custom_nodes\\ComfyUI-KJNodes\\nodes\\model_optimization_nodes.py\", line 31, in get_sage_func\n    from sageattention import sageattn\n"], "current_inputs": {"model": ["<comfy.model_patcher.ModelPatcherDynamic object at 0x0000024997D121E0>"], "sage_attention": ["auto"], "allow_compile": [false]}, "current_outputs": ["2", "10", "27", "36", "6", "22", "33", "24", "8", "40", "17", "13", "38", "23", "51", "43", "49", "12", "28", "16", "31", "7", "48", "44", "45", "26", "5", "11", "15", "21", "25", "18", "1", "41", "42", "20", "14", "46", "47", "9", "30", "37", "53", "32", "4", "29", "34", "39", "50", "3", "19", "52", "35"], "timestamp": 1790089318493}]] (鑰楁椂 72.6s)
+    灏濊瘯涓柇骞舵竻绌洪槦鍒? ["interrupt fail: JSONDecodeError('Expecting value: line 1 column 1 (char 0)')", "queue clear fail: JSONDecodeError('Expecting value: line 1 column 1 (char 0)')"]
+
+
+======== 抽取的异常字段 ========
+>>> exception_message: No module named 'sageattention'\n
+>>> exception_type: ModuleNotFoundError
+
+======== 依赖检查 ========
+  sageattention  NOT INSTALLED
+  triton         NOT INSTALLED
+  flash_attn     NOT INSTALLED
+  xformers       NOT INSTALLED
+
+======== object_info 中含 sage/attention 的节点 ========
+  CLIPAttentionMultiply
+  H3SLAAttention
+  LTX2AttentionTunerPatch
+  LTX2MemoryEfficientSageAttentionPatch
+  MiniMaxH3MemoryEfficientSageAttentionPatch
+  MiniMaxLowVRAMAttention
+  ModelMemoryUsageFactorOverride
+  NABLA_AttentionKJ
+  PatchFlashAttentionKJ
+  PathchSageAttentionKJ
+  PerturbedAttentionGuidance
+  SelfAttentionGuidance
+  UNetCrossAttentionMultiply
+  UNetSelfAttentionMultiply
+  UNetTemporalAttentionMultiply
+  WanVideoMemoryEfficientSageAttentionPatch
+
+  [PatchSageAttentionKJ] <不存在>
+  [PathchSageAttentionKJ]
+     required = {"model": ["MODEL"], "sage_attention": [["disabled", "auto", "sageattn_qk_int8_pv_fp16_cuda", "sageattn_qk_int8_pv_fp16_triton", "sageattn_qk_int8_pv_fp8_cuda", "sageattn_qk_int8_pv_fp8_cuda++", "sageattn3", "sageattn3_per_block_mean"], {"default": false, "tooltip": "Patch the attention of the model passing through this node to use sageattn. To revert, run this node again with the disabled option. Requires the sageattention library to be installed."}]}
+     optional = {"allow_compile": ["BOOLEAN", {"default": false, "tooltip": "Allow the use of torch.compile for the sage attention function, requires latest sageattn 2.2.0 or higher."}]}
+  [MiniMaxH3MemoryEfficientSageAttentionPatch]
+     required = {"model": ["MODEL", {}]}
+     optional = null
+  [H3SLAAttention]
+     required = {"model": ["MODEL", {"tooltip": "MODEL,"}], "sparsity_ratio": ["FLOAT", {"tooltip": "Fraction of key blocks skipped. 0.85 is the shipped default and what the SLA turbo LoRA was distilled against; 0.90 is the value validated here and is ~15% faster. Sparsity did NOT turn out to drive the speech artefacts on H3 -- step count did, so use 6 steps rather than lowering this. Break-even is about 0.60 -- below that this kernel is SLOWER than dense attention,0.0 disables sparsity without removing the node.", "default": 0.8, "min": 0.0, "max": 0.95, "step": 0.05, "round": false}], "block_size": ["COMBO"
+     optional = {"min_seq_len": ["INT", {"tooltip": "Sequences shorter than this stay dense. Guards two things: the short text-refiner attention, which must never be sparsified, and low-resolution or short clips, where block selection would cost more than it saves. Lower it only if you know your sequence is long enough to benefit.", "default": 12228, "min": 0, "max": 1000000, "step": 1024}], "dense_last_steps": ["INT", {"tooltip": "Run the last N sampling steps at full attention. 0 matches the turbo LoRA's original distillation setup exactly. 1 costs a little speed and can recover fine detail, since the final

@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>《杨家将·忠烈千秋》动画改编创意与剧本方案</title>
+<style>
+  :root{
+    --paper:#FBF8F1;
+    --card:#FFFFFF;
+    --ink:#231F19;
+    --ink-2:#4A443B;
+    --ink-3:#7A7266;
+    --line:#E3DCCC;
+    --line-2:#D2C8B2;
+    --zhu:#B03A2E;
+    --zhu-soft:#F6E7E4;
+    --dai:#3E4E5A;
+    --dai-soft:#E8EDF0;
+    --jin:#B8912B;
+    --jin-soft:#F8F1DC;
+    --green:#4E6B4F;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Noto Sans SC",-apple-system,sans-serif;
+    font-size:15.5px;
+    line-height:1.85;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:960px;margin:0 auto;padding:0 28px 120px;}
+
+  /* ---------- Cover ---------- */
+  .cover{
+    border-bottom:3px double var(--line-2);
+    padding:64px 0 40px;
+    margin-bottom:44px;
+    position:relative;
+  }
+  .cover .kicker{
+    font-size:12.5px;letter-spacing:.34em;color:var(--zhu);
+    font-weight:600;margin-bottom:22px;
+  }
+  .cover h1{
+    font-family:"Songti SC","SimSun","Noto Serif SC",serif;
+    font-size:44px;line-height:1.3;margin:0 0 8px;
+    letter-spacing:.04em;font-weight:700;
+  }
+  .cover h1 small{
+    display:block;font-size:19px;color:var(--ink-2);
+    font-weight:400;letter-spacing:.14em;margin-top:14px;
+  }
+  .cover .sub{
+    margin-top:26px;font-size:14.5px;color:var(--ink-2);
+    display:flex;flex-wrap:wrap;gap:10px 26px;
+  }
+  .cover .sub b{color:var(--ink);font-weight:600;}
+  .cover .quote{
+    margin-top:30px;padding:16px 20px;
+    background:var(--card);border-left:3px solid var(--zhu);
+    font-family:"Songti SC","SimSun",serif;font-size:16.5px;color:var(--ink-2);
+  }
+
+  /* ---------- TOC ---------- */
+  .toc{
+    background:var(--card);border:1px solid var(--line);
+    border-radius:8px;padding:26px 30px;margin-bottom:56px;
+  }
+  .toc h2{
+    font-size:13px;letter-spacing:.24em;color:var(--ink-3);
+    margin:0 0 16px;font-weight:600;
+  }
+  .toc ol{margin:0;padding:0;list-style:none;counter-reset:t;}
+  .toc li{counter-increment:t;padding:3px 0;font-size:14.5px;}
+  .toc li::before{
+    content:counter(t,decimal-leading-zero);
+    color:var(--zhu);font-size:12px;font-weight:700;
+    margin-right:10px;font-variant-numeric:tabular-nums;
+  }
+  .toc a{color:var(--ink);text-decoration:none;border-bottom:1px solid transparent;}
+  .toc a:hover{border-bottom-color:var(--zhu);color:var(--zhu);}
+
+  /* ---------- Sections ---------- */
+  section{margin-bottom:64px;}
+  h2.ch{
+    font-family:"Songti SC","SimSun","Noto Serif SC",serif;
+    font-size:26px;font-weight:700;margin:0 0 8px;letter-spacing:.02em;
+    padding-bottom:14px;border-bottom:2px solid var(--ink);
+    display:flex;align-items:baseline;gap:14px;
+  }
+  h2.ch span.no{
+    font-family:inherit;font-size:13px;color:var(--zhu);
+    letter-spacing:.2em;font-weight:600;
+  }
+  h3{
+    font-size:17.5px;font-weight:700;margin:38px 0 14px;
+    padding-left:12px;border-left:4px solid var(--zhu);
+    line-height:1.4;
+  }
+  h4{font-size:15.5px;font-weight:700;margin:24px 0 10px;color:var(--ink-2);}
+  p{margin:0 0 14px;}
+  ul,ol{margin:0 0 16px;padding-left:22px;}
+  li{margin-bottom:7px;}
+  a{color:var(--dai);}
+  strong{font-weight:700;}
+  em{font-style:normal;color:var(--zhu);font-weight:600;}
+
+  .lead{
+    font-size:16px;color:var(--ink-2);
+    border-left:3px solid var(--line-2);padding-left:16px;margin-bottom:26px;
+  }
+
+  /* ---------- Table ---------- */
+  .tw{overflow-x:auto;margin:0 0 22px;}
+  table{
+    width:100%;border-collapse:collapse;background:var(--card);
+    font-size:13.5px;line-height:1.65;border:1px solid var(--line-2);
+  }
+  th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;}
+  thead th{
+    background:var(--ink);color:#F7F3EA;font-weight:600;
+    font-size:12.5px;letter-spacing:.06em;border-bottom:none;
+    position:sticky;top:0;
+  }
+  tbody tr:nth-child(even){background:#FCFAF5;}
+  tbody tr:hover{background:var(--jin-soft);}
+  td.num,th.num{text-align:center;font-variant-numeric:tabular-nums;white-space:nowrap;}
+  td.c{text-align:center;white-space:nowrap;}
+
+  /* ---------- Cards ---------- */
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px;}
+  @media(max-width:700px){.grid{grid-template-columns:1fr;}}
+  .card{
+    background:var(--card);border:1px solid var(--line);
+    border-radius:8px;padding:18px 20px;
+  }
+  .card h4{margin-top:0;}
+  .card.zhu{border-top:3px solid var(--zhu);}
+  .card.dai{border-top:3px solid var(--dai);}
+  .card.jin{border-top:3px solid var(--jin);}
+  .card.green{border-top:3px solid var(--green);}
+
+  .note{
+    background:var(--zhu-soft);border:1px solid #E9C9C4;
+    border-radius:8px;padding:16px 20px;margin:0 0 22px;font-size:14px;
+  }
+  .note b{color:var(--zhu);}
+  .info{
+    background:var(--dai-soft);border:1px solid #C9D6DE;
+    border-radius:8px;padding:16px 20px;margin:0 0 22px;font-size:14px;
+  }
+  .info b{color:var(--dai);}
+  .gold{
+    background:var(--jin-soft);border:1px solid #E4D3A0;
+    border-radius:8px;padding:16px 20px;margin:0 0 22px;font-size:14px;
+  }
+
+  /* ---------- Script ---------- */
+  .script{
+    background:var(--card);border:1px solid var(--line);
+    border-radius:8px;padding:6px 26px 26px;font-size:14.5px;
+  }
+  .script .slug{
+    font-weight:700;letter-spacing:.04em;color:var(--ink);
+    background:#F1ECE0;border-left:4px solid var(--ink);
+    padding:8px 14px;margin:30px -6px 16px;
+    font-family:"Songti SC","SimSun",serif;font-size:15px;
+  }
+  .script .act{margin:0 0 12px;}
+  .script .act::before{content:"△";color:var(--zhu);margin-right:6px;font-weight:700;}
+  .script .dlg{margin:0 0 12px 0;padding-left:0;}
+  .script .dlg b{display:inline;color:var(--dai);font-weight:700;}
+  .script .dlg .par{color:var(--ink-3);font-size:13px;margin-left:6px;}
+  .script .vo{
+    margin:0 0 12px;padding:8px 14px;background:#F4F6F7;
+    border-left:3px solid var(--dai);color:var(--ink-2);font-size:14px;
+  }
+  .script .vo b{color:var(--dai);}
+  .script .sfx{
+    margin:0 0 12px;font-size:13px;color:var(--ink-3);
+    font-family:ui-monospace,"Cascadia Mono",Consolas,monospace;
+  }
+  .script .sfx b{color:var(--green);}
+  .script .trans{
+    margin:16px 0;text-align:right;font-size:12.5px;
+    letter-spacing:.18em;color:var(--ink-3);font-weight:600;
+  }
+
+  /* ---------- shot table ---------- */
+  .shot tbody td{font-size:12.8px;}
+  .shot td.sn{
+    font-weight:700;color:var(--zhu);text-align:center;
+    font-variant-numeric:tabular-nums;white-space:nowrap;
+  }
+  .shot td.tm{color:var(--ink-3);white-space:nowrap;font-variant-numeric:tabular-nums;text-align:center;}
+  .shot td.sz{white-space:nowrap;font-weight:600;}
+  .shot td.mv{white-space:nowrap;color:var(--dai);}
+
+  /* ---------- misc ---------- */
+  .tag{
+    display:inline-block;font-size:11.5px;padding:2px 9px;border-radius:20px;
+    background:var(--dai-soft);color:var(--dai);font-weight:600;
+    margin:0 6px 6px 0;letter-spacing:.02em;
+  }
+  .tag.z{background:var(--zhu-soft);color:var(--zhu);}
+  .tag.j{background:var(--jin-soft);color:#8A6C12;}
+  .tag.g{background:#E6EFE7;color:var(--green);}
+  .tag.gray{background:#EDEAE3;color:var(--ink-3);}
+
+  .flow{
+    background:var(--card);border:1px solid var(--line);border-radius:8px;
+    padding:20px;margin-bottom:20px;
+  }
+  .flow .step{display:flex;gap:14px;align-items:flex-start;margin-bottom:14px;}
+  .flow .step:last-child{margin-bottom:0;}
+  .flow .n{
+    flex:0 0 26px;height:26px;border-radius:50%;background:var(--ink);color:#F7F3EA;
+    font-size:12.5px;font-weight:700;display:flex;align-items:center;justify-content:center;
+  }
+  .flow .bd{flex:1;}
+  .flow .bd b{display:block;margin-bottom:2px;}
+  .flow .bd span{font-size:13.5px;color:var(--ink-2);}
+  .arrow{text-align:center;color:var(--line-2);font-size:18px;margin:-6px 0 8px;}
+
+  .swatch{display:inline-flex;gap:0;border-radius:4px;overflow:hidden;border:1px solid var(--line-2);vertical-align:middle;}
+  .swatch i{width:20px;height:14px;display:block;}
+
+  footer{
+    border-top:3px double var(--line-2);margin-top:70px;padding-top:24px;
+    font-size:13px;color:var(--ink-3);
+  }
+  .kbd{
+    font-family:ui-monospace,Consolas,monospace;font-size:12.5px;
+    background:#F1ECE0;border:1px solid var(--line-2);border-radius:4px;
+    padding:1px 6px;color:var(--ink-2);
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="cover">
+  <div class="kicker">动 画 改 编 创 意 与 剧 本 方 案</div>
+  <h1>杨家将 · 忠烈千秋
+    <small>改编自湖南美术出版社连环画《北宋杨家将》（全八册）</small>
+  </h1>
+  <div class="sub">
+    <div><b>形态</b>　三季 / 24 集 × 24 min（另附电影版方案）</div>
+    <div><b>受众</b>　12+ 全龄向</div>
+    <div><b>风格</b>　新白描国风 2D 手绘</div>
+    <div><b>日期</b>　2026 年 9 月</div>
+  </div>
+  <div class="quote">
+    「史书上，他只有两行字。<br>
+    　野地里，他有七座坟，一座碑。」<br>
+    <span style="font-size:13px;color:#7A7266;">—— 序幕旁白</span>
+  </div>
+</header>
+
+<nav class="toc">
+  <h2>目 录</h2>
+  <ol>
+    <li><a href="#p1">源材料分析：八册连环画的内容与艺术特征</a></li>
+    <li><a href="#p2">改编创意：定位、主题、结构与取舍原则</a></li>
+    <li><a href="#p3">视觉体系：新白描风格、色彩弧线、角色与场景设定</a></li>
+    <li><a href="#p4">分集大纲：三季二十四集</a></li>
+    <li><a href="#p5">文学剧本：序幕 + 第八集《李陵碑》完整本</a></li>
+    <li><a href="#p6">分镜头脚本：序幕 48 镜 + 高潮段 36 镜</a></li>
+    <li><a href="#p7">技能盘点与组合工作流：从连环画到成片</a></li>
+  </ol>
+</nav>
+
+<main>
+
+<!-- ================= 一 ================= -->
+<section id="p1">
+  <h2 class="ch"><span class="no">CHAPTER 01</span>源材料分析</h2>
+  <p class="lead">改编的地基是原作。本章先把八册连环画的档案、故事脉络与画面语言拆开看清楚，再谈怎么改。</p>
+
+  <h3>1.1　作品档案</h3>
+  <div class="tw">
+    <table>
+      <tbody>
+        <tr><th style="width:130px;">书　名</th><td>《北宋杨家将》连环画（全八册）</td></tr>
+        <tr><th>出　版</th><td>湖南美术出版社（1982 年 4 月初版；2008 年 6 月连环画收藏本；2016 年四册合订本）</td></tr>
+        <tr><th>改　编</th><td>喻岳衡（全八册统一改编）</td></tr>
+        <tr><th>绘　画</th><td>分册由八位画家各绘一册，风格有细微差异（见 1.2 表）</td></tr>
+        <tr><th>题　材</th><td>历史演义 / 民间传说（杨家将系列）</td></tr>
+        <tr><th>本次素材</th><td>PDF 扫描件 8 个，共 <b>672 页</b>，单页 1024 × 768 横构图</td></tr>
+        <tr><th>文字层</th><td>无。纯图像扫描，文字以页脚说明（caption）形式绘于画面内</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>1.2　八册故事脉络</h3>
+  <div class="tw">
+    <table>
+      <thead>
+        <tr>
+          <th class="num">册</th><th>书名</th><th class="num">页</th><th>绘者</th><th>核心事件</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="num">一</td><td><b>杨令公归宋</b></td><td class="num">82</td><td>蒋太禄</td><td>北汉主刘钧部将杨业，智勇双全、深明大义。宋太祖临终嘱太宗必使杨业归宋；太宗平定刘钧割据，杨业认取统一大义，弃暗投明。</td></tr>
+        <tr><td class="num">二</td><td><b>邠阳城救驾</b></td><td class="num">74</td><td>贺宣华</td><td>宋太宗赴五台山还愿，被辽邦围困邠阳城。杨业奉旨救驾，寡不敌众，令长子杨延平化装成太宗献诈降书，自与六郎、七郎护主突围。<b>延平与二郎、三郎战死，四郎被俘，五郎出家。</b></td></tr>
+        <tr><td class="num">三</td><td><b>殉国李陵碑</b></td><td class="num">106</td><td>陈安民</td><td>潘仁美公报私怨，使杨业兵陷陈家谷。兵卒尽没，杨业不愿被俘，碰死李陵碑下，以身殉国。</td></tr>
+        <tr><td class="num">四</td><td><b>六郎收三将</b></td><td class="num">74</td><td>郑一呼</td><td>六郎有功不居，辞节度使高位不就，自请赴僻远艰苦的佳山寨任巡检。任内收服岳胜、孟良、焦赞三员猛将。</td></tr>
+        <tr><td class="num">五</td><td><b>八姐闯幽州</b></td><td class="num">82</td><td>张治华</td><td>六郎被困双龙谷。八姐女扮男装侦察辽营，被发现后冒充已故辽将胡宏之子胡元，因武艺高强被辽相张华召至幽州、欲以女许之。八姐设计盗取令箭，驰救双龙谷。</td></tr>
+        <tr><td class="num">六</td><td><b>智救杨郡马</b><br><span style="font-size:12px;color:#7A7266;">（PDF 文件名为「智救杨驸马」）</span></td><td class="num">82</td><td>邓立衍<br>邓大鹰</td><td>真宗听信谗言，拆毁杨府天波楼，将六郎发配充军又下旨斩首，八王等设计相救藏匿。辽国乘机入侵，真宗被困魏州；六郎不计私怨，统兵解围。</td></tr>
+        <tr><td class="num">七</td><td><b>大破天门阵</b></td><td class="num">90</td><td>廖正华</td><td>辽兵侵宋，于九龙飞虎谷摆下天门阵。杨宗保奉元帅六郎之命，赴穆阁寨取降龙木，与寨主穆桂英结为夫妻。六郎患病，真宗拜宗保为帅，全军破阵，攻陷辽邦京城幽州。</td></tr>
+        <tr><td class="num">八</td><td><b>穆桂英挂帅</b></td><td class="num">82</td><td>罗苍诗</td><td>西夏发兵侵宋，宗保领兵拒敌中箭受伤，被困雄州。杨门女将同仇敌忾，请缨出兵，真宗命穆桂英挂帅，大败西夏，直进西夏京城连州，平息边患。</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="note">
+    <b>核对提示</b>　第六册正题页与内容简介均作《智救杨<b>郡马</b>》，与 PDF 文件名「智救杨驸马」不一致，正文一律以原书「郡马」为准。另：七郎延嗣突围求援、被潘仁美乱箭射死一节，为《杨家将演义》通行情节，第三册画面中应含此段，正式定稿前需逐页核对原件第 60 至 90 页以确认取舍。
+  </div>
+
+  <h3>1.3　画面语言：这套连环画"好看"在哪</h3>
+  <div class="grid">
+    <div class="card zhu">
+      <h4>① 白描为体，以线造型</h4>
+      <p style="margin:0;font-size:14px;">全册为纯线描，无调子渲染。靠线条疏密与黑白块面制造光影、质感与纵深——铠甲以细密方片纹显硬，衣袂以长弧线显软，山石以斧劈皴显险。这是最"便宜"也最"高级"的一种动画语言。</p>
+    </div>
+    <div class="card dai">
+      <h4>② 一页一格，图文分工</h4>
+      <p style="margin:0;font-size:14px;">单页单幅，页脚编号加一句说明文字。文字承担"叙事推进"，画面承担"情绪与场面"。改编时这套分工可以直接转译为<b>旁白（VO）+ 画面</b>的动画体制。</p>
+    </div>
+    <div class="card jin">
+      <h4>③ 组画式构图与"框中之框"</h4>
+      <p style="margin:0;font-size:14px;">常用山石、林木、云气、屏风、帐幔、门洞作前景框，把人物压在画面深处。这是天然的分镜语言，稍加位移即成"推轨进画"。</p>
+    </div>
+    <div class="card green">
+      <h4>④ 战场三要素</h4>
+      <p style="margin:0;font-size:14px;">"人—马—旗"构成动势主线，多取斜线或 S 形走向；旌旗的飘向即画面方向感。改编武戏时应保留这一造型逻辑，而非改用写实镜头调度。</p>
+    </div>
+  </div>
+
+  <h3>1.4　改编价值与版权边界</h3>
+  <div class="info">
+    <b>故事层面：可自由改编。</b>　杨家将属传统民间公共题材，元代杂剧、明清演义、历代说唱均有演绎，杨业、佘太君、穆桂英等形象与情节早已进入公共领域。《宋史·杨业传》等史籍同样可自由取材。
+  </div>
+  <div class="note">
+    <b>画面层面：不可直接使用。</b>　本套连环画的<b>画面、分册改编文字与装帧</b>，是湖南美术出版社与喻岳衡、蒋太禄等编绘者的演绎作品，受著作权保护。改编必须<b>回归公共素材重新设计造型与美术</b>：可以继承其"白描国风"的美学方向，但不得临摹、扫描入片、或以原画作图生图底图。
+  </div>
+  <div class="gold">
+    <b>史实与传说的分层处理。</b>　剧中人名从民间传说（潘仁美、佘太君、穆桂英）；片尾字幕标注史实（潘美、折太君；穆桂英等女将多为艺术形象）。既保留戏剧性，也不误导观众。
+  </div>
+</section>
+
+<!-- ================= 二 ================= -->
+<section id="p2">
+  <h2 class="ch"><span class="no">CHAPTER 02</span>改编创意</h2>
+  <p class="lead">八册连环画真正的戏剧内核不是"打胜仗"，而是"代价"。全剧由此立骨。</p>
+
+  <h3>2.1　片名与一句话故事</h3>
+  <div class="grid">
+    <div class="card zhu">
+      <h4>正式片名</h4>
+      <p style="margin:0;font-size:15px;"><b style="font-size:19px;">《杨家将 · 忠烈千秋》</b><br>
+      <span style="font-size:13.5px;color:#7A7266;">系列剧名 · 电影版副题《李陵碑》</span></p>
+    </div>
+    <div class="card dai">
+      <h4>一句话故事</h4>
+      <p style="margin:0;font-size:15px;font-family:'Songti SC',serif;">一个家族，用七子二女的血肉，把一条边关守成了传说。</p>
+    </div>
+  </div>
+
+  <h3>2.2　主题立意</h3>
+  <p><b>母题：忠。</b>但这个"忠"不是对某一个帝王的愚忠，而是对 <em>「统一」</em> 与 <em>「百姓不再逃难」</em> 这两件事的责任。杨业归宋是"弃暗投明"，不是"背主求荣"——这是原书第一册就定下的基调，也是全剧的价值观锚点。</p>
+  <p><b>副题：以身为碑。</b>第三册杨业碰死李陵碑，不是战败的终点，而是全剧的起点。此后六郎不居功、八姐闯营、宗保取木、桂英挂帅，所有人都在同一块碑前完成宣誓。穆桂英的胜利，是杨业的碑终于立成了城墙。</p>
+
+  <h3>2.3　受众与分级</h3>
+  <div class="tw">
+    <table>
+      <thead><tr><th>维度</th><th>设定</th><th>依据</th></tr></thead>
+      <tbody>
+        <tr><td>年龄</td><td>12+ 全龄向（合家欢偏少年）</td><td>少年看英雄与武戏，成年看家国与代价；不做低幼化，不做血腥化</td></tr>
+        <tr><td>死亡处理</td><td>克制、留白</td><td>不出血迹、不给特写。以空鞍、遗物、卸甲、空镜代替</td></tr>
+        <tr><td>情感密度</td><td>每集至少一次"失去"</td><td>对应连环画原作的悲剧节奏，但分布到整季以维持观众耐受</td></tr>
+        <tr><td>观感承诺</td><td>热血武戏 + 家国抒情 + 女性力量</td><td>第三季以杨门女将挂帅收束，形成鲜明价值观落点</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>2.4　改编策略：五条取舍原则</h3>
+  <div class="flow">
+    <div class="step"><div class="n">1</div><div class="bd"><b>以"碑"为贯穿意象</b><span>序幕即出现李陵碑的远景（倒叙），此后每一次离别、每一次出征、每一次凯旋，镜头都回到碑前叠一次意象。八册散落的情节因此被一个物件缝合。</span></div></div>
+    <div class="step"><div class="n">2</div><div class="bd"><b>父辈的悲剧，由女儿辈收束</b><span>前半（一至三册）是杨业的"归附与托付"，后半（四至八册）是六郎的"守成"，终章是穆桂英与杨门女将的"反击"。从父到女、从死到生，叙事弓形才完整。</span></div></div>
+    <div class="step"><div class="n">3</div><div class="bd"><b>去脸谱化</b><span>潘仁美不写成纯恶，而是"私怨 + 制度性失能"的合体：他的每一次推诿都能找到"合程序"的理由。萧太后正剧化处理，是精于算计的对手而非愚顽反派。</span></div></div>
+    <div class="step"><div class="n">4</div><div class="bd"><b>克制死亡，放大遗物</b><span>邠阳城之战不拍血，改为战后逐一横扫三副空鞍与一面折断的将旗；陈家谷不拍尸，改为雪落、马脱缰离去、金刀插地。</span></div></div>
+    <div class="step"><div class="n">5</div><div class="bd"><b>保留"史传腔"旁白体制</b><span>连环画页脚说明文字是全书的灵魂。改为更口语的第三人称说书人旁白，承担时间跳跃与史实交代，为画面留出呼吸。</span></div></div>
+  </div>
+
+  <h3>2.5　叙事结构</h3>
+  <p><b>方案 A（推荐）· 三季 24 集 × 24 分钟</b></p>
+  <div class="tw">
+    <table>
+      <thead><tr><th class="num">季</th><th>季名</th><th class="num">集数</th><th>对应原书</th><th>季主线</th><th>季终落点</th></tr></thead>
+      <tbody>
+        <tr><td class="num">一</td><td><b>归 宋</b></td><td class="num">8</td><td>第一至三册</td><td>杨业如何归附，又如何被消耗殆尽</td><td>李陵碑 · 殉国</td></tr>
+        <tr><td class="num">二</td><td><b>守 边</b></td><td class="num">8</td><td>第四至六册</td><td>六郎承父志，在猜忌与边患之间守成</td><td>魏州解围 · 洗冤</td></tr>
+        <tr><td class="num">三</td><td><b>破 阵</b></td><td class="num">8</td><td>第七至八册</td><td>新一代接棒，攻守易势</td><td>穆桂英挂帅 · 平夏</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><b>方案 B · 动画电影 120 分钟</b>：以第三册为主干，第二册《邠阳城救驾》作闪回，第一册归宋作序幕。三幕：<span class="tag">立誓·归宋</span><span class="tag">七子去六子回·邠阳城</span><span class="tag z">殉国·李陵碑</span>。适合作为系列剧的先导片或独立艺术片。</p>
+  <p><b>方案 C · 短剧化 60 集 × 3 分钟</b>：竖屏，单集一个"事件"，适配短视频平台发行。本方案的剧本与分镜资产可直接拆解复用。</p>
+</section>
+
+<!-- ================= 三 ================= -->
+<section id="p3">
+  <h2 class="ch"><span class="no">CHAPTER 03</span>视觉体系</h2>
+  <p class="lead">给美术、分镜、以及 AI 生成环节的同一套"风格宪法"。风格一致性的唯一保障，就是先把规则写死。</p>
+
+  <h3>3.1　美术风格定义：「新白描」</h3>
+  <div class="tw">
+    <table>
+      <thead><tr><th style="width:110px;">要素</th><th>规范</th></tr></thead>
+      <tbody>
+        <tr><td><b>线</b></td><td>铁线描为主，兰叶描收尾。1080p 下主结构线 2–3 px，外轮廓加重一档，内部衣纹轻一档。全片线宽分三档，禁止自由线宽。</td></tr>
+        <tr><td><b>色</b></td><td>宣纸底 <span class="swatch"><i style="background:#F5EFE0"></i><i style="background:#EFE7D6"></i></span> #F5EFE0 / #EFE7D6；黛青 <span class="swatch"><i style="background:#4A5A63"></i></span> #4A5A63（山峦）；铁灰 <span class="swatch"><i style="background:#6E6A63"></i></span> #6E6A63（铠甲）；朱砂 <span class="swatch"><i style="background:#C0392B"></i></span> #C0392B。</td></tr>
+        <tr><td><b>渲染</b></td><td>平涂 + 至多一处渐变。禁止写实光斑、皮肤高光、环境反射。光靠"色块明度差"表达，不靠光。</td></tr>
+        <tr><td><b>朱砂使用纪律</b></td><td>全片朱砂仅出现在三处：<b>归宋誓师</b>、<b>杨业殉国</b>、<b>桂英挂帅</b>。其余场景一律禁用红色系，以保证三次出现的冲击力。</td></tr>
+        <tr><td><b>动感处理</b></td><td>禁止数字运动模糊。速度用「飞白」（枯笔拉丝）与「淡墨扫笔」表现；冲击用「留白爆闪」一格。</td></tr>
+        <tr><td><b>特殊段落</b></td><td>杨业殉国、杨业显圣两段，全彩抽离为纯黑白水墨，仅保留朱砂与金两点。这是全片的风格高潮。</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>3.2　色彩弧线</h3>
+  <div class="grid">
+    <div class="card zhu"><h4>第一季 · 归宋</h4>
+      <p style="margin:0;font-size:14px;"><span class="swatch"><i style="background:#B5651D"></i><i style="background:#8C5A3C"></i><i style="background:#3E4E5A"></i></span><br>
+      暖赭 → 铁青。由"聚"入"散"：从归宋时的暖土色，一路冷到陈家谷的铁青与墨黑。</p></div>
+    <div class="card dai"><h4>第二季 · 守边</h4>
+      <p style="margin:0;font-size:14px;"><span class="swatch"><i style="background:#2E4A7D"></i><i style="background:#4E6B4F"></i><i style="background:#8A9A7B"></i></span><br>
+      靛蓝 → 苍绿。守土的绿意与夜袭的靛蓝交替；八姐入辽营一段整段偏靛蓝冷调。</p></div>
+    <div class="card jin"><h4>第三季 · 破阵</h4>
+      <p style="margin:0;font-size:14px;"><span class="swatch"><i style="background:#1C1C1C"></i><i style="background:#C9A227"></i><i style="background:#B03A2E"></i></span><br>
+      玄黑 + 金。天门阵的金色符文与黑旗；穆桂英红装金甲是全片唯一大面积朱砂。</p></div>
+    <div class="card green"><h4>贯穿色 · 纸</h4>
+      <p style="margin:0;font-size:14px;"><span class="swatch"><i style="background:#F5EFE0"></i><i style="background:#EFE7D6"></i></span><br>
+      宣纸色是全片的"底"，任何场景都要能看到它——留白不是空，是纸。</p></div>
+  </div>
+
+  <h3>3.3　主要角色设定</h3>
+  <div class="tw">
+    <table>
+      <thead><tr><th>角色</th><th style="width:190px;">造型要点</th><th>标志物 / 表演特征</th></tr></thead>
+      <tbody>
+        <tr><td><b>杨业</b>（杨令公）</td><td>五十余岁，紫膛脸，三绺长须由黑转白（三季贯穿的时间刻度）；方片札甲 + 玄色披风</td><td><b>定宋金刀</b>。台词少，动作慢而重；越到后期越"静"，以静写勇</td></tr>
+        <tr><td><b>佘太君</b>（折氏）</td><td>五十岁，凤纹襦裙外罩半铠，发不散、妆不卸</td><td><b>龙头拐杖</b>（第一季末赐）。全剧唯一"站得住"的成年人，不哭，只沉默</td></tr>
+        <tr><td><b>杨延平</b>（大郎）</td><td>与宋太宗<b>容貌相类</b>——这是全剧最重要的造型设定，第二册诈降的唯 一支点，须在序幕即埋下镜头的"相似性"提示</td><td>素白战袍，不用长兵器，佩剑。赴死前把剑解下留在营中</td></tr>
+        <tr><td><b>杨延昭</b>（六郎）</td><td>白袍银枪，青年至中年三套造型；第三季起鬓角渐白</td><td><b>银枪</b>。全剧"活着的道德中心"，与父亲形成"承接"动作母题（接枪、接旗）</td></tr>
+        <tr><td><b>杨延嗣</b>（七郎）</td><td>少年气，赤马黑袍，眉眼张扬</td><td><b>弓</b>。急躁、话多、易怒；他的死是全片最猝然的一击</td></tr>
+        <tr><td><b>杨八姐</b></td><td>中性美。<b>男装时做到真正的雌雄难辨</b>，脱下幞头的一瞬是全剧最漂亮的一个镜头</td><td>银枪、束发带。学兄长的招式，动作里全是模仿的痕迹</td></tr>
+        <tr><td><b>穆桂英</b></td><td>两套造型：<b>寨主装</b>（红裙束腰、短打、红缨枪）与<b>元帅装</b>（红装金甲、帅盔、令旗）</td><td><b>降龙木</b>。笑得多、出手快；两种造型之间的转换即人物成长的视觉化</td></tr>
+        <tr><td><b>潘仁美</b></td><td>国字脸、青袍。构图纪律：<b>永远比身旁人矮半个头位</b>，视线永远朝向画外</td><td>无标志物。所有台词都有"合程序"的理由——这才是可怕之处</td></tr>
+        <tr><td><b>萧太后</b></td><td>银发高髻、黑袍金线，坐姿永远高于所有辽将</td><td><b>象牙算筹</b>。正剧化，不丑化；每次出手都基于情报，不凭情绪</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>3.4　场景设定</h3>
+  <div class="grid">
+    <div class="card zhu"><h4>天波府</h4><p style="margin:0;font-size:14px;">杨府正门悬"天波府"匾，府内立天波楼（宋帝赐建，可视宫中）。第二季被拆，此后所有"回府"镜头都在同一机位、同一构图下拍摄，只是楼不见了——观众自己会疼。</p></div>
+    <div class="card dai"><h4>邠阳城</h4><p style="margin:0;font-size:14px;">孤城，四周皆辽营火把。城门为全片重要的"门"意象：关上是围，打开是死。</p></div>
+    <div class="card jin"><h4>陈家谷</h4><p style="margin:0;font-size:14px;">狼牙状山口，两壁夹峙，谷口立"陈家谷"石碣。构图永远用两侧山壁夹住人物，制造"出不去"的窒息感。</p></div>
+    <div class="card green"><h4>李陵碑</h4><p style="margin:0;font-size:14px;"><b>全剧核心意象。</b>荒坡一通无字残碑，碑侧一株枯柳。不同季的同一机位：第一季碑是灰的，第二季碑上有了新刻字，第三季碑前开了花。三张画面，讲完全剧。</p></div>
+    <div class="card dai"><h4>天门阵</h4><p style="margin:0;font-size:14px;">九龙飞虎谷中的巨型阵图，一百单八阵以金色符文地砖铺展、以黑旗标位。俯视时是一张会呼吸的棋盘。</p></div>
+    <div class="card zhu"><h4>穆阁寨</h4><p style="margin:0;font-size:14px;">山腰寨门 + 一株巨树<b>降龙木</b>。取木一场为全片唯一的"轻盈"段落：上树、锯木、坠叶。</p></div>
+  </div>
+
+  <h3>3.5　声音设计</h3>
+  <div class="tw">
+    <table>
+      <thead><tr><th style="width:120px;">层</th><th>设计</th></tr></thead>
+      <tbody>
+        <tr><td><b>主题旋律</b></td><td>《天波引》：筚篥起 → 琵琶承 → 埙收。三个乐器对应三代人（杨业 / 六郎 / 桂英）。</td></tr>
+        <tr><td><b>武戏</b></td><td>战鼓 + 拨弦闷响（弦击）。<b>禁用电子低频</b>，以保持纸与木的质地。</td></tr>
+        <tr><td><b>静场纪律</b></td><td>李陵碑全段抽掉所有配乐，仅留风声与旌旗声。观众听见的只有"没有音乐"。</td></tr>
+        <tr><td><b>旁白</b></td><td>单人男声，中年，不煽情、不加混响，近平读。音量略低于环境声，制造"史书在背景里说话"的错觉。</td></tr>
+        <tr><td><b>阿卡贝拉段落</b></td><td>杨门女将出征用无伴奏女声哼鸣，与前半的男性鼓乐形成对照——第三季的声音是"换了一套乐器"。</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ================= 四 ================= -->
+<section id="p4">
+  <h2 class="ch"><span class="no">CHAPTER 04</span>分集大纲</h2>
+  <p class="lead">三季二十四集。每集以"一个事件 + 一次失去"为单元，集末留钩。加粗者为该季重点集。</p>
+
+  <h3>第一季 · 归宋（第 1–8 集）</h3>
+  <div class="tw">
+    <table>
+      <thead><tr><th class="num">集</th><th style="width:150px;">标题</th><th>内容</th><th style="width:170px;">集末钩子</th></tr></thead>
+      <tbody>
+        <tr><td class="num">01</td><td><b>代州的风</b></td><td>北汉风雪。杨业守代州，以三百骑退辽军；回城却见汉主刘钧已向辽称臣。他的刀第一次不知该向谁挥。</td><td>帐外，宋使求见</td></tr>
+        <tr><td class="num">02</td><td><b>弃暗投明</b></td><td>宋太祖临终嘱太宗"必得杨业"；太宗平刘钧割据。杨业在城头看宋军秋毫无犯、百姓不逃，终于解刀归宋。</td><td>太宗赐第，门匾落成：天波府</td></tr>
+        <tr><td class="num">03</td><td><b>七子二女</b></td><td>天波府全景式一日。七子二女各立其人；佘太君在灶前点兵；延平与太宗容貌相类被六郎无意说破。</td><td>五台山还愿的旨意到</td></tr>
+        <tr><td class="num">04</td><td><b>邠阳城 · 围</b></td><td>太宗五台山还愿，被辽军围邠阳城。城门关上的声音，成为全剧音效母题。</td><td>粮尽。援军未至</td></tr>
+        <tr><td class="num">05</td><td><b>诈降书</b></td><td>杨业兵至，寡不敌众。延平提出代主诈降；杨业不许，延平偷改姓名落款。父子最后一次同桌吃饭，谁也没说话。</td><td>延平策马出城</td></tr>
+        <tr><td class="num">06</td><td><b>七子去，六子回</b></td><td>诈降成功的瞬间辽军识破。突围血战一昼夜：延平、二郎、三郎战死，四郎被俘，五郎于乱军中落发。战后空镜横扫三副空鞍。</td><td>杨业抱着延平的剑回营</td></tr>
+        <tr><td class="num">07</td><td><b>陈家谷</b></td><td>潘仁美公报私仇，与王侁以"合军齐进"逼杨业深入。杨业临行托付六郎："若我不回，把你娘接回府里。"</td><td>谷口石碣入画</td></tr>
+        <tr><td class="num">08</td><td><b>李陵碑</b></td><td><b>季终。</b>兵陷陈家谷。七郎突围求援被潘仁美乱箭射死；杨业拒降，碰死李陵碑下。片尾：佘太君接过龙头拐杖。（完整剧本见第五章）</td><td>碑前，一枝枯柳抽出新芽</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>第二季 · 守边（第 9–16 集）</h3>
+  <div class="tw">
+    <table>
+      <thead><tr><th class="num">集</th><th style="width:150px;">标题</th><th>内容</th><th style="width:170px;">集末钩子</th></tr></thead>
+      <tbody>
+        <tr><td class="num">09</td><td>辞官</td><td>六郎功成不居，辞节度使高位，只请去最苦的佳山寨当巡检。朝堂哗然。</td><td>六郎背枪出京，无人送行</td></tr>
+        <tr><td class="num">10</td><td>佳山寨</td><td>荒寨、旧兵、空仓。六郎以一人之身修墙、挑水、练卒。首遇岳胜——打了三天不分胜负，第四天两人一起修墙。</td><td>岳胜把酒倒了，把枪插在寨门</td></tr>
+        <tr><td class="num">11</td><td><b>孟良与焦赞</b></td><td>两个"贼"：一个偷马，一个放火。六郎不抓，追着他们跑了半个山头。收服靠的不是武艺，是"吃饭的时候多添两双筷子"。</td><td>三人对着天波府的方向磕了个头</td></tr>
+        <tr><td class="num">12</td><td>双龙谷 · 困</td><td>六郎追辽军太深，入双龙谷被断后路。困七日，枪断。</td><td>辽营灯火连成一线</td></tr>
+        <tr><td class="num">13</td><td><b>女扮男装</b></td><td>八姐离府。剪发、束胸、换靴；在铜镜前练兄长的走路姿势。侦察辽营被发现，临阵冒名"胡元"。</td><td>辽将：这是胡宏将军的儿子</td></tr>
+        <tr><td class="num">14</td><td>幽州盗令箭</td><td>八姐被辽相张华召至幽州，张华欲以女许之。一场极精致的"错位喜剧"：既要演男人，又不能让张华之女真的动心。</td><td>令箭到手，身份将破</td></tr>
+        <tr><td class="num">15</td><td>天波楼</td><td>真宗听信谗言，拆毁天波楼，六郎被发配、又下旨斩首。八王设计藏匿。同一机位，楼不见了。</td><td>六郎在柴房听见辽军号角</td></tr>
+        <tr><td class="num">16</td><td><b>魏州解围</b></td><td>辽军入侵，真宗被困魏州。六郎不计私怨，率旧部驰援。解围后不进城，就在城外跪下、起身、走了。</td><td>真宗站在城头看他背影</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>第三季 · 破阵（第 17–24 集）</h3>
+  <div class="tw">
+    <table>
+      <thead><tr><th class="num">集</th><th style="width:150px;">标题</th><th>内容</th><th style="width:170px;">集末钩子</th></tr></thead>
+      <tbody>
+        <tr><td class="num">17</td><td>天门阵</td><td>辽于九龙飞虎谷摆下天门阵，一百单八阵。六郎观阵三日，出一计：需降龙木。</td><td>点将：杨宗保</td></tr>
+        <tr><td class="num">18</td><td><b>穆阁寨</b></td><td>宗保上山取木，被穆桂英三合打下马。寨主放话："打得过我，木给你；打不过我，人留下。"</td><td>两个人在树上锯木，叶子落了一地</td></tr>
+        <tr><td class="num">19</td><td><b>辕门斩子</b></td><td>宗保招亲误期，六郎依军法欲斩亲子。佘太君求、八王求、孟良焦赞跪；孟良喊了一句"元帅，你爹当年也没舍得"。刀最终落下——是穆桂英的枪架住的。</td><td>桂英把降龙木插在帅帐前</td></tr>
+        <tr><td class="num">20</td><td>破阵 · 上</td><td>六郎病倒，真宗拜宗保为帅。诸将分路：岳胜打东、孟良焦赞打西、宗保居中。金色符文地砖逐块熄灭。</td><td>阵眼现，是黑的</td></tr>
+        <tr><td class="num">21</td><td>破阵 · 下</td><td>阵破。宋军直取幽州。萧太后把象牙算筹一根根收进盒子，站起身，一言不发地退入火中。</td><td>幽州城头，宋旗</td></tr>
+        <tr><td class="num">22</td><td>碑上的字</td><td>全片唯一的"喘息集"。六郎带宗保、桂英回到李陵碑前。碑上已刻满了字——都是这些年死在这里的名字。</td><td>宗保问：爷爷长什么样？</td></tr>
+        <tr><td class="num">23</td><td>西夏烽烟</td><td>西夏发兵侵宋。宗保领兵拒敌，中箭受伤，被困雄州。杨门女将在天井里站成一排，谁也没说话，佘太君把龙头拐杖交给了桂英。</td><td>桂英接杖，转身</td></tr>
+        <tr><td class="num">24</td><td><b>挂帅</b></td><td><b>大结局。</b>真宗命穆桂英挂帅。十二寡妇征西，大败西夏，直进连州。最后一镜：同一个机位，李陵碑前开了花。（分镜见第六章末尾）</td><td>—— 全剧终 ——</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ================= 五 ================= -->
+<section id="p5">
+  <h2 class="ch"><span class="no">CHAPTER 05</span>文学剧本</h2>
+  <p class="lead">本章含两件成品：可供直接进入分镜的<b>序幕（约 3 分钟）</b>，以及第一季季终集<b>第八集《李陵碑》完整本</b>。</p>
+
+  <div class="info">
+    <b>体例说明</b>　<span class="kbd">△</span> 画面动作　<span class="kbd">人物</span> 台词　<span class="kbd">旁白 OS</span> 画外旁白　<span class="kbd">音</span> 声音与音乐提示　<span class="kbd">切</span> 转场方式。台词不加表演提示，交由导演与表演环节处理。
+  </div>
+
+  <h3>5.1　序　幕（00:00 – 03:10）</h3>
+  <div class="script">
+
+    <p class="sfx"><b>音</b>　黑场。风声，很长。风里夹着远处旗子拍打的声音。</p>
+    <p class="sfx"><b>音</b>　一声闷响。低沉、短促、不响——像木头撞在石头上。然后彻底安静。</p>
+    <p class="sfx"><b>音</b>　静了四秒。</p>
+
+    <p class="act">画面极缓地亮起。白，全是白的——不是雪，是雾。雾里慢慢浮出一片荒坡的轮廓。</p>
+
+    <p class="trans">字 幕</p>
+    <p style="text-align:center;font-family:'Songti SC',serif;font-size:16px;color:#4A443B;">北宋 · 雍熙三年 · 陈家谷</p>
+
+    <p class="act">镜头从坡底缓缓向上摇。土是冻硬的，草是枯的。摇到中景，一杆长刀的刀尖插在土里，刀身立着，刃口朝上。</p>
+    <p class="act">刀是<b>定宋金刀</b>。刀穗被风吹得慢慢转。</p>
+    <p class="act">镜头继续上摇，越过刀柄——</p>
+    <p class="act">一块残碑。碑面朝外，没有字。碑顶上停着雪。</p>
+
+    <div class="vo"><b>旁白 OS</b>　史书上，他只有两行字。<br>「杨业，并州太原人。雍熙三年，力战，被擒，不食三日死。」</div>
+
+    <p class="act">镜头推到碑面。碑面上浮出极淡的、被磨平的字痕——看不清是什么。</p>
+
+    <div class="vo"><b>旁白 OS</b>　野地里，他有七座坟，一座碑。</div>
+
+    <p class="act">停三秒。风声起。</p>
+
+    <p class="trans">切</p>
+
+    <p class="act">刀身的反光里，倒映出一片暖赭色的下午。</p>
+    <p class="act">画面从刀的反光中"化"出来，变成一片开阔的校场。阳光是暖的，土是黄褐的。</p>
+    <p class="act">校场上站着一排人。镜头极慢地横移——</p>
+
+    <p class="act">一、二、三、四、五、六、七。七个儿子，从长到幼，甲胄一色，只有身量与兵器不同。<br>再往右，两个女儿，一高一矮，束发，未着甲，但腰里都别着刀。</p>
+    <p class="act">再往右，是一位妇人。凤纹襦裙，发髻一丝不乱。她看着这九个人，什么表情也没有。</p>
+    <p class="act">再往右，是杨业。他在点兵，刀在手，披风在风里。<b>朱砂色的将旗在他背后升起——这是全片第一次出现红色。</b></p>
+
+    <div class="vo"><b>旁白 OS</b>　那一年，他们都还活着。<br>那一年，没有人知道，要走的是七个，回来的是一个。</div>
+
+    <p class="act">杨业回身，看向九个孩子。他抬手，刀锋向天。</p>
+    <p class="sfx"><b>音</b>　鼓，一记。琵琶拨弦，一声。</p>
+
+    <p class="act">画面在鼓声里陡然收黑。</p>
+
+    <p class="trans">标 题</p>
+    <p style="text-align:center;font-family:'Songti SC',serif;font-size:34px;font-weight:700;letter-spacing:.14em;margin:22px 0 8px;">杨家将</p>
+    <p style="text-align:center;font-family:'Songti SC',serif;font-size:17px;color:#B03A2E;letter-spacing:.5em;margin:0 0 6px;">忠 烈 千 秋</p>
+    <p style="text-align:center;font-size:12.5px;color:#7A7266;margin-bottom:26px;">第 一 季 · 归 宋</p>
+
+    <p class="sfx"><b>音</b>　筚篥起。主题旋律《天波引》第一段，只有筚篥与鼓。</p>
+    <p class="act">黑场底部浮出一行小字：跋 —— 本剧据民间杨家将传说改编。杨业，史书作杨继业；佘太君，史书作折太君。</p>
+  </div>
+
+  <h3>5.2　第八集　《李陵碑》（完整本）</h3>
+  <div class="script">
+
+    <div class="slug">场 1　陈家谷 · 谷口　晨（外）</div>
+    <p class="act">雾。两壁黑山像两排牙，中间一道窄口。谷口立一块旧石碣，刻着「陈家谷」。石碣上结了霜。</p>
+    <p class="act">谷口外高地的边缘，一顶军帐的旗角一闪而过——但镜头不停，只给谷口。</p>
+    <p class="act">杨业立在石碣前。他回头，望向身后长长的队伍。队伍很短，只有三千人，队尾消失在雾里，看起来比实际多。</p>
+    <p class="act">他抬手，往前一挥。</p>
+    <p class="sfx"><b>音</b>　马蹄声、甲叶声。不响，很闷。</p>
+    <p class="act">六郎并马在他右侧半步后。七郎在左后，弓横在鞍上，神色不安，几次回头。</p>
+    <p class="dlg"><b>杨延嗣</b>　爹。咱们进去，他要不接应，就是死路。</p>
+    <p class="act">杨业没有回头。</p>
+    <p class="dlg"><b>杨业</b>　我知道。</p>
+    <p class="dlg"><b>杨延嗣</b>　知道你还进？</p>
+    <p class="act">杨业停了一下。他看的是前方的雾。</p>
+    <p class="dlg"><b>杨业</b>　诏书叫我进。我是大宋的将。<br>再说——后方那两个人，等的就是我抗令。</p>
+    <p class="act">七郎咬牙，想说什么。六郎很轻地摇了摇头。七郎把话咽回去，策马往前去了。</p>
+    <p class="sfx"><b>音</b>　队伍入谷的马蹄声，在狭窄的谷壁间被放大、再放大。</p>
+    <p class="act">镜头留在谷口。队伍全部走进去之后，雾慢慢合拢，把谷口整个吞掉。</p>
+    <p class="trans">化</p>
+
+    <div class="slug">场 2　陈家谷外 · 宋军大营　晨（外）</div>
+    <p class="act">同一条雾线之隔，高地上。宋军的营帐整齐，炊烟没断过，一队人正把粮车往回拉。</p>
+    <p class="act">潘仁美站在帐前，手里捏着一封诏书的副本，指节发白。王侁在旁边来回走。</p>
+    <p class="dlg"><b>王侁</b>　监军，时辰到了。杨业若胜，功劳是他的；杨业若败，罪是你我的。</p>
+    <p class="dlg"><b>潘仁美</b>　我已遣人接应。</p>
+    <p class="dlg"><b>王侁</b>　你派的那两百人，在谷口外三十里，坐着。</p>
+    <p class="act">潘仁美没答。他看了一会儿雾，把诏书递给身后的书吏。</p>
+    <p class="dlg"><b>潘仁美</b>　传令。全军拔营，移屯四十里。</p>
+    <p class="act">书吏犹豫了一下。潘仁美看着他。</p>
+    <p class="dlg"><b>潘仁美</b>　文书上写的是"移屯待命"。这四个字，挑不出错。</p>
+    <p class="act">书吏行礼，退下。远处，号角响了。号角很短，三声。</p>
+    <p class="act">镜头缓缓推向潘仁美的背影。他始终背对镜头。<b>构图纪律：他比身旁所有人都矮半头。</b></p>
+    <p class="trans">切</p>
+
+    <div class="slug">场 3　陈家谷内 · 谷道　巳时（外）</div>
+    <p class="act">雾散了一半。谷道两侧的山壁上，没有人，但树在动——不是风。</p>
+    <p class="act">杨业忽然勒马。</p>
+    <p class="act">镜头随他的视线急速上摇：山脊上，一排、两排、三排，全是辽军的黑旗。旗子一根接一根立起来，从谷底一直铺到看不见的尽头。</p>
+    <p class="sfx"><b>音</b>　号角。三声，是刚才那个调子——从辽军的方位传来。</p>
+    <p class="dlg"><b>杨延昭</b>　爹。后路断了。</p>
+    <p class="act">杨业极其平静地看着山脊。他慢慢吐出一口气，白汽散开。</p>
+    <p class="dlg"><b>杨业</b>　都把马放了。</p>
+    <p class="dlg"><b>众将</b>　元帅？</p>
+    <p class="dlg"><b>杨业</b>　放马。马比人能跑。<br>人列阵。今日向前，不向后。</p>
+    <p class="act">三千人下马。没有人说话，马蹄与石头的摩擦声一直响到最后一个。</p>
+    <p class="act">杨业拔出定宋金刀，刀身在雾光里泛着一点红。</p>
+    <p class="sfx"><b>音</b>　战鼓，第一记。也是全片战鼓的第一个音。</p>
+    <p class="trans">切</p>
+
+    <div class="slug">场 4　陈家谷 · 谷道　午时（外）</div>
+    <p class="act">—— 本场为全片武戏强度最高的段落，建议按第六章分镜处理，原剧本不作逐帧描述。</p>
+    <p class="act">山谷从窄到宽，又由宽收窄。三千人一层一层被剥掉。画面不使用血，改用<b>飞白</b>与<b>淡墨扫笔</b>表现速度；每一次冲击后给一格留白爆闪。</p>
+    <p class="act">关键节点：</p>
+    <p class="act">① 二郎、三郎式的"无名之死"——不署名，只有一杆倒下的旗。为第二季的抒情留白。</p>
+    <p class="act">② 杨业一人守谷道口，长镜头。他用刀背挡箭，护住身后最后几十个人。</p>
+    <p class="act">③ 七郎被推到队伍外沿。他回头看父亲。</p>
+    <p class="dlg"><b>杨延嗣</b>　爹，我杀出去，叫人来！</p>
+    <p class="act">杨业看着他。这一眼很长。他知道这一去是什么。</p>
+    <p class="act">杨业把自己腰间的酒囊解下来，扔给他。</p>
+    <p class="dlg"><b>杨业</b>　路上别停。</p>
+    <p class="act">七郎接住酒囊，还挂在鞍上——然后他翻身上了一匹还没解缰的马，往谷口冲去。</p>
+    <p class="act">镜头跟着七郎的背影一路冲出谷道。他冲出雾，冲出谷口，冲向宋军大营的方向。</p>
+    <p class="act">画面里，谷口上方的山脊上，那面属于宋军的旗子已经不见了。</p>
+    <p class="trans">切</p>
+
+    <div class="slug">场 5　宋军大营　未时（外）</div>
+    <p class="act">空营地。帐篷只剩绳结留下的坑，灶还冒着一点烟。风把一张纸吹起来，转了一圈。</p>
+    <p class="act">七郎纵马冲进来，勒住，环视四周。他脸上还带着刚才杀出来的血污，但镜头不给特写。</p>
+    <p class="dlg"><b>杨延嗣</b>　人呢——</p>
+    <p class="act">他看见营地尽头站着的一排人。弓手。前排已经搭了箭。</p>
+    <p class="act">七郎愣了一下。他笑了。不是苦笑，是那种真的觉得荒谬的笑。</p>
+    <p class="dlg"><b>杨延嗣</b>　你们认识我。</p>
+    <p class="act">没有回答。</p>
+    <p class="dlg"><b>杨延嗣</b>　我爹在陈家谷。三千人。你们在这儿。</p>
+    <p class="act">弓弦齐齐一响。</p>
+    <p class="act">七郎伸手摸到鞍上那个酒囊。他把它举起来，晃了晃，里面的声音很轻。</p>
+    <p class="dlg"><b>杨延嗣</b>　他让我路上别停。</p>
+    <p class="act">—— 镜头没有拍箭。镜头抬起来，拍天上。一片云从太阳前面慢慢走过去，光的边缘变了一次。</p>
+    <p class="sfx"><b>音</b>　弓弦。然后是风声。然后是鼓——不是战鼓，是极轻的一记定音鼓。</p>
+    <p class="act">地上落下一个酒囊。</p>
+    <p class="trans">切</p>
+
+    <div class="slug">场 6　陈家谷 · 土岗 · 李陵碑前　黄昏（外）</div>
+    <p class="act">天开始下很小很小的雪，落下来就化。</p>
+    <p class="act">土岗上只剩几十个人，围成一个圈，都坐着或靠着。没有一个人说话。</p>
+    <p class="act">杨业一个人站在圈外。他身上的甲裂了三处，披风只剩一半。</p>
+    <p class="act">他的目光落在地上——</p>
+    <p class="act">镜头跟着他低下去，推向地面：一块碑。</p>
+    <p class="act">碑歪在土里，字被风化了一半，只剩两个还能认出来。镜头缓慢地推过碑面，最后停在两个字上：<b>李陵</b>。</p>
+    <p class="act">风声停了一瞬。</p>
+    <p class="dlg"><b>杨业</b>　（很轻，像自言自语）李陵碑。</p>
+    <p class="act">他伸手，摸了一下碑面。手指上的霜化了，留下一道水痕，正好从"李"字上划过。</p>
+    <p class="act">一名老兵抬头看他。</p>
+    <p class="dlg"><b>老兵</b>　元帅。降了，能活。</p>
+    <p class="act">杨业摇头。他望向东方——那是汴京的方向，也是天波府的方向。望了很久。</p>
+
+    <p class="act"><b>闪回 · 插镜（无声，各 1 秒）</b></p>
+    <p class="act">① 天波府的门匾落成，朱漆未干。</p>
+    <p class="act">② 佘太君在灶前一个一个数碗，数到第九个停住。</p>
+    <p class="act">③ 延平出城前回头的那一眼。</p>
+    <p class="act">④ 邠阳城战后，三副空鞍并排放在地上。</p>
+    <p class="act">⑤ 七郎举着酒囊，晃了晃。</p>
+
+    <p class="act">闪回结束。回到土岗。雪比刚才大了一点。</p>
+    <p class="dlg"><b>杨业</b>　（对老兵）朝廷给过我一句话没有？</p>
+    <p class="dlg"><b>老兵</b>　没有。</p>
+    <p class="dlg"><b>杨业</b>　那就不算输在战场上。</p>
+    <p class="act">他把定宋金刀插进土里——就在碑的旁边。刀穗在风里转。</p>
+    <p class="act">然后他解下残破的披风，叠了一下，放在碑脚。</p>
+    <p class="act">他整理了一下甲。把最后一颗甲片系好。用手拢了拢胡须。</p>
+    <p class="act">做完这些，他很慢地退后两步，看了一眼弟兄们。</p>
+    <p class="dlg"><b>杨业</b>　都别抬头。</p>
+    <p class="act">—— 所有人低下头。</p>
+
+    <p class="sfx"><b>音</b>　所有配乐在此刻完全停止。只有风声与旌旗声。</p>
+    <p class="act">镜头从杨业的背后缓缓升起，越过他的肩，对着那块碑。</p>
+    <p class="act">他向前三步，按住刀柄，俯身取刀——</p>
+    <p class="act">—— 画面在最后一帧<b>抽去全部颜色</b>，只剩黑白与一点朱砂。</p>
+    <p class="sfx"><b>音</b>　一声闷响。低沉、短促、不响——像木头撞在石头上。</p>
+    <p class="sfx"><b>音</b>　然后是风声，很长。</p>
+
+    <p class="act">黑场。</p>
+    <p class="act">黑场中，只剩风声。风声里，慢慢浮起一句旁人听不见的话。</p>
+    <p class="dlg"><b>杨业 VO</b>　（很轻）延昭。刀给你。</p>
+
+    <p class="trans">切</p>
+
+    <div class="slug">场 7　陈家谷 · 土岗　夜（外）</div>
+    <p class="act">雪下大了。辽军列队走上土岗，很慢，没有欢呼。为首一员辽将走到碑前，看了很久。</p>
+    <p class="act">他弯腰，把碑脚那件叠好的披风拿起来，抖开，重新盖在碑上。</p>
+    <p class="act">然后他转身，对所有辽军抬手。所有辽军下马，向碑行礼。</p>
+    <p class="act">镜头拉远，拉很高。整个土岗在雪里只有一小块黑。远处山谷里，那面宋旗——不知什么时候又出现了，但杳无人影。</p>
+    <p class="trans">化</p>
+
+    <div class="slug">场 8　汴京 · 天波府 · 正厅　次日 · 晨（内）</div>
+    <p class="act">天光很淡。厅里很静，桌上摆着十几副碗筷，整整齐齐，一副都没动过。</p>
+    <p class="act">佘太君坐在最里面的位置上。她面前的桌上放着一柄剑——延平赴死前留在营里的那一柄。</p>
+    <p class="act">六郎站在门口。他身上的甲还沾着泥，一只手撑着门框。他一直没有进来。</p>
+    <p class="dlg"><b>杨延昭</b>　娘。</p>
+    <p class="act">佘太君没有回头。</p>
+    <p class="dlg"><b>佘太君</b>　回来了几个。</p>
+    <p class="act">很长的沉默。</p>
+    <p class="dlg"><b>杨延昭</b>　……一个。</p>
+    <p class="act">佘太君终于转过头。她的脸上没有泪。她看了六郎很久，久到六郎把头低下去。</p>
+    <p class="dlg"><b>佘太君</b>　那把刀呢。</p>
+    <p class="dlg"><b>杨延昭</b>　插在李陵碑前。拔不动。</p>
+    <p class="act">佘太君站起来。她走到桌边，一副一副地把碗筷收起来，收进一个木箱里。动作很稳，一点声音都没有。</p>
+    <p class="act">收到第九副的时候，她停住了。</p>
+    <p class="act">她把那一副碗筷单独放在一边，没有收进箱子。</p>
+    <p class="dlg"><b>佘太君</b>　（背对着六郎，很轻）去把马备上。</p>
+    <p class="dlg"><b>杨延昭</b>　去哪儿。</p>
+    <p class="dlg"><b>佘太君</b>　去接你爹。</p>
+    <p class="act">镜头移出正厅。门外，天光里，那面"天波府"的匾还挂着。</p>
+    <p class="act">镜头极缓地推近匾额——推到"波"字上时，画面淡出。</p>
+
+    <p class="trans">片 尾</p>
+    <p style="font-size:13.5px;color:#4A443B;margin:6px 0 18px;">片尾字幕齐出。画面走完三条空镜：<br>
+    ① 天波府的门槛，被无数双靴子磨出一道凹槽。<br>
+    ② 李陵碑旁，那株枯柳的枝上，抽出一小截新芽。<br>
+    ③ 定宋金刀插在土里，风吹过刀穗。</p>
+    <p class="sfx"><b>音</b>　埙。主题旋律《天波引》第三段，全剧第一次用到埙。</p>
+
+    <h4 style="margin-top:30px;">【本集制作备注】</h4>
+    <p class="act"><b>一、</b>场 5 的全过程不给七郎面部特写，是为了把"最惨烈的一次死亡"交给观众的想象，同时避免少年观众的不适。</p>
+    <p class="act"><b>二、</b>场 6 中杨业整理甲胄的三个动作（系甲片、拢须、退后两步），是全片表演设计的核心——用最日常的动作完成最不日常的告别。</p>
+    <p class="act"><b>三、</b>场 7 辽将盖披风、辽军行军礼，是"去脸谱化"的成色检验点，不可省。</p>
+    <p class="act"><b>四、</b>场 8 佘太君留出第九副碗筷但不说明给谁——这个动作在第三季第 22 集回收：她把这副碗筷给了穆桂英。</p>
+  </div>
+</section>
+
+<!-- ================= 六 ================= -->
+<section id="p6">
+  <h2 class="ch"><span class="no">CHAPTER 06</span>分镜头脚本</h2>
+  <p class="lead">本章给出两段可直接开工的分镜：<b>序幕 48 镜</b>（全片调性基准）与<b>第八集高潮段 36 镜</b>（全片风格高潮）。镜头语言全部沿用 1.3 节拆出的连环画语法——"框中之框 + 缓慢横移 + 留白"。</p>
+
+  <div class="info">
+    <b>表头说明</b>　<b>景别</b>：大远/远/全/中/近/特/大特。　<b>机位</b>：平/仰/俯/斜，含角度值。　<b>运镜</b>：固定/横移/推/拉/摇/升/降/跟。　<b>时长</b>：秒。
+  </div>
+
+  <h3>6.1　序幕分镜表（48 镜 / 约 03:10）</h3>
+
+  <h4>第一段 · 黑场与那一声（镜 01–07　00:00–00:40）</h4>
+  <div class="tw">
+    <table class="shot">
+      <thead><tr><th class="num">镜</th><th class="tm">时间</th><th class="sz">景别</th><th>机位</th><th class="mv">运镜</th><th class="num">秒</th><th>画面内容</th><th style="width:180px;">声音 / 台词</th></tr></thead>
+      <tbody>
+        <tr><td class="sn">01</td><td class="tm">0:00</td><td class="sz">—</td><td>—</td><td class="mv">固定</td><td class="num">8</td><td>全黑。无任何视觉元素。</td><td>风声（由远及近，渐强）</td></tr>
+        <tr><td class="sn">02</td><td class="tm">0:08</td><td class="sz">—</td><td>—</td><td class="mv">固定</td><td class="num">4</td><td>全黑。第 2 秒处出现闷响，画面不响应——故意不切。</td><td>一声闷响（木头撞石，低沉、短促）</td></tr>
+        <tr><td class="sn">03</td><td class="tm">0:12</td><td class="sz">—</td><td>—</td><td class="mv">固定</td><td class="num">4</td><td>全黑。静默四秒。给观众时间意识到"刚才那是什么"。</td><td>全静</td></tr>
+        <tr><td class="sn">04</td><td class="tm">0:16</td><td class="sz">—</td><td>—</td><td class="mv">固定</td><td class="num">4</td><td>黑场底色极缓地由纯黑转为深灰。肉眼几不可察。</td><td>极低的风声重新进入</td></tr>
+        <tr><td class="sn">05</td><td class="tm">0:20</td><td class="sz">远</td><td>平</td><td class="mv">固定</td><td class="num">4</td><td>画面亮起。一整屏的白雾，无边界、无参照物。</td><td>风声</td></tr>
+        <tr><td class="sn">06</td><td class="tm">0:24</td><td class="sz">远</td><td>平</td><td class="mv">缓推</td><td class="num">6</td><td>雾中缓慢浮出一片荒坡的轮廓（浅灰剪影，层级极低）。</td><td>风声</td></tr>
+        <tr><td class="sn">07</td><td class="tm">0:30</td><td class="sz">—</td><td>—</td><td class="mv">固定</td><td class="num">6</td><td>画面下方浮出字幕，宣纸底黑字，不带花边。</td><td>风声（减弱）<br><b>字幕</b>：北宋 · 雍熙三年 · 陈家谷</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h4>第二段 · 荒坡 · 金刀 · 残碑（镜 08–19　00:40–01:20）</h4>
+  <div class="tw">
+    <table class="shot">
+      <thead><tr><th class="num">镜</th><th class="tm">时间</th><th class="sz">景别</th><th>机位</th><th class="mv">运镜</th><th class="num">秒</th><th>画面内容</th><th style="width:180px;">声音 / 台词</th></tr></thead>
+      <tbody>
+        <tr><td class="sn">08</td><td class="tm">0:40</td><td class="sz">特</td><td>俯 30°</td><td class="mv">固定</td><td class="num">4</td><td>冻硬的土面，一道被风刮出的浅沟。枯草茎贴着地。无人物。</td><td>风声</td></tr>
+        <tr><td class="sn">09</td><td class="tm">0:44</td><td class="sz">近</td><td>平</td><td class="mv">升</td><td class="num">5</td><td>镜头自土面缓缓升起，草茎从画面下缘划过。</td><td>风</td></tr>
+        <tr><td class="sn">10</td><td class="tm">0:49</td><td class="sz">中</td><td>平</td><td class="mv">升</td><td class="num">4</td><td>刀尖入画。定宋金刀的刀尖插在土里，刃口朝上，一线冷光。</td><td>风（略强）</td></tr>
+        <tr><td class="sn">11</td><td class="tm">0:53</td><td class="sz">中</td><td>平</td><td class="mv">缓推</td><td class="num">6</td><td>刀身全貌。方片札甲式的护手纹、磨损的刃、缠得极紧的刀柄。刀是"用过的"。</td><td>风</td></tr>
+        <tr><td class="sn">12</td><td class="tm">0:59</td><td class="sz">特</td><td>平</td><td class="mv">固定</td><td class="num">4</td><td>刀穗在风里慢慢转。这是画面里唯一在动的东西。</td><td>风</td></tr>
+        <tr><td class="sn">13</td><td class="tm">1:03</td><td class="sz">中</td><td>平</td><td class="mv">升</td><td class="num">5</td><td>镜头越过刀柄继续上摇。</td><td>风</td></tr>
+        <tr><td class="sn">14</td><td class="tm">1:08</td><td class="sz">远</td><td>平</td><td class="mv">固定</td><td class="num">6</td><td><b>残碑入画。</b>碑身歪斜，面无字。旁边一株枯柳，枝全断了。</td><td>风</td></tr>
+        <tr><td class="sn">15</td><td class="tm">1:14</td><td class="sz">特</td><td>仰 15°</td><td class="mv">固定</td><td class="num">3</td><td>碑顶积雪。一片雪被风掀走。</td><td>风</td></tr>
+        <tr><td class="sn">16</td><td class="tm">1:17</td><td class="sz">远</td><td>平</td><td class="mv">固定</td><td class="num">3</td><td>保持镜 14 构图不变。旁白进入时画面不动。<br><b>全片纪律：旁白时不切镜。</b></td><td><b>旁白 OS</b>：史书上，他只有两行字。</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h4>第三段 · 碑面与开篇语（镜 17–28　01:20–01:52）</h4>
+  <div class="tw">
+    <table class="shot">
+      <thead><tr><th class="num">镜</th><th class="tm">时间</th><th class="sz">景别</th><th>机位</th><th class="mv">运镜</th><th class="num">秒</th><th>画面内容</th><th style="width:180px;">声音 / 台词</th></tr></thead>
+      <tbody>
+        <tr><td class="sn">17</td><td class="tm">1:20</td><td class="sz">近</td><td>平</td><td class="mv">推</td><td class="num">4</td><td>推向碑面。碑面粗糙，有风化剥落的痕迹。</td><td><b>旁白 OS</b>：「杨业，并州太原人。雍熙三年，力战，被擒，不食三日死。」</td></tr>
+        <tr><td class="sn">18</td><td class="tm">1:24</td><td class="sz">大特</td><td>平</td><td class="mv">横移</td><td class="num">6</td><td>碑面极缓慢横移。浮出被磨平的字痕——能看出"曾有过字"，但一个也认不出。</td><td>旁白（续）</td></tr>
+        <tr><td class="sn">19</td><td class="tm">1:30</td><td class="sz">大特</td><td>平</td><td class="mv">固定</td><td class="num">4</td><td>停在一片完全平滑的碑面上。石头的颗粒感撑满画面。</td><td>风声（唯一）</td></tr>
+        <tr><td class="sn">20</td><td class="tm">1:34</td><td class="sz">大特</td><td>平</td><td class="mv">固定</td><td class="num">6</td><td>保持不动。<b>空 6 秒。</b>这是全片留给观众的第一段安静。</td><td>风声</td></tr>
+        <tr><td class="sn">21</td><td class="tm">1:40</td><td class="sz">远</td><td>平</td><td class="mv">拉</td><td class="num">6</td><td>从碑面快速拉远，重新看见整片荒坡。刀仍在，碑仍在，无人。</td><td><b>旁白 OS</b>：野地里，他有七座坟，一座碑。</td></tr>
+        <tr><td class="sn">22</td><td class="tm">1:46</td><td class="sz">远</td><td>平</td><td class="mv">固定</td><td class="num">4</td><td>静止远景。雾在这四秒里把坡脚重新掩住。</td><td>风</td></tr>
+        <tr><td class="sn">23</td><td class="tm">1:50</td><td class="sz">特</td><td>平</td><td class="mv">固定</td><td class="num">2</td><td>刀身特写。刃面上有一条极细的反光——那道反光开始"亮起来"。</td><td>风（渐弱）</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h4>第四段 · 刀身反光里的校场（镜 24–44　01:52–02:46）</h4>
+  <div class="tw">
+    <table class="shot">
+      <thead><tr><th class="num">镜</th><th class="tm">时间</th><th class="sz">景别</th><th>机位</th><th class="mv">运镜</th><th class="num">秒</th><th>画面内容</th><th style="width:180px;">声音 / 台词</th></tr></thead>
+      <tbody>
+        <tr><td class="sn">24</td><td class="tm">1:52</td><td class="sz">大特</td><td>平</td><td class="mv">固定</td><td class="num">4</td><td>反光占满画面。反光里的颜色由冷灰<b>渐变为暖赭</b>。</td><td>音效由风声过渡到校场的鼓声底噪</td></tr>
+        <tr><td class="sn">25</td><td class="tm">1:56</td><td class="sz">大远</td><td>平</td><td class="mv">固定</td><td class="num">7</td><td>化出暖赭色的开阔校场。阳光很足，土是黄褐的，远处一面朱砂将旗下垂着。</td><td>鼓声（松散、日常）</td></tr>
+        <tr><td class="sn">26</td><td class="tm">2:03</td><td class="sz">全</td><td>平</td><td class="mv">横移（右）</td><td class="num">5</td><td>开始横移。第一个儿子入画：杨延平，白袍，佩剑，站得最直。</td><td>鼓</td></tr>
+        <tr><td class="sn">27</td><td class="tm">2:08</td><td class="sz">全</td><td>平</td><td class="mv">横移</td><td class="num">4</td><td>二郎、三郎。甲胄形制相同，只靠身高和兵器区分——<b>刻意不强调个性</b>，因为观众即将失去他们。</td><td>鼓</td></tr>
+        <tr><td class="sn">28</td><td class="tm">2:12</td><td class="sz">全</td><td>平</td><td class="mv">横移</td><td class="num">5</td><td>四郎、五郎、六郎。六郎（白袍银枪）在这一排里最亮——观众会记住他，因为只有他活到最后。</td><td>鼓</td></tr>
+        <tr><td class="sn">29</td><td class="tm">2:17</td><td class="sz">全</td><td>平</td><td class="mv">横移</td><td class="num">4</td><td>七子：杨延嗣，少年，赤马不在画面里，但他站姿最不安分，脚尖点地。</td><td>鼓</td></tr>
+        <tr><td class="sn">30</td><td class="tm">2:21</td><td class="sz">远</td><td>平</td><td class="mv">固定</td><td class="num">5</td><td>横移暂停，露出完整的九人队列。</td><td><b>旁白 OS</b>：那一年，他们都还活着。</td></tr>
+        <tr><td class="sn">31</td><td class="tm">2:26</td><td class="sz">全</td><td>平</td><td class="mv">横移</td><td class="num">4</td><td>两个女儿入画。八姐在最右，束发，腰里别刀，抬头看兄长们的背影。</td><td>鼓</td></tr>
+        <tr><td class="sn">32</td><td class="tm">2:30</td><td class="sz">中</td><td>平</td><td class="mv">横移停</td><td class="num">5</td><td><b>佘太君。</b>凤纹襦裙，发髻一丝不乱。她看的是这九个人。脸上没有任何表情——不笑，也不忧。</td><td>鼓（渐沉）</td></tr>
+        <tr><td class="sn">33</td><td class="tm">2:35</td><td class="sz">中</td><td>仰 10°</td><td class="mv">固定</td><td class="num">6</td><td><b>杨业。</b>点兵状，刀在手，披风扬起。他背对着画面右方，脸在阴影里。</td><td>鼓（渐强）<br><b>旁白 OS</b>：那一年，没有人知道，要走的是七个，回来的是一个。</td></tr>
+        <tr><td class="sn">34</td><td class="tm">2:41</td><td class="sz">远</td><td>仰 20°</td><td class="mv">升</td><td class="num">5</td><td>镜头沿将旗升起。朱砂色旗面在暖光里展开——<b>全片第一次出现红色。</b></td><td>琵琶拨弦一声<br>筚篥起（主题《天波引》第一段）</td></tr>
+        <tr><td class="sn">35</td><td class="tm">2:46</td><td class="sz">全</td><td>平</td><td class="mv">固定</td><td class="num">6</td><td>杨业回身，面向九个孩子。他抬起刀，刀锋向天。</td><td>战鼓一记（重）</td></tr>
+        <tr><td class="sn">36</td><td class="tm">2:52</td><td class="sz">特</td><td>平</td><td class="mv">固定</td><td class="num">3</td><td>刀的刃口压住整片暖光。刀面上映出九个模糊的小小的人影。</td><td>鼓（余音）</td></tr>
+        <tr><td class="sn">37</td><td class="tm">2:55</td><td class="sz">—</td><td>—</td><td class="mv">固定</td><td class="num">4</td><td><b>画面陡然收黑。</b>鼓声在这一帧同时被切断，不留余音。</td><td>全静</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h4>第五段 · 片名（镜 38–44　02:59–03:10）</h4>
+  <div class="tw">
+    <table class="shot">
+      <thead><tr><th class="num">镜</th><th class="tm">时间</th><th class="sz">景别</th><th>机位</th><th class="mv">运镜</th><th class="num">秒</th><th>画面内容</th><th style="width:180px;">声音 / 台词</th></tr></thead>
+      <tbody>
+        <tr><td class="sn">38</td><td class="tm">2:59</td><td class="sz">—</td><td>—</td><td class="mv">固定</td><td class="num">3</td><td>黑场。静默三秒，只有风声的一点尾巴。</td><td>风声（尾）</td></tr>
+        <tr><td class="sn">39</td><td class="tm">3:02</td><td class="sz">—</td><td>—</td><td class="mv">固定</td><td class="num">3</td><td>片名「<b>杨家将</b>」自下而上浮入，宋体，字距 0.14em。无描边、无发光、无粒子。</td><td>筚篥主旋律展开</td></tr>
+        <tr><td class="sn">40</td><td class="tm">3:05</td><td class="sz">—</td><td>—</td><td class="mv">固定</td><td class="num">2</td><td>副题「忠 烈 千 秋」浮入，朱砂色。</td><td>筚篥</td></tr>
+        <tr><td class="sn">41</td><td class="tm">3:07</td><td class="sz">—</td><td>—</td><td class="mv">固定</td><td class="num">2</td><td>「第一季 · 归宋」小字浮入，墨色。</td><td>筚篥 + 鼓</td></tr>
+        <tr><td class="sn">42</td><td class="tm">3:09</td><td class="sz">—</td><td>—</td><td class="mv">固定</td><td class="num">1</td><td>黑场底部浮出跋文一行（史实提示）。</td><td>鼓</td></tr>
+        <tr><td class="sn">43</td><td class="tm">3:10</td><td class="sz">—</td><td>—</td><td class="mv">固定</td><td class="num">—</td><td>淡出至黑。接第一集第一场。</td><td>音乐持续入下一场</td></tr>
+        <tr><td class="sn">44</td><td class="tm">—</td><td class="sz">—</td><td>—</td><td class="mv">—</td><td class="num">—</td><td colspan="2" style="color:#7A7266;">（镜 38–43 为片名字卡序列，可整体作为一个"字卡合成层"处理，此处拆为独立镜以便与音乐对点。）</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="gold">
+    <b>序幕的四条镜头纪律（写进分镜单页眉，全组遵守）</b><br>
+    ① <b>前 100 秒不出现人脸。</b>观众先认碑、认刀、认土，才认人。<br>
+    ② <b>旁白不切镜。</b>旁白进入时画面保持不动，让声音落在静止的构图上。<br>
+    ③ <b>校场段全用横移，不用推拉。</b>横移＝"顺着数过去"，推拉＝"强调某个人"。这一场要的是"一排人"，不是"某个英雄"。<br>
+    ④ <b>片名字卡零特效。</b>不加发光、不加粒子、不加描边。前 3 分钟的克制就是全片的品质宣言。
+  </div>
+
+  <h3>6.2　第八集《李陵碑》高潮段分镜表（36 镜）</h3>
+
+  <h4>A 段 · 宋军大营 · 七郎（镜 01–10）</h4>
+  <div class="tw">
+    <table class="shot">
+      <thead><tr><th class="num">镜</th><th class="sz">景别</th><th>机位</th><th class="mv">运镜</th><th class="num">秒</th><th>画面内容</th><th style="width:200px;">声音 / 台词</th></tr></thead>
+      <tbody>
+        <tr><td class="sn">01</td><td class="sz">远</td><td>平</td><td class="mv">固定</td><td class="num">4</td><td>空营地。帐篷只剩绳结留下的坑，灶还冒一点烟。整片画面上只有一件事在动：一张纸被风卷起来转了一圈。</td><td>风。远处一声号角（不是自己人的调子）</td></tr>
+        <tr><td class="sn">02</td><td class="sz">中</td><td>平</td><td class="mv">跟（横）</td><td class="num">5</td><td>七郎纵马冲进画面，横扫过整个营地。他不减速，一路冲到画外。</td><td>马蹄声</td></tr>
+        <tr><td class="sn">03</td><td class="sz">近</td><td>平</td><td class="mv">固定</td><td class="num">3</td><td>七郎勒马停住，回头。脸上有血污——<b>但镜头刻意不给脸部特写，只到肩。</b></td><td>马嘶</td></tr>
+        <tr><td class="sn">04</td><td class="sz">全</td><td>平</td><td class="mv">固定</td><td class="num">5</td><td>他的视角：营地尽头站着一排弓手。前排已经搭了箭。人数不多，但排得很齐。<b>构图纪律：弓手在阴影里，看不清脸。</b></td><td>全静（风声都抽掉）</td></tr>
+        <tr><td class="sn">05</td><td class="sz">中</td><td>平</td><td class="mv">固定</td><td class="num">6</td><td>七郎。他看着那一排人，然后<b>笑了</b>。不是苦笑，是那种真的觉得荒谬的笑。<br><b>杨延嗣</b>　你们认识我。</td><td>静</td></tr>
+        <tr><td class="sn">06</td><td class="sz">全</td><td>平</td><td class="mv">固定</td><td class="num">4</td><td>弓手队列。没有回答。没有任何一个人动。</td><td>静</td></tr>
+        <tr><td class="sn">07</td><td class="sz">中</td><td>平</td><td class="mv">固定</td><td class="num">8</td><td>七郎。他说完，等了一会儿，没有人回应。<br><b>杨延嗣</b>　我爹在陈家谷。三千人。你们在这儿。</td><td>静</td></tr>
+        <tr><td class="sn">08</td><td class="sz">全</td><td>平</td><td class="mv">固定</td><td class="num">3</td><td>弓手队列。<b>弓弦齐齐一响。</b>镜头不切、不推，一动不动。</td><td>弓弦声（整齐、干、短）</td></tr>
+        <tr><td class="sn">09</td><td class="sz">近</td><td>平</td><td class="mv">固定</td><td class="num">6</td><td>七郎的手。他摸到鞍上那个酒囊，把它举起来，晃了晃——里面的声音很轻，几乎听不见。<br><b>杨延嗣</b>　（极轻）他让我路上别停。</td><td>酒囊里液体的晃动声（放大）</td></tr>
+        <tr><td class="sn">10</td><td class="sz">远</td><td>仰 80°</td><td class="mv">固定</td><td class="num">7</td><td><b>镜头抬起来，只看天。</b>一片云从太阳前面慢慢走过去，光的边缘变了一次。<b>不拍箭、不拍中箭、不拍倒下。</b>画面下缘，落下一个酒囊。</td><td>弓弦（密集）→ 风声 → 一记极轻的定音鼓</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h4>B 段 · 土岗 · 李陵碑（镜 11–28）</h4>
+  <div class="tw">
+    <table class="shot">
+      <thead><tr><th class="num">镜</th><th class="sz">景别</th><th>机位</th><th class="mv">运镜</th><th class="num">秒</th><th>画面内容</th><th style="width:200px;">声音 / 台词</th></tr></thead>
+      <tbody>
+        <tr><td class="sn">11</td><td class="sz">远</td><td>平</td><td class="mv">固定</td><td class="num">5</td><td>土岗，黄昏。下着很小很小的雪，落下来就化。镜头不动，看雪看五秒。</td><td>风声（轻）</td></tr>
+        <tr><td class="sn">12</td><td class="sz">全</td><td>俯 35°</td><td class="mv">缓推</td><td class="num">6</td><td>土岗上只剩几十个人，围成一个圈，都坐着或靠着。没有一个人说话。镜头慢慢推进这个圈。</td><td>风</td></tr>
+        <tr><td class="sn">13</td><td class="sz">中</td><td>平</td><td class="mv">固定</td><td class="num">5</td><td><b>杨业</b>一个人站在圈外。甲裂了三处，披风只剩一半。他背对着那几十个人。</td><td>风</td></tr>
+        <tr><td class="sn">14</td><td class="sz">特</td><td>俯 60°</td><td class="mv">下摇</td><td class="num">6</td><td>顺着他的目光下摇到地面。<b>一块碑歪在土里。</b>字被风化了一半。</td><td>风（渐弱）</td></tr>
+        <tr><td class="sn">15</td><td class="sz">大特</td><td>平</td><td class="mv">横移</td><td class="num">7</td><td>镜头极缓地推过碑面，一个字一个字划过去，最后停在两个字上：<b>李 陵</b>。</td><td><b>风声在此刻完全停止。</b>无声两秒</td></tr>
+        <tr><td class="sn">16</td><td class="sz">中</td><td>平</td><td class="mv">固定</td><td class="num">4</td><td>杨业伸手，摸了一下碑面。手指上的霜化了，留下一道水痕，正好从"李"字上划过。</td><td>极轻的、霜化的声音<br><b>杨业</b>　（自言自语）李陵碑。</td></tr>
+        <tr><td class="sn">17</td><td class="sz">近</td><td>仰 20°</td><td class="mv">固定</td><td class="num">6</td><td>一名老兵抬头看他。老兵的脸是全片最普通的一张脸，没有任何英雄相。<br><b>老兵</b>　元帅。降了，能活。</td><td>风（重新进入）</td></tr>
+        <tr><td class="sn">18</td><td class="sz">中</td><td>平</td><td class="mv">固定</td><td class="num">7</td><td>杨业摇头。他望向东方——汴京与天波府的方向。望得很久，久到镜头几乎以为他不会说话了。</td><td>风</td></tr>
+        <tr><td class="sn">19</td><td class="sz">闪回</td><td>—</td><td class="mv">固定</td><td class="num">1</td><td>天波府的门匾落成，朱漆未干。</td><td rowspan="5" style="vertical-align:middle;color:#7A7266;">闪回段全部<b>无声</b>，只做主旋律的单音，不接对白。<br>五镜各 1 秒，共 5 秒。</td></tr>
+        <tr><td class="sn">20</td><td class="sz">闪回</td><td>—</td><td class="mv">固定</td><td class="num">1</td><td>佘太君在灶前一个一个数碗，数到第九个停住。</td></tr>
+        <tr><td class="sn">21</td><td class="sz">闪回</td><td>—</td><td class="mv">固定</td><td class="num">1</td><td>延平出城前回头的那一眼。</td></tr>
+        <tr><td class="sn">22</td><td class="sz">闪回</td><td>—</td><td class="mv">固定</td><td class="num">1</td><td>邠阳城战后，三副空鞍并排放在地上。</td></tr>
+        <tr><td class="sn">23</td><td class="sz">闪回</td><td>—</td><td class="mv">固定</td><td class="num">1</td><td>七郎举着酒囊，晃了晃。</td></tr>
+        <tr><td class="sn">24</td><td class="sz">中</td><td>平</td><td class="mv">固定</td><td class="num">7</td><td>回到土岗。雪比刚才大了一点。<br><b>杨业</b>　朝廷给过我一句话没有？<br><b>老兵</b>　没有。<br><b>杨业</b>　那就不算输在战场上。</td><td>风声（略强）</td></tr>
+        <tr><td class="sn">25</td><td class="sz">全</td><td>平</td><td class="mv">固定</td><td class="num">8</td><td><b>核心镜头。</b>杨业把定宋金刀插进土里，就在碑旁边。刀穗在风里转。然后他解下残破的披风，叠了一下，放在碑脚。整理甲胄：系好最后一颗甲片，用手拢了拢胡须。很慢，很稳，全部是日常动作。</td><td>风。鼓（无）。<b>全片配乐在此刻已完全抽离</b></td></tr>
+        <tr><td class="sn">26</td><td class="sz">中</td><td>平</td><td class="mv">固定</td><td class="num">5</td><td>他退后两步，看了一眼弟兄们。<br><b>杨业</b>　都别抬头。</td><td>风</td></tr>
+        <tr><td class="sn">27</td><td class="sz">全</td><td>俯 40°</td><td class="mv">缓升</td><td class="num">9</td><td>所有人低下头。镜头从杨业背后缓缓升起，越过他的肩，对着那块碑。他向前三步，按住刀柄，俯身——<b>在最后一帧抽去全部颜色，只剩黑白与一点朱砂。</b></td><td>风<br>→ <b>一声闷响（木头撞石，低沉、短促）</b><br>→ 风，很长</td></tr>
+        <tr><td class="sn">28</td><td class="sz">—</td><td>—</td><td class="mv">固定</td><td class="num">6</td><td>黑场。风声里浮起一句旁人听不见的话。<br><b>杨业 VO</b>　（很轻）延昭。刀给你。</td><td>风（唯一的声音）</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h4>C 段 · 致敬 / D 段 · 天波府（镜 29–36）</h4>
+  <div class="tw">
+    <table class="shot">
+      <thead><tr><th class="num">镜</th><th class="sz">景别</th><th>机位</th><th class="mv">运镜</th><th class="num">秒</th><th>画面内容</th><th style="width:200px;">声音 / 台词</th></tr></thead>
+      <tbody>
+        <tr><td class="sn">29</td><td class="sz">远</td><td>平</td><td class="mv">固定</td><td class="num">6</td><td>雪下大了。辽军列队走上土岗，很慢，<b>没有欢呼</b>。为首一员辽将走到碑前，看了很久。</td><td>雪声、甲叶声（轻）</td></tr>
+        <tr><td class="sn">30</td><td class="sz">近</td><td>平</td><td class="mv">固定</td><td class="num">7</td><td>辽将弯腰，把碑脚那件叠好的披风拿起来，抖开，重新盖在碑上。动作很郑重。</td><td>披风抖开的声音（放大）</td></tr>
+        <tr><td class="sn">31</td><td class="sz">全</td><td>平</td><td class="mv">固定</td><td class="num">6</td><td>他转身，对所有辽军抬手。所有辽军下马，向碑行礼。<b>这是"去脸谱化"的成色检验点，不可删。</b></td><td>马匹下马声（整齐）</td></tr>
+        <tr><td class="sn">32</td><td class="sz">大远</td><td>俯 70°</td><td class="mv">升</td><td class="num">9</td><td>镜头拉远拉高。整个土岗在雪里只有一小块黑。远处山谷里，那面宋旗不知什么时候又出现了——<b>但旗下杳无人影</b>。</td><td>风声铺满<br>埙首次进入</td></tr>
+        <tr><td class="sn">33</td><td class="sz">全</td><td>平</td><td class="mv">固定</td><td class="num">4</td><td>化：天波府正厅。天光很淡。桌上摆着十几副碗筷，整整齐齐，<b>一副都没动过</b>。</td><td>静</td></tr>
+        <tr><td class="sn">34</td><td class="sz">中</td><td>平</td><td class="mv">固定</td><td class="num">8</td><td>佘太君坐在最里面的位置。她面前放着一柄剑——延平赴死前留在营里的那一柄。<br><b>杨延昭</b>（画外）　娘。<br><b>佘太君</b>　回来了几个。<br>（很长的沉默）<br><b>杨延昭</b>　……一个。</td><td>静（无环境声）</td></tr>
+        <tr><td class="sn">35</td><td class="sz">中</td><td>平</td><td class="mv">固定</td><td class="num">8</td><td>她终于转过头。<b>她的脸上没有泪。</b>看了六郎很久，久到六郎把头低下去。<br><b>佘太君</b>　那把刀呢。<br><b>杨延昭</b>　插在李陵碑前。拔不动。</td><td>静</td></tr>
+        <tr><td class="sn">36</td><td class="sz">全</td><td>平</td><td class="mv">缓推</td><td class="num">12</td><td>她站起来，一副一副地收碗筷，收进木箱，动作很稳，一点声音都没有。收到<b>第九副</b>时停住——她把那一副单独放在一边，<b>没有收进箱子</b>。<br><b>佘太君</b>（背对着）　去把马备上。<br><b>杨延昭</b>　去哪儿。<br><b>佘太君</b>　去接你爹。<br>镜头移出正厅，缓推"天波府"匾额，推到"波"字上时淡出。</td><td>静 → 埙 + 琵琶<br>（主题《天波引》第三段）</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="note">
+    <b>关于第 36 镜的第九副碗筷</b>　这个不解释的动作，将在第三季第 22 集得到回收——佘太君把它交给了穆桂英。全剧最后一个镜头（第 24 集）回到李陵碑前的同一机位：碑前开了花。三张画面（无字的碑 / 刻满名字的碑 / 碑前的花）构成全剧的叙事骨架。
+  </div>
+</section>
+
+<!-- ================= 七 ================= -->
+<section id="p7">
+  <h2 class="ch"><span class="no">CHAPTER 07</span>技能盘点与组合工作流</h2>
+  <p class="lead">本章回答第二个问题：本账号手上有什么、平台还有什么、以及怎么把它们串成一条能出片的流水线。</p>
+
+  <h3>7.1　本账号已有技能（实测清点）</h3>
+  <div class="tw">
+    <table>
+      <thead><tr><th style="width:190px;">层级</th><th class="num">数量</th><th>内容</th></tr></thead>
+      <tbody>
+        <tr><td><b>用户级自定义技能</b><br><span style="font-size:12px;color:#7A7266;">~/.workbuddy/skills/</span></td><td class="num">0</td><td>目录为空，尚未安装任何个人技能。</td></tr>
+        <tr><td><b>项目级技能</b><br><span style="font-size:12px;color:#7A7266;">本项目/.workbuddy/skills/</span></td><td class="num">0</td><td>本工作区尚未建立技能目录。</td></tr>
+        <tr><td><b>平台内置技能</b><br><span style="font-size:12px;color:#7A7266;">随客户端预装</span></td><td class="num">26</td><td>见下方 7.1.1 —— 这是本账号当前实际可用的主力装备。</td></tr>
+        <tr><td><b>已装市场插件</b></td><td class="num">5</td><td><span class="tag g">document-skills</span><span class="tag g">finance-data</span><span class="tag g">agent-browser</span><span class="tag g">playwright-cli</span><span class="tag g">find-skills</span></td></tr>
+        <tr><td><b>已连接连接器</b></td><td class="num">1</td><td><span class="tag">Agent Mail 智能体邮箱</span></td></tr>
+        <tr><td><b>内置生成能力</b></td><td class="num">3</td><td>文生图 / 图生图（ImageGen）；文生视频 / 图生视频（VideoGen）；对话内联图表与插图（Visualizer）</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h4>7.1.1　内置 26 个技能，按本次任务相关性分组</h4>
+  <div class="tw">
+    <table>
+      <thead><tr><th style="width:150px;">分组</th><th>技能</th><th style="width:100px;">本次用途</th></tr></thead>
+      <tbody>
+        <tr><td><b>图像 / 视频生成</b></td><td><span class="tag z">miora-image-generation</span><span class="tag z">miora-video-generation</span><span class="tag z">buddy-multimodal-generation</span><span class="tag z">buddy-image-processing</span><span class="tag z">miora-creative-core</span></td><td>角色设定图、场景气氛图、动态分镜、3D 模型</td></tr>
+        <tr><td><b>设计 / 版式</b></td><td><span class="tag">ardot-design-core</span><span class="tag">ardot-poster</span><span class="tag">ardot-slides</span><span class="tag">ardot-ui-design</span><span class="tag">ardot-design-to-code</span><span class="tag">design-router</span><span class="tag">miora-brand-design</span><span class="tag">livestream-poster</span></td><td>提案 PPT、视觉规范、宣发海报</td></tr>
+        <tr><td><b>文档 / 表格</b></td><td><span class="tag j">tencent-docs-routing</span><span class="tag j">tencent-local-office-edit</span><span class="tag j">tencent-docx</span><span class="tag j">tencent-pptx</span><span class="tag j">sheetagent</span><span class="tag j">document-skills</span></td><td>剧本 Word 稿、分镜 Excel 表、制片预算</td></tr>
+        <tr><td><b>发布 / 协作</b></td><td><span class="tag g">sites</span><span class="tag g">library</span><span class="tag g">cloud-service</span></td><td>把方案发布成在线页、共享素材库</td></tr>
+        <tr><td><b>元能力</b></td><td><span class="tag gray">skill-creator</span><span class="tag gray">marketplace-skill-installer</span><span class="tag gray">find-skills</span><span class="tag gray">expert-manager</span><span class="tag gray">recommend-connectors</span><span class="tag gray">recommend-experts</span></td><td>造自己的"连环画改编"专用技能；找专家与连接器</td></tr>
+        <tr><td><b>其他（本次不用）</b></td><td><span class="tag gray">wb-finance-skill</span><span class="tag gray">geo-map-compliance-guard</span><span class="tag gray">wecom-forwarded-chat-resources</span><span class="tag gray">finance-data</span><span class="tag gray">agent-browser</span><span class="tag gray">playwright-cli</span></td><td>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="info">
+    <b>一句话结论</b>　本账号当前<b>没有自建的动画/剧本类技能</b>，但内置的"生成 + 文档 + 设计 + 发布"四件套已经足以走完"设定图 → 剧本 → 提案 → 发布"的全链路；真正缺的是<b>剧本工程</b>与<b>国风风格定向</b>这两块，正好可以从平台市场装。
+  </div>
+
+  <h3>7.2　平台市场里可安装的相关技能（已核验存在，尚未安装）</h3>
+  <div class="tw">
+    <table>
+      <thead><tr><th style="width:110px;">位置</th><th>技能</th><th>为什么是它</th></tr></thead>
+      <tbody>
+        <tr><td rowspan="3"><b>剧本工程</b></td><td><b>script-forging</b></td><td>把成熟故事锻造成可拍摄执行的影视剧本、分场大纲、分镜方案与数字资产清单。全流程覆盖，本项目的"骨架工具"。</td></tr>
+        <tr><td><b>narrative-to-screen-reader</b></td><td>叙事文本转影视开发读本（导演视听读本 / 编剧改编读本）。适合把八册连环画做一次正式开发诊断。</td></tr>
+        <tr><td><b>video-production-methodology</b></td><td>短视频/短剧工业化质量方法论总纲，含逐镜运镜决策框架与致命关卡清单。当"质检官"用。</td></tr>
+        <tr><td rowspan="3"><b>分镜 / 镜头</b></td><td><b>cinematic-shot-prompt-expert</b></td><td>内置 50 镜电影镜头库，按叙事功能检索选镜，并能把分镜意图反推为各视频模型的成品提示词。与本方案的第六章直接对接。</td></tr>
+        <tr><td><b>ai-storyboard-generator</b></td><td>把剧本拆成可执行的分镜表，并产出关键分镜图。补上"画面预演"这一环。</td></tr>
+        <tr><td><b>lengyi-shotlist</b></td><td>把一段文本扩写成 8–15 秒的顺序镜头脚本（4/6/9/12/16 镜），带可复制到可灵/海螺/Seedance 的提示词。</td></tr>
+        <tr><td rowspan="2"><b>国风风格定向</b></td><td><b>smy-seedance-storyboard</b><br><span class="tag z">最匹配</span></td><td><b>上美影风格 AI 短剧制作系统。</b>输出标准脚本格式（△镜头描述 + 对白 + OS/VO + 闪回 + 字幕，含说书人旁白体制）、剧集分解、<b>剧组色盘声明</b>与资产生成提示词。它定义的视觉（水墨线条、矿物颜料平涂色块、概括造型、胶片颗粒、纯 2D 无阴影无渐变）与本方案第三章"新白描"几乎同源，且"说书人旁白体制"正好承接连环画的页脚文字。</td></tr>
+        <tr><td>3d-guoman-costume-drama</td><td>若改用 3D 国漫路线，提供古装国漫的角色设定、场景与连续镜头方案。</td></tr>
+        <tr><td rowspan="2"><b>图 / 视频生成</b></td><td><b>text-to-image-prompt</b><br>seedance-video-prompt<br>minimax-h3<br>direct-seedance25-video<br>video-prompt-expert</td><td>文生图提示词（支持水墨/动画/电影感等风格与画幅）；各视频模型的分镜提示词。用于把本方案第三章的设定批量转成可生成资产。</td></tr>
+        <tr><td>ai-comic-drama-shot-maker<br><span class="tag z">母体契合</span></td><td><b>上传一张漫画分镜，把它变成动态的漫剧镜头</b>——单张漫画动起来、首尾分镜过渡、或多张参考合成新镜头。与"连环画单页单格"的母体形态天生一对，是快速做 animatic 的最短路径。</td></tr>
+        <tr><td rowspan="2"><b>成片 / 声音</b></td><td>remotion-video-toolkit<br>html2video<br>video-frames</td><td>用代码生成程序化视频（动画、字幕、3D、云渲染）；网页文章转 1920×1080 视频；从视频抽帧。</td></tr>
+        <tr><td>script-to-voice</td><td>剧本转口播配音，多音色语速可调，输出 MP3。可直接给旁白与对白打样。</td></tr>
+        <tr><td><b>物料 / 合规</b></td><td>generate-short-video-poster-prompts<br>ardot-poster<br>publish-safety-officer</td><td>多平台封面海报提示词；海报生成；发稿前的法律与平台合规自检。</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>7.3　四条组合工作流</h3>
+  <p>技能不是越多越好，关键是<b>串成闭环</b>。以下四条流水线可以独立跑，也可以按 A→B→C→D 顺序推进。</p>
+
+  <div class="flow">
+    <h4 style="margin-top:0;">流水线 A · 内容开发：连环画 → 剧本 + 分镜 <span class="tag z">本次已跑通前 60%</span></h4>
+    <div class="step"><div class="n">1</div><div class="bd"><b>素材解析</b><span>8 册 PDF → 页码 / 逐页图像 / 简介页抽取。<b>本次已用 PyMuPDF 手工完成</b>（672 页、8 册简介、全部绘者信息）。这一步目前无专用技能，建议用 skill-creator 固化成"连环画批量解析"技能。</span></div></div>
+    <div class="arrow">▼</div>
+    <div class="step"><div class="n">2</div><div class="bd"><b>故事锻造</b><span><b>script-forging</b>：八册故事 → 形态建议 → 分场大纲 → 标准剧本 → 分镜方案 → 数字资产清单。它的输出格式与本方案第五章可直接互校。</span></div></div>
+    <div class="arrow">▼</div>
+    <div class="step"><div class="n">3</div><div class="bd"><b>开发诊断</b><span><b>narrative-to-screen-reader</b>：输出"导演视听读本"，检验每一集的视听可能性。</span></div></div>
+    <div class="arrow">▼</div>
+    <div class="step"><div class="n">4</div><div class="bd"><b>镜头设计</b><span><b>cinematic-shot-prompt-expert</b>：用 50 镜镜头库为每场戏选镜、替占位符、按目标模型裁剪，产出可直接生成的成品镜头提示词。</span></div></div>
+    <div class="arrow">▼</div>
+    <div class="step"><div class="n">5</div><div class="bd"><b>质量门禁</b><span><b>video-production-methodology</b>：按 F 闸门清单做结构化质量审查，输出修改清单。</span></div></div>
+    <div class="arrow">▼</div>
+    <div class="step"><div class="n">6</div><div class="bd"><b>交付</b><span><b>tencent-docx</b> 出剧本 Word 稿；<b>sheetagent</b> / <b>document-skills</b> 出分镜 Excel 表与制片预算。</span></div></div>
+  </div>
+
+  <div class="flow">
+    <h4 style="margin-top:0;">流水线 B · 美术资产：风格锚点 + 角色与场景设定</h4>
+    <div class="step"><div class="n">1</div><div class="bd"><b>锁风格</b><span><b>smy-seedance-storyboard</b>：先产出"剧组色盘声明"与角色锚点提示词。这一步是全流程成败关键——<b>风格一致性只能靠前置锁定，不能靠后期修</b>。</span></div></div>
+    <div class="arrow">▼</div>
+    <div class="step"><div class="n">2</div><div class="bd"><b>写提示词</b><span><b>text-to-image-prompt</b>：把 9 个主要角色的三视图需求、6 个核心场景的气氛图需求，转成结构化提示词（显式写明：2D 手绘、平涂无渐变、无写实光影、无渐变阴影）。</span></div></div>
+    <div class="arrow">▼</div>
+    <div class="step"><div class="n">3</div><div class="bd"><b>出图</b><span><b>miora-image-generation</b> / <b>buddy-multimodal-generation</b>（或内置文生图）：批量出设定图。</span></div></div>
+    <div class="arrow">▼</div>
+    <div class="step"><div class="n">4</div><div class="bd"><b>修整</b><span><b>buddy-image-processing</b>：去文字水印、扩图、修型、统一色。</span></div></div>
+    <div class="arrow">▼</div>
+    <div class="step"><div class="n">5</div><div class="bd"><b>成规范</b><span><b>miora-brand-design</b> / <b>ardot-design-core</b>：把成果整理成一份《美术风格手册》（色板、线宽、角色锚点、禁用项）。</span></div></div>
+  </div>
+
+  <div class="flow">
+    <h4 style="margin-top:0;">流水线 C · 动态分镜（Animatic）：验证成片效果</h4>
+    <div class="step"><div class="n">1</div><div class="bd"><b>单格动起来</b><span><b>ai-comic-drama-shot-maker</b>：把连环画式的单幅画面处理成动态镜头。这是最短路径的预演方式。</span></div></div>
+    <div class="arrow">▼</div>
+    <div class="step"><div class="n">2</div><div class="bd"><b>图生视频</b><span><b>VideoGen</b>（内置）+ <b>minimax-h3</b> / <b>seedance</b> 系列：按第六章分镜逐镜生成 3–8 秒动态镜头。</span></div></div>
+    <div class="arrow">▼</div>
+    <div class="step"><div class="n">3</div><div class="bd"><b>合成</b><span><b>remotion-video-toolkit</b>：代码合成镜头 + 字幕 + 配音轨 + 转场，精确对点音效（尤其序幕"闷响"与分镜的帧级同步）。</span></div></div>
+    <div class="arrow">▼</div>
+    <div class="step"><div class="n">4</div><div class="bd"><b>配音</b><span><b>script-to-voice</b>：旁白与主要对白打样。</span></div></div>
+    <div class="arrow">▼</div>
+    <div class="step"><div class="n">5</div><div class="bd"><b>验证</b><span>先做<b>序幕 48 镜中的 6 镜</b>（建议取镜 01–05、10、14、17、27）作为风格试片，通过后再推全片。</span></div></div>
+  </div>
+
+  <div class="flow">
+    <h4 style="margin-top:0;">流水线 D · 物料与发布</h4>
+    <div class="step"><div class="n">1</div><div class="bd"><b>海报与封面</b><span><b>generate-short-video-poster-prompts</b> → <b>ardot-poster</b>：出多平台尺寸的宣发物料。</span></div></div>
+    <div class="arrow">▼</div>
+    <div class="step"><div class="n">2</div><div class="bd"><b>提案</b><span><b>ardot-slides</b> / <b>tencent-pptx</b>：把本方案做成 20 页投案 PPT。</span></div></div>
+    <div class="arrow">▼</div>
+    <div class="step"><div class="n">3</div><div class="bd"><b>合规自检</b><span><b>publish-safety-officer</b>：扫描剧本与物料的法律与平台风险（历史人物、民族关系表述、版权提示）。对历史题材这是必要步骤。</span></div></div>
+    <div class="arrow">▼</div>
+    <div class="step"><div class="n">4</div><div class="bd"><b>发布</b><span><b>sites</b>：把方案与试片发布成在线链接，供团队评审。</span></div></div>
+  </div>
+
+  <h3>7.4　组合使用的四个坑</h3>
+  <div class="grid">
+    <div class="card zhu"><h4>① 风格漂移</h4><p style="margin:0;font-size:14px;">AI 逐镜生成最大的敌人。对策：先用流水线 B 锁定<b>色盘 + 角色锚点提示词</b>，所有后续生成都从同一份锚点派生，禁止逐镜自由发挥。</p></div>
+    <div class="card dai"><h4>② 模型不懂"国风平涂"</h4><p style="margin:0;font-size:14px;">古装铠甲 + 水墨是视频模型的弱项，容易自动补上写实光影与渐变。对策：提示词里显式写反向约束——<b>2D 手绘动画、平涂无渐变、无写实光影、无景深虚化</b>。</p></div>
+    <div class="card jin"><h4>③ 版权越界</h4><p style="margin:0;font-size:14px;">连环画画面是出版社的演绎作品。生成时应<b>重新设计造型</b>，不直接以原画做图生图底图；史实与传说的分层标注要落进片尾字幕。</p></div>
+    <div class="card green"><h4>④ 技能过载</h4><p style="margin:0;font-size:14px;">市场里同功能技能极多（剧本类 5 个、分镜类 6 个、视频提示词类 7 个）。对策：<b>每环节只装 1 个</b>，跑完一集再评估是否换。先把 A、B 两条线跑通，再考虑 C、D。</p></div>
+  </div>
+
+  <h3>7.5　建议的第一步</h3>
+  <div class="gold">
+    <b>本周可执行的三件事</b><br>
+    <b>1. 装 4 个技能</b>：<span class="tag z">script-forging</span><span class="tag z">cinematic-shot-prompt-expert</span><span class="tag z">smy-seedance-storyboard</span><span class="tag z">text-to-image-prompt</span>。前两个管内容，后两个管风格，覆盖 80% 的需求。<br>
+    <b>2. 做一次风格试片</b>：按第三章"新白描"规范，对 3 个角色（杨业 / 穆桂英 / 潘仁美）× 4 个视角共 12 张做锚点测试。全部通过画面并排对比，检验风格一致性。<br>
+    <b>3. 跑一次 6 镜 animatic</b>：取序幕镜 01–05、10、14、17、27，配旁白与音效，验证"黑场—闷响—荒坡—残碑"的节奏是否成立。这一段成，全剧的调性就立住了。
+  </div>
+
+  <div class="note">
+    <b>关于"把本次流程做成技能"</b>　本次"PDF 连环画批量解析 → 逐册简介抽取 → 结构化成改编素材"的做法，是一套完整可复用的工作流，但目前平台内置与市场中均无对应技能。建议用 <b>skill-creator</b> 把它固化成一个"连环画/漫画批量解析与改编素材提取"技能（输入：扫描版 PDF；输出：书目档案 + 分册简介 + 逐页图像 + 角色场次清单）。这样下一个类似项目可以直接开工。
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p><b>《杨家将 · 忠烈千秋》动画改编创意与剧本方案</b>　·　全七章　·　编制于 2026 年 9 月</p>
+  <p>源材料：《北宋杨家将》连环画（湖南美术出版社；喻岳衡改编；蒋太禄 / 贺宣华 / 陈安民 / 郑一呼 / 张治华 / 邓立衍·邓大鹰 / 廖正华 / 罗苍诗 绘），PDF 扫描件共 8 册 672 页。</p>
+  <p style="margin-top:14px;">本方案中的故事取材于传统民间杨家将传说与《宋史》等公共素材；原连环画的画面与改编文字著作权归湖南美术出版社及相关编绘者所有，本方案不含任何原画复用，造型与美术均为重新设计方向。</p>
+</footer>
+
+</div>
+</body>
+</html>

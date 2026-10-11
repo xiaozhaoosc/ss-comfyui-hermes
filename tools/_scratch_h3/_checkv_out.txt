@@ -1,0 +1,44 @@
+=== h3_guard 下的 mp4 ===
+  h3v5_noswblend_00001_.mp4                       247263
+  h3v5_00001_.mp4                                 247263
+  h3v5_pass1baseline_00001_.mp4                   258067
+  t2_lock_noswblend_00001_.mp4                    121154
+  t_lock_00001_.mp4                                29876
+  t_lock_noswblend_00001_.mp4                      29876
+  t_nolow_00001_.mp4                               35793
+  t_nolow_noswblend_00001_.mp4                     35793
+  t_nolow_pass1baseline_00001_.mp4                 35797
+  h3_full_00001_.mp4                               82917
+  h3_full_noswblend_00001_.mp4                     82917
+  h3_full_pass1baseline_00001_.mp4                 82923
+
+=== 画面检查 ===
+  h3v5_noswblend_00001_.mp4
+     frames=73  mean 首=117.4 中=119.2 尾=117.7  max=119.7  nonblack=73/73
+  h3v5_00001_.mp4
+     frames=73  mean 首=117.4 中=119.2 尾=117.7  max=119.7  nonblack=73/73
+  h3v5_pass1baseline_00001_.mp4
+     frames=73  mean 首=121.1 中=122.6 尾=121.4  max=123.0  nonblack=73/73
+
+=== _run_test.log 尾部 ===
+[i] MiniMaxLowVRAMAttention = False
+==============================================================================
+Profile: full  |  鈽呪槄D 缁勫悎鎷筹紙鎺ㄨ崘涓诲姏 路 鏈満榛樿妗ｏ級
+==============================================================================
+宸ヤ綔娴佸凡淇濆瓨: D:\ai_projects\ComfyUI\workflows\v5\h3_guard_v5_full_api.json  (47 鑺傜偣)
+[鈭歖 宸叉彁浜? prompt_id = 37b006de-e979-4238-a009-3fe14a7ea1a7
+    ... 宸茶繍琛?0s
+    ... 宸茶繍琛?32s
+    ... 宸茶繍琛?62s
+    ... 宸茶繍琛?92s
+    ... 宸茶繍琛?122s
+    ... 宸茶繍琛?153s
+    ... 宸茶繍琛?183s
+    ... 宸茶繍琛?213s
+
+[鈭歖 瀹屾垚锛岃€楁椂 218.8s
+    浜х墿: D:\ai_projects\ComfyUI\output\2026-09-22_wb\h3_guard\t_nolow_pass1baseline_00001_.mp4
+    浜х墿: D:\ai_projects\ComfyUI\output\2026-09-22_wb\h3_guard\t_nolow_noswblend_00001_.mp4
+    浜х墿: D:\ai_projects\ComfyUI\output\2026-09-22_wb\h3_guard\t_nolow_00001_.mp4
+杩愯鏃ュ織: D:\ai_projects\ComfyUI\output\2026-09-22_wb\h3_guard\_run_full.json
+

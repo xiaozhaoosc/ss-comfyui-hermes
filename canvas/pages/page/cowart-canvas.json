@@ -1,0 +1,295 @@
+{
+  "schema": {
+    "schemaVersion": 2,
+    "sequences": {
+      "com.tldraw.store": 5,
+      "com.tldraw.asset": 1,
+      "com.tldraw.camera": 1,
+      "com.tldraw.document": 2,
+      "com.tldraw.instance": 26,
+      "com.tldraw.instance_page_state": 5,
+      "com.tldraw.page": 1,
+      "com.tldraw.instance_presence": 6,
+      "com.tldraw.pointer": 1,
+      "com.tldraw.shape": 4,
+      "com.tldraw.user": 1,
+      "com.tldraw.asset.image": 6,
+      "com.tldraw.asset.video": 5,
+      "com.tldraw.asset.bookmark": 2,
+      "com.tldraw.shape.arrow": 8,
+      "com.tldraw.shape.bookmark": 2,
+      "com.tldraw.shape.draw": 4,
+      "com.tldraw.shape.embed": 4,
+      "com.tldraw.shape.frame": 1,
+      "com.tldraw.shape.geo": 11,
+      "com.tldraw.shape.group": 0,
+      "com.tldraw.shape.highlight": 3,
+      "com.tldraw.shape.image": 5,
+      "com.tldraw.shape.line": 5,
+      "com.tldraw.shape.note": 12,
+      "com.tldraw.shape.text": 4,
+      "com.tldraw.shape.video": 4,
+      "com.tldraw.binding.arrow": 1
+    }
+  },
+  "store": {
+    "shape:BKflTdCCwP1zZ2VPipFF4": {
+      "x": 674.1116504854369,
+      "y": 180.48543689320377,
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {},
+      "id": "shape:BKflTdCCwP1zZ2VPipFF4",
+      "type": "draw",
+      "props": {
+        "segments": [
+          {
+            "type": "free",
+            "path": "AAAAAAAAAAAAAAA/pMIAAAAAAACkQgAApMIAAAAAAACkRgAAAACkQgAAAACkQgAAAACkQgAApEakQgAAAACkQgAApEIAAAAApEIAAAAApEIAAAAApEKkQgAApEIAAAAApEIAAAAApEIAAAAAAACkwgAAAACkxgAApMIAAAAApMKkwgAApMKkxgAApMKkwgAApMIAAAAAAACkwgAApMIAAAAApMIAAAAA"
+          }
+        ],
+        "color": "black",
+        "fill": "none",
+        "dash": "draw",
+        "size": "m",
+        "isComplete": true,
+        "isClosed": true,
+        "isPen": false,
+        "scale": 1,
+        "scaleX": 1,
+        "scaleY": 1
+      },
+      "parentId": "page:page",
+      "index": "a3tgdaYV",
+      "typeName": "shape"
+    },
+    "shape:TcAehU6-G-jNdM1WAp0DT": {
+      "x": 342.0728155339807,
+      "y": -201.35922330097083,
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {},
+      "id": "shape:TcAehU6-G-jNdM1WAp0DT",
+      "type": "draw",
+      "props": {
+        "segments": [
+          {
+            "type": "free",
+            "path": "AAAAAAAAAAAAAAA/pMIAAAAApMKkQgAApMIAAAAApMIAAAAApMKkQgAAAACkQgAApMIAAAAApMIAAAAAAACkQgAApMIAAAAAAACkQgAAAACkQgAAAACkQgAAAACkQgAApEKkQgAApEKkQgAApEIAAAAAAACkQgAApEIAAAAAAACkQgAApEIAAAAApEapQgAApEIAAAAApEIAAAAApEIAAAAApEIAAAAApEIAAAAApEKpwgAApEIAAAAAAACkwgAAAACkwgAAAACkxgAAAACkwgAAAACkwgAAAACkxgAAAACkwgAApMKkwgAApMKkwgAAAACkwgAApMIAAAAAAACkxgAApMIAAAAApMKkwgAApMKkwgAApMIAAAAApMKkwgAApMIAAAAApMIAAAAApMIAAAAApMIAAAAApMIAAAAA"
+          }
+        ],
+        "color": "black",
+        "fill": "none",
+        "dash": "draw",
+        "size": "m",
+        "isComplete": true,
+        "isClosed": false,
+        "isPen": false,
+        "scale": 1,
+        "scaleX": 1,
+        "scaleY": 1
+      },
+      "parentId": "page:page",
+      "index": "a2ggqzU8",
+      "typeName": "shape"
+    },
+    "shape:e_sV241a7mQJZYm0CU-UF": {
+      "x": -86.257281553398,
+      "y": 87.514563106796,
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {
+        "cowartAnnotationArrow": true
+      },
+      "id": "shape:e_sV241a7mQJZYm0CU-UF",
+      "type": "arrow",
+      "props": {
+        "kind": "arc",
+        "elbowMidPoint": 0.5,
+        "dash": "draw",
+        "size": "m",
+        "fill": "none",
+        "color": "red",
+        "labelColor": "red",
+        "bend": -48,
+        "start": {
+          "x": 0,
+          "y": 0
+        },
+        "end": {
+          "x": 381.8446601941747,
+          "y": -265.63106796116494
+        },
+        "arrowheadStart": "none",
+        "arrowheadEnd": "arrow",
+        "richText": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "paragraph"
+            }
+          ]
+        },
+        "labelPosition": 0,
+        "font": "draw",
+        "scale": 1
+      },
+      "parentId": "page:page",
+      "index": "a59mNRHV",
+      "typeName": "shape"
+    },
+    "shape:I9njoqbzx_ZIKFkK_YISj": {
+      "x": 830.1699029126214,
+      "y": 492.6019417475727,
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {
+        "cowartAnnotationArrow": true
+      },
+      "id": "shape:I9njoqbzx_ZIKFkK_YISj",
+      "type": "arrow",
+      "props": {
+        "kind": "arc",
+        "elbowMidPoint": 0.5,
+        "dash": "draw",
+        "size": "m",
+        "fill": "none",
+        "color": "red",
+        "labelColor": "red",
+        "bend": 38.45783814625554,
+        "start": {
+          "x": 0,
+          "y": 0
+        },
+        "end": {
+          "x": -179.30097087378635,
+          "y": -265.63106796116494
+        },
+        "arrowheadStart": "none",
+        "arrowheadEnd": "arrow",
+        "richText": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "paragraph"
+            }
+          ]
+        },
+        "labelPosition": 0,
+        "font": "draw",
+        "scale": 1
+      },
+      "parentId": "page:page",
+      "index": "a4EMTCDV",
+      "typeName": "shape"
+    },
+    "user:d923LV5CH51a2iUtLt41L": {
+      "name": "",
+      "color": "#BD54C6",
+      "imageUrl": "",
+      "meta": {},
+      "id": "user:d923LV5CH51a2iUtLt41L",
+      "typeName": "user"
+    },
+    "shape:s_gyZYx34-ocZwEl3aF6W": {
+      "x": -457.47087378640776,
+      "y": -915.2427184466019,
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {},
+      "id": "shape:s_gyZYx34-ocZwEl3aF6W",
+      "type": "image",
+      "props": {
+        "w": 1536,
+        "h": 2736,
+        "assetId": "asset:-1496435381",
+        "playing": true,
+        "url": "",
+        "crop": null,
+        "flipX": false,
+        "flipY": false,
+        "altText": ""
+      },
+      "parentId": "page:page",
+      "index": "a1qyBDdV",
+      "typeName": "shape"
+    },
+    "asset:-1496435381": {
+      "id": "asset:-1496435381",
+      "type": "image",
+      "typeName": "asset",
+      "props": {
+        "name": "asset--1496435381.png",
+        "src": "/page-assets/page/asset--1496435381.png",
+        "w": 1536,
+        "h": 2736,
+        "fileSize": 6767354,
+        "mimeType": "image/png",
+        "isAnimated": false
+      },
+      "meta": {}
+    },
+    "page:page": {
+      "meta": {},
+      "id": "page:page",
+      "name": "Page 1",
+      "index": "a1",
+      "typeName": "page"
+    },
+    "document:document": {
+      "gridSize": 10,
+      "name": "",
+      "meta": {},
+      "id": "document:document",
+      "typeName": "document"
+    },
+    "asset:annotation-edit-20260819-073752": {
+      "id": "asset:annotation-edit-20260819-073752",
+      "typeName": "asset",
+      "type": "image",
+      "props": {
+        "name": "annotation-edit-20260819-073752.png",
+        "src": "/page-assets/page/annotation-edit-20260819-073752.png",
+        "w": 1536,
+        "h": 2736,
+        "fileSize": 5424506,
+        "mimeType": "image/png",
+        "isAnimated": false
+      },
+      "meta": {}
+    },
+    "shape:annotation-edit-20260819-073752": {
+      "x": 1118.5291262135922,
+      "y": -915.2427184466019,
+      "rotation": 0,
+      "isLocked": false,
+      "opacity": 1,
+      "meta": {
+        "cowartGeneratedFromAnnotationEdit": true,
+        "cowartAnnotationSourceShapeId": "shape:s_gyZYx34-ocZwEl3aF6W",
+        "cowartAnnotationScreenshot": "annotation-edit-20260819T073752Z.png"
+      },
+      "id": "shape:annotation-edit-20260819-073752",
+      "type": "image",
+      "props": {
+        "w": 1536,
+        "h": 2736,
+        "assetId": "asset:annotation-edit-20260819-073752",
+        "playing": true,
+        "url": "",
+        "crop": null,
+        "flipX": false,
+        "flipY": false,
+        "altText": "按两处 Cowart 标注增加美人痣的修订图"
+      },
+      "parentId": "page:page",
+      "index": "a6",
+      "typeName": "shape"
+    }
+  }
+}

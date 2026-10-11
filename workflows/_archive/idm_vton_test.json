@@ -1,0 +1,72 @@
+{
+  "1": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "vton_human.jpg",
+      "upload": "image"
+    }
+  },
+  "2": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "vton_garment.jpg",
+      "upload": "image"
+    }
+  },
+  "3": {
+    "class_type": "DensePosePreprocessor",
+    "inputs": {
+      "image": ["1", 0],
+      "model": "densepose_r50_fpn_dl.torchscript",
+      "cmap": "Viridis (MagicAnimate)",
+      "resolution": 512
+    }
+  },
+  "4": {
+    "class_type": "FaceProtectMask",
+    "inputs": {
+      "image": ["1", 0],
+      "clothing_labels": "4,7",
+      "protect_labels": "2,3,11",
+      "protect_expand": 10,
+      "feather": 5
+    }
+  },
+  "5": {
+    "class_type": "PipelineLoader",
+    "inputs": {
+      "weight_dtype": "float16"
+    }
+  },
+  "8": {
+    "class_type": "Convert Masks to Images",
+    "inputs": {
+      "masks": ["4", 0]
+    }
+  },
+  "6": {
+    "class_type": "IDM-VTON",
+    "inputs": {
+      "pipeline": ["5", 0],
+      "human_img": ["1", 0],
+      "pose_img": ["3", 0],
+      "mask_img": ["8", 0],
+      "garment_img": ["2", 0],
+      "garment_description": "a pink silk dress",
+      "negative_prompt": "low quality, blurry, distorted, deformed",
+      "width": 384,
+      "height": 512,
+      "num_inference_steps": 20,
+      "guidance_scale": 2.0,
+      "strength": 1.0,
+      "seed": 42
+    }
+  },
+  "7": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "idm_vton_output",
+      "images": ["6", 0]
+    }
+  }
+}

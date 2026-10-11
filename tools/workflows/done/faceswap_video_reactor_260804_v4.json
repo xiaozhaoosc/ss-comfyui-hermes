@@ -1,0 +1,507 @@
+{
+  "id": "f98dd259-268f-4e4b-927a-aa9969adf233-v4",
+  "revision": 0,
+  "last_node_id": 14,
+  "last_link_id": 6,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "VHS_LoadVideo",
+      "pos": [
+        -110,
+        -260
+      ],
+      "size": [
+        315,
+        848
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            1
+          ]
+        },
+        {
+          "name": "frame_count",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "slot_index": 2,
+          "links": [
+            6
+          ]
+        },
+        {
+          "name": "video_info",
+          "type": "VHS_VIDEOINFO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_LoadVideo"
+      },
+      "widgets_values": {
+        "video": "20260518_122327_各位军师，遇到这种场景该如何应对？.mp4",
+        "force_rate": 0,
+        "custom_width": 960,
+        "custom_height": 540,
+        "frame_load_cap": 0,
+        "skip_first_frames": 0,
+        "select_every_nth": 1,
+        "format": "AnimateDiff",
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "20260518_122327_各位军师，遇到这种场景该如何应对？.mp4",
+            "type": "input",
+            "format": "video/mp4",
+            "force_rate": 0,
+            "custom_width": 960,
+            "custom_height": 540,
+            "frame_load_cap": 0,
+            "skip_first_frames": 0,
+            "select_every_nth": 1
+          }
+        }
+      }
+    },
+    {
+      "id": 2,
+      "type": "LoadImage",
+      "pos": [
+        -720,
+        -120
+      ],
+      "size": [
+        315,
+        314
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            2
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "源图 A（换到索引 0 的人脸）",
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "ref_2_front.png",
+        "image"
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 3,
+      "type": "LoadImage",
+      "pos": [
+        -720,
+        220
+      ],
+      "size": [
+        315,
+        314
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            4
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "源图 B（换到索引 1 的人脸）",
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "ref_3_side.png",
+        "image"
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 10,
+      "type": "ReActorFaceSwap",
+      "pos": [
+        60,
+        100
+      ],
+      "size": [
+        320,
+        400
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "input_image",
+          "type": "IMAGE",
+          "link": 1
+        },
+        {
+          "name": "source_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 2
+        },
+        {
+          "name": "face_model",
+          "shape": 7,
+          "type": "FACE_MODEL",
+          "link": null
+        },
+        {
+          "name": "face_boost",
+          "shape": 7,
+          "type": "FACE_BOOST",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SWAPPED_IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            3
+          ]
+        },
+        {
+          "name": "FACE_MODEL",
+          "type": "FACE_MODEL",
+          "links": null
+        },
+        {
+          "name": "ORIGINAL_IMAGE",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "title": "ReActor #1 换索引 0 的人脸 ← 源图 A",
+      "properties": {
+        "Node name for S&R": "ReActorFaceSwap"
+      },
+      "widgets_values": [
+        true,
+        "inswapper_128.onnx",
+        "retinaface_resnet50",
+        "GFPGANv1.4.pth",
+        0.4,
+        0.5,
+        "no",
+        "no",
+        "0",
+        "0",
+        1
+      ]
+    },
+    {
+      "id": 14,
+      "type": "ReActorFaceSwap",
+      "pos": [
+        60,
+        540
+      ],
+      "size": [
+        320,
+        400
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "input_image",
+          "type": "IMAGE",
+          "link": 3
+        },
+        {
+          "name": "source_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 4
+        },
+        {
+          "name": "face_model",
+          "shape": 7,
+          "type": "FACE_MODEL",
+          "link": null
+        },
+        {
+          "name": "face_boost",
+          "shape": 7,
+          "type": "FACE_BOOST",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SWAPPED_IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            5
+          ]
+        },
+        {
+          "name": "FACE_MODEL",
+          "type": "FACE_MODEL",
+          "links": null
+        },
+        {
+          "name": "ORIGINAL_IMAGE",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "title": "ReActor #2 换索引 1 的人脸 ← 源图 B",
+      "properties": {
+        "Node name for S&R": "ReActorFaceSwap"
+      },
+      "widgets_values": [
+        true,
+        "inswapper_128.onnx",
+        "retinaface_resnet50",
+        "GFPGANv1.4.pth",
+        0.4,
+        0.5,
+        "no",
+        "no",
+        "1",
+        "0",
+        1
+      ]
+    },
+    {
+      "id": 11,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        450,
+        100
+      ],
+      "size": [
+        315,
+        872
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 5
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 6
+        },
+        {
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 30,
+        "loop_count": 0,
+        "filename_prefix": "faceswap_video_v4",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 19,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "faceswap_video_v4_00001-audio.mp4",
+            "subfolder": "",
+            "type": "output",
+            "format": "video/h264-mp4",
+            "frame_rate": 30,
+            "workflow": "faceswap_video_v4_00001.png",
+            "fullpath": "D:\\ai_projects\\ComfyUI\\output\\faceswap_video_v4_00001-audio.mp4"
+          }
+        }
+      }
+    },
+    {
+      "id": 13,
+      "type": "Note",
+      "pos": [
+        820,
+        -200
+      ],
+      "size": [
+        420,
+        460
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "【V4 多源多目标换脸 使用说明】\n\n本工作流支持把视频里 2 张不同的人脸，\n分别换成 2 张不同的源图。\n\n========================================\n架构原理\n========================================\n\n视频帧\n  ↓\nReActor #1 (input_faces_index=\"0\")\n  - 把视频里索引 0 的人脸换成【源图 A】\n  - 其他人脸不动\n  ↓ 输出\nReActor #2 (input_faces_index=\"1\")\n  - 在 #1 的结果上，把索引 1 的人脸换成【源图 B】\n  - 其他人脸不动\n  ↓ 输出\nVHS_VideoCombine 保存\n\n========================================\n核心参数（两个 ReActor 节点的 widget）\n========================================\n\nReActor #1（换索引 0）：\n  input_faces_index = \"0\"  ← 改这里指定第几张脸\n  source_faces_index = \"0\" ← 源图 A 里的人脸索引，单人脸保持 0\n\nReActor #2（换索引 1）：\n  input_faces_index = \"1\"  ← 改这里指定第几张脸\n  source_faces_index = \"0\" ← 源图 B 里的人脸索引，单人脸保持 0\n\n========================================\ninput_faces_index 填写规则\n========================================\n\n人脸按面积从大到小排序：\n  \"0\"      第 1 张脸（画面中最大的）\n  \"1\"      第 2 张脸\n  \"2\"      第 3 张脸\n  \"0,1\"    第 1 和第 2 张脸（同一个 ReActor 换多张为同一源）\n\n========================================\n使用前必读：先用预览工具确定索引\n========================================\n\n强烈建议先用 face_index_preview_260804.json\n预览视频里的人脸顺序，确认：\n  - 索引 0 对应哪个人（位置 + 长相）\n  - 索引 1 对应哪个人\n\n再回来修改两个 ReActor 的 input_faces_index。\n\n注意：ReActor 按面积排序，预览工具按置信度排序，\n两者可能不同！最终以 ReActor 的 console_log_level=2\n控制台输出为准。\n\n========================================\n★ 视频只有 1 张脸时如何处理\n========================================\n\nReActor 有越界保护（代码 reactor_swapper.py）：\n  if face_index >= len(faces_sorted):\n      return None  ← 静默跳过，不报错\n\n所以 V4 默认配置在只有 1 张脸时不会报错，\nReActor #2 会跳过执行，输出 = ReActor #1 的结果。\n\n推荐 3 种处理方式（按推荐度排序）：\n\n【方案 1 · 最干净 · 推荐】\n  把 ReActor #2 节点的 enabled 改成 false\n  → 节点整体跳过，直接传 #1 的结果给 VideoCombine\n  → 最节省资源（不重复人脸检测）\n\n【方案 2 · 最省事】\n  什么都不用改，直接运行\n  → #2 会跑一遍检测后跳过，多花几秒\n  → 控制台会有 out of bounds 提示（正常现象）\n\n【方案 3 · 最轻量】\n  直接加载 V3 工作流（faceswap_video_reactor_260804_v3.json）\n  → V3 只有 1 个 ReActor，结构更简单\n  → 单脸场景 V4 退化为 V3\n\n========================================\n调整建议（多脸场景）\n========================================\n\n1. 源图建议用清晰正脸照（像素 > 512，无遮挡）\n2. 如果源图里有多张脸，把 source_faces_index 改成\n   对应索引（如源图 A 里要用的脸是第 2 张，改成 \"1\"）\n3. 想换更多脸：复制 ReActor 节点，调整 input_faces_index\n   串联到 ReActor #2 之后即可\n\n========================================\n输出\n========================================\n\n输出文件：output\\faceswap_video_v4_00001-audio.mp4\n不会覆盖 V2/V3 的历史结果。"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      0,
+      10,
+      0,
+      "IMAGE"
+    ],
+    [
+      2,
+      2,
+      0,
+      10,
+      1,
+      "IMAGE"
+    ],
+    [
+      3,
+      10,
+      0,
+      14,
+      0,
+      "IMAGE"
+    ],
+    [
+      4,
+      3,
+      0,
+      14,
+      1,
+      "IMAGE"
+    ],
+    [
+      5,
+      14,
+      0,
+      11,
+      0,
+      "IMAGE"
+    ],
+    [
+      6,
+      1,
+      2,
+      11,
+      1,
+      "VHS_AUDIO"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "ReActor 多源多目标换脸 V4 (2 源 → 2 目标)",
+      "bounding": [
+        -730,
+        -260,
+        1620,
+        1400
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.6,
+      "offset": [
+        500,
+        400
+      ]
+    },
+    "frontendVersion": "1.44.19",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}

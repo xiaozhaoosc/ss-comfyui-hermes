@@ -1,0 +1,40 @@
+=== probe_dll 00:11:59 ===
+python=3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]
+cv2 dir=C:\Users\kenzhao\anaconda3\Lib\site-packages\cv2
+--- T1: only cv2, read all frames ---
+cv2 4.13.0 from C:\Users\kenzhao\anaconda3\Lib\site-packages\cv2
+T1 frames=73 OK
+--- T2: load onnxruntime, create RetinaFace session, no inference ---
+ort 1.24.4 providers=['DmlExecutionProvider', 'CPUExecutionProvider']
+T2 session created OK
+--- T3: 5 inferences ---
+  T3 i=0 n=1
+  T3 i=1 n=1
+  T3 i=2 n=1
+  T3 i=3 n=1
+  T3 i=4 n=1
+T3 OK
+--- T4: import torch, then 20 inferences ---
+torch 2.9.1+cu130 threads=20
+  T4 i=0 n=1
+  T4 i=1 n=1
+  T4 i=2 n=1
+  T4 i=3 n=1
+  T4 i=4 n=1
+  T4 i=5 n=1
+  T4 i=6 n=1
+  T4 i=7 n=1
+  T4 i=8 n=1
+  T4 i=9 n=1
+  T4 i=10 n=1
+  T4 i=11 n=1
+  T4 i=12 n=1
+  T4 i=13 n=1
+  T4 i=14 n=1
+  T4 i=15 n=1
+  T4 i=16 n=1
+  T4 i=17 n=1
+  T4 i=18 n=1
+  T4 i=19 n=1
+T4 OK
+=== probe_dll done ===

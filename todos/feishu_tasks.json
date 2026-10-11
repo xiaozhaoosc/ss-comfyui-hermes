@@ -1,0 +1,16 @@
+[
+  {
+    "id": "TASK-1003-090416",
+    "content": "生成一张古风旗袍写真生成一张古风旗袍写真",
+    "sender": "ou_46406cc706fc254dd6e2c04a7a7ceb0b",
+    "created_at": "2026-10-03 09:04:16",
+    "status": "QUEUED"
+  },
+  {
+    "id": "TASK-1003-090333",
+    "content": "查看当前的工作空间，comfyui现在有进行中的任务吗？",
+    "sender": "ou_46406cc706fc254dd6e2c04a7a7ceb0b",
+    "created_at": "2026-10-03 09:03:33",
+    "status": "QUEUED"
+  }
+]

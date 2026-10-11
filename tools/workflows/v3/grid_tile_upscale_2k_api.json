@@ -1,0 +1,105 @@
+{
+  "1": {
+    "class_type": "CheckpointLoaderSimple",
+    "inputs": {
+      "ckpt_name": "v1-5-pruned-emaonly.safetensors"
+    }
+  },
+  "2": {
+    "class_type": "ControlNetLoader",
+    "inputs": {
+      "control_net_name": "control_v11f1e_sd15_tile.pth"
+    }
+  },
+  "3": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "temp_grid_crops/placeholder.png"
+    }
+  },
+  "4": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "masterpiece, best quality, ultra highres, sharp focus, detailed skin texture, delicate eyes, natural lighting",
+      "clip": ["1", 1]
+    }
+  },
+  "5": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "blurry, low quality, artifacts, watermark, distorted, ugly, bad anatomy, deformed eyes, extra limbs",
+      "clip": ["1", 1]
+    }
+  },
+  "6": {
+    "class_type": "ControlNetApplyAdvanced",
+    "inputs": {
+      "strength": 0.85,
+      "start_percent": 0.0,
+      "end_percent": 1.0,
+      "positive": ["4", 0],
+      "negative": ["5", 0],
+      "control_net": ["2", 0],
+      "image": ["3", 0]
+    }
+  },
+  "7": {
+    "class_type": "VAEEncode",
+    "inputs": {
+      "pixels": ["3", 0],
+      "vae": ["1", 2]
+    }
+  },
+  "8": {
+    "class_type": "KSampler",
+    "inputs": {
+      "seed": 123456,
+      "steps": 20,
+      "cfg": 7.0,
+      "sampler_name": "euler_ancestral",
+      "scheduler": "karras",
+      "denoise": 0.32,
+      "model": ["1", 0],
+      "positive": ["6", 0],
+      "negative": ["6", 1],
+      "latent_image": ["7", 0]
+    }
+  },
+  "9": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": ["8", 0],
+      "vae": ["1", 2]
+    }
+  },
+  "10": {
+    "class_type": "UpscaleModelLoader",
+    "inputs": {
+      "model_name": "RealESRGAN_x4plus.pth"
+    }
+  },
+  "11": {
+    "class_type": "ImageUpscaleWithModel",
+    "inputs": {
+      "upscale_model": ["10", 0],
+      "image": ["9", 0]
+    }
+  },
+  "12": {
+    "class_type": "ImageScale",
+    "inputs": {
+      "upscale_method": "lanczos",
+      "width": 1440,
+      "height": 2560,
+      "crop": "disabled",
+      "image": ["11", 0]
+    }
+  },
+  "13": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "2026-10-08/upscaled/output_2k",
+      "images": ["12", 0]
+    }
+  }
+}

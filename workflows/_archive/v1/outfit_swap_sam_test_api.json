@@ -1,0 +1,176 @@
+{
+  "1": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "sample_outfit.jpg"
+    }
+  },
+  "3": {
+    "class_type": "SAMLoader",
+    "inputs": {
+      "model_name": "sam_vit_b_01ec64.pth",
+      "device_mode": "AUTO"
+    }
+  },
+  "4": {
+    "class_type": "SAM Parameters",
+    "inputs": {
+      "points": "[960, 400]; [960, 500]; [960, 600]; [850, 400]; [1070, 400]; [850, 550]; [1070, 550]; [960, 700]",
+      "labels": "[1, 1, 1, 1, 1, 1, 1, 1]"
+    }
+  },
+  "2": {
+    "class_type": "SAM Image Mask",
+    "inputs": {
+      "sam_model": [
+        "3",
+        0
+      ],
+      "sam_parameters": [
+        "4",
+        0
+      ],
+      "image": [
+        "1",
+        0
+      ]
+    }
+  },
+  "5": {
+    "class_type": "GrowMask",
+    "inputs": {
+      "mask": [
+        "2",
+        1
+      ],
+      "expand": 20,
+      "tapered_corners": true
+    }
+  },
+  "6": {
+    "class_type": "ImpactGaussianBlurMask",
+    "inputs": {
+      "mask": [
+        "5",
+        0
+      ],
+      "kernel_size": 11,
+      "sigma": 5.0
+    }
+  },
+  "7": {
+    "class_type": "CheckpointLoaderSimple",
+    "inputs": {
+      "ckpt_name": "sd_xl_base_1.0.safetensors"
+    }
+  },
+  "8": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "beautiful woman wearing elegant red evening dress, intricate embroidery, silk fabric, studio lighting, high fashion photography, 8k, sharp focus",
+      "clip": [
+        "7",
+        1
+      ]
+    }
+  },
+  "9": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "ugly, blurry, low quality, deformed, disfigured, watermark, text, logo, bad anatomy, extra limbs",
+      "clip": [
+        "7",
+        1
+      ]
+    }
+  },
+  "11": {
+    "class_type": "VAEEncodeForInpaint",
+    "inputs": {
+      "pixels": [
+        "1",
+        0
+      ],
+      "vae": [
+        "7",
+        2
+      ],
+      "mask": [
+        "6",
+        0
+      ],
+      "grow_mask_by": 8
+    }
+  },
+  "12": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "7",
+        0
+      ],
+      "positive": [
+        "8",
+        0
+      ],
+      "negative": [
+        "9",
+        0
+      ],
+      "latent_image": [
+        "11",
+        0
+      ],
+      "seed": 42,
+      "control_after_generate": "fixed",
+      "steps": 25,
+      "cfg": 7.5,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 0.9
+    }
+  },
+  "13": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "12",
+        0
+      ],
+      "vae": [
+        "7",
+        2
+      ]
+    }
+  },
+  "14": {
+    "class_type": "ImageCompositeMasked",
+    "inputs": {
+      "destination": [
+        "1",
+        0
+      ],
+      "source": [
+        "13",
+        0
+      ],
+      "mask": [
+        "6",
+        0
+      ],
+      "x": 0,
+      "y": 0,
+      "resize_source": false
+    }
+  },
+  "15": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "14",
+        0
+      ],
+      "filename_prefix": "outfit_swap_sam"
+    }
+  }
+}

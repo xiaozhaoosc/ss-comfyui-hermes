@@ -1,0 +1,37 @@
+now=2026-09-28 12:35:43
+ComfyUI: DEAD  URLError(ConnectionRefusedError(10061, '由于目标计算机积极拒绝，无法连接。', None, 10061, None))
+
+=== h3_guard mp4 ===
+  h3v5_noswblend_00001_.mp4                     247263  09-23 00:07
+  h3v5_00001_.mp4                               247263  09-23 00:07
+  h3v5_pass1baseline_00001_.mp4                 258067  09-23 00:02
+  t2_lock_noswblend_00001_.mp4                  121154  09-22 23:47
+  t_lock_00001_.mp4                              29876  09-22 23:34
+  t_lock_noswblend_00001_.mp4                    29876  09-22 23:34
+  t_nolow_00001_.mp4                             35793  09-22 23:25
+  t_nolow_noswblend_00001_.mp4                   35793  09-22 23:25
+  t_nolow_pass1baseline_00001_.mp4               35797  09-22 23:23
+  h3_full_00001_.mp4                             82917  09-22 23:17
+  h3_full_noswblend_00001_.mp4                   82917  09-22 23:16
+  h3_full_pass1baseline_00001_.mp4               82923  09-22 23:12
+
+=== _run_base.log 尾部 ===
+==============================================================================
+Profile: base  |  瀵圭収缁勫熀绾匡紙澶嶅埢鐜扮綉 C3锛?
+==============================================================================
+宸ヤ綔娴佸凡淇濆瓨: D:\ai_projects\ComfyUI\workflows\v5\h3_guard_v5_base_api.json  (24 鑺傜偣)
+[鈭歖 宸叉彁浜? prompt_id = 037cac3e-7566-4833-bd2c-0d44ec42b8c9
+    ... 宸茶繍琛?0s
+    ... 宸茶繍琛?30s
+    ... 宸茶繍琛?60s
+    ... 宸茶繍琛?90s
+    ... 宸茶繍琛?120s
+    ... 宸茶繍琛?150s
+    ... 宸茶繍琛?181s
+    ... 宸茶繍琛?211s
+
+[鈭歖 瀹屾垚锛岃€楁椂 240.7s
+    浜х墿: D:\ai_projects\ComfyUI\output\2026-09-23_wb\h3_guard\h3v5base_noswblend_00001_.mp4
+    浜х墿: D:\ai_projects\ComfyUI\output\2026-09-23_wb\h3_guard\h3v5base_00001_.mp4
+杩愯鏃ュ織: D:\ai_projects\ComfyUI\output\2026-09-23_wb\h3_guard\_run_base.json
+

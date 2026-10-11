@@ -1,0 +1,540 @@
+{
+  "id": "00000000-0000-0000-0000-000000000000",
+  "revision": 0,
+  "last_node_id": 901,
+  "last_link_id": 28,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "UNETLoader",
+      "pos": [40, 40],
+      "size": [400, 98],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        { "name": "MODEL", "type": "MODEL", "links": [1], "slot_index": 0 }
+      ],
+      "title": "1. Wan2.2 Animate 14B fp8 UNet",
+      "properties": { "Node name for S&R": "UNETLoader" },
+      "widgets_values": [
+        "Wan2_2-Animate-14B_fp8_e4m3fn_scaled_KJ.safetensors",
+        "default"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "CLIPLoader",
+      "pos": [40, 178],
+      "size": [400, 130],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        { "name": "CLIP", "type": "CLIP", "links": [4, 5], "slot_index": 0 }
+      ],
+      "title": "2. 文本编码器 umt5_xxl fp8",
+      "properties": { "Node name for S&R": "CLIPLoader" },
+      "widgets_values": [
+        "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+        "wan",
+        "default"
+      ]
+    },
+    {
+      "id": 3,
+      "type": "VAELoader",
+      "pos": [40, 348],
+      "size": [400, 98],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        { "name": "VAE", "type": "VAE", "links": [14, 24], "slot_index": 0 }
+      ],
+      "title": "3. VAE (wan_2.1_vae)",
+      "properties": { "Node name for S&R": "VAELoader" },
+      "widgets_values": ["wan_2.1_vae.safetensors"]
+    },
+    {
+      "id": 4,
+      "type": "CLIPVisionLoader",
+      "pos": [40, 486],
+      "size": [400, 98],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        { "name": "CLIP_VISION", "type": "CLIP_VISION", "links": [6], "slot_index": 0 }
+      ],
+      "title": "4. CLIP Vision (clip_vision_h)",
+      "properties": { "Node name for S&R": "CLIPVisionLoader" },
+      "widgets_values": ["clip_vision_h.safetensors"]
+    },
+    {
+      "id": 5,
+      "type": "LoraLoaderModelOnly",
+      "pos": [520, 40],
+      "size": [400, 130],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        { "name": "model", "type": "MODEL", "link": 1 }
+      ],
+      "outputs": [
+        { "name": "MODEL", "type": "MODEL", "links": [2], "slot_index": 0 }
+      ],
+      "title": "5. LoRA lightx2v 4步蒸馏 (1.0)",
+      "properties": { "Node name for S&R": "LoraLoaderModelOnly" },
+      "widgets_values": [
+        "lightx2v_I2V_14B_480p_cfg_step_distill_rank64_bf16.safetensors",
+        1.0
+      ]
+    },
+    {
+      "id": 6,
+      "type": "LoraLoaderModelOnly",
+      "pos": [520, 208],
+      "size": [400, 130],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        { "name": "model", "type": "MODEL", "link": 2 }
+      ],
+      "outputs": [
+        { "name": "MODEL", "type": "MODEL", "links": [3], "slot_index": 0 }
+      ],
+      "title": "6. LoRA WanAnimate relight (1.0)",
+      "properties": { "Node name for S&R": "LoraLoaderModelOnly" },
+      "widgets_values": [
+        "WanAnimate_relight_lora_fp16.safetensors",
+        1.0
+      ]
+    },
+    {
+      "id": 7,
+      "type": "ModelSamplingSD3",
+      "pos": [520, 376],
+      "size": [400, 98],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        { "name": "model", "type": "MODEL", "link": 3 }
+      ],
+      "outputs": [
+        { "name": "MODEL", "type": "MODEL", "links": [19], "slot_index": 0 }
+      ],
+      "title": "7. ModelSamplingSD3 (shift 8.0)",
+      "properties": { "Node name for S&R": "ModelSamplingSD3" },
+      "widgets_values": [8.0]
+    },
+    {
+      "id": 8,
+      "type": "CLIPTextEncode",
+      "pos": [40, 624],
+      "size": [400, 158],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        { "name": "clip", "type": "CLIP", "link": 4 }
+      ],
+      "outputs": [
+        { "name": "CONDITIONING", "type": "CONDITIONING", "links": [12], "slot_index": 0 }
+      ],
+      "title": "8. 正向提示词 (画面描述, 每个镜头换一段)",
+      "properties": { "Node name for S&R": "CLIPTextEncode" },
+      "widgets_values": ["The character is dancing in the room"]
+    },
+    {
+      "id": 9,
+      "type": "CLIPTextEncode",
+      "pos": [40, 822],
+      "size": [400, 158],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        { "name": "clip", "type": "CLIP", "link": 5 }
+      ],
+      "outputs": [
+        { "name": "CONDITIONING", "type": "CONDITIONING", "links": [13], "slot_index": 0 }
+      ],
+      "title": "9. 负向提示词 (固定文本, 一般不改)",
+      "properties": { "Node name for S&R": "CLIPTextEncode" },
+      "widgets_values": [
+        "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走"
+      ]
+    },
+    {
+      "id": 10,
+      "type": "LoadImage",
+      "pos": [980, 40],
+      "size": [400, 380],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        { "name": "IMAGE", "type": "IMAGE", "links": [7, 16], "slot_index": 0 },
+        { "name": "MASK", "type": "MASK", "links": null, "slot_index": 1 }
+      ],
+      "title": "10. 换装参考图 (改图在此, input/ 目录)",
+      "properties": { "Node name for S&R": "LoadImage" },
+      "widgets_values": ["ootd_multilook_poc_look1.png", "image"]
+    },
+    {
+      "id": 11,
+      "type": "CLIPVisionEncode",
+      "pos": [980, 460],
+      "size": [400, 130],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        { "name": "clip_vision", "type": "CLIP_VISION", "link": 6 },
+        { "name": "image", "type": "IMAGE", "link": 7 }
+      ],
+      "outputs": [
+        { "name": "CLIP_VISION_OUTPUT", "type": "CLIP_VISION_OUTPUT", "links": [15], "slot_index": 0 }
+      ],
+      "title": "11. CLIP Vision 编码",
+      "properties": { "Node name for S&R": "CLIPVisionEncode" },
+      "widgets_values": ["none"]
+    },
+    {
+      "id": 12,
+      "type": "LoadVideo",
+      "pos": [980, 630],
+      "size": [400, 98],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        { "name": "VIDEO", "type": "VIDEO", "links": [8], "slot_index": 0 }
+      ],
+      "title": "12. 驱动视频 (改视频在此, input/ 目录)",
+      "properties": { "Node name for S&R": "LoadVideo" },
+      "widgets_values": ["ootd_target.mp4"]
+    },
+    {
+      "id": 13,
+      "type": "GetVideoComponents",
+      "pos": [980, 772],
+      "size": [400, 130],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        { "name": "video", "type": "VIDEO", "link": 8 }
+      ],
+      "outputs": [
+        { "name": "images", "type": "IMAGE", "links": [9], "slot_index": 0 },
+        { "name": "audio", "type": "AUDIO", "links": [27], "slot_index": 1 },
+        { "name": "fps", "type": "FLOAT", "links": [26], "slot_index": 2 },
+        { "name": "bit_depth", "type": "INT", "links": null, "slot_index": 3 }
+      ],
+      "title": "13. 拆出帧 / 音频 / fps",
+      "properties": { "Node name for S&R": "GetVideoComponents" },
+      "widgets_values": []
+    },
+    {
+      "id": 14,
+      "type": "ImageScale",
+      "pos": [980, 946],
+      "size": [400, 158],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        { "name": "image", "type": "IMAGE", "link": 9 }
+      ],
+      "outputs": [
+        { "name": "IMAGE", "type": "IMAGE", "links": [10, 11], "slot_index": 0 }
+      ],
+      "title": "14. 缩放驱动帧 → 生成分辨率 (480×832, 改尺寸在此)",
+      "properties": { "Node name for S&R": "ImageScale" },
+      "widgets_values": ["lanczos", 480, 832, "center"]
+    },
+    {
+      "id": 15,
+      "type": "DWPreprocessor",
+      "pos": [980, 1148],
+      "size": [400, 298],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        { "name": "image", "type": "IMAGE", "link": 10 }
+      ],
+      "outputs": [
+        { "name": "IMAGE", "type": "IMAGE", "links": [17], "slot_index": 0 },
+        { "name": "POSE_KEYPOINT", "type": "POSE_KEYPOINT", "links": null, "slot_index": 1 }
+      ],
+      "title": "15. DWPreprocessor 仅脸部 → face_video (分辨率 512)",
+      "properties": { "Node name for S&R": "DWPreprocessor" },
+      "widgets_values": [
+        "disable",
+        "disable",
+        "enable",
+        512,
+        "yolox_l.onnx",
+        "dw-ll_ucoco_384_bs5.torchscript.pt",
+        "disable"
+      ]
+    },
+    {
+      "id": 16,
+      "type": "DWPreprocessor",
+      "pos": [980, 1490],
+      "size": [400, 298],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        { "name": "image", "type": "IMAGE", "link": 11 }
+      ],
+      "outputs": [
+        { "name": "IMAGE", "type": "IMAGE", "links": [18], "slot_index": 0 },
+        { "name": "POSE_KEYPOINT", "type": "POSE_KEYPOINT", "links": null, "slot_index": 1 }
+      ],
+      "title": "16. DWPreprocessor 身体+双手 → pose_video (分辨率 512)",
+      "properties": { "Node name for S&R": "DWPreprocessor" },
+      "widgets_values": [
+        "enable",
+        "enable",
+        "disable",
+        512,
+        "yolox_l.onnx",
+        "dw-ll_ucoco_384_bs5.torchscript.pt",
+        "disable"
+      ]
+    },
+    {
+      "id": 17,
+      "type": "WanAnimateToVideo",
+      "pos": [1440, 40],
+      "size": [400, 468],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        { "name": "positive", "type": "CONDITIONING", "link": 12 },
+        { "name": "negative", "type": "CONDITIONING", "link": 13 },
+        { "name": "vae", "type": "VAE", "link": 14 },
+        { "name": "clip_vision_output", "type": "CLIP_VISION_OUTPUT", "link": 15 },
+        { "name": "reference_image", "type": "IMAGE", "link": 16 },
+        { "name": "face_video", "type": "IMAGE", "link": 17 },
+        { "name": "pose_video", "type": "IMAGE", "link": 18 },
+        { "name": "background_video", "type": "IMAGE", "link": null },
+        { "name": "character_mask", "type": "MASK", "link": null },
+        { "name": "continue_motion", "type": "IMAGE", "link": null }
+      ],
+      "outputs": [
+        { "name": "positive", "type": "CONDITIONING", "links": [20], "slot_index": 0 },
+        { "name": "negative", "type": "CONDITIONING", "links": [21], "slot_index": 1 },
+        { "name": "latent", "type": "LATENT", "links": [22], "slot_index": 2 },
+        { "name": "trim_latent", "type": "INT", "links": null, "slot_index": 3 },
+        { "name": "trim_image", "type": "INT", "links": null, "slot_index": 4 },
+        { "name": "video_frame_offset", "type": "INT", "links": null, "slot_index": 5 }
+      ],
+      "title": "17. WanAnimateToVideo (480×832, length 49; 改块长/frame_offset 在此)",
+      "properties": { "Node name for S&R": "WanAnimateToVideo" },
+      "widgets_values": [480, 832, 49, 1, 5, 0]
+    },
+    {
+      "id": 18,
+      "type": "KSampler",
+      "pos": [1440, 548],
+      "size": [400, 262],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        { "name": "model", "type": "MODEL", "link": 19 },
+        { "name": "positive", "type": "CONDITIONING", "link": 20 },
+        { "name": "negative", "type": "CONDITIONING", "link": 21 },
+        { "name": "latent_image", "type": "LATENT", "link": 22 }
+      ],
+      "outputs": [
+        { "name": "LATENT", "type": "LATENT", "links": [23], "slot_index": 0 }
+      ],
+      "title": "18. KSampler (4步 / CFG 1.0 / euler simple / denoise 1.0)",
+      "properties": { "Node name for S&R": "KSampler" },
+      "widgets_values": [20261003, "fixed", 4, 1.0, "euler", "simple", 1.0]
+    },
+    {
+      "id": 19,
+      "type": "VAEDecode",
+      "pos": [1440, 850],
+      "size": [400, 98],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        { "name": "samples", "type": "LATENT", "link": 23 },
+        { "name": "vae", "type": "VAE", "link": 24 }
+      ],
+      "outputs": [
+        { "name": "IMAGE", "type": "IMAGE", "links": [25], "slot_index": 0 }
+      ],
+      "title": "19. VAE 解码",
+      "properties": { "Node name for S&R": "VAEDecode" },
+      "widgets_values": []
+    },
+    {
+      "id": 20,
+      "type": "CreateVideo",
+      "pos": [1440, 988],
+      "size": [400, 158],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        { "name": "images", "type": "IMAGE", "link": 25 },
+        { "name": "fps", "type": "FLOAT", "widget": { "name": "fps" }, "link": 26 },
+        { "name": "audio", "type": "AUDIO", "link": 27 }
+      ],
+      "outputs": [
+        { "name": "VIDEO", "type": "VIDEO", "links": [28], "slot_index": 0 }
+      ],
+      "title": "20. 合成视频 (fps/音频继承驱动视频)",
+      "properties": { "Node name for S&R": "CreateVideo" },
+      "widgets_values": [30.0, 8]
+    },
+    {
+      "id": 21,
+      "type": "SaveVideo",
+      "pos": [1440, 1186],
+      "size": [400, 158],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        { "name": "video", "type": "VIDEO", "link": 28 }
+      ],
+      "outputs": [
+        { "name": "video", "type": "VIDEO", "links": null, "slot_index": 0 }
+      ],
+      "title": "21. 保存 mp4 (改日期/项目名在此)",
+      "properties": { "Node name for S&R": "SaveVideo" },
+      "widgets_values": ["2026-10-03/wan22_animate/wan22_animate_9x16", "auto", "auto"]
+    },
+    {
+      "id": 900,
+      "type": "Note",
+      "pos": [1920, 40],
+      "size": [520, 640],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "手动执行说明 (Wan2.2 Animate 9:16 · Move 模式)",
+      "properties": { "Node name for S&R": "Note" },
+      "widgets_values": [
+        "Wan2.2 Animate 9:16 · Move（动作迁移）模式 · 手动执行说明\n\n【怎么用】\n1) 换参考图：双击「10. 换装参考图」，在 LoadImage 里选一张角色图（已放进 input/ 的图才能选，默认 ootd_multilook_poc_look1.png）。它决定“人物长什么样 / 穿什么”。\n2) 换驱动视频：双击「12. 驱动视频」，在 LoadVideo 里选一段表演视频（默认 ootd_target.mp4，1080×1920 / 30fps / AAC）。它决定“做什么动作”，其 fps 与音轨会被继承。\n3) 改尺寸/块长：「14. 缩放驱动帧」的 width×height（默认 480×832，须为 16 的倍数）；「17. WanAnimateToVideo」的 width/height/length（默认 480/832/49，length 须满足 length % 4 == 1，可用 9/17/25/33/41/49）。\n4) 改种子：【18. KSampler】的 seed（默认 20261003）。\n5) 改输出名：「21. 保存 mp4」的 filename_prefix（默认 2026-10-03/wan22_animate/wan22_animate_9x16，按当天日期改）。\n6) 点 Queue 执行。产物输出到 output/2026-10-03/wan22_animate/…_*.mp4。\n\n【说明】\n· Move 模式：把参考角色按驱动视频的骨架动作重演，并保留驱动视频背景；不使用 SAM2，无需 background_video / character_mask。\n· DWPreprocessor 预处理分辨率固定 512（与生成分辨率解耦）；bbox=yolox_l.onnx，pose=dw-ll_ucoco_384_bs5.torchscript.pt。「15」出 face_video（仅脸），「16」出 pose_video（身体+双手）。\n· 16GB 单实例：480×832×49 单段生成约 12 分钟（4 步 lightx2v + shift 8.0 + CFG 1.0）。渲染期间勿并行其它大显存任务。"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 901,
+      "type": "Note",
+      "pos": [1920, 720],
+      "size": [520, 560],
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "分块续接说明 (每次只渲 49 帧一段)",
+      "properties": { "Node name for S&R": "Note" },
+      "widgets_values": [
+        "【一次只渲 49 帧一段，如何接着渲下一段】\n\n本工作流一次只生成一段（length=49 帧，16fps 下约 3.06s；实测会输出 53 帧）。要渲染更长的驱动视频，请“分段渲染、按 video_frame_offset 递进”：\n\n1) 第 1 段：video_frame_offset = 0（默认），输出名 …_seg0，Queue。\n2) 第 2 段：把「17. WanAnimateToVideo」的 video_frame_offset 改为 49，输出名改为 …_seg1，其余参数不动，再 Queue。\n3) 之后每段 offset 依次 +49（49 / 98 / 147 …），直到覆盖整段驱动视频。\n4) 各段用 ffmpeg 按序拼接即得整片；注意每段比请求多 4 帧，拼接前建议按 length 裁剪，避免音画累积漂移。\n\n【进阶：自动累加 offset】\n复制一份「12→13→14→15/16→17」分块组，把上一块 WanAnimateToVideo 的 video_frame_offset 输出（槽 5）接到下一块的同名输入，即可自动累加 offset，无需手改。"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    }
+  ],
+  "links": [
+    [1, 1, 0, 5, 0, "MODEL"],
+    [2, 5, 0, 6, 0, "MODEL"],
+    [3, 6, 0, 7, 0, "MODEL"],
+    [4, 2, 0, 8, 0, "CLIP"],
+    [5, 2, 0, 9, 0, "CLIP"],
+    [6, 4, 0, 11, 0, "CLIP_VISION"],
+    [7, 10, 0, 11, 1, "IMAGE"],
+    [8, 12, 0, 13, 0, "VIDEO"],
+    [9, 13, 0, 14, 0, "IMAGE"],
+    [10, 14, 0, 15, 0, "IMAGE"],
+    [11, 14, 0, 16, 0, "IMAGE"],
+    [12, 8, 0, 17, 0, "CONDITIONING"],
+    [13, 9, 0, 17, 1, "CONDITIONING"],
+    [14, 3, 0, 17, 2, "VAE"],
+    [15, 11, 0, 17, 3, "CLIP_VISION_OUTPUT"],
+    [16, 10, 0, 17, 4, "IMAGE"],
+    [17, 15, 0, 17, 5, "IMAGE"],
+    [18, 16, 0, 17, 6, "IMAGE"],
+    [19, 7, 0, 18, 0, "MODEL"],
+    [20, 17, 0, 18, 1, "CONDITIONING"],
+    [21, 17, 1, 18, 2, "CONDITIONING"],
+    [22, 17, 2, 18, 3, "LATENT"],
+    [23, 18, 0, 19, 0, "LATENT"],
+    [24, 3, 0, 19, 1, "VAE"],
+    [25, 19, 0, 20, 0, "IMAGE"],
+    [26, 13, 2, 20, 1, "FLOAT"],
+    [27, 13, 1, 20, 2, "AUDIO"],
+    [28, 20, 0, 21, 0, "VIDEO"]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "① 加载模型",
+      "bounding": [20, 20, 920, 580],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "② 提示词与输入",
+      "bounding": [20, 610, 920, 1200],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "③ 参考图 / 驱动视频 / 预处理",
+      "bounding": [960, 20, 440, 1790],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 4,
+      "title": "④ 核心生成与出片",
+      "bounding": [1420, 20, 440, 1350],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.35,
+      "offset": [10, 10]
+    }
+  },
+  "version": 0.4
+}

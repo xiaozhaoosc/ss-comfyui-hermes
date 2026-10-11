@@ -1,0 +1,247 @@
+diff --git a/__init__.py b/__init__.py
+index 3ad0cde..5597c7e 100644
+--- a/__init__.py
++++ b/__init__.py
+@@ -1,5 +1,4 @@
+-from .install import *
+ from .src.nodes_mappings import NODE_CLASS_MAPPINGS, NODE_DISPLAY_NAME_MAPPINGS
+ 
+ 
+-__all__ = ['NODE_CLASS_MAPPINGS', 'NODE_DISPLAY_NAME_MAPPINGS']
+\ No newline at end of file
++__all__ = ['NODE_CLASS_MAPPINGS', 'NODE_DISPLAY_NAME_MAPPINGS']
+diff --git a/src/idm_vton/attentionhacked_tryon.py b/src/idm_vton/attentionhacked_tryon.py
+index 1e5123c..5fd022b 100644
+--- a/src/idm_vton/attentionhacked_tryon.py
++++ b/src/idm_vton/attentionhacked_tryon.py
+@@ -299,22 +299,22 @@ class BasicTransformerBlock(nn.Module):
+         batch_size = hidden_states.shape[0]
+ 
+         
+-        
+         if self.use_ada_layer_norm:
+-            norm_hidden_states = self.norm1(hidden_states, timestep)
++            norm_hidden_states = self.norm1(hidden_states.to(torch.float32), timestep).to(hidden_states.dtype)
+         elif self.use_ada_layer_norm_zero:
+             norm_hidden_states, gate_msa, shift_mlp, scale_mlp, gate_mlp = self.norm1(
+-                hidden_states, timestep, class_labels, hidden_dtype=hidden_states.dtype
++                hidden_states.to(torch.float32), timestep, class_labels, hidden_dtype=torch.float32
+             )
++            norm_hidden_states = norm_hidden_states.to(hidden_states.dtype)
+         elif self.use_layer_norm:
+-            norm_hidden_states = self.norm1(hidden_states)
++            norm_hidden_states = self.norm1(hidden_states.to(torch.float32)).to(hidden_states.dtype)
+         elif self.use_ada_layer_norm_continuous:
+-            norm_hidden_states = self.norm1(hidden_states, added_cond_kwargs["pooled_text_emb"])
++            norm_hidden_states = self.norm1(hidden_states.to(torch.float32), added_cond_kwargs["pooled_text_emb"]).to(hidden_states.dtype)
+         elif self.use_ada_layer_norm_single:
+             shift_msa, scale_msa, gate_msa, shift_mlp, scale_mlp, gate_mlp = (
+                 self.scale_shift_table[None] + timestep.reshape(batch_size, 6, -1)
+             ).chunk(6, dim=1)
+-            norm_hidden_states = self.norm1(hidden_states)
++            norm_hidden_states = self.norm1(hidden_states.to(torch.float32)).to(hidden_states.dtype)
+             norm_hidden_states = norm_hidden_states * (1 + scale_msa) + shift_msa
+             norm_hidden_states = norm_hidden_states.squeeze(1)
+         else:
+@@ -360,9 +360,9 @@ class BasicTransformerBlock(nn.Module):
+         # 3. Cross-Attention
+         if self.attn2 is not None:
+             if self.use_ada_layer_norm:
+-                norm_hidden_states = self.norm2(hidden_states, timestep)
++                norm_hidden_states = self.norm2(hidden_states.to(torch.float32), timestep).to(hidden_states.dtype)
+             elif self.use_ada_layer_norm_zero or self.use_layer_norm:
+-                norm_hidden_states = self.norm2(hidden_states)
++                norm_hidden_states = self.norm2(hidden_states.to(torch.float32)).to(hidden_states.dtype)
+             elif self.use_ada_layer_norm_single:
+                 # For PixArt norm2 isn't applied here:
+                 # https://github.com/PixArt-alpha/PixArt-alpha/blob/0f55e922376d8b797edd44d25d0e7464b260dcab/diffusion/model/nets/PixArtMS.py#L70C1-L76C103
+diff --git a/src/idm_vton/tryon_pipeline.py b/src/idm_vton/tryon_pipeline.py
+index 048b790..bc5cedf 100644
+--- a/src/idm_vton/tryon_pipeline.py
++++ b/src/idm_vton/tryon_pipeline.py
+@@ -1720,7 +1720,7 @@ class StableDiffusionXLInpaintPipeline(
+             )
+ 
+             #project outside for loop
+-            image_embeds = self.unet.encoder_hid_proj(image_embeds).to(prompt_embeds.dtype)
++            image_embeds = self.unet.encoder_hid_proj.to(image_embeds.device)(image_embeds).to(prompt_embeds.dtype)
+ 
+ 
+         # 11. Denoising loop
+@@ -1782,13 +1782,7 @@ class StableDiffusionXLInpaintPipeline(
+                     added_cond_kwargs["image_embeds"] = image_embeds
+                 # down,reference_features = self.UNet_Encoder(cloth,t, text_embeds_cloth,added_cond_kwargs= {"text_embeds": pooled_prompt_embeds_c, "time_ids": add_time_ids},return_dict=False)
+                 down,reference_features = self.unet_encoder(cloth,t, text_embeds_cloth,return_dict=False)
+-                # print(type(reference_features))
+-                # print(reference_features)
+                 reference_features = list(reference_features)
+-                # print(len(reference_features))
+-                # for elem in reference_features:
+-                #     print(elem.shape)
+-                # exit(1)
+                 if self.do_classifier_free_guidance:
+                     reference_features = [torch.cat([torch.zeros_like(d), d]) for d in reference_features]
+ 
+@@ -1803,9 +1797,6 @@ class StableDiffusionXLInpaintPipeline(
+                     return_dict=False,
+                     garment_features=reference_features,
+                 )[0]
+-                # noise_pred = self.unet(latent_model_input, t, 
+-                #                             prompt_embeds,timestep_cond=timestep_cond,cross_attention_kwargs=self.cross_attention_kwargs,added_cond_kwargs=added_cond_kwargs,down_block_additional_attn=down ).sample
+-
+ 
+                 # perform guidance
+                 if self.do_classifier_free_guidance:
+diff --git a/src/idm_vton/unet_block_hacked_garmnet.py b/src/idm_vton/unet_block_hacked_garmnet.py
+index 5c6f55c..5d8f75b 100644
+--- a/src/idm_vton/unet_block_hacked_garmnet.py
++++ b/src/idm_vton/unet_block_hacked_garmnet.py
+@@ -22,7 +22,13 @@ from diffusers.utils import is_torch_version, logging
+ from diffusers.utils.torch_utils import apply_freeu
+ from diffusers.models.activations import get_activation
+ from diffusers.models.attention_processor import Attention, AttnAddedKVProcessor, AttnAddedKVProcessor2_0
+-from diffusers.models.dual_transformer_2d import DualTransformer2DModel
++try:
++    try:
++        from diffusers.models.dual_transformer_2d import DualTransformer2DModel
++    except ImportError:
++        from diffusers.models.transformers.dual_transformer_2d import DualTransformer2DModel
++except ImportError:
++    from diffusers.models.transformers.dual_transformer_2d import DualTransformer2DModel
+ from diffusers.models.normalization import AdaGroupNorm
+ from diffusers.models.resnet import Downsample2D, FirDownsample2D, FirUpsample2D, KDownsample2D, KUpsample2D, ResnetBlock2D, Upsample2D
+ from .transformerhacked_garmnet import Transformer2DModel
+diff --git a/src/idm_vton/unet_block_hacked_tryon.py b/src/idm_vton/unet_block_hacked_tryon.py
+index d14c301..cd90208 100644
+--- a/src/idm_vton/unet_block_hacked_tryon.py
++++ b/src/idm_vton/unet_block_hacked_tryon.py
+@@ -22,7 +22,13 @@ from diffusers.utils import is_torch_version, logging
+ from diffusers.utils.torch_utils import apply_freeu
+ from diffusers.models.activations import get_activation
+ from diffusers.models.attention_processor import Attention, AttnAddedKVProcessor, AttnAddedKVProcessor2_0
+-from diffusers.models.dual_transformer_2d import DualTransformer2DModel
++try:
++    try:
++        from diffusers.models.dual_transformer_2d import DualTransformer2DModel
++    except ImportError:
++        from diffusers.models.transformers.dual_transformer_2d import DualTransformer2DModel
++except ImportError:
++    from diffusers.models.transformers.dual_transformer_2d import DualTransformer2DModel
+ from diffusers.models.normalization import AdaGroupNorm
+ from diffusers.models.resnet import Downsample2D, FirDownsample2D, FirUpsample2D, KDownsample2D, KUpsample2D, ResnetBlock2D, Upsample2D
+ from .transformerhacked_tryon import Transformer2DModel
+diff --git a/src/idm_vton/unet_hacked_garmnet.py b/src/idm_vton/unet_hacked_garmnet.py
+index f858947..a4276bf 100644
+--- a/src/idm_vton/unet_hacked_garmnet.py
++++ b/src/idm_vton/unet_hacked_garmnet.py
+@@ -53,7 +53,10 @@ from .unet_block_hacked_garmnet import (
+     get_up_block,
+ )
+ from diffusers.models.resnet import Downsample2D, FirDownsample2D, FirUpsample2D, KDownsample2D, KUpsample2D, ResnetBlock2D, Upsample2D
+-from diffusers.models.transformer_2d import Transformer2DModel
++try:
++    from diffusers.models.transformer_2d import Transformer2DModel
++except ImportError:
++    from diffusers.models.transformers.transformer_2d import Transformer2DModel
+ 
+ 
+ logger = logging.get_logger(__name__)  # pylint: disable=invalid-name
+diff --git a/src/idm_vton/unet_hacked_tryon.py b/src/idm_vton/unet_hacked_tryon.py
+index 2f352b4..9428df8 100644
+--- a/src/idm_vton/unet_hacked_tryon.py
++++ b/src/idm_vton/unet_hacked_tryon.py
+@@ -55,7 +55,10 @@ from .unet_block_hacked_tryon import (
+     get_up_block,
+ )
+ from diffusers.models.resnet import Downsample2D, FirDownsample2D, FirUpsample2D, KDownsample2D, KUpsample2D, ResnetBlock2D, Upsample2D
+-from diffusers.models.transformer_2d import Transformer2DModel
++try:
++    from diffusers.models.transformer_2d import Transformer2DModel
++except ImportError:
++    from diffusers.models.transformers.transformer_2d import Transformer2DModel
+ import math
+ 
+ from ..ip_adapter.ip_adapter import Resampler
+@@ -1304,7 +1307,6 @@ class UNet2DConditionModel(ModelMixin, ConfigMixin, UNet2DConditionLoadersMixin)
+ 
+             down_block_res_samples += res_samples
+ 
+-
+         if is_controlnet:
+             new_down_block_res_samples = ()
+ 
+diff --git a/src/ip_adapter/attention_processor.py b/src/ip_adapter/attention_processor.py
+index b6c40c4..df9893c 100644
+--- a/src/ip_adapter/attention_processor.py
++++ b/src/ip_adapter/attention_processor.py
+@@ -6,7 +6,10 @@ from diffusers.models.lora import LoRACompatibleLinear
+ from diffusers.models.lora import LoRALinearLayer,LoRAConv2dLayer
+ from einops import rearrange
+ 
+-from diffusers.models.transformer_2d import Transformer2DModel
++try:
++    from diffusers.models.transformer_2d import Transformer2DModel
++except ImportError:
++    from diffusers.models.transformers.transformer_2d import Transformer2DModel
+ 
+ class AttnProcessor(nn.Module):
+     r"""
+diff --git a/src/nodes/pipeline_loader.py b/src/nodes/pipeline_loader.py
+index f7e8727..2ed4ac3 100644
+--- a/src/nodes/pipeline_loader.py
++++ b/src/nodes/pipeline_loader.py
+@@ -2,6 +2,7 @@ import sys
+ sys.path.append('.')
+ sys.path.append('..')
+ 
++import os
+ import torch
+ from diffusers import AutoencoderKL, DDPMScheduler
+ from transformers import AutoTokenizer, CLIPImageProcessor, CLIPVisionModelWithProjection,CLIPTextModelWithProjection, CLIPTextModel
+@@ -10,7 +11,9 @@ from ..idm_vton.unet_hacked_tryon import UNet2DConditionModel
+ from ..idm_vton.unet_hacked_garmnet import UNet2DConditionModel as UNet2DConditionModel_ref
+ from ..idm_vton.tryon_pipeline import StableDiffusionXLInpaintPipeline as TryonPipeline
+ from comfy.model_management import get_torch_device
+-from ...install import WEIGHTS_PATH
++import folder_paths
++
++WEIGHTS_PATH = os.path.join(folder_paths.models_dir, "IDM-VTON")
+ 
+ 
+ DEVICE = get_torch_device()
+@@ -107,7 +110,11 @@ class PipelineLoader:
+             torch_dtype=weight_dtype,
+         )
+         pipe.unet_encoder = unet_encoder
+-        pipe = pipe.to(DEVICE)
++        # Use model CPU offload to save VRAM (better for lowvram mode)
++        try:
++            pipe.enable_model_cpu_offload()
++        except Exception:
++            pipe = pipe.to(DEVICE)
+         pipe.weight_dtype = weight_dtype
+         
+         return (pipe, )
+\ No newline at end of file
+diff --git a/src/nodes_mappings.py b/src/nodes_mappings.py
+index 5b8a3e1..20a80a8 100644
+--- a/src/nodes_mappings.py
++++ b/src/nodes_mappings.py
+@@ -1,13 +1,16 @@
+ from .nodes.pipeline_loader import PipelineLoader
+ from .nodes.idm_vton import IDM_VTON
++from .nodes.face_protect_mask import FaceProtectMask
+ 
+ 
+ NODE_CLASS_MAPPINGS = {
+     "PipelineLoader": PipelineLoader,
+     "IDM-VTON": IDM_VTON,
++    "FaceProtectMask": FaceProtectMask,
+ }
+ 
+ NODE_DISPLAY_NAME_MAPPINGS = {
+     "PipelineLoader": "Load IDM-VTON Pipeline",
+     "IDM-VTON": "Run IDM-VTON Inference",
++    "FaceProtectMask": "Face-Protected Clothing Mask",
+ }
+\ No newline at end of file

@@ -1,0 +1,41 @@
+{
+  "1": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "vton/person.png",
+      "upload": "image"
+    }
+  },
+  "2": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "vton/garment.jpg",
+      "upload": "image"
+    }
+  },
+  "3": {
+    "class_type": "LoadOOTDPipelineHub",
+    "inputs": {
+      "type": "Half body"
+    }
+  },
+  "4": {
+    "class_type": "OOTDGenerate",
+    "inputs": {
+      "pipe": ["3", 0],
+      "cloth_image": ["2", 0],
+      "model_image": ["1", 0],
+      "seed": 42,
+      "steps": 20,
+      "cfg": 2.0,
+      "category": "Dress"
+    }
+  },
+  "5": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": ["4", 0],
+      "filename_prefix": "ootd_test"
+    }
+  }
+}

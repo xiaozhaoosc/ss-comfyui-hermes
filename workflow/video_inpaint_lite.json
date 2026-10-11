@@ -1,0 +1,193 @@
+{
+  "1": {
+    "class_type": "LoadVideo",
+    "_meta": {
+      "title": "Video"
+    },
+    "inputs": {
+      "file": "test_video.mp4"
+    }
+  },
+  "2": {
+    "class_type": "GetVideoComponents",
+    "_meta": {
+      "title": "Frames"
+    },
+    "inputs": {
+      "video": [
+        "1",
+        0
+      ]
+    }
+  },
+  "3": {
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "SDXL"
+    },
+    "inputs": {
+      "ckpt_name": "sd_xl_base_1.0.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "SolidMask",
+    "_meta": {
+      "title": "Base"
+    },
+    "inputs": {
+      "value": 0.0,
+      "width": 1024,
+      "height": 1024
+    }
+  },
+  "5": {
+    "class_type": "SolidMask",
+    "_meta": {
+      "title": "Cloth"
+    },
+    "inputs": {
+      "value": 1.0,
+      "width": 400,
+      "height": 500
+    }
+  },
+  "6": {
+    "class_type": "MaskComposite",
+    "_meta": {
+      "title": "Position"
+    },
+    "inputs": {
+      "destination": [
+        "4",
+        0
+      ],
+      "source": [
+        "5",
+        0
+      ],
+      "x": 312,
+      "y": 280,
+      "operation": "add"
+    }
+  },
+  "7": {
+    "class_type": "GrowMask",
+    "_meta": {
+      "title": "Grow"
+    },
+    "inputs": {
+      "mask": [
+        "6",
+        0
+      ],
+      "expand": 20,
+      "tapered_corners": true
+    }
+  },
+  "8": {
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Pos"
+    },
+    "inputs": {
+      "text": "white silk dress golden embroidery",
+      "clip": [
+        "3",
+        1
+      ]
+    }
+  },
+  "9": {
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Neg"
+    },
+    "inputs": {
+      "text": "ugly blurry red dress",
+      "clip": [
+        "3",
+        1
+      ]
+    }
+  },
+  "10": {
+    "class_type": "VAEEncodeForInpaint",
+    "_meta": {
+      "title": "Inpaint"
+    },
+    "inputs": {
+      "pixels": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        2
+      ],
+      "mask": [
+        "7",
+        0
+      ],
+      "grow_mask_by": 6
+    }
+  },
+  "11": {
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "Sample"
+    },
+    "inputs": {
+      "seed": 42,
+      "steps": 15,
+      "cfg": 7.0,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 0.85,
+      "model": [
+        "3",
+        0
+      ],
+      "positive": [
+        "8",
+        0
+      ],
+      "negative": [
+        "9",
+        0
+      ],
+      "latent_image": [
+        "10",
+        0
+      ]
+    }
+  },
+  "12": {
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "Decode"
+    },
+    "inputs": {
+      "samples": [
+        "11",
+        0
+      ],
+      "vae": [
+        "3",
+        2
+      ]
+    }
+  },
+  "13": {
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save"
+    },
+    "inputs": {
+      "filename_prefix": "vid_inpaint",
+      "images": [
+        "12",
+        0
+      ]
+    }
+  }
+}

@@ -1,0 +1,1093 @@
+{
+  "id": "5c566f77-e124-415b-92f0-490e773a8602",
+  "revision": 0,
+  "last_node_id": 53,
+  "last_link_id": 69,
+  "nodes": [
+    {
+      "id": 15,
+      "type": "LibLibSeedreamV4Node",
+      "pos": {
+        "0": 2743.852783203125,
+        "1": 38.168121337890625
+      },
+      "size": {
+        "0": 475.2774963378906,
+        "1": 256
+      },
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "images",
+          "name": "images",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 14
+        },
+        {
+          "label": "prompt",
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 15
+        },
+        {
+          "label": "width",
+          "name": "width",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 16
+        },
+        {
+          "label": "height",
+          "name": "height",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 17
+        }
+      ],
+      "outputs": [
+        {
+          "label": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            22
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LibLibSeedreamV4Node"
+      },
+      "widgets_values": [
+        "人物美颜，去掉人物脸上的痘痘、痘印、疤痕等，让人物面部变得干净漂亮、白皙细嫩，淡妆写实。",
+        "doubao-seedream-4-0-250828",
+        "from_width_height",
+        1024,
+        1680,
+        false,
+        15,
+        false
+      ]
+    },
+    {
+      "id": 17,
+      "type": "ImageBatchMulti",
+      "pos": {
+        "0": 2293.1044921875,
+        "1": 31.76187515258789
+      },
+      "size": {
+        "0": 366.9795227050781,
+        "1": 122
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像_1",
+          "name": "image_1",
+          "type": "IMAGE",
+          "link": 19
+        },
+        {
+          "label": "图像_2",
+          "name": "image_2",
+          "type": "IMAGE",
+          "link": 24
+        },
+        {
+          "name": "image_3",
+          "type": "IMAGE",
+          "link": 28
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            14
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "ImageBatchMulti"
+      },
+      "widgets_values": [
+        3,
+        null
+      ]
+    },
+    {
+      "id": 28,
+      "type": "DepthAnything_V2",
+      "pos": {
+        "0": 2426.86865234375,
+        "1": 966.772705078125
+      },
+      "size": {
+        "0": 214.20001220703125,
+        "1": 46
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "da_model",
+          "name": "da_model",
+          "type": "DAMODEL",
+          "link": 27
+        },
+        {
+          "label": "images",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 26
+        }
+      ],
+      "outputs": [
+        {
+          "label": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            28
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "DepthAnything_V2"
+      }
+    },
+    {
+      "id": 25,
+      "type": "DWPreprocessor",
+      "pos": {
+        "0": 2260.35791015625,
+        "1": 679.6004028320312
+      },
+      "size": {
+        "0": 315,
+        "1": 222
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 23
+        }
+      ],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            24,
+            25
+          ]
+        },
+        {
+          "label": "姿态关键点",
+          "name": "POSE_KEYPOINT",
+          "type": "POSE_KEYPOINT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "DWPreprocessor"
+      },
+      "widgets_values": [
+        "enable",
+        "enable",
+        "enable",
+        512,
+        "yolox_l.onnx",
+        "dw-ll_ucoco_384_bs5.torchscript.pt",
+        "disable"
+      ]
+    },
+    {
+      "id": 23,
+      "type": "Text Multiline",
+      "pos": {
+        "0": 2293.613037109375,
+        "1": 209.7447509765625
+      },
+      "size": {
+        "0": 369.7476501464844,
+        "1": 123.9074478149414
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "字符串",
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            15
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "Text Multiline"
+      },
+      "widgets_values": [
+        "更改图1中女人的动作，让女人按照图2和图3的做出一样的姿态动作。图1女人的装扮不变。"
+      ]
+    },
+    {
+      "id": 18,
+      "type": "ImageResizeKJv2",
+      "pos": {
+        "0": 1901.9422607421875,
+        "1": 622.2825317382812
+      },
+      "size": {
+        "0": 315,
+        "1": 286
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 21
+        },
+        {
+          "label": "mask",
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "IMAGE",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            23,
+            26
+          ]
+        },
+        {
+          "label": "width",
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "label": "height",
+          "name": "height",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "label": "mask",
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "ImageResizeKJv2"
+      },
+      "widgets_values": [
+        1600,
+        1600,
+        "nearest-exact",
+        "resize",
+        "0, 0, 0",
+        "center",
+        8,
+        "cpu"
+      ]
+    },
+    {
+      "id": 24,
+      "type": "PreviewImage",
+      "pos": {
+        "0": 3310.799560546875,
+        "1": 43.800506591796875
+      },
+      "size": {
+        "0": 506.48583984375,
+        "1": 868.4189453125
+      },
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 22
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 21,
+      "type": "ImpactInt",
+      "pos": {
+        "0": 2337.31640625,
+        "1": 391.82708740234375
+      },
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "值",
+          "name": "value",
+          "type": "INT",
+          "widget": {
+            "name": "value"
+          },
+          "link": 65
+        }
+      ],
+      "outputs": [
+        {
+          "label": "整数",
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            16
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "ImpactInt"
+      },
+      "widgets_values": [
+        1080
+      ]
+    },
+    {
+      "id": 22,
+      "type": "ImpactInt",
+      "pos": {
+        "0": 2335.763671875,
+        "1": 520.52392578125
+      },
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "值",
+          "name": "value",
+          "type": "INT",
+          "widget": {
+            "name": "value"
+          },
+          "link": 66
+        }
+      ],
+      "outputs": [
+        {
+          "label": "整数",
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            17
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "ImpactInt"
+      },
+      "widgets_values": [
+        1920
+      ]
+    },
+    {
+      "id": 16,
+      "type": "ImageResizeKJv2",
+      "pos": {
+        "0": 1888.224365234375,
+        "1": 43.41256332397461
+      },
+      "size": {
+        "0": 315,
+        "1": 286
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 18
+        },
+        {
+          "label": "mask",
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "IMAGE",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            19
+          ]
+        },
+        {
+          "label": "width",
+          "name": "width",
+          "type": "INT",
+          "links": [
+            65
+          ]
+        },
+        {
+          "label": "height",
+          "name": "height",
+          "type": "INT",
+          "links": [
+            66
+          ]
+        },
+        {
+          "label": "mask",
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "ImageResizeKJv2"
+      },
+      "widgets_values": [
+        1600,
+        1600,
+        "nearest-exact",
+        "resize",
+        "0, 0, 0",
+        "center",
+        8,
+        "cpu"
+      ]
+    },
+    {
+      "id": 29,
+      "type": "DownloadAndLoadDepthAnythingV2Model",
+      "pos": {
+        "0": 1904.0203857421875,
+        "1": 966.6048583984375
+      },
+      "size": {
+        "0": 441,
+        "1": 58
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "da_v2_model",
+          "name": "da_v2_model",
+          "type": "DAMODEL",
+          "links": [
+            27
+          ]
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "DownloadAndLoadDepthAnythingV2Model"
+      },
+      "widgets_values": [
+        "depth_anything_v2_vitl_fp32.safetensors"
+      ]
+    },
+    {
+      "id": 26,
+      "type": "PreviewImage",
+      "pos": {
+        "0": 2728.398681640625,
+        "1": 628.2125244140625
+      },
+      "size": {
+        "0": 350.9888916015625,
+        "1": 327.89794921875
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "图像",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 25
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 19,
+      "type": "LoadImage",
+      "pos": {
+        "0": 1446.341552734375,
+        "1": -30.303482055664062
+      },
+      "size": {
+        "0": 328.68505859375,
+        "1": 491.56085205078125
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            18
+          ]
+        },
+        {
+          "label": "遮罩",
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "jimeng-2025-09-11-7865-20岁东方贤淑美女，五官精致，极度妖冶，脖子纤细修长，双腿超长，脚部曲线完美，身....png",
+        "image",
+        ""
+      ],
+      "_widget_cache_map": {
+        "4840045d52cf00e843683915f4e28de9.jpeg": {
+          "value": "img/a7c59925c301ddc58f1e3157a6c7b866/d3ab054482bce22633af03c9d4edd774afffa65b14090e5fb3a92ab4a39f5df8.jpeg",
+          "name": "4840045d52cf00e843683915f4e28de9.jpeg",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/a7c59925c301ddc58f1e3157a6c7b866/d3ab054482bce22633af03c9d4edd774afffa65b14090e5fb3a92ab4a39f5df8.jpeg",
+          "width": 500,
+          "height": 667
+        },
+        "jimeng-2025-09-01-3775-美少女，容颜绝美，清秀靓丽，身材修长，梦幻，神秘，空灵，唯美，，腰细，拥有180....png": {
+          "value": "img/a7c59925c301ddc58f1e3157a6c7b866/fdca4d89efbd31ebf262ecb77bcea29311dc2c16a23cbc6ecb361243ef935ff3.png",
+          "name": "jimeng-2025-09-01-3775-美少女，容颜绝美，清秀靓丽，身材修长，梦幻，神秘，空灵，唯美，，腰细，拥有180....png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/a7c59925c301ddc58f1e3157a6c7b866/fdca4d89efbd31ebf262ecb77bcea29311dc2c16a23cbc6ecb361243ef935ff3.png",
+          "width": 936,
+          "height": 1664
+        },
+        "18086662-4cd20213e287d38f4a93ad6d749c919f933b6c6fe56e478b65c21bc884a77c16.png": {
+          "value": "img/a7c59925c301ddc58f1e3157a6c7b866/4cd20213e287d38f4a93ad6d749c919f933b6c6fe56e478b65c21bc884a77c16.png",
+          "name": "18086662-4cd20213e287d38f4a93ad6d749c919f933b6c6fe56e478b65c21bc884a77c16.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/a7c59925c301ddc58f1e3157a6c7b866/4cd20213e287d38f4a93ad6d749c919f933b6c6fe56e478b65c21bc884a77c16.png",
+          "width": 2508,
+          "height": 3344
+        },
+        "一位仿若梦幻之境走来的真人coser.png": {
+          "value": "img/a7c59925c301ddc58f1e3157a6c7b866/05a8f787d150b44cc49e527f487eb5b11376c00f185ddf710a04ef3c9caa0b5b.png",
+          "name": "一位仿若梦幻之境走来的真人coser.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/a7c59925c301ddc58f1e3157a6c7b866/05a8f787d150b44cc49e527f487eb5b11376c00f185ddf710a04ef3c9caa0b5b.png",
+          "width": 2208,
+          "height": 2944
+        },
+        "68670f4c56c71f85eda2eec3e80fab02.jpg": {
+          "value": "img/a7c59925c301ddc58f1e3157a6c7b866/59a524f1acac4e702d2e5c0c82818f4ed781ba40822002004786525a913ef4e5.jpg",
+          "name": "68670f4c56c71f85eda2eec3e80fab02.jpg",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/a7c59925c301ddc58f1e3157a6c7b866/59a524f1acac4e702d2e5c0c82818f4ed781ba40822002004786525a913ef4e5.jpg",
+          "width": 750,
+          "height": 1000
+        },
+        "jimeng-2025-09-11-7944-正面全身像，穿着瑜伽的美丽的中国女孩。光线的柔和反射，温暖的色调，立体感和层次感....png": {
+          "value": "img/a7c59925c301ddc58f1e3157a6c7b866/c8a857aed5c575fa9bcae81f54edc6aa521cad41dcf8a33d0519004dba1f0442.png",
+          "name": "jimeng-2025-09-11-7944-正面全身像，穿着瑜伽的美丽的中国女孩。光线的柔和反射，温暖的色调，立体感和层次感....png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/a7c59925c301ddc58f1e3157a6c7b866/c8a857aed5c575fa9bcae81f54edc6aa521cad41dcf8a33d0519004dba1f0442.png",
+          "width": 576,
+          "height": 1024
+        },
+        "jimeng-2025-09-11-7865-20岁东方贤淑美女，五官精致，极度妖冶，脖子纤细修长，双腿超长，脚部曲线完美，身....png": {
+          "value": "img/a7c59925c301ddc58f1e3157a6c7b866/30abc36562380aefa64e8f122e9b971e0aadb445fd94e5cfdde640371e729660.png",
+          "name": "jimeng-2025-09-11-7865-20岁东方贤淑美女，五官精致，极度妖冶，脖子纤细修长，双腿超长，脚部曲线完美，身....png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/a7c59925c301ddc58f1e3157a6c7b866/30abc36562380aefa64e8f122e9b971e0aadb445fd94e5cfdde640371e729660.png",
+          "width": 936,
+          "height": 1664
+        }
+      }
+    },
+    {
+      "id": 20,
+      "type": "LoadImage",
+      "pos": {
+        "0": 1439.368408203125,
+        "1": 522.1055908203125
+      },
+      "size": {
+        "0": 328.68505859375,
+        "1": 491.56085205078125
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            21
+          ]
+        },
+        {
+          "label": "遮罩",
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "image.png",
+        "image",
+        ""
+      ],
+      "_widget_cache_map": {
+        "4840045d52cf00e843683915f4e28de9.jpeg": {
+          "value": "img/a7c59925c301ddc58f1e3157a6c7b866/d3ab054482bce22633af03c9d4edd774afffa65b14090e5fb3a92ab4a39f5df8.jpeg",
+          "name": "4840045d52cf00e843683915f4e28de9.jpeg",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/a7c59925c301ddc58f1e3157a6c7b866/d3ab054482bce22633af03c9d4edd774afffa65b14090e5fb3a92ab4a39f5df8.jpeg",
+          "width": 500,
+          "height": 667
+        },
+        "jimeng-2025-09-01-3775-美少女，容颜绝美，清秀靓丽，身材修长，梦幻，神秘，空灵，唯美，，腰细，拥有180....png": {
+          "value": "img/a7c59925c301ddc58f1e3157a6c7b866/fdca4d89efbd31ebf262ecb77bcea29311dc2c16a23cbc6ecb361243ef935ff3.png",
+          "name": "jimeng-2025-09-01-3775-美少女，容颜绝美，清秀靓丽，身材修长，梦幻，神秘，空灵，唯美，，腰细，拥有180....png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/a7c59925c301ddc58f1e3157a6c7b866/fdca4d89efbd31ebf262ecb77bcea29311dc2c16a23cbc6ecb361243ef935ff3.png",
+          "width": 936,
+          "height": 1664
+        },
+        "image.png": {
+          "value": "img/a7c59925c301ddc58f1e3157a6c7b866/fbd786f8171454dd7272e3543666e0a0e065ae7d7e6f10472aba87625089ebf2.png",
+          "name": "image.png",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/a7c59925c301ddc58f1e3157a6c7b866/fbd786f8171454dd7272e3543666e0a0e065ae7d7e6f10472aba87625089ebf2.png",
+          "width": 1080,
+          "height": 1621
+        },
+        "001 (11).jpg": {
+          "value": "img/a7c59925c301ddc58f1e3157a6c7b866/d90f9823f545fa78e2cf2bf9600ee6f4a6c5cac6bb8a1780dadb76b35a2c08e5.jpg",
+          "name": "001 (11).jpg",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/a7c59925c301ddc58f1e3157a6c7b866/d90f9823f545fa78e2cf2bf9600ee6f4a6c5cac6bb8a1780dadb76b35a2c08e5.jpg",
+          "width": 832,
+          "height": 1184
+        },
+        "001 (6).jpg": {
+          "value": "img/a7c59925c301ddc58f1e3157a6c7b866/c50d07c977f4a0c37376910d193727634052554c4a4b99e8d9d9c20b18b33825.jpg",
+          "name": "001 (6).jpg",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/a7c59925c301ddc58f1e3157a6c7b866/c50d07c977f4a0c37376910d193727634052554c4a4b99e8d9d9c20b18b33825.jpg",
+          "width": 1080,
+          "height": 1710
+        }
+      }
+    },
+    {
+      "id": 52,
+      "type": "LoadImage",
+      "pos": {
+        "0": 4212.1328125,
+        "1": 84.18956756591797
+      },
+      "size": {
+        "0": 612.2465209960938,
+        "1": 737.7254028320312
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE"
+        },
+        {
+          "label": "遮罩",
+          "name": "MASK",
+          "type": "MASK"
+        }
+      ],
+      "properties": {
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "81C9AA58799523F4D3B4F71176F661EA.jpg",
+        "image",
+        ""
+      ],
+      "color": "#ff1414",
+      "bgcolor": "#ff0000",
+      "_widget_cache_map": {
+        "81C9AA58799523F4D3B4F71176F661EA.jpg": {
+          "value": "img/a7c59925c301ddc58f1e3157a6c7b866/b2d6751c4918a1dda8f820de2eb8017e617dbfc1dddf44565cae52f48de11796.jpg",
+          "name": "81C9AA58799523F4D3B4F71176F661EA.jpg",
+          "url": "https://liblibai-tmp-image.liblib.cloud/img/a7c59925c301ddc58f1e3157a6c7b866/b2d6751c4918a1dda8f820de2eb8017e617dbfc1dddf44565cae52f48de11796.jpg",
+          "width": 809,
+          "height": 802
+        }
+      }
+    }
+  ],
+  "links": [
+    [
+      14,
+      17,
+      0,
+      15,
+      0,
+      "IMAGE"
+    ],
+    [
+      15,
+      23,
+      0,
+      15,
+      1,
+      "STRING"
+    ],
+    [
+      16,
+      21,
+      0,
+      15,
+      2,
+      "INT"
+    ],
+    [
+      17,
+      22,
+      0,
+      15,
+      3,
+      "INT"
+    ],
+    [
+      18,
+      19,
+      0,
+      16,
+      0,
+      "IMAGE"
+    ],
+    [
+      19,
+      16,
+      0,
+      17,
+      0,
+      "IMAGE"
+    ],
+    [
+      21,
+      20,
+      0,
+      18,
+      0,
+      "IMAGE"
+    ],
+    [
+      22,
+      15,
+      0,
+      24,
+      0,
+      "IMAGE"
+    ],
+    [
+      23,
+      18,
+      0,
+      25,
+      0,
+      "IMAGE"
+    ],
+    [
+      24,
+      25,
+      0,
+      17,
+      1,
+      "IMAGE"
+    ],
+    [
+      25,
+      25,
+      0,
+      26,
+      0,
+      "IMAGE"
+    ],
+    [
+      26,
+      18,
+      0,
+      28,
+      1,
+      "IMAGE"
+    ],
+    [
+      27,
+      29,
+      0,
+      28,
+      0,
+      "DAMODEL"
+    ],
+    [
+      28,
+      28,
+      0,
+      17,
+      2,
+      "IMAGE"
+    ],
+    [
+      65,
+      16,
+      1,
+      21,
+      0,
+      "INT"
+    ],
+    [
+      66,
+      16,
+      2,
+      22,
+      0,
+      "INT"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 2,
+      "title": "动作迁移",
+      "bounding": [
+        1307.9447021484375,
+        -198.11114501953125,
+        2632.242431640625,
+        1275.5020751953125
+      ],
+      "color": "#3f789e",
+      "font_size": 88,
+      "flags": {}
+    },
+    {
+      "id": 4,
+      "title": "指鹿AI-产品换背景、光影融图专用工作流+V进群zhiluai2025",
+      "bounding": [
+        1294.71875,
+        -621.0184936523438,
+        5120.30712890625,
+        256.0640869140625
+      ],
+      "color": "#3f789e",
+      "font_size": 185,
+      "flags": {}
+    },
+    {
+      "id": 5,
+      "title": "扫码进群交流——必看提示",
+      "bounding": [
+        4035.306640625,
+        -194.68853759765625,
+        920.724853515625,
+        1269.1431884765625
+      ],
+      "color": "#3f789e",
+      "font_size": 66,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.40909090909092516,
+      "offset": [
+        -461.15318414139074,
+        471.6659645349987
+      ]
+    },
+    "ue_links": [],
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4,
+  "widget_idx_map": {},
+  "seed_widgets": {}
+}

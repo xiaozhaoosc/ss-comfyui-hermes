@@ -1,0 +1,65 @@
+{
+  "_comment": "Per frame: ATR human parsing garment mask (labels 4,5,6,7,8,17) + SAM2 edge refinement. Driver replaces <IMAGE>. Outputs: node 4 = ATR raw mask, node 8 = SAM2 refined mask.",
+  "1": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "<IMAGE>",
+      "upload": "image"
+    }
+  },
+  "2": {
+    "class_type": "FaceProtectMask",
+    "inputs": {
+      "image": ["1", 0],
+      "clothing_labels": "4,5,6,7,8,17",
+      "protect_labels": "2,3,11",
+      "protect_expand": 0,
+      "feather": 0
+    }
+  },
+  "3": {
+    "class_type": "MaskToImage",
+    "inputs": {
+      "mask": ["2", 0]
+    }
+  },
+  "4": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": ["3", 0],
+      "filename_prefix": "garment_extract/atr_mask"
+    }
+  },
+  "5": {
+    "class_type": "DownloadAndLoadSAM2Model",
+    "inputs": {
+      "model": "sam2_hiera_base_plus.safetensors",
+      "segmentor": "single_image",
+      "device": "cuda",
+      "precision": "fp16"
+    }
+  },
+  "6": {
+    "class_type": "Sam2Segmentation",
+    "inputs": {
+      "sam2_model": ["5", 0],
+      "image": ["1", 0],
+      "mask": ["2", 0],
+      "keep_model_loaded": false,
+      "individual_objects": false
+    }
+  },
+  "7": {
+    "class_type": "MaskToImage",
+    "inputs": {
+      "mask": ["6", 0]
+    }
+  },
+  "8": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": ["7", 0],
+      "filename_prefix": "garment_extract/garment_mask"
+    }
+  }
+}

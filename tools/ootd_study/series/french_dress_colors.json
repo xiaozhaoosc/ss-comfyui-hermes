@@ -1,0 +1,22 @@
+[
+  {
+    "id": "c1",
+    "garment": "服装/demo_clean.jpg",
+    "prompt": "The woman in the first image is now wearing the same French dress as image 2 in its original cream off-white color. Faithfully reproduce the garment from image 2: identical design, pleats, waist gathering, silhouette, fabric, drape, hem length and the small brand label, only keeping the original cream off-white color. Keep her face, hairstyle, skin tone, body proportions, pose and the background completely unchanged."
+  },
+  {
+    "id": "c2",
+    "garment": "服装/demo_clean.jpg",
+    "prompt": "The woman in the first image is now wearing the same French dress as image 2 but in a deep classic black color. Faithfully reproduce the garment design, pleats, waist gathering, silhouette, fabric, drape, hem length and the small brand label from image 2, only recoloring it to deep classic black. Keep her face, hairstyle, skin tone, body proportions, pose and the background completely unchanged."
+  },
+  {
+    "id": "c3",
+    "garment": "服装/demo_clean.jpg",
+    "prompt": "The woman in the first image is now wearing the same French dress as image 2 but in a rich burgundy wine red color. Faithfully reproduce the garment design, pleats, waist gathering, silhouette, fabric, drape, hem length and the small brand label from image 2, only recoloring it to rich burgundy wine red. Keep her face, hairstyle, skin tone, body proportions, pose and the background completely unchanged."
+  },
+  {
+    "id": "c4",
+    "garment": "服装/demo_clean.jpg",
+    "prompt": "The woman in the first image is now wearing the same French dress as image 2 but in a soft dusty blue color. Faithfully reproduce the garment design, pleats, waist gathering, silhouette, fabric, drape, hem length and the small brand label from image 2, only recoloring it to soft dusty blue. Keep her face, hairstyle, skin tone, body proportions, pose and the background completely unchanged."
+  }
+]

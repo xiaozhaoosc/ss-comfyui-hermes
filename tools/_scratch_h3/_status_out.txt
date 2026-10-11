@@ -1,0 +1,51 @@
+now=2026-09-22 23:17:30
+
+======== _run_full.log 尾部 ========
+(文件大小 2236 字节)
+==============================================================================
+Profile: full  |  鈽呪槄D 缁勫悎鎷筹紙鎺ㄨ崘涓诲姏 路 鏈満榛樿妗ｏ級
+==============================================================================
+宸ヤ綔娴佸凡淇濆瓨: D:\ai_projects\ComfyUI\workflows\v5\h3_guard_v5_full_api.json  (49 鑺傜偣)
+[鈭歖 宸叉彁浜? prompt_id = 9852d216-68e3-4ead-aa3b-970d9f2c4471
+    ... 宸茶繍琛?0s
+    ... 宸茶繍琛?30s
+    ... 宸茶繍琛?62s
+    ... 宸茶繍琛?92s
+    ... 宸茶繍琛?123s
+    ... 宸茶繍琛?153s
+    ... 宸茶繍琛?183s
+    ... 宸茶繍琛?213s
+    ... 宸茶繍琛?243s
+    ... 宸茶繍琛?273s
+    ... 宸茶繍琛?303s
+    ... 宸茶繍琛?333s
+    ... 宸茶繍琛?363s
+    ... 宸茶繍琛?394s
+    ... 宸茶繍琛?424s
+    ... 宸茶繍琛?454s
+    ... 宸茶繍琛?484s
+    ... 宸茶繍琛?514s
+    ... 宸茶繍琛?540s
+    ... 宸茶繍琛?571s
+    ... 宸茶繍琛?601s
+
+[鈭歖 瀹屾垚锛岃€楁椂 625.0s
+    浜х墿: D:\ai_projects\ComfyUI\output\2026-09-22_wb\h3_guard\h3_full_pass1baseline_00001_.mp4
+    浜х墿: D:\ai_projects\ComfyUI\output\2026-09-22_wb\h3_guard\h3_full_noswblend_00001_.mp4
+    浜х墿: D:\ai_projects\ComfyUI\output\2026-09-22_wb\h3_guard\h3_full_00001_.mp4
+杩愯鏃ュ織: D:\ai_projects\ComfyUI\output\2026-09-22_wb\h3_guard\_run_full.json
+
+
+======== h3_guard 产物 ========
+   H3人物迁移优化方案_v5.md                                    11716  23:06:58
+   _run_full.json                                        690  23:17:09
+   _run_full.log                                        2236  23:17:09
+   calib_baseline.json                                  1912  00:26:21
+   calib_baseline_report.md                             2921  00:26:21
+   h3_full_00001_.mp4                                  82917  23:17:06
+   h3_full_holdmap.holdmap.json                          248  23:12:03
+   h3_full_noswblend_00001_.mp4                        82917  23:16:33
+   h3_full_pass1baseline_00001_.mp4                    82923  23:12:10
+
+======== ComfyUI 队列 ========
+running=0  pending=0

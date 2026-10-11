@@ -1,0 +1,285 @@
+workflow: D:\ai_projects\ComfyUI\workflows\v5\h3_guard_v5_full_api.json
+nodes = 47
+
+#1  UNETLoader   [Ref2VA int8 DiT]
+      unet_name                = minimax_h3_ref2va_pruned_int8_convrot.safetensors
+      weight_dtype             = default
+
+#2  UNETLoader   [Ref2VA int8 DiT]
+      unet_name                = minimax_h3_ref2va_pruned_int8_convrot.safetensors
+      weight_dtype             = default
+
+#3  CLIPLoader   [Qwen3-VL TE (nvfp4)]
+      clip_name                = qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors
+      type                     = minimax
+      device                   = default
+
+#4  VAELoader   [video VAE]
+      vae_name                 = minimax_h3_video_vae_int8_convrot.safetensors
+
+#5  VAELoader   [audio VAE]
+      vae_name                 = minimax_h3_audio_vae_fp32.safetensors
+
+#6  MiniMaxChunkFeedForward   [Chunk FFN (分块前馈)]
+      model                    <- Ref2VA int8 DiT(#1)
+      chunks                   = 2
+      seq_threshold            = 65536
+
+#7  LoraLoaderModelOnly   [turbo 4-step LoRA]
+      model                    <- Chunk FFN (分块前馈)(#6)
+      lora_name                = minimax_h3_turbo_4step_comfyui_pruned.safetensors
+      strength_model           = 1.0
+
+#8  MiniMaxChunkFeedForward   [Chunk FFN (分块前馈)]
+      model                    <- Ref2VA int8 DiT(#2)
+      chunks                   = 2
+      seq_threshold            = 65536
+
+#9  LoraLoaderModelOnly   [turbo 4-step LoRA]
+      model                    <- Chunk FFN (分块前馈)(#8)
+      lora_name                = minimax_h3_turbo_4step_comfyui_pruned.safetensors
+      strength_model           = 1.0
+
+#10  VHS_LoadVideo   [source video]
+      video                    = shiling_dance_wave.mp4
+      force_rate               = 24.0
+      custom_width             = 448
+      custom_height            = 768
+      frame_load_cap           = 22
+      skip_first_frames        = 0
+      select_every_nth         = 1
+      format                   = AnimateDiff
+
+#11  LoadImage   [character ref]
+      image                    = characters/v3/C01_FACE_FRONT.png
+
+#12  MiniMaxH3ReferenceToVideo   [Ref2VA conditioning (pass1)]
+      clip                     <- Qwen3-VL TE (nvfp4)(#3)
+      vae                      <- video VAE(#4)
+      audio_vae                <- audio VAE(#5)
+      prompt                   = subject_definitions:
+<Subject 1> is the young woman shown in <Picture 1>
+      width                    = 448
+      height                   = 768
+      length                   = 22
+      ref_image_size           = match
+      ref_images.ref_image_0   <- character ref(#11)
+      ref_videos.ref_video_0   <- source video(#10)
+
+#13  BasicScheduler   [scheduler linear_quadratic/12]
+      model                    <- turbo 4-step LoRA(#7)
+      scheduler                = linear_quadratic
+      steps                    = 12
+      denoise                  = 1.0
+
+#14  BasicGuider   [guider]
+      model                    <- turbo 4-step LoRA(#7)
+      conditioning             <- Ref2VA conditioning (pass1)(#12)
+
+#15  KSamplerSelect   [sampler gradient_estimation]
+      sampler_name             = gradient_estimation
+
+#16  RandomNoise   [noise]
+      noise_seed               = 42
+
+#17  SamplerCustomAdvanced   [★pass1 baseline]
+      noise                    <- noise(#16)
+      guider                   <- guider(#14)
+      sampler                  <- sampler gradient_estimation(#15)
+      sigmas                   <- scheduler linear_quadratic/12(#13)
+      latent_image             <- Ref2VA conditioning (pass1)(#12)
+
+#18  VAEDecode   [baseline decode]
+      samples                  <- ★pass1 baseline(#17)
+      vae                      <- video VAE(#4)
+
+#19  VAEDecodeAudio   [baseline audio]
+      samples                  <- ★pass1 baseline(#17)
+      vae                      <- audio VAE(#5)
+
+#20  CreateVideo   [baseline video]
+      images                   <- baseline decode(#18)
+      audio                    <- baseline audio(#19)
+      fps                      = 24.0
+      bit_depth                = 8
+
+#21  SaveVideo   [save pass1 baseline]
+      video                    <- baseline video(#20)
+      format                   = auto
+      codec                    = auto
+      filename_prefix          = 2026-09-22_wb/h3_guard/t_nolow_pass1baseline
+
+#22  H3JerkOracle   [★H3 Jerk Oracle（找出快动作段）]
+      samples                  <- ★pass1 baseline(#17)
+      length                   = 22
+      q                        = 0.75
+      d_max                    = 4
+      ramp                     = True
+      preset                   = balanced (default)
+      bridge                   = 8
+      profile_mode             = value |d3| (default)
+      fps                      = 24
+      model_profile            = minimax-h3
+
+#23  H3TimeSmear   [★H3 Time Smear（慢放重绘）]
+      images                   <- baseline decode(#18)
+      dilation                 = 4
+      hold_map                 <- ★H3 Jerk Oracle（找出快动作段）(#22)
+      expand_to_end            = True
+      fps                      = 24
+
+#24  VAEEncode   [encode dilated]
+      pixels                   <- ★H3 Time Smear（慢放重绘）(#23)
+      vae                      <- video VAE(#4)
+
+#25  H3AudioSmear   [audio smear]
+      audio                    <- baseline audio(#19)
+      hold_map                 <- ★H3 Time Smear（慢放重绘）(#23)
+      fps                      = 24
+
+#26  VAEEncodeAudio   [encode smeared audio]
+      audio                    <- audio smear(#25)
+      vae                      <- audio VAE(#5)
+
+#27  H3V2VInit   [★H3 V2V Init（dilated 视频+音频 初始化）]
+      samples                  <- encode dilated(#24)
+      audio_latent             <- encode smeared audio(#26)
+      audio_mode               = follow the original performance (0.5)
+      audio_strength           = 0.5
+
+#28  MiniMaxH3ReferenceToVideo   [Ref2VA conditioning (pass2)]
+      clip                     <- Qwen3-VL TE (nvfp4)(#3)
+      vae                      <- video VAE(#4)
+      audio_vae                <- audio VAE(#5)
+      prompt                   = subject_definitions:
+<Subject 1> is the young woman shown in <Picture 1>
+      width                    = 448
+      height                   = 768
+      length                   = 22
+      ref_image_size           = match
+      ref_images.ref_image_0   <- character ref(#11)
+      ref_videos.ref_video_0   <- source video(#10)
+
+#29  H3InjectSchedule   [★H3 Inject Schedule]
+      model                    <- turbo 4-step LoRA(#9)
+      scheduler                = beta
+      total_steps              = 6
+      inject                   = 0.48
+      preset                   = custom
+
+#30  BasicGuider   [guider pass2]
+      model                    <- turbo 4-step LoRA(#9)
+      conditioning             <- Ref2VA conditioning (pass2)(#28)
+
+#31  KSamplerSelect   [sampler pass2]
+      sampler_name             = gradient_estimation
+
+#32  RandomNoise   [noise pass2]
+      noise_seed               = 43
+
+#33  SamplerCustomAdvanced   [★pass2 de-rope]
+      noise                    <- noise pass2(#32)
+      guider                   <- guider pass2(#30)
+      sampler                  <- sampler pass2(#31)
+      sigmas                   <- ★H3 Inject Schedule(#29)
+      latent_image             <- ★H3 V2V Init（dilated 视频+音频 初始化）(#27)
+
+#34  VAEDecode   [de-rope decode]
+      samples                  <- ★pass2 de-rope(#33)
+      vae                      <- video VAE(#4)
+
+#35  VAEDecodeAudio   [de-rope audio]
+      samples                  <- ★pass2 de-rope(#33)
+      vae                      <- audio VAE(#5)
+
+#36  H3ExactRecover   [★H3 Exact Recover（精确回到原帧率）]
+      images                   <- de-rope decode(#34)
+      hold_map                 <- ★H3 Time Smear（慢放重绘）(#23)
+
+#37  H3AudioRecover   [★H3 Audio Recover]
+      audio                    <- de-rope audio(#35)
+      hold_map                 <- ★H3 Time Smear（慢放重绘）(#23)
+      fps                      = 24
+      reference                <- baseline audio(#19)
+      reference_mix            = 1.0
+      audio_source             = keep the original performance (safe default)
+
+#38  LoadImage   [face ref]
+      image                    = characters/v3/C01_FACE_FRONT.png
+
+#39  ReActorOptions   [ReActor options (帧间稳定)]
+      input_faces_order        = large-small
+      input_faces_index        = 0
+      detect_gender_input      = no
+      source_faces_order       = large-small
+      source_faces_index       = 0
+      detect_gender_source     = no
+      console_log_level        = 1
+      restore_swapped_only     = True
+
+#40  ReActorFaceSwapOpt   [★ReActorFaceSwapOpt]
+      enabled                  = True
+      input_image              <- ★H3 Exact Recover（精确回到原帧率）(#36)
+      source_image             <- face ref(#38)
+      swap_model               = inswapper_128.onnx
+      facedetection            = YOLOv5l
+      face_restore_model       = codeformer.pth
+      face_restore_visibility  = 0.85
+      codeformer_weight        = 0.65
+      options                  <- ReActor options (帧间稳定)(#39)
+
+#41  ReActorMaskHelper   [ReActor mask helper (脸部区域+羽化)]
+      image                    <- ★H3 Exact Recover（精确回到原帧率）(#36)
+      swapped_image            <- ★ReActorFaceSwapOpt(#40)
+      bbox_model_name          = bbox/face_yolov8m.pt
+      bbox_threshold           = 0.5
+      bbox_dilation            = 6
+      bbox_crop_factor         = 3.0
+      bbox_drop_size           = 10
+      sam_model_name           = sam_vit_b_01ec64.pth
+      sam_dilation             = 0
+      sam_threshold            = 0.93
+      bbox_expansion           = 0
+      mask_hint_threshold      = 0.7
+      mask_hint_use_negative   = False
+      morphology_operation     = dilate
+      morphology_distance      = 0
+      blur_radius              = 24
+      sigma_factor             = 1.0
+
+#42  ImageCompositeMasked   [★软羽化合成 (只换脸)]
+      destination              <- ★H3 Exact Recover（精确回到原帧率）(#36)
+      source                   <- ★ReActorFaceSwapOpt(#40)
+      mask                     <- ReActor mask helper (脸部区域+羽化)(#41)
+      x                        = 0
+      y                        = 0
+      resize_source            = False
+
+#43  CreateVideo   [create video]
+      images                   <- ★软羽化合成 (只换脸)(#42)
+      audio                    <- ★H3 Audio Recover(#37)
+      fps                      = 24.0
+      bit_depth                = 8
+
+#44  SaveVideo   [★save de-rope]
+      video                    <- create video(#43)
+      format                   = auto
+      codec                    = auto
+      filename_prefix          = 2026-09-22_wb/h3_guard/t_nolow
+
+#45  CreateVideo   [create video (swapped-only)]
+      images                   <- ★ReActorFaceSwapOpt(#40)
+      audio                    <- ★H3 Audio Recover(#37)
+      fps                      = 24.0
+      bit_depth                = 8
+
+#46  SaveVideo   [save (swapped-only)]
+      video                    <- create video (swapped-only)(#45)
+      format                   = auto
+      codec                    = auto
+      filename_prefix          = 2026-09-22_wb/h3_guard/t_nolow_noswblend
+
+#47  H3SaveHoldMap   [save hold map]
+      hold_map                 <- ★H3 Time Smear（慢放重绘）(#23)
+      filename_prefix          = 2026-09-22_wb/h3_guard/t_nolow_holdmap
+

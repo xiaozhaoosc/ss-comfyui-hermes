@@ -1,0 +1,75 @@
+{
+  "prompt": {
+    "1": {
+      "class_type": "LoadVideo",
+      "_meta": {
+        "title": "Input Video"
+      },
+      "inputs": {
+        "file": "input_video.mp4"
+      }
+    },
+    "2": {
+      "class_type": "GetVideoComponents",
+      "_meta": {
+        "title": "Extract Frames"
+      },
+      "inputs": {
+        "video": ["1", 0]
+      }
+    },
+    "3": {
+      "class_type": "LoadImage",
+      "_meta": {
+        "title": "Source Face"
+      },
+      "inputs": {
+        "image": "input_face.jpg",
+        "upload": "image"
+      }
+    },
+    "4": {
+      "class_type": "ReActorFaceSwap",
+      "_meta": {
+        "title": "Face Swap + Restore"
+      },
+      "inputs": {
+        "enabled": true,
+        "input_image": ["2", 0],
+        "source_image": ["3", 0],
+        "swap_model": "inswapper_128.onnx",
+        "facedetection": "retinaface_resnet50",
+        "face_restore_model": "GFPGANv1.4.pth",
+        "face_restore_visibility": 1.0,
+        "codeformer_weight": 0.5,
+        "detect_gender_input": "no",
+        "detect_gender_source": "no",
+        "input_faces_index": "0",
+        "source_faces_index": "0",
+        "console_log_level": 1
+      }
+    },
+    "5": {
+      "class_type": "CreateVideo",
+      "_meta": {
+        "title": "Assemble Video"
+      },
+      "inputs": {
+        "images": ["4", 0],
+        "fps": 24.0
+      }
+    },
+    "6": {
+      "class_type": "SaveVideo",
+      "_meta": {
+        "title": "Save Video"
+      },
+      "inputs": {
+        "video": ["5", 0],
+        "filename_prefix": "faceswap_video",
+        "format": "mp4",
+        "codec": "h264"
+      }
+    }
+  }
+}

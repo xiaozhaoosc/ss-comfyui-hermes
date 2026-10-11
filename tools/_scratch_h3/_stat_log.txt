@@ -1,0 +1,40 @@
+now=23:59:55
+__pycache__                                          8192 bytes  23:34:20
+_calib3.py                                           2723 bytes  23:44:05
+_calib4.py                                           3225 bytes  23:46:33
+_calib5.py                                           1644 bytes  23:48:44
+_calib6.py                                           2560 bytes  23:50:57
+_calib_log.txt                                        506 bytes  23:57:49
+_calib_stdout.txt                                    1566 bytes  23:53:27
+_calib_stdout2.txt                                     28 bytes  23:55:10
+_diag_diff.py                                        3129 bytes  23:33:29
+_diag_sampler.py                                     6305 bytes  23:33:12
+_h3_assets.py                                        4289 bytes  23:27:32
+_h3_exsig.py                                         2460 bytes  23:27:56
+_h3_probe.py                                         3813 bytes  23:25:55
+_h3_probe2.py                                        3628 bytes  23:26:14
+_h3_probe3.py                                        4215 bytes  23:26:33
+_pc_common.py                                        2331 bytes  22:48:07
+_pc_gen_flux.py                                      6240 bytes  23:00:01
+_pc_gen_sd15.py                                      5054 bytes  23:15:51
+_pc_prompts.py                                       7960 bytes  22:56:55
+_pc_report.py                                        7427 bytes  23:16:26
+_pc_sheet.py                                         3859 bytes  23:00:14
+_run_calib.py                                         834 bytes  23:55:13
+_sig_fix.py                                          1092 bytes  23:31:40
+_stat.py                                             1247 bytes  23:59:50
+_stat_log.txt                                           0 bytes  23:59:55
+_test_mimic_submit.py                                2268 bytes  00:50:36
+_test_poll_history.py                                   0 bytes  15:48:54
+_test_submit_poll.py                                 1735 bytes  00:33:29
+_v5_calib.py                                         1679 bytes  23:34:46
+_v5_calib2.py                                        2036 bytes  23:41:20
+_v5_validate.py                                      3887 bytes  23:32:30
+_wrap_out.txt                                           0 bytes  23:59:37
+_wrap_out.txt.err                                       0 bytes  23:59:37
+
+--- tail of _wrap_out.txt ---
+(empty)
+
+--- tail of _wrap_out.txt.err ---
+(empty)

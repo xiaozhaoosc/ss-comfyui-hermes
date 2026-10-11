@@ -1,0 +1,22 @@
+﻿[CHARACTER IDENTITY LOCK]
+Use C01 and C02 as the primary character references.
+Generate the same exact adult woman from a right three-quarter angle.
+The woman must be unmistakably the same person as C01 and C02.
+Camera position: approximately 45 degrees to the woman's right front side.
+Show:
+right-side facial structure
+nose bridge profile
+eye placement
+jawline
+chin
+natural hair framing
+shoulder structure
+waist
+right side of the costume.
+Preserve the exact same:
+facial identity, body proportions, hairstyle, costume, jewelry, emerald pendant, golden robe, crimson gown, decorative belt, and gold tassels.
+Do not redesign any facial feature.
+Do not change her age, ethnicity, or body proportions.
+Do not invent a different woman.
+This is the same character photographed from another angle.
+Only the camera angle changes.

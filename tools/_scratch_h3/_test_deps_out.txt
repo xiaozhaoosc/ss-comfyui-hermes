@@ -1,0 +1,9 @@
+python = C:\Users\kenzhao\anaconda3\python.exe
+
+FAIL  import triton             -> ModuleNotFoundError: No module named 'triton'
+FAIL  import triton.language    -> ModuleNotFoundError: No module named 'triton'
+FAIL  import sageattention      -> ModuleNotFoundError: No module named 'sageattention'
+
+pkg triton         not installed (PackageNotFoundError)
+pkg sageattention  not installed (PackageNotFoundError)
+pkg torch          version=2.9.1+cu130

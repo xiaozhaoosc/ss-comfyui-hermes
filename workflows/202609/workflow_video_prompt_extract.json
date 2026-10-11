@@ -1,0 +1,70 @@
+{
+  "_comment": "视频识别 → 截取关键帧 → 提取生图提示词。⚠️ 视觉 LLM 看图, 建议用 select_every_nth 控制抽帧数量避免一次传太多帧。输出=基于视频首帧/抽样帧的生图提示词。需先启动 llama-server 并安装 VideoHelperSuite。",
+  "10": {
+    "class_type": "VHS_LoadVideo",
+    "inputs": {
+      "video": "input.mp4",
+      "force_rate": 0,
+      "custom_width": 512,
+      "custom_height": 512,
+      "frame_load_cap": 1,
+      "skip_first_frames": 0,
+      "select_every_nth": 4
+    },
+    "_meta": {
+      "title": "🎬 加载视频(自动抽帧)"
+    }
+  },
+  "11": {
+    "class_type": "GetImageSize",
+    "inputs": {
+      "image": [
+        "10",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "📐 视频帧分辨率"
+    }
+  },
+  "12": {
+    "class_type": "BridgeLLMConfig",
+    "inputs": {
+      "base_url": "http://127.0.0.1:8112",
+      "api_key": "",
+      "model": "Qwen3.8-27B-GSQ-RCO-IQ3_S",
+      "max_tokens": 512,
+      "temperature": 0.5,
+      "stream": "True",
+      "response_format": "text"
+    },
+    "_meta": {
+      "title": "⚙️ LLM 配置"
+    }
+  },
+  "13": {
+    "class_type": "BridgeLLMImagePrompt",
+    "inputs": {
+      "config": [
+        "12",
+        0
+      ],
+      "image": [
+        "10",
+        0
+      ],
+      "width": [
+        "11",
+        0
+      ],
+      "height": [
+        "11",
+        1
+      ],
+      "prompt_hint": "视频关键场景, 电影感构图, 可用于图片重绘"
+    },
+    "_meta": {
+      "title": "🤖 看图提取提示词(含精确像素)"
+    }
+  }
+}

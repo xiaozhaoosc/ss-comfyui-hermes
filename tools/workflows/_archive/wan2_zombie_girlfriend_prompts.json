@@ -1,0 +1,109 @@
+{
+  "character_description": {
+    "main_character": "east asian young woman, around 25 years old, long black hair, fair skin, beautiful face, wearing casual clothes",
+    "style": "cinematic, dramatic lighting, high quality, 4k, movie scene",
+    "negative": "low quality, blurry, distorted face, western face, blonde hair, multiple people, watermark"
+  },
+  "episodes": {
+    "EP1": {
+      "title": "相遇",
+      "scenes": {
+        "S01": {
+          "prompt": "east asian young woman with long black hair, waking up in a dark abandoned hospital room, confused expression, looking around nervously, dramatic lighting, cinematic, 4k",
+          "subtitle": "我在哪里...这里是什么地方？"
+        },
+        "S02": {
+          "prompt": "east asian young woman with long black hair, walking slowly through dark hospital corridor, dim fluorescent lights flickering, zombie-like slow movement, dramatic atmosphere, cinematic, 4k",
+          "subtitle": "好饿...我需要找点吃的..."
+        },
+        "S03": {
+          "prompt": "east asian young woman with long black hair, looking at mirror in bathroom, shocked expression, pale skin, slightly torn clothes, dramatic lighting, cinematic, 4k",
+          "subtitle": "等等...这是我吗？"
+        },
+        "S04": {
+          "prompt": "east asian young woman with long black hair, discovering she has super strength, accidentally breaking a door handle, surprised expression, dramatic lighting, cinematic, 4k",
+          "subtitle": "这...这不可能！"
+        },
+        "S05": {
+          "prompt": "east asian young woman with long black hair, running fast through empty street at night, athletic movement, dramatic lighting, cinematic, 4k",
+          "subtitle": "我能跑得这么快？"
+        }
+      }
+    },
+    "EP2": {
+      "title": "适应",
+      "scenes": {
+        "S01": {
+          "prompt": "east asian young woman with long black hair, trying to eat normal food but can't, disgusted expression, kitchen scene, dramatic lighting, cinematic, 4k",
+          "subtitle": "吃不下...这些食物没有味道..."
+        },
+        "S02": {
+          "prompt": "east asian young woman with long black hair, discovering she doesn't need to sleep, sitting on bed staring at ceiling all night, dramatic lighting, cinematic, 4k",
+          "subtitle": "已经三天了...我一点都不困..."
+        },
+        "S03": {
+          "prompt": "east asian young woman with long black hair, accidentally hurting herself but wound heals instantly, amazed expression, dramatic lighting, cinematic, 4k",
+          "subtitle": "伤口...自动愈合了？"
+        },
+        "S04": {
+          "prompt": "east asian young woman with long black hair, researching zombies on computer late at night, screen glow on face, worried expression, dramatic lighting, cinematic, 4k",
+          "subtitle": "我到底变成了什么..."
+        },
+        "S05": {
+          "prompt": "east asian young woman with long black hair, practicing controlling her strength in empty parking lot, focused expression, dramatic lighting, cinematic, 4k",
+          "subtitle": "我必须学会控制这股力量。"
+        }
+      }
+    },
+    "EP3": {
+      "title": "危险",
+      "scenes": {
+        "S01": {
+          "prompt": "east asian young woman with long black hair, encountering a real zombie in dark alley, defensive stance, scared but determined expression, dramatic lighting, cinematic, 4k",
+          "subtitle": "那...那是什么东西？！"
+        },
+        "S02": {
+          "prompt": "east asian young woman with long black hair, fighting zombie with bare hands, action scene, intense expression, dramatic lighting, cinematic, 4k",
+          "subtitle": "我不能死在这里！"
+        },
+        "S03": {
+          "prompt": "east asian young woman with long black hair, discovering she can sense other zombies nearby, concentrating with closed eyes, dramatic lighting, cinematic, 4k",
+          "subtitle": "我能感觉到它们...就在附近..."
+        },
+        "S04": {
+          "prompt": "east asian young woman with long black hair, saving a human from zombie attack, heroic pose, dramatic lighting, cinematic, 4k",
+          "subtitle": "快跑！我来挡住它！"
+        },
+        "S05": {
+          "prompt": "east asian young woman with long black hair, looking at city skyline at dawn, contemplative expression, dramatic lighting, cinematic, 4k",
+          "subtitle": "也许...这就是我的使命。"
+        }
+      }
+    },
+    "EP4": {
+      "title": "抉择",
+      "scenes": {
+        "S01": {
+          "prompt": "east asian young woman with long black hair, meeting other survivors who are afraid of her, hurt expression, dramatic lighting, cinematic, 4k",
+          "subtitle": "别怕...我不会伤害你们的..."
+        },
+        "S02": {
+          "prompt": "east asian young woman with long black hair, proving she's different by helping survivors, carrying supplies, determined expression, dramatic lighting, cinematic, 4k",
+          "subtitle": "让我帮你们。"
+        },
+        "S03": {
+          "prompt": "east asian young woman with long black hair, facing a horde of zombies protecting survivors, battle stance, dramatic lighting, cinematic, 4k",
+          "subtitle": "你们先走，这里交给我！"
+        },
+        "S04": {
+          "prompt": "east asian young woman with long black hair, severely injured after battle, slowly healing, exhausted expression, dramatic lighting, cinematic, 4k",
+          "subtitle": "还没结束...我还能战斗..."
+        },
+        "S05": {
+          "prompt": "east asian young woman with long black hair, standing with survivors looking at sunrise, hopeful expression, dramatic lighting, cinematic, 4k",
+          "subtitle": "新的一天...新的开始。"
+        }
+      }
+    }
+  }
+}

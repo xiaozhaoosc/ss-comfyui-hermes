@@ -1,0 +1,60 @@
+{
+  "1": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "vton_person2.png",
+      "upload": "image"
+    }
+  },
+  "2": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "vton_garment2.jpg",
+      "upload": "image"
+    }
+  },
+  "3": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "vton_mask2.png",
+      "upload": "image"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "vton_pose2.png",
+      "upload": "image"
+    }
+  },
+  "5": {
+    "class_type": "PipelineLoader",
+    "inputs": {
+      "weight_dtype": "float16"
+    }
+  },
+  "6": {
+    "class_type": "IDM-VTON",
+    "inputs": {
+      "pipeline": ["5", 0],
+      "human_img": ["1", 0],
+      "pose_img": ["4", 0],
+      "mask_img": ["3", 0],
+      "garment_img": ["2", 0],
+      "garment_description": "a short sleeve casual t-shirt",
+      "negative_prompt": "bad quality, blurry, distorted, artifacts",
+      "width": 512,
+      "height": 1024,
+      "num_inference_steps": 30,
+      "guidance_scale": 2.0,
+      "strength": 1.0,
+      "seed": 42
+    }
+  },
+  "7": {
+    "class_type": "PreviewImage",
+    "inputs": {
+      "images": ["6", 0]
+    }
+  }
+}

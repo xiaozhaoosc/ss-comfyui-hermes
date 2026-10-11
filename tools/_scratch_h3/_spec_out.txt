@@ -1,0 +1,67 @@
+[ReActorMaskHelper]
+   req  image                          IMAGE default=None
+   req  swapped_image                  IMAGE default=None
+   req  bbox_model_name                COMBO['bbox/face_yolov8m.pt', 'bbox/hand_yolov8s.pt', 'segm/person_yolov8m-seg.pt'] default=None
+   req  bbox_threshold                 FLOAT default=0.5
+   req  bbox_dilation                  INT default=10
+   req  bbox_crop_factor               FLOAT default=3.0
+   req  bbox_drop_size                 INT default=10
+   req  sam_model_name                 COMBO['sam_vit_b_01ec64.pth'] default=None
+   req  sam_dilation                   INT default=0
+   req  sam_threshold                  FLOAT default=0.93
+   req  bbox_expansion                 INT default=0
+   req  mask_hint_threshold            FLOAT default=0.7
+   req  mask_hint_use_negative         COMBO['False', 'Small', 'Outter'] default=None
+   req  morphology_operation           COMBO['dilate', 'erode', 'open', 'close'] default=None
+   req  morphology_distance            INT default=0
+   req  blur_radius                    INT default=9
+   req  sigma_factor                   FLOAT default=1.0
+   opt  mask_optional                  MASK default=None
+   outputs = ['IMAGE', 'MASK', 'IMAGE', 'IMAGE']
+
+[ReActorFaceSwapOpt]
+   req  enabled                        BOOLEAN default=True
+   req  input_image                    IMAGE default=None
+   req  swap_model                     COMBO['inswapper_128.onnx'] default=None
+   req  facedetection                  COMBO['retinaface_resnet50', 'retinaface_mobile0.25', 'YOLOv5l', 'YOLOv5n'] default=None
+   req  face_restore_model             COMBO['none', 'codeformer.pth', 'GFPGANv1.4.pth'] default=None
+   req  face_restore_visibility        FLOAT default=1
+   req  codeformer_weight              FLOAT default=0.5
+   opt  source_image                   IMAGE default=None
+   opt  face_model                     FACE_MODEL default=None
+   opt  options                        OPTIONS default=None
+   opt  face_boost                     FACE_BOOST default=None
+   outputs = ['IMAGE', 'FACE_MODEL', 'IMAGE']
+
+[ReActorOptions]
+   req  input_faces_order              COMBO['left-right', 'right-left', 'top-bottom', 'bottom-top', 'small-large', 'large-small'] default='large-small'
+   req  input_faces_index              STRING default='0'
+   req  detect_gender_input            COMBO['no', 'female', 'male'] default='no'
+   req  source_faces_order             COMBO['left-right', 'right-left', 'top-bottom', 'bottom-top', 'small-large', 'large-small'] default='large-small'
+   req  source_faces_index             STRING default='0'
+   req  detect_gender_source           COMBO['no', 'female', 'male'] default='no'
+   req  console_log_level              COMBO[0, 1, 2] default=1
+   req  restore_swapped_only           BOOLEAN default=True
+   outputs = ['OPTIONS']
+
+[ImageCompositeMasked]
+   req  destination                    IMAGE default=None
+   req  source                         IMAGE default=None
+   req  x                              INT default=0
+   req  y                              INT default=0
+   req  resize_source                  BOOLEAN default=False
+   opt  mask                           MASK default=None
+   outputs = ['IMAGE']
+
+[GrowMaskWithBlur]
+   req  mask                           MASK default=None
+   req  expand                         INT default=0
+   req  incremental_expandrate         FLOAT default=0.0
+   req  tapered_corners                BOOLEAN default=True
+   req  flip_input                     BOOLEAN default=False
+   req  blur_radius                    FLOAT default=0.0
+   req  lerp_alpha                     FLOAT default=1.0
+   req  decay_factor                   FLOAT default=1.0
+   opt  fill_holes                     BOOLEAN default=False
+   outputs = ['MASK', 'MASK']
+

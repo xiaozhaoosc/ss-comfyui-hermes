@@ -1,0 +1,32 @@
+﻿[CHARACTER IDENTITY LOCK]
+Use the provided Character Master Reference Images as the sole identity reference for the character.
+The woman in the video must be the exact same adult woman shown in the reference images.
+Maintain consistent:
+- facial identity
+- eye shape
+- nose structure
+- lip shape
+- jawline
+- face shape
+- skin tone
+- long straight black hair
+- body proportions
+- overall height and anatomy
+
+Prevent all forms of identity drift.
+Do NOT change:
+- facial structure
+- facial proportions
+- eye shape
+- nose
+- lips
+- hair color
+- apparent age
+- body proportions
+- ethnic appearance
+- core costume identity
+
+The only elements allowed to change are:
+pose, movement, expression, camera position, camera movement, environment, lighting, and cinematic framing.
+
+Treat the reference images as different shots of the exact same real person, not as separate character inspirations.

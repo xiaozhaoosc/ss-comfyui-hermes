@@ -1,0 +1,139 @@
+{
+  "1": {
+    "inputs": {
+      "unet_name": "qwen-image-2.1-UC-Q4_K_M.gguf"
+    },
+    "class_type": "UnetLoaderGGUF",
+    "_meta": {
+      "title": "1. 视觉扩散模型 (DiT GGUF) [inject:unet]"
+    }
+  },
+  "2": {
+    "inputs": {
+      "clip_name": "qwen3vl_8b_heretic-Q4_K_M.gguf",
+      "type": "qwen_image"
+    },
+    "class_type": "CLIPLoaderGGUF",
+    "_meta": {
+      "title": "2. 文本编码器 (CLIP GGUF) [inject:clip]"
+    }
+  },
+  "3": {
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "3. 图像编解码器 (VAE) [inject:vae]"
+    }
+  },
+  "4": {
+    "inputs": {
+      "shift": 3.1,
+      "model": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "4. 采样位移对齐官方 t2i 模板 (shift 3.1) [inject:shift]"
+    }
+  },
+  "5": {
+    "inputs": {
+      "text": "masterpiece, ultra-detailed, cinematic lighting, a futuristic cyberpunk girl standing in a neon-lit rain street of Neo-Tokyo, reflective puddles, soft ambient volumetric haze, intricately detailed jacket, vibrant blue and magenta neon lights",
+      "clip": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "5. 正向提示词 [inject:prompt]"
+    }
+  },
+  "6": {
+    "inputs": {
+      "text": "worst quality, low quality, blurry, deformed, distorted, bad anatomy, jpeg artifacts, watermark, text",
+      "clip": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "6. 负向提示词 (cfg>1 时生效) [inject:negative]"
+    }
+  },
+  "7": {
+    "inputs": {
+      "width": 1328,
+      "height": 1328,
+      "batch_size": 1
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "7. 潜空间尺寸 1328x1328 (16 通道) [inject:size]"
+    }
+  },
+  "8": {
+    "inputs": {
+      "seed": 42,
+      "steps": 20,
+      "cfg": 2.5,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": [
+        "4",
+        0
+      ],
+      "positive": [
+        "5",
+        0
+      ],
+      "negative": [
+        "6",
+        0
+      ],
+      "latent_image": [
+        "7",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "8. KSampler (Euler + Simple 20步 / CFG 2.5) [inject:sampler]"
+    }
+  },
+  "9": {
+    "inputs": {
+      "samples": [
+        "8",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "9. VAE 解码为图像"
+    }
+  },
+  "10": {
+    "inputs": {
+      "filename_prefix": "2026-09-30/qwen_t2i",
+      "images": [
+        "9",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "10. 保存图像 (按日期归档) [inject:output]"
+    }
+  }
+}
