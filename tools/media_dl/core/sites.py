@@ -9,7 +9,7 @@ from __future__ import annotations
 
 import re
 from dataclasses import dataclass, field
-from urllib.parse import urlparse
+from urllib.parse import parse_qs, urlparse
 
 
 @dataclass
@@ -38,8 +38,11 @@ class SiteRule:
                 tail = s
                 break
         if not tail:
-            tail = segs[-1] if segs else parsed.netloc.split(":")[0]
-        tail = re.sub(r"[^A-Za-z0-9._-]", "_", tail)[:40] or "download"
+            # YouTube 之类：/watch?v=ID，ID 在 query 里
+            qid = parse_qs(parsed.query).get("v", [""])[0]
+            tail = qid or (segs[-1] if segs else parsed.netloc.split(":")[0])
+        # 统一用下划线，保证与 ig_download.py 的产物目录名一致（续传才连得上）
+        tail = re.sub(r"[^A-Za-z0-9_-]", "_", tail)[:40] or "download"
         return f"{self.name}_{tail}"
 
 
