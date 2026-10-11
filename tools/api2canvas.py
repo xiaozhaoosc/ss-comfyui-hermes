@@ -31,8 +31,17 @@ def is_port_type(type_spec):
         return True
     body = _type_body(type_spec)
     if isinstance(body, list) and len(body) == 1 and isinstance(body[0], str) and body[0].isupper():
-        return body[0] not in WIDGET_TYPE_NAMES
+        # COMFY_DYNAMICCOMBO_V3 等动态下拉同样是 widget, 不能被当成端口。
+        return body[0] not in WIDGET_TYPE_NAMES and "COMBO" not in body[0]
     return False
+
+
+def widget_type_name(type_spec):
+    """widget 对应的端口类型名 (转成输入时前端用 widget 的类型名, 如 FLOAT/INT/COMBO)。"""
+    body = _type_body(type_spec)
+    if isinstance(body, list) and len(body) == 1 and isinstance(body[0], str):
+        return body[0]
+    return "COMBO"
 
 
 def port_type(type_spec):
@@ -92,20 +101,60 @@ def build_canvas(prompt, object_info):
             else:
                 # widget (类型为列表: COMBO / ["INT",{}] / ["STRING",{}] 等)
                 cfg = type_spec[-1] if isinstance(type_spec[-1], dict) else {}
-                widgets_values.append(val if val is not None else cfg.get("default"))
-                # 前端会给 seed/noise_seed widget 自动附加 control_after_generate 下拉
-                if cfg.get("control_after_generate") or name in ("seed", "noise_seed"):
-                    widgets_values.append("fixed")
-                if cfg.get("image_upload"):
-                    widgets_values.append("image")
+                if is_link_value(val, node_ids) or cfg.get("forceInput"):
+                    # 前端把该 widget 转成了输入端口 (forceInput, 或被连线)。
+                    t = widget_type_name(type_spec)
+                    if is_link_value(val, node_ids):
+                        # 依据真实 UI 文件: inputs 里带 "widget":{"name":...}, 且 widgets_values
+                        # 仍保留该 widget 的值 (原顺序), 用默认值占位。
+                        lid = next_link[0]; next_link[0] += 1
+                        links.append([lid, int(val[0]), val[1], int(nid), len(input_ports), t])
+                        input_ports.append({"name": name, "type": t, "widget": {"name": name}, "link": lid})
+                        parents.append(val[0])
+                        widgets_values.append(cfg.get("default"))
+                    else:
+                        # 纯 forceInput: 本就没有 widget, 不占 widgets_values。
+                        input_ports.append({"name": name, "type": t, "link": None})
+                else:
+                    widgets_values.append(val if val is not None else cfg.get("default"))
+                    # 前端会给 seed/noise_seed widget 自动附加 control_after_generate 下拉
+                    if cfg.get("control_after_generate") or name in ("seed", "noise_seed"):
+                        widgets_values.append("fixed")
+                    if cfg.get("image_upload"):
+                        widgets_values.append("image")
 
-        if cls == "VHS_VideoCombine" and "format" in api_inputs:
-            # VHS 前端期望 [frame_rate, loop_count, filename_prefix, format, {extra参数dict}, save_output]
-            extra = {k: v for k, v in api_inputs.items()
-                     if k not in ("images", "frame_rate", "loop_count", "filename_prefix", "format", "save_output")}
-            widgets_values = [api_inputs.get("frame_rate"), api_inputs.get("loop_count"),
-                              api_inputs.get("filename_prefix"), api_inputs.get("format"),
-                              extra, api_inputs.get("save_output")]
+        # VHS 系列节点的前端 widget 序列与 /object_info 的 optional 列表**不一致**，
+        # 必须按前端实际约定重排，否则位置错位会把值塞到错误的 widget 上。
+        if cls == "VHS_VideoCombine":
+            # 前端 serialize() 产出的是**字典**（不是数组），键名如下；
+            # 依据：仓库内真实可用的 UI 工作流 user/default/workflows/faceswap_video_reactor.json
+            widgets_values = {
+                "frame_rate": api_inputs.get("frame_rate", 8),
+                "loop_count": api_inputs.get("loop_count", 0),
+                "filename_prefix": api_inputs.get("filename_prefix", "ComfyUI"),
+                "format": api_inputs.get("format", "video/h264-mp4"),
+                "pix_fmt": api_inputs.get("pix_fmt", "yuv420p"),
+                "crf": api_inputs.get("crf", 19),
+                "save_metadata": api_inputs.get("save_metadata", True),
+                "pingpong": api_inputs.get("pingpong", False),
+                "save_output": api_inputs.get("save_output", True),
+            }
+        elif cls in ("VHS_LoadVideo", "VHS_LoadVideoPath"):
+            # 前端 widget 序列固定 8 项：
+            # [video, force_rate, custom_width, custom_height, frame_load_cap,
+            #  skip_first_frames, select_every_nth, force_size]
+            # /object_info 里的 meta_batch / vae / format 前端**不渲染**，必须丢弃；
+            # 末尾 force_size 前端默认 "Disabled"（同样是上面那份真实 UI 文件里的取值）。
+            widgets_values = [
+                api_inputs.get("video", ""),
+                api_inputs.get("force_rate", 0),
+                api_inputs.get("custom_width", 0),
+                api_inputs.get("custom_height", 0),
+                api_inputs.get("frame_load_cap", 0),
+                api_inputs.get("skip_first_frames", 0),
+                api_inputs.get("select_every_nth", 1),
+                "Disabled",
+            ]
 
         out_types = obj_def.get("output", [])
         out_names = obj_def.get("output_name") or [t if not isinstance(t, list) else str(t) for t in out_types]
@@ -144,7 +193,7 @@ def build_canvas(prompt, object_info):
             "id": int(nid),
             "type": meta["cls"],
             "pos": [60 + col * 400, 60 + row * 280],
-            "size": {"0": 340, "1": h},
+            "size": [340, h],
             "flags": {},
             "order": len(nodes),
             "mode": 0,

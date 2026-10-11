@@ -1,0 +1,42 @@
+RapidOCR.__init__ signature:
+(self, **kwargs)
+
+pkg file: C:\Users\ken2zhao\.workbuddy\binaries\python\envs\default\Lib\site-packages\rapidocr_onnxruntime\__init__.py
+version: ?
+--- init source ---
+    def __init__(self, **kwargs):
+        config_path = str(root_dir / 'config.yaml')
+        if not Path(config_path).exists():
+            raise FileExistsError(f'{config_path} does not exist!')
+        config = read_yaml(config_path)
+        config = concat_model_path(config)
+
+        if kwargs:
+            updater = UpdateParameters()
+            config = updater(config, **kwargs)
+
+        global_config = config['Global']
+        self.print_verbose = global_config['print_verbose']
+        self.text_score = global_config['text_score']
+        self.min_height = global_config['min_height']
+        self.width_height_ratio = global_config['width_height_ratio']
+
+        self.use_text_det = config['Global']['use_text_det']
+        if self.use_text_det:
+            TextDetector = self.init_module(config['Det']['module_name'],
+                                            config['Det']['class_name'])
+            self.text_detector = TextDetector(config['Det'])
+
+        TextRecognizer = self.init_module(config['Rec']['module_name'],
+                                          config['Rec']['class_name'])
+        self.text_recognizer = TextRecognizer(config['Rec'])
+
+        self.use_angle_cls = config['Global']['use_angle_cls']
+        if self.use_angle_cls:
+            TextClassifier = self.init_module(config['Cls']['module_name'],
+                                              config['Cls']['class_name'])
+            self.text_cls = TextClassifier(config['Cls'])
+
+        self.load_img = LoadImage()
+
+cfg introspect err: ModuleNotFoundError("No module named 'rapidocr_onnxruntime.main'")

@@ -53,6 +53,7 @@ echo ========================================
 "%PYTHON%" main.py ^
     --lowvram ^
     --listen 0.0.0.0 ^
-    --port 8188
+    --port 8188 ^
+    --enable-assets
 
 pause

@@ -18,6 +18,15 @@ FLUX_ANCHOR = ("A fully dressed young East Asian woman with long black hair, "
                "wearing a white spaghetti-strap camisole top, modest everyday clothing, "
                "upper body portrait. ")
 
+# ---- Z-Image Turbo: distilled, cfg=1.0 -> negative is INEFFECTIVE.
+# Clothing/framing must therefore be carried entirely by the positive anchor.
+ZIMAGE_NEG = ("lowres, bad anatomy, bad hands, extra limbs, deformed, "
+              "watermark, text, jpeg artifacts, blurry")
+
+ZIMAGE_ANCHOR = ("A fully dressed young East Asian woman with long black hair, "
+                 "wearing a white spaghetti-strap camisole top, modest everyday clothing, "
+                 "upper body portrait. ")
+
 # ---- SD1.5 / SDXL style supplementary quality tags (positive) ----
 SD_QUALITY = ("masterpiece, best quality, ultra detailed, photorealistic, "
               "8k uhd, dslr, soft lighting, film grain, sharp focus")
@@ -124,3 +133,13 @@ SCENES = [
 
 def sd_positive(scene, extra=SD_QUALITY):
     return extra + ", " + scene["sd"]
+
+
+def zimage_positive(scene, extra=None):
+    """Z-Image Turbo takes natural-language prose. cfg=1.0 means the negative
+    prompt has no effect, so the clothing anchor MUST be in the positive."""
+    return ZIMAGE_ANCHOR + scene["flux"]
+
+
+def flux_positive(scene):
+    return FLUX_ANCHOR + scene["flux"]

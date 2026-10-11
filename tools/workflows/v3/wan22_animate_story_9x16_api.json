@@ -1,0 +1,206 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "_meta": { "title": "Load Diffusion Model (Wan2.2 Animate 14B fp8)" },
+    "inputs": {
+      "unet_name": "Wan2_2-Animate-14B_fp8_e4m3fn_scaled_KJ.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "_meta": { "title": "Load CLIP (umt5 xxl fp8)" },
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "_meta": { "title": "Load VAE (Wan 2.1)" },
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "CLIPVisionLoader",
+    "_meta": { "title": "Load CLIP Vision" },
+    "inputs": {
+      "clip_name": "clip_vision_h.safetensors"
+    }
+  },
+  "5": {
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": { "title": "LoraLoader (lightx2v 蒸馏加速 · 必须 6 步 + cfg=1.0)" },
+    "inputs": {
+      "model": ["1", 0],
+      "lora_name": "lightx2v_I2V_14B_480p_cfg_step_distill_rank64_bf16.safetensors",
+      "strength_model": 1.0
+    }
+  },
+  "6": {
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": { "title": "LoraLoader (WanAnimate 光影融合)" },
+    "inputs": {
+      "model": ["5", 0],
+      "lora_name": "WanAnimate_relight_lora_fp16.safetensors",
+      "strength_model": 1.0
+    }
+  },
+  "7": {
+    "class_type": "ModelSamplingSD3",
+    "_meta": { "title": "ModelSamplingSD3 (shift=8.0, 官方对齐)" },
+    "inputs": {
+      "model": ["6", 0],
+      "shift": 8.0
+    }
+  },
+  "8": {
+    "class_type": "CLIPTextEncode",
+    "_meta": { "title": "★ 正向提示词（北宋杨家将 · 新白描/上美影手绘手风）" },
+    "inputs": {
+      "text": "Traditional Chinese ink wash animation, vintage Shanghai Animation Film Studio style, new baimiao, flat mineral pigment color blocks, clear brush strokes, rice paper texture, ancient Song Dynasty general in armour, cinematic atmosphere, 9:16 vertical composition, film grain, masterpiece",
+      "clip": ["2", 0]
+    }
+  },
+  "9": {
+    "class_type": "CLIPTextEncode",
+    "_meta": { "title": "★ 负向提示词（过滤写实3D/CG塑料感/现代元素）" },
+    "inputs": {
+      "text": "3d render, cgi, photorealistic, plastic texture, western facial features, modern elements, neon glow, blur, low quality, distorted anatomy, extra limbs, bad hands, watermark, modern text, oversaturated",
+      "clip": ["2", 0]
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "_meta": { "title": "★ 镜头输入1：角色立绘 / 分镜首帧（存放在 ComfyUI/input/）" },
+    "inputs": {
+      "image": "anime_ref_character.jpg"
+    }
+  },
+  "11": {
+    "class_type": "CLIPVisionEncode",
+    "_meta": { "title": "CLIPVisionEncode (角色视觉编码)" },
+    "inputs": {
+      "clip_vision": ["4", 0],
+      "image": ["10", 0],
+      "crop": "none"
+    }
+  },
+  "12": {
+    "class_type": "LoadVideo",
+    "_meta": { "title": "★ 镜头输入2：动作驱动 / 运镜参考视频（存放在 ComfyUI/input/）" },
+    "inputs": {
+      "file": "video_wan2_2_14B_animate_original_video.mp4"
+    }
+  },
+  "13": {
+    "class_type": "GetVideoComponents",
+    "_meta": { "title": "Get Video Components" },
+    "inputs": {
+      "video": ["12", 0]
+    }
+  },
+  "14": {
+    "class_type": "ImageScale",
+    "_meta": { "title": "ImageScale (9:16 竖屏缩放: 544x960 适配 16GB 显存)" },
+    "inputs": {
+      "image": ["13", 0],
+      "upscale_method": "lanczos",
+      "width": 544,
+      "height": 960,
+      "crop": "center"
+    }
+  },
+  "15": {
+    "class_type": "DWPreprocessor",
+    "_meta": { "title": "DWPreprocessor (提取面部表情 -> face_video)" },
+    "inputs": {
+      "image": ["14", 0],
+      "detect_hand": "disable",
+      "detect_body": "disable",
+      "detect_face": "enable",
+      "resolution": 512,
+      "bbox_detector": "yolox_l.torchscript.pt",
+      "pose_estimator": "dw-ll_ucoco_384_bs5.torchscript.pt",
+      "scale_stick_for_xinsr_cn": "disable"
+    }
+  },
+  "16": {
+    "class_type": "DWPreprocessor",
+    "_meta": { "title": "DWPreprocessor (提取肢体手部骨骼 -> pose_video)" },
+    "inputs": {
+      "image": ["14", 0],
+      "detect_hand": "enable",
+      "detect_body": "enable",
+      "detect_face": "disable",
+      "resolution": 512,
+      "bbox_detector": "yolox_l.torchscript.pt",
+      "pose_estimator": "dw-ll_ucoco_384_bs5.torchscript.pt",
+      "scale_stick_for_xinsr_cn": "disable"
+    }
+  },
+  "17": {
+    "class_type": "WanAnimateToVideo",
+    "_meta": { "title": "WanAnimateToVideo (9:16 竖屏 77帧约5秒 Move 模式)" },
+    "inputs": {
+      "positive": ["8", 0],
+      "negative": ["9", 0],
+      "vae": ["3", 0],
+      "width": 544,
+      "height": 960,
+      "length": 77,
+      "batch_size": 1,
+      "continue_motion_max_frames": 5,
+      "video_frame_offset": 0,
+      "clip_vision_output": ["11", 0],
+      "reference_image": ["10", 0],
+      "face_video": ["15", 0],
+      "pose_video": ["16", 0]
+    }
+  },
+  "18": {
+    "class_type": "KSampler",
+    "_meta": { "title": "KSampler (官方标准 6 步, cfg=1.0, euler simple)" },
+    "inputs": {
+      "model": ["7", 0],
+      "seed": 20261003,
+      "steps": 6,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "positive": ["17", 0],
+      "negative": ["17", 1],
+      "latent_image": ["17", 2],
+      "denoise": 1.0
+    }
+  },
+  "19": {
+    "class_type": "VAEDecode",
+    "_meta": { "title": "VAE Decode" },
+    "inputs": {
+      "samples": ["18", 0],
+      "vae": ["3", 0]
+    }
+  },
+  "20": {
+    "class_type": "CreateVideo",
+    "_meta": { "title": "Create Video" },
+    "inputs": {
+      "images": ["19", 0],
+      "fps": ["13", 2],
+      "audio": ["13", 1]
+    }
+  },
+  "21": {
+    "class_type": "SaveVideo",
+    "_meta": { "title": "Save Video (自动归档到当日日期目录)" },
+    "inputs": {
+      "video": ["20", 0],
+      "filename_prefix": "2026-10-03/yangjiajiang/ep01_shot",
+      "format": "auto",
+      "codec": "auto"
+    }
+  }
+}

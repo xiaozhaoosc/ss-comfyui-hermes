@@ -1,0 +1,12 @@
+{
+  "name": "凌霜",
+  "seed": 20261011,
+  "model": "Counterfeit-V3.0_fp16.safetensors",
+  "lora": null,
+  "traits": {
+    "hair": "long silver hair with cyan tips, side ponytail",
+    "clothes": "white hanfu with blue embroidery, flowing sleeves",
+    "prop": "ice crystal staff"
+  },
+  "sheet_path": "01_assets/char_lingshuang_sheet.png"
+}

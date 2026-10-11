@@ -26,6 +26,22 @@ FILES = [
     ("humanparsing/parsing_atr.onnx", "~268MB"),
     ("humanparsing/parsing_lip.onnx", "~162MB"),
     ("openpose/ckpts/body_pose_model.pth", "~200MB"),
+    # ---- 2026-10-11 补充: PipelineLoader 需要的 config/tokenizer 小文件 ----
+    ("scheduler/scheduler_config.json", "~1KB"),
+    ("vae/config.json", "~1KB"),
+    ("unet/config.json", "~2KB"),
+    ("image_encoder/config.json", "~1KB"),
+    ("unet_encoder/config.json", "~2KB"),
+    ("text_encoder/config.json", "~1KB"),
+    ("text_encoder_2/config.json", "~1KB"),
+    ("tokenizer/tokenizer_config.json", "~1KB"),
+    ("tokenizer/special_tokens_map.json", "~1KB"),
+    ("tokenizer/vocab.json", "~1MB"),
+    ("tokenizer/merges.txt", "~500KB"),
+    ("tokenizer_2/tokenizer_config.json", "~1KB"),
+    ("tokenizer_2/special_tokens_map.json", "~1KB"),
+    ("tokenizer_2/vocab.json", "~1MB"),
+    ("tokenizer_2/merges.txt", "~500KB"),
 ]
 
 

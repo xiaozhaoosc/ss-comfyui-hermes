@@ -1,0 +1,13 @@
+{
+  "name": "夜岚",
+  "seed": 20261013,
+  "model": "Counterfeit-V3.0_fp16.safetensors",
+  "lora": null,
+  "gender": "male",
+  "traits": {
+    "hair": "short black hair with blue highlights, sharp bangs",
+    "clothes": "dark blue armor with silver trim, flowing cape",
+    "prop": "long katana sword"
+  },
+  "sheet_path": "01_assets/char_yelan_sheet.png"
+}

@@ -38,7 +38,7 @@
   },
   "5": {
     "inputs": {
-      "model_name": "realesr-general-x4v3.pth"
+      "model_name": "RealESRGAN_x4plus.pth"
     },
     "class_type": "UpscaleModelLoader",
     "_meta": {
@@ -246,7 +246,7 @@
   },
   "18": {
     "inputs": {
-      "model_name": "realesr-general-x4v3.pth"
+      "model_name": "RealESRGAN_x4plus.pth"
     },
     "class_type": "UpscaleModelLoader",
     "_meta": {
@@ -302,7 +302,7 @@
   },
   "22": {
     "inputs": {
-      "prompt": "Enhance this photo's micro details at full resolution. Add natural skin texture, individual hair strands, eyelashes and fabric weave. Keep edges clean and sharp, remove residual softness. Keep the subject's identity, facial features, expression, pose, clothing and composition exactly unchanged. Natural colors, photographic quality.",
+      "prompt": "Enhance this photo's micro details at full resolution. Restore natural skin texture with visible pores, fine film grain and micro-contrast; keep subtle tonal variation in smooth skin areas. Add individual hair strands, eyelashes and fabric weave. Keep edges clean and sharp, remove residual softness. Keep the subject's identity, facial features, expression, pose, clothing and composition exactly unchanged. Natural colors, photographic quality.",
       "clip": [
         "2",
         0
@@ -323,7 +323,7 @@
   },
   "23": {
     "inputs": {
-      "prompt": "blurry, out of focus, soft focus, noise, film grain, JPEG blocking artifacts, compression artifacts, oversmoothed, plastic skin, waxy skin, over-sharpened halos, ringing, deformed, distorted face, changed identity, extra fingers, watermark, text, logo, low resolution",
+      "prompt": "blurry, out of focus, soft focus, JPEG blocking artifacts, compression artifacts, oversmoothed, plastic skin, waxy skin, over-sharpened halos, ringing, deformed, distorted face, changed identity, extra fingers, watermark, text, logo, low resolution",
       "clip": [
         "2",
         0
@@ -339,7 +339,7 @@
     },
     "class_type": "TextEncodeQwenImageEditPlus",
     "_meta": {
-      "title": "23. Pass2 负向提示词 [inject:negative2]"
+      "title": "23. Pass2 负向提示词 (2026-10-10 删 noise/film grain，避免压制 prompt2 的颗粒诉求) [inject:negative2]"
     }
   },
   "24": {
@@ -435,24 +435,38 @@
       "facedetection": "retinaface_resnet50",
       "model": "codeformer.pth",
       "visibility": 1.0,
-      "codeformer_weight": 0.5
+      "codeformer_weight": 0.25
     },
     "class_type": "ReActorRestoreFace",
     "_meta": {
-      "title": "29. 人像修脸 (CodeFormer, 强度可调) [inject:face]"
+      "title": "29. 人像修脸 (CodeFormer 0.25; 2026-10-10 实测 CF 非塑料主因，低权减少无谓抹皮) [inject:face]"
     }
   },
   "30": {
     "inputs": {
       "filename_prefix": "2026-10-01/qwen_restore_v5",
       "images": [
-        "29",
+        "31",
         0
       ]
     },
     "class_type": "SaveImage",
     "_meta": {
       "title": "30. 保存图像 (脚本按当日日期覆盖前缀) [inject:output]"
+    }
+  },
+  "31": {
+    "inputs": {
+      "noise_aug_strength": 0.008,
+      "seed": 123,
+      "image": [
+        "29",
+        0
+      ]
+    },
+    "class_type": "ImageNoiseAugmentation",
+    "_meta": {
+      "title": "31. 末级胶片颗粒回填 (0.008 待复测终定; 对照: 外挂 finalize_grain σ1.5→平坦底1.156) [inject:grain]"
     }
   }
 }

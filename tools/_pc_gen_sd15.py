@@ -7,14 +7,20 @@ Usage:
 import os, sys, json, time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from _pc_common import (submit, wait, collect_outputs, save_meta, OUT_ROOT, BASE)
+from _pc_common import (submit, wait, collect_outputs, save_meta, OUT_ROOT, BASE,
+                        comfy_prefix)
 import _pc_prompts as P
 
 CONFIG = {
     # ckpt_name : (steps, cfg, sampler, scheduler, width, height, seed_base, lora)
+    # ---- SD1.5 ----
     "majicmixRealistic_v7.safetensors": (30, 7.0, "dpmpp_2m", "karras", 512, 768, 210000, None),
     "Counterfeit-V3.0_fp16.safetensors": (28, 8.0, "dpmpp_2m", "karras", 512, 768, 310000, None),
     "AOM3A3_orangemixs.safetensors": (28, 8.0, "dpmpp_2m", "karras", 512, 768, 410000, None),
+    # ---- SDXL（同一张图走 CheckpointLoaderSimple，只是档位不同）----
+    "RealVisXL_V4.0.safetensors": (30, 5.5, "dpmpp_2m", "karras", 1024, 1024, 510000, None),
+    "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors": (30, 5.0, "dpmpp_2m", "karras",
+                                                          1024, 1024, 610000, None),
 }
 
 
@@ -56,17 +62,20 @@ def main():
     sub = sys.argv[2]
     only = None
     steps_override = None
+    outdir_arg = None
     for i, a in enumerate(sys.argv):
         if a == "--scenes" and i + 1 < len(sys.argv):
             only = set(sys.argv[i + 1].split(","))
         if a == "--steps" and i + 1 < len(sys.argv):
             steps_override = int(sys.argv[i + 1])
+        if a == "--outdir" and i + 1 < len(sys.argv):
+            outdir_arg = sys.argv[i + 1]
 
     steps, cfg, sampler, sched, w, h, sbase, lora = CONFIG[ckpt]
     if steps_override:
         steps = steps_override
 
-    outdir = os.path.join(OUT_ROOT, sub)
+    outdir = outdir_arg or os.path.join(OUT_ROOT, sub)
     os.makedirs(outdir, exist_ok=True)
     results = []
     t_all = time.time()
@@ -75,7 +84,7 @@ def main():
         if only and sc["id"] not in only:
             continue
         seed = sbase + i
-        prefix = "pc_%s_%s" % (sub, sc["id"])
+        prefix = comfy_prefix(outdir, "pc_%s_%s" % (sub, sc["id"]))
         graph = build(ckpt, P.sd_positive(sc), P.SD_NEG, w, h, steps, cfg,
                       sampler, sched, seed, prefix, lora)
         ok, pid = submit(graph)

@@ -1,0 +1,263 @@
+[
+  {
+    "act": "1",
+    "shot_num": "13",
+    "page": "1-15",
+    "sec": "4",
+    "key_flag": "—",
+    "desc_cn": "两路队伍朝相反方向出营；佘夫人立在营门目送。上方留白，下方是土。",
+    "flow_prompt_en": "Static medium shot. Two columns ride out of a gate in opposite directions; a woman stands in the gateway watching them go. Blank sky above, dust below. Traditional hand-painted 2D animation, flat mineral-pigment colour blocks, visible brush outlines, film grain, vintage Shanghai Animation Film Studio manner. SFX: hooves, wind."
+  },
+  {
+    "act": "1",
+    "shot_num": "14",
+    "page": "1-16",
+    "sec": "4",
+    "key_flag": "是",
+    "desc_cn": "两军对撞。竖屏里改成自下而上摇：先入画的是奔马的四蹄，再是人，最后是举起的旗。",
+    "flow_prompt_en": "Vertical shot, camera tilts up from galloping hooves to riders to raised banners as two armies collide. One general charges the enemy commander; another is intercepted. Traditional hand-painted 2D animation, flat mineral-pigment colour blocks, visible brush outlines, film grain, vintage Shanghai Animation Film Studio manner. SFX: shouts, hooves, steel."
+  },
+  {
+    "act": "1",
+    "shot_num": "15",
+    "page": "1-17",
+    "sec": "8",
+    "key_flag": "—",
+    "desc_cn": "核心镜头。回身一箭——切到马首：坐骑骤然一跃，张嘴把箭衔住。人被掀落在地。镜头不动。",
+    "flow_prompt_en": "Vertical shot, static. A general wheels his horse and looses an arrow — cut to the horse's head: it leaps and catches the arrow in its teeth; the rider is thrown. Camera holds. Traditional hand-painted 2D animation, flat mineral-pigment colour blocks, visible brush outlines, film grain, vintage Shanghai Animation Film Studio manner. SFX: bowstring, a horse scream, a dull impact."
+  },
+  {
+    "act": "1",
+    "shot_num": "16",
+    "page": "1-18",
+    "sec": "4",
+    "key_flag": "—",
+    "desc_cn": "手持晃动。刀与身体在画面里交错，只有三秒。",
+    "flow_prompt_en": "Handheld, brief. A chaotic close melee, bodies and blades crossing the frame. Three seconds only. Traditional hand-painted 2D animation, flat mineral-pigment colour blocks, visible brush outlines, film grain, vintage Shanghai Animation Film Studio manner. SFX: shouts, steel."
+  },
+  {
+    "act": "1",
+    "shot_num": "17",
+    "page": "1-19",
+    "sec": "4",
+    "key_flag": "—",
+    "desc_cn": "杨业一枪挑落潘仁美，连看都不看他一眼，拍马追太祖。潘仁美压在画面下缘，比旁人矮半头。",
+    "flow_prompt_en": "Vertical medium shot. A general's spear throws a minister from his horse; the general does not look down and rides on. The fallen man sits low in frame. Traditional hand-painted 2D animation, flat mineral-pigment colour blocks, visible brush outlines, film grain, vintage Shanghai Animation Film Studio manner. SFX: impact, then hooves departing."
+  },
+  {
+    "act": "1",
+    "shot_num": "18",
+    "page": "1-20",
+    "sec": "4",
+    "key_flag": "—",
+    "desc_cn": "特写。趴在泥里抬头，视线追着画面上方远去的背影。眼里没有愤怒，只有记账。",
+    "flow_prompt_en": "Close shot, static. A man lies face down in mud and lifts his head, eyes tracking something off-frame above him. No anger — only accounting. Traditional hand-painted 2D animation, flat mineral-pigment colour blocks, visible brush outlines, film grain, vintage Shanghai Animation Film Studio manner. SFX: wind, distant battle."
+  },
+  {
+    "act": "1",
+    "shot_num": "19",
+    "page": "1-21",
+    "sec": "4",
+    "key_flag": "—",
+    "desc_cn": "两路伏兵从画面两侧合拢，把援兵切成两段。人很小，分前后两层。",
+    "flow_prompt_en": "Vertical wide shot, static. Two ambush parties close from both sides, cutting a relief column in two. Figures small, layered in depth against blank sky. Traditional hand-painted 2D animation, flat mineral-pigment colour blocks, visible brush outlines, film grain, vintage Shanghai Animation Film Studio manner. SFX: drums, shouts."
+  },
+  {
+    "act": "1",
+    "shot_num": "20",
+    "page": "1-22",
+    "sec": "8",
+    "key_flag": "—",
+    "desc_cn": "夜景。几盏灯压在画面下部，将军背手立在帐前，很矮；上方 2/3 是纯黑的天。",
+    "flow_prompt_en": "Vertical night shot, static. Sparse lantern light on a few tents across the lower third; a commander stands with hands behind his back before a tent, small in frame; black night above. Traditional hand-painted 2D animation, flat mineral-pigment colour blocks, visible brush outlines, film grain, vintage Shanghai Animation Film Studio manner. SFX: crickets, wind."
+  },
+  {
+    "act": "1",
+    "shot_num": "21",
+    "page": "1-23",
+    "sec": "4",
+    "key_flag": "—",
+    "desc_cn": "将军进帐。帐内那人的脸始终在画外——只看得见他的背影与肩。",
+    "flow_prompt_en": "Vertical medium shot. A general enters a tent; only the back of the seated ruler is visible. His face stays out of frame. Traditional hand-painted 2D animation, flat mineral-pigment colour blocks, visible brush outlines, film grain, vintage Shanghai Animation Film Studio manner. SFX: tent flap, footsteps."
+  },
+  {
+    "act": "1",
+    "shot_num": "22",
+    "page": "1-24",
+    "sec": "4",
+    "key_flag": "—",
+    "desc_cn": "手在画面下部，在案上画了一个圈：圈外放炮，圈内空着。上方是空白帐布。",
+    "flow_prompt_en": "Close shot, static. A hand draws a circle on a table map: outside the circle, cannon; inside, empty. Hand low in frame, blank canvas above. Traditional hand-painted 2D animation, flat mineral-pigment colour blocks, visible brush outlines, film grain, vintage Shanghai Animation Film Studio manner. SFX: finger on paper."
+  },
+  {
+    "act": "1",
+    "shot_num": "23",
+    "page": "1-25",
+    "sec": "4",
+    "key_flag": "—",
+    "desc_cn": "镜头缓慢下移。敢死兵从下方摸到帐前；更大的队伍在画面深处把空营圈住。灯笼压在下缘。",
+    "flow_prompt_en": "Vertical night shot, camera drifts slowly downward. Troops creep up on silent tents while a larger force encircles the empty camp from the deeper layer. Lanterns low in frame, black sky above. Traditional hand-painted 2D animation, flat mineral-pigment colour blocks, visible brush outlines, film grain, vintage Shanghai Animation Film Studio manner. SFX: whispered orders, footsteps."
+  },
+  {
+    "act": "1",
+    "shot_num": "24",
+    "page": "1-26",
+    "sec": "6",
+    "key_flag": "—",
+    "desc_cn": "全剧第一个留白爆闪。喊声大起，两支队伍在黑暗里撞在一起，都以为对方是敌人。",
+    "flow_prompt_en": "Vertical shot with a single white flash. Shouts erupt; two forces collide in the dark believing each other to be the enemy. Chaos in the centre third, darkness above and below. Traditional hand-painted 2D animation, flat mineral-pigment colour blocks, visible brush outlines, film grain, vintage Shanghai Animation Film Studio manner. SFX: shouts, steel, a cannon."
+  },
+  {
+    "act": "1",
+    "shot_num": "25",
+    "page": "1-27",
+    "sec": "4",
+    "key_flag": "—",
+    "desc_cn": "一声炮响，骑兵从两侧压进来，向纵深推。人很小。",
+    "flow_prompt_en": "Vertical wide shot. A single cannon report; riders pour in from both sides and press into depth. Men small against blank mist. Traditional hand-painted 2D animation, flat mineral-pigment colour blocks, visible brush outlines, film grain, vintage Shanghai Animation Film Studio manner. SFX: cannon, hooves."
+  },
+  {
+    "act": "1",
+    "shot_num": "26",
+    "page": "1-28",
+    "sec": "4",
+    "key_flag": "—",
+    "desc_cn": "跪地回话，甲上还挂着泥。人物压在画面下部，上方空白。",
+    "flow_prompt_en": "Vertical medium shot, static. An officer kneels reporting, mud still on his armour. Figure low in frame, blank night above. Traditional hand-painted 2D animation, flat mineral-pigment colour blocks, visible brush outlines, film grain, vintage Shanghai Animation Film Studio manner. SFX: night wind."
+  },
+  {
+    "act": "1",
+    "shot_num": "27",
+    "page": "1-29",
+    "sec": "8",
+    "key_flag": "—",
+    "desc_cn": "镜头从他静止的脸仰起，一直摇到大片空白的夜空。他什么也没说。",
+    "flow_prompt_en": "Vertical shot, camera tilts up from a commander's still face to a vast empty night sky. He says nothing. Traditional hand-painted 2D animation, flat mineral-pigment colour blocks, visible brush outlines, film grain, vintage Shanghai Animation Film Studio manner. SFX: wind, no music."
+  },
+  {
+    "act": "1",
+    "shot_num": "28",
+    "page": "1-30",
+    "sec": "8",
+    "key_flag": "—",
+    "desc_cn": "细雨。水洼压在画面下部，抱膝的军士在中部，将军立于帐口看雨，人被上方大片灰天压着。",
+    "flow_prompt_en": "Vertical shot, static, fine steady rain. Water pools on tent roofs across the lower third; soldiers sit hugging their knees in the middle; a general stands at a tent mouth, dwarfed by blank grey sky above. Traditional hand-painted 2D animation, flat mineral-pigment colour blocks, visible brush outlines, film grain, vintage Shanghai Animation Film Studio manner. SFX: steady rain."
+  },
+  {
+    "act": "1",
+    "shot_num": "29",
+    "page": "1-31",
+    "sec": "4",
+    "key_flag": "—",
+    "desc_cn": "砍柴军士从坡上下来，柴堆在画面下部堆成小山。没有台词。",
+    "flow_prompt_en": "Vertical wide shot. Woodcutters come down a slope and stack firewood; the pile grows into a small hill in the lower third. No dialogue. Traditional hand-painted 2D animation, flat mineral-pigment colour blocks, visible brush outlines, film grain, vintage Shanghai Animation Film Studio manner. SFX: axe on wood."
+  },
+  {
+    "act": "1",
+    "shot_num": "30",
+    "page": "1-32",
+    "sec": "4",
+    "key_flag": "—",
+    "desc_cn": "出帐观星，抬头，然后一脚一脚地顿。星在画面中上部，脚在下缘。",
+    "flow_prompt_en": "Vertical night shot. A commander steps out, looks up at scattered stars, then stamps his foot again and again. Stars above, earth below. Traditional hand-painted 2D animation, flat mineral-pigment colour blocks, visible brush outlines, film grain, vintage Shanghai Animation Film Studio manner. SFX: wind, a stamped boot."
+  },
+  {
+    "act": "1",
+    "shot_num": "31",
+    "page": "1-33",
+    "sec": "6",
+    "key_flag": "—",
+    "desc_cn": "蹲在树下发抖。只给湿透的背，不给脸。",
+    "flow_prompt_en": "Vertical close shot. Soldiers crouch under a tree, soaked through, shivering. Only wet backs and rain, no faces. Traditional hand-painted 2D animation, flat mineral-pigment colour blocks, visible brush outlines, film grain, vintage Shanghai Animation Film Studio manner. SFX: rain, shivering breath."
+  },
+  {
+    "act": "1",
+    "shot_num": "32",
+    "page": "1-34",
+    "sec": "6",
+    "key_flag": "—",
+    "desc_cn": "分派。抬起的手臂停在画面上部，下方是空白的地。",
+    "flow_prompt_en": "Vertical medium shot. A general gives orders, arm raised: one son to the right slope, one to the left. The raised arm high in frame, blank ground below. Traditional hand-painted 2D animation, flat mineral-pigment colour blocks, visible brush outlines, film grain, vintage Shanghai Animation Film Studio manner. SFX: low voices."
+  },
+  {
+    "act": "1",
+    "shot_num": "33",
+    "page": "1-35",
+    "sec": "4",
+    "key_flag": "—",
+    "desc_cn": "士兵从画面下方涌入营寨，两侧伏兵同时升起，倒下的很多。",
+    "flow_prompt_en": "Vertical night shot. Troops pour into a camp from below frame while two ambush parties rise from both sides — many fall. Traditional hand-painted 2D animation, flat mineral-pigment colour blocks, visible brush outlines, film grain, vintage Shanghai Animation Film Studio manner. SFX: shouts, steel, drums."
+  },
+  {
+    "act": "1",
+    "shot_num": "34",
+    "page": "1-36",
+    "sec": "6",
+    "key_flag": "—",
+    "desc_cn": "众臣垂手，将军来回走，一人上前。上方空白，下方是地。",
+    "flow_prompt_en": "Vertical medium shot. Ministers stand with hands lowered; a commander paces back and forth; one official steps forward. Blank ceiling above, floor below. Traditional hand-painted 2D animation, flat mineral-pigment colour blocks, visible brush outlines, film grain, vintage Shanghai Animation Film Studio manner. SFX: footsteps, cloth."
+  },
+  {
+    "act": "1",
+    "shot_num": "35",
+    "page": "1-37",
+    "sec": "6",
+    "key_flag": "—",
+    "desc_cn": "镜头慢慢推近一只攥着的拳头，指头一根一根松开。上方是空，下方是案沿。",
+    "flow_prompt_en": "Vertical close shot, camera pushes in slowly. A clenched fist relaxes, finger by finger. Blank air above, a table edge below. Traditional hand-painted 2D animation, flat mineral-pigment colour blocks, visible brush outlines, film grain, vintage Shanghai Animation Film Studio manner. SFX: quiet."
+  },
+  {
+    "act": "1",
+    "shot_num": "36",
+    "page": "1-38",
+    "sec": "4",
+    "key_flag": "—",
+    "desc_cn": "在回书上按印。印在画面下部，上方是空白纸。",
+    "flow_prompt_en": "Vertical close shot, static. A ruler presses his seal onto a short letter. Seal low in frame, blank paper above. Traditional hand-painted 2D animation, flat mineral-pigment colour blocks, visible brush outlines, film grain, vintage Shanghai Animation Film Studio manner. SFX: a soft press."
+  },
+  {
+    "act": "1",
+    "shot_num": "37",
+    "page": "1-39",
+    "sec": "8",
+    "key_flag": "—",
+    "desc_cn": "烛光。一盏灯在中部投出一小片暖，上下一片黑。一只手从画外伸进来。",
+    "flow_prompt_en": "Vertical shot, static, candlelit. A single lamp inside hanging drapes throws a small warm pool in the middle third; darkness above and below. One hand reaches in from off-frame. Traditional hand-painted 2D animation, flat mineral-pigment colour blocks, visible brush outlines, film grain, vintage Shanghai Animation Film Studio manner. SFX: a candle guttering."
+  },
+  {
+    "act": "1",
+    "shot_num": "38",
+    "page": "1-39",
+    "sec": "6",
+    "key_flag": "—",
+    "desc_cn": "烛火晃了一下。只给那只接过诏书的手，不给脸。",
+    "flow_prompt_en": "Vertical close shot. A candle flame leans; a hand takes hold of a rolled edict. Faces stay out of frame. Traditional hand-painted 2D animation, flat mineral-pigment colour blocks, visible brush outlines, film grain, vintage Shanghai Animation Film Studio manner. SFX: flame, paper."
+  },
+  {
+    "act": "1",
+    "shot_num": "39",
+    "page": "1-40",
+    "sec": "8",
+    "key_flag": "—",
+    "desc_cn": "镜头缓缓升起。赭石色的旗海在画面下部展开，上方 2/3 是空白的晨光。",
+    "flow_prompt_en": "Vertical shot, camera rises slowly. An ochre sea of banners unfurls across the lower frame under blank dawn light, sky filling the upper two thirds. Traditional hand-painted 2D animation, flat mineral-pigment colour blocks, visible brush outlines, film grain, vintage Shanghai Animation Film Studio manner. SFX: many flags in wind."
+  },
+  {
+    "act": "1",
+    "shot_num": "40",
+    "page": "1-41",
+    "sec": "6",
+    "key_flag": "—",
+    "desc_cn": "使者快马朝画面深处去，越跑越小。",
+    "flow_prompt_en": "Vertical wide shot. A lone courier gallops away from camera into depth, shrinking toward a low horizon. Traditional hand-painted 2D animation, flat mineral-pigment colour blocks, visible brush outlines, film grain, vintage Shanghai Animation Film Studio manner. SFX: hooves receding."
+  },
+  {
+    "act": "1",
+    "shot_num": "41",
+    "page": "—",
+    "sec": "4",
+    "key_flag": "—",
+    "desc_cn": "镜头停在诏书上，不动。上下都是空。",
+    "flow_prompt_en": "Vertical close shot, static. An open imperial edict fills the middle of frame, blank space above and below. The camera does not move. Traditional hand-painted 2D animation, flat mineral-pigment colour blocks, visible brush outlines, film grain, vintage Shanghai Animation Film Studio manner. SFX: wind only."
+  }
+]

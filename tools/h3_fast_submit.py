@@ -13,6 +13,10 @@ SigmaShift 12/3 + res_multistep/simple/4）从 UI 工作流转成 API 工作流�
   python tools/h3_fast_submit.py --prompt-file p.txt \
       --first-frame "xxx.jpg" --width 736 --height 1088 --length 124 --seed 20260906
 
+  # 首尾帧（fl2v）；传入 --last-frame 时默认改用 FL2V 工作流（未传则与 i2v 行为完全一致）
+  python tools/h3_fast_submit.py --prompt-file p.txt \
+      --first-frame "front.png" --last-frame "back.png"
+
 仅依赖标准库 + venv 内已装的 av/numpy（验收用）。
 """
 import argparse
@@ -33,6 +37,8 @@ ROOT = r"D:\ai_projects\ComfyUI"
 INPUT_ROOT = os.path.join(ROOT, "input")
 OUTPUT_ROOT = os.path.join(ROOT, "output")
 DEFAULT_WORKFLOW = os.path.join(ROOT, "workflows", "v5", "h3_fast_i2v_9x16_api.json")
+# FL2V 模板：在 first_frame 之外额外指定 last_frame，用于把分段边界钉到同一参考帧
+DEFAULT_FL2V_WORKFLOW = os.path.join(ROOT, "workflows", "v5", "h3_fast_fl2v_9x16_api.json")
 FFMPEG_ABS = r"C:\Users\kenzhao\scoop\apps\ffmpeg\8.1.1\bin\ffmpeg.exe"
 
 SLA_NODES = ["H3SLAAttention", "MiniMaxChunkFeedForward", "MiniMaxH3SigmaShift",
@@ -425,10 +431,14 @@ def acceptance(mp4, n_frames, fps, threshold=3.0):
 # ----------------------------- main -----------------------------
 
 def main():
-    ap = argparse.ArgumentParser(description="H3 4-step turbo 快线 i2v 提交器")
-    ap.add_argument("--workflow", default=DEFAULT_WORKFLOW, help="API 格式工作流 JSON")
+    ap = argparse.ArgumentParser(description="H3 4-step turbo 快线 i2v/fl2v 提交器")
+    ap.add_argument("--workflow", default=None,
+                    help="API 格式工作流 JSON（不传时：无 --last-frame 用 i2v 模板，"
+                         "有 --last-frame 用 FL2V 模板）")
     ap.add_argument("--prompt-file", help="提示词文本文件")
     ap.add_argument("--first-frame", help="input 目录下相对路径（如 xxx.jpg）")
+    ap.add_argument("--last-frame",
+                    help="input 目录下相对路径（尾帧）；传入后默认改用 FL2V 工作流")
     ap.add_argument("--width", type=int, default=736)
     ap.add_argument("--height", type=int, default=1088)
     ap.add_argument("--length", type=int, default=124)
@@ -437,6 +447,14 @@ def main():
     ap.add_argument("--dry-run", action="store_true", help="只校验不提交")
     ap.add_argument("--no-wait", action="store_true", help="提交后不等待")
     args = ap.parse_args()
+
+    # 0. 解析工作流默认值：未显式指定 --workflow 时，按是否给了 --last-frame 选择模板
+    if args.workflow is None:
+        if args.last_frame:
+            args.workflow = DEFAULT_FL2V_WORKFLOW
+            print(f"[选择] 检测到 --last-frame，使用 FL2V 工作流: {os.path.basename(args.workflow)}")
+        else:
+            args.workflow = DEFAULT_WORKFLOW
 
     # 1. 帧长/尺寸对齐
     raw_len = args.length
@@ -479,9 +497,15 @@ def main():
     if not os.path.exists(os.path.join(INPUT_ROOT, first_frame)):
         print(f"[警告] input 目录下未找到首帧文件: {first_frame}")
 
+    # --last-frame 省略时默认与首帧相同（向后兼容既有单帧 i2v 调用）
+    last_frame = args.last_frame or first_frame
+    if args.last_frame and not os.path.exists(os.path.join(INPUT_ROOT, last_frame)):
+        print(f"[警告] input 目录下未找到尾帧文件: {last_frame}")
+
     # 3. 注入
     values = {
         "first_frame": first_frame,
+        "last_frame": last_frame,
         "prompt": prompt,
         "width": args.width,
         "height": args.height,
@@ -503,9 +527,8 @@ def main():
         ("可用内存", check_memory),
         ("视频 VAE fp16", lambda: check_video_vae(wf)),
     ]
-    # 可用内存随 ComfyUI 正在跑的任务波动；dry-run 只做校验不占显存/内存，
-    # 故 dry-run 下内存不足仅告警，真提交时仍为硬门槛。
-    soft = {"可用内存"} if args.dry_run else set()
+    # 新模式：排队提交不等待，提交时内存随他人任务波动，仅告警不拦截
+    soft = {"可用内存"}
     failed = False
     for name, fn in checks:
         ok, msg = fn()
@@ -513,7 +536,7 @@ def main():
             tag = "通过"
         elif name in soft:
             tag = "警告"
-            print(f"  [警告] {name}: {msg} —— dry-run 不拦截，真提交时会硬失败")
+            print(f"  [警告] {name}: {msg} —— 不拦截，任务将排队执行")
             continue
         else:
             tag = "失败"
@@ -529,6 +552,7 @@ def main():
         print(f"  注入: width={args.width} height={args.height} length={args.length} "
               f"seed={args.seed}")
         print(f"  prompt[:60]={prompt[:60]!r}  first_frame={first_frame!r}")
+        print(f"  last_frame={last_frame!r}")
         print(f"  prefix={args.prefix!r}")
         errors, lines = validate_workflow(wf)
         for ln in lines:

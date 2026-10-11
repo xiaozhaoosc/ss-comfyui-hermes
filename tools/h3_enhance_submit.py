@@ -160,6 +160,10 @@ def main():
     ap.add_argument("--target-fps", type=float, default=48.0)
     ap.add_argument("--out-width", type=int, default=1080)
     ap.add_argument("--out-height", type=int, default=1920)
+    ap.add_argument("--pre-width", type=int, default=0,
+                    help="ESRGAN 前降采样宽度（默认 out_width//4，规避大 batch CPU 分配）")
+    ap.add_argument("--pre-height", type=int, default=0,
+                    help="ESRGAN 前降采样高度（默认 out_height//4）")
     ap.add_argument("--rife-batch-size", type=int, default=4,
                     help="RIFE 并行帧数，OOM 时可降到 2")
     ap.add_argument("--dry-run", action="store_true")
@@ -190,15 +194,15 @@ def main():
         ("可用内存", lambda: base.check_memory(MIN_FREE_RAM_GB)),
         ("节点/模型", check_nodes_and_models),
     ]
-    # dry-run 只做校验、不提交也不占 GPU/显存，故队列与内存不足仅告警
-    soft = {"可用内存", "队列空闲"} if args.dry_run else set()
+    # 新模式：任务直接排队提交、不等待（队列忙属正常，仅告警不拦截）
+    soft = {"可用内存", "队列空闲"}
     failed = False
     for name, fn in checks:
         ok, msg = fn()
         if ok:
             print(f"  [通过] {name}: {msg}")
         elif name in soft:
-            print(f"  [警告] {name}: {msg} —— dry-run 不拦截，真提交时会硬失败")
+            print(f"  [警告] {name}: {msg} —— 不拦截，任务将排队执行")
         else:
             print(f"  [失败] {name}: {msg}")
             failed = True
@@ -216,12 +220,16 @@ def main():
     base._INFO_CACHE.pop("LoadVideo", None)  # 清缓存，让校验重新拉取新枚举
 
     # 注入
+    pre_w = args.pre_width or max(64, args.out_width // 4)
+    pre_h = args.pre_height or max(64, args.out_height // 4)
     values = {
         "source_file": fname,
         "prefix": args.prefix,
         "target_fps": float(args.target_fps),
         "out_width": args.out_width,
         "out_height": args.out_height,
+        "pre_width": pre_w,
+        "pre_height": pre_h,
     }
     try:
         wf = base.inject_placeholders(wf, values)
@@ -233,8 +241,8 @@ def main():
     if args.dry_run:
         print("\n=== dry-run 逐节点校验（不会 POST /prompt）===")
         print(f"  注入: source_file={fname!r} target_fps={args.target_fps} "
-              f"out={args.out_width}x{args.out_height} prefix={args.prefix!r} "
-              f"rife_batch={args.rife_batch_size}")
+              f"out={args.out_width}x{args.out_height} pre={pre_w}x{pre_h} "
+              f"prefix={args.prefix!r} rife_batch={args.rife_batch_size}")
         errors, lines = base.validate_workflow(wf)
         for ln in lines:
             print(ln)

@@ -26,11 +26,30 @@ t2i / i2i / edit 仍用 v4；--json 可强制指定任意工作流文件。
   upscaler            主超分 UpscaleModelLoader.model_name (restore)
   final_mp            末级收口 ImageScaleToTotalPixels.megapixels (v4 restore)
   face                ReActorRestoreFace 的 codeformer_weight/visibility (v5)
+  grain               末级 ImageNoiseAugmentation.noise_aug_strength (v5；胶片颗粒回填)
   output              SaveImage 的 filename_prefix (默认自动带当日日期)
 
-v5 restore（高清修复）默认值：Pass1 denoise 0.65、Pass2 denoise 0.35、
-Pass1 工作分辨率 R1 = 1.0MP、Pass2 = 最终输出 R2 = 2×R1 (上限 2.5MP)、
-主超分 realesr-general-x4v3.pth、末级 CodeFormer 人像修脸；源图 <0.5MP 时自动前置超分。
+v5 restore（高清修复）默认值（**2026-10-10 复定版**）：
+  - Pass1 denoise 0.65、Pass2 denoise 0.35、R1 = 1.0MP、R2 = 2×R1 (上限 2.5MP)
+  - 主超分 RealESRGAN_x4plus.pth（A/B 实测优于 realesr-general-x4v3）；
+    源图 <0.5MP 时自动前置超分
+  - CodeFormer weight **0.25**（2026-10-10 D 组消融实测：CF 非塑料皮肤主因，
+    0.5→0.25 平坦底只动 0.004；低权减少无谓抹皮，保留修脸兜底）
+  - Pass2 正向提示词升级为"visible pores / fine film grain / micro-contrast"；
+    **Pass2 负向已删 noise, film grain**（原模板正负向自相矛盾，压制颗粒诉求）
+  - 末级 CodeFormer 后接 KJNodes 胶片颗粒回填 (noise_aug_strength 0.008，
+    10-03 实测 ⑧ 平坦底 1.393≈真实照片 1.402)。
+    **颗粒双方案对照**：in-workflow 0.008 → flat 1.393（正稿）；
+    外挂 `tools/finalize_grain.py --sigma 1.5`（PIL 高斯）→ flat 1.156，
+    作事后救援 fallback（σ=1.0 仅数值达标无感知意义，σ≥1.5 起可见）。
+    塑料皮肤主因是 Pass2 扩散重绘本身，颗粒是唯一有效补底手段。
+    （D' 消融证实：仅修负向矛盾、不加颗粒，平坦底 0.55≈0.545 无改善 →
+      负向矛盾不是瓶颈；但修正仍保留，避免颗粒诉求被负向压制）
+  - 速度档（2026-10-10 同源图实测，质量指标全 ✔）：
+    基线 25步×2 CFG3.0 = 430.9s（flat 1.47 / RMSE 7.3）；
+    --lightning 8 = 110.3s（3.9x，flat 1.45 / RMSE 7.4）；
+    --lightning 4 = 80.2s（5.4x，flat 1.43 / RMSE 7.2）。
+    推荐 --lightning 8 做速度档（4 步更快，指标差异在噪声级，蒸馏边界风险略高）。
 
 用法示例:
   python tools/qwen_v4_submit.py t2i  --prompt "a cat on the moon"                 # 只打印
@@ -258,7 +277,10 @@ def post_prompt(api, server):
 
 
 def wait_and_verify(pid, server, timeout):
-    deadline = time.time() + timeout
+    """等待任务完成并打印输出文件；返回输出文件 Path 列表（超时/失败返回 None）。"""
+    t0 = time.time()
+    deadline = t0 + timeout
+    rec = None
     while time.time() < deadline:
         try:
             rec = json.loads(urllib.request.urlopen(f"{server}/history/{pid}", timeout=20).read()).get(pid)
@@ -270,16 +292,46 @@ def wait_and_verify(pid, server, timeout):
             for out in rec.get("outputs", {}).values():
                 for item in out.get("images", []) + out.get("gifs", []):
                     files.append(Path(item.get("subfolder", "")) / item["filename"])
-            print("✓ 执行完成")
+            print(f"✓ 执行完成（耗时 {time.time() - t0:.1f}s）")
             for f in files:
                 p = ROOT / "output" / f
                 print(("  ✓ " if p.exists() else "  ? ") + str(p))
             if not files:
                 print("  (history 无输出记录)")
-            return True
+            return files
+        if rec and rec.get("status", {}).get("status_str") == "error":
+            print("✗ 执行出错（快速失败）")
+            for m in rec["status"].get("messages", [])[-3:]:
+                print("  ", str(m)[:300])
+            return None
         time.sleep(10)
     print("✗ 等待超时，最后状态:", json.dumps(rec.get("status", {}), ensure_ascii=False) if rec else "未知")
-    return False
+    return None
+
+
+def verify_outputs(files, source):
+    """对输出文件跑 restore_qa 体检；返回 (是否全部达标, 纹理形态判定)。"""
+    try:
+        import restore_qa as rqa
+    except Exception as ex:
+        print("✗ --verify 需要 restore_qa 模块:", ex)
+        return False, "?"
+    oks = []
+    tex = "?"
+    for f in files:
+        p = ROOT / "output" / f
+        if p.suffix.lower() not in {".png", ".jpg", ".jpeg", ".webp", ".bmp"}:
+            continue
+        if not source:
+            print("  (无 --source，跳过体检)", p)
+            continue
+        print(f"\n--- 体检 {p.name} ---")
+        m = rqa.run(str(source), str(p), 8, None, None, None)
+        v = m["verdict"]
+        tex = v["texture"]
+        oks.append(v["texture"] != "✘" and v["sharp"] == "✔" and v["fidelity"] != "✘"
+                   and v["block"] in ("✔", "△", "不适用（未检出格子）"))
+    return (all(oks) if oks else False), tex
 
 
 # ---------------------------------------------------------------- 主流程
@@ -298,7 +350,7 @@ def main():
                     help="i2i/edit 输入图归一 MP；restore(v5) 为 Pass1 工作分辨率 R1"
                          "（缺省 min(1.25, max(1.0, 源图MP))）")
     ap.add_argument("--resolution-steps", type=int, help="尺寸对齐步长（默认 8）")
-    ap.add_argument("--upscaler", help="主超分模型文件名（restore；v5 默认 realesr-general-x4v3.pth）")
+    ap.add_argument("--upscaler", help="主超分模型文件名（restore；v5 默认 RealESRGAN_x4plus.pth）")
     ap.add_argument("--presr-model",
                     help="前置超分模型文件名（v5；缺省与 --upscaler 相同，仅源图 <0.5MP 时接线）")
     ap.add_argument("--no-presr", action="store_true", help="强制不使用前置超分（即使源图很小）")
@@ -311,8 +363,15 @@ def main():
     ap.add_argument("--denoise2", type=float,
                     help="v5 restore Pass2(细节重建)重绘幅度，默认 0.35")
     ap.add_argument("--face-weight", type=float,
-                    help="v5 restore CodeFormer codeformer_weight（默认 0.5，越小越保脸）")
+                    help="v5 restore CodeFormer codeformer_weight（默认 0.25，2026-10-10 复定版；"
+                         "实测 CF 非塑料皮肤主因，低权减少无谓抹皮）")
     ap.add_argument("--no-face", action="store_true", help="剪掉末级人像修脸节点 (v5)")
+    ap.add_argument("--grain", type=float,
+                    help="v5 restore 末级胶片颗粒回填强度 (KJNodes noise_aug_strength，"
+                         "0-1 空间的 σ)；不指定则用模板定版值 0.008。实测 0.002-0.005 可把 ⑧ 纹理"
+                         "平坦底抬到 0.6+，0.006-0.008 到 ✔（0.008 实测 1.393≈真照片 1.402）；"
+                         "外挂对照：tools/finalize_grain.py --sigma 1.5 → flat 1.156（事后救援 fallback）；"
+                         "--grain 0 表示不加颗粒")
     ap.add_argument("--no-pass2", action="store_true",
                     help="剪掉 Pass2 第二遍扩散，直接出「Pass1 超分收口」的图 (v5)；"
                          "实测 Pass2 会抹掉照片自然纹理导致「AI 插画感」，保照片感时用它")
@@ -330,6 +389,15 @@ def main():
     ap.add_argument("--server", default=DEFAULT_SERVER)
     ap.add_argument("--timeout", type=int, default=3600)
     ap.add_argument("--run", action="store_true", help="提交到 ComfyUI 并等待出图（缺省只打印）")
+    ap.add_argument("--verify", action="store_true",
+                    help="出图后自动跑 restore_qa 体检（restore 类需 --image 作源图），"
+                         "打印 ①-⑧ 判定与耗时")
+    ap.add_argument("--auto-grain", action="store_true",
+                    help="（依赖 --verify）⑧ 纹理不达标时按 0.004→0.008→0.012 阶梯自动上调"
+                         " grain 重试，最多 2 次；请固定 --seed 保证重试可比（--seed -1 每次随机）")
+    ap.add_argument("--batch-dir",
+                    help="restore/i2i/edit 批量模式：对目录内全部图片逐张跑完整链路（每张独立"
+                         "体检/auto-grain，grain 每张重置回起点），结束后打印汇总表；需 --run")
     args = ap.parse_args()
 
     if not args.json and not args.kind:
@@ -342,6 +410,11 @@ def main():
     kind = args.kind or re.sub(r"_v\d+$", "", wf_path.stem.replace("qwen_image_2_1_", ""))
     if not wf_path.exists():
         raise SystemExit(f"✗ 工作流不存在: {wf_path}")
+    if args.batch_dir:
+        if kind == "t2i":
+            raise SystemExit("✗ --batch-dir 不适用于 t2i")
+        if not Path(args.batch_dir).is_dir():
+            raise SystemExit(f"✗ --batch-dir 不是目录: {args.batch_dir}")
 
     nodes = json.loads(wf_path.read_text(encoding="utf-8"))
     notes = []
@@ -451,6 +524,15 @@ def main():
     elif args.face_weight is not None or args.no_face:
         notes.append("该工作流无人像修脸节点，--face-weight/--no-face 已忽略")
 
+    # 末级胶片颗粒回填（v5）：补回被扩散抹平的平坦区微纹理（⑧ 平坦底判据）
+    if has_marker(nodes, "grain"):
+        patch(nodes, "grain", noise_aug_strength=args.grain)
+        g = nodes[find(nodes, "grain")]["inputs"]["noise_aug_strength"]
+        if g:
+            notes.append("末级胶片颗粒 noise_aug_strength=%s（⑧ 平坦底↑；0.006-0.008 可达 ✔）" % g)
+    elif args.grain is not None:
+        notes.append("该工作流无颗粒回填节点，--grain 已忽略")
+
     # Pass2 剪枝（v5）：实测第二次 VAE 往返会抹掉照片自然纹理 → "AI 插画感"
     if args.no_pass2:
         if cut_pass2(nodes):
@@ -502,6 +584,11 @@ def main():
     day = args.out_date or date.today().isoformat()
     patch(nodes, "output", filename_prefix=args.out_prefix or f"{day}/qwen_{kind}")
 
+    if args.auto_grain:
+        args.verify = True
+    if args.verify and kind not in ("restore", "i2i", "edit"):
+        notes.append("--verify 需要输入图作体检源，当前类型无 --image，出图后跳过体检")
+
     for n in notes:
         print("提示:", n)
     print(f"工作流: {wf_path}")
@@ -517,11 +604,85 @@ def main():
         print("\n(未加 --run，仅打印；确认无误后加 --run 提交)")
         return
 
-    resp = post_prompt(nodes, args.server)
-    pid = resp.get("prompt_id")
-    print(f"\n已提交 pid={pid}，等待出图...")
-    if not wait_and_verify(pid, args.server, args.timeout):
-        sys.exit(1)
+    if args.batch_dir:
+        batch = sorted(p for p in Path(args.batch_dir).iterdir()
+                       if p.suffix.lower() in {".png", ".jpg", ".jpeg", ".webp", ".bmp"})
+        if not batch:
+            raise SystemExit(f"✗ 批量目录里没有图片: {args.batch_dir}")
+        # 每张图独立从同一起点重试：记录初始 grain
+        initial_grain = None
+        if has_marker(nodes, "grain"):
+            initial_grain = nodes[find(nodes, "grain")]["inputs"].get("noise_aug_strength")
+        summary = []
+        for i, p in enumerate(batch, 1):
+            print(f"\n{'=' * 60}\n▶ 批量 [{i}/{len(batch)}] {p.name}")
+            patch(nodes, "image", image=ensure_input_image(p))
+            patch(nodes, "output", filename_prefix=f"{day}/qwen_{kind}_{p.stem}")
+            if initial_grain is not None:
+                nodes[find(nodes, "grain")]["inputs"]["noise_aug_strength"] = initial_grain
+            _, st = submit_verify_loop(nodes, kind, str(p), args.server, args.timeout,
+                                       args.auto_grain,
+                                       verify_fn=verify_outputs if args.verify else None)
+            summary.append({"file": p.name, **st})
+        print(f"\n{'=' * 60}\n批量汇总（{len(summary)} 张）：")
+        for s in summary:
+            verdict = "跳过体检" if s["ok"] is None else ("通过" if s["ok"] else "未通过")
+            print(f"  {s['file']:<40} 体检 {verdict}（纹理 {s['tex']}）  提交 {s['submits']} 次")
+        if args.verify:
+            print(f"体检通过 {sum(1 for s in summary if s['ok'])}/{len(summary)}")
+        return
+
+    submit_verify_loop(nodes, kind, args.image, args.server, args.timeout, args.auto_grain,
+                       verify_fn=verify_outputs if args.verify else None)
+
+_UNSET = object()
+
+
+def submit_verify_loop(nodes, kind, image, server, timeout, auto_grain,
+                       post_fn=None, wait_fn=None, verify_fn=_UNSET):
+    """提交 → 等待 → 体检 → （auto-grain 不达标时阶梯上调重试，≤2 次）。
+
+    post_fn/wait_fn/verify_fn 可注入（供 tools/test_auto_grain.py 离线 mock）：
+    省略时用真实的 post_prompt / wait_and_verify / verify_outputs；
+    verify_fn 显式传 None 表示不体检（出一次图即返回）。
+    """
+    post_fn = post_fn or (lambda api: post_prompt(api, server))
+    wait_fn = wait_fn or wait_and_verify
+    if verify_fn is _UNSET:
+        verify_fn = verify_outputs
+    grain_ladder = [0.004, 0.008, 0.012]
+    attempt = 0
+    stats = {"submits": 0, "ok": None, "tex": "?"}
+    while True:
+        resp = post_fn(nodes)
+        pid = resp.get("prompt_id")
+        stats["submits"] += 1
+        print(f"\n已提交 pid={pid}，等待出图...")
+        files = wait_fn(pid, server, timeout)
+        if not files:
+            sys.exit(1)
+        if verify_fn is None:
+            break
+        ok, tex = verify_fn(files, image)
+        stats["ok"], stats["tex"] = ok, tex
+        if ok:
+            print("\n✓ 体检通过")
+            break
+        bumpable = (auto_grain and has_marker(nodes, "grain")
+                    and kind == "restore" and attempt < 2)
+        if not bumpable:
+            if auto_grain and not has_marker(nodes, "grain"):
+                print("\n✗ 体检未通过，但该工作流无 [inject:grain] 节点，无法 auto-grain")
+            break
+        cur = nodes[find(nodes, "grain")]["inputs"].get("noise_aug_strength") or 0.0
+        nxt = next((g for g in grain_ladder if g > cur + 1e-9), None)
+        if nxt is None:
+            print("\n✗ 体检未通过，grain 已到阶梯上限 0.012，停止重试")
+            break
+        attempt += 1
+        nodes[find(nodes, "grain")]["inputs"]["noise_aug_strength"] = nxt
+        print(f"\n⑧ 纹理 {tex} 未达标 → 自动上调 grain {cur:.3f}→{nxt} 重试（第 {attempt}/2 次，seed 固定）")
+    return nodes, stats
 
 
 if __name__ == "__main__":

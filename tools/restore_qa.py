@@ -13,11 +13,18 @@
   ⑤ 细节密度          —— 高频能量占比（FFT top octave）
   ⑥ 保真度            —— 输出缩回源图尺寸后与源图的 RMSE
   ⑦ 判定行            —— 综合 ③④⑥ 给出"是否真修复"的结论
+  ⑧ 纹理形态          —— 平坦区噪声底 / 梯度峰度 / 细节-结构一致性
+                         （识别"AI 幻觉细节 / 塑料皮肤"；③④⑤ 对这类问题会误判为通过）
+                         自动测源图基线：源图本身是磨皮图时，达标线 = max(0.6, 源图-0.1)
 
 用法：
   python tools/restore_qa.py --source <源图> --output <修复输出图>
   python tools/restore_qa.py --source in.png --output out.png --pitch 8
   python tools/restore_qa.py --source in.png --output out.png --json metrics.json
+  python tools/restore_qa.py --source in.png --output out.png --reference real_hd.png
+      # --reference 传一张"同尺寸真实照片"，作为自然度标尺（⑧ 会给出对照）
+  python tools/restore_qa.py --source in.png --batch <输出目录> --json summary.json
+      # 批量模式：对目录内全部图片逐一体检并输出汇总表
 
 模块级函数 blockiness_ratio(img, pitch=8) 也被 tools/qwen_v4_submit.py 复用：
 参数 img 既可以是文件路径，也可以是 numpy 灰度数组；返回 (col_ratio, row_ratio)。
@@ -26,6 +33,7 @@
 import argparse
 import json
 import sys
+from pathlib import Path
 
 import numpy as np
 from PIL import Image
@@ -183,6 +191,61 @@ def _rmse(a, b):
     return float(np.sqrt((d ** 2).mean()))
 
 
+# ---------------------------------------------------------------- ⑧ 纹理形态
+
+def _blocks(gray, block):
+    """把灰度图裁成 block×block 不重叠块，返回 (ny, nx, block, block) 视图。"""
+    h, w = gray.shape
+    ny, nx = h // block, w // block
+    if ny == 0 or nx == 0:
+        return None
+    g = gray[:ny * block, :nx * block]
+    return g.reshape(ny, block, nx, block).transpose(0, 2, 1, 3)
+
+
+def _flat_noise_floor(gray, block=16, low_frac=0.4):
+    """平坦区噪声底：最平坦的低分位块的平均局部标准差。
+
+    真实照片即使在"平坦"皮肤区也有传感器/胶片颗粒，该值 > 0；
+    AI 重绘 / 重度去噪的"塑料皮肤"把平坦区抹平，该值趋近 0。
+    """
+    b = _blocks(gray, block)
+    if b is None:
+        return float("nan")
+    stds = b.reshape(b.shape[0] * b.shape[1], -1).std(axis=1)
+    k = max(1, int(len(stds) * low_frac))
+    return float(np.sort(stds)[:k].mean())
+
+
+def _grad_kurtosis(gray):
+    """梯度幅值峰度（Fisher；正态=0）。
+
+    真实照片纹理连续衰减 → 峰度较低；AI 重绘/过度锐化呈
+    "大片平滑 + 少量极硬边缘"的双峰分布 → 峰度偏高。
+    """
+    gy, gx = np.gradient(gray)
+    g = np.sqrt(gx * gx + gy * gy).ravel()
+    s = g.std()
+    if s < 1e-9:
+        return float("nan")
+    return float((((g - g.mean()) / s) ** 4).mean() - 3.0)
+
+
+def _grade_texture(flat, kurt, threshold=0.6):
+    """纹理形态判读：以"平坦区噪声底"为准（越低越像被抹平的塑料皮肤）。
+
+    threshold 缺省 0.6；源图本身是磨皮图时应传入 max(0.6, flat_src - 0.1)，
+    避免"源图本就贴线"时把 inherited 问题错判为 pipeline 过失。
+    """
+    if np.isnan(flat):
+        return "不适用"
+    if flat < threshold:
+        return "✘"          # 平坦区被抹平 → 塑料皮肤
+    if flat < 1.0:
+        return "△"          # 偏平滑
+    return "✔"
+
+
 # ---------------------------------------------------------------- 判定
 
 def _grade_block(peak, P, P0, detected):
@@ -213,7 +276,7 @@ def _grade_fidelity(rmse):
 
 # ---------------------------------------------------------------- 主流程
 
-def run(source, output, pitch, json_path):
+def run(source, output, pitch, json_path, reference=None, min_flat=None):
     im_src = Image.open(source)
     im_out = Image.open(output)
     w0, h0 = im_src.size
@@ -316,6 +379,42 @@ def run(source, output, pitch, json_path):
     print("⑥ 保真度（输出缩回源图尺寸 vs 源图）")
     print(f"   RMSE {rmse:.2f}   (RMSE/255 = {rmse / 255.0:.4f})")
 
+    # ⑧ 纹理形态（识别 AI 幻觉细节 / 塑料皮肤）
+    flat_out = _flat_noise_floor(gray_out)
+    kurt_out = _grad_kurtosis(gray_out)
+    # 源图基线：源图本身是磨皮图（平坦底贴线）时，判"塑料"须以此为参照
+    flat_src = _flat_noise_floor(gray_src)
+    kurt_src = _grad_kurtosis(gray_src)
+    tex_threshold = max(0.6, flat_src - 0.1)
+    if min_flat is not None:
+        tex_threshold = max(tex_threshold, min_flat)
+    ref = {}
+    if reference:
+        with Image.open(reference) as im:
+            im = im.convert("L")
+            if im.size != (w1, h1):
+                im = im.resize((w1, h1), Image.LANCZOS)
+            gray_ref = np.asarray(im, dtype=np.float32)
+        ref = {"flat": _flat_noise_floor(gray_ref),
+               "kurt": _grad_kurtosis(gray_ref)}
+    metrics["texture_form"] = {"flat_noise_floor": flat_out, "grad_kurtosis": kurt_out,
+                               "source_flat_noise_floor": flat_src,
+                               "source_grad_kurtosis": kurt_src,
+                               "threshold": tex_threshold,
+                               "reference": ref if ref else None}
+    g_tex = _grade_texture(flat_out, kurt_out, tex_threshold)
+    print()
+    print("⑧ 纹理形态（识别 AI 幻觉细节 / 塑料皮肤）")
+    print(f"   平坦区噪声底 {flat_out:.3f}   （越低越像塑料皮肤；真实照片应明显 >0）")
+    print(f"   梯度峰度     {kurt_out:.2f}   （越高越像\"大片平滑+硬边\"的合成质感）")
+    print(f"   [源图基线]   平坦区噪声底 {flat_src:.3f}  梯度峰度 {kurt_src:.2f}"
+          f"  → 达标线 max(0.6, 源图-0.1) = {tex_threshold:.3f}")
+    if ref:
+        rflat, rkurt = ref["flat"], ref["kurt"]
+        ratio = (flat_out / rflat) if rflat > 1e-9 else float("nan")
+        print(f"   [参考真实照片] 平坦区噪声底 {rflat:.3f}  梯度峰度 {rkurt:.2f}"
+              f"  噪声底比 {ratio:.2f}x")
+
     # ⑦ 判定
     if lead is None:
         g_block = "不适用（未检出格子）"
@@ -329,22 +428,27 @@ def run(source, output, pitch, json_path):
     g_faith = _grade_fidelity(rmse)
 
     metrics["verdict"] = {"block": g_block, "sharp": g_sharp, "fidelity": g_faith,
+                          "texture": g_tex, "texture_threshold": tex_threshold,
                           "peak_ratio": peak_val, "period": P_val,
                           "period_ok": detected}
 
     ok_block = g_block in ("✔", "△", "不适用（未检出格子）")
-    real = ok_block and g_sharp == "✔" and g_faith != "✘"
+    real = ok_block and g_sharp == "✔" and g_faith != "✘" and g_tex != "✘"
 
     print()
     print("⑦ 判定")
     peak_txt = "n/a" if lead is None else f"{peak_val:.2f}"
     print(f"   块状 {g_block}({peak_txt})   锐度 {g_sharp}({sharp_ratio:.2f}x)   "
-          f"保真 {g_faith}(RMSE {rmse:.1f})")
+          f"保真 {g_faith}(RMSE {rmse:.1f})   纹理 {g_tex}(平坦底 {flat_out:.2f})")
     verdict_word = "真修复" if real else "未真修复"
     print(f"判定：{verdict_word} → 块状 {g_block}({peak_txt}) "
-          f"锐度 {g_sharp}({sharp_ratio:.2f}x) 保真 {g_faith}(RMSE {rmse:.1f})")
+          f"锐度 {g_sharp}({sharp_ratio:.2f}x) 保真 {g_faith}(RMSE {rmse:.1f}) "
+          f"纹理 {g_tex}(平坦底 {flat_out:.2f})")
 
-    if not detected:
+    if g_tex == "✘":
+        human = ("锐度/块状虽达标，但平坦区被抹平（塑料皮肤）、细节脱离源图结构，"
+                 "属 AI 重绘而非修复——这是 ④⑤ 测不出的盲区。")
+    elif not detected:
         human = "未在输出里检出源图压缩块对应的周期格子，源图压缩块可能本就微弱。"
     elif g_block == "✔":
         human = "修复确实生效，且未留下压缩块格子。"
@@ -372,15 +476,65 @@ def run(source, output, pitch, json_path):
 
 def main(argv=None):
     ap = argparse.ArgumentParser(description="高清修复离线数值体检工具（不依赖 GPU/ComfyUI）")
-    ap.add_argument("--source", required=True, help="源图（修复前）")
-    ap.add_argument("--output", required=True, help="修复输出图")
+    ap.add_argument("--source", help="源图（修复前）")
+    ap.add_argument("--output", help="修复输出图（与 --batch 二选一）")
+    ap.add_argument("--batch", help="批量模式：对该目录下全部图片逐一跑体检（共用 --source）")
     ap.add_argument("--pitch", type=int, default=8, help="源图压缩块网格间距，默认 8")
-    ap.add_argument("--json", dest="json_path", default=None, help="把指标写成 JSON 的路径")
+    ap.add_argument("--json", dest="json_path", default=None,
+                    help="单图模式：把指标写成 JSON；批量模式：把汇总表写成 JSON")
+    ap.add_argument("--min-flat", type=float, default=None,
+                    help="纹理形态达标线下限（max(0.6, 源图-0.1) 与该值取大者）；供 auto-grain 闭环用")
+    ap.add_argument("--reference", default=None,
+                    help="可选：一张同尺寸真实照片，作为 ⑧ 自然度标尺")
     args = ap.parse_args(argv)
 
     if args.pitch <= 0:
         raise SystemExit("✗ --pitch 必须为正整数")
-    run(args.source, args.output, args.pitch, args.json_path)
+
+    if args.batch:
+        if not args.source:
+            raise SystemExit("✗ 批量模式需要 --source")
+        src = Path(args.batch)
+        if not src.is_dir():
+            raise SystemExit(f"✗ --batch 不是目录: {src}")
+        exts = {".png", ".jpg", ".jpeg", ".webp", ".bmp"}
+        outs = sorted(p for p in src.iterdir() if p.suffix.lower() in exts)
+        if not outs:
+            raise SystemExit(f"✗ 目录里没有图片: {src}")
+        summary = []
+        print(f"批量体检: {len(outs)} 张图，源图 {args.source}\n")
+        for p in outs:
+            print("=" * 64)
+            print(f"▶ {p.name}")
+            m = run(args.source, str(p), args.pitch, None, args.reference, args.min_flat)
+            v = m["verdict"]
+            summary.append({"file": p.name,
+                            "verdict": "真修复" if (v["block"] in ("✔", "△", "不适用（未检出格子）")
+                                                    and v["sharp"] == "✔" and v["fidelity"] != "✘"
+                                                    and v["texture"] != "✘") else "未真修复",
+                            "block": v["block"], "sharp": v["sharp"],
+                            "fidelity": v["fidelity"], "texture": v["texture"],
+                            "flat_noise_floor": m["texture_form"]["flat_noise_floor"],
+                            "sharp_ratio": m["sharpness"]["ratio"],
+                            "fidelity_rmse": m["fidelity"]["rmse"]})
+        print("=" * 64)
+        print("\n汇总：")
+        for s in summary:
+            print(f"  {s['file']:<40} {s['verdict']}   纹理 {s['texture']}"
+                  f"(平坦底 {s['flat_noise_floor']:.2f})  锐度 {s['sharp']}({s['sharp_ratio']:.2f}x)"
+                  f"  保真 {s['fidelity']}(RMSE {s['fidelity_rmse']:.1f})")
+        n_ok = sum(1 for s in summary if s["verdict"] == "真修复")
+        print(f"\n真修复 {n_ok}/{len(summary)}")
+        if args.json_path:
+            Path(args.json_path).write_text(
+                json.dumps({"source": args.source, "results": summary},
+                           ensure_ascii=False, indent=2), encoding="utf-8")
+            print(f"（汇总已写入 {args.json_path}）")
+        return
+
+    if not args.source or not args.output:
+        raise SystemExit("✗ 需要 --source 与 --output（或用 --batch）")
+    run(args.source, args.output, args.pitch, args.json_path, args.reference, args.min_flat)
 
 
 if __name__ == "__main__":

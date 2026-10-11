@@ -55,7 +55,7 @@
         0
       ],
       "image": [
-        "3",
+        "9",
         0
       ]
     },
@@ -95,6 +95,22 @@
     },
     "_meta": {
       "title": "create video (audio passthrough)"
+    }
+  },
+  "9": {
+    "class_type": "ImageScale",
+    "inputs": {
+      "image": [
+        "3",
+        0
+      ],
+      "upscale_method": "area",
+      "width": "[inject:pre_width]",
+      "height": "[inject:pre_height]",
+      "crop": "disabled"
+    },
+    "_meta": {
+      "title": "pre-scale to 1/4（规避 ESRGAN 整批 4x 的 38GB CPU 分配）"
     }
   },
   "8": {

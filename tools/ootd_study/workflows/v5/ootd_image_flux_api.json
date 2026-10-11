@@ -1,0 +1,178 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "flux1-dev-fp8.safetensors",
+      "weight_dtype": "fp8_e4m3fn"
+    },
+    "_meta": {
+      "title": "1. Flux 扩散模型 (fp8 e4m3fn)"
+    }
+  },
+  "2": {
+    "class_type": "DualCLIPLoader",
+    "inputs": {
+      "clip_name1": "t5xxl_fp8_e4m3fn.safetensors",
+      "clip_name2": "clip_l.safetensors",
+      "type": "flux"
+    },
+    "_meta": {
+      "title": "2. 双文本编码器 (T5 + CLIP-L, flux)"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "flux-vae-bf16.safetensors"
+    },
+    "_meta": {
+      "title": "3. Flux 图像 VAE"
+    }
+  },
+  "20": {
+    "class_type": "LoraLoader",
+    "inputs": {
+      "lora_name": "hinaFluxDevAsianMix_v12.safetensors",
+      "strength_model": 0.85,
+      "strength_clip": 0.85,
+      "model": ["1", 0],
+      "clip": ["2", 0]
+    },
+    "_meta": {
+      "title": "20. 亚洲人像 LoRA (0.85/0.85, model/clip 加权)"
+    }
+  },
+  "4": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "[inject:prompt]",
+      "clip": ["20", 1]
+    },
+    "_meta": {
+      "title": "4. 正向提示词 (画面描述) · 占位符: prompt"
+    }
+  },
+  "5": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "short legs, dwarf proportions, stubby legs, disproportionate body, extra limbs, bad hands, deformed feet, blurry, low quality, oversaturated",
+      "clip": ["20", 1]
+    },
+    "_meta": {
+      "title": "5. 负向提示词 (固定文本, 规避短腿/畸形)"
+    }
+  },
+  "10": {
+    "class_type": "FluxGuidance",
+    "inputs": {
+      "guidance": 3.5,
+      "conditioning": ["4", 0]
+    },
+    "_meta": {
+      "title": "10. 正向文本引导强度 (guidance 3.5)"
+    }
+  },
+  "11": {
+    "class_type": "FluxGuidance",
+    "inputs": {
+      "guidance": 1.0,
+      "conditioning": ["5", 0]
+    },
+    "_meta": {
+      "title": "11. 负向文本引导强度 (1.0)"
+    }
+  },
+  "30": {
+    "class_type": "ControlNetLoader",
+    "inputs": {
+      "control_net_name": "flux_controlnet_union_pro_2.0.safetensors"
+    },
+    "_meta": {
+      "title": "30. ControlNet 模型 (Union Pro, 可选组, 默认旁路)"
+    }
+  },
+  "31": {
+    "class_type": "SetUnionControlNetType",
+    "inputs": {
+      "control_net": ["30", 0],
+      "type": "openpose"
+    },
+    "_meta": {
+      "title": "31. 指定 Union ControlNet 类型 (openpose)"
+    }
+  },
+  "32": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "[inject:pose]"
+    },
+    "_meta": {
+      "title": "32. 加载姿势参考图 (input 目录) · 占位符: pose"
+    }
+  },
+  "33": {
+    "class_type": "ControlNetApplyAdvanced",
+    "inputs": {
+      "positive": ["10", 0],
+      "negative": ["11", 0],
+      "control_net": ["31", 0],
+      "image": ["32", 0],
+      "strength": 0.78,
+      "start_percent": 0.0,
+      "end_percent": 0.85,
+      "vae": ["3", 0]
+    },
+    "_meta": {
+      "title": "33. 应用 ControlNet (strength 0.78 / end 0.85, 可选组)"
+    }
+  },
+  "6": {
+    "class_type": "EmptySD3LatentImage",
+    "inputs": {
+      "width": "[inject:width]",
+      "height": "[inject:height]",
+      "batch_size": 1
+    },
+    "_meta": {
+      "title": "6. 空潜变量 (竖屏 768x1344) · 占位符: width / height"
+    }
+  },
+  "7": {
+    "class_type": "KSampler",
+    "inputs": {
+      "seed": "[inject:seed]",
+      "steps": 20,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": ["20", 0],
+      "positive": ["10", 0],
+      "negative": ["11", 0],
+      "latent_image": ["6", 0]
+    },
+    "_meta": {
+      "title": "7. KSampler (20步/CFG 1.0/euler simple, 默认旁路 ControlNet) · 占位符: seed"
+    }
+  },
+  "8": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": ["7", 0],
+      "vae": ["3", 0]
+    },
+    "_meta": {
+      "title": "8. VAE 解码为图像"
+    }
+  },
+  "9": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "[inject:output]",
+      "images": ["8", 0]
+    },
+    "_meta": {
+      "title": "9. 保存图像 (按日期/系列归档) · 占位符: output"
+    }
+  }
+}

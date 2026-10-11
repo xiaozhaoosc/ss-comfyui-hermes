@@ -15,7 +15,8 @@ Usage: python tools/_pc_gen_flux.py <variant> [--scenes s01] [--steps 20]
 import os, sys, json, time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from _pc_common import submit, wait, collect_outputs, save_meta, OUT_ROOT
+from _pc_common import (submit, wait, collect_outputs, save_meta, OUT_ROOT,
+                        comfy_prefix)
 import _pc_prompts as P
 import importlib
 importlib.reload(P)
@@ -92,7 +93,10 @@ def main():
     w = h = 768
     guidance = 3.5
     lora = None
+    outdir_arg = None
     for i, a in enumerate(sys.argv):
+        if a == "--outdir" and i + 1 < len(sys.argv):
+            outdir_arg = sys.argv[i + 1]
         if a == "--scenes" and i + 1 < len(sys.argv):
             only = set(x.strip() for x in sys.argv[i + 1].split(",") if x.strip())
         if a == "--steps" and i + 1 < len(sys.argv):
@@ -106,7 +110,7 @@ def main():
         if a == "--lora" and i + 1 < len(sys.argv):
             lora = sys.argv[i + 1]
 
-    outdir = os.path.join(OUT_ROOT, sub)
+    outdir = outdir_arg or os.path.join(OUT_ROOT, sub)
     os.makedirs(outdir, exist_ok=True)
     results = []
     t_all = time.time()
@@ -116,7 +120,7 @@ def main():
         if only and sc["id"] not in only:
             continue
         seed = sbase + i
-        prefix = "pc_%s_%s" % (sub, sc["id"])
+        prefix = comfy_prefix(outdir, "pc_%s_%s" % (sub, sc["id"]))
         graph = build(unf, sc["flux"], w, h, steps, seed, prefix,
                       guidance=guidance, lora=lora, use_gguf=use_gguf)
         ok, pid = submit(graph)

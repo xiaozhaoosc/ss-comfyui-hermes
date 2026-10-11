@@ -1,0 +1,12 @@
+python=3.13.14 (main, Jun 11 2026, 04:04:46) [MSC v.1944 64 bit (AMD64)]
+pypdf MISSING: ModuleNotFoundError("No module named 'pypdf'")
+pymupdf MISSING: ModuleNotFoundError("No module named 'fitz'")
+dir_exists=True
+FILE: 01杨令公归宋.pdf
+FILE: 02邠阳城救驾.pdf
+FILE: 03殉国李陵碑.pdf
+FILE: 04六郎收三将.pdf
+FILE: 05八姐闯幽州.pdf
+FILE: 06智救杨驸马.pdf
+FILE: 07大破天门阵.pdf
+FILE: 08穆桂英挂帅.pdf

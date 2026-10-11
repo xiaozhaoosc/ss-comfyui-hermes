@@ -6,9 +6,44 @@ HOST = "http://127.0.0.1:8188"
 BASE = r"D:\ai_projects\ComfyUI"
 OUT_ROOT = os.path.join(BASE, "output", "prompt_compare")
 
+# ---- 默认出图后端（新增档位只需在此登记）----
+DEFAULT_BACKEND = "zimage"
+BACKENDS = {
+    "zimage": "Z-Image Turbo bf16 — 8 步 / cfg1.0 / 1024px，默认档",
+    "flux": "Flux.1 Dev（fp8 或 T8 abliterated GGUF）— 20 步，慢但氛围强",
+    "sd15": "SD1.5 / SDXL 底模 — 30 步。本机可用底模：Juggernaut-XL_v9 / RealVisXL_V4.0 / v1-5",
+    "qwen21": "Qwen-Image 2.1 GGUF Q4_K_M — 25 步 / cfg3.0，**负面提示词有效**",
+}
+
+# ⚠️ 本机设了 HTTP_PROXY，直接 urlopen 访问 127.0.0.1:8188 会被代理劫持成 502。
+# 所有本地 HTTP 必须走这个绕代理的 opener。
+_OPENER = urllib.request.build_opener(urllib.request.ProxyHandler({}))
+
+
+def today_root(sub=None):
+    """规范产物目录：output/YYYY-MM-DD_wb[/sub]。"""
+    d = os.path.join(BASE, "output", time.strftime("%Y-%m-%d") + "_wb")
+    return os.path.join(d, sub) if sub else d
+
+
+def comfy_prefix(outdir, name):
+    """生成 SaveImage 的 filename_prefix（相对 ComfyUI/output）。
+
+    ⚠️ prefix 不带子目录时，PNG 会掉到 output/ 根目录，与 _run.json 分家。
+    这里按 outdir 自动补上子目录，保证产物落在指定目录里。
+    """
+    try:
+        rel = os.path.relpath(outdir, os.path.join(BASE, "output")).replace("\\", "/")
+        if rel.startswith(".."):
+            rel = ""
+    except Exception:
+        rel = ""
+    rel = rel.strip("/")
+    return ("%s/%s" % (rel, name)) if rel else name
+
 
 def api_get(ep, timeout=30):
-    r = urllib.request.urlopen(HOST + ep, timeout=timeout)
+    r = _OPENER.open(HOST + ep, timeout=timeout)
     return json.loads(r.read().decode("utf-8", "replace"))
 
 
@@ -17,10 +52,19 @@ def api_post(ep, payload, timeout=60):
     req = urllib.request.Request(HOST + ep, data=data,
                                  headers={"Content-Type": "application/json"})
     try:
-        r = urllib.request.urlopen(req, timeout=timeout)
+        r = _OPENER.open(req, timeout=timeout)
         return r.status, json.loads(r.read().decode("utf-8", "replace"))
     except urllib.error.HTTPError as e:
         return e.code, e.read().decode("utf-8", "replace")
+
+
+def server_alive():
+    """绕代理探测 ComfyUI 存活。注意 /system_stats 在本机会 500，别用它。"""
+    try:
+        api_get("/queue", timeout=10)
+        return True
+    except Exception:
+        return False
 
 
 def submit(prompt_graph, client_id=None):

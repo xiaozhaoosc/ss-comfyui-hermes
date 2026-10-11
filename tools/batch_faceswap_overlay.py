@@ -444,11 +444,11 @@ def main():
     )
     parser.add_argument("--input", default=r"D:\ai_projects\ComfyUI\input\十绫Shiling",
                         help="输入视频目录 (默认: 十绫Shiling)")
-    FACE_DIR = Path(r"D:\ai_projects\ComfyUI\input\ken4\face")
+    FACE_DIR = Path(r"D:\ai_projects\ComfyUI\input\ken4\face\ken")
     FACE_POOL = ["ken-14岁.png", "ken-16岁.png"]
     default_face = str(FACE_DIR / random.choice(FACE_POOL))
     parser.add_argument("--face", default=default_face,
-                        help="人脸图片路径 (默认: ken4/face 中随机14/16岁)")
+                        help="人脸图片路径 (默认: ken4/face/ken 中随机14/16岁)")
     parser.add_argument("--output", default=r"D:\ai_projects\ComfyUI\output\aken4\十绫Shiling",
                         help="最终输出目录 (默认: aken4/十绫Shiling)")
     parser.add_argument("--skip-faceswap", action="store_true", help="跳过换脸步骤（已有换脸结果时）")

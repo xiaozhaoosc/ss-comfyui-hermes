@@ -1,0 +1,40 @@
+《杨家将 · 忠烈千秋》六镜试片 — Google Flow / Veo 3.1 提示词
+用法：逐镜上传对应首帧图（Image-to-Video），粘贴下面提示词；模型先 Fast 试稿，通过后用 Quality 定稿。
+总时长 44 秒 | 16:9 | 旁白不要交给 Flow，只出环境声
+==============================================================================
+
+【镜 01】退守土岗　（第 6 集《李陵碑 · 殉国》 · 6 秒 · 首帧 shot01.jpg）
+------------------------------------------------------------------------------
+Low aerial wide shot, camera very slowly pushing in. Dozens of ragged Song-dynasty soldiers in broken armour sit scattered on a bare frontier hilltop at dusk, heads bowed, almost motionless. One man stands alone just outside the circle, back to camera, his dark cloak torn down to a half, armour split open in three places, both hands hanging empty at his sides. Frozen ochre earth under a thin film of moon-white snow, layered celadon-green mountains receding into vast empty space. Traditional hand-painted 2D animation, flat solid blocks of mineral pigment colour, simplified contours with visible brush outlines, film grain, vintage Shanghai Animation Film Studio manner. Every form is one flat shape of colour; light is expressed only by adjacent colour blocks. SFX: low wind across bare ground.
+
+【镜 02】见碑　（第 6 集《李陵碑 · 殉国》 · 6 秒 · 首帧 shot02.jpg）
+------------------------------------------------------------------------------
+Close shot, camera slowly tilts down and settles to rest. A broken stone stele leans at an angle in frozen ochre earth, its face eroded and flaking, its edges chipped away, the characters it once carried worn almost flat and unreadable. To its left stands a dead willow, every branch snapped off. A thin film of moon-white snow lies on the ground. Wide empty space fills the upper frame. Traditional hand-painted 2D animation, flat solid blocks of mineral pigment colour, simplified contours with visible brush outlines, film grain, vintage Shanghai Animation Film Studio manner. Every form is one flat shape of colour. The camera comes to a complete stop and holds. SFX: faint wind.
+
+【镜 03】碑面横移　（第 6 集《李陵碑 · 殉国》 · 8 秒 · 首帧 shot03.jpg）
+------------------------------------------------------------------------------
+Extreme close-up filling the entire frame with the surface of an ancient stone stele. Coarse weathered stone, hairline cracks and chisel marks; rows of horizontal incisions where characters were once carved have been worn almost smooth, as if scoured by water for many years. Only a fragment of one chiselled stroke survives at the lower right. Camera drifts slowly and steadily sideways across the surface. Pale ochre stone and ink-black line fill the whole frame; the image is built from these two tones alone. Traditional hand-painted 2D animation, flat solid blocks of mineral pigment colour, simplified contours with visible brush outlines, film grain, vintage Shanghai Animation Film Studio manner. SFX: wind ceases abruptly at the very start, complete silence through the middle, a single thread of wind at the end.
+
+【镜 04】撞碑 · 全片风格高潮　（第 6 集《李陵碑 · 殉国》 · 8 秒 · 首帧 shot04.jpg）
+------------------------------------------------------------------------------
+Monochrome ink-wash image, black white and grey, drawn like an old woodblock illustration. A weathered stone stele stands on a bare hillside. Before it a lone warrior in broken armour, back to camera, facing the stone, small within the frame. Beside him a long sword is planted upright in the ground, its tassel the only cinnabar-red note in the entire image. Sparse snow drifts down. Camera rises very slowly from behind the figure, passing over his shoulder toward the stele. Vast empty sky above. Every value sits as one flat shape of ink, the way an old woodblock print is cut. SFX: wind, then one low short dull impact like wood striking stone, then long wind.
+
+【镜 05】碑前开花　（第 24 集《穆桂英挂帅》 · 8 秒 + Extend 4 秒 = 12 秒 · 首帧 shot05.jpg）
+------------------------------------------------------------------------------
+Same hillside, same camera position and framing, years later, early spring afternoon. The stele now carries dense vertical rows of carved names. Beside it the willow has come back to life, hung with fresh pale-green leaves. The slope in front is covered with a broad carpet of small wildflowers, celadon and moon white. A sword is planted in the ground, its tassel still cinnabar red, the single most vivid colour in the frame. The horizon sits low with a wide blank sky above. Camera completely static. Traditional hand-painted 2D animation, flat solid blocks of mineral pigment colour, simplified contours with visible brush outlines, film grain, vintage Shanghai Animation Film Studio manner. SFX: wind moving gently through willow leaves.
+
+[Extend 续写 4 秒]
+Continue this static wide shot. Willow leaves stir gently, one or two petals drift slowly across the frame. The camera holds absolutely still. SFX: soft wind.
+
+【镜 06】枯柳新芽　（第 8 集《汴京审潘》 · 4 秒 · 首帧 shot06.jpg）
+------------------------------------------------------------------------------
+Extreme close-up. A single snapped-off dead willow branch enters from the lower left, its bark drawn in heavy ink-black line, every old twig broken. At its very tip one small new shoot has emerged, two young leaves of pale celadon green, very small. The rest of the frame is blank moon-white space. Camera pushes in almost imperceptibly and then holds still. Traditional hand-painted 2D animation, flat solid blocks of mineral pigment colour, simplified contours with visible brush outlines, film grain, vintage Shanghai Animation Film Studio manner. SFX: a single thread of wind.
+
+==============================================================================
+Flow 写法六条纪律：
+1. 不写否定句（Flow 无负向提示词字段，Google 明确建议避免否定）
+2. 运镜词前置
+3. 一段只给一个运镜
+4. 想慢就写 slowly / gradually / very slowly；不要出现 fast / quick / rapid
+5. 提示词 100-150 词为上限
+6. 主体名词放前面，不要并列多个主体

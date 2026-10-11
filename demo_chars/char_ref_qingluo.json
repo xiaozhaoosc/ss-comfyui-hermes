@@ -1,0 +1,13 @@
+{
+  "name": "青萝",
+  "seed": 20261012,
+  "model": "Counterfeit-V3.0_fp16.safetensors",
+  "lora": null,
+  "gender": "female",
+  "traits": {
+    "hair": "long green hair, twin braids, flower hairpin",
+    "clothes": "light green robe with leaf patterns, ribbon sash",
+    "prop": "wooden bow and quiver"
+  },
+  "sheet_path": "01_assets/char_qingluo_sheet.png"
+}

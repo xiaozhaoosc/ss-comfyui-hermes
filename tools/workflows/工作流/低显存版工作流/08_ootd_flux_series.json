@@ -1,0 +1,858 @@
+{
+ "id": "00000000-0000-0000-0000-000000000000",
+ "revision": 0,
+ "last_node_id": 900,
+ "last_link_id": 19,
+ "nodes": [
+  {
+   "id": 1,
+   "type": "UNETLoader",
+   "pos": [
+    40,
+    40
+   ],
+   "size": [
+    400,
+    98
+   ],
+   "flags": {},
+   "order": 0,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "MODEL",
+     "type": "MODEL",
+     "links": [
+      1
+     ],
+     "slot_index": 0
+    }
+   ],
+   "title": "1. Flux 扩散模型 (fp8 e4m3fn)",
+   "properties": {
+    "Node name for S&R": "UNETLoader"
+   },
+   "widgets_values": [
+    "flux1-dev-fp8.safetensors",
+    "fp8_e4m3fn"
+   ]
+  },
+  {
+   "id": 2,
+   "type": "DualCLIPLoader",
+   "pos": [
+    40,
+    178
+   ],
+   "size": [
+    400,
+    154
+   ],
+   "flags": {},
+   "order": 1,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "CLIP",
+     "type": "CLIP",
+     "links": [
+      2
+     ],
+     "slot_index": 0
+    }
+   ],
+   "title": "2. 双文本编码器 (T5 + CLIP-L, flux)",
+   "properties": {
+    "Node name for S&R": "DualCLIPLoader"
+   },
+   "widgets_values": [
+    "t5xxl_fp8_e4m3fn.safetensors",
+    "clip_l.safetensors",
+    "flux"
+   ]
+  },
+  {
+   "id": 3,
+   "type": "VAELoader",
+   "pos": [
+    40,
+    372
+   ],
+   "size": [
+    400,
+    98
+   ],
+   "flags": {},
+   "order": 2,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "VAE",
+     "type": "VAE",
+     "links": [
+      10,
+      19
+     ],
+     "slot_index": 0
+    }
+   ],
+   "title": "3. Flux 图像 VAE",
+   "properties": {
+    "Node name for S&R": "VAELoader"
+   },
+   "widgets_values": [
+    "flux-vae-bf16.safetensors"
+   ]
+  },
+  {
+   "id": 20,
+   "type": "LoraLoader",
+   "pos": [
+    40,
+    510
+   ],
+   "size": [
+    400,
+    154
+   ],
+   "flags": {},
+   "order": 3,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "model",
+     "type": "MODEL",
+     "link": 1
+    },
+    {
+     "name": "clip",
+     "type": "CLIP",
+     "link": 2
+    }
+   ],
+   "outputs": [
+    {
+     "name": "MODEL",
+     "type": "MODEL",
+     "links": [
+      3
+     ],
+     "slot_index": 0
+    },
+    {
+     "name": "CLIP",
+     "type": "CLIP",
+     "links": [
+      4,
+      5
+     ],
+     "slot_index": 1
+    }
+   ],
+   "title": "20. 亚洲人像 LoRA (0.85/0.85, model/clip 加权)",
+   "properties": {
+    "Node name for S&R": "LoraLoader"
+   },
+   "widgets_values": [
+    "hinaFluxDevAsianMix_v12.safetensors",
+    0.85,
+    0.85
+   ]
+  },
+  {
+   "id": 4,
+   "type": "CLIPTextEncode",
+   "pos": [
+    40,
+    704
+   ],
+   "size": [
+    460,
+    300
+   ],
+   "flags": {},
+   "order": 4,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "clip",
+     "type": "CLIP",
+     "link": 4
+    }
+   ],
+   "outputs": [
+    {
+     "name": "CONDITIONING",
+     "type": "CONDITIONING",
+     "links": [
+      6
+     ],
+     "slot_index": 0
+    }
+   ],
+   "title": "4. 正向提示词 (画面描述, 每个镜头换一段)",
+   "properties": {
+    "Node name for S&R": "CLIPTextEncode"
+   },
+   "widgets_values": [
+    "A realistic mirror selfie of a slender young East Asian woman with long black hair, taking a photo with a white smartphone covering part of her face. She is wearing a relaxed-fit medium-blue linen button-up shirt with rolled-up sleeves and dual chest pockets, paired with khaki high-waisted denim mini shorts. Casual indoor aesthetic, soft ambient lighting, modern apartment hallway background, natural skin texture, candid daily OOTD photography, 8k resolution."
+   ]
+  },
+  {
+   "id": 5,
+   "type": "CLIPTextEncode",
+   "pos": [
+    40,
+    1044
+   ],
+   "size": [
+    460,
+    168
+   ],
+   "flags": {},
+   "order": 5,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "clip",
+     "type": "CLIP",
+     "link": 5
+    }
+   ],
+   "outputs": [
+    {
+     "name": "CONDITIONING",
+     "type": "CONDITIONING",
+     "links": [
+      7
+     ],
+     "slot_index": 0
+    }
+   ],
+   "title": "5. 负向提示词 (固定文本, 规避短腿/畸形, 一般不改)",
+   "properties": {
+    "Node name for S&R": "CLIPTextEncode"
+   },
+   "widgets_values": [
+    "short legs, dwarf proportions, stubby legs, disproportionate body, extra limbs, bad hands, deformed feet, blurry, low quality, oversaturated"
+   ]
+  },
+  {
+   "id": 10,
+   "type": "FluxGuidance",
+   "pos": [
+    540,
+    40
+   ],
+   "size": [
+    400,
+    98
+   ],
+   "flags": {},
+   "order": 6,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "conditioning",
+     "type": "CONDITIONING",
+     "link": 6
+    }
+   ],
+   "outputs": [
+    {
+     "name": "CONDITIONING",
+     "type": "CONDITIONING",
+     "links": [
+      8,
+      17
+     ],
+     "slot_index": 0
+    }
+   ],
+   "title": "10. 正向文本引导强度 (guidance 3.5)",
+   "properties": {
+    "Node name for S&R": "FluxGuidance"
+   },
+   "widgets_values": [
+    3.5
+   ]
+  },
+  {
+   "id": 11,
+   "type": "FluxGuidance",
+   "pos": [
+    540,
+    178
+   ],
+   "size": [
+    400,
+    98
+   ],
+   "flags": {},
+   "order": 7,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "conditioning",
+     "type": "CONDITIONING",
+     "link": 7
+    }
+   ],
+   "outputs": [
+    {
+     "name": "CONDITIONING",
+     "type": "CONDITIONING",
+     "links": [
+      9,
+      18
+     ],
+     "slot_index": 0
+    }
+   ],
+   "title": "11. 负向文本引导强度 (1.0)",
+   "properties": {
+    "Node name for S&R": "FluxGuidance"
+   },
+   "widgets_values": [
+    1.0
+   ]
+  },
+  {
+   "id": 6,
+   "type": "EmptySD3LatentImage",
+   "pos": [
+    540,
+    316
+   ],
+   "size": [
+    400,
+    130
+   ],
+   "flags": {},
+   "order": 12,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "LATENT",
+     "type": "LATENT",
+     "links": [
+      13
+     ],
+     "slot_index": 0
+    }
+   ],
+   "title": "6. 空潜变量 (竖屏 768x1344, 改尺寸在此)",
+   "properties": {
+    "Node name for S&R": "EmptySD3LatentImage"
+   },
+   "widgets_values": [
+    768,
+    1344,
+    1
+   ]
+  },
+  {
+   "id": 7,
+   "type": "KSampler",
+   "pos": [
+    540,
+    486
+   ],
+   "size": [
+    400,
+    262
+   ],
+   "flags": {},
+   "order": 13,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "model",
+     "type": "MODEL",
+     "link": 3
+    },
+    {
+     "name": "positive",
+     "type": "CONDITIONING",
+     "link": 8
+    },
+    {
+     "name": "negative",
+     "type": "CONDITIONING",
+     "link": 9
+    },
+    {
+     "name": "latent_image",
+     "type": "LATENT",
+     "link": 13
+    }
+   ],
+   "outputs": [
+    {
+     "name": "LATENT",
+     "type": "LATENT",
+     "links": [
+      11
+     ],
+     "slot_index": 0
+    }
+   ],
+   "title": "7. KSampler (20步 / CFG 1.0 / euler simple / denoise 1.0)",
+   "properties": {
+    "Node name for S&R": "KSampler"
+   },
+   "widgets_values": [
+    928001,
+    "fixed",
+    20,
+    1.0,
+    "euler",
+    "simple",
+    1.0
+   ]
+  },
+  {
+   "id": 8,
+   "type": "VAEDecode",
+   "pos": [
+    540,
+    788
+   ],
+   "size": [
+    400,
+    98
+   ],
+   "flags": {},
+   "order": 14,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "samples",
+     "type": "LATENT",
+     "link": 11
+    },
+    {
+     "name": "vae",
+     "type": "VAE",
+     "link": 10
+    }
+   ],
+   "outputs": [
+    {
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      12
+     ],
+     "slot_index": 0
+    }
+   ],
+   "title": "8. VAE 解码为图像",
+   "properties": {
+    "Node name for S&R": "VAEDecode"
+   },
+   "widgets_values": []
+  },
+  {
+   "id": 9,
+   "type": "SaveImage",
+   "pos": [
+    540,
+    926
+   ],
+   "size": [
+    400,
+    450
+   ],
+   "flags": {},
+   "order": 15,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "images",
+     "type": "IMAGE",
+     "link": 12
+    }
+   ],
+   "outputs": [
+    {
+     "name": "images",
+     "type": "IMAGE",
+     "links": null,
+     "slot_index": 0
+    }
+   ],
+   "title": "9. 保存图像 (改日期/系列/镜头名在此)",
+   "properties": {
+    "Node name for S&R": "SaveImage"
+   },
+   "widgets_values": [
+    "2026-10-02/ootd_blue_shirt/img/01_classic"
+   ]
+  },
+  {
+   "id": 30,
+   "type": "ControlNetLoader",
+   "pos": [
+    1000,
+    40
+   ],
+   "size": [
+    400,
+    98
+   ],
+   "flags": {},
+   "order": 8,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "CONTROL_NET",
+     "type": "CONTROL_NET",
+     "links": [
+      14
+     ],
+     "slot_index": 0
+    }
+   ],
+   "title": "30. ControlNet 模型 (Union Pro, 可选组, 默认不使用)",
+   "properties": {
+    "Node name for S&R": "ControlNetLoader"
+   },
+   "widgets_values": [
+    "flux_controlnet_union_pro_2.0.safetensors"
+   ]
+  },
+  {
+   "id": 31,
+   "type": "SetUnionControlNetType",
+   "pos": [
+    1000,
+    178
+   ],
+   "size": [
+    400,
+    98
+   ],
+   "flags": {},
+   "order": 9,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "control_net",
+     "type": "CONTROL_NET",
+     "link": 14
+    }
+   ],
+   "outputs": [
+    {
+     "name": "CONTROL_NET",
+     "type": "CONTROL_NET",
+     "links": [
+      15
+     ],
+     "slot_index": 0
+    }
+   ],
+   "title": "31. 指定 Union ControlNet 类型 (openpose)",
+   "properties": {
+    "Node name for S&R": "SetUnionControlNetType"
+   },
+   "widgets_values": [
+    "openpose"
+   ]
+  },
+  {
+   "id": 32,
+   "type": "LoadImage",
+   "pos": [
+    1000,
+    320
+   ],
+   "size": [
+    400,
+    380
+   ],
+   "flags": {},
+   "order": 10,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      16
+     ],
+     "slot_index": 0
+    },
+    {
+     "name": "MASK",
+     "type": "MASK",
+     "links": null,
+     "slot_index": 1
+    }
+   ],
+   "title": "32. 加载姿势参考图 (可选组; input 目录)",
+   "properties": {
+    "Node name for S&R": "LoadImage"
+   },
+   "widgets_values": [
+    "pose_stretched_natural.png"
+   ]
+  },
+  {
+   "id": 33,
+   "type": "ControlNetApplyAdvanced",
+   "pos": [
+    1000,
+    740
+   ],
+   "size": [
+    400,
+    262
+   ],
+   "flags": {},
+   "order": 11,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "positive",
+     "type": "CONDITIONING",
+     "link": 17
+    },
+    {
+     "name": "negative",
+     "type": "CONDITIONING",
+     "link": 18
+    },
+    {
+     "name": "control_net",
+     "type": "CONTROL_NET",
+     "link": 15
+    },
+    {
+     "name": "image",
+     "type": "IMAGE",
+     "link": 16
+    },
+    {
+     "name": "vae",
+     "type": "VAE",
+     "link": 19
+    }
+   ],
+   "outputs": [
+    {
+     "name": "positive",
+     "type": "CONDITIONING",
+     "links": null,
+     "slot_index": 0
+    },
+    {
+     "name": "negative",
+     "type": "CONDITIONING",
+     "links": null,
+     "slot_index": 1
+    }
+   ],
+   "title": "33. 应用 ControlNet (strength 0.78 / end 0.85, 可选组, 输出默认悬空)",
+   "properties": {
+    "Node name for S&R": "ControlNetApplyAdvanced"
+   },
+   "widgets_values": [
+    0.78,
+    0.0,
+    0.85
+   ]
+  },
+  {
+   "id": 900,
+   "type": "Note",
+   "pos": [
+    1480,
+    40
+   ],
+   "size": [
+    500,
+    600
+   ],
+   "flags": {},
+   "order": 16,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [],
+   "title": "手动执行说明 (OOTD 图文系列 · Flux fp8)",
+   "properties": {
+    "Node name for S&R": "Note"
+   },
+   "widgets_values": [
+    "OOTD 图文系列生成（Flux fp8 · 竖屏 768×1344）\n\n【怎么用】\n1) 改提示词：双击「4. 正向提示词」节点，粘贴某个镜头的英文 prompt（默认已放 01_classic 镜头原文）。负向词固定，一般不用改。\n2) 改种子：KSampler 的 seed（默认 928001）。同系列换不同镜头时，同时改 seed 与提示词即可。\n3) 改尺寸：「6. 空潜变量」的 width×height（默认 768×1344，竖屏 9:16）。\n4) 改日期/输出名：SaveImage 的 filename_prefix，默认 2026-10-02/ootd_blue_shirt/img/01_classic。把日期改成当天，系列名与镜头名按需修改。\n5) 点 Queue 执行。逐镜头跑完即得整套图文。\n\n【产物在哪 & 怎么看】\n输出到 ComfyUI 的 output/2026-10-02/ootd_blue_shirt/img/01_classic_*.png。\n在界面「Queue / 队列」面板左侧（或菜单里的 输出/Output）可预览结果；也可直接打开磁盘上的 output 目录查看。\n\n【可选 ControlNet 组（默认不生效）】\n右下角 ControlNetLoader → SetUnionControlNetType(openpose) → LoadImage(pose) → ControlNetApplyAdvanced 的输入已预接好，但输出默认悬空、不参与采样。\n启用方法：把 KSampler 的 positive 从「10. FluxGuidance(3.5)」改接到「33. ControlNetApplyAdvanced」的 positive 输出(槽0)；negative 从「11. FluxGuidance(1.0)」改接到它的 negative 输出(槽1)。\n同时把 LoadImage 选好姿势参考图（默认 pose_stretched_natural.png，需放在 input/ 目录，可换成 pose_stretched_supermodel.png）。strength 0.78 / end_percent 0.85 已按模板设好。"
+   ],
+   "color": "#432",
+   "bgcolor": "#653"
+  }
+ ],
+ "links": [
+  [
+   1,
+   1,
+   0,
+   20,
+   0,
+   "MODEL"
+  ],
+  [
+   2,
+   2,
+   0,
+   20,
+   1,
+   "CLIP"
+  ],
+  [
+   3,
+   20,
+   0,
+   7,
+   0,
+   "MODEL"
+  ],
+  [
+   4,
+   20,
+   1,
+   4,
+   0,
+   "CLIP"
+  ],
+  [
+   5,
+   20,
+   1,
+   5,
+   0,
+   "CLIP"
+  ],
+  [
+   6,
+   4,
+   0,
+   10,
+   0,
+   "CONDITIONING"
+  ],
+  [
+   7,
+   5,
+   0,
+   11,
+   0,
+   "CONDITIONING"
+  ],
+  [
+   8,
+   10,
+   0,
+   7,
+   1,
+   "CONDITIONING"
+  ],
+  [
+   9,
+   11,
+   0,
+   7,
+   2,
+   "CONDITIONING"
+  ],
+  [
+   10,
+   3,
+   0,
+   8,
+   1,
+   "VAE"
+  ],
+  [
+   11,
+   7,
+   0,
+   8,
+   0,
+   "LATENT"
+  ],
+  [
+   12,
+   8,
+   0,
+   9,
+   0,
+   "IMAGE"
+  ],
+  [
+   13,
+   6,
+   0,
+   7,
+   3,
+   "LATENT"
+  ],
+  [
+   14,
+   30,
+   0,
+   31,
+   0,
+   "CONTROL_NET"
+  ],
+  [
+   15,
+   31,
+   0,
+   33,
+   2,
+   "CONTROL_NET"
+  ],
+  [
+   16,
+   32,
+   0,
+   33,
+   3,
+   "IMAGE"
+  ],
+  [
+   17,
+   10,
+   0,
+   33,
+   0,
+   "CONDITIONING"
+  ],
+  [
+   18,
+   11,
+   0,
+   33,
+   1,
+   "CONDITIONING"
+  ],
+  [
+   19,
+   3,
+   0,
+   33,
+   4,
+   "VAE"
+  ]
+ ],
+ "groups": [],
+ "config": {},
+ "extra": {},
+ "version": 0.4
+}

@@ -1,0 +1,51 @@
+{
+  "project": "ootd_blue_shirt",
+  "base": {
+    "width": 768,
+    "height": 1344,
+    "steps": 20,
+    "guidance": 3.5,
+    "lora": "hinaFluxDevAsianMix_v12.safetensors",
+    "lora_strength": 0.85,
+    "controlnet": {
+      "enabled": false,
+      "type": "openpose",
+      "strength": 0.78,
+      "end_percent": 0.85
+    }
+  },
+  "shots": [
+    {
+      "id": "01_classic",
+      "seed": 928001,
+      "pose": "pose_stretched_natural.png",
+      "note": "原版复刻·手机遮面镜前自拍",
+      "prompt": "A realistic mirror selfie of a slender young East Asian woman with long black hair, taking a photo with a white smartphone covering part of her face. She is wearing a relaxed-fit medium-blue linen button-up shirt with rolled-up sleeves and dual chest pockets, paired with khaki high-waisted denim mini shorts. Casual indoor aesthetic, soft ambient lighting, modern apartment hallway background, natural skin texture, candid daily OOTD photography, 8k resolution.",
+      "motion_prompt": "she gently lowers the phone slightly from her face revealing a soft calm smile, subtle breathing, natural blinking, slight weight shift, soft indoor light, steady camera"
+    },
+    {
+      "id": "02_eyes_revealed",
+      "seed": 928002,
+      "pose": "pose_stretched_supermodel.png",
+      "note": "微露眼神·甜甜注视镜面",
+      "prompt": "A stylish mirror selfie of a slender 20-year-old East Asian young woman with long silky dark hair, holding a white smartphone slightly below her eyes with a sweet gentle gaze looking into the mirror. She is wearing a loose casual medium-blue linen button-down shirt with open V-neck collar, rolled cuffs, and khaki tight-fitting high-waisted mini denim shorts. Slender legs, natural room lighting, modern apartment entryway, photorealistic candid photography.",
+      "motion_prompt": "she tilts her head slightly and smiles gently at her reflection, hair sways softly, the linen shirt fabric moves with her breathing, calm steady camera"
+    },
+    {
+      "id": "03_full_standing",
+      "seed": 928003,
+      "pose": "pose_stretched_natural.png",
+      "note": "全身站姿·展示长腿比例",
+      "prompt": "A full-length vertical mirror selfie of a slender attractive East Asian young woman standing in a contemporary hallway. Wearing an untucked relaxed blue cotton-linen shirt with white buttons, unbuttoned collar, paired with beige khaki high-waisted mini shorts showcasing long slender legs. Holding a white smartphone, chic casual lifestyle aesthetic, soft indoor ambient light, crisp details, 8k portrait.",
+      "motion_prompt": "she shifts her weight from one leg to the other and smooths the shirt hem with a natural gesture, relaxed posture, gentle fabric movement, steady vertical framing"
+    },
+    {
+      "id": "04_closeup_outfit",
+      "seed": 928004,
+      "pose": "pose_stretched_supermodel.png",
+      "note": "上半身特写·突出衬衫质感",
+      "prompt": "Upper body close-up mirror selfie of an East Asian woman wearing a textured medium-blue linen workwear shirt with two chest flap pockets and rolled sleeves, paired with khaki denim shorts. Holding a sleek white smartphone, long flowing black hair draped over shoulders, delicate manicured nails, soft daylight reflection in the mirror, authentic fabric wrinkles and texture.",
+      "motion_prompt": "she turns slightly toward the mirror adjusting the collar with delicate fingers, natural breathing, soft daylight shimmer on the fabric, steady close framing"
+    }
+  ]
+}

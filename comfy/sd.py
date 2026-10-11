@@ -1086,10 +1086,12 @@ class VAE:
         pbar = comfy.utils.ProgressBar(steps)
 
         decode_fn = lambda a: self.first_stage_model.decode(a.to(self.vae_dtype).to(self.device)).to(dtype=self.vae_output_dtype())
+        # out_channels 必须显式传：默认 3 会让 RGBA VAE（如 Qwen Image 2.1，output_channels=4）
+        # 的解码图块与 3 通道累加缓冲尺寸不匹配（tensor a(3) vs b(4)）。decode_tiled_1d/_3d 已传此值。
         output = self.process_output(
-            (comfy.utils.tiled_scale(samples, decode_fn, tile_x // 2, tile_y * 2, overlap, upscale_amount = self.upscale_ratio, output_device=self.output_device, pbar = pbar) +
-            comfy.utils.tiled_scale(samples, decode_fn, tile_x * 2, tile_y // 2, overlap, upscale_amount = self.upscale_ratio, output_device=self.output_device, pbar = pbar) +
-             comfy.utils.tiled_scale(samples, decode_fn, tile_x, tile_y, overlap, upscale_amount = self.upscale_ratio, output_device=self.output_device, pbar = pbar))
+            (comfy.utils.tiled_scale(samples, decode_fn, tile_x // 2, tile_y * 2, overlap, upscale_amount = self.upscale_ratio, out_channels = self.output_channels, output_device=self.output_device, pbar = pbar) +
+            comfy.utils.tiled_scale(samples, decode_fn, tile_x * 2, tile_y // 2, overlap, upscale_amount = self.upscale_ratio, out_channels = self.output_channels, output_device=self.output_device, pbar = pbar) +
+             comfy.utils.tiled_scale(samples, decode_fn, tile_x, tile_y, overlap, upscale_amount = self.upscale_ratio, out_channels = self.output_channels, output_device=self.output_device, pbar = pbar))
             / 3.0)
         return output
 
