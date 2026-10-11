@@ -78,14 +78,14 @@ def refine(parsing, chin_y):
                                cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (21, 21)))
     n, lab, stats, _ = cv2.connectedComponentsWithStats(garment)
     if n < 2:
-        return None, chin_y, 0.0
+        return None, 0.0
     big = 1 + int(np.argmax(stats[1:, cv2.CC_STAT_AREA]))
     comp = (lab == big).astype(np.uint8) * 255
     x, y, w, h, area = stats[big]
     fill = area / float(w * h)
     if fill < 0.42:
-        return None, chin_y, fill
-    return comp, chin_y, fill
+        return None, fill
+    return comp, fill
 
 
 def main():

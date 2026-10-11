@@ -22,10 +22,23 @@ class SiteRule:
     need_cookie: bool = False
 
     def out_name(self, url: str) -> str:
-        """从 URL 推导输出目录名，如 instagram_ayano_fj。"""
-        path = urlparse(url if "://" in url else "https://" + url).path.strip("/")
-        seg = [s for s in path.split("/") if s and not s.startswith("?")]
-        tail = seg[0] if seg else "download"
+        """从 URL 推导输出目录名，如 instagram_ayano_fj。
+
+        跳过 /watch、/p、/en、/users 这类通用段，尽量取到真正的标识。
+        """
+        full = url if "://" in url else "https://" + url
+        parsed = urlparse(full)
+        segs = [s for s in parsed.path.split("/") if s]
+        generic = {"watch", "video", "v", "p", "reel", "reels", "tv", "en", "zh",
+                   "users", "user", "u", "media", "posts", "stories", "highlights",
+                   "photo", "channel", "c"}
+        tail = ""
+        for s in segs:
+            if s.lower() not in generic:
+                tail = s
+                break
+        if not tail:
+            tail = segs[-1] if segs else parsed.netloc.split(":")[0]
         tail = re.sub(r"[^A-Za-z0-9._-]", "_", tail)[:40] or "download"
         return f"{self.name}_{tail}"
 

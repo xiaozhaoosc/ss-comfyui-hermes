@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>media_dl · 通用媒体下载器</title>
+<style>
+  :root{--bg:#f6f7f9;--card:#fff;--bd:#e3e6ea;--tx:#1f2328;--pri:#2563eb;--ok:#16a34a;--err:#dc2626;--mut:#6b7280}
+  *{box-sizing:border-box}
+  body{margin:0;padding:24px;background:var(--bg);color:var(--tx);
+       font:14px/1.6 -apple-system,"Segoe UI",Roboto,"Helvetica Neue","Microsoft YaHei",sans-serif}
+  .wrap{max-width:960px;margin:0 auto}
+  h1{font-size:20px;margin:0 0 4px}
+  .sub{color:var(--mut);font-size:12px;margin-bottom:18px}
+  .card{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:16px;margin-bottom:14px}
+  label{display:block;font-weight:600;font-size:12px;margin:10px 0 4px;color:#374151}
+  input[type=text],input[type=number],textarea,select{
+       width:100%;padding:8px 10px;border:1px solid var(--bd);border-radius:6px;
+       font:inherit;background:#fff;color:var(--tx)}
+  textarea{min-height:90px;font-family:ui-monospace,Consolas,monospace;font-size:12px}
+  .row{display:flex;gap:10px;flex-wrap:wrap}
+  .row>div{flex:1;min-width:150px}
+  .chk{display:flex;align-items:center;gap:6px;font-weight:400;font-size:13px;margin-top:10px}
+  button{background:var(--pri);color:#fff;border:0;border-radius:6px;padding:9px 18px;
+         font:inherit;cursor:pointer;font-weight:600}
+  button:disabled{background:#9ca3af;cursor:not-allowed}
+  button.ghost{background:#fff;color:var(--tx);border:1px solid var(--bd)}
+  .probe{margin-top:6px;font-size:12px;color:var(--mut);min-height:18px}
+  .bar{height:10px;background:#e5e7eb;border-radius:6px;overflow:hidden;margin:10px 0}
+  .bar>i{display:block;height:100%;background:var(--pri);width:0;transition:width .3s}
+  .log{background:#0f172a;color:#d5dae5;border-radius:8px;padding:12px;height:220px;
+       overflow:auto;font:12px/1.5 ui-monospace,Consolas,monospace;white-space:pre-wrap}
+  .arts{list-style:none;padding:0;margin:8px 0 0;max-height:220px;overflow:auto}
+  .arts li{padding:6px 0;border-bottom:1px solid #f1f3f5;display:flex;justify-content:space-between;gap:10px}
+  .arts a{color:var(--pri);text-decoration:none}
+  .state{font-weight:700}
+  .st-done{color:var(--ok)}.st-failed{color:var(--err)}.st-cancelled{color:#d97706}
+  .hint{font-size:12px;color:var(--mut)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>media_dl · 通用媒体下载器</h1>
+  <div class="sub">gallery-dl（图库·社交） + yt-dlp（视频平台） · 支持断点续传，已下载自动跳过</div>
+
+  <div class="card">
+    <label>目标 URL</label>
+    <input type="text" id="url" placeholder="https://www.instagram.com/ayano.fj/">
+    <div class="probe" id="probe"></div>
+
+    <label>Cookies（可选 · 仅内存，用完即删）</label>
+    <textarea id="cookies" placeholder="粘贴 Netscape cookies.txt 内容，或 name=value 每行一对"></textarea>
+    <div class="hint">留空则尝试从本机 Chrome 9222 自动取登录态；失败会降级为匿名（可能被限流）。</div>
+
+    <div class="row">
+      <div><label>引擎</label>
+        <select id="engine">
+          <option value="auto">auto（自动择优）</option>
+          <option value="gallery-dl">gallery-dl</option>
+          <option value="yt-dlp">yt-dlp</option>
+        </select></div>
+      <div><label>媒体类型</label>
+        <select id="media">
+          <option value="all">全部</option><option value="video">仅视频</option><option value="image">仅图片</option>
+        </select></div>
+      <div><label>条数（留空=全部）</label><input type="number" id="count" min="1" placeholder="10"></div>
+      <div><label>最近 N 天</label><input type="number" id="days" min="1" placeholder="7"></div>
+    </div>
+
+    <label class="chk"><input type="checkbox" id="simulate"> 只枚举不下载（--simulate）</label>
+    <label class="chk"><input type="checkbox" id="use_cdp" checked> 允许从 Chrome 9222 取登录态</label>
+
+    <div style="margin-top:14px">
+      <button id="go">开始下载</button>
+      <button class="ghost" id="cancel" disabled>取消</button>
+      <span class="hint" id="status"></span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div><span class="state" id="state">待命</span> <span class="hint" id="pctxt"></span></div>
+    <div class="bar"><i id="bar"></i></div>
+    <div class="log" id="log"></div>
+    <label>产物</label>
+    <ul class="arts" id="arts"></ul>
+  </div>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+let es = null, curJob = null;
+
+function pct(done,total){ return total>0 ? Math.round(done/total*100) : 0; }
+function pushLog(t){ const l=$('log'); l.textContent += t + "\n"; l.scrollTop = l.scrollHeight; }
+
+$('url').addEventListener('blur', async () => {
+  const u = $('url').value.trim(); if(!u) return;
+  try{
+    const r = await fetch('/api/probe',{method:'POST',headers:{'Content-Type':'application/json'},
+                          body:JSON.stringify({url:u})});
+    const d = await r.json();
+    $('probe').textContent = d.error ? ('识别失败: '+d.error)
+      : (`识别到：${d.site} ｜ 引擎 ${d.engines.join(' → ')} ｜ 输出目录 ${d.out_name}` + (d.need_cookie?' ｜ 需要登录态':''));
+  }catch(e){ $('probe').textContent = '识别失败: '+e; }
+});
+
+$('go').addEventListener('click', async () => {
+  const url = $('url').value.trim();
+  if(!url){ alert('请填 URL'); return; }
+  $('log').textContent=''; $('arts').innerHTML=''; $('status').textContent='提交中...';
+  const body = {
+    url, engine: $('engine').value, media: $('media').value,
+    cookies_text: $('cookies').value || null,
+    use_cdp: $('use_cdp').checked,
+    simulate: $('simulate').checked,
+  };
+  if($('count').value) body.count = parseInt($('count').value,10);
+  if($('days').value)  body.days  = parseInt($('days').value,10);
+
+  const r = await fetch('/api/jobs',{method:'POST',headers:{'Content-Type':'application/json'},
+                        body:JSON.stringify(body)});
+  const d = await r.json();
+  if(d.error){ alert(d.error); $('status').textContent=''; return; }
+  curJob = d.job_id;
+  $('cancel').disabled = false; $('status').textContent = '任务 '+curJob;
+  listen(curJob);
+});
+
+function listen(id){
+  if(es) es.close();
+  es = new EventSource('/api/jobs/'+id+'/events');
+  es.onmessage = e => {
+    const ev = JSON.parse(e.data);
+    if(ev.type==='log'){ pushLog(ev.text||''); return; }
+    if(ev.type==='progress'){
+      const p = pct(ev.done, ev.total);
+      $('bar').style.width = (ev.total? p : 100)+'%';
+      $('pctxt').textContent = `已下载 ${ev.done}` + (ev.total? ` / ${ev.total}（${p}%）` : ' 条');
+      return;
+    }
+    if(ev.type==='item' && ev.current_item){ $('pctxt').textContent = ev.current_item; return; }
+    if(ev.type==='state'){
+      $('state').textContent = ev.state;
+      $('state').className = 'state st-'+ev.state;
+      if(['done','failed','cancelled'].includes(ev.state)) finish(id);
+    }
+    if(ev.type==='failed'){ pushLog('[失败] '+(ev.error||'')); finish(id); }
+    if(ev.type==='done'){ pushLog('[完成]'); finish(id); }
+    if(ev.type==='cancelled'){ pushLog('[已取消]'); finish(id); }
+  };
+  es.onerror = () => { /* EventSource 自动重连 */ };
+}
+
+async function finish(id){
+  if(es){ es.close(); es=null; }
+  $('cancel').disabled = true; $('status').textContent='';
+  try{
+    const r = await fetch('/api/jobs/'+id); const j = await r.json();
+    $('state').textContent = j.state; $('state').className='state st-'+j.state;
+    const p = pct(j.progress.done, j.progress.total);
+    $('bar').style.width = (j.progress.total? p : 100)+'%';
+    $('pctxt').textContent = `已下载 ${j.progress.done}` + (j.progress.total? ` / ${j.progress.total}`:'') +
+                             (j.progress.skipped? ` ｜ 跳过已存在 ${j.progress.skipped}`:'');
+    $('arts').innerHTML = (j.artifacts||[]).map(a =>
+      `<li><span>${a.name}</span><span>${(a.size/1048576).toFixed(2)} MB
+       <a href="/api/files/${id}?name=${encodeURIComponent(a.name)}">下载</a></span></li>`).join('');
+    if(j.error) pushLog('[错误] '+j.error);
+  }catch(e){ pushLog('取结果失败: '+e); }
+}
+
+$('cancel').addEventListener('click', async () => {
+  if(!curJob) return;
+  await fetch('/api/jobs/'+curJob+'/cancel',{method:'POST'});
+  $('status').textContent='取消中...';
+});
+</script>
+</body>
+</html>
