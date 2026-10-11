@@ -88,7 +88,8 @@ class GalleryDlEngine(Engine):
         # gallery-dl 非 TTY 时每行就是一个文件路径（skip / success 同形，故只作"当前项"提示）
         if clean.startswith("["):
             return {"type": "log", "text": clean}
-        return {"type": "item", "current_item": clean}
+        # --simulate 输出带 "# " 前缀，去掉再当文件名
+        return {"type": "item", "current_item": clean.lstrip("#").strip()}
 
 
 REPO_ROOT = Path(__file__).resolve().parents[3]

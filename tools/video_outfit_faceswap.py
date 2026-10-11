@@ -43,7 +43,7 @@ class FaceProtectMaskGen:
             raise FileNotFoundError(f'parsing_atr.onnx not found at {parsing_path}')
         print(f'[Mask] Loading {parsing_path}...')
         self.session = ort.InferenceSession(
-            parsing_path, providers=['CUDAExecutionProvider', 'CPUExecutionProvider']
+            parsing_path, providers=['DmlExecutionProvider', 'CPUExecutionProvider']
         )
         self.clothing_labels = list(clothing_labels)
         self.protect_labels = list(protect_labels)

@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-视频服装提取驱动脚本 v2。
-流水线: ffmpeg 抽清晰关键帧 -> ComfyUI ATR 人体解析(服装类别掩码) -> SAM2 边缘精修 -> 纯净服装 PNG。
+视频服装提取驱动脚本 v5。
+流水线: ffmpeg 抽清晰关键帧 -> ComfyUI ATR 人体解析(服装类别掩码) -> SAM2 边缘精修
+        -> 掩码清洗(多件套保留/飘发剔除/边缘碎片剔除/填洞) -> 纯净服装 PNG。
 
 用法:
     python extract_garment.py <视频目录> [--top 3] [--frames 12] [--server http://127.0.0.1:8188]
@@ -9,6 +10,7 @@
 输出:
     output/<日期>/garment_extract/<视频名>/
         keyframes/   候选关键帧
+        masks_raw/   ATR/SAM2 原始掩码(调试用)
         garment/     garment_<n>_transparent.png / garment_<n>_white.png
         manifest.json
 """
@@ -124,16 +126,43 @@ def extract_keyframes(video, out_dir, sample_fps=4, top_n=12):
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
 
-# ---------------------------------------------------------------- 工具
+# ---------------------------------------------------------------- 掩码清洗
 
-def largest_region(mask):
+def clean_mask(mask, min_ratio=0.1):
+    """清洗服装掩码:
+    1) 剔除触及画面左/右边缘的次要组件(镜面反射/其他画面碎片)
+    2) 剔除与主服装垂直完全分离、整体位于其上方的组件(飘发误判)
+    3) 保留 >= min_ratio*主组件 的剩余组件(多件套); 若第二大组件 < 主组件40%则只留主服装
+    4) 闭运算 + 填洞(修复手部/配饰遮挡孔洞)
+    """
     try:
         from scipy import ndimage
         lab, n = ndimage.label(mask)
-        if n <= 1:
+        if n == 0:
             return mask
         sizes = ndimage.sum(mask, lab, range(1, n + 1))
-        return lab == (int(np.argmax(sizes)) + 1)
+        main_id = int(np.argmax(sizes)) + 1
+        main_top = np.where(lab == main_id)[0].min()
+        H, W = mask.shape
+        keep_ids = [main_id]
+        for i in range(1, n + 1):
+            if i == main_id or sizes[i - 1] < sizes.max() * min_ratio:
+                continue
+            ys, xs = np.where(lab == i)
+            if xs.min() == 0 or xs.max() == W - 1:  # 触及左右边缘 -> 画面碎片
+                continue
+            if ys.max() < main_top:  # 整体悬于主服装上方 -> 飘发误判
+                continue
+            keep_ids.append(i)
+        others = sorted((sizes[i - 1] for i in keep_ids if i != main_id), reverse=True)
+        if not others or others[0] < 0.4 * sizes[main_id - 1]:
+            keep_ids = [main_id]  # 次要组件过小视为杂物, 只留主服装
+        keep = np.isin(lab, keep_ids)
+        disk = np.zeros((19, 19), bool)
+        yy, xx = np.mgrid[-9:10, -9:10]
+        disk[yy**2 + xx**2 <= 81] = True
+        keep = ndimage.binary_closing(keep, structure=disk)
+        return ndimage.binary_fill_holes(keep)
     except ImportError:
         return mask
 
@@ -185,22 +214,21 @@ def main():
                 outs = run_workflow(wf, {"4": "atr", "8": "sam2"}, raw_dir, base)
 
                 atr = np.asarray(Image.open(outs["atr"]).convert("L"), np.float32) / 255.0
-                atr_m = atr > 0.5
+                atr_m = clean_mask(atr > 0.5)
                 atr_area = float(atr_m.sum())
                 if atr_area < 2000:
                     print(f"  {base}: ATR garment mask too small, skip")
                     continue
 
                 sam2 = np.asarray(Image.open(outs["sam2"]).convert("L"), np.float32) / 255.0
-                sam2_m = largest_region(sam2 > 0.5)
+                sam2_m = clean_mask(sam2 > 0.5)
                 sam2_area = float(sam2_m.sum())
-                # SAM2 精修掩码与 ATR 掩码面积差在 30% 内才可信, 否则回退 ATR(轻度羽化)
-                if 0.7 * atr_area <= sam2_area <= 1.3 * atr_area and sam2_area > 2000:
-                    garment_m, method = sam2_m, "atr+sam2"
+                # SAM2 精修掩码与 ATR 掩码面积差在合理范围内才可信, 否则回退 ATR(轻度羽化)
+                if 0.5 * atr_area <= sam2_area <= 1.6 * atr_area and sam2_area > 2000:
+                    garment_m, method = sam2_m.astype(np.float32), "atr+sam2"
                 else:
                     a = Image.fromarray((atr_m * 255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(2))
-                    garment_m = np.asarray(a, np.float32) / 255.0
-                    garment_m = np.clip((garment_m - 0.3) / 0.4, 0, 1)
+                    garment_m = np.clip((np.asarray(a, np.float32) / 255.0 - 0.3) / 0.4, 0, 1)
                     method = "atr_only"
 
                 ys, xs = np.where(garment_m > 0.5)
@@ -219,7 +247,8 @@ def main():
             except Exception as e:
                 print(f"  {base}: FAILED {type(e).__name__}: {e}")
 
-        results.sort(key=lambda r: -(r["sharp"] * np.sqrt(r["area"])))
+        # atr_only 回退意味着 SAM2 无法在该帧稳定精修(帧面杂乱/场景切换), 排名降权
+        results.sort(key=lambda r: -(r["sharp"] * np.sqrt(r["area"]) * (0.6 if r["method"] == "atr_only" else 1.0)))
         for rank, r in enumerate(results[: args.top], 1):
             r["rgba"].save(os.path.join(g_dir, f"garment_{rank}_transparent.png"))
             r["white"].save(os.path.join(g_dir, f"garment_{rank}_white.png"))

@@ -54,7 +54,7 @@ class ATRParser:
             raise FileNotFoundError(path)
         print(f'[ATR] {path}')
         self.session = ort.InferenceSession(
-            path, providers=['CUDAExecutionProvider', 'CPUExecutionProvider'])
+            path, providers=['DmlExecutionProvider', 'CPUExecutionProvider'])
 
     def parse(self, pil_img):
         w, h = pil_img.size
