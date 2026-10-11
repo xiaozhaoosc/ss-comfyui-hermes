@@ -144,8 +144,8 @@ class Handler(BaseHTTPRequestHandler):
         for name, eng in ENGINES.items():
             ok, why = eng.available()
             info[name] = {"available": ok, "detail": _redact(why)}
-        _json(self, {"engines": info,
-                     "yt_dlp_exe": str(Path(__file__).resolve().parents[2] / "tools" / "yt-dlp" / "yt-dlp.exe")})
+        from media_dl.core.engines import default_ytdlp_exe
+        _json(self, {"engines": info, "yt_dlp_exe": str(default_ytdlp_exe())})
 
     def _sse(self, job_id: str) -> None:
         job = MGR.get(job_id)

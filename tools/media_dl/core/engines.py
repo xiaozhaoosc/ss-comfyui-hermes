@@ -91,14 +91,25 @@ class GalleryDlEngine(Engine):
         return {"type": "item", "current_item": clean}
 
 
+REPO_ROOT = Path(__file__).resolve().parents[3]
+
+
+def default_ytdlp_exe() -> Path:
+    """tools/yt-dlp/yt-dlp.exe（它是独立 exe，不在 PATH 里）。"""
+    return REPO_ROOT / "tools" / "yt-dlp" / "yt-dlp.exe"
+
+
 class YtDlpEngine(Engine):
     name = "yt-dlp"
 
     def available(self) -> tuple[bool, str]:
+        exe = default_ytdlp_exe()
+        if exe.is_file():
+            return True, str(exe)
         p = shutil.which("yt-dlp")
         if p:
             return True, p
-        return False, "未找到 yt-dlp"
+        return False, f"未找到 yt-dlp（期望 {exe}）"
 
     def build_cmd(self, url: str, spec, ctx: EngineCtx) -> list[str]:
         exe = str(ctx.yt_dlp_exe or "yt-dlp")
