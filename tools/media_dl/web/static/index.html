@@ -69,6 +69,12 @@
     <label class="chk"><input type="checkbox" id="simulate"> 只枚举不下载（--simulate）</label>
     <label class="chk"><input type="checkbox" id="use_cdp" checked> 允许从 Chrome 9222 取登录态</label>
 
+    <div class="row" style="align-items:center;margin-top:8px">
+      <div style="flex:0 0 auto"><button class="ghost" id="probe9222" type="button">检测 9222</button></div>
+      <div style="flex:1"><span class="hint" id="cdpstatus">9222：未检测</span></div>
+    </div>
+    <div class="hint">探测仅展示状态，不会自动改用 CDP；是否使用仍由上面的复选框决定。</div>
+
     <div style="margin-top:14px">
       <button id="go">开始下载</button>
       <button class="ghost" id="cancel" disabled>取消</button>
@@ -102,6 +108,20 @@ $('url').addEventListener('blur', async () => {
       : (`识别到：${d.site} ｜ 引擎 ${d.engines.join(' → ')} ｜ 输出目录 ${d.out_name}` + (d.need_cookie?' ｜ 需要登录态':''));
   }catch(e){ $('probe').textContent = '识别失败: '+e; }
 });
+
+async function probe9222(){
+  $('cdpstatus').textContent = '9222：检测中...';
+  try{
+    const r = await fetch('/api/cdp?port=9222');
+    const d = await r.json();
+    const icon = d.ok ? '✅' : (d.reachable ? '⚠️' : '⛔');
+    let txt = `${icon} 9222：${d.detail}`;
+    if(d.ok) txt += ` ｜ 账号 ${d.ig_username} ｜ cookie ${d.cookie_count} 条`;
+    $('cdpstatus').textContent = txt;
+  }catch(e){ $('cdpstatus').textContent = '⛔ 9222：检测失败 ' + e; }
+}
+$('probe9222').addEventListener('click', probe9222);
+window.addEventListener('load', probe9222);   // 页面加载时静默探测一次（仅展示）
 
 $('go').addEventListener('click', async () => {
   const url = $('url').value.trim();

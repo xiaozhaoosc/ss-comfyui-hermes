@@ -768,7 +768,10 @@ def build_parser() -> argparse.ArgumentParser:
             "  python tools/ig_download.py ayano.fj\n"
         ),
     )
-    p.add_argument("target", help="用户名 / @用户名 / 主页 URL")
+    p.add_argument("target", nargs="?", help="用户名 / @用户名 / 主页 URL")
+    p.add_argument("--probe-cdp", action="store_true",
+                   help="只探测 Chrome 调试端口与 Instagram 登录态，不下载")
+    p.add_argument("--probe-port", type=int, default=9222, help="配合 --probe-cdp 指定端口")
     p.add_argument("--count", type=int, help="下载最新的前 N 个帖子（按发布时间倒序）")
     p.add_argument("--days", type=int, help="只下载最近 N 天内发布的帖子")
     p.add_argument("--dry-run", action="store_true", help="只枚举不下载")
@@ -813,6 +816,19 @@ def validate_args(args) -> None:
 # --------------------------------------------------------------------------- #
 def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
+
+    if args.probe_cdp:
+        uname = ""
+        if args.target:
+            try:
+                uname = normalize_username(args.target)
+            except ValueError:
+                uname = ""
+        return probe_cdp_report(args.probe_port, uname)
+
+    if not args.target:
+        return _fail("缺少目标账号。用法：ig_download.py <用户名|URL> [...]，或 --probe-cdp 只探测端口")
+
     validate_args(args)
     args.resume = not args.no_resume
 
@@ -1065,6 +1081,54 @@ def review_post(out_dir: Path, post: Post, args, base_name: str) -> bool:
 def _rest(seconds: float) -> None:
     """帖子之间的随机退避，降低被风控概率。"""
     time.sleep(seconds * random.uniform(0.8, 1.2))
+
+
+def probe_cdp_report(port: int, username: str = "") -> int:
+    """只探测 Chrome 调试端口与 Instagram 登录态，**不下载、不改任何配置**。"""
+    log(f"[9222 探测] 端口 {port}")
+    try:
+        with local_cdp_no_proxy():
+            base, ver = resolve_cdp_base(port)
+    except CdpError as exc:
+        log(f"  端口不可用 ⛔ {exc}")
+        return 1
+    log(f"  端口可达 ✅ Chrome {ver.get('Browser', '-')}")
+
+    try:
+        with local_cdp_no_proxy():
+            tabs = _http_json(base, "/json/list")
+            page = pick_instagram_page(tabs, username)
+            log(f"  Instagram 页面 ✅ {page.get('url', '')}")
+    except Exception as exc:
+        log(f"  未找到 instagram.com 页面 ⚠️ {type(exc).__name__}: {exc}")
+        return 1
+
+    try:
+        ck = harvest_cookies(port, username)
+    except Exception as exc:
+        log(f"  取 cookie 失败 ⛔ {type(exc).__name__}")
+        return 1
+    log(f"  cookie {len(ck)} 条（取值不打印）")
+
+    missing = REQUIRED_COOKIES - set(ck)
+    if missing:
+        log(f"  缺少必需 cookie ⚠️ {sorted(missing)}，请回浏览器重新登录")
+        return 1
+
+    try:
+        probe = Instaloader(quiet=True, max_connection_attempts=1, request_timeout=30.0)
+        probe.load_session("__probe__", dict(ck))
+        who = probe.test_login()
+    except Exception as exc:
+        log(f"  登录态校验异常 ⛔ {type(exc).__name__}: {redact(str(exc))[:120]}")
+        return 1
+
+    if who:
+        log(f"  已登录 ✅ 账号：{who}")
+        log("  结论：9222 可用，可直接不带 --cookies-file 运行下载")
+        return 0
+    log("  已登录 ❌ cookie 已过期，请回浏览器刷新 Instagram 登录")
+    return 1
 
 
 def _fail(msg: str) -> int:

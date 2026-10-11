@@ -58,6 +58,13 @@ class Handler(BaseHTTPRequestHandler):
         if path == "/api/engines":
             self._engines()
             return
+        if path == "/api/cdp":
+            # 可选功能：只探测 9222，不改变任何行为
+            from core.cookies import probe_cdp
+            port = int((qs.get("port") or ["9222"])[0])
+            user = (qs.get("user") or [""])[0]
+            _json(self, probe_cdp(port, user))
+            return
         if path == "/api/jobs":
             _json(self, {"jobs": MGR.list_jobs()})
             return

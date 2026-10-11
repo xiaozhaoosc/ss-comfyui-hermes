@@ -35,6 +35,9 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--cookies-text-file", help="读取粘贴的 cookies 文本的文件")
     p.add_argument("--no-cdp", action="store_true", help="不尝试 Chrome CDP 取登录态")
     p.add_argument("--cdp-port", type=int, default=9222)
+    p.add_argument("--probe-cdp", action="store_true",
+                   help="只探测 Chrome 调试端口与 Instagram 登录态，不下载")
+    p.add_argument("--probe-port", type=int, default=9222, help="配合 --probe-cdp 指定端口")
     p.add_argument("--timeout", type=int, default=1800)
     p.add_argument("--json", action="store_true", help="最后以 JSON 输出结果")
     return p
@@ -110,8 +113,32 @@ def run_download(argv: list[str]) -> int:
     return 0 if job.state == JobState.DONE else 1
 
 
+def run_probe(argv: list[str]) -> int:
+    """只探测 Chrome 9222，不下载。"""
+    ap = argparse.ArgumentParser(prog="media_dl --probe-cdp")
+    ap.add_argument("--probe-cdp", action="store_true")
+    ap.add_argument("--probe-port", type=int, default=9222)
+    ap.add_argument("--probe-user", default="", help="优先匹配含该用户名的 IG 标签页")
+    ap.add_argument("--json", action="store_true")
+    a = ap.parse_args(argv)
+
+    from core.cookies import probe_cdp
+    r = probe_cdp(a.probe_port, a.probe_user)
+    if a.json:
+        print(json.dumps(r, ensure_ascii=False, indent=2))
+    else:
+        print(f"[9222 探测] 端口 {r['port']}  可达={r['reachable']}  浏览器={r['browser'] or '-'}")
+        print(f"  IG 页面 : {r['page_url'] or '未找到'}")
+        print(f"  cookie  : {r['cookie_count']} 条")
+        print(f"  已登录  : {r['logged_in']}   账号: {r['ig_username'] or '-'}")
+        print(f"  结论    : {r['detail']}")
+    return 0 if r["ok"] else 1
+
+
 def main(argv: list[str] | None = None) -> int:
     argv = list(sys.argv[1:] if argv is None else argv)
+    if "--probe-cdp" in argv:
+        return run_probe(argv)
     if argv and argv[0] in ("web", "serve"):
         from media_dl.web.server import main as web_main
         return web_main(argv[1:])
