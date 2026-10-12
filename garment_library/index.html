@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>服装库目录 · garment_library</title>
+<style>
+  :root{
+    --bg:#f7f8fa; --card:#ffffff; --bd:#e3e6ec; --tx:#1d2129; --tx2:#5c6373;
+    --accent:#3b6ef6; --chip:#eef2ff; --shadow:0 1px 3px rgba(0,0,0,.06);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#15171c; --card:#1e2128; --bd:#2c313b; --tx:#e6e8ee; --tx2:#9aa2b1;
+           --accent:#6f9bff; --chip:#263049; --shadow:0 1px 3px rgba(0,0,0,.3); }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;padding:24px;background:var(--bg);color:var(--tx);
+       font:14px/1.5 -apple-system,"Segoe UI","Microsoft YaHei",sans-serif}
+  h1{font-size:20px;margin:0 0 4px}
+  .sub{color:var(--tx2);font-size:13px;margin-bottom:18px}
+  .bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:16px}
+  .bar input{padding:7px 11px;border:1px solid var(--bd);border-radius:8px;background:var(--card);
+             color:var(--tx);width:220px;font-size:13px}
+  .tab{padding:6px 12px;border:1px solid var(--bd);border-radius:999px;background:var(--card);
+       color:var(--tx2);cursor:pointer;font-size:13px;user-select:none}
+  .tab.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
+  .card{background:var(--card);border:1px solid var(--bd);border-radius:12px;overflow:hidden;
+        box-shadow:var(--shadow);display:flex;flex-direction:column}
+  .thumb{height:230px;background:#fff;display:flex;align-items:center;justify-content:center;padding:6px}
+  .thumb img{max-width:100%;max-height:100%;object-fit:contain}
+  .body{padding:10px 12px 12px;border-top:1px solid var(--bd)}
+  .gid{font-weight:600;font-size:13px;word-break:break-all}
+  .meta{color:var(--tx2);font-size:12px;margin-top:4px}
+  .row{display:flex;align-items:center;gap:6px;margin-top:6px;flex-wrap:wrap}
+  .sw{width:16px;height:16px;border-radius:4px;border:1px solid var(--bd)}
+  .chip{background:var(--chip);color:var(--tx2);border-radius:6px;padding:1px 7px;font-size:11px}
+  .btn{margin-top:9px;width:100%;padding:6px;border:1px solid var(--bd);border-radius:8px;
+       background:transparent;color:var(--tx2);cursor:pointer;font-size:12px}
+  .btn:hover{border-color:var(--accent);color:var(--accent)}
+  .empty{color:var(--tx2);padding:30px;text-align:center}
+  .toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:var(--tx);
+         color:var(--bg);padding:8px 16px;border-radius:8px;font-size:13px;opacity:0;
+         transition:opacity .2s;pointer-events:none}
+  .toast.on{opacity:.95}
+</style>
+</head>
+<body>
+<h1>服装库目录</h1>
+<div class="sub" id="sub"></div>
+<div class="bar">
+  <input id="q" placeholder="搜索 ID / 来源 / 备注">
+  <span class="tab on" data-c="__all">全部</span>
+  <span class="tab" data-c="bottoms">下装 1</span>
+  <span class="tab" data-c="full">整套 4</span>
+  <span class="tab" data-c="tops">上装 1</span>
+</div>
+<div class="grid" id="grid"></div>
+<div class="empty" id="empty" style="display:none">没有匹配的服装</div>
+<div class="toast" id="toast"></div>
+<script>
+const DATA = [{"garment_id": "top_20261012_01", "category": "tops", "label": "7686812393779123898_01", "mean_hex": "#af70c0", "size": [710, 659], "mask_area_px": 172565, "versions_count": null, "method": "sam2_box", "dir": "tops/top_20261012_01", "thumb": "tops/top_20261012_01/thumb.png", "note": "紫色荷叶边文胸上衣+紫色亮片印花迷你短裙；来源：抖音图文笔记图1；ATR+SAM2(CPU,box提示)提取", "source_url": "https://www.douyin.com/note/7686812393779123898"}, {"garment_id": "btm_20261012_01", "category": "bottoms", "label": "7686812393779123898_01", "mean_hex": "#c489c5", "size": [868, 591], "mask_area_px": 312292, "versions_count": null, "method": "sam2_box", "dir": "bottoms/btm_20261012_01", "thumb": "bottoms/btm_20261012_01/thumb.png", "note": "紫色荷叶边文胸上衣+紫色亮片印花迷你短裙；来源：抖音图文笔记图1；ATR+SAM2(CPU,box提示)提取", "source_url": "https://www.douyin.com/note/7686812393779123898"}, {"garment_id": "full_20261012_01", "category": "full", "label": "DeGg3wkgn4p_1", "mean_hex": "#232021", "size": [518, 870], "mask_area_px": 219556, "versions_count": 3, "method": "atr+sam2", "dir": "full/full_20261012_01", "thumb": "full/full_20261012_01/thumb.png", "note": "抖音参考视频整套穿搭：ATR+SAM2 提取，rank1 为最佳帧，rank2/3 为备选帧版本", "source_url": ""}, {"garment_id": "full_20261012_02", "category": "full", "label": "DeJu0mmA4jW_1", "mean_hex": "#d0c9cd", "size": [427, 733], "mask_area_px": 138468, "versions_count": 3, "method": "atr+sam2", "dir": "full/full_20261012_02", "thumb": "full/full_20261012_02/thumb.png", "note": "抖音参考视频整套穿搭：ATR+SAM2 提取，rank1 为最佳帧，rank2/3 为备选帧版本", "source_url": ""}, {"garment_id": "full_20261012_03", "category": "full", "label": "DeMaIN9gB3Q_1", "mean_hex": "#d1d0d5", "size": [495, 893], "mask_area_px": 198706, "versions_count": 3, "method": "atr+sam2", "dir": "full/full_20261012_03", "thumb": "full/full_20261012_03/thumb.png", "note": "抖音参考视频整套穿搭：ATR+SAM2 提取，rank1 为最佳帧，rank2/3 为备选帧版本", "source_url": ""}, {"garment_id": "full_20261012_04", "category": "full", "label": "DeRjgPHgZAK_1", "mean_hex": "#a95765", "size": [349, 551], "mask_area_px": 89752, "versions_count": 3, "method": "atr+sam2", "dir": "full/full_20261012_04", "thumb": "full/full_20261012_04/thumb.png", "note": "抖音参考视频整套穿搭：ATR+SAM2 提取，rank1 为最佳帧，rank2/3 为备选帧版本", "source_url": ""}];
+const CAT_CN = {"tops": "上装", "bottoms": "下装", "full": "整套", "outerwear": "外套", "shoes": "鞋"};
+const grid = document.getElementById('grid');
+const empty = document.getElementById('empty');
+let cur = '__all', kw = '';
+
+document.getElementById('sub').textContent =
+  `共 ${DATA.length} 件 · ` + Object.entries(
+    DATA.reduce((m,g)=>(m[g.category]=(m[g.category]||0)+1,m),{})
+  ).map(([k,v])=>`${CAT_CN[k]||k} ${v}`).join(' / ') + ' · 点击卡片下方按钮复制透明底路径';
+
+function card(g){
+  const d = document.createElement('div');
+  d.className = 'card';
+  const thumb = g.thumb || (g.dir + '/white.png');
+  d.innerHTML = `
+    <div class="thumb"><img src="${thumb}" alt="${g.garment_id}" loading="lazy"></div>
+    <div class="body">
+      <div class="gid">${g.garment_id}</div>
+      <div class="meta">${g.size ? g.size[0]+'×'+g.size[1] : '-'} · ${g.mask_area_px ? (g.mask_area_px/1000).toFixed(0)+'k px' : '-'}${g.versions_count>1?' · '+g.versions_count+' 版本':''}</div>
+      <div class="row">
+        <span class="sw" style="background:${g.mean_hex}"></span>
+        <span class="meta">${g.mean_hex}</span>
+        <span class="chip">${CAT_CN[g.category]||g.category}</span>
+        ${g.method?`<span class="chip">${g.method}</span>`:''}
+      </div>
+      <div class="meta" style="margin-top:6px">${g.label||''}${g.source_url?` · <a href="${g.source_url}" target="_blank" style="color:var(--accent)">来源</a>`:''}</div>
+      <button class="btn" data-p="${g.dir}/transparent.png">复制路径</button>
+    </div>`;
+  d.querySelector('button').onclick = () => copy(g.dir + '/transparent.png');
+  return d;
+}
+function render(){
+  const list = DATA.filter(g =>
+    (cur==='__all' || g.category===cur) &&
+    (!kw || (g.garment_id+' '+(g.label||'')+' '+(g.note||'')+' '+g.mean_hex).toLowerCase().includes(kw))
+  );
+  grid.innerHTML = '';
+  list.forEach(g => grid.appendChild(card(g)));
+  empty.style.display = list.length ? 'none' : 'block';
+}
+function copy(p){
+  const t = document.getElementById('toast');
+  const done = () => { t.textContent = '已复制: ' + p; t.classList.add('on');
+                       setTimeout(()=>t.classList.remove('on'), 1600); };
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(p).then(done).catch(()=>prompt('手动复制:', p));
+  } else {
+    const ta = document.createElement('textarea'); ta.value = p;
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand('copy'); done(); } catch(e){ prompt('手动复制:', p); }
+    ta.remove();
+  }
+}
+document.getElementById('q').oninput = e => { kw = e.target.value.trim().toLowerCase(); render(); };
+document.querySelectorAll('.tab').forEach(t => t.onclick = () => {
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('on'));
+  t.classList.add('on'); cur = t.dataset.c; render();
+});
+render();
+</script>
+</body>
+</html>

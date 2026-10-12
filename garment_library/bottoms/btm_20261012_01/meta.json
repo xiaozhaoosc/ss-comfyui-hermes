@@ -1,0 +1,39 @@
+{
+  "name": "bottom",
+  "source_image": "sources\\7686812393779123898_01_fde9935f223c746e.webp",
+  "box": [
+    55,
+    1420,
+    960,
+    1930
+  ],
+  "crop_bbox": [
+    24,
+    1405,
+    892,
+    1996
+  ],
+  "mask_area_px": 312292,
+  "image_size": [
+    1080,
+    2247
+  ],
+  "mean_rgb": [
+    196,
+    137,
+    197
+  ],
+  "mean_hex": "#c489c5",
+  "method": "sam2_box",
+  "device": "cpu",
+  "garment_id": "btm_20261012_01",
+  "category": "bottoms",
+  "label": "7686812393779123898_01",
+  "source_url": "https://www.douyin.com/note/7686812393779123898",
+  "note": "紫色荷叶边文胸上衣+紫色亮片印花迷你短裙；来源：抖音图文笔记图1；ATR+SAM2(CPU,box提示)提取",
+  "added_date": "2026-10-12",
+  "size": [
+    868,
+    591
+  ]
+}

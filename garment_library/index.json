@@ -1,0 +1,130 @@
+[
+  {
+    "garment_id": "top_20261012_01",
+    "category": "tops",
+    "label": "7686812393779123898_01",
+    "mean_hex": "#af70c0",
+    "mask_area_px": 172565,
+    "crop_bbox": [
+      222,
+      578,
+      932,
+      1237
+    ],
+    "method": "sam2_box",
+    "source_image": "sources\\7686812393779123898_01_fde9935f223c746e.webp",
+    "source_url": "https://www.douyin.com/note/7686812393779123898",
+    "added_date": "2026-10-12",
+    "dir": "tops\\top_20261012_01",
+    "thumb": "tops/top_20261012_01/thumb.png",
+    "size": [
+      710,
+      659
+    ],
+    "note": "紫色荷叶边文胸上衣+紫色亮片印花迷你短裙；来源：抖音图文笔记图1；ATR+SAM2(CPU,box提示)提取"
+  },
+  {
+    "garment_id": "btm_20261012_01",
+    "category": "bottoms",
+    "label": "7686812393779123898_01",
+    "mean_hex": "#c489c5",
+    "mask_area_px": 312292,
+    "crop_bbox": [
+      24,
+      1405,
+      892,
+      1996
+    ],
+    "method": "sam2_box",
+    "source_image": "sources\\7686812393779123898_01_fde9935f223c746e.webp",
+    "source_url": "https://www.douyin.com/note/7686812393779123898",
+    "added_date": "2026-10-12",
+    "dir": "bottoms\\btm_20261012_01",
+    "thumb": "bottoms/btm_20261012_01/thumb.png",
+    "size": [
+      868,
+      591
+    ],
+    "note": "紫色荷叶边文胸上衣+紫色亮片印花迷你短裙；来源：抖音图文笔记图1；ATR+SAM2(CPU,box提示)提取"
+  },
+  {
+    "garment_id": "full_20261012_01",
+    "category": "full",
+    "label": "DeGg3wkgn4p_1",
+    "mean_hex": "#232021",
+    "mask_area_px": 219556,
+    "size": [
+      518,
+      870
+    ],
+    "method": "atr+sam2",
+    "versions_count": 3,
+    "source_image": "sources\\DeGg3wkgn4p_1_319a3ee916f6.jpg",
+    "source_url": "",
+    "origin_dir": "output\\2026-10-11\\garment_extract\\2026-10-05_05-59-28_DeGg3wkgn4p_1",
+    "added_date": "2026-10-12",
+    "dir": "full\\full_20261012_01",
+    "thumb": "full/full_20261012_01/thumb.png",
+    "note": "抖音参考视频整套穿搭：ATR+SAM2 提取，rank1 为最佳帧，rank2/3 为备选帧版本"
+  },
+  {
+    "garment_id": "full_20261012_02",
+    "category": "full",
+    "label": "DeJu0mmA4jW_1",
+    "mean_hex": "#d0c9cd",
+    "mask_area_px": 138468,
+    "size": [
+      427,
+      733
+    ],
+    "method": "atr+sam2",
+    "versions_count": 3,
+    "source_image": "sources\\DeJu0mmA4jW_1_ae3cdabf569d.jpg",
+    "source_url": "",
+    "origin_dir": "output\\2026-10-11\\garment_extract\\2026-10-06_11-59-04_DeJu0mmA4jW_1",
+    "added_date": "2026-10-12",
+    "dir": "full\\full_20261012_02",
+    "thumb": "full/full_20261012_02/thumb.png",
+    "note": "抖音参考视频整套穿搭：ATR+SAM2 提取，rank1 为最佳帧，rank2/3 为备选帧版本"
+  },
+  {
+    "garment_id": "full_20261012_03",
+    "category": "full",
+    "label": "DeMaIN9gB3Q_1",
+    "mean_hex": "#d1d0d5",
+    "mask_area_px": 198706,
+    "size": [
+      495,
+      893
+    ],
+    "method": "atr+sam2",
+    "versions_count": 3,
+    "source_image": "sources\\DeMaIN9gB3Q_1_e07db86964a0.jpg",
+    "source_url": "",
+    "origin_dir": "output\\2026-10-11\\garment_extract\\2026-10-07_12-56-14_DeMaIN9gB3Q_1",
+    "added_date": "2026-10-12",
+    "dir": "full\\full_20261012_03",
+    "thumb": "full/full_20261012_03/thumb.png",
+    "note": "抖音参考视频整套穿搭：ATR+SAM2 提取，rank1 为最佳帧，rank2/3 为备选帧版本"
+  },
+  {
+    "garment_id": "full_20261012_04",
+    "category": "full",
+    "label": "DeRjgPHgZAK_1",
+    "mean_hex": "#a95765",
+    "mask_area_px": 89752,
+    "size": [
+      349,
+      551
+    ],
+    "method": "atr+sam2",
+    "versions_count": 3,
+    "source_image": "sources\\DeRjgPHgZAK_1_75d54c3b8dd3.jpg",
+    "source_url": "",
+    "origin_dir": "output\\2026-10-11\\garment_extract\\2026-10-09_12-54-23_DeRjgPHgZAK_1",
+    "added_date": "2026-10-12",
+    "dir": "full\\full_20261012_04",
+    "thumb": "full/full_20261012_04/thumb.png",
+    "note": "抖音参考视频整套穿搭：ATR+SAM2 提取，rank1 为最佳帧，rank2/3 为备选帧版本"
+  }
+]

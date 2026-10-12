@@ -1,0 +1,93 @@
+{
+  "garment_id": "full_20261012_02",
+  "category": "full",
+  "label": "DeJu0mmA4jW_1",
+  "mean_hex": "#d0c9cd",
+  "mask_area_px": 138468,
+  "size": [
+    427,
+    733
+  ],
+  "aspect": 0.583,
+  "fill_ratio": 0.442,
+  "method": "atr+sam2",
+  "versions": [
+    {
+      "rank": 1,
+      "primary": true,
+      "size": [
+        427,
+        733
+      ],
+      "mean_hex": "#d0c9cd",
+      "mask_area_px": 138468,
+      "fill_ratio": 0.442,
+      "source_frame": "frame_06",
+      "sharpness": 748.08,
+      "method": "atr+sam2",
+      "crop_bbox": [
+        132,
+        437,
+        559,
+        1170
+      ],
+      "files": [
+        "transparent.png",
+        "white.png"
+      ]
+    },
+    {
+      "rank": 2,
+      "primary": false,
+      "size": [
+        424,
+        657
+      ],
+      "mean_hex": "#d0ccd2",
+      "mask_area_px": 134822,
+      "fill_ratio": 0.484,
+      "source_frame": "frame_03",
+      "sharpness": 712.56,
+      "method": "atr+sam2",
+      "crop_bbox": [
+        116,
+        515,
+        540,
+        1172
+      ],
+      "files": [
+        "alts/rank2_transparent.png",
+        "alts/rank2_white.png"
+      ]
+    },
+    {
+      "rank": 3,
+      "primary": false,
+      "size": [
+        429,
+        744
+      ],
+      "mean_hex": "#d0c9cf",
+      "mask_area_px": 143027,
+      "fill_ratio": 0.448,
+      "source_frame": "frame_05",
+      "sharpness": 680.59,
+      "method": "atr+sam2",
+      "crop_bbox": [
+        117,
+        406,
+        546,
+        1150
+      ],
+      "files": [
+        "alts/rank3_transparent.png",
+        "alts/rank3_white.png"
+      ]
+    }
+  ],
+  "source_image": "sources\\DeJu0mmA4jW_1_ae3cdabf569d.jpg",
+  "source_url": "",
+  "origin_dir": "output\\2026-10-11\\garment_extract\\2026-10-06_11-59-04_DeJu0mmA4jW_1",
+  "added_date": "2026-10-12",
+  "note": "抖音参考视频整套穿搭：ATR+SAM2 提取，rank1 为最佳帧，rank2/3 为备选帧版本"
+}

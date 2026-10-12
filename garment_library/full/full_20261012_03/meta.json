@@ -1,0 +1,93 @@
+{
+  "garment_id": "full_20261012_03",
+  "category": "full",
+  "label": "DeMaIN9gB3Q_1",
+  "mean_hex": "#d1d0d5",
+  "mask_area_px": 198706,
+  "size": [
+    495,
+    893
+  ],
+  "aspect": 0.554,
+  "fill_ratio": 0.45,
+  "method": "atr+sam2",
+  "versions": [
+    {
+      "rank": 1,
+      "primary": true,
+      "size": [
+        495,
+        893
+      ],
+      "mean_hex": "#d1d0d5",
+      "mask_area_px": 198706,
+      "fill_ratio": 0.45,
+      "source_frame": "frame_05",
+      "sharpness": 571.52,
+      "method": "atr+sam2",
+      "crop_bbox": [
+        100,
+        387,
+        595,
+        1280
+      ],
+      "files": [
+        "transparent.png",
+        "white.png"
+      ]
+    },
+    {
+      "rank": 2,
+      "primary": false,
+      "size": [
+        423,
+        827
+      ],
+      "mean_hex": "#cfced3",
+      "mask_area_px": 197687,
+      "fill_ratio": 0.565,
+      "source_frame": "frame_04",
+      "sharpness": 520.81,
+      "method": "atr+sam2",
+      "crop_bbox": [
+        163,
+        453,
+        586,
+        1280
+      ],
+      "files": [
+        "alts/rank2_transparent.png",
+        "alts/rank2_white.png"
+      ]
+    },
+    {
+      "rank": 3,
+      "primary": false,
+      "size": [
+        467,
+        801
+      ],
+      "mean_hex": "#d4d3d9",
+      "mask_area_px": 199091,
+      "fill_ratio": 0.532,
+      "source_frame": "frame_01",
+      "sharpness": 515.52,
+      "method": "atr+sam2",
+      "crop_bbox": [
+        109,
+        479,
+        576,
+        1280
+      ],
+      "files": [
+        "alts/rank3_transparent.png",
+        "alts/rank3_white.png"
+      ]
+    }
+  ],
+  "source_image": "sources\\DeMaIN9gB3Q_1_e07db86964a0.jpg",
+  "source_url": "",
+  "origin_dir": "output\\2026-10-11\\garment_extract\\2026-10-07_12-56-14_DeMaIN9gB3Q_1",
+  "added_date": "2026-10-12",
+  "note": "抖音参考视频整套穿搭：ATR+SAM2 提取，rank1 为最佳帧，rank2/3 为备选帧版本"
+}
