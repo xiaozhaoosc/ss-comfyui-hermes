@@ -214,6 +214,7 @@ def queue_faceswap_jobs(input_dir, face_path, output_dir, limit=0, order_file=No
     output_subdir = comfyui_output_subdir(output_dir)
     faceswap_dir = SCRIPT_DIR.parent / "output" / output_subdir
     manifest = faceswap_dir.parent / "_submit_manifest.jsonl"
+    manifest.parent.mkdir(parents=True, exist_ok=True)  # 新输出路径提交时目录还不存在
 
     # ComfyUI input 相对路径
     comfyui_input_dir = SCRIPT_DIR.parent / "input"
