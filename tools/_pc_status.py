@@ -11,8 +11,18 @@ import os, io, sys, json, glob, time, urllib.request, urllib.error
 BASE = r"D:\ai_projects\ComfyUI"
 OPENER = urllib.request.build_opener(urllib.request.ProxyHandler({}))
 HOST = "http://127.0.0.1:8188"
-DEFAULT_LEDGER = os.path.join(BASE, "output", time.strftime("%Y-%m-%d") + "_wb",
-                              "lora_ab", "_submit_log.json")
+
+
+def _find_ledger():
+    """找最新的 lora_ab 提交台账（不依赖系统日期，规避零点 rollover）。"""
+    hits = sorted(glob.glob(os.path.join(BASE, "output", "*_wb", "lora_ab",
+                                         "_submit_log.json")),
+                  key=os.path.getmtime, reverse=True)
+    return hits[0] if hits else None
+
+
+DEFAULT_LEDGER = _find_ledger() or os.path.join(
+    BASE, "output", time.strftime("%Y-%m-%d") + "_wb", "lora_ab", "_submit_log.json")
 
 
 def api_get(ep, timeout=20):
@@ -71,7 +81,9 @@ def main():
                 fail_list.append(j)
                 continue
             has_file = bool(glob.glob(os.path.join(BASE, "output", "*_wb", g,
-                                                   "pc_%s_%s_*.png" % (g, j["scene"]))))
+                                                   "pc_%s_%s_*.png" % (g, j["scene"])))
+                           or glob.glob(os.path.join(BASE, "output", "*_wb", "lora_ab", g,
+                                                     "pc_%s_%s_*.png" % (g, j["scene"]))))
             if has_file:
                 s["done"] += 1
                 s["files"].append(j["scene"])
@@ -113,7 +125,9 @@ def main():
             out.append("  已落盘产物：")
             for j in done_list:
                 hits = sorted(glob.glob(os.path.join(BASE, "output", "*_wb", j["group"],
-                                                     "pc_%s_%s_*.png" % (j["group"], j["scene"]))))
+                                                     "pc_%s_%s_*.png" % (j["group"], j["scene"])))
+                               + glob.glob(os.path.join(BASE, "output", "*_wb", "lora_ab", j["group"],
+                                                        "pc_%s_%s_*.png" % (j["group"], j["scene"]))))
                 if hits:
                     out.append("    %-16s %-24s %s  %.2f MB" % (
                         j["group"], j["scene"], os.path.basename(hits[-1]),
@@ -121,7 +135,8 @@ def main():
 
     txt = "\n".join(out)
     print(txt)
-    with io.open(os.path.join(BASE, "_pc_status.txt"), "w", encoding="utf-8") as f:
+    # 落盘到独立文件名，避免与调用方的 stdout 重定向（_pc_status.txt）抢锁
+    with io.open(os.path.join(BASE, "_pc_status_report.txt"), "w", encoding="utf-8") as f:
         f.write(txt)
 
 

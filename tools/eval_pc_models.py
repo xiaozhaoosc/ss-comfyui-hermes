@@ -92,6 +92,7 @@ def get_det():
 def find_img(model_key, scene):
     pat = "pc_%s_%s_*.png" % (model_key, scene)
     for p in [os.path.join(OUT_ROOT, "*_wb", model_key, pat),
+              os.path.join(OUT_ROOT, "*_wb", "lora_ab", model_key, pat),
               os.path.join(OUT_ROOT, "prompt_compare", model_key, pat),
               os.path.join(OUT_ROOT, pat)]:
         hits = sorted(glob.glob(p))

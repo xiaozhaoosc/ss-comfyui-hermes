@@ -352,6 +352,8 @@ def stage_outfit_swap(state, output_dir, garment_path, garment_desc='garment',
     client = ComfyAPI(host=comfy_host, port=comfy_port)
     garment_abs = os.path.abspath(garment_path)
 
+    n_fallback = 0  # 回退为原帧(未真正换装)的关键帧数
+
     for i, kf_idx in enumerate(kf_indices):
         dst = os.path.join(results_dir, f'kf_{i:04d}.png')
         if os.path.exists(dst) and os.path.getsize(dst) > 1000:
@@ -363,6 +365,7 @@ def stage_outfit_swap(state, output_dir, garment_path, garment_desc='garment',
         prefix = f'outfit_kf_{i:04d}'
 
         print(f'  [{i+1}/{len(kf_indices)}] Frame {kf_idx}...')
+        ok = False
         try:
             result_path = client.idm_vton_faceprotect(
                 kf_path, garment_abs, garment_desc,
@@ -371,17 +374,32 @@ def stage_outfit_swap(state, output_dir, garment_path, garment_desc='garment',
             if result_path and os.path.exists(result_path):
                 shutil.copy2(result_path, dst)
                 print(f'    ✓')
+                ok = True
             else:
-                shutil.copy2(kf_path, dst)
-                print(f'    ⚠ 无输出，用原帧')
+                print(f'    ⚠ 无输出')
         except Exception as e:
+            print(f'    ❌ {e}')
+        if not ok:
+            n_fallback += 1
             shutil.copy2(kf_path, dst)
-            print(f'    ❌ {e}，用原帧')
+            print(f'    → 回退用原帧(该关键帧未换装)')
+
+    # 完整性校验：产物数量必须等于关键帧数量，否则报错以便重跑续传补齐。
+    # 历史 bug：此处曾无条件 mark_done 且把 n_swapped 记为「期望值」，
+    # 导致中断后残留的不完整结果被当作成功，下游 Stage 5 再静默用 None 插值。
+    actual = sorted(Path(results_dir).glob('kf_*.png'))
+    if len(actual) != len(kf_indices):
+        raise RuntimeError(
+            f'Stage 4 关键帧不完整：期望 {len(kf_indices)} 个，实际 {len(actual)} 个 '
+            f'({results_dir})。已保留现有产物，重跑本 stage 可续传补齐。')
 
     elapsed = time.time() - t0
-    outputs = {'results_dir': results_dir, 'n_swapped': len(kf_indices)}
+    outputs = {'results_dir': results_dir, 'n_swapped': len(actual),
+               'n_fallback_original': n_fallback}
     state.mark_done('4_outfit', outputs, elapsed)
-    print(f'  ✅ {len(kf_indices)} 关键帧换装完成, {elapsed:.0f}s')
+    if n_fallback:
+        print(f'  ⚠ {n_fallback}/{len(actual)} 个关键帧回退为原帧（该处未换装，可能导致闪烁）')
+    print(f'  ✅ {len(actual)} 关键帧换装完成, {elapsed:.0f}s')
     return outputs
 
 
@@ -417,14 +435,22 @@ def stage_interpolate(state, output_dir, video_path):
     all_frames = sorted(Path(frames_dir).glob('frame_*.png'))
     orig_frames = [cv2.imread(str(f)) for f in all_frames]
 
-    # 读取换装关键帧
+    # 读取换装关键帧（缺失即报错，绝不静默把 None 交给插值——
+    # 历史 bug：缺帧时 append None 会让插值产出坏帧或直接崩，且不提示原因）
     swapped_kf = []
+    missing = []
     for i in range(len(kf_indices)):
         p = os.path.join(results_dir, f'kf_{i:04d}.png')
         img = cv2.imread(p)
-        if img is not None:
-            img = cv2.resize(img, (w_out, h_out))
-        swapped_kf.append(img)
+        if img is None:
+            missing.append(p)
+            continue
+        swapped_kf.append(cv2.resize(img, (w_out, h_out)))
+    if missing:
+        raise RuntimeError(
+            f'Stage 5 缺少 {len(missing)}/{len(kf_indices)} 个换装关键帧，无法插值：\n  '
+            + '\n  '.join(missing)
+            + '\n请先重跑 Stage 4 补齐后再继续。')
 
     # 光流插值
     result_frames = interpolate_keyframes(orig_frames, swapped_kf, kf_indices, total)

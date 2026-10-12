@@ -1,57 +1,53 @@
 # Spec: 视频服装提取工作流（garment_extract）
 
 ## 目标
-从 `output/2026-10-11/instagram_ayano_fj/` 的 2 个视频中提取"纯净的服装"——
-即去掉人物/背景、只保留服装本身的透明底 PNG（并附带白底版本），用于后续参考图 / 试穿 / 训练用途。
+从视频目录（如 `output/2026-10-11/instagram_ayano_fj/`）提取"纯净的服装"——
+去掉人物/背景，只保留服装本身的透明底 PNG（附白底版），用于参考图 / 试穿 / 训练用途。
 
-## 输入
-| 文件 | 规格 |
-|---|---|
-| 2026-10-07_12-56-14_DeMaIN9gB3Q_1.mp4 | 720×1280, 30fps, 10.2s |
-| 2026-10-09_12-54-23_DeRjgPHgZAK_1.mp4 | 720×1280, 30fps, 14.6s |
+## 最终方案（v5，经多轮抽检验证）
+每帧单次推理（ComfyUI API 或本地直连）：
+1. **Stage 1 关键帧抽取**（ffmpeg，CPU）：4fps 采样 → 拉普拉斯方差清晰度打分 → 去重取 Top-12
+2. **Stage 2 ATR 人体解析**：`FaceProtectMask` / parsing_atr.onnx，
+   clothing_labels=4,5,6,7,8（上装/裙/裤/连衣裙/腰带），排除头发(2)/墨镜(3)/脸(11)
+3. **Stage 3 SAM2 边缘精修**：ATR 掩码作 soft mask input 喂 `Sam2Segmentation`
+   （sam2_hiera_base_plus, fp16 + autocast）；精修面积偏离 ATR 0.5~1.6 倍时回退 ATR+羽化
+4. **Stage 4 掩码清洗（scipy）**：
+   - 剔除触及画面左右边缘的组件（镜面反射/其他画面碎片）
+   - 剔除整体悬于主服装上方的组件（飘发误判）
+   - 组件 ≥10% 主组件则保留（多件套）；第二大组件 < 主组件 40% 时只留主服装
+   - 闭运算 + 填洞修复手部遮挡孔洞；bbox+8% 边距裁剪
+   - 按 清晰度×√面积 排序（atr_only 回退帧 ×0.6 降权）取 Top-3
 
-## 输出
-`output/2026-10-11/garment_extract/<视频名>/` 下：
-- `keyframes/` — 每视频抽取的清晰候选帧（JPEG）
-- `person_cutout/` — BiRefNet 抠出的人物透明图
-- `garment/` — 最终纯净服装图：`garment_<n>_transparent.png` + `garment_<n>_white.png`
-- `manifest.json` — 每张图的来源视频、帧号、清晰度得分、mask 面积
+> 演进记录：v1 BiRefNet+SAM2 锚点方案被抽检否决（SAM2 分出整个人、BiRefNet 漏检透视装），
+> v2 起改用 ATR 人体解析直出服装掩码。
 
-## 流水线（4 阶段，ComfyUI API 驱动）
+## 使用
+```powershell
+# 推荐: 本地直连推理(不依赖 ComfyUI 服务器, 用 venv 运行)
+D:\ai_projects\ComfyUI\venv\Scripts\python.exe tools\garment_extract\local_garment.py <视频目录>
 
-### Stage 1 — 关键帧抽取（ffmpeg，不经 GPU）
-- 均匀采样 + sharpness(拉普拉斯方差) 打分，每视频取 Top-N（N=12）
-- 过滤：近似重复帧（相邻帧差 < 阈值则去重）
+# 备选: 走 ComfyUI API(服务器需在运行)
+python tools\garment_extract\extract_garment.py <视频目录> --top 3 --frames 12
+```
+文件：
+- `workflow_pass2.json` — ComfyUI API 工作流（LoadImage → FaceProtectMask → SAM2 → Save）
+- `extract_garment.py` — API 驱动脚本
+- `local_garment.py` — 本地推理脚本（onnxruntime ATR[CPU] + torch SAM2[CUDA]，免服务器）
 
-### Stage 2 — 人像抠图（BiRefNet-general）
-- 输入候选帧 → `BiRefNet-general` 得到人物前景 alpha
-- 输出人物透明 cutout，同时留下 alpha mask 供 Stage 3 裁剪范围
+## 输出结构
+`output/<日期>/garment_extract/<视频名>/`
+- `keyframes/` 候选关键帧
+- `masks_raw/` ATR/SAM2 原始掩码（调试）
+- `garment/garment_<n>_transparent.png` + `garment_<n>_white.png`
+- `manifest.json` 来源视频/帧号/清晰度/掩码面积/方法
 
-### Stage 3 — 服装区域分割（SAM2）
-- `face_yolov8m` 检测人脸框 → 推算躯干锚点（人脸下沿 0.5~1.2 倍脸高处取 2~3 个正样本点）
-- `Sam2Segmentation`（sam2_hiera_base_plus）用锚点分割服装区域
-- 与 Stage 2 alpha 相交，去除非人物区域噪声
-- 逻辑回退：锚点分割失败（mask 过小/过大）→ 用 alpha mask 躯干包围盒裁剪
+## 验收结果（2026-10-11 实测，4 个视频 48/48 帧成功）
+- [x] 每视频 ≥3 张纯净服装图（透明底 + 白底）
+- [x] 抽检：无脸部/头发/手臂/背景碎片残留；多件套完整保留
+- [x] manifest.json 来源可追溯
+- [x] 脚本可复用于任意视频目录
 
-### Stage 4 — 纯净服装合成
-- 服装 mask ∩ 人像 alpha → 只保留服装像素
-- 以 mask 包围盒加 8% 边距裁剪
-- 输出：透明底 PNG + 白底 PNG；每个视频选 mask 清晰度/面积最优的前 3 张
-
-## 实现物
-1. `tools/garment_extract/workflow_garment.json` — ComfyUI API 工作流（LoadImage → BiRefNet → YOLO → SAM2 → 合成 → Save）
-2. `tools/garment_extract/extract_garment.py` — 驱动脚本：ffmpeg 抽帧 → 提交工作流（单帧循环）→ 收集整理输出 → manifest
-3. 运行方式：`python extract_garment.py "output/2026-10-11/instagram_ayano_fj" --top 3`
-
-## 验收标准
-- [ ] 两个视频各产出 ≥3 张纯净服装图（透明底 + 白底）
-- [ ] 服装完整、无手臂/脸部/背景残留（人工抽检）
-- [ ] manifest.json 记录来源可追溯
-- [ ] 脚本可复用于其他视频目录
-
-## 风险与对策
-| 风险 | 对策 |
-|---|---|
-| 遮挡/侧身导致 SAM2 分割不完整 | Top-3 多帧候选兜底；manifest 记录 mask 面积便于筛选 |
-| BiRefNet 把深色服装与背景混淆 | alpha 相交裁剪 + 多帧候选 |
-| 多套服装出现在同一视频 | 按 mask 连通域分组输出（数量>1 时分别保存） |
+## 已知局限
+- 深V/挂脖款胸口皮肤区被 protect 规则挖空（合理：服装本不覆盖皮肤）
+- 头发大面积遮挡服装时边缘可能被误删（protect_labels 含 hair=2）
+- ATR 对极宽松/超长外套偶尔分类不准
