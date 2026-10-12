@@ -252,3 +252,16 @@
 8. **本机代理坑**：HTTP_PROXY 会劫持 127.0.0.1:8188 返回 502 → 访问本机 ComfyUI 一律绕代理（`_probe_*`、`_zimage_test`、`_pc_gen_*` 已内置绕代理 opener）。
 9. **ReActor/insightface 坑**：`FaceAnalysis.get()` native 崩溃 → 直连 RetinaFace `det_10g.onnx`，且 QA 进程禁 import torch；受限 shell 中 nvidia-smi 不在 PATH，完整路径 `C:\WINDOWS\System32\nvidia-smi.exe`。
 10. **阶段闸门与合规**：阶段切换前跑 `_drama_gate.py` 校验前置产物（防浪费积分）；Flow 提交前必跑 `prompt_safety_linter.py`（Veo 知名人物政策）；Wan Animate 服装控制走两段式（重绘参考图→ReActor 锁脸），提示词写服装无效。
+
+---
+
+## 九、Hitomi 批量换脸与角色库（2026-10-12 新增）
+
+| 脚本 | 用途 | 关键点 |
+|---|---|---|
+| `hitomi_precheck.py` | 输入视频预检 + 无音频补静音 | ffprobe 扫描（NO_AUDIO 阻塞标记+退出码3门禁）；`--fix` 补 AAC 静音轨（`-c:v copy` 不重编码，5 项校验+`.bak` 备份原地替换） |
+| `hitomi_face_priority.py` | 正脸优先选片打分 | RetinaFace 直连（复用 `h3_rope_common._face_detector`）；单次 ffmpeg `fps=1` 解码抽 3 帧；4 worker 并行；输出 `_face_priority.json` + 子目录顺序清单 |
+| `hitomi_scaleup.py` | 放量驱动器 | 3 子目录 × 20 条/轮：等队列排空→`--submit-only`→`--poll-only`；0 提交且无失败才判完成；断点续跑 |
+| `char_lib_add.py` | 角色库入库 | RetinaFace+w600k_r50 双直连（`rec.get(img, SimpleNamespace(kps=...))`）；主脸+备选角度入库、512 维向量、`--matrix` 全库身份 cos |
+
+配套：`batch_faceswap_overlay.py` 已打 P-1..P-10 补丁（绕代理 / /history 终态判定 / 跳过已产出 / _done_map / manifest / --limit / --submit-only / --poll-only / --order-file）。资产库：`character_library/`（角色，对齐 garment_library 约定）。
