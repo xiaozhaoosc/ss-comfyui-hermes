@@ -22,11 +22,19 @@ batch_faceswap_overlay.py - 一键启动：ComfyUI批量换脸 + AI水印 + 底�
 
   # dry-run：只检查参数和连接，不提交任务
   python batch_faceswap_overlay.py --dry-run
+
+  # 限量提交（20条小循环，自动跳过已产出）
+  python batch_faceswap_overlay.py --input <目录> --face <人脸> --output <输出> --limit 20
+
+  # 提交与轮询解耦：先只提交，再另起终端轮询+后处理（长任务抗中断）
+  python batch_faceswap_overlay.py --input <目录> --face <人脸> --output <输出> --limit 20 --submit-only
+  python batch_faceswap_overlay.py --input <目录> --face <人脸> --output <输出> --poll-only
 """
 
 import json
 import os
 import random
+import re
 import subprocess
 import sys
 import time
@@ -36,6 +44,9 @@ import shutil
 import urllib.request
 import tempfile
 from pathlib import Path
+
+# 本机 8188 会被系统代理劫持（os.environ 里的 http_proxy），本地请求一律绕开
+urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler({})))
 
 # ===== 配置 =====
 COMFYUI_URL = "http://127.0.0.1:8188"
@@ -56,7 +67,7 @@ VIDEO_PRESET = "fast"
 
 # 监控配置
 POLL_INTERVAL = 10  # 秒
-MAX_WAIT = 7200     # 最大等待2小时
+MAX_WAIT = 14400    # 最大等待4小时（20条×9min约3h，留余量）
 
 
 # ===== Step 1: ComfyUI 换脸 =====
@@ -121,40 +132,114 @@ def submit_to_comfyui(workflow):
 
 
 def check_queue():
-    """检查队列状态"""
-    resp = urllib.request.urlopen(f"{COMFYUI_URL}/queue", timeout=10)
-    q = json.loads(resp.read())
-    running = len(q.get("queue_running", []))
-    pending = len(q.get("queue_pending", []))
-    return running, pending
+    """检查队列状态（30s 超时 + 3 次重试；ComfyUI 忙时 /queue 偶发变慢）"""
+    last_err = None
+    for _ in range(3):
+        try:
+            resp = urllib.request.urlopen(f"{COMFYUI_URL}/queue", timeout=30)
+            q = json.loads(resp.read())
+            return len(q.get("queue_running", [])), len(q.get("queue_pending", []))
+        except Exception as e:
+            last_err = e
+            time.sleep(5)
+    raise last_err
 
 
-def queue_faceswap_jobs(input_dir, face_path, output_subdir):
-    """提交所有换脸任务到 ComfyUI"""
-    videos = get_video_list(input_dir)
+def check_prompt_status(prompt_id):
+    """查 /history 终态：success / error / None（未出终态或查询失败，下轮再查）"""
+    try:
+        resp = urllib.request.urlopen(f"{COMFYUI_URL}/history/{prompt_id}", timeout=30)
+        entry = json.loads(resp.read()).get(prompt_id) or {}
+        return entry.get("status", {}).get("status_str")
+    except Exception:
+        return None
+
+
+def comfyui_output_subdir(output_dir):
+    """输出目录相对 ComfyUI output/ 的路径（filename_prefix 基准）"""
+    comfyui_output_dir = SCRIPT_DIR.parent / "output"
+    try:
+        return str(Path(output_dir).relative_to(comfyui_output_dir)).replace("\\", "/")
+    except ValueError:
+        return Path(output_dir).name
+
+
+def faceswap_done(faceswap_dir, stem):
+    """VHS 产物 <stem>_00001*.mp4 存在即视为已完成（排除 -audio 伴生文件）"""
+    faceswap_dir = Path(faceswap_dir)
+    if not faceswap_dir.exists():
+        return False
+    return any(f.name.startswith(stem + "_00001") and f.suffix == ".mp4"
+               and "-audio" not in f.name for f in faceswap_dir.iterdir())
+
+
+def load_order(order_file, videos):
+    """按顺序清单重排视频（按文件名匹配）；清单外的排在后面保持原序"""
+    if not order_file:
+        return videos
+    names = [os.path.basename(l.strip())
+             for l in Path(order_file).read_text(encoding="utf-8").splitlines() if l.strip()]
+    head = sorted((v for v in videos if v.name in names), key=lambda v: names.index(v.name))
+    tail = [v for v in videos if v.name not in names]
+    return head + tail
+
+
+def load_manifest(manifest_path):
+    """从提交清单恢复 (file, prompt_id)；同一 prompt_id 只保留最后一次"""
+    p = Path(manifest_path)
+    if not p.exists():
+        return []
+    seen = {}
+    for line in p.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        try:
+            e = json.loads(line)
+        except Exception:
+            continue
+        pid = e.get("prompt_id")
+        if pid and pid != "?":
+            seen[pid] = {"file": e.get("file", "?"), "prompt_id": pid}
+    return list(seen.values())
+
+
+def queue_faceswap_jobs(input_dir, face_path, output_dir, limit=0, order_file=None):
+    """提交换脸任务到 ComfyUI：跳过已产出、限量/排序提交、落提交清单"""
+    input_dir = Path(input_dir)
+    face_path = Path(face_path)
+    output_dir = Path(output_dir)
+
+    # 换脸产物目录 = ComfyUI output/<output_subdir>
+    output_subdir = comfyui_output_subdir(output_dir)
+    faceswap_dir = SCRIPT_DIR.parent / "output" / output_subdir
+    manifest = faceswap_dir.parent / "_submit_manifest.jsonl"
+
+    # ComfyUI input 相对路径
+    comfyui_input_dir = SCRIPT_DIR.parent / "input"
+    face_rel = str(face_path.relative_to(comfyui_input_dir)).replace("\\", "/")
+    video_dir_rel = str(input_dir.relative_to(comfyui_input_dir)).replace("\\", "/")
+
+    videos = load_order(order_file, get_video_list(input_dir))
     if not videos:
         print("❌ 未找到视频文件")
         sys.exit(1)
 
-    input_dir = Path(input_dir)
-    face_path = Path(face_path)
+    todo = [v for v in videos if not faceswap_done(faceswap_dir, v.stem)]
+    if len(todo) < len(videos):
+        print(f"⏭️ 跳过已产出 {len(videos) - len(todo)} 个")
+    if limit > 0:
+        todo = todo[:limit]
+    if not todo:
+        print("✅ 无需提交（全部已有产物或超出 limit）")
+        return []
 
-    # 计算 ComfyUI input 相对路径
-    comfyui_input = Path(COMFYUI_URL.split("//")[1].split(":")[0])  # 这里不对
-    # 用实际的 ComfyUI input 目录（从脚本位置推导）
-    comfyui_input_dir = SCRIPT_DIR.parent / "input"
-
-    # 人脸图片相对于 input 目录的路径
-    face_rel = str(face_path.relative_to(comfyui_input_dir)).replace("\\", "/")
-    # 视频目录相对于 input 目录的路径
-    video_dir_rel = str(input_dir.relative_to(comfyui_input_dir)).replace("\\", "/")
-
-    print(f"📹 发现 {len(videos)} 个视频")
+    print(f"📹 本批提交 {len(todo)} 个视频（输入共 {len(videos)} 个）")
     print(f"👤 人脸: {face_rel}")
     print(f"🔄 提交到 ComfyUI...")
 
     queued = []
-    for i, video in enumerate(videos, 1):
+    for i, video in enumerate(todo, 1):
         video_rel = f"{video_dir_rel}/{video.name}"
         output_prefix = f"{output_subdir}/{video.stem}"
 
@@ -163,38 +248,60 @@ def queue_faceswap_jobs(input_dir, face_path, output_subdir):
         print(f"  🎞️ {video.name[:40]} — 源帧率 {fps} fps")
         try:
             result = submit_to_comfyui(wf)
-            pid = result.get("prompt_id", "?")
+            pid = result.get("prompt_id")
+            if not pid:
+                print(f"  [{i}/{len(todo)}] ⚠️ 无 prompt_id，跳过")
+                continue
             queued.append({"file": video.name, "prompt_id": pid})
-            print(f"  [{i}/{len(videos)}] ✅ {video.name[:50]} → {pid[:8]}")
+            with open(manifest, "a", encoding="utf-8") as fp:
+                fp.write(json.dumps({"ts": time.strftime("%Y-%m-%d %H:%M:%S"),
+                                     "face": face_rel, "file": video.name,
+                                     "prompt_id": pid}, ensure_ascii=False) + "\n")
+            print(f"  [{i}/{len(todo)}] ✅ {video.name[:50]} → {pid[:8]}")
         except Exception as e:
-            print(f"  [{i}/{len(videos)}] ❌ {video.name[:50]} → {e}")
+            print(f"  [{i}/{len(todo)}] ❌ {video.name[:50]} → {e}")
 
         time.sleep(0.3)
 
-    print(f"\n📊 已提交 {len(queued)}/{len(videos)}")
+    print(f"\n📊 已提交 {len(queued)}/{len(todo)}")
     return queued
 
 
 def wait_for_completion(queued, total):
-    """等待所有任务完成"""
-    print(f"\n⏳ 等待换脸完成（每{POLL_INTERVAL}秒检查一次）...")
+    """按 prompt_id 查 /history 终态等待本批完成；单条 error 进失败清单，不阻塞整批"""
+    print(f"\n⏳ 等待换脸完成（每{POLL_INTERVAL}秒查一次 /history）...")
     start = time.time()
+    remaining = {q["prompt_id"]: q["file"] for q in queued
+                 if q.get("prompt_id") and q["prompt_id"] != "?"}
+    done_files, failed = [], []
 
     while time.time() - start < MAX_WAIT:
-        running, pending = check_queue()
-        done = total - running - pending
+        for pid in list(remaining):
+            status = check_prompt_status(pid)
+            if status == "success":
+                done_files.append(remaining.pop(pid))
+            elif status == "error":
+                failed.append(remaining.pop(pid))
         elapsed = int(time.time() - start)
         mins, secs = divmod(elapsed, 60)
+        try:
+            running, pending = check_queue()
+            queue_info = f" | 🔄 {running} 处理中 | ⏳ {pending} 等待"
+        except Exception as e:
+            queue_info = f" | ⚠️ 队列查询失败: {e}"
+        print(f"\r  ✅ {len(done_files)}/{total} | ❌ {len(failed)}{queue_info} | ⏱ {mins}m{secs}s",
+              end="", flush=True)
 
-        print(f"\r  ✅ {done}/{total} 完成 | 🔄 {running} 处理中 | ⏳ {pending} 等待 | ⏱ {mins}m{secs}s", end="", flush=True)
-
-        if running == 0 and pending == 0:
-            print(f"\n🎉 全部换脸完成！耗时 {mins}m{secs}s")
-            return True
-
+        if not remaining:
+            print(f"\n🏁 本批完成: 成功 {len(done_files)} | 失败 {len(failed)} | 耗时 {mins}m{secs}s")
+            for f in failed:
+                print(f"  ❌ {f}")
+            return not failed
         time.sleep(POLL_INTERVAL)
 
-    print(f"\n⏰ 超时（{MAX_WAIT}s），还有任务未完成")
+    print(f"\n⏰ 超时（{MAX_WAIT}s），还剩 {len(remaining)} 个未完成")
+    for f in remaining.values():
+        print(f"  ⏰ {f}")
     return False
 
 
@@ -319,6 +426,22 @@ def process_and_rename(input_dir, output_dir, quotes, category=None,
         print(f"❌ 未找到视频文件: {input_dir}")
         return 0, 0
 
+    # 断点账本：已完成后处理的换脸 stem（语录随机命名，靠账本防止重跑重复产出）
+    done_map_path = output_dir / "_done_map.json"
+    done_stems = set()
+    if done_map_path.exists():
+        try:
+            done_stems = set(json.loads(done_map_path.read_text(encoding="utf-8")))
+        except Exception:
+            done_stems = set()
+    todo_files = [f for f in video_files if f.stem not in done_stems]
+    if not todo_files:
+        print("✅ 全部已后处理，无需处理")
+        return 0, 0
+    if len(todo_files) < len(video_files):
+        print(f"⏭️ 跳过已后处理 {len(video_files) - len(todo_files)} 个")
+    video_files = todo_files
+
     # 构建原始视频索引（用于音频恢复）
     original_videos = {}
     if original_dir:
@@ -376,8 +499,9 @@ def process_and_rename(input_dir, output_dir, quotes, category=None,
             # 查找对应的原始视频（用于音频恢复）
             original_file = None
             if original_videos:
-                if vf.stem in original_videos:
-                    original_file = original_videos[vf.stem]
+                orig_stem = re.sub(r"_\d{5}$", "", vf.stem)  # VHS 产物带 _00001 尾缀
+                if orig_stem in original_videos:
+                    original_file = original_videos[orig_stem]
                 elif i - 1 < len(orig_list):
                     original_file = orig_list[i - 1]
 
@@ -400,6 +524,9 @@ def process_and_rename(input_dir, output_dir, quotes, category=None,
                 size_mb = out_path.stat().st_size / (1024 * 1024)
                 print(f"  ✅ {size_mb:.1f}MB")
                 success += 1
+                done_stems.add(vf.stem)
+                done_map_path.write_text(
+                    json.dumps(sorted(done_stems), ensure_ascii=False), encoding="utf-8")
             else:
                 err = result.stderr[-200:] if result.stderr else "unknown"
                 print(f"  ❌ 失败: {err[:100]}")
@@ -440,6 +567,13 @@ def main():
 
   # dry-run 检查
   python batch_faceswap_overlay.py --dry-run
+
+  # 限量提交（20条小循环，跳过已产出）
+  python batch_faceswap_overlay.py --input <目录> --face <人脸> --output <输出> --limit 20
+
+  # 提交与轮询解耦：先只提交，再另起终端轮询+后处理
+  python batch_faceswap_overlay.py --input <目录> --face <人脸> --output <输出> --limit 20 --submit-only
+  python batch_faceswap_overlay.py --input <目录> --face <人脸> --output <输出> --poll-only
         """
     )
     parser.add_argument("--input", default=r"D:\ai_projects\ComfyUI\input\十绫Shiling",
@@ -460,6 +594,12 @@ def main():
     parser.add_argument("--no-music", action="store_true", help="不添加背景音乐，只恢复原声")
     parser.add_argument("--comfyui-url", default=COMFYUI_URL, help="ComfyUI API 地址")
     parser.add_argument("--dry-run", action="store_true", help="只检查参数和连接，不提交任务")
+    parser.add_argument("--limit", type=int, default=0, help="本批最多提交 N 个（0=全部）")
+    parser.add_argument("--submit-only", action="store_true",
+                        help="只提交不轮询不后处理（提交即走，稍后 --poll-only 续）")
+    parser.add_argument("--poll-only", action="store_true",
+                        help="只轮询提交清单中的任务并后处理（不新提交）")
+    parser.add_argument("--order-file", help="提交顺序清单（txt 一行一片，子目录内正脸优先用）")
     args = parser.parse_args()
 
     comfyui_url = args.comfyui_url
@@ -467,16 +607,9 @@ def main():
     input_dir = Path(args.input)
     face_path = Path(args.face)
     output_dir = Path(args.output)
-    # 计算相对于 ComfyUI output 目录的路径，作为 ComfyUI filename_prefix
-    comfyui_output_dir = SCRIPT_DIR.parent / "output"
-    try:
-        output_subdir = str(output_dir.relative_to(comfyui_output_dir)).replace("\\", "/")
-    except ValueError:
-        # output_dir 不在 ComfyUI output 下，用目录名
-        output_subdir = output_dir.name
-
-    # 中间产物目录（换脸结果，带原始文件名）
-    temp_dir = output_dir.parent / f"{output_dir.name}_faceswap_temp"
+    # 相对 ComfyUI output 目录的路径（filename_prefix / 提交清单路径基准）
+    output_subdir = comfyui_output_subdir(output_dir)
+    manifest = (SCRIPT_DIR.parent / "output" / output_subdir).parent / "_submit_manifest.jsonl"
 
     print("=" * 60)
     print("🎬 一键批量换脸 + AI水印 + 语录叠加工具")
@@ -523,7 +656,21 @@ def main():
         sys.exit(0)
 
     # Step 1: 换脸
-    if not args.skip_faceswap:
+    faceswap_output = output_dir  # ComfyUI 直接输出到 output_dir
+    if args.poll_only:
+        # 只轮询+后处理：从提交清单恢复任务，不新提交
+        try:
+            urllib.request.urlopen(f"{COMFYUI_URL}/queue", timeout=10)
+        except Exception:
+            print(f"❌ ComfyUI 无法连接: {COMFYUI_URL}")
+            sys.exit(1)
+        queued = load_manifest(manifest)
+        if not queued:
+            print(f"❌ 提交清单为空或不存在: {manifest}")
+            sys.exit(1)
+        print(f"\n🔄 Step 1/2: 轮询清单中 {len(queued)} 个任务（不提交）")
+        wait_for_completion(queued, len(queued))
+    elif not args.skip_faceswap:
         # 检查 ComfyUI
         comfyui_url_use = comfyui_url or COMFYUI_URL
         try:
@@ -532,18 +679,18 @@ def main():
             print(f"❌ ComfyUI 无法连接: {COMFYUI_URL}")
             sys.exit(1)
 
-        videos = get_video_list(input_dir)
-        print(f"\n🔄 Step 1/2: 提交换脸任务（{len(videos)} 个视频）")
-        queued = queue_faceswap_jobs(input_dir, face_path, output_subdir)
+        queued = queue_faceswap_jobs(input_dir, face_path, output_dir,
+                                     limit=args.limit, order_file=args.order_file)
+
+        if args.submit_only:
+            print(f"\n📤 仅提交模式：已提交 {len(queued)} 个任务（清单 {manifest}）")
+            print("   稍后用 --poll-only 轮询并完成后处理")
+            sys.exit(0)
 
         if queued:
-            wait_for_completion(queued, len(videos))
+            wait_for_completion(queued, len(queued))
         else:
-            print("❌ 没有任务被提交")
-            sys.exit(1)
-
-        # 换脸结果在 output_dir（ComfyUI 直接输出到这里）
-        faceswap_output = output_dir
+            print("⚠️ 没有新任务被提交（全部已有产物？），继续后处理")
     else:
         print(f"\n⏭️ 跳过换脸，使用已有结果: {input_dir}")
         faceswap_output = input_dir
@@ -572,18 +719,12 @@ def main():
 
     # 最终输出到 output_dir（如果跳过换脸，输出到新目录）
     final_dir = output_dir if args.skip_faceswap else output_dir.parent / f"{output_dir.name}_final"
-    if args.skip_faceswap:
-        final_dir = output_dir
 
     success, fail = process_and_rename(
         faceswap_output, final_dir, quotes, args.category,
         original_dir=original_dir, bg_music=bg_music,
         bg_volume=args.bg_volume, orig_volume=args.orig_volume
     )
-
-    # 清理临时目录
-    if not args.skip_faceswap and temp_dir.exists():
-        shutil.rmtree(temp_dir, ignore_errors=True)
 
     print(f"\n{'='*60}")
     print(f"🎉 全部完成！")
