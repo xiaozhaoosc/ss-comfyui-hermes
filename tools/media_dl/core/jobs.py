@@ -13,7 +13,7 @@ from .archive import Archive
 from .engines import EngineCtx, pick_engines
 from .model import Artifact, EventBus as _EventBus, Job, JobSpec, JobState, new_job_id
 from .runner import CANCELLED, TIMEOUT, run_stream
-from .sites import ADAPTER
+from .sites import ADAPTER, host_of
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
 MEDIA_EXTS = {".jpg", ".jpeg", ".png", ".webp", ".gif", ".mp4", ".webm", ".mov", ".m4a"}
@@ -103,9 +103,9 @@ class JobManager:
             if got:
                 self._emit(job, {"type": "log",
                                  "text": f"[cookies] 已从 Chrome {spec.cdp_port} 取得登录态"})
+                domain = ADAPTER.resolve(spec.url).rule.cookie_domain or ("." + host_of(spec.url))
                 rows = ck.normalize_cookies_text(
-                    "\n".join(f"{k}={v}" for k, v in got.items()),
-                    ADAPTER.resolve(spec.url).rule.cookie_domain or ".instagram.com")
+                    "\n".join(f"{k}={v}" for k, v in got.items()), domain)
                 return ck.write_temp_cookies(rows), True
             self._emit(job, {"type": "log",
                              "text": "[cookies] CDP 不可用，转为匿名（可能被限流）"})
@@ -158,12 +158,15 @@ class JobManager:
                     archive_text=archive.text_path,
                     yt_dlp_exe=REPO_ROOT / "tools" / "yt-dlp" / "yt-dlp.exe",
                     filename_pattern=decision.rule.filename_pattern,
+                    ytdlp_template=decision.rule.ytdlp_template,
+                    ytdlp_format=decision.rule.ytdlp_format,
                 )
 
                 engines = pick_engines(decision.engines, job.spec.engine)
+                base_files = len(collect_artifacts(out_dir))
                 rc = None
                 for eng in engines:
-                    ok, why = eng.available()
+                    ok, why = eng.available(job.spec.url)
                     if not ok:
                         self._emit(job, {"type": "log", "text": f"[引擎] {eng.name} 不可用：{why}"})
                         continue
@@ -197,7 +200,11 @@ class JobManager:
                         job.state = JobState.CANCELLED
                         self._emit(job, {"type": "cancelled"})
                         return
-                    if archive.count() > base_done or job.spec.simulate:
+                    # douyin-cdp 这类引擎自己落盘、不写 archive：
+                    # 要么产物变多，要么它正常退出且目录里本来就有货（续跑场景）
+                    if (archive.count() > base_done or job.spec.simulate
+                            or len(collect_artifacts(out_dir)) > base_files
+                            or (rc == 0 and len(collect_artifacts(out_dir)) > 0)):
                         break
                     self._emit(job, {"type": "log",
                                      "text": f"[引擎] {eng.name} 没有新增，降级下一个"})

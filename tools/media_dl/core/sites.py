@@ -12,6 +12,15 @@ from dataclasses import dataclass, field
 from urllib.parse import parse_qs, urlparse
 
 
+def host_of(url: str) -> str:
+    """URL → 小写主机名（不含端口）。"""
+    u = url if "://" in url else "https://" + url
+    try:
+        return (urlparse(u).netloc or "").lower().split(":")[0]
+    except Exception:
+        return ""
+
+
 @dataclass
 class SiteRule:
     name: str
@@ -20,6 +29,10 @@ class SiteRule:
     cookie_domain: str = ""
     filename_pattern: str = "{id}.{extension}"
     need_cookie: bool = False
+    # yt-dlp 专用输出模板；留空则用 engines.py 里的默认模板
+    ytdlp_template: str = ""
+    # yt-dlp 格式选择器；留空用默认 bestvideo*+bestaudio/best（图文笔记无视频流，需放宽为 best）
+    ytdlp_format: str = ""
 
     def out_name(self, url: str) -> str:
         """从 URL 推导输出目录名，如 instagram_ayano_fj。
@@ -31,7 +44,7 @@ class SiteRule:
         segs = [s for s in parsed.path.split("/") if s]
         generic = {"watch", "video", "v", "p", "reel", "reels", "tv", "en", "zh",
                    "users", "user", "u", "media", "posts", "stories", "highlights",
-                   "photo", "channel", "c"}
+                   "photo", "channel", "c", "note", "slides"}
         tail = ""
         for s in segs:
             if s.lower() not in generic:
@@ -53,6 +66,12 @@ SITES: list[SiteRule] = [
              filename_pattern="{date:%Y-%m-%d_%H-%M-%S}_{shortcode}_{num}.{extension}",
              need_cookie=True),
     SiteRule("tiktok", ("tiktok.com",), ("yt-dlp", "gallery-dl")),
+    SiteRule("douyin", ("douyin.com",), ("douyin-cdp", "yt-dlp", "gallery-dl"),
+             cookie_domain=".douyin.com",
+             # 图文笔记同一 id 会有多张图，必须带 autonumber，否则只有第一张能落盘
+             ytdlp_template="%(upload_date>%Y-%m-%d)s_%(id)s_%(autonumber)02d.%(ext)s",
+             ytdlp_format="best",
+             need_cookie=True),
     SiteRule("youtube", ("youtube.com", "youtu.be"), ("yt-dlp",), filename_pattern="%(title)s.%(ext)s"),
     SiteRule("bilibili", ("bilibili.com",), ("yt-dlp", "gallery-dl")),
     SiteRule("twitter", ("twitter.com", "x.com"), ("gallery-dl", "yt-dlp"),
@@ -94,11 +113,7 @@ class SiteAdapter:
         self.rules = list(rules or SITES)
 
     def _host(self, url: str) -> str:
-        u = url if "://" in url else "https://" + url
-        try:
-            return (urlparse(u).netloc or "").lower().split(":")[0]
-        except Exception:
-            return ""
+        return host_of(url)
 
     def resolve(self, url: str) -> SiteDecision:
         host = self._host(url)

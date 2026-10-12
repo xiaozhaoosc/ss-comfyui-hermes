@@ -13,6 +13,7 @@ import tempfile
 import time
 from contextlib import contextmanager
 from pathlib import Path
+from urllib.parse import urlparse
 
 # Netscape: domain  flag  path  secure  expires  name  value
 RE_NETSCAPE = re.compile(
@@ -110,12 +111,97 @@ def _import_ig():
     return ig
 
 
-def cdp_cookies(port: int = 9222, url_hint: str = "") -> dict[str, str] | None:
-    """从本机 Chrome 调试端口抓 Instagram cookie（失败返回 None）。"""
+def _registrable(host: str) -> str:
+    """取可注册域：www.douyin.com -> douyin.com。"""
+    parts = [p for p in (host or "").split(".") if p]
+    return ".".join(parts[-2:]) if len(parts) >= 2 else host
+
+
+def host_of(url: str) -> str:
+    u = url if "://" in url else "https://" + url
     try:
-        return _import_ig().harvest_cookies(port, url_hint or "")
+        return (urlparse(u).netloc or "").lower().split(":")[0]
+    except Exception:
+        return ""
+
+
+def cdp_cookies_for_host(port: int, host: str) -> dict[str, str] | None:
+    """通用 CDP 取 cookie：按目标 host 选标签页并只留该域的 cookie。
+
+    ig_download.harvest_cookies 是 Instagram 专用的（pick_instagram_page +
+    COOKIE_KEEP 白名单 + instagram.com 域名过滤），抖音等站点必须走这里。
+    """
+    try:
+        ig = _import_ig()
     except Exception:
         return None
+    if getattr(ig, "websocket", None) is None:
+        return None
+
+    base_host = _registrable(host)
+    try:
+        with ig.local_cdp_no_proxy():
+            base, _ver = ig.resolve_cdp_base(port)
+            tabs = ig._http_json(base, "/json/list")
+    except Exception:
+        return None
+
+    pages = [t for t in tabs
+             if t.get("type") == "page" and t.get("webSocketDebuggerUrl")]
+    if not pages:
+        return None
+    # 优先用同站点标签页（该站点的 cookie 一定在它的上下文里）
+    target = next((t for t in pages if base_host in (t.get("url") or "")), pages[0])
+
+    try:
+        with ig.local_cdp_no_proxy():
+            ws = ig.websocket.create_connection(target["webSocketDebuggerUrl"],
+                                                timeout=20, suppress_origin=True)
+            try:
+                ig._cdp_roundtrip(ws, 1, "Network.enable", {})
+                try:
+                    res = ig._cdp_roundtrip(
+                        ws, 2, "Network.getCookies",
+                        {"urls": [f"https://{host}/", f"https://{base_host}/"]})
+                except Exception:
+                    res = ig._cdp_roundtrip(ws, 3, "Network.getCookies", {})
+                raw = res.get("result", {}).get("cookies", [])
+            finally:
+                try:
+                    ws.close()
+                except Exception:
+                    pass
+    except Exception:
+        return None
+
+    out: dict[str, str] = {}
+    for c in raw:
+        dom = (c.get("domain") or "").lstrip(".")
+        if not dom or base_host not in dom:
+            continue
+        try:
+            if ig._is_expired(c):
+                continue
+        except Exception:
+            pass
+        name, value = c.get("name"), c.get("value", "")
+        if not name or not value:
+            continue
+        out[name] = value
+    return out or None
+
+
+def cdp_cookies(port: int = 9222, url_hint: str = "") -> dict[str, str] | None:
+    """按 URL 所属站点取登录态：Instagram 走既有 IG 路径，其余站点走通用抓取。"""
+    host = host_of(url_hint)
+    if not host:
+        return None
+    if _registrable(host) == "instagram.com":
+        try:
+            return _import_ig().harvest_cookies(port, "")
+        except Exception:
+            return None
+    return cdp_cookies_for_host(port, host)
 
 
 def probe_cdp(port: int = 9222, username: str = "") -> dict:
