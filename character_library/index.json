@@ -1,0 +1,84 @@
+[
+ {
+  "char_id": "char_duo3_2",
+  "name": "Duo3_2（第三身份）",
+  "face": "faces/char_duo3_2/face.jpg",
+  "thumb": "faces/char_duo3_2/thumb.png",
+  "embedding": "faces/char_duo3_2/embedding.npy",
+  "emb_dim": 512,
+  "emb_model": "insightface/w600k_r50",
+  "det_model": "insightface/det_10g",
+  "det_score": 0.816,
+  "face_bbox": [
+   442.5951843261719,
+   47.50425338745117,
+   837.9265747070312,
+   604.5031127929688
+  ],
+  "img_shape": [
+   1608,
+   1206
+  ],
+  "alts": [
+   {
+    "file": "faces/char_duo3_2/alts/duo3_1.jpg",
+    "cos_to_main": 0.7962,
+    "det_score": 0.7605,
+    "note": "duo3 家族候选1"
+   },
+   {
+    "file": "faces/char_duo3_2/alts/duo3_3.jpg",
+    "cos_to_main": 0.7618,
+    "det_score": 0.8004,
+    "note": "duo3 家族候选3"
+   },
+   {
+    "file": "faces/char_duo3_2/alts/duo3_4.jpg",
+    "cos_to_main": 0.839,
+    "det_score": 0.8162,
+    "note": "duo3 家族候选4"
+   }
+  ],
+  "ref_outputs": [
+   "output/2026-10-12/hitomi_frontal_retest/duo3_2_final/知之者不如好之者，好之者不如乐之者.mp4"
+  ],
+  "source": "input\\ken4\\face\\gpt\\duo3_2.jpg",
+  "added_date": "2026-10-12",
+  "note": "2026-10-12 四脸比对中的第三身份；duo3_1/3/4 为家族候选，同身份与否以 meta 内 cos 值为准"
+ },
+ {
+  "char_id": "char_duo",
+  "name": "Duo（主用身份）",
+  "face": "faces/char_duo/face.png",
+  "thumb": "faces/char_duo/thumb.png",
+  "embedding": "faces/char_duo/embedding.npy",
+  "emb_dim": 512,
+  "emb_model": "insightface/w600k_r50",
+  "det_model": "insightface/det_10g",
+  "det_score": 0.8507,
+  "face_bbox": [
+   458.610595703125,
+   285.8307189941406,
+   844.4730834960938,
+   818.4801025390625
+  ],
+  "img_shape": [
+   1211,
+   1299
+  ],
+  "alts": [
+   {
+    "file": "faces/char_duo/alts/left.png",
+    "cos_to_main": 0.5445,
+    "det_score": 0.7591,
+    "note": "侧脸照；与主脸 cos=0.544 低于同身份阈值（0.6），'同一人'说法存疑，疑侧脸角度致 embedding 漂移，待人工复核"
+   }
+  ],
+  "ref_outputs": [
+   "output/2026-10-12/hitomi_frontal_retest/duo_final/做简简单单的自己，过平平淡淡的生活.mp4"
+  ],
+  "source": "input\\ken4\\face\\gpt\\duo.png",
+  "added_date": "2026-10-12",
+  "note": "2026-10-12 四脸比对选定为 290 条放量用脸；与 char_duo3_2 为不同身份（cos≈0.05）；left 与主脸相似度存疑见 alt 备注"
+ }
+]
