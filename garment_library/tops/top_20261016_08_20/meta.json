@@ -1,0 +1,24 @@
+{
+  "garment_id": "top_20261016_08_20",
+  "category": "tops",
+  "label": "老钱极简静奢燕麦灰重磅真丝乔其纱立领盘扣半透短衫",
+  "mean_hex": "#b9a792",
+  "mask_area_px": 473916,
+  "crop_bbox": [
+    0,
+    0,
+    768,
+    1376
+  ],
+  "size": [
+    768,
+    1376
+  ],
+  "method": "google_flow+rembg_cpu",
+  "source_image": "D:\\ai_projects\\ComfyUI\\output\\2026-10-16\\flow_images\\wardrobe_item_top_20261016_08_20_9_16_201710_1.png",
+  "source_url": "",
+  "added_date": "2026-10-16",
+  "dir": "tops\\top_20261016_08_20",
+  "thumb": "tops/top_20261016_08_20/thumb.png",
+  "note": "每小时自动化资产 · Quiet Luxury oatmeal beige heavyweight mulberry silk georgette semi-sheer blouse with mandarin collar and frog buttons (clean tailored silhouette, understated elegance, supreme fabric drape, minimalist luxury)"
+}

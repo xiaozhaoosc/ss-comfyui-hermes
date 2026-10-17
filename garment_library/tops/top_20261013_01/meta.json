@@ -1,0 +1,39 @@
+{
+  "name": "top",
+  "source_image": "sources\\7686812393779123898_02_3738249eaad85444.webp",
+  "box": [
+    30,
+    930,
+    660,
+    1750
+  ],
+  "crop_bbox": [
+    0,
+    905,
+    696,
+    1767
+  ],
+  "mask_area_px": 301057,
+  "image_size": [
+    1080,
+    1980
+  ],
+  "mean_rgb": [
+    77,
+    64,
+    78
+  ],
+  "mean_hex": "#4d404e",
+  "method": "sam2_box_fill",
+  "device": "cpu",
+  "note": "军绿色短夹克（粉紫舞台光，暗部空洞已填）；来源抖音图文笔记图2",
+  "garment_id": "top_20261013_01",
+  "category": "tops",
+  "label": "7686812393779123898_02",
+  "source_url": "https://www.douyin.com/note/7686812393779123898",
+  "added_date": "2026-10-13",
+  "size": [
+    650,
+    857
+  ]
+}

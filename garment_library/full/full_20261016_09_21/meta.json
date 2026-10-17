@@ -1,0 +1,24 @@
+{
+  "garment_id": "full_20261016_09_21",
+  "category": "full",
+  "label": "意式手工裁缝冷月银改良织金香云纱不规则解构斜肩落褶晚礼服",
+  "mean_hex": "#1c1f20",
+  "mask_area_px": 215372,
+  "crop_bbox": [
+    0,
+    0,
+    768,
+    1376
+  ],
+  "size": [
+    768,
+    1376
+  ],
+  "method": "google_flow+rembg_cpu",
+  "source_image": "D:\\ai_projects\\ComfyUI\\output\\2026-10-16\\flow_images\\wardrobe_item_full_20261016_09_21_9_16_211725_1.png",
+  "source_url": "",
+  "added_date": "2026-10-16",
+  "dir": "full\\full_20261016_09_21",
+  "thumb": "full/full_20261016_09_21/thumb.png",
+  "note": "每小时自动化资产 · Italian Bespoke Tailoring luminous moonlit silver modern metallic gold phoenix jacquard brocade avant-garde one-shoulder architectural draped maxi gown (sharp lapels, impeccable Italian shoulder structure, fluid drape, artisanal hand-stitched pick seams)"
+}

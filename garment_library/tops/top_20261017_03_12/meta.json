@@ -1,0 +1,24 @@
+{
+  "garment_id": "top_20261017_03_12",
+  "category": "tops",
+  "label": "赛博机能科技钛金灰重磅真丝乔其纱高领插肩宽松落褶针织衫",
+  "mean_hex": "#4d4e4d",
+  "mask_area_px": 461246,
+  "crop_bbox": [
+    0,
+    0,
+    768,
+    1376
+  ],
+  "size": [
+    768,
+    1376
+  ],
+  "method": "google_flow+rembg_cpu",
+  "source_image": "D:\\ai_projects\\ComfyUI\\output\\2026-10-17\\flow_images\\wardrobe_item_top_20261017_03_12_9_16_121128_1.png",
+  "source_url": "",
+  "added_date": "2026-10-17",
+  "dir": "tops\\top_20261017_03_12",
+  "thumb": "tops/top_20261017_03_12/thumb.png",
+  "note": "每小时自动化资产 · Cyberpunk Techwear gunmetal titanium gray heavyweight mulberry silk georgette relaxed mock-neck sweater with architectural ribbing (3M reflective trims, modular utility pockets, waterproof ripstop, industrial matte buckles)"
+}

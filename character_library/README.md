@@ -18,9 +18,11 @@ character_library/
         ├── face.<ext>        # 主参考脸（ReActor source_image 直接用这个，原图拷贝）
         ├── thumb.png         # 320px 方脸缩略图（浏览用）
         ├── embedding.npy     # 512 维身份向量（w600k_r50）
-        ├── meta.json         # 元数据（备选角度 cos/检测分/参照成品/来源）
         └── alts/             # 备选角度（同身份多角度，各带 _emb.npy + _thumb.png）
 ```
+
+角色的全部元数据（备选角度 cos/检测分/参照成品/来源）**统一记在库根目录的 `index.json`**，
+每角色目录下不再单独放 `meta.json`。
 
 ## 怎么用
 
@@ -38,7 +40,7 @@ character_library/
 ## 入库时自动完成的事
 
 RetinaFace（det_10g）取最大脸（记录 bbox + 检测分）→ w600k_r50 算 512 维归一化向量 →
-拷贝原图为 `face.<ext>` → 生成方脸缩略图 → 写 `meta.json` 并更新 `index.json`。
+拷贝原图为 `face.<ext>` → 生成方脸缩略图 → 更新 `index.json`（角色元数据唯一落点）。
 备选角度（--alt）同样算向量并记录与主脸的 cos。
 
 ## 注意

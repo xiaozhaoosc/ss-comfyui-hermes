@@ -1,0 +1,24 @@
+{
+  "garment_id": "full_20261014_07_17",
+  "category": "full",
+  "label": "赛博机能科技午夜黑双面纯手工羊绒双排扣及踝手工羊绒系带大衣",
+  "mean_hex": "#1a1b1b",
+  "mask_area_px": 442658,
+  "crop_bbox": [
+    0,
+    0,
+    768,
+    1376
+  ],
+  "size": [
+    768,
+    1376
+  ],
+  "method": "google_flow+rembg_cpu",
+  "source_image": "D:\\ai_projects\\ComfyUI\\output\\2026-10-14\\flow_images\\wardrobe_item_full_20261014_07_17_9_16_174809_1.png",
+  "source_url": "",
+  "added_date": "2026-10-14",
+  "dir": "full\\full_20261014_07_17",
+  "thumb": "full/full_20261014_07_17/thumb.png",
+  "note": "每小时自动化资产 · Cyberpunk Techwear midnight black double-faced hand-stitched pure cashmere floor-length double-breasted cashmere coat with self-tie sash belt (3M reflective trims, modular utility pockets, waterproof ripstop, industrial matte buckles)"
+}

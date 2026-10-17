@@ -1,0 +1,24 @@
+{
+  "garment_id": "full_20261013_10_21",
+  "category": "full",
+  "label": "老钱风网球极简百褶裙运动套装",
+  "mean_hex": "#d2d1ce",
+  "mask_area_px": 292327,
+  "crop_bbox": [
+    0,
+    0,
+    768,
+    1376
+  ],
+  "size": [
+    768,
+    1376
+  ],
+  "method": "google_flow+rembg_cpu",
+  "source_image": "D:\\ai_projects\\ComfyUI\\output\\2026-10-13\\flow_images\\wardrobe_item_full_20261013_10_21_9_16_214033_1.png",
+  "source_url": "",
+  "added_date": "2026-10-13",
+  "dir": "full\\full_20261013_10_21",
+  "thumb": "full/full_20261013_10_21/thumb.png",
+  "note": "每小时自动化资产 · Quiet luxury ivory knit polo top and navy-striped knife-pleated mini tennis skirt ensemble"
+}

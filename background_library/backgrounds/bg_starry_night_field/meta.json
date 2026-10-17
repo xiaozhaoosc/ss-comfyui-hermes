@@ -1,0 +1,37 @@
+{
+ "bg_id": "bg_starry_night_field",
+ "slug": "starry_night_field",
+ "name_cn": "星空 · 旷野银河",
+ "category": "specified",
+ "scene_type": "outdoor",
+ "person_space": "center",
+ "light_dir": "moonlight",
+ "ground_y": 0.7536,
+ "ground_y_manifest": 0.75,
+ "file": "backgrounds/bg_starry_night_field/main.png",
+ "thumb": "backgrounds/bg_starry_night_field/thumb.png",
+ "alts": [
+  {
+   "file": "backgrounds/bg_starry_night_field/alts/01.png",
+   "src": "output/2026-10-17/flow_images\\bg_starry_night_field_224232_1.png",
+   "lap_var": 1393.9
+  }
+ ],
+ "width": 768,
+ "height": 1376,
+ "aspect": 0.5581,
+ "prompt_note": "a vast open field under a clear starry night sky with the Milky Way, a distant low mountain ridge and dry grass in the f",
+ "source": "google_flow",
+ "flow_project_url": "mixed",
+ "flow_task_name": "bg_starry_night_field",
+ "phash": 15677038422301766431,
+ "quality": {
+  "lap_var": 1393.9,
+  "mean_luma": 43.8,
+  "std": 27.7,
+  "black_ratio": 0.0688,
+  "person_ratio": null,
+  "dup_of": null
+ },
+ "added_date": "2026-10-17"
+}

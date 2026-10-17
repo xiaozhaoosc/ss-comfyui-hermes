@@ -1,0 +1,31 @@
+{
+ "bg_id": "bg_rainy_neon_alley",
+ "slug": "rainy_neon_alley",
+ "name_cn": "雨夜霓虹巷",
+ "category": "suggested",
+ "scene_type": "outdoor",
+ "person_space": "center",
+ "light_dir": "saturated-side",
+ "ground_y": 0.7406,
+ "ground_y_manifest": 0.7,
+ "file": "backgrounds/bg_rainy_neon_alley/main.png",
+ "thumb": "backgrounds/bg_rainy_neon_alley/thumb.png",
+ "alts": [],
+ "width": 768,
+ "height": 1376,
+ "aspect": 0.5581,
+ "prompt_note": "a narrow rainy city alley at night with wet reflective pavement and a soft colorful neon glow blurred in the far backgro",
+ "source": "google_flow",
+ "flow_project_url": "mixed",
+ "flow_task_name": "bg_rainy_neon_alley",
+ "phash": 11053024927189997083,
+ "quality": {
+  "lap_var": 1427.8,
+  "mean_luma": 56.3,
+  "std": 52.3,
+  "black_ratio": 0.181,
+  "person_ratio": null,
+  "dup_of": null
+ },
+ "added_date": "2026-10-17"
+}

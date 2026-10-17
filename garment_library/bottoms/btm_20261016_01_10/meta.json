@@ -1,0 +1,24 @@
+{
+  "garment_id": "btm_20261016_01_10",
+  "category": "bottoms",
+  "label": "老钱极简静奢烟粉哑光机能防撕裂尼龙高腰垂坠双褶阔腿西装裤",
+  "mean_hex": "#9b6964",
+  "mask_area_px": 420635,
+  "crop_bbox": [
+    0,
+    0,
+    768,
+    1376
+  ],
+  "size": [
+    768,
+    1376
+  ],
+  "method": "google_flow+rembg_cpu",
+  "source_image": "D:\\ai_projects\\ComfyUI\\output\\2026-10-16\\flow_images\\wardrobe_item_btm_20261016_01_10_9_16_101729_1.png",
+  "source_url": "",
+  "added_date": "2026-10-16",
+  "dir": "bottoms\\btm_20261016_01_10",
+  "thumb": "bottoms/btm_20261016_01_10/thumb.png",
+  "note": "每小时自动化资产 · Quiet Luxury dusty blush rose matte technical ripstop nylon high-waisted fluid double-pleated wide-leg tailored trousers (clean tailored silhouette, understated elegance, supreme fabric drape, minimalist luxury)"
+}

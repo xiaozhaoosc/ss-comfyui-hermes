@@ -1,0 +1,24 @@
+{
+  "garment_id": "top_20261014_11_18",
+  "category": "tops",
+  "label": "法式复古浪漫黛绿复古粗花呢编织立领盘扣半透短衫",
+  "mean_hex": "#92a28e",
+  "mask_area_px": 514100,
+  "crop_bbox": [
+    0,
+    0,
+    768,
+    1376
+  ],
+  "size": [
+    768,
+    1376
+  ],
+  "method": "google_flow+rembg_cpu",
+  "source_image": "D:\\ai_projects\\ComfyUI\\output\\2026-10-14\\flow_images\\wardrobe_item_top_20261014_11_18_9_16_181910_1.png",
+  "source_url": "",
+  "added_date": "2026-10-14",
+  "dir": "tops\\top_20261014_11_18",
+  "thumb": "tops/top_20261014_11_18/thumb.png",
+  "note": "每小时自动化资产 · French Romantic Vintage celadon jade green heritage textured tweed bouclé semi-sheer blouse with mandarin collar and frog buttons (architectural square neckline, delicate micro-pleats, puff sleeves, mother-of-pearl buttons)"
+}

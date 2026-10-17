@@ -1,0 +1,24 @@
+{
+  "garment_id": "btm_20261017_05_21",
+  "category": "bottoms",
+  "label": "老钱极简静奢绯红重磅真丝乔其纱锋利刀褶百褶马面裙",
+  "mean_hex": "#740f1d",
+  "mask_area_px": 421844,
+  "crop_bbox": [
+    0,
+    0,
+    768,
+    1376
+  ],
+  "size": [
+    768,
+    1376
+  ],
+  "method": "google_flow+rembg_cpu",
+  "source_image": "D:\\ai_projects\\ComfyUI\\output\\2026-10-17\\flow_images\\wardrobe_item_btm_20261017_05_21_9_16_210444_1.png",
+  "source_url": "",
+  "added_date": "2026-10-17",
+  "dir": "bottoms\\btm_20261017_05_21",
+  "thumb": "bottoms/btm_20261017_05_21/thumb.png",
+  "note": "每小时自动化资产 · Quiet Luxury deep crimson red heavyweight mulberry silk georgette crisp knife-pleated horse-face wrap skirt (mamianqun) (clean tailored silhouette, understated elegance, supreme fabric drape, minimalist luxury)"
+}

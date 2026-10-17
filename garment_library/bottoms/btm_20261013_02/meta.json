@@ -1,0 +1,24 @@
+{
+  "garment_id": "btm_20261013_02",
+  "category": "bottoms",
+  "label": "朋克风苏格兰红黑格子百褶裙配皮质双腰带",
+  "mean_hex": "#371518",
+  "mask_area_px": 393830,
+  "crop_bbox": [
+    0,
+    0,
+    768,
+    1376
+  ],
+  "size": [
+    768,
+    1376
+  ],
+  "method": "google_flow+rembg_cpu",
+  "source_image": "D:\\ai_projects\\ComfyUI\\output\\2026-10-13\\wardrobe\\standalone_items\\wardrobe_item_09_plaid_pleated_skirt_punk_9_16_173707_1.png",
+  "source_url": "",
+  "added_date": "2026-10-13",
+  "dir": "bottoms\\btm_20261013_02",
+  "thumb": "bottoms/btm_20261013_02/thumb.png",
+  "note": "Google Flow 0-credit 商业白底单品 · 经典红黑苏格兰呢料短裙配双排金属扣皮革腰带"
+}

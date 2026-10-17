@@ -1,0 +1,24 @@
+{
+  "garment_id": "full_20261013_08_18",
+  "category": "full",
+  "label": "高定午夜黑鱼骨丝绒开叉长礼服",
+  "mean_hex": "#151516",
+  "mask_area_px": 302915,
+  "crop_bbox": [
+    0,
+    0,
+    768,
+    1376
+  ],
+  "size": [
+    768,
+    1376
+  ],
+  "method": "google_flow+rembg_cpu",
+  "source_image": "D:\\ai_projects\\ComfyUI\\output\\2026-10-13\\flow_images\\wardrobe_item_full_20261013_08_18_9_16_183108_1.png",
+  "source_url": "",
+  "added_date": "2026-10-13",
+  "dir": "full\\full_20261013_08_18",
+  "thumb": "full/full_20261013_08_18/thumb.png",
+  "note": "每小时自动化资产 · Haute couture midnight-black architectural plush velvet evening gown with corset boning and side slit"
+}

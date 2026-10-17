@@ -1,0 +1,24 @@
+{
+  "garment_id": "btm_20261016_06_17",
+  "category": "bottoms",
+  "label": "赛博机能科技钛金灰高支精纺美利奴羊毛双皮带扣金属孔眼百褶短裙",
+  "mean_hex": "#49494a",
+  "mask_area_px": 486381,
+  "crop_bbox": [
+    0,
+    0,
+    768,
+    1376
+  ],
+  "size": [
+    768,
+    1376
+  ],
+  "method": "google_flow+rembg_cpu",
+  "source_image": "D:\\ai_projects\\ComfyUI\\output\\2026-10-16\\flow_images\\wardrobe_item_btm_20261016_06_17_9_16_174714_1.png",
+  "source_url": "",
+  "added_date": "2026-10-16",
+  "dir": "bottoms\\btm_20261016_06_17",
+  "thumb": "bottoms/btm_20261016_06_17/thumb.png",
+  "note": "每小时自动化资产 · Cyberpunk Techwear gunmetal titanium gray fine high-twist worsted Merino wool pleated mini skirt with dual leather buckle belts and silver eyelets (3M reflective trims, modular utility pockets, waterproof ripstop, industrial matte buckles)"
+}

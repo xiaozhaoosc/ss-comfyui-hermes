@@ -1,0 +1,24 @@
+{
+  "garment_id": "top_20261014_02_04",
+  "category": "tops",
+  "label": "意式手工裁缝绯红建筑感高定丝绒斜襟系带飘带真丝上衣",
+  "mean_hex": "#52090f",
+  "mask_area_px": 424778,
+  "crop_bbox": [
+    0,
+    0,
+    768,
+    1376
+  ],
+  "size": [
+    768,
+    1376
+  ],
+  "method": "google_flow+rembg_cpu",
+  "source_image": "D:\\ai_projects\\ComfyUI\\output\\2026-10-14\\flow_images\\wardrobe_item_top_20261014_02_04_9_16_044610_1.png",
+  "source_url": "",
+  "added_date": "2026-10-14",
+  "dir": "tops\\top_20261014_02_04",
+  "thumb": "tops/top_20261014_02_04/thumb.png",
+  "note": "每小时自动化资产 · Italian Bespoke Tailoring deep crimson red plush architectural silk velvet cross-over wrap blouse with flowing silk sash ties (sharp lapels, impeccable Italian shoulder structure, fluid drape, artisanal hand-stitched pick seams)"
+}

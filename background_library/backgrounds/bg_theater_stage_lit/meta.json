@@ -1,0 +1,37 @@
+{
+ "bg_id": "bg_theater_stage_lit",
+ "slug": "theater_stage_lit",
+ "name_cn": "舞台 · 聚光",
+ "category": "specified",
+ "scene_type": "stage",
+ "person_space": "center",
+ "light_dir": "hard-top-spot",
+ "ground_y": 0.7856,
+ "ground_y_manifest": 0.65,
+ "file": "backgrounds/bg_theater_stage_lit/main.png",
+ "thumb": "backgrounds/bg_theater_stage_lit/thumb.png",
+ "alts": [
+  {
+   "file": "backgrounds/bg_theater_stage_lit/alts/01.png",
+   "src": "output/2026-10-17/flow_images\\bg_theater_stage_lit_224610_1.png",
+   "lap_var": 301.8
+  }
+ ],
+ "width": 768,
+ "height": 1376,
+ "aspect": 0.5581,
+ "prompt_note": "a wooden theater stage with warm spotlights focused on the center area, a dark auditorium in the background and blank si",
+ "source": "google_flow",
+ "flow_project_url": "mixed",
+ "flow_task_name": "bg_theater_stage_lit",
+ "phash": 11055344807734052505,
+ "quality": {
+  "lap_var": 301.8,
+  "mean_luma": 50.2,
+  "std": 53.9,
+  "black_ratio": 0.1779,
+  "person_ratio": null,
+  "dup_of": null
+ },
+ "added_date": "2026-10-17"
+}

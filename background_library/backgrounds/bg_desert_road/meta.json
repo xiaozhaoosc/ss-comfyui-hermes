@@ -1,0 +1,31 @@
+{
+ "bg_id": "bg_desert_road",
+ "slug": "desert_road",
+ "name_cn": "沙漠公路",
+ "category": "suggested",
+ "scene_type": "outdoor",
+ "person_space": "center",
+ "light_dir": "hard-front-left",
+ "ground_y": 0.5029,
+ "ground_y_manifest": 0.65,
+ "file": "backgrounds/bg_desert_road/main.png",
+ "thumb": "backgrounds/bg_desert_road/thumb.png",
+ "alts": [],
+ "width": 768,
+ "height": 1376,
+ "aspect": 0.5581,
+ "prompt_note": "a straight desert highway with a vanishing point in the center, low sand dunes on both sides and a clear sky",
+ "source": "google_flow",
+ "flow_project_url": "mixed",
+ "flow_task_name": "bg_desert_road",
+ "phash": 12938311126667509616,
+ "quality": {
+  "lap_var": 1239.1,
+  "mean_luma": 149.8,
+  "std": 65.3,
+  "black_ratio": 0.0003,
+  "person_ratio": null,
+  "dup_of": null
+ },
+ "added_date": "2026-10-17"
+}

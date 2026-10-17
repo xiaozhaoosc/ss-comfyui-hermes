@@ -1,0 +1,31 @@
+{
+ "bg_id": "bg_empty_warehouse_light",
+ "slug": "empty_warehouse_light",
+ "name_cn": "空仓 · 顶光柱",
+ "category": "suggested",
+ "scene_type": "indoor",
+ "person_space": "center",
+ "light_dir": "top-shafts",
+ "ground_y": 0.4033,
+ "ground_y_manifest": 0.74,
+ "file": "backgrounds/bg_empty_warehouse_light/main.png",
+ "thumb": "backgrounds/bg_empty_warehouse_light/thumb.png",
+ "alts": [],
+ "width": 768,
+ "height": 1376,
+ "aspect": 0.5581,
+ "prompt_note": "an industrial warehouse with tall windows casting visible light shafts, a polished concrete floor and steel columns at t",
+ "source": "google_flow",
+ "flow_project_url": "mixed",
+ "flow_task_name": "bg_empty_warehouse_light",
+ "phash": 11898016428676715248,
+ "quality": {
+  "lap_var": 659.6,
+  "mean_luma": 102.2,
+  "std": 53.6,
+  "black_ratio": 0.0011,
+  "person_ratio": null,
+  "dup_of": null
+ },
+ "added_date": "2026-10-17"
+}

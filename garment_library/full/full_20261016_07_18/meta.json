@@ -1,0 +1,24 @@
+{
+  "garment_id": "full_20261016_07_18",
+  "category": "full",
+  "label": "赛博机能科技烟粉复古粗花呢编织鱼骨塑形高开叉丝绒长礼服",
+  "mean_hex": "#8c6055",
+  "mask_area_px": 349063,
+  "crop_bbox": [
+    0,
+    0,
+    768,
+    1376
+  ],
+  "size": [
+    768,
+    1376
+  ],
+  "method": "google_flow+rembg_cpu",
+  "source_image": "D:\\ai_projects\\ComfyUI\\output\\2026-10-16\\flow_images\\wardrobe_item_full_20261016_07_18_9_16_181750_1.png",
+  "source_url": "",
+  "added_date": "2026-10-16",
+  "dir": "full\\full_20261016_07_18",
+  "thumb": "full/full_20261016_07_18/thumb.png",
+  "note": "每小时自动化资产 · Cyberpunk Techwear dusty blush rose heritage textured tweed bouclé corset-boned strapless evening gown with daring side slit (3M reflective trims, modular utility pockets, waterproof ripstop, industrial matte buckles)"
+}

@@ -1,5 +1,6 @@
 # 角色库清单（INDEX.md）
 
+> 本文件由 `tools/char_lib_add.py` 入库时自动生成，勿手改；人工结论写进角色的 note/alt-note（会带出）。
 > 机器可读版本：`index.json`｜可视化：`index.html`｜身份矩阵：`identity_matrix.json`
 > 入库工具：`python tools/char_lib_add.py --face <图> --char-id <id> --name <名> [--alt ...]`
 
@@ -7,23 +8,8570 @@
 
 | char_id | 显示名 | 主脸文件 | 检测分 | 备选角度（cos→主脸） | 入库日期 |
 |---|---|---|---|---|---|
+| char_cheng_youqing_1438_01 | 程幼清 (Cheng Youqing · 港风复古明艳美人) | `faces/char_cheng_youqing_1438_01/face.png` | 0.888 | 01_front.png(1.00)、02_three_quarter.png(0.45)⚠、03_side_profile.png(0.41)⚠、04_three_quarter_back.png(0.53)⚠、05_back.png(0.46)⚠、06_low_angle.png(0.50)⚠、07_portrait_face.png(0.44)⚠、08_portrait_45deg.png(0.32)⚠、09_hair_ear_detail.png(0.01)⚠ | 2026-10-16 |
+| ↳ 备注 | 每小时自动化调度 · 9张独立高清原图 · 22岁东亚女性，港风复古明艳美人 (Retro Glamour) · 身材: 雕塑级黄金沙漏比例 | | | | |
+| char_fu_zhixia_1334_01 | 傅知夏 (Fu Zhixia · 高智职场精英大女主) | `faces/char_fu_zhixia_1334_01/face.png` | 0.879 | face.png(1.00)、01_front.png(0.42)⚠、02_three_quarter.png(0.34)⚠、03_side_profile.png(0.16)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.26)⚠、07_portrait_face.png(0.77)、08_portrait_45deg.png(0.99)、09_hair_ear_detail.png(-0.01)⚠ | 2026-10-16 |
+| ↳ 备注 | 每小时自动化调度生成 · 24岁东亚女性，高智职场精英大女主 (Executive Power)，9:16 9view_matrix · 身材: 丰腴曼妙傲人身段 | | | | |
+| char_gu_banxia_1103_01 | 顾半夏 (Gu Banxia · 新中式清雅温婉) | `faces/char_gu_banxia_1103_01/face.png` | 0.894 | face.png(1.00)、01_front.png(0.42)⚠、02_three_quarter.png(0.27)⚠、03_side_profile.png(0.24)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.34)⚠、07_portrait_face.png(0.99)、08_portrait_45deg.png(0.73)、09_hair_ear_detail.png(-0.04)⚠ | 2026-10-16 |
+| ↳ 备注 | 每小时自动化调度生成 · 25岁东亚女性，新中式清雅温婉 (Neo-Chinese Poetic)，9:16 9view_matrix | | | | |
+| char_huo_xinyue_1705_01 | 霍新月 (Huo Xinyue · 高智职场精英大女主) | `faces/char_huo_xinyue_1705_01/face.png` | 0.865 | 01_front.png(1.00)、02_three_quarter.png(0.48)⚠、03_side_profile.png(0.44)⚠、04_three_quarter_back.png(0.46)⚠、05_back.png(0.34)⚠、06_low_angle.png(0.48)⚠、07_portrait_face.png(0.50)⚠、08_portrait_45deg.png(0.46)⚠、09_hair_ear_detail.png(0.24)⚠ | 2026-10-16 |
+| ↳ 备注 | 每小时自动化调度 · 9张独立高清原图 · 25岁东亚女性，高智职场精英大女主 (Executive Power) · 身材: 二次元梦幻丰盈曲线 | | | | |
+| char_linghu_muchen_1736_01 | 令狐沐晨 (Linghu Muchen · 港风复古明艳美人) | `faces/char_linghu_muchen_1736_01/face.png` | 0.900 | 01_front.png(1.00)、02_three_quarter.png(0.50)⚠、03_side_profile.png(0.41)⚠、04_three_quarter_back.png(0.55)⚠、05_back.png(1.00)、06_low_angle.png(0.46)⚠、07_portrait_face.png(0.58)⚠、08_portrait_45deg.png(0.50)⚠、09_hair_ear_detail.png(0.34)⚠ | 2026-10-16 |
+| ↳ 备注 | 每小时自动化调度 · 9张独立高清原图 · 26岁东亚女性，港风复古明艳美人 (Retro Glamour) · 身材: 紧实马甲线与健美线条 | | | | |
+| char_lu_sitian_1405_01 | 陆思恬 (Lu Sitian · 港风复古明艳美人) | `faces/char_lu_sitian_1405_01/face.png` | 0.896 | 01_front.png(1.00)、02_three_quarter.png(0.63)、03_side_profile.png(0.38)⚠、05_back.png(1.00)、06_low_angle.png(0.52)⚠、07_portrait_face.png(0.44)⚠、08_portrait_45deg.png(0.44)⚠、09_hair_ear_detail.png(0.14)⚠ | 2026-10-16 |
+| ↳ 备注 | 每小时自动化调度 · 8张独立高清原图 · 25岁东亚女性，港风复古明艳美人 (Retro Glamour) · 身材: 紧实马甲线与健美线条 | | | | |
+| char_lu_xuejian_1807_01 | 陆雪见 (Lu Xuejian · 新中式清雅温婉) | `faces/char_lu_xuejian_1807_01/face.png` | 0.883 | 01_front.png(1.00)、02_three_quarter.png(0.66)、03_side_profile.png(0.41)⚠、04_three_quarter_back.png(0.48)⚠、05_back.png(1.00)、06_low_angle.png(0.52)⚠、07_portrait_face.png(0.53)⚠、08_portrait_45deg.png(0.41)⚠、09_hair_ear_detail.png(0.17)⚠ | 2026-10-16 |
+| ↳ 备注 | 每小时自动化调度 · 9张独立高清原图 · 21岁东亚女性，新中式清雅温婉 (Neo-Chinese Poetic) · 身材: 二次元梦幻丰盈曲线 | | | | |
+| char_luo_tiange_1534_01 | 洛天歌 (Luo Tiange · 千禧元气轻朋克) | `faces/char_luo_tiange_1534_01/face.png` | 0.882 | 01_front.png(1.00)、02_three_quarter.png(0.57)⚠、03_side_profile.png(0.44)⚠、04_three_quarter_back.png(0.48)⚠、05_back.png(0.37)⚠、06_low_angle.png(0.70)、07_portrait_face.png(0.62)、08_portrait_45deg.png(0.50)⚠、09_hair_ear_detail.png(0.16)⚠ | 2026-10-16 |
+| ↳ 备注 | 每小时自动化调度 · 9张独立高清原图 · 20岁东亚女性，千禧元气轻朋克 (Y2K Preppy Punk) · 身材: 极致蜂腰与深邃折角 | | | | |
+| char_qiao_banxia_1204_01 | 乔半夏 (Qiao Banxia · 老钱极简静奢名媛) | `faces/char_qiao_banxia_1204_01/face.png` | 0.862 | face.png(1.00)、01_front.png(0.45)⚠、02_three_quarter.png(0.44)⚠、03_side_profile.png(0.12)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.34)⚠、07_portrait_face.png(0.99)、08_portrait_45deg.png(0.75)、09_hair_ear_detail.png(1.00) | 2026-10-16 |
+| ↳ 备注 | 每小时自动化调度生成 · 22岁东亚女性，老钱极简静奢名媛 (Quiet Luxury)，9:16 9view_matrix | | | | |
+| char_shangguan_weiyu_1014_01 | 上官微雨 (Shangguan Weiyu · 港风复古明艳美人) | `faces/char_shangguan_weiyu_1014_01/face.png` | 0.864 | face.png(1.00)、01_front.png(0.33)⚠、02_three_quarter.png(0.43)⚠、03_side_profile.png(0.26)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.30)⚠、07_portrait_face.png(0.98)、08_portrait_45deg.png(0.74)、09_hair_ear_detail.png(1.00) | 2026-10-16 |
+| ↳ 备注 | 每小时自动化调度生成 · 22岁东亚女性，港风复古明艳美人 (Retro Glamour)，9:16 9view_matrix | | | | |
+| char_situ_muchen_1835_01 | 司徒沐晨 (Situ Muchen · 千禧元气轻朋克) | `faces/char_situ_muchen_1835_01/face.png` | 0.875 | 01_front.png(1.00)、02_three_quarter.png(0.57)⚠、03_side_profile.png(0.42)⚠、04_three_quarter_back.png(0.46)⚠、05_back.png(0.38)⚠、06_low_angle.png(0.53)⚠、07_portrait_face.png(0.54)⚠、08_portrait_45deg.png(0.45)⚠、09_hair_ear_detail.png(0.21)⚠ | 2026-10-16 |
+| ↳ 备注 | 每小时自动化调度 · 9张独立高清原图 · 25岁东亚女性，千禧元气轻朋克 (Y2K Preppy Punk) · 身材: 雕塑级黄金沙漏比例 | | | | |
+| char_situ_yuwei_0934_01 | 司徒羽薇 (Situ Yuwei · 老钱极简静奢名媛) | `faces/char_situ_yuwei_0934_01/face.png` | 0.909 | face.png(1.00)、01_front.png(0.25)⚠、02_three_quarter.png(0.35)⚠、03_side_profile.png(0.26)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.41)⚠、07_portrait_face.png(0.99)、08_portrait_45deg.png(0.75)、09_hair_ear_detail.png(1.00) | 2026-10-16 |
+| ↳ 备注 | 每小时自动化调度生成 · 22岁东亚女性，老钱极简静奢名媛 (Quiet Luxury)，9:16 9view_matrix | | | | |
+| char_song_anran_1604_01 | 宋安然 (Song Anran · 高智职场精英大女主) | `faces/char_song_anran_1604_01/face.png` | 0.833 | 01_front.png(1.00)、02_three_quarter.png(0.42)⚠、03_side_profile.png(0.28)⚠、04_three_quarter_back.png(0.33)⚠、05_back.png(0.51)⚠、06_low_angle.png(0.49)⚠、07_portrait_face.png(0.56)⚠、08_portrait_45deg.png(0.54)⚠、09_hair_ear_detail.png(0.20)⚠ | 2026-10-16 |
+| ↳ 备注 | 每小时自动化调度 · 9张独立高清原图 · 20岁东亚女性，高智职场精英大女主 (Executive Power) · 身材: 极致蜂腰与深邃折角 | | | | |
+| char_wen_lingsu_1635_01 | 温灵素 (Wen Lingsu · 赛博未来机能御姐) | `faces/char_wen_lingsu_1635_01/face.png` | 0.881 | 01_front.png(1.00)、02_three_quarter.png(0.62)、03_side_profile.png(0.46)⚠、04_three_quarter_back.png(0.45)⚠、05_back.png(0.34)⚠、06_low_angle.png(0.53)⚠、07_portrait_face.png(0.46)⚠、08_portrait_45deg.png(0.43)⚠、09_hair_ear_detail.png(0.28)⚠ | 2026-10-16 |
+| ↳ 备注 | 每小时自动化调度 · 9张独立高清原图 · 26岁东亚女性，赛博未来机能御姐 (Cyberpunk Techwear) · 身材: 二次元梦幻丰盈曲线 | | | | |
+| char_xue_hongyu_1034_01 | 薛红鱼 (Xue Hongyu · 高智职场精英大女主) | `faces/char_xue_hongyu_1034_01/face.png` | 0.823 | face.png(1.00)、01_front.png(0.45)⚠、02_three_quarter.png(0.29)⚠、03_side_profile.png(0.16)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.30)⚠、07_portrait_face.png(0.98)、08_portrait_45deg.png(0.80)、09_hair_ear_detail.png(1.00) | 2026-10-16 |
+| ↳ 备注 | 每小时自动化调度生成 · 21岁东亚女性，高智职场精英大女主 (Executive Power)，9:16 9view_matrix | | | | |
+| char_xue_mengli_1234_01 | 薛梦璃 (Xue Mengli · 老钱极简静奢名媛) | `faces/char_xue_mengli_1234_01/face.png` | 0.794 | face.png(1.00)、01_front.png(0.39)⚠、02_three_quarter.png(0.37)⚠、03_side_profile.png(0.35)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.37)⚠、07_portrait_face.png(0.97)、08_portrait_45deg.png(0.77)、09_hair_ear_detail.png(1.00) | 2026-10-16 |
+| ↳ 备注 | 每小时自动化调度生成 · 21岁东亚女性，老钱极简静奢名媛 (Quiet Luxury)，9:16 9view_matrix · 身材: 雕塑级黄金沙漏比例 | | | | |
+| char_xue_sitian_1508_01 | 薛思恬 (Xue Sitian · 老钱极简静奢名媛) | `faces/char_xue_sitian_1508_01/face.png` | 0.877 | 01_front.png(1.00)、02_three_quarter.png(0.49)⚠、03_side_profile.png(0.45)⚠、04_three_quarter_back.png(0.37)⚠、05_back.png(0.43)⚠、06_low_angle.png(0.48)⚠、07_portrait_face.png(0.28)⚠、08_portrait_45deg.png(0.30)⚠、09_hair_ear_detail.png(0.24)⚠ | 2026-10-16 |
+| ↳ 备注 | 每小时自动化调度 · 9张独立高清原图 · 22岁东亚女性，老钱极简静奢名媛 (Quiet Luxury) · 身材: 丰腴曼妙傲人身段 | | | | |
+| char_yin_qingdai_1305_01 | 尹青黛 (Yin Qingdai · 新中式清雅温婉) | `faces/char_yin_qingdai_1305_01/face.png` | 0.910 | face.png(1.00)、01_front.png(0.27)⚠、02_three_quarter.png(0.33)⚠、03_side_profile.png(0.18)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.25)⚠、07_portrait_face.png(0.71)、08_portrait_45deg.png(0.98)、09_hair_ear_detail.png(-0.01)⚠ | 2026-10-16 |
+| ↳ 备注 | 每小时自动化调度生成 · 23岁东亚女性，新中式清雅温婉 (Neo-Chinese Poetic)，9:16 9view_matrix · 身材: 紧实马甲线与健美线条 | | | | |
+| char_yuchi_wanzhao_1134_01 | 尉迟晚照 (Yuchi Wanzhao · 老钱极简静奢名媛) | `faces/char_yuchi_wanzhao_1134_01/face.png` | 0.846 | face.png(1.00)、01_front.png(0.39)⚠、02_three_quarter.png(0.33)⚠、03_side_profile.png(0.24)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.36)⚠、07_portrait_face.png(0.99)、08_portrait_45deg.png(0.71)、09_hair_ear_detail.png(1.00) | 2026-10-16 |
+| ↳ 备注 | 每小时自动化调度生成 · 24岁东亚女性，老钱极简静奢名媛 (Quiet Luxury)，9:16 9view_matrix | | | | |
+| char_yuchi_zhixia_0914_01 | 尉迟知夏 (Yuchi Zhixia · 高智职场精英大女主) | `faces/char_yuchi_zhixia_0914_01/face.png` | 0.902 | face.png(1.00)、01_front.png(0.35)⚠、02_three_quarter.png(0.26)⚠、03_side_profile.png(0.11)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.36)⚠、07_portrait_face.png(0.99)、08_portrait_45deg.png(0.78)、09_hair_ear_detail.png(0.08)⚠ | 2026-10-16 |
+| ↳ 备注 | 每小时自动化调度生成 · 25岁东亚女性，高智职场精英大女主 (Executive Power)，9:16 9view_matrix | | | | |
+| char_cheng_yuwei_1103_01 | 程羽薇 (Cheng Yuwei · 水墨仙侠清冷绝尘) | `faces/char_cheng_yuwei_1103_01/face.png` | 0.843 | face.png(1.00)、01_front.png(0.40)⚠、02_three_quarter.png(0.50)⚠、03_side_profile.png(0.15)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.14)⚠、07_portrait_face.png(0.98)、08_portrait_45deg.png(0.73)、09_hair_ear_detail.png(1.00) | 2026-10-15 |
+| ↳ 备注 | 每小时自动化调度生成 · 21岁东亚女性，水墨仙侠清冷绝尘 (Ethereal Xianxia)，9:16 9view_matrix | | | | |
+| char_chu_lingsu_1533_01 | 楚灵素 (Chu Lingsu · 老钱极简静奢名媛) | `faces/char_chu_lingsu_1533_01/face.png` | 0.857 | face.png(1.00)、01_front.png(0.28)⚠、02_three_quarter.png(0.31)⚠、03_side_profile.png(0.30)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.21)⚠、07_portrait_face.png(0.98)、08_portrait_45deg.png(0.72)、09_hair_ear_detail.png(1.00) | 2026-10-15 |
+| ↳ 备注 | 每小时自动化调度生成 · 24岁东亚女性，老钱极简静奢名媛 (Quiet Luxury)，9:16 9view_matrix | | | | |
+| char_fu_linger_1433_01 | 傅灵儿 (Fu Linger · 水墨仙侠清冷绝尘) | `faces/char_fu_linger_1433_01/face.png` | 0.905 | face.png(1.00)、01_front.png(0.42)⚠、02_three_quarter.png(0.38)⚠、03_side_profile.png(0.12)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.36)⚠、07_portrait_face.png(0.99)、08_portrait_45deg.png(0.76)、09_hair_ear_detail.png(0.20)⚠ | 2026-10-15 |
+| ↳ 备注 | 每小时自动化调度生成 · 26岁东亚女性，水墨仙侠清冷绝尘 (Ethereal Xianxia)，9:16 9view_matrix | | | | |
+| char_fu_yuhan_1000_01 | 傅语涵 (Fu Yuhan · 千禧元气轻朋克) | `faces/char_fu_yuhan_1000_01/face.png` | 0.890 | face.png(1.00)、01_front.png(0.32)⚠、02_three_quarter.png(0.33)⚠、03_side_profile.png(0.23)⚠、04_three_quarter_back.png(-0.02)⚠、05_back.png(1.00)、06_perspective_dynamic.png(0.33)⚠、07_portrait_face.png(0.98)、08_portrait_45deg.png(0.76)、09_hair_ear_detail.png(0.11)⚠ | 2026-10-15 |
+| ↳ 备注 | 每小时自动化调度生成 · 21岁东亚女性，千禧元气轻朋克 (Y2K Preppy Punk)，9:16 9view_matrix | | | | |
+| char_gu_sitian_1003_01 | 顾思恬 (Gu Sitian · 水墨仙侠清冷绝尘) | `faces/char_gu_sitian_1003_01/face.png` | 0.793 | face.png(1.00)、01_front.png(0.44)⚠、02_three_quarter.png(0.55)⚠、03_side_profile.png(0.21)⚠、04_three_quarter_back.png(-0.00)⚠、05_back.png(1.00)、06_perspective_dynamic.png(0.18)⚠、07_portrait_face.png(0.76)、08_portrait_45deg.png(0.97)、09_hair_ear_detail.png(1.00) | 2026-10-15 |
+| ↳ 备注 | 每小时自动化调度生成 · 24岁东亚女性，水墨仙侠清冷绝尘 (Ethereal Xianxia)，9:16 9view_matrix | | | | |
+| char_liang_chuxia_1503_01 | 梁初夏 (Liang Chuxia · 水墨仙侠清冷绝尘) | `faces/char_liang_chuxia_1503_01/face.png` | 0.842 | face.png(1.00)、01_front.png(0.27)⚠、02_three_quarter.png(0.32)⚠、03_side_profile.png(0.16)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.20)⚠、07_portrait_face.png(0.98)、08_portrait_45deg.png(0.68)、09_hair_ear_detail.png(1.00) | 2026-10-15 |
+| ↳ 备注 | 每小时自动化调度生成 · 21岁东亚女性，水墨仙侠清冷绝尘 (Ethereal Xianxia)，9:16 9view_matrix | | | | |
+| char_liang_mengli_1203_01 | 梁梦璃 (Liang Mengli · 老钱极简静奢名媛) | `faces/char_liang_mengli_1203_01/face.png` | 0.819 | face.png(1.00)、01_front.png(0.24)⚠、02_three_quarter.png(0.28)⚠、03_side_profile.png(0.25)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.26)⚠、07_portrait_face.png(0.95)、08_portrait_45deg.png(0.77)、09_hair_ear_detail.png(1.00) | 2026-10-15 |
+| ↳ 备注 | 每小时自动化调度生成 · 21岁东亚女性，老钱极简静奢名媛 (Quiet Luxury)，9:16 9view_matrix | | | | |
+| char_shen_xiaorou_1233_01 | 沈小柔 (Shen Xiaorou · 高智职场精英大女主) | `faces/char_shen_xiaorou_1233_01/face.png` | 0.801 | face.png(1.00)、01_front.png(0.28)⚠、02_three_quarter.png(0.37)⚠、03_side_profile.png(0.21)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.38)⚠、07_portrait_face.png(0.98)、08_portrait_45deg.png(0.76)、09_hair_ear_detail.png(1.00) | 2026-10-15 |
+| ↳ 备注 | 每小时自动化调度生成 · 20岁东亚女性，高智职场精英大女主 (Executive Power)，9:16 9view_matrix | | | | |
+| char_shen_xinyue_1404_01 | 沈新月 (Shen Xinyue · 老钱极简静奢名媛) | `faces/char_shen_xinyue_1404_01/face.png` | 0.823 | face.png(1.00)、01_front.png(0.28)⚠、02_three_quarter.png(0.34)⚠、03_side_profile.png(0.19)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.23)⚠、07_portrait_face.png(0.99)、08_portrait_45deg.png(0.73)、09_hair_ear_detail.png(1.00) | 2026-10-15 |
+| ↳ 备注 | 每小时自动化调度生成 · 22岁东亚女性，老钱极简静奢名媛 (Quiet Luxury)，9:16 9view_matrix | | | | |
+| char_tan_muchen_1133_01 | 谭沐晨 (Tan Muchen · 港风复古明艳美人) | `faces/char_tan_muchen_1133_01/face.png` | 0.858 | face.png(1.00)、01_front.png(0.31)⚠、02_three_quarter.png(0.45)⚠、03_side_profile.png(0.24)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.28)⚠、07_portrait_face.png(0.99)、08_portrait_45deg.png(0.78)、09_hair_ear_detail.png(1.00) | 2026-10-15 |
+| ↳ 备注 | 每小时自动化调度生成 · 23岁东亚女性，港风复古明艳美人 (Retro Glamour)，9:16 9view_matrix | | | | |
+| char_xi_shanshan_1303_01 | 席山山 (Xi Shanshan · 港风复古明艳美人) | `faces/char_xi_shanshan_1303_01/face.png` | 0.869 | face.png(1.00)、01_front.png(0.41)⚠、02_three_quarter.png(0.45)⚠、03_side_profile.png(0.23)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.28)⚠、07_portrait_face.png(0.98)、08_portrait_45deg.png(0.76)、09_hair_ear_detail.png(1.00) | 2026-10-15 |
+| ↳ 备注 | 每小时自动化调度生成 · 25岁东亚女性，港风复古明艳美人 (Retro Glamour)，9:16 9view_matrix | | | | |
+| char_xue_huaiyu_1034_01 | 薛怀玉 (Xue Huaiyu · 赛博未来机能御姐) | `faces/char_xue_huaiyu_1034_01/face.png` | 0.786 | face.png(1.00)、01_front.png(0.32)⚠、02_three_quarter.png(0.26)⚠、03_side_profile.png(0.07)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.25)⚠、07_portrait_face.png(0.98)、08_portrait_45deg.png(0.81)、09_hair_ear_detail.png(1.00) | 2026-10-15 |
+| ↳ 备注 | 每小时自动化调度生成 · 25岁东亚女性，赛博未来机能御姐 (Cyberpunk Techwear)，9:16 9view_matrix | | | | |
+| char_yuchi_lingsu_1333_01 | 尉迟灵素 (Yuchi Lingsu · 老钱极简静奢名媛) | `faces/char_yuchi_lingsu_1333_01/face.png` | 0.904 | face.png(1.00)、01_front.png(0.43)⚠、02_three_quarter.png(0.51)⚠、03_side_profile.png(0.30)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.42)⚠、07_portrait_face.png(0.98)、08_portrait_45deg.png(0.79)、09_hair_ear_detail.png(-0.01)⚠ | 2026-10-15 |
+| ↳ 备注 | 每小时自动化调度生成 · 21岁东亚女性，老钱极简静奢名媛 (Quiet Luxury)，9:16 9view_matrix | | | | |
+| char_bai_anran_0430_01 | 白安然 (Bai Anran · 港风复古明艳美人) | `faces/char_bai_anran_0430_01/face.png` | 0.782 | face.png(1.00)、01_front.png(0.29)⚠、02_three_quarter.png(0.36)⚠、03_side_profile.png(0.35)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.34)⚠、07_portrait_face.png(0.78)、08_portrait_45deg.png(0.97)、09_hair_ear_detail.png(1.00) | 2026-10-14 |
+| ↳ 备注 | 每小时自动化调度生成 · 23岁东亚女性，港风复古明艳美人 (Retro Glamour)，9:16 9view_matrix | | | | |
+| char_bai_yuhan_0830_01 | 白语涵 (Bai Yuhan · 水墨仙侠清冷绝尘) | `faces/char_bai_yuhan_0830_01/face.png` | 0.836 | face.png(1.00)、01_front.png(0.38)⚠、02_three_quarter.png(0.29)⚠、03_side_profile.png(0.21)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.24)⚠、07_portrait_face.png(0.98)、08_portrait_45deg.png(0.73)、09_hair_ear_detail.png(1.00) | 2026-10-14 |
+| ↳ 备注 | 每小时自动化调度生成 · 26岁东亚女性，水墨仙侠清冷绝尘 (Ethereal Xianxia)，9:16 9view_matrix | | | | |
+| char_cen_yuhan_1934_01 | 岑语涵 (Cen Yuhan · 高智职场精英大女主) | `faces/char_cen_yuhan_1934_01/face.png` | 0.795 | face.png(1.00)、01_front.png(0.30)⚠、02_three_quarter.png(0.26)⚠、03_side_profile.png(0.25)⚠、04_three_quarter_back.png(-0.01)⚠、05_back.png(1.00)、06_perspective_dynamic.png(0.29)⚠、07_portrait_face.png(0.99)、08_portrait_45deg.png(0.78)、09_hair_ear_detail.png(1.00) | 2026-10-14 |
+| ↳ 备注 | 每小时自动化调度生成 · 23岁东亚女性，高智职场精英大女主 (Executive Power)，9:16 9view_matrix | | | | |
+| char_chu_ruoli_0800_01 | 楚若离 (Chu Ruoli · 高智职场精英大女主) | `faces/char_chu_ruoli_0800_01/face.png` | 0.796 | face.png(1.00)、01_front.png(0.41)⚠、02_three_quarter.png(0.40)⚠、03_side_profile.png(0.30)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.34)⚠、07_portrait_face.png(0.98)、08_portrait_45deg.png(0.77)、09_hair_ear_detail.png(1.00) | 2026-10-14 |
+| ↳ 备注 | 每小时自动化调度生成 · 20岁东亚女性，高智职场精英大女主 (Executive Power)，9:16 9view_matrix | | | | |
+| char_fu_caiwei_1833_01 | 傅采薇 (Fu Caiwei · 新中式清雅温婉) | `faces/char_fu_caiwei_1833_01/face.png` | 0.887 | face.png(1.00)、01_front.png(0.45)⚠、02_three_quarter.png(0.33)⚠、03_side_profile.png(0.20)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.34)⚠、07_portrait_face.png(0.98)、08_portrait_45deg.png(0.71)、09_hair_ear_detail.png(1.00) | 2026-10-14 |
+| ↳ 备注 | 每小时自动化调度生成 · 25岁东亚女性，新中式清雅温婉 (Neo-Chinese Poetic)，9:16 9view_matrix | | | | |
+| char_fu_wanzhao_1100_01 | 傅晚照 (Fu Wanzhao · 老钱极简静奢名媛) | `faces/char_fu_wanzhao_1100_01/face.png` | 0.875 | face.png(1.00)、01_front.png(0.37)⚠、02_three_quarter.png(0.35)⚠、03_side_profile.png(0.26)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.11)⚠、07_portrait_face.png(0.98)、08_portrait_45deg.png(0.76)、09_hair_ear_detail.png(1.00) | 2026-10-14 |
+| ↳ 备注 | 每小时自动化调度生成 · 23岁东亚女性，老钱极简静奢名媛 (Quiet Luxury)，9:16 9view_matrix | | | | |
+| char_gu_chaoyan_1904_01 | 顾朝颜 (Gu Chaoyan · 高智职场精英大女主) | `faces/char_gu_chaoyan_1904_01/face.png` | 0.873 | face.png(1.00)、01_front.png(0.37)⚠、02_three_quarter.png(0.37)⚠、03_side_profile.png(0.22)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.34)⚠、07_portrait_face.png(0.99)、08_portrait_45deg.png(0.74)、09_hair_ear_detail.png(1.00) | 2026-10-14 |
+| ↳ 备注 | 每小时自动化调度生成 · 22岁东亚女性，高智职场精英大女主 (Executive Power)，9:16 9view_matrix | | | | |
+| char_huo_ruoxi_1200_01 | 霍若曦 (Huo Ruoxi · 港风复古明艳美人) | `faces/char_huo_ruoxi_1200_01/face.png` | 0.782 | face.png(1.00)、01_front.png(0.31)⚠、02_three_quarter.png(0.39)⚠、03_side_profile.png(0.19)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.28)⚠、07_portrait_face.png(0.99)、08_portrait_45deg.png(0.72)、09_hair_ear_detail.png(-0.04)⚠ | 2026-10-14 |
+| ↳ 备注 | 每小时自动化调度生成 · 22岁东亚女性，港风复古明艳美人 (Retro Glamour)，9:16 9view_matrix | | | | |
+| char_jiang_zhiruo_0300_01 | 姜芷若 (Jiang Zhiruo · 水墨仙侠清冷绝尘) | `faces/char_jiang_zhiruo_0300_01/face.png` | 0.874 | face.png(1.00)、01_front.png(0.39)⚠、02_three_quarter.png(0.29)⚠、03_side_profile.png(0.21)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.22)⚠、07_portrait_face.png(0.98)、08_portrait_45deg.png(0.71)、09_hair_ear_detail.png(1.00) | 2026-10-14 |
+| ↳ 备注 | 每小时自动化调度生成 · 21岁东亚女性，水墨仙侠清冷绝尘 (Ethereal Xianxia)，9:16 9view_matrix | | | | |
+| char_liang_tiange_1303_01 | 梁天歌 (Liang Tiange · 赛博未来机能御姐) | `faces/char_liang_tiange_1303_01/face.png` | 0.791 | face.png(1.00)、01_front.png(0.47)⚠、02_three_quarter.png(0.34)⚠、03_side_profile.png(0.15)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.53)⚠、07_portrait_face.png(0.99)、08_portrait_45deg.png(0.82)、09_hair_ear_detail.png(1.00) | 2026-10-14 |
+| ↳ 备注 | 每小时自动化调度生成 · 23岁东亚女性，赛博未来机能御姐 (Cyberpunk Techwear)，9:16 9view_matrix | | | | |
+| char_liang_yuyan_1333_01 | 梁语嫣 (Liang Yuyan · 老钱极简静奢名媛) | `faces/char_liang_yuyan_1333_01/face.png` | 0.873 | face.png(1.00)、01_front.png(0.22)⚠、02_three_quarter.png(0.27)⚠、03_side_profile.png(0.23)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.28)⚠、07_portrait_face.png(0.99)、08_portrait_45deg.png(0.72)、09_hair_ear_detail.png(-0.03)⚠ | 2026-10-14 |
+| ↳ 备注 | 每小时自动化调度生成 · 21岁东亚女性，老钱极简静奢名媛 (Quiet Luxury)，9:16 9view_matrix | | | | |
+| char_linghu_chuxia_2204_01 | 令狐初夏 (Linghu Chuxia · 赛博未来机能御姐) | `faces/char_linghu_chuxia_2204_01/face.png` | 0.890 | face.png(1.00)、01_front.png(0.38)⚠、02_three_quarter.png(0.20)⚠、03_side_profile.png(0.06)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.19)⚠、07_portrait_face.png(0.99)、08_portrait_45deg.png(0.82)、09_hair_ear_detail.png(1.00) | 2026-10-14 |
+| ↳ 备注 | 每小时自动化调度生成 · 25岁东亚女性，赛博未来机能御姐 (Cyberpunk Techwear)，9:16 9view_matrix | | | | |
+| char_lu_muchen_0530_01 | 陆沐晨 (Lu Muchen · 赛博未来机能御姐) | `faces/char_lu_muchen_0530_01/face.png` | 0.859 | face.png(1.00)、01_front.png(0.48)⚠、02_three_quarter.png(0.34)⚠、03_side_profile.png(0.27)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.39)⚠、07_portrait_face.png(0.99)、08_portrait_45deg.png(0.79)、09_hair_ear_detail.png(1.00) | 2026-10-14 |
+| ↳ 备注 | 每小时自动化调度生成 · 26岁东亚女性，赛博未来机能御姐 (Cyberpunk Techwear)，9:16 9view_matrix | | | | |
+| char_murong_manshu_1704_01 | 慕容曼舒 (Murong Manshu · 港风复古明艳美人) | `faces/char_murong_manshu_1704_01/face.png` | 0.778 | face.png(1.00)、01_front.png(0.38)⚠、02_three_quarter.png(0.34)⚠、03_side_profile.png(0.24)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.40)⚠、07_portrait_face.png(0.98)、08_portrait_45deg.png(0.77)、09_hair_ear_detail.png(1.00) | 2026-10-14 |
+| ↳ 备注 | 每小时自动化调度生成 · 23岁东亚女性，港风复古明艳美人 (Retro Glamour)，9:16 9view_matrix | | | | |
+| char_murong_weiyu_0930_01 | 慕容微雨 (Murong Weiyu · 千禧元气轻朋克) | `faces/char_murong_weiyu_0930_01/face.png` | 0.828 | face.png(1.00)、01_front.png(0.45)⚠、02_three_quarter.png(0.44)⚠、03_side_profile.png(0.27)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.39)⚠、07_portrait_face.png(0.98)、08_portrait_45deg.png(0.75)、09_hair_ear_detail.png(1.00) | 2026-10-14 |
+| ↳ 备注 | 每小时自动化调度生成 · 26岁东亚女性，千禧元气轻朋克 (Y2K Preppy Punk)，9:16 9view_matrix | | | | |
+| char_murong_xingzhu_0200_01 | 慕容星竹 (Murong Xingzhu · 水墨仙侠清冷绝尘) | `faces/char_murong_xingzhu_0200_01/face.png` | 0.845 | face.png(1.00)、01_front.png(0.38)⚠、02_three_quarter.png(0.46)⚠、03_side_profile.png(0.21)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.40)⚠、07_portrait_face.png(0.78)、08_portrait_45deg.png(0.98)、09_hair_ear_detail.png(1.00) | 2026-10-14 |
+| ↳ 备注 | 每小时自动化调度生成 · 25岁东亚女性，水墨仙侠清冷绝尘 (Ethereal Xianxia)，9:16 9view_matrix | | | | |
+| char_ning_chuxia_0000_01 | 宁初夏 (Ning Chuxia · 新中式清雅温婉) | `faces/char_ning_chuxia_0000_01/face.png` | 0.883 | face.png(1.00)、01_front.png(0.32)⚠、02_three_quarter.png(0.35)⚠、03_side_profile.png(0.21)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.12)⚠、07_portrait_face.png(0.98)、08_portrait_45deg.png(0.74)、09_hair_ear_detail.png(1.00) | 2026-10-14 |
+| ↳ 备注 | 每小时自动化调度生成 · 21岁东亚女性，新中式清雅温婉 (Neo-Chinese Poetic)，9:16 9view_matrix | | | | |
+| char_ouyang_zhiwei_1233_01 | 欧阳知微 (Ouyang Zhiwei · 高智职场精英大女主) | `faces/char_ouyang_zhiwei_1233_01/face.png` | 0.895 | face.png(1.00)、01_front.png(0.33)⚠、02_three_quarter.png(0.30)⚠、03_side_profile.png(0.34)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.27)⚠、07_portrait_face.png(0.99)、08_portrait_45deg.png(0.72)、09_hair_ear_detail.png(-0.03)⚠ | 2026-10-14 |
+| ↳ 备注 | 每小时自动化调度生成 · 26岁东亚女性，高智职场精英大女主 (Executive Power)，9:16 9view_matrix | | | | |
+| char_qin_linger_1634_01 | 秦灵儿 (Qin Linger · 港风复古明艳美人) | `faces/char_qin_linger_1634_01/face.png` | 0.824 | face.png(1.00)、01_front.png(0.32)⚠、02_three_quarter.png(0.30)⚠、03_side_profile.png(0.12)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.28)⚠、07_portrait_face.png(0.99)、08_portrait_45deg.png(0.81)、09_hair_ear_detail.png(1.00) | 2026-10-14 |
+| ↳ 备注 | 每小时自动化调度生成 · 21岁东亚女性，港风复古明艳美人 (Retro Glamour)，9:16 9view_matrix | | | | |
+| char_qin_suqiu_0630_01 | 秦素秋 (Qin Suqiu · 老钱极简静奢名媛) | `faces/char_qin_suqiu_0630_01/face.png` | 0.789 | face.png(1.00)、01_front.png(0.30)⚠、02_three_quarter.png(0.21)⚠、03_side_profile.png(0.24)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.34)⚠、07_portrait_face.png(0.81)、08_portrait_45deg.png(0.97)、09_hair_ear_detail.png(1.00) | 2026-10-14 |
+| ↳ 备注 | 每小时自动化调度生成 · 21岁东亚女性，老钱极简静奢名媛 (Quiet Luxury)，9:16 9view_matrix | | | | |
+| char_qin_zhixia_1130_01 | 秦知夏 (Qin Zhixia · 千禧元气轻朋克) | `faces/char_qin_zhixia_1130_01/face.png` | 0.880 | face.png(1.00)、01_front.png(0.37)⚠、02_three_quarter.png(0.44)⚠、03_side_profile.png(0.25)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.34)⚠、07_portrait_face.png(0.68)、08_portrait_45deg.png(0.99)、09_hair_ear_detail.png(1.00) | 2026-10-14 |
+| ↳ 备注 | 每小时自动化调度生成 · 24岁东亚女性，千禧元气轻朋克 (Y2K Preppy Punk)，9:16 9view_matrix | | | | |
+| char_ruan_lingjun_2034_01 | 阮灵均 (Ruan Lingjun · 港风复古明艳美人) | `faces/char_ruan_lingjun_2034_01/face.png` | 0.836 | face.png(1.00)、01_front.png(0.28)⚠、02_three_quarter.png(0.33)⚠、03_side_profile.png(0.24)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.23)⚠、07_portrait_face.png(0.99)、08_portrait_45deg.png(0.70)、09_hair_ear_detail.png(1.00) | 2026-10-14 |
+| ↳ 备注 | 每小时自动化调度生成 · 22岁东亚女性，港风复古明艳美人 (Retro Glamour)，9:16 9view_matrix | | | | |
+| char_ruan_tiange_1403_01 | 阮天歌 (Ruan Tiange · 高智职场精英大女主) | `faces/char_ruan_tiange_1403_01/face.png` | 0.885 | face.png(1.00)、01_front.png(0.36)⚠、02_three_quarter.png(0.33)⚠、03_side_profile.png(0.29)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.20)⚠、07_portrait_face.png(0.99)、08_portrait_45deg.png(0.76)、09_hair_ear_detail.png(1.00) | 2026-10-14 |
+| ↳ 备注 | 每小时自动化调度生成 · 22岁东亚女性，高智职场精英大女主 (Executive Power)，9:16 9view_matrix | | | | |
+| char_shen_hongyu_1734_01 | 沈红鱼 (Shen Hongyu · 新中式清雅温婉) | `faces/char_shen_hongyu_1734_01/face.png` | 0.839 | face.png(1.00)、01_front.png(0.27)⚠、02_three_quarter.png(0.45)⚠、03_side_profile.png(0.22)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.33)⚠、07_portrait_face.png(0.98)、08_portrait_45deg.png(0.79)、09_hair_ear_detail.png(1.00) | 2026-10-14 |
+| ↳ 备注 | 每小时自动化调度生成 · 22岁东亚女性，新中式清雅温婉 (Neo-Chinese Poetic)，9:16 9view_matrix | | | | |
+| char_situ_caiwei_0100_01 | 司徒采薇 (Situ Caiwei · 老钱极简静奢名媛) | `faces/char_situ_caiwei_0100_01/face.png` | 0.811 | face.png(1.00)、01_front.png(0.34)⚠、02_three_quarter.png(0.40)⚠、03_side_profile.png(0.24)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.26)⚠、07_portrait_face.png(0.98)、08_portrait_45deg.png(0.73)、09_hair_ear_detail.png(1.00) | 2026-10-14 |
+| ↳ 备注 | 每小时自动化调度生成 · 24岁东亚女性，老钱极简静奢名媛 (Quiet Luxury)，9:16 9view_matrix | | | | |
+| char_situ_yuhan_0600_01 | 司徒语涵 (Situ Yuhan · 老钱极简静奢名媛) | `faces/char_situ_yuhan_0600_01/face.png` | 0.860 | face.png(1.00)、01_front.png(0.34)⚠、02_three_quarter.png(0.34)⚠、03_side_profile.png(0.31)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.34)⚠、07_portrait_face.png(0.97)、08_portrait_45deg.png(0.71)、09_hair_ear_detail.png(1.00) | 2026-10-14 |
+| ↳ 备注 | 每小时自动化调度生成 · 21岁东亚女性，老钱极简静奢名媛 (Quiet Luxury)，9:16 9view_matrix | | | | |
+| char_song_wanzhao_1503_01 | 宋晚照 (Song Wanzhao · 千禧元气轻朋克) | `faces/char_song_wanzhao_1503_01/face.png` | 0.860 | face.png(1.00)、01_front.png(0.44)⚠、02_three_quarter.png(0.37)⚠、03_side_profile.png(0.21)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.20)⚠、07_portrait_face.png(0.99)、08_portrait_45deg.png(0.72)、09_hair_ear_detail.png(1.00) | 2026-10-14 |
+| ↳ 备注 | 每小时自动化调度生成 · 22岁东亚女性，千禧元气轻朋克 (Y2K Preppy Punk)，9:16 9view_matrix | | | | |
+| char_tan_shanshan_0700_01 | 谭山山 (Tan Shanshan · 赛博未来机能御姐) | `faces/char_tan_shanshan_0700_01/face.png` | 0.862 | face.png(1.00)、01_front.png(0.51)⚠、02_three_quarter.png(0.42)⚠、03_side_profile.png(0.26)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.45)⚠、07_portrait_face.png(1.00)、08_portrait_45deg.png(0.73)、09_hair_ear_detail.png(1.00) | 2026-10-14 |
+| ↳ 备注 | 每小时自动化调度生成 · 20岁东亚女性，赛博未来机能御姐 (Cyberpunk Techwear)，9:16 9view_matrix | | | | |
+| char_tang_sitian_0900_01 | 唐思恬 (Tang Sitian · 老钱极简静奢名媛) | `faces/char_tang_sitian_0900_01/face.png` | 0.849 | face.png(1.00)、01_front.png(0.36)⚠、02_three_quarter.png(0.31)⚠、03_side_profile.png(0.28)⚠、04_three_quarter_back.png(0.04)⚠、05_back.png(1.00)、06_perspective_dynamic.png(0.18)⚠、07_portrait_face.png(0.99)、08_portrait_45deg.png(0.74)、09_hair_ear_detail.png(1.00) | 2026-10-14 |
+| ↳ 备注 | 每小时自动化调度生成 · 22岁东亚女性，老钱极简静奢名媛 (Quiet Luxury)，9:16 9view_matrix | | | | |
+| char_tantai_weiyu_1433_01 | 澹台微雨 (Tantai Weiyu · 赛博未来机能御姐) | `faces/char_tantai_weiyu_1433_01/face.png` | 0.885 | face.png(1.00)、01_front.png(0.47)⚠、02_three_quarter.png(0.47)⚠、03_side_profile.png(0.12)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.34)⚠、07_portrait_face.png(0.99)、08_portrait_45deg.png(0.80)、09_hair_ear_detail.png(1.00) | 2026-10-14 |
+| ↳ 备注 | 每小时自动化调度生成 · 24岁东亚女性，赛博未来机能御姐 (Cyberpunk Techwear)，9:16 9view_matrix | | | | |
+| char_tantai_xingzhu_0230_01 | 澹台星竹 (Tantai Xingzhu · 水墨仙侠清冷绝尘) | `faces/char_tantai_xingzhu_0230_01/face.png` | 0.845 | face.png(1.00)、01_front.png(0.41)⚠、02_three_quarter.png(0.48)⚠、03_side_profile.png(0.31)⚠、04_three_quarter_back.png(0.03)⚠、05_back.png(1.00)、06_perspective_dynamic.png(0.32)⚠、07_portrait_face.png(0.74)、08_portrait_45deg.png(0.97)、09_hair_ear_detail.png(1.00) | 2026-10-14 |
+| ↳ 备注 | 每小时自动化调度生成 · 25岁东亚女性，水墨仙侠清冷绝尘 (Ethereal Xianxia)，9:16 9view_matrix | | | | |
+| char_tantai_yuwei_0730_01 | 澹台羽薇 (Tantai Yuwei · 水墨仙侠清冷绝尘) | `faces/char_tantai_yuwei_0730_01/face.png` | 0.902 | face.png(1.00)、01_front.png(0.44)⚠、02_three_quarter.png(0.37)⚠、03_side_profile.png(0.20)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.45)⚠、07_portrait_face.png(0.99)、08_portrait_45deg.png(0.73)、09_hair_ear_detail.png(0.03)⚠ | 2026-10-14 |
+| ↳ 备注 | 每小时自动化调度生成 · 25岁东亚女性，水墨仙侠清冷绝尘 (Ethereal Xianxia)，9:16 9view_matrix | | | | |
+| char_wen_manshu_1030_01 | 温曼舒 (Wen Manshu · 老钱极简静奢名媛) | `faces/char_wen_manshu_1030_01/face.png` | 0.906 | face.png(1.00)、01_front.png(0.25)⚠、02_three_quarter.png(0.15)⚠、03_side_profile.png(0.31)⚠、04_three_quarter_back.png(-0.03)⚠、05_back.png(1.00)、06_perspective_dynamic.png(0.20)⚠、07_portrait_face.png(0.99)、08_portrait_45deg.png(0.70)、09_hair_ear_detail.png(0.03)⚠ | 2026-10-14 |
+| ↳ 备注 | 每小时自动化调度生成 · 23岁东亚女性，老钱极简静奢名媛 (Quiet Luxury)，9:16 9view_matrix | | | | |
+| char_xi_weiyu_2134_01 | 席微雨 (Xi Weiyu · 新中式清雅温婉) | `faces/char_xi_weiyu_2134_01/face.png` | 0.863 | face.png(1.00)、01_front.png(0.39)⚠、02_three_quarter.png(0.39)⚠、03_side_profile.png(0.27)⚠、04_three_quarter_back.png(0.01)⚠、05_back.png(1.00)、06_perspective_dynamic.png(0.21)⚠、07_portrait_face.png(0.98)、08_portrait_45deg.png(0.73)、09_hair_ear_detail.png(1.00) | 2026-10-14 |
+| ↳ 备注 | 每小时自动化调度生成 · 26岁东亚女性，新中式清雅温婉 (Neo-Chinese Poetic)，9:16 9view_matrix | | | | |
+| char_xue_banxia_0330_01 | 薛半夏 (Xue Banxia · 高智职场精英大女主) | `faces/char_xue_banxia_0330_01/face.png` | 0.876 | face.png(1.00)、01_front.png(0.44)⚠、02_three_quarter.png(0.42)⚠、03_side_profile.png(0.34)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.25)⚠、07_portrait_face.png(0.99)、08_portrait_45deg.png(0.80)、09_hair_ear_detail.png(0.04)⚠ | 2026-10-14 |
+| ↳ 备注 | 每小时自动化调度生成 · 24岁东亚女性，高智职场精英大女主 (Executive Power)，9:16 9view_matrix | | | | |
+| char_ye_hongyu_0500_01 | 叶红鱼 (Ye Hongyu · 高智职场精英大女主) | `faces/char_ye_hongyu_0500_01/face.png` | 0.794 | face.png(1.00)、01_front.png(0.27)⚠、02_three_quarter.png(0.35)⚠、03_side_profile.png(0.31)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.36)⚠、07_portrait_face.png(0.99)、08_portrait_45deg.png(0.80)、09_hair_ear_detail.png(1.00) | 2026-10-14 |
+| ↳ 备注 | 每小时自动化调度生成 · 21岁东亚女性，高智职场精英大女主 (Executive Power)，9:16 9view_matrix | | | | |
+| char_ye_linger_2004_01 | 叶灵儿 (Ye Linger · 赛博未来机能御姐) | `faces/char_ye_linger_2004_01/face.png` | 0.776 | face.png(1.00)、01_front.png(0.48)⚠、02_three_quarter.png(0.33)⚠、03_side_profile.png(0.10)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.33)⚠、07_portrait_face.png(0.99)、08_portrait_45deg.png(0.83)、09_hair_ear_detail.png(1.00) | 2026-10-14 |
+| ↳ 备注 | 每小时自动化调度生成 · 21岁东亚女性，赛博未来机能御姐 (Cyberpunk Techwear)，9:16 9view_matrix | | | | |
+| char_ye_lingjun_0130_01 | 叶灵均 (Ye Lingjun · 赛博未来机能御姐) | `faces/char_ye_lingjun_0130_01/face.png` | 0.898 | face.png(1.00)、01_front.png(0.51)⚠、02_three_quarter.png(0.49)⚠、03_side_profile.png(0.00)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.27)⚠、07_portrait_face.png(0.99)、08_portrait_45deg.png(0.79)、09_hair_ear_detail.png(1.00) | 2026-10-14 |
+| ↳ 备注 | 每小时自动化调度生成 · 23岁东亚女性，赛博未来机能御姐 (Cyberpunk Techwear)，9:16 9view_matrix | | | | |
+| char_ye_shanshan_0400_01 | 叶山山 (Ye Shanshan · 水墨仙侠清冷绝尘) | `faces/char_ye_shanshan_0400_01/face.png` | 0.807 | face.png(1.00)、01_front.png(0.31)⚠、02_three_quarter.png(0.43)⚠、03_side_profile.png(0.25)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.23)⚠、07_portrait_face.png(0.99)、08_portrait_45deg.png(0.70)、09_hair_ear_detail.png(1.00) | 2026-10-14 |
+| ↳ 备注 | 每小时自动化调度生成 · 23岁东亚女性，水墨仙侠清冷绝尘 (Ethereal Xianxia)，9:16 9view_matrix | | | | |
+| char_ye_yuhan_1804_01 | 叶语涵 (Ye Yuhan · 港风复古明艳美人) | `faces/char_ye_yuhan_1804_01/face.png` | 0.892 | face.png(1.00)、01_front.png(0.30)⚠、02_three_quarter.png(0.19)⚠、03_side_profile.png(0.27)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.26)⚠、07_portrait_face.png(0.99)、08_portrait_45deg.png(0.70)、09_hair_ear_detail.png(0.04)⚠ | 2026-10-14 |
+| ↳ 备注 | 每小时自动化调度生成 · 20岁东亚女性，港风复古明艳美人 (Retro Glamour)，9:16 9view_matrix | | | | |
+| char_yuchi_ruoli_1000_01 | 尉迟若离 (Yuchi Ruoli · 新中式清雅温婉) | `faces/char_yuchi_ruoli_1000_01/face.png` | 0.863 | face.png(1.00)、01_front.png(0.27)⚠、02_three_quarter.png(0.23)⚠、03_side_profile.png(0.22)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.22)⚠、07_portrait_face.png(0.99)、08_portrait_45deg.png(0.69)、09_hair_ear_detail.png(1.00) | 2026-10-14 |
+| ↳ 备注 | 每小时自动化调度生成 · 25岁东亚女性，新中式清雅温婉 (Neo-Chinese Poetic)，9:16 9view_matrix | | | | |
+| char_yun_banxia_0030_01 | 云半夏 (云 Banxia · 千禧元气轻朋克) | `faces/char_yun_banxia_0030_01/face.png` | 0.886 | face.png(1.00)、01_front.png(0.28)⚠、02_three_quarter.png(0.18)⚠、03_side_profile.png(0.19)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.22)⚠、07_portrait_face.png(0.98)、08_portrait_45deg.png(0.64)、09_hair_ear_detail.png(1.00) | 2026-10-14 |
+| ↳ 备注 | 每小时自动化调度生成 · 22岁东亚女性，千禧元气轻朋克 (Y2K Preppy Punk)，9:16 9view_matrix | | | | |
+| char_zhong_manshu_2104_01 | 钟曼舒 (Zhong Manshu · 新中式清雅温婉) | `faces/char_zhong_manshu_2104_01/face.png` | 0.880 | face.png(1.00)、01_front.png(0.33)⚠、02_three_quarter.png(0.24)⚠、03_side_profile.png(0.10)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.25)⚠、07_portrait_face.png(0.98)、08_portrait_45deg.png(0.72)、09_hair_ear_detail.png(1.00) | 2026-10-14 |
+| ↳ 备注 | 每小时自动化调度生成 · 21岁东亚女性，新中式清雅温婉 (Neo-Chinese Poetic)，9:16 9view_matrix | | | | |
+| char_anya_song | 安雅 (Anya Song · 千禧元气轻朋克学院) | `faces/char_anya_song/face.png` | 0.877 | char9_anya_song_9view_matrix_9_16_173510_1.png(0.15)⚠、01_front.png(1.00)、02_three_quarter.png(0.97)、03_side_profile.png(1.00)、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(1.00)、07_portrait_face.png(1.00)、08_portrait_45deg.png(1.00)、09_hair_ear_detail.png(1.00) | 2026-10-13 |
+| ↳ 备注 | 21岁千禧学院轻朋克元气少女；红黑格子百褶裙穿搭与全套9视图 | | | | |
+| char_ayano | Ayano（insta_ayano.fj） | `faces/char_ayano/face.jpg` | 0.798 | front.png(0.54)⚠、left45.png(0.62)、right45.png(0.67)、smile.png(0.54)⚠ | 2026-10-13 |
+| ↳ 备注 | 来源 hitomi_downloaded_insta/ayano；Flow 路线A（参考图）生成，4/4 视图 cos≥0.4 锁脸 | | | | |
+| char_chen_xiawei | 陈夏微 (Chen Xiawei · 法式复古浪漫风) | `faces/char_chen_xiawei/face.png` | 0.830 | char5_chen_xiawei_base_3view_9_16_141012_1.png(0.28)⚠ | 2026-10-13 |
+| ↳ 备注 | 23语法式复古浪漫碎花风格；法式茶歇裙穿搭OOTD与基础素体 | | | | |
+| char_jia | Jia（insta_jia_to_jia） | `faces/char_jia/face.jpg` | 0.810 | front.png(0.68)、left45.png(0.72)、right45.png(0.68) | 2026-10-13 |
+| ↳ 备注 | 来源 hitomi_downloaded_insta/Jia；Flow 路线A生成，3/8 锁脸（头肩近脸可靠；宽景/表情/侧背系统性漂移，已丢弃） | | | | |
+| char_jiang_yueyao | 姜月瑶 (Jiang Yueyao) | `faces/char_jiang_yueyao/face.png` | 0.828 | char2_jiang_yueyao_solo_01_front_9_16_124521_1.png(0.28)⚠、char2_jiang_yueyao_solo_02_three_quarter_9_16_124558_1.png(0.31)⚠、char2_jiang_yueyao_solo_03_profile_side_9_16_124636_1.png(0.17)⚠、char2_jiang_yueyao_solo_04_back_9_16_124709_1.png(0.01)⚠、char2_jiang_yueyao_exp_01_gentle_joy_9_16_133152_1.png(0.38)⚠、char2_jiang_yueyao_exp_02_playful_wink_9_16_133226_1.png(0.36)⚠、char2_jiang_yueyao_exp_03_poetic_pensive_9_16_133258_1.png(0.38)⚠、char2_jiang_yueyao_exp_04_45deg_profile_9_16_133332_1.png(0.41)⚠、char2_jiang_yueyao_9view_matrix_9_16_172132_1.png(0.34)⚠、char2_jiang_yueyao_base_body_6view_9_16_123314_1.png(0.31)⚠、01_front.png(1.00)、02_three_quarter.png(1.00)、03_side_profile.png(1.00)、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(1.00)、07_portrait_face.png(1.00)、08_portrait_45deg.png(1.00)、09_hair_ear_detail.png(1.00) | 2026-10-13 |
+| ↳ 备注 | 都市灵动甜美角色；Google Flow 0积分生成，全维度9视图与微表情矩阵 | | | | |
+| char_lin_qingwan | 林清婉 (Lin Qingwan) | `faces/char_lin_qingwan/face.png` | 0.874 | char1_lin_qingwan_solo_01_front_9_16_124223_1.png(0.46)⚠、char1_lin_qingwan_solo_02_three_quarter_9_16_124302_1.png(0.46)⚠、char1_lin_qingwan_solo_03_profile_side_9_16_124339_1.png(0.32)⚠、char1_lin_qingwan_solo_04_back_9_16_124411_1.png(0.00)⚠、char1_lin_qingwan_exp_01_smile_9_16_132941_1.png(0.57)⚠、char1_lin_qingwan_exp_02_stoic_9_16_133014_1.png(0.49)⚠、char1_lin_qingwan_exp_03_surprise_9_16_133046_1.png(0.53)⚠、char1_lin_qingwan_exp_04_melancholy_9_16_133119_1.png(0.45)⚠、char1_lin_qingwan_9view_matrix_9_16_172054_1.png(0.25)⚠、char1_lin_qingwan_base_body_6view_9_16_123153_1.png(0.37)⚠、01_front.png(1.00)、02_three_quarter.png(1.00)、03_side_profile.png(1.00)、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(1.00)、07_portrait_face.png(1.00)、08_portrait_45deg.png(1.00)、09_hair_ear_detail.png(1.00) | 2026-10-13 |
+| ↳ 备注 | 新中式温婉雅致女性角色；Google Flow 0积分生成，全维度9视图与微表情矩阵 | | | | |
+| char_liu_yinuo_1923_10 | 柳依诺 (Liu Yinuo · 水墨仙侠清冷绝尘) | `faces/char_liu_yinuo_1923_10/face.png` | 0.850 | face.png(1.00) | 2026-10-13 |
+| ↳ 备注 | 每小时自动化调度生成 · 26岁东亚女性，水墨仙侠清冷绝尘 (Ethereal Xianxia)，9:16 base_3view | | | | |
+| char_luo_qingchuan_1805 | 洛晴川 (Luo Qingchuan · 老钱极简静奢名媛) | `faces/char_luo_qingchuan_1805/face.png` | 0.897 | face.png(1.00)、01_front.png(0.37)⚠、02_three_quarter.png(0.43)⚠、03_side_profile.png(0.29)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.38)⚠、07_portrait_face.png(0.99)、08_portrait_45deg.png(0.76)、09_hair_ear_detail.png(0.14)⚠ | 2026-10-13 |
+| ↳ 备注 | 每小时自动化调度生成 · 23岁东亚女性，老钱极简静奢名媛 (Quiet Luxury)，9:16 9view_matrix | | | | |
+| char_pei_yuhan_2300_01 | 裴语涵 (Pei Yuhan · 新中式清雅温婉) | `faces/char_pei_yuhan_2300_01/face.png` | 0.900 | face.png(1.00)、01_front.png(0.43)⚠、02_three_quarter.png(0.23)⚠、03_side_profile.png(0.09)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.15)⚠、07_portrait_face.png(0.99)、08_portrait_45deg.png(0.76)、09_hair_ear_detail.png(1.00) | 2026-10-13 |
+| ↳ 备注 | 每小时自动化调度生成 · 22岁东亚女性，新中式清雅温婉 (Neo-Chinese Poetic)，9:16 9view_matrix | | | | |
+| char_qing_luo | 青洛 (Qing Luo · 水墨青花仙侠古风) | `faces/char_qing_luo/face.png` | 0.867 | char7_qing_luo_base_3view_9_16_172610_1.png(0.11)⚠ | 2026-10-13 |
+| ↳ 备注 | 22岁新中式青花仙侠水墨风角色；渐变青花轻纱对襟襦裙OOTD与基础素体 | | | | |
+| char_ray_ling | 雷凌 (Ray Ling · 赛博机能御姐) | `faces/char_ray_ling/face.png` | 0.875 | char6_ray_ling_base_3view_9_16_172409_1.png(0.39)⚠ | 2026-10-13 |
+| ↳ 备注 | 24岁银发赛博机能未来风女性角色；防水压胶机能服穿搭与极简素体 | | | | |
+| char_runcha | るーんちゃ（insta_runchaliveeee） | `faces/char_runcha/face.jpg` | 0.791 | front.png(0.63)、left45.png(0.48)⚠、right45.png(0.54)⚠、half_body.png(0.47)⚠、smile.png(0.61) | 2026-10-13 |
+| ↳ 备注 | 来源 hitomi_downloaded_insta/るーんちゃ；Flow 路线A生成，5/7 锁脸（profile 漂移、full_body 超时已丢弃） | | | | |
+| char_shen_zhilan | 沈知澜 (Shen Zhilan · 高智职场精英大女主) | `faces/char_shen_zhilan/face.png` | 0.860 | char8_shen_zhilan_base_3view_9_16_172810_1.png(0.35)⚠ | 2026-10-13 |
+| ↳ 备注 | 28岁高智商职场律政投行大女主；象牙白双排扣西装OOTD与基础素体 | | | | |
+| char_su_xiaotang | 苏小棠 (Su Xiaotang · 潮酷Y2K街头机能) | `faces/char_su_xiaotang/face.png` | 0.795 | char3_su_xiaotang_base_3view_9_16_140759_1.png(0.26)⚠ | 2026-10-13 |
+| ↳ 备注 | 20岁潮酷Y2K工装机能风少女；街头工装OOTD与基础素体 | | | | |
+| char_tang_mengli_2200_01 | 唐梦璃 (Tang Mengli · 新中式清雅温婉) | `faces/char_tang_mengli_2200_01/face.png` | 0.915 | face.png(1.00)、01_front.png(0.29)⚠、02_three_quarter.png(0.26)⚠、03_side_profile.png(0.27)⚠、04_three_quarter_back.png(-0.04)⚠、05_back.png(1.00)、06_perspective_dynamic.png(0.21)⚠、07_portrait_face.png(0.99)、08_portrait_45deg.png(0.74)、09_hair_ear_detail.png(1.00) | 2026-10-13 |
+| ↳ 备注 | 每小时自动化调度生成 · 21岁东亚女性，新中式清雅温婉 (Neo-Chinese Poetic)，9:16 9view_matrix | | | | |
+| char_wen_xiaorou_2140_01 | 温小柔 (Wen Xiaorou · 新中式清雅温婉) | `faces/char_wen_xiaorou_2140_01/face.png` | 0.852 | face.png(1.00)、01_front.png(0.41)⚠、02_three_quarter.png(0.26)⚠、03_side_profile.png(0.25)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.30)⚠、07_portrait_face.png(0.99)、08_portrait_45deg.png(0.69)、09_hair_ear_detail.png(1.00) | 2026-10-13 |
+| ↳ 备注 | 每小时自动化调度生成 · 24岁东亚女性，新中式清雅温婉 (Neo-Chinese Poetic)，9:16 9view_matrix | | | | |
+| char_ye_muchen_2100_01 | 叶沐晨 (Ye Muchen · 新中式清雅温婉) | `faces/char_ye_muchen_2100_01/face.png` | 0.878 | face.png(1.00)、01_front.png(0.38)⚠、02_three_quarter.png(0.24)⚠、03_side_profile.png(0.24)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.27)⚠、07_portrait_face.png(0.99)、08_portrait_45deg.png(0.73)、09_hair_ear_detail.png(1.00)、01_front_2k.png(0.22)⚠、02_three_quarter_2k.png(0.22)⚠、03_side_profile_2k.png(0.12)⚠、04_three_quarter_back_2k.png(0.17)⚠、05_back_2k.png(1.00)、07_portrait_face_2k.png(0.33)⚠、08_portrait_45deg_2k.png(0.22)⚠、09_hair_ear_detail_2k.png(0.15)⚠ | 2026-10-13 |
+| ↳ 备注 | 每小时自动化调度生成 · 22岁东亚女性，新中式清雅温婉 (Neo-Chinese Poetic)，9:16 9view_matrix | | | | |
+| char_yin_xinyue_2330_01 | 尹新月 (Yin Xinyue · 新中式清雅温婉) | `faces/char_yin_xinyue_2330_01/face.png` | 0.916 | face.png(1.00)、01_front.png(0.39)⚠、02_three_quarter.png(0.41)⚠、03_side_profile.png(0.28)⚠、04_three_quarter_back.png(1.00)、05_back.png(1.00)、06_perspective_dynamic.png(0.29)⚠、07_portrait_face.png(0.99)、08_portrait_45deg.png(0.76)、09_hair_ear_detail.png(1.00) | 2026-10-13 |
+| ↳ 备注 | 每小时自动化调度生成 · 20岁东亚女性，新中式清雅温婉 (Neo-Chinese Poetic)，9:16 9view_matrix | | | | |
+| char_zhao_ruoxi | 赵若溪 (Zhao Ruoxi · 老钱极简静奢风) | `faces/char_zhao_ruoxi/face.png` | 0.800 | char4_zhao_ruoxi_base_3view_9_16_140906_1.png(0.51)⚠ | 2026-10-13 |
+| ↳ 备注 | 26岁老钱风极简静奢名媛；高级驼灰穿搭OOTD与基础素体 | | | | |
+| char_duo | Duo（主用身份） | `faces/char_duo/face.png` | 0.851 | left.png(0.54)⚠ | 2026-10-12 |
+| ↳ 备注 | 2026-10-12 四脸比对选定为 290 条放量用脸；与 char_duo3_2 为不同身份（cos≈0.05）；left 与主脸相似度存疑见 alt 备注 | | | | |
 | char_duo3_2 | Duo3_2（第三身份） | `faces/char_duo3_2/face.jpg` | 0.816 | duo3_1.jpg(0.80)、duo3_3.jpg(0.76)、duo3_4.jpg(0.84) | 2026-10-12 |
 | ↳ 备注 | 2026-10-12 四脸比对中的第三身份；duo3_1/3/4 为家族候选，同身份与否以 meta 内 cos 值为准 | | | | |
-| char_duo | Duo（主用身份） | `faces/char_duo/face.png` | 0.851 | left.png(0.54) | 2026-10-12 |
-| ↳ 备注 | 2026-10-12 四脸比对选定为 290 条放量用脸；与 char_duo3_2 为不同身份（cos≈0.05）；left 与主脸相似度存疑见 alt 备注 | | | | |
+| char_cen_zhiwei_1936_01 | 岑知微 (Cen Zhiwei · 赛博未来机能御姐) | `faces/char_cen_zhiwei_1936_01/face.png` | 0.898 | 01_front.png(1.00)、02_three_quarter.png(0.65)、03_side_profile.png(0.47)⚠、04_three_quarter_back.png(0.53)⚠、05_back.png(0.47)⚠、06_low_angle.png(0.62)、07_portrait_face.png(0.46)⚠、08_portrait_45deg.png(0.53)⚠、09_hair_ear_detail.png(0.13)⚠ | 2026-10-16 |
+| ↳ 备注 | 每小时自动化调度 · 9张独立高清原图 · 25岁东亚女性，赛博未来机能御姐 (Cyberpunk Techwear) · 身材: 雕塑级黄金沙漏比例 | | | | |
+| char_jiang_ruoli_2007_01 | 姜若离 (Jiang Ruoli · 高智职场精英大女主) | `faces/char_jiang_ruoli_2007_01/face.png` | 0.889 | 01_front.png(1.00)、02_three_quarter.png(0.54)⚠、03_side_profile.png(0.30)⚠、04_three_quarter_back.png(0.49)⚠、05_back.png(0.16)⚠、06_low_angle.png(0.43)⚠、07_portrait_face.png(0.46)⚠、08_portrait_45deg.png(0.20)⚠、09_hair_ear_detail.png(0.30)⚠ | 2026-10-16 |
+| ↳ 备注 | 每小时自动化调度 · 9张独立高清原图 · 23岁东亚女性，高智职场精英大女主 (Executive Power) · 身材: 极致蜂腰与深邃折角 | | | | |
+| char_xiaog3 | 小G3 (Xiao G3 · 阳光元气少女) | `faces/char_xiaog3/face.png` | 0.794 | char_xiaog3_3view_00001_.png(0.38)⚠、char_xiaog3_scene_garden_00001_.png(0.58)⚠、char_xiaog3_scene_seaside_00001_.png(0.68)、07_portrait_face.png(0.81) | 2026-10-16 |
+| ↳ 备注 | 2026-10-16 由 input/ken4/face/小G3 提取：Qwen3.8-27B 看图提词 → Qwen-Image-2.1 参考图锁脸生成 | | | | |
+| char_xi_manshu_2045_01 | 席曼舒 (Xi Manshu · 新中式清雅温婉) | `faces/char_xi_manshu_2045_01/face.png` | 0.882 | 01_front.png(1.00)、02_three_quarter.png(0.47)⚠、03_side_profile.png(0.32)⚠、04_three_quarter_back.png(0.36)⚠、05_back.png(0.26)⚠、06_low_angle.png(0.51)⚠、07_portrait_face.png(0.54)⚠、08_portrait_45deg.png(0.33)⚠、09_hair_ear_detail.png(0.13)⚠ | 2026-10-16 |
+| ↳ 备注 | 每小时自动化调度 · 9张独立高清原图 · 25岁东亚女性，新中式清雅温婉 (Neo-Chinese Poetic) · 身材: 雕塑级黄金沙漏比例 | | | | |
+| char_huangfu_qingchuan_2104_01 | 皇甫晴川 (Huangfu Qingchuan · 赛博未来机能御姐) | `faces/char_huangfu_qingchuan_2104_01/face.png` | 0.890 | 01_front.png(1.00)、02_three_quarter.png(0.60)、03_side_profile.png(0.60)、04_three_quarter_back.png(0.56)⚠、05_back.png(0.39)⚠、06_low_angle.png(0.32)⚠、07_portrait_face.png(0.54)⚠、08_portrait_45deg.png(0.32)⚠、09_hair_ear_detail.png(0.27)⚠ | 2026-10-16 |
+| ↳ 备注 | 每小时自动化调度 · 9张独立高清原图 · 21岁东亚女性，赛博未来机能御姐 (Cyberpunk Techwear) · 身材: 二次元梦幻丰盈曲线 | | | | |
+| char_linghu_zhixia_2133_01 | 令狐知夏 (Linghu Zhixia · 赛博未来机能御姐) | `faces/char_linghu_zhixia_2133_01/face.png` | 0.889 | 01_front.png(1.00)、02_three_quarter.png(0.67)、03_side_profile.png(0.36)⚠、04_three_quarter_back.png(0.35)⚠、05_back.png(0.38)⚠、06_low_angle.png(0.53)⚠、07_portrait_face.png(0.60)、08_portrait_45deg.png(0.43)⚠、09_hair_ear_detail.png(0.40)⚠ | 2026-10-16 |
+| ↳ 备注 | 每小时自动化调度 · 9张独立高清原图 · 25岁东亚女性，赛博未来机能御姐 (Cyberpunk Techwear) · 身材: 二次元梦幻丰盈曲线 | | | | |
+| char_qiao_weiyu_2134_01 | 乔微雨 (Qiao Weiyu · 千禧元气轻朋克) | `faces/char_qiao_weiyu_2134_01/face.png` | 0.889 | 01_front.png(1.00)、02_three_quarter.png(0.53)⚠、03_side_profile.png(0.57)⚠、04_three_quarter_back.png(0.26)⚠、05_back.png(0.50)⚠、06_low_angle.png(0.49)⚠、07_portrait_face.png(0.53)⚠、08_portrait_45deg.png(0.46)⚠、09_hair_ear_detail.png(0.40)⚠ | 2026-10-16 |
+| ↳ 备注 | 每小时自动化调度 · 9张独立高清原图 · 26岁东亚女性，千禧元气轻朋克 (Y2K Preppy Punk) · 身材: 丰腴曼妙傲人身段 | | | | |
+| char_jiang_qinghuan_2203_01 | 姜清欢 (Jiang Qinghuan · 高智职场精英大女主) | `faces/char_jiang_qinghuan_2203_01/face.png` | 0.878 | 01_front.png(1.00)、02_three_quarter.png(0.38)⚠、03_side_profile.png(0.28)⚠、04_three_quarter_back.png(0.35)⚠、05_back.png(0.31)⚠、06_low_angle.png(0.44)⚠、07_portrait_face.png(0.33)⚠、08_portrait_45deg.png(0.35)⚠、09_hair_ear_detail.png(0.48)⚠ | 2026-10-16 |
+| ↳ 备注 | 每小时自动化调度 · 9张独立高清原图 · 26岁东亚女性，高智职场精英大女主 (Executive Power) · 身材: 丰腴曼妙傲人身段 | | | | |
+| char_cen_youqing_2204_01 | 岑幼清 (Cen Youqing · 新中式清雅温婉) | `faces/char_cen_youqing_2204_01/face.png` | 0.861 | 01_front.png(1.00)、02_three_quarter.png(0.39)⚠、03_side_profile.png(0.37)⚠、04_three_quarter_back.png(0.24)⚠、05_back.png(0.36)⚠、06_low_angle.png(0.21)⚠、07_portrait_face.png(1.00)、08_portrait_45deg.png(0.35)⚠、09_hair_ear_detail.png(0.31)⚠ | 2026-10-16 |
+| ↳ 备注 | 每小时自动化调度 · 9张独立高清原图 · 23岁东亚女性，新中式清雅温婉 (Neo-Chinese Poetic) · 身材: 极致蜂腰与深邃折角 | | | | |
+| char_zhong_xiaorou_2233_01 | 钟小柔 (Zhong Xiaorou · 新中式清雅温婉) | `faces/char_zhong_xiaorou_2233_01/face.png` | 0.833 | 01_front.png(1.00)、02_three_quarter.png(0.38)⚠、04_three_quarter_back.png(0.16)⚠、05_back.png(0.13)⚠、06_low_angle.png(0.16)⚠、07_portrait_face.png(0.20)⚠、08_portrait_45deg.png(0.25)⚠、09_hair_ear_detail.png(0.18)⚠ | 2026-10-16 |
+| ↳ 备注 | 每小时自动化调度 · 8张独立高清原图 · 20岁东亚女性，新中式清雅温婉 (Neo-Chinese Poetic) · 身材: 雕塑级黄金沙漏比例 | | | | |
+| char_tan_youqing_2234_01 | 谭幼清 (Tan Youqing · 千禧元气轻朋克) | `faces/char_tan_youqing_2234_01/face.png` | 0.833 | 01_face_portrait.png(1.00)、02_front_fullbody.png(0.45)⚠、03_three_quarter.png(0.16)⚠、04_side_profile.png(0.13)⚠、05_three_quarter_back.png(0.16)⚠、06_back.png(0.20)⚠、07_low_angle.png(0.25)⚠、08_portrait_45deg.png(0.18)⚠、09_hair_ear_detail.png(0.27)⚠ | 2026-10-16 |
+| ↳ 备注 | 每小时自动化调度 · 9张独立高清原图 · 20岁东亚女性，千禧元气轻朋克 (Y2K Preppy Punk) · 身材: 丰腴曼妙傲人身段 | | | | |
+| char_tantai_lingsu_2303_01 | 澹台灵素 (Tantai Lingsu · 千禧元气轻朋克) | `faces/char_tantai_lingsu_2303_01/face.png` | 0.802 | 01_face_portrait.png(1.00)、02_front_fullbody.png(0.75)、03_three_quarter.png(0.64)、04_side_profile.png(0.42)⚠、05_three_quarter_back.png(0.36)⚠、06_back.png(0.23)⚠、07_low_angle.png(0.23)⚠、08_portrait_45deg.png(0.27)⚠、09_hair_ear_detail.png(-0.01)⚠ | 2026-10-16 |
+| ↳ 备注 | 每小时自动化调度 · 9张独立高清原图 · 23岁东亚女性，千禧元气轻朋克 (Y2K Preppy Punk) · 身材: 极致蜂腰与深邃折角 | | | | |
+| char_qiao_qinghuan_2304_01 | 乔清欢 (Qiao Qinghuan · 港风复古明艳美人) | `faces/char_qiao_qinghuan_2304_01/face.png` | 0.802 | 01_face_portrait.png(1.00)、02_front_fullbody.png(0.75)、03_three_quarter.png(0.64)、04_side_profile.png(0.42)⚠、05_three_quarter_back.png(0.36)⚠、06_back.png(0.23)⚠、07_low_angle.png(0.23)⚠、08_portrait_45deg.png(0.27)⚠、09_hair_ear_detail.png(-0.01)⚠ | 2026-10-16 |
+| ↳ 备注 | 每小时自动化调度 · 9张独立高清原图 · 24岁东亚女性，港风复古明艳美人 (Retro Glamour) · 身材: 二次元梦幻丰盈曲线 | | | | |
+| char_chu_muchen_0004_01 | 楚沐晨 (Chu Muchen · 水墨仙侠清冷绝尘) | `faces/char_chu_muchen_0004_01/face.png` | 0.880 | 01_face_portrait.png(1.00)、02_front_fullbody.png(1.00)、03_three_quarter.png(1.00)、04_side_profile.png(1.00)、05_three_quarter_back.png(1.00)、06_back.png(1.00)、07_low_angle.png(1.00)、08_portrait_45deg.png(1.00)、09_hair_ear_detail.png(1.00) | 2026-10-17 |
+| ↳ 备注 | 每小时自动化调度 · 9张独立高清原图 · 22岁东亚女性，水墨仙侠清冷绝尘 (Ethereal Xianxia) · 身材: 极致蜂腰与深邃折角 | | | | |
+| char_qiao_chaoyan_0004_01 | 乔朝颜 (Qiao Chaoyan · 赛博未来机能御姐) | `faces/char_qiao_chaoyan_0004_01/face.png` | 0.880 | 01_face_portrait.png(1.00)、02_front_fullbody.png(1.00)、03_three_quarter.png(1.00)、04_side_profile.png(1.00)、05_three_quarter_back.png(1.00)、06_back.png(1.00)、07_low_angle.png(1.00)、08_portrait_45deg.png(1.00)、09_hair_ear_detail.png(1.00) | 2026-10-17 |
+| ↳ 备注 | 每小时自动化调度 · 9张独立高清原图 · 25岁东亚女性，赛博未来机能御姐 (Cyberpunk Techwear) · 身材: 二次元梦幻丰盈曲线 | | | | |
+| char_xue_qinghuan_0034_01 | 薛清欢 (Xue Qinghuan · 老钱极简静奢名媛) | `faces/char_xue_qinghuan_0034_01/face.png` | 0.880 | 01_face_portrait.png(1.00)、02_front_fullbody.png(1.00)、03_three_quarter.png(1.00)、04_side_profile.png(1.00)、05_three_quarter_back.png(1.00)、06_back.png(1.00)、07_low_angle.png(1.00)、08_portrait_45deg.png(1.00)、09_hair_ear_detail.png(1.00) | 2026-10-17 |
+| ↳ 备注 | 每小时自动化调度 · 9张独立高清原图 · 25岁东亚女性，老钱极简静奢名媛 (Quiet Luxury) · 身材: 极致蜂腰与深邃折角 | | | | |
+| char_tang_yuwei_0217_01 | 唐羽薇 (Tang Yuwei · 高智职场精英大女主) | `faces/char_tang_yuwei_0217_01/face.png` | 0.847 | 01_face_portrait.png(1.00)、02_front_fullbody.png(0.23)⚠、03_three_quarter.png(0.33)⚠、04_side_profile.png(0.09)⚠、05_three_quarter_back.png(0.17)⚠、06_back.png(1.00)、07_low_angle.png(1.00)、08_portrait_45deg.png(1.00)、09_hair_ear_detail.png(1.00) | 2026-10-17 |
+| ↳ 备注 | 每小时自动化调度 · 9张独立高清原图 · 20岁东亚女性，高智职场精英大女主 (Executive Power) · 身材: 紧实马甲线与健美线条 | | | | |
+| char_ouyang_chuxia_0250_01 | 欧阳初夏 (Ouyang Chuxia · 老钱极简静奢名媛) | `faces/char_ouyang_chuxia_0250_01/face.png` | 0.895 | 01_face_portrait.png(1.00)、02_front_fullbody.png(0.40)⚠、03_three_quarter.png(0.44)⚠、04_side_profile.png(0.30)⚠、05_three_quarter_back.png(0.25)⚠、06_back.png(1.00)、07_low_angle.png(0.34)⚠、08_portrait_45deg.png(0.45)⚠、09_hair_ear_detail.png(0.25)⚠ | 2026-10-17 |
+| ↳ 备注 | 每小时自动化调度 · 9张独立高清原图 · 24岁东亚女性，老钱极简静奢名媛 (Quiet Luxury) · 身材: 丰腴曼妙傲人身段 | | | | |
+| char_bai_zhiruo_0305_01 | 白芷若 (Bai Zhiruo · 赛博未来机能御姐) | `faces/char_bai_zhiruo_0305_01/face.png` | 0.866 | 01_face_portrait.png(1.00)、02_front_fullbody.png(0.48)⚠、03_three_quarter.png(0.41)⚠、04_side_profile.png(0.42)⚠、05_three_quarter_back.png(0.23)⚠、06_back.png(0.36)⚠、07_low_angle.png(0.49)⚠、08_portrait_45deg.png(0.38)⚠、09_hair_ear_detail.png(0.19)⚠ | 2026-10-17 |
+| ↳ 备注 | 每小时自动化调度 · 9张独立高清原图 · 24岁东亚女性，赛博未来机能御姐 (Cyberpunk Techwear) · 身材: 雕塑级黄金沙漏比例 | | | | |
+| char_pei_shanshan_0456_01 | 裴山山 (Pei Shanshan · 新中式清雅温婉) | `faces/char_pei_shanshan_0456_01/face.png` | 0.893 | 01_face_portrait.png(1.00)、02_front_fullbody.png(0.41)⚠、03_three_quarter.png(0.53)⚠、04_side_profile.png(0.38)⚠、05_three_quarter_back.png(0.39)⚠、06_back.png(1.00)、07_low_angle.png(0.37)⚠、08_portrait_45deg.png(0.51)⚠、09_hair_ear_detail.png(0.41)⚠ | 2026-10-17 |
+| ↳ 备注 | 每小时自动化调度 · 9张独立高清原图 · 24岁东亚女性，新中式清雅温婉 (Neo-Chinese Poetic) · 身材: 丰腴曼妙傲人身段 | | | | |
+| char_xi_qingchuan_0618_01 | 席晴川 (Xi Qingchuan · 新中式清雅温婉) | `faces/char_xi_qingchuan_0618_01/face.png` | 0.895 | 01_face_portrait.png(1.00)、02_front_fullbody.png(0.54)⚠、03_three_quarter.png(0.31)⚠、04_side_profile.png(0.31)⚠、05_three_quarter_back.png(0.45)⚠、06_back.png(1.00)、07_low_angle.png(0.39)⚠、08_portrait_45deg.png(0.51)⚠、09_hair_ear_detail.png(0.25)⚠ | 2026-10-17 |
+| ↳ 备注 | 每小时自动化调度 · 9张独立高清原图 · 25岁东亚女性，新中式清雅温婉 (Neo-Chinese Poetic) · 身材: 丰腴曼妙傲人身段 | | | | |
+| char_zhong_linger_0732_01 | 钟灵儿 (Zhong Linger · 高智职场精英大女主) | `faces/char_zhong_linger_0732_01/face.png` | 0.887 | 01_face_portrait.png(1.00)、02_front_fullbody.png(0.41)⚠、03_three_quarter.png(0.56)⚠、04_side_profile.png(0.39)⚠、05_three_quarter_back.png(0.45)⚠、06_back.png(0.32)⚠、07_low_angle.png(0.33)⚠、08_portrait_45deg.png(0.25)⚠、09_hair_ear_detail.png(0.16)⚠ | 2026-10-17 |
+| ↳ 备注 | 每小时自动化调度 · 9张独立高清原图 · 26岁东亚女性，高智职场精英大女主 (Executive Power) · 身材: 雕塑级黄金沙漏比例 | | | | |
+| char_hua_qingdai_1029_01 | 花青黛 (Hua Qingdai · 千禧元气轻朋克) | `faces/char_hua_qingdai_1029_01/face.png` | 0.905 | 01_face_portrait.png(1.00)、02_front_fullbody.png(0.46)⚠、03_three_quarter.png(0.54)⚠、04_side_profile.png(0.39)⚠、05_three_quarter_back.png(0.50)⚠、06_back.png(0.33)⚠、07_low_angle.png(0.37)⚠、08_portrait_45deg.png(0.49)⚠、09_hair_ear_detail.png(0.31)⚠ | 2026-10-17 |
+| ↳ 备注 | 每小时自动化调度 · 9张独立高清原图 · 24岁东亚女性，千禧元气轻朋克 (Y2K Preppy Punk) · 身材: 雕塑级黄金沙漏比例 | | | | |
+| char_tang_banxia_1156_01 | 唐半夏 (Tang Banxia · 高智职场精英大女主) | `faces/char_tang_banxia_1156_01/face.png` | 0.889 | 01_face_portrait.png(1.00)、02_front_fullbody.png(0.40)⚠、03_three_quarter.png(0.42)⚠、04_side_profile.png(0.34)⚠、05_three_quarter_back.png(0.45)⚠、06_back.png(0.35)⚠、07_low_angle.png(0.33)⚠ | 2026-10-17 |
+| ↳ 备注 | 每小时自动化调度 · 7张独立高清原图 · 20岁东亚女性，高智职场精英大女主 (Executive Power) · 身材: 丰腴曼妙傲人身段 | | | | |
+| char_gu_weiyu_1321_01 | 顾微雨 (Gu Weiyu · 千禧元气轻朋克) | `faces/char_gu_weiyu_1321_01/face.png` | 0.798 | 01_face_portrait.png(1.00)、02_front_fullbody.png(0.47)⚠、03_three_quarter.png(0.43)⚠、04_side_profile.png(0.44)⚠、05_three_quarter_back.png(0.57)⚠、06_back.png(1.00)、07_low_angle.png(0.48)⚠、08_portrait_45deg.png(0.56)⚠、09_hair_ear_detail.png(0.39)⚠ | 2026-10-17 |
+| ↳ 备注 | 每小时自动化调度 · 9张独立高清原图 · 20岁东亚女性，千禧元气轻朋克 (Y2K Preppy Punk) · 身材: 运动健硕力量型 · 神态: 高贵矜持 | | | | |
+| char_cheng_hongyu_1435_01 | 程红鱼 (Cheng Hongyu · 新中式清雅温婉) | `faces/char_cheng_hongyu_1435_01/face.png` | 0.875 | 01_face_portrait.png(1.00)、02_front_fullbody.png(0.52)⚠、03_three_quarter.png(0.55)⚠、04_side_profile.png(0.45)⚠、05_three_quarter_back.png(0.52)⚠、06_back.png(0.47)⚠、07_low_angle.png(0.53)⚠、08_portrait_45deg.png(0.64)、09_hair_ear_detail.png(0.45)⚠ | 2026-10-17 |
+| ↳ 备注 | 每小时自动化调度 · 9张独立高清原图 · 38岁东亚女性，新中式清雅温婉 (Neo-Chinese Poetic) · 身材: 古典沙漏曲线型 · 神态: 张扬叛逆 | | | | |
+| char_hua_chuxia_1549_01 | 花初夏 (Hua Chuxia · 新中式清雅温婉) | `faces/char_hua_chuxia_1549_01/face.png` | 0.879 | 01_face_portrait.png(1.00)、02_front_fullbody.png(0.55)⚠、03_three_quarter.png(0.51)⚠、04_side_profile.png(0.32)⚠、05_three_quarter_back.png(0.50)⚠、06_back.png(0.04)⚠、07_low_angle.png(0.52)⚠、08_portrait_45deg.png(0.65)、09_hair_ear_detail.png(0.25)⚠ | 2026-10-17 |
+| ↳ 备注 | 每小时自动化调度 · 9张独立高清原图 · 36岁东亚女性，新中式清雅温婉 (Neo-Chinese Poetic) · 身材: 标准匀称日常型 · 神态: 清冷疏离 | | | | |
+| char_pei_manshu_1701_01 | 裴曼舒 (Pei Manshu · 新中式清雅温婉) | `faces/char_pei_manshu_1701_01/face.png` | 0.866 | 01_face_portrait.png(1.00)、02_front_fullbody.png(0.56)⚠、03_three_quarter.png(0.45)⚠、04_side_profile.png(0.37)⚠、05_three_quarter_back.png(0.34)⚠、06_back.png(1.00)、07_low_angle.png(0.33)⚠、08_portrait_45deg.png(0.52)⚠、09_hair_ear_detail.png(0.07)⚠ | 2026-10-17 |
+| ↳ 备注 | 每小时自动化调度 · 9张独立高清原图 · 23岁东亚女性，新中式清雅温婉 (Neo-Chinese Poetic) · 身材: 高挑清瘦模特型 · 神态: 阳光爽朗 | | | | |
+| char_ye_nanqiao_1811_01 | 叶南乔 (Ye Nanqiao · 水墨仙侠清冷绝尘) | `faces/char_ye_nanqiao_1811_01/face.png` | 0.874 | 01_face_portrait.png(1.00)、02_front_fullbody.png(0.29)⚠、03_three_quarter.png(0.42)⚠、04_side_profile.png(0.35)⚠、05_three_quarter_back.png(0.49)⚠、06_back.png(0.37)⚠、07_low_angle.png(0.38)⚠、08_portrait_45deg.png(0.46)⚠、09_hair_ear_detail.png(0.28)⚠ | 2026-10-17 |
+| ↳ 备注 | 每小时自动化调度 · 9张独立高清原图 · 25岁东亚女性，水墨仙侠清冷绝尘 (Ethereal Xianxia) · 身材: 熟龄丰韵成熟型 · 神态: 温柔含笑 | | | | |
+| char_murong_yuyan_1942_01 | 慕容语嫣 (Murong Yuyan · 水墨仙侠清冷绝尘) | `faces/char_murong_yuyan_1942_01/face.png` | 0.901 | 01_face_portrait.png(1.00)、02_front_fullbody.png(0.45)⚠、03_three_quarter.png(0.44)⚠、04_side_profile.png(0.30)⚠、05_three_quarter_back.png(0.44)⚠、06_back.png(1.00)、07_low_angle.png(0.48)⚠、08_portrait_45deg.png(0.40)⚠、09_hair_ear_detail.png(1.00) | 2026-10-17 |
+| ↳ 备注 | 每小时自动化调度 · 9张独立高清原图 · 23岁东亚女性，水墨仙侠清冷绝尘 (Ethereal Xianxia) · 身材: 娇小玲珑匀称型 · 神态: 沉稳内敛 | | | | |
+| char_nangong_lingjun_2054_01 | 南宫灵均 (Nangong Lingjun · 赛博未来机能御姐) | `faces/char_nangong_lingjun_2054_01/face.png` | 0.847 | 01_face_portrait.png(1.00)、02_front_fullbody.png(0.50)⚠、03_three_quarter.png(0.52)⚠、04_side_profile.png(0.38)⚠、05_three_quarter_back.png(0.32)⚠、06_back.png(0.30)⚠、07_low_angle.png(0.46)⚠、08_portrait_45deg.png(0.62)、09_hair_ear_detail.png(0.18)⚠ | 2026-10-17 |
+| ↳ 备注 | 每小时自动化调度 · 9张独立高清原图 · 34岁东亚女性，赛博未来机能御姐 (Cyberpunk Techwear) · 身材: 梨形下盘丰满型 · 神态: 俏皮灵动 | | | | |
 
-## 身份矩阵结论（w600k_r50 两两 cos）
+## 身份矩阵结论（w600k_r50 两两 cos，自动判定）
 
-- **char_duo 与 char_duo3_2 是不同身份**（cos 0.03~0.20，互相几乎正交）
-- **duo3 家族 4 张（duo3_2 主 + duo3_1/duo3_3/duo3_4）互相 0.69~0.84，同一身份**
-- ⚠️ **left.png vs duo.png cos=0.544**，低于同身份经验阈值 0.6——早前交接文档“duo/left 同一人”的说法**存疑**（疑侧脸角度致 embedding 漂移），待人工复核
+- **char_cheng_youqing_1438_01 ↔ char_fu_zhixia_1334_01：cos 0.253 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_gu_banxia_1103_01：cos 0.300 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cheng_youqing_1438_01 ↔ char_huo_xinyue_1705_01：cos 0.458 → ⚠️ 存疑，待人工复核**
+- **char_cheng_youqing_1438_01 ↔ char_linghu_muchen_1736_01：cos 0.518 → ⚠️ 存疑，待人工复核**
+- **char_cheng_youqing_1438_01 ↔ char_lu_sitian_1405_01：cos 0.510 → ⚠️ 存疑，待人工复核**
+- **char_cheng_youqing_1438_01 ↔ char_lu_xuejian_1807_01：cos 0.416 → ⚠️ 存疑，待人工复核**
+- **char_cheng_youqing_1438_01 ↔ char_luo_tiange_1534_01：cos 0.599 → ⚠️ 存疑，待人工复核**
+- **char_cheng_youqing_1438_01 ↔ char_qiao_banxia_1204_01：cos 0.261 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_shangguan_weiyu_1014_01：cos 0.284 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_situ_muchen_1835_01：cos 0.543 → ⚠️ 存疑，待人工复核**
+- **char_cheng_youqing_1438_01 ↔ char_situ_yuwei_0934_01：cos 0.284 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_song_anran_1604_01：cos 0.439 → ⚠️ 存疑，待人工复核**
+- **char_cheng_youqing_1438_01 ↔ char_wen_lingsu_1635_01：cos 0.412 → ⚠️ 存疑，待人工复核**
+- **char_cheng_youqing_1438_01 ↔ char_xue_hongyu_1034_01：cos 0.285 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_xue_mengli_1234_01：cos 0.268 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_xue_sitian_1508_01：cos 0.455 → ⚠️ 存疑，待人工复核**
+- **char_cheng_youqing_1438_01 ↔ char_yin_qingdai_1305_01：cos 0.266 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_yuchi_wanzhao_1134_01：cos 0.266 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_yuchi_zhixia_0914_01：cos 0.228 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_cheng_yuwei_1103_01：cos 0.300 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cheng_youqing_1438_01 ↔ char_chu_lingsu_1533_01：cos 0.475 → ⚠️ 存疑，待人工复核**
+- **char_cheng_youqing_1438_01 ↔ char_fu_linger_1433_01：cos 0.112 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_fu_yuhan_1000_01：cos 0.331 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cheng_youqing_1438_01 ↔ char_gu_sitian_1003_01：cos 0.211 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_liang_chuxia_1503_01：cos 0.061 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_liang_mengli_1203_01：cos 0.316 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cheng_youqing_1438_01 ↔ char_shen_xiaorou_1233_01：cos 0.334 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cheng_youqing_1438_01 ↔ char_shen_xinyue_1404_01：cos 0.261 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_tan_muchen_1133_01：cos 0.316 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cheng_youqing_1438_01 ↔ char_xi_shanshan_1303_01：cos 0.364 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cheng_youqing_1438_01 ↔ char_xue_huaiyu_1034_01：cos 0.217 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_yuchi_lingsu_1333_01：cos 0.313 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cheng_youqing_1438_01 ↔ char_bai_anran_0430_01：cos 0.274 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_bai_yuhan_0830_01：cos 0.198 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_cen_yuhan_1934_01：cos 0.254 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_chu_ruoli_0800_01：cos 0.270 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_fu_caiwei_1833_01：cos 0.291 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_fu_wanzhao_1100_01：cos 0.270 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_gu_chaoyan_1904_01：cos 0.294 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_huo_ruoxi_1200_01：cos 0.215 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_jiang_zhiruo_0300_01：cos 0.182 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_liang_tiange_1303_01：cos 0.314 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cheng_youqing_1438_01 ↔ char_liang_yuyan_1333_01：cos 0.384 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cheng_youqing_1438_01 ↔ char_linghu_chuxia_2204_01：cos 0.163 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_lu_muchen_0530_01：cos 0.278 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_murong_manshu_1704_01：cos 0.297 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_murong_weiyu_0930_01：cos 0.318 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cheng_youqing_1438_01 ↔ char_murong_xingzhu_0200_01：cos 0.171 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_ning_chuxia_0000_01：cos 0.180 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.306 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cheng_youqing_1438_01 ↔ char_qin_linger_1634_01：cos 0.253 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_qin_suqiu_0630_01：cos 0.245 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_qin_zhixia_1130_01：cos 0.424 → ⚠️ 存疑，待人工复核**
+- **char_cheng_youqing_1438_01 ↔ char_ruan_lingjun_2034_01：cos 0.237 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_ruan_tiange_1403_01：cos 0.217 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_shen_hongyu_1734_01：cos 0.252 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_situ_caiwei_0100_01：cos 0.330 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cheng_youqing_1438_01 ↔ char_situ_yuhan_0600_01：cos 0.352 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cheng_youqing_1438_01 ↔ char_song_wanzhao_1503_01：cos 0.304 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cheng_youqing_1438_01 ↔ char_tan_shanshan_0700_01：cos 0.272 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_tang_sitian_0900_01：cos 0.373 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cheng_youqing_1438_01 ↔ char_tantai_weiyu_1433_01：cos 0.151 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_tantai_xingzhu_0230_01：cos 0.045 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_tantai_yuwei_0730_01：cos 0.020 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_wen_manshu_1030_01：cos 0.392 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cheng_youqing_1438_01 ↔ char_xi_weiyu_2134_01：cos 0.275 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_xue_banxia_0330_01：cos 0.245 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_ye_hongyu_0500_01：cos 0.283 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_ye_linger_2004_01：cos 0.242 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_ye_lingjun_0130_01：cos 0.249 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_ye_shanshan_0400_01：cos 0.189 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_ye_yuhan_1804_01：cos 0.398 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cheng_youqing_1438_01 ↔ char_yuchi_ruoli_1000_01：cos 0.201 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_yun_banxia_0030_01：cos 0.355 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cheng_youqing_1438_01 ↔ char_zhong_manshu_2104_01：cos 0.316 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cheng_youqing_1438_01 ↔ char_anya_song：cos 0.347 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cheng_youqing_1438_01 ↔ char_ayano：cos 0.151 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_chen_xiawei：cos 0.164 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_jia：cos 0.260 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_jiang_yueyao：cos 0.371 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cheng_youqing_1438_01 ↔ char_lin_qingwan：cos 0.465 → ⚠️ 存疑，待人工复核**
+- **char_cheng_youqing_1438_01 ↔ char_liu_yinuo_1923_10：cos -0.048 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_luo_qingchuan_1805：cos 0.344 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cheng_youqing_1438_01 ↔ char_pei_yuhan_2300_01：cos 0.173 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_qing_luo：cos 0.254 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_ray_ling：cos 0.412 → ⚠️ 存疑，待人工复核**
+- **char_cheng_youqing_1438_01 ↔ char_runcha：cos 0.063 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_shen_zhilan：cos 0.363 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cheng_youqing_1438_01 ↔ char_su_xiaotang：cos 0.303 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cheng_youqing_1438_01 ↔ char_tang_mengli_2200_01：cos 0.193 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_wen_xiaorou_2140_01：cos 0.176 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_ye_muchen_2100_01：cos 0.204 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_yin_xinyue_2330_01：cos 0.179 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_zhao_ruoxi：cos 0.391 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cheng_youqing_1438_01 ↔ char_duo：cos 0.218 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_duo3_2：cos 0.173 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_cen_zhiwei_1936_01：cos 0.460 → ⚠️ 存疑，待人工复核**
+- **char_cheng_youqing_1438_01 ↔ char_jiang_ruoli_2007_01：cos 0.621 → 同一身份**
+- **char_cheng_youqing_1438_01 ↔ char_xiaog3：cos -0.038 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_xi_manshu_2045_01：cos 0.415 → ⚠️ 存疑，待人工复核**
+- **char_cheng_youqing_1438_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.576 → ⚠️ 存疑，待人工复核**
+- **char_cheng_youqing_1438_01 ↔ char_linghu_zhixia_2133_01：cos 0.552 → ⚠️ 存疑，待人工复核**
+- **char_cheng_youqing_1438_01 ↔ char_qiao_weiyu_2134_01：cos 0.571 → ⚠️ 存疑，待人工复核**
+- **char_cheng_youqing_1438_01 ↔ char_jiang_qinghuan_2203_01：cos 0.291 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_cen_youqing_2204_01：cos 0.315 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cheng_youqing_1438_01 ↔ char_zhong_xiaorou_2233_01：cos 0.340 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cheng_youqing_1438_01 ↔ char_tan_youqing_2234_01：cos 0.340 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cheng_youqing_1438_01 ↔ char_tantai_lingsu_2303_01：cos 0.500 → ⚠️ 存疑，待人工复核**
+- **char_cheng_youqing_1438_01 ↔ char_qiao_qinghuan_2304_01：cos 0.500 → ⚠️ 存疑，待人工复核**
+- **char_cheng_youqing_1438_01 ↔ char_chu_muchen_0004_01：cos -0.032 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_qiao_chaoyan_0004_01：cos -0.019 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_xue_qinghuan_0034_01：cos 0.017 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_tang_yuwei_0217_01：cos 0.362 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cheng_youqing_1438_01 ↔ char_ouyang_chuxia_0250_01：cos 0.441 → ⚠️ 存疑，待人工复核**
+- **char_cheng_youqing_1438_01 ↔ char_bai_zhiruo_0305_01：cos 0.399 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cheng_youqing_1438_01 ↔ char_pei_shanshan_0456_01：cos 0.416 → ⚠️ 存疑，待人工复核**
+- **char_cheng_youqing_1438_01 ↔ char_xi_qingchuan_0618_01：cos 0.363 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cheng_youqing_1438_01 ↔ char_zhong_linger_0732_01：cos 0.483 → ⚠️ 存疑，待人工复核**
+- **char_cheng_youqing_1438_01 ↔ char_hua_qingdai_1029_01：cos 0.498 → ⚠️ 存疑，待人工复核**
+- **char_cheng_youqing_1438_01 ↔ char_tang_banxia_1156_01：cos 0.507 → ⚠️ 存疑，待人工复核**
+- **char_cheng_youqing_1438_01 ↔ char_gu_weiyu_1321_01：cos 0.512 → ⚠️ 存疑，待人工复核**
+- **char_cheng_youqing_1438_01 ↔ char_cheng_hongyu_1435_01：cos 0.323 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cheng_youqing_1438_01 ↔ char_hua_chuxia_1549_01：cos 0.378 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cheng_youqing_1438_01 ↔ char_pei_manshu_1701_01：cos 0.356 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cheng_youqing_1438_01 ↔ char_ye_nanqiao_1811_01：cos 0.353 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cheng_youqing_1438_01 ↔ char_murong_yuyan_1942_01：cos 0.241 → 不同身份**
+- **char_cheng_youqing_1438_01 ↔ char_nangong_lingjun_2054_01：cos 0.333 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_zhixia_1334_01 ↔ char_gu_banxia_1103_01：cos 0.563 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_huo_xinyue_1705_01：cos 0.258 → 不同身份**
+- **char_fu_zhixia_1334_01 ↔ char_linghu_muchen_1736_01：cos 0.225 → 不同身份**
+- **char_fu_zhixia_1334_01 ↔ char_lu_sitian_1405_01：cos 0.119 → 不同身份**
+- **char_fu_zhixia_1334_01 ↔ char_lu_xuejian_1807_01：cos 0.204 → 不同身份**
+- **char_fu_zhixia_1334_01 ↔ char_luo_tiange_1534_01：cos 0.295 → 不同身份**
+- **char_fu_zhixia_1334_01 ↔ char_qiao_banxia_1204_01：cos 0.558 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_shangguan_weiyu_1014_01：cos 0.604 → 同一身份**
+- **char_fu_zhixia_1334_01 ↔ char_situ_muchen_1835_01：cos 0.165 → 不同身份**
+- **char_fu_zhixia_1334_01 ↔ char_situ_yuwei_0934_01：cos 0.548 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_song_anran_1604_01：cos 0.254 → 不同身份**
+- **char_fu_zhixia_1334_01 ↔ char_wen_lingsu_1635_01：cos 0.178 → 不同身份**
+- **char_fu_zhixia_1334_01 ↔ char_xue_hongyu_1034_01：cos 0.689 → 同一身份**
+- **char_fu_zhixia_1334_01 ↔ char_xue_mengli_1234_01：cos 0.580 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_xue_sitian_1508_01：cos 0.194 → 不同身份**
+- **char_fu_zhixia_1334_01 ↔ char_yin_qingdai_1305_01：cos 0.610 → 同一身份**
+- **char_fu_zhixia_1334_01 ↔ char_yuchi_wanzhao_1134_01：cos 0.612 → 同一身份**
+- **char_fu_zhixia_1334_01 ↔ char_yuchi_zhixia_0914_01：cos 0.666 → 同一身份**
+- **char_fu_zhixia_1334_01 ↔ char_cheng_yuwei_1103_01：cos 0.519 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_chu_lingsu_1533_01：cos 0.514 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_fu_linger_1433_01：cos 0.504 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_fu_yuhan_1000_01：cos 0.548 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_gu_sitian_1003_01：cos 0.603 → 同一身份**
+- **char_fu_zhixia_1334_01 ↔ char_liang_chuxia_1503_01：cos 0.427 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_liang_mengli_1203_01：cos 0.549 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_shen_xiaorou_1233_01：cos 0.519 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_shen_xinyue_1404_01：cos 0.523 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_tan_muchen_1133_01：cos 0.564 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_xi_shanshan_1303_01：cos 0.480 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_xue_huaiyu_1034_01：cos 0.529 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_yuchi_lingsu_1333_01：cos 0.557 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_bai_anran_0430_01：cos 0.512 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_bai_yuhan_0830_01：cos 0.432 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_cen_yuhan_1934_01：cos 0.611 → 同一身份**
+- **char_fu_zhixia_1334_01 ↔ char_chu_ruoli_0800_01：cos 0.612 → 同一身份**
+- **char_fu_zhixia_1334_01 ↔ char_fu_caiwei_1833_01：cos 0.574 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_fu_wanzhao_1100_01：cos 0.525 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_gu_chaoyan_1904_01：cos 0.634 → 同一身份**
+- **char_fu_zhixia_1334_01 ↔ char_huo_ruoxi_1200_01：cos 0.602 → 同一身份**
+- **char_fu_zhixia_1334_01 ↔ char_jiang_zhiruo_0300_01：cos 0.470 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_liang_tiange_1303_01：cos 0.590 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_liang_yuyan_1333_01：cos 0.567 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_linghu_chuxia_2204_01：cos 0.591 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_lu_muchen_0530_01：cos 0.608 → 同一身份**
+- **char_fu_zhixia_1334_01 ↔ char_murong_manshu_1704_01：cos 0.571 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_murong_weiyu_0930_01：cos 0.561 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_murong_xingzhu_0200_01：cos 0.508 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_ning_chuxia_0000_01：cos 0.492 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.579 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_qin_linger_1634_01：cos 0.612 → 同一身份**
+- **char_fu_zhixia_1334_01 ↔ char_qin_suqiu_0630_01：cos 0.577 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_qin_zhixia_1130_01：cos 0.583 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_ruan_lingjun_2034_01：cos 0.597 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_ruan_tiange_1403_01：cos 0.668 → 同一身份**
+- **char_fu_zhixia_1334_01 ↔ char_shen_hongyu_1734_01：cos 0.549 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_situ_caiwei_0100_01：cos 0.424 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_situ_yuhan_0600_01：cos 0.558 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_song_wanzhao_1503_01：cos 0.591 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_tan_shanshan_0700_01：cos 0.534 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_tang_sitian_0900_01：cos 0.479 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_tantai_weiyu_1433_01：cos 0.563 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_tantai_xingzhu_0230_01：cos 0.541 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_tantai_yuwei_0730_01：cos 0.486 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_wen_manshu_1030_01：cos 0.494 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_xi_weiyu_2134_01：cos 0.468 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_xue_banxia_0330_01：cos 0.644 → 同一身份**
+- **char_fu_zhixia_1334_01 ↔ char_ye_hongyu_0500_01：cos 0.631 → 同一身份**
+- **char_fu_zhixia_1334_01 ↔ char_ye_linger_2004_01：cos 0.592 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_ye_lingjun_0130_01：cos 0.632 → 同一身份**
+- **char_fu_zhixia_1334_01 ↔ char_ye_shanshan_0400_01：cos 0.475 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_ye_yuhan_1804_01：cos 0.585 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_yuchi_ruoli_1000_01：cos 0.526 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_yun_banxia_0030_01：cos 0.374 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_zhixia_1334_01 ↔ char_zhong_manshu_2104_01：cos 0.428 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_anya_song：cos 0.073 → 不同身份**
+- **char_fu_zhixia_1334_01 ↔ char_ayano：cos 0.124 → 不同身份**
+- **char_fu_zhixia_1334_01 ↔ char_chen_xiawei：cos 0.062 → 不同身份**
+- **char_fu_zhixia_1334_01 ↔ char_jia：cos 0.092 → 不同身份**
+- **char_fu_zhixia_1334_01 ↔ char_jiang_yueyao：cos 0.064 → 不同身份**
+- **char_fu_zhixia_1334_01 ↔ char_lin_qingwan：cos 0.300 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_zhixia_1334_01 ↔ char_liu_yinuo_1923_10：cos -0.022 → 不同身份**
+- **char_fu_zhixia_1334_01 ↔ char_luo_qingchuan_1805：cos 0.613 → 同一身份**
+- **char_fu_zhixia_1334_01 ↔ char_pei_yuhan_2300_01：cos 0.455 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_qing_luo：cos 0.127 → 不同身份**
+- **char_fu_zhixia_1334_01 ↔ char_ray_ling：cos 0.319 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_zhixia_1334_01 ↔ char_runcha：cos 0.029 → 不同身份**
+- **char_fu_zhixia_1334_01 ↔ char_shen_zhilan：cos 0.214 → 不同身份**
+- **char_fu_zhixia_1334_01 ↔ char_su_xiaotang：cos 0.008 → 不同身份**
+- **char_fu_zhixia_1334_01 ↔ char_tang_mengli_2200_01：cos 0.547 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_wen_xiaorou_2140_01：cos 0.528 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_ye_muchen_2100_01：cos 0.483 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_yin_xinyue_2330_01：cos 0.498 → ⚠️ 存疑，待人工复核**
+- **char_fu_zhixia_1334_01 ↔ char_zhao_ruoxi：cos 0.164 → 不同身份**
+- **char_fu_zhixia_1334_01 ↔ char_duo：cos 0.255 → 不同身份**
+- **char_fu_zhixia_1334_01 ↔ char_duo3_2：cos 0.080 → 不同身份**
+- **char_fu_zhixia_1334_01 ↔ char_cen_zhiwei_1936_01：cos 0.362 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_zhixia_1334_01 ↔ char_jiang_ruoli_2007_01：cos 0.200 → 不同身份**
+- **char_fu_zhixia_1334_01 ↔ char_xiaog3：cos 0.130 → 不同身份**
+- **char_fu_zhixia_1334_01 ↔ char_xi_manshu_2045_01：cos 0.153 → 不同身份**
+- **char_fu_zhixia_1334_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.281 → 不同身份**
+- **char_fu_zhixia_1334_01 ↔ char_linghu_zhixia_2133_01：cos 0.302 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_zhixia_1334_01 ↔ char_qiao_weiyu_2134_01：cos 0.195 → 不同身份**
+- **char_fu_zhixia_1334_01 ↔ char_jiang_qinghuan_2203_01：cos 0.235 → 不同身份**
+- **char_fu_zhixia_1334_01 ↔ char_cen_youqing_2204_01：cos 0.064 → 不同身份**
+- **char_fu_zhixia_1334_01 ↔ char_zhong_xiaorou_2233_01：cos 0.185 → 不同身份**
+- **char_fu_zhixia_1334_01 ↔ char_tan_youqing_2234_01：cos 0.185 → 不同身份**
+- **char_fu_zhixia_1334_01 ↔ char_tantai_lingsu_2303_01：cos 0.354 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_zhixia_1334_01 ↔ char_qiao_qinghuan_2304_01：cos 0.354 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_zhixia_1334_01 ↔ char_chu_muchen_0004_01：cos -0.021 → 不同身份**
+- **char_fu_zhixia_1334_01 ↔ char_qiao_chaoyan_0004_01：cos -0.078 → 不同身份**
+- **char_fu_zhixia_1334_01 ↔ char_xue_qinghuan_0034_01：cos 0.008 → 不同身份**
+- **char_fu_zhixia_1334_01 ↔ char_tang_yuwei_0217_01：cos 0.206 → 不同身份**
+- **char_fu_zhixia_1334_01 ↔ char_ouyang_chuxia_0250_01：cos 0.173 → 不同身份**
+- **char_fu_zhixia_1334_01 ↔ char_bai_zhiruo_0305_01：cos 0.373 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_zhixia_1334_01 ↔ char_pei_shanshan_0456_01：cos 0.298 → 不同身份**
+- **char_fu_zhixia_1334_01 ↔ char_xi_qingchuan_0618_01：cos 0.261 → 不同身份**
+- **char_fu_zhixia_1334_01 ↔ char_zhong_linger_0732_01：cos 0.315 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_zhixia_1334_01 ↔ char_hua_qingdai_1029_01：cos 0.327 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_zhixia_1334_01 ↔ char_tang_banxia_1156_01：cos 0.384 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_zhixia_1334_01 ↔ char_gu_weiyu_1321_01：cos 0.318 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_zhixia_1334_01 ↔ char_cheng_hongyu_1435_01：cos 0.196 → 不同身份**
+- **char_fu_zhixia_1334_01 ↔ char_hua_chuxia_1549_01：cos 0.159 → 不同身份**
+- **char_fu_zhixia_1334_01 ↔ char_pei_manshu_1701_01：cos 0.237 → 不同身份**
+- **char_fu_zhixia_1334_01 ↔ char_ye_nanqiao_1811_01：cos 0.142 → 不同身份**
+- **char_fu_zhixia_1334_01 ↔ char_murong_yuyan_1942_01：cos 0.223 → 不同身份**
+- **char_fu_zhixia_1334_01 ↔ char_nangong_lingjun_2054_01：cos 0.286 → 不同身份**
+- **char_gu_banxia_1103_01 ↔ char_huo_xinyue_1705_01：cos 0.274 → 不同身份**
+- **char_gu_banxia_1103_01 ↔ char_linghu_muchen_1736_01：cos 0.254 → 不同身份**
+- **char_gu_banxia_1103_01 ↔ char_lu_sitian_1405_01：cos 0.271 → 不同身份**
+- **char_gu_banxia_1103_01 ↔ char_lu_xuejian_1807_01：cos 0.363 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_gu_banxia_1103_01 ↔ char_luo_tiange_1534_01：cos 0.340 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_gu_banxia_1103_01 ↔ char_qiao_banxia_1204_01：cos 0.728 → 同一身份**
+- **char_gu_banxia_1103_01 ↔ char_shangguan_weiyu_1014_01：cos 0.718 → 同一身份**
+- **char_gu_banxia_1103_01 ↔ char_situ_muchen_1835_01：cos 0.293 → 不同身份**
+- **char_gu_banxia_1103_01 ↔ char_situ_yuwei_0934_01：cos 0.778 → 同一身份**
+- **char_gu_banxia_1103_01 ↔ char_song_anran_1604_01：cos 0.229 → 不同身份**
+- **char_gu_banxia_1103_01 ↔ char_wen_lingsu_1635_01：cos 0.190 → 不同身份**
+- **char_gu_banxia_1103_01 ↔ char_xue_hongyu_1034_01：cos 0.599 → ⚠️ 存疑，待人工复核**
+- **char_gu_banxia_1103_01 ↔ char_xue_mengli_1234_01：cos 0.707 → 同一身份**
+- **char_gu_banxia_1103_01 ↔ char_xue_sitian_1508_01：cos 0.281 → 不同身份**
+- **char_gu_banxia_1103_01 ↔ char_yin_qingdai_1305_01：cos 0.693 → 同一身份**
+- **char_gu_banxia_1103_01 ↔ char_yuchi_wanzhao_1134_01：cos 0.693 → 同一身份**
+- **char_gu_banxia_1103_01 ↔ char_yuchi_zhixia_0914_01：cos 0.544 → ⚠️ 存疑，待人工复核**
+- **char_gu_banxia_1103_01 ↔ char_cheng_yuwei_1103_01：cos 0.697 → 同一身份**
+- **char_gu_banxia_1103_01 ↔ char_chu_lingsu_1533_01：cos 0.626 → 同一身份**
+- **char_gu_banxia_1103_01 ↔ char_fu_linger_1433_01：cos 0.695 → 同一身份**
+- **char_gu_banxia_1103_01 ↔ char_fu_yuhan_1000_01：cos 0.543 → ⚠️ 存疑，待人工复核**
+- **char_gu_banxia_1103_01 ↔ char_gu_sitian_1003_01：cos 0.596 → ⚠️ 存疑，待人工复核**
+- **char_gu_banxia_1103_01 ↔ char_liang_chuxia_1503_01：cos 0.667 → 同一身份**
+- **char_gu_banxia_1103_01 ↔ char_liang_mengli_1203_01：cos 0.717 → 同一身份**
+- **char_gu_banxia_1103_01 ↔ char_shen_xiaorou_1233_01：cos 0.537 → ⚠️ 存疑，待人工复核**
+- **char_gu_banxia_1103_01 ↔ char_shen_xinyue_1404_01：cos 0.766 → 同一身份**
+- **char_gu_banxia_1103_01 ↔ char_tan_muchen_1133_01：cos 0.673 → 同一身份**
+- **char_gu_banxia_1103_01 ↔ char_xi_shanshan_1303_01：cos 0.585 → ⚠️ 存疑，待人工复核**
+- **char_gu_banxia_1103_01 ↔ char_xue_huaiyu_1034_01：cos 0.459 → ⚠️ 存疑，待人工复核**
+- **char_gu_banxia_1103_01 ↔ char_yuchi_lingsu_1333_01：cos 0.726 → 同一身份**
+- **char_gu_banxia_1103_01 ↔ char_bai_anran_0430_01：cos 0.685 → 同一身份**
+- **char_gu_banxia_1103_01 ↔ char_bai_yuhan_0830_01：cos 0.758 → 同一身份**
+- **char_gu_banxia_1103_01 ↔ char_cen_yuhan_1934_01：cos 0.590 → ⚠️ 存疑，待人工复核**
+- **char_gu_banxia_1103_01 ↔ char_chu_ruoli_0800_01：cos 0.631 → 同一身份**
+- **char_gu_banxia_1103_01 ↔ char_fu_caiwei_1833_01：cos 0.784 → 同一身份**
+- **char_gu_banxia_1103_01 ↔ char_fu_wanzhao_1100_01：cos 0.648 → 同一身份**
+- **char_gu_banxia_1103_01 ↔ char_gu_chaoyan_1904_01：cos 0.610 → 同一身份**
+- **char_gu_banxia_1103_01 ↔ char_huo_ruoxi_1200_01：cos 0.595 → ⚠️ 存疑，待人工复核**
+- **char_gu_banxia_1103_01 ↔ char_jiang_zhiruo_0300_01：cos 0.671 → 同一身份**
+- **char_gu_banxia_1103_01 ↔ char_liang_tiange_1303_01：cos 0.565 → ⚠️ 存疑，待人工复核**
+- **char_gu_banxia_1103_01 ↔ char_liang_yuyan_1333_01：cos 0.759 → 同一身份**
+- **char_gu_banxia_1103_01 ↔ char_linghu_chuxia_2204_01：cos 0.432 → ⚠️ 存疑，待人工复核**
+- **char_gu_banxia_1103_01 ↔ char_lu_muchen_0530_01：cos 0.533 → ⚠️ 存疑，待人工复核**
+- **char_gu_banxia_1103_01 ↔ char_murong_manshu_1704_01：cos 0.736 → 同一身份**
+- **char_gu_banxia_1103_01 ↔ char_murong_weiyu_0930_01：cos 0.539 → ⚠️ 存疑，待人工复核**
+- **char_gu_banxia_1103_01 ↔ char_murong_xingzhu_0200_01：cos 0.591 → ⚠️ 存疑，待人工复核**
+- **char_gu_banxia_1103_01 ↔ char_ning_chuxia_0000_01：cos 0.708 → 同一身份**
+- **char_gu_banxia_1103_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.593 → ⚠️ 存疑，待人工复核**
+- **char_gu_banxia_1103_01 ↔ char_qin_linger_1634_01：cos 0.667 → 同一身份**
+- **char_gu_banxia_1103_01 ↔ char_qin_suqiu_0630_01：cos 0.652 → 同一身份**
+- **char_gu_banxia_1103_01 ↔ char_qin_zhixia_1130_01：cos 0.568 → ⚠️ 存疑，待人工复核**
+- **char_gu_banxia_1103_01 ↔ char_ruan_lingjun_2034_01：cos 0.624 → 同一身份**
+- **char_gu_banxia_1103_01 ↔ char_ruan_tiange_1403_01：cos 0.599 → ⚠️ 存疑，待人工复核**
+- **char_gu_banxia_1103_01 ↔ char_shen_hongyu_1734_01：cos 0.778 → 同一身份**
+- **char_gu_banxia_1103_01 ↔ char_situ_caiwei_0100_01：cos 0.551 → ⚠️ 存疑，待人工复核**
+- **char_gu_banxia_1103_01 ↔ char_situ_yuhan_0600_01：cos 0.687 → 同一身份**
+- **char_gu_banxia_1103_01 ↔ char_song_wanzhao_1503_01：cos 0.658 → 同一身份**
+- **char_gu_banxia_1103_01 ↔ char_tan_shanshan_0700_01：cos 0.515 → ⚠️ 存疑，待人工复核**
+- **char_gu_banxia_1103_01 ↔ char_tang_sitian_0900_01：cos 0.628 → 同一身份**
+- **char_gu_banxia_1103_01 ↔ char_tantai_weiyu_1433_01：cos 0.468 → ⚠️ 存疑，待人工复核**
+- **char_gu_banxia_1103_01 ↔ char_tantai_xingzhu_0230_01：cos 0.592 → ⚠️ 存疑，待人工复核**
+- **char_gu_banxia_1103_01 ↔ char_tantai_yuwei_0730_01：cos 0.573 → ⚠️ 存疑，待人工复核**
+- **char_gu_banxia_1103_01 ↔ char_wen_manshu_1030_01：cos 0.657 → 同一身份**
+- **char_gu_banxia_1103_01 ↔ char_xi_weiyu_2134_01：cos 0.740 → 同一身份**
+- **char_gu_banxia_1103_01 ↔ char_xue_banxia_0330_01：cos 0.529 → ⚠️ 存疑，待人工复核**
+- **char_gu_banxia_1103_01 ↔ char_ye_hongyu_0500_01：cos 0.541 → ⚠️ 存疑，待人工复核**
+- **char_gu_banxia_1103_01 ↔ char_ye_linger_2004_01：cos 0.561 → ⚠️ 存疑，待人工复核**
+- **char_gu_banxia_1103_01 ↔ char_ye_lingjun_0130_01：cos 0.499 → ⚠️ 存疑，待人工复核**
+- **char_gu_banxia_1103_01 ↔ char_ye_shanshan_0400_01：cos 0.612 → 同一身份**
+- **char_gu_banxia_1103_01 ↔ char_ye_yuhan_1804_01：cos 0.682 → 同一身份**
+- **char_gu_banxia_1103_01 ↔ char_yuchi_ruoli_1000_01：cos 0.796 → 同一身份**
+- **char_gu_banxia_1103_01 ↔ char_yun_banxia_0030_01：cos 0.508 → ⚠️ 存疑，待人工复核**
+- **char_gu_banxia_1103_01 ↔ char_zhong_manshu_2104_01：cos 0.755 → 同一身份**
+- **char_gu_banxia_1103_01 ↔ char_anya_song：cos 0.065 → 不同身份**
+- **char_gu_banxia_1103_01 ↔ char_ayano：cos 0.123 → 不同身份**
+- **char_gu_banxia_1103_01 ↔ char_chen_xiawei：cos 0.133 → 不同身份**
+- **char_gu_banxia_1103_01 ↔ char_jia：cos 0.114 → 不同身份**
+- **char_gu_banxia_1103_01 ↔ char_jiang_yueyao：cos 0.266 → 不同身份**
+- **char_gu_banxia_1103_01 ↔ char_lin_qingwan：cos 0.340 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_gu_banxia_1103_01 ↔ char_liu_yinuo_1923_10：cos 0.017 → 不同身份**
+- **char_gu_banxia_1103_01 ↔ char_luo_qingchuan_1805：cos 0.674 → 同一身份**
+- **char_gu_banxia_1103_01 ↔ char_pei_yuhan_2300_01：cos 0.709 → 同一身份**
+- **char_gu_banxia_1103_01 ↔ char_qing_luo：cos 0.322 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_gu_banxia_1103_01 ↔ char_ray_ling：cos 0.176 → 不同身份**
+- **char_gu_banxia_1103_01 ↔ char_runcha：cos -0.018 → 不同身份**
+- **char_gu_banxia_1103_01 ↔ char_shen_zhilan：cos 0.181 → 不同身份**
+- **char_gu_banxia_1103_01 ↔ char_su_xiaotang：cos 0.032 → 不同身份**
+- **char_gu_banxia_1103_01 ↔ char_tang_mengli_2200_01：cos 0.750 → 同一身份**
+- **char_gu_banxia_1103_01 ↔ char_wen_xiaorou_2140_01：cos 0.745 → 同一身份**
+- **char_gu_banxia_1103_01 ↔ char_ye_muchen_2100_01：cos 0.663 → 同一身份**
+- **char_gu_banxia_1103_01 ↔ char_yin_xinyue_2330_01：cos 0.723 → 同一身份**
+- **char_gu_banxia_1103_01 ↔ char_zhao_ruoxi：cos 0.278 → 不同身份**
+- **char_gu_banxia_1103_01 ↔ char_duo：cos 0.179 → 不同身份**
+- **char_gu_banxia_1103_01 ↔ char_duo3_2：cos 0.150 → 不同身份**
+- **char_gu_banxia_1103_01 ↔ char_cen_zhiwei_1936_01：cos 0.333 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_gu_banxia_1103_01 ↔ char_jiang_ruoli_2007_01：cos 0.255 → 不同身份**
+- **char_gu_banxia_1103_01 ↔ char_xiaog3：cos 0.212 → 不同身份**
+- **char_gu_banxia_1103_01 ↔ char_xi_manshu_2045_01：cos 0.322 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_gu_banxia_1103_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.226 → 不同身份**
+- **char_gu_banxia_1103_01 ↔ char_linghu_zhixia_2133_01：cos 0.305 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_gu_banxia_1103_01 ↔ char_qiao_weiyu_2134_01：cos 0.214 → 不同身份**
+- **char_gu_banxia_1103_01 ↔ char_jiang_qinghuan_2203_01：cos 0.465 → ⚠️ 存疑，待人工复核**
+- **char_gu_banxia_1103_01 ↔ char_cen_youqing_2204_01：cos 0.107 → 不同身份**
+- **char_gu_banxia_1103_01 ↔ char_zhong_xiaorou_2233_01：cos 0.313 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_gu_banxia_1103_01 ↔ char_tan_youqing_2234_01：cos 0.313 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_gu_banxia_1103_01 ↔ char_tantai_lingsu_2303_01：cos 0.456 → ⚠️ 存疑，待人工复核**
+- **char_gu_banxia_1103_01 ↔ char_qiao_qinghuan_2304_01：cos 0.456 → ⚠️ 存疑，待人工复核**
+- **char_gu_banxia_1103_01 ↔ char_chu_muchen_0004_01：cos 0.006 → 不同身份**
+- **char_gu_banxia_1103_01 ↔ char_qiao_chaoyan_0004_01：cos -0.021 → 不同身份**
+- **char_gu_banxia_1103_01 ↔ char_xue_qinghuan_0034_01：cos -0.043 → 不同身份**
+- **char_gu_banxia_1103_01 ↔ char_tang_yuwei_0217_01：cos 0.335 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_gu_banxia_1103_01 ↔ char_ouyang_chuxia_0250_01：cos 0.271 → 不同身份**
+- **char_gu_banxia_1103_01 ↔ char_bai_zhiruo_0305_01：cos 0.497 → ⚠️ 存疑，待人工复核**
+- **char_gu_banxia_1103_01 ↔ char_pei_shanshan_0456_01：cos 0.502 → ⚠️ 存疑，待人工复核**
+- **char_gu_banxia_1103_01 ↔ char_xi_qingchuan_0618_01：cos 0.491 → ⚠️ 存疑，待人工复核**
+- **char_gu_banxia_1103_01 ↔ char_zhong_linger_0732_01：cos 0.336 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_gu_banxia_1103_01 ↔ char_hua_qingdai_1029_01：cos 0.358 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_gu_banxia_1103_01 ↔ char_tang_banxia_1156_01：cos 0.467 → ⚠️ 存疑，待人工复核**
+- **char_gu_banxia_1103_01 ↔ char_gu_weiyu_1321_01：cos 0.339 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_gu_banxia_1103_01 ↔ char_cheng_hongyu_1435_01：cos 0.366 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_gu_banxia_1103_01 ↔ char_hua_chuxia_1549_01：cos 0.261 → 不同身份**
+- **char_gu_banxia_1103_01 ↔ char_pei_manshu_1701_01：cos 0.313 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_gu_banxia_1103_01 ↔ char_ye_nanqiao_1811_01：cos 0.348 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_gu_banxia_1103_01 ↔ char_murong_yuyan_1942_01：cos 0.375 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_gu_banxia_1103_01 ↔ char_nangong_lingjun_2054_01：cos 0.274 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_linghu_muchen_1736_01：cos 0.631 → 同一身份**
+- **char_huo_xinyue_1705_01 ↔ char_lu_sitian_1405_01：cos 0.542 → ⚠️ 存疑，待人工复核**
+- **char_huo_xinyue_1705_01 ↔ char_lu_xuejian_1807_01：cos 0.591 → ⚠️ 存疑，待人工复核**
+- **char_huo_xinyue_1705_01 ↔ char_luo_tiange_1534_01：cos 0.384 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_huo_xinyue_1705_01 ↔ char_qiao_banxia_1204_01：cos 0.266 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_shangguan_weiyu_1014_01：cos 0.294 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_situ_muchen_1835_01：cos 0.374 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_huo_xinyue_1705_01 ↔ char_situ_yuwei_0934_01：cos 0.247 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_song_anran_1604_01：cos 0.549 → ⚠️ 存疑，待人工复核**
+- **char_huo_xinyue_1705_01 ↔ char_wen_lingsu_1635_01：cos 0.370 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_huo_xinyue_1705_01 ↔ char_xue_hongyu_1034_01：cos 0.215 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_xue_mengli_1234_01：cos 0.258 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_xue_sitian_1508_01：cos 0.384 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_huo_xinyue_1705_01 ↔ char_yin_qingdai_1305_01：cos 0.311 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_huo_xinyue_1705_01 ↔ char_yuchi_wanzhao_1134_01：cos 0.261 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_yuchi_zhixia_0914_01：cos 0.190 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_cheng_yuwei_1103_01：cos 0.240 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_chu_lingsu_1533_01：cos 0.444 → ⚠️ 存疑，待人工复核**
+- **char_huo_xinyue_1705_01 ↔ char_fu_linger_1433_01：cos 0.158 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_fu_yuhan_1000_01：cos 0.191 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_gu_sitian_1003_01：cos 0.207 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_liang_chuxia_1503_01：cos 0.066 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_liang_mengli_1203_01：cos 0.315 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_huo_xinyue_1705_01 ↔ char_shen_xiaorou_1233_01：cos 0.270 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_shen_xinyue_1404_01：cos 0.292 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_tan_muchen_1133_01：cos 0.192 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_xi_shanshan_1303_01：cos 0.309 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_huo_xinyue_1705_01 ↔ char_xue_huaiyu_1034_01：cos 0.104 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_yuchi_lingsu_1333_01：cos 0.325 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_huo_xinyue_1705_01 ↔ char_bai_anran_0430_01：cos 0.201 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_bai_yuhan_0830_01：cos 0.177 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_cen_yuhan_1934_01：cos 0.190 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_chu_ruoli_0800_01：cos 0.301 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_huo_xinyue_1705_01 ↔ char_fu_caiwei_1833_01：cos 0.276 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_fu_wanzhao_1100_01：cos 0.350 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_huo_xinyue_1705_01 ↔ char_gu_chaoyan_1904_01：cos 0.318 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_huo_xinyue_1705_01 ↔ char_huo_ruoxi_1200_01：cos 0.176 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_jiang_zhiruo_0300_01：cos 0.246 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_liang_tiange_1303_01：cos 0.207 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_liang_yuyan_1333_01：cos 0.368 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_huo_xinyue_1705_01 ↔ char_linghu_chuxia_2204_01：cos 0.098 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_lu_muchen_0530_01：cos 0.215 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_murong_manshu_1704_01：cos 0.278 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_murong_weiyu_0930_01：cos 0.192 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_murong_xingzhu_0200_01：cos 0.116 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_ning_chuxia_0000_01：cos 0.173 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.292 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_qin_linger_1634_01：cos 0.236 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_qin_suqiu_0630_01：cos 0.284 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_qin_zhixia_1130_01：cos 0.247 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_ruan_lingjun_2034_01：cos 0.233 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_ruan_tiange_1403_01：cos 0.161 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_shen_hongyu_1734_01：cos 0.227 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_situ_caiwei_0100_01：cos 0.407 → ⚠️ 存疑，待人工复核**
+- **char_huo_xinyue_1705_01 ↔ char_situ_yuhan_0600_01：cos 0.290 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_song_wanzhao_1503_01：cos 0.177 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_tan_shanshan_0700_01：cos 0.201 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_tang_sitian_0900_01：cos 0.446 → ⚠️ 存疑，待人工复核**
+- **char_huo_xinyue_1705_01 ↔ char_tantai_weiyu_1433_01：cos 0.075 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_tantai_xingzhu_0230_01：cos 0.087 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_tantai_yuwei_0730_01：cos 0.020 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_wen_manshu_1030_01：cos 0.383 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_huo_xinyue_1705_01 ↔ char_xi_weiyu_2134_01：cos 0.237 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_xue_banxia_0330_01：cos 0.273 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_ye_hongyu_0500_01：cos 0.212 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_ye_linger_2004_01：cos 0.244 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_ye_lingjun_0130_01：cos 0.143 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_ye_shanshan_0400_01：cos 0.162 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_ye_yuhan_1804_01：cos 0.198 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_yuchi_ruoli_1000_01：cos 0.182 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_yun_banxia_0030_01：cos 0.259 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_zhong_manshu_2104_01：cos 0.258 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_anya_song：cos 0.077 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_ayano：cos 0.192 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_chen_xiawei：cos 0.122 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_jia：cos 0.250 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_jiang_yueyao：cos 0.265 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_lin_qingwan：cos 0.414 → ⚠️ 存疑，待人工复核**
+- **char_huo_xinyue_1705_01 ↔ char_liu_yinuo_1923_10：cos -0.012 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_luo_qingchuan_1805：cos 0.325 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_huo_xinyue_1705_01 ↔ char_pei_yuhan_2300_01：cos 0.104 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_qing_luo：cos 0.308 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_huo_xinyue_1705_01 ↔ char_ray_ling：cos 0.333 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_huo_xinyue_1705_01 ↔ char_runcha：cos 0.077 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_shen_zhilan：cos 0.381 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_huo_xinyue_1705_01 ↔ char_su_xiaotang：cos 0.164 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_tang_mengli_2200_01：cos 0.120 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_wen_xiaorou_2140_01：cos 0.058 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_ye_muchen_2100_01：cos 0.153 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_yin_xinyue_2330_01：cos 0.215 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_zhao_ruoxi：cos 0.440 → ⚠️ 存疑，待人工复核**
+- **char_huo_xinyue_1705_01 ↔ char_duo：cos 0.141 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_duo3_2：cos 0.354 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_huo_xinyue_1705_01 ↔ char_cen_zhiwei_1936_01：cos 0.508 → ⚠️ 存疑，待人工复核**
+- **char_huo_xinyue_1705_01 ↔ char_jiang_ruoli_2007_01：cos 0.399 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_huo_xinyue_1705_01 ↔ char_xiaog3：cos -0.171 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_xi_manshu_2045_01：cos 0.499 → ⚠️ 存疑，待人工复核**
+- **char_huo_xinyue_1705_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.318 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_huo_xinyue_1705_01 ↔ char_linghu_zhixia_2133_01：cos 0.369 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_huo_xinyue_1705_01 ↔ char_qiao_weiyu_2134_01：cos 0.432 → ⚠️ 存疑，待人工复核**
+- **char_huo_xinyue_1705_01 ↔ char_jiang_qinghuan_2203_01：cos 0.500 → ⚠️ 存疑，待人工复核**
+- **char_huo_xinyue_1705_01 ↔ char_cen_youqing_2204_01：cos 0.397 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_huo_xinyue_1705_01 ↔ char_zhong_xiaorou_2233_01：cos 0.349 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_huo_xinyue_1705_01 ↔ char_tan_youqing_2234_01：cos 0.349 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_huo_xinyue_1705_01 ↔ char_tantai_lingsu_2303_01：cos 0.393 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_huo_xinyue_1705_01 ↔ char_qiao_qinghuan_2304_01：cos 0.393 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_huo_xinyue_1705_01 ↔ char_chu_muchen_0004_01：cos 0.011 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_qiao_chaoyan_0004_01：cos -0.006 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_xue_qinghuan_0034_01：cos 0.004 → 不同身份**
+- **char_huo_xinyue_1705_01 ↔ char_tang_yuwei_0217_01：cos 0.397 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_huo_xinyue_1705_01 ↔ char_ouyang_chuxia_0250_01：cos 0.408 → ⚠️ 存疑，待人工复核**
+- **char_huo_xinyue_1705_01 ↔ char_bai_zhiruo_0305_01：cos 0.391 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_huo_xinyue_1705_01 ↔ char_pei_shanshan_0456_01：cos 0.491 → ⚠️ 存疑，待人工复核**
+- **char_huo_xinyue_1705_01 ↔ char_xi_qingchuan_0618_01：cos 0.459 → ⚠️ 存疑，待人工复核**
+- **char_huo_xinyue_1705_01 ↔ char_zhong_linger_0732_01：cos 0.325 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_huo_xinyue_1705_01 ↔ char_hua_qingdai_1029_01：cos 0.472 → ⚠️ 存疑，待人工复核**
+- **char_huo_xinyue_1705_01 ↔ char_tang_banxia_1156_01：cos 0.453 → ⚠️ 存疑，待人工复核**
+- **char_huo_xinyue_1705_01 ↔ char_gu_weiyu_1321_01：cos 0.514 → ⚠️ 存疑，待人工复核**
+- **char_huo_xinyue_1705_01 ↔ char_cheng_hongyu_1435_01：cos 0.350 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_huo_xinyue_1705_01 ↔ char_hua_chuxia_1549_01：cos 0.388 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_huo_xinyue_1705_01 ↔ char_pei_manshu_1701_01：cos 0.355 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_huo_xinyue_1705_01 ↔ char_ye_nanqiao_1811_01：cos 0.410 → ⚠️ 存疑，待人工复核**
+- **char_huo_xinyue_1705_01 ↔ char_murong_yuyan_1942_01：cos 0.438 → ⚠️ 存疑，待人工复核**
+- **char_huo_xinyue_1705_01 ↔ char_nangong_lingjun_2054_01：cos 0.352 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_linghu_muchen_1736_01 ↔ char_lu_sitian_1405_01：cos 0.543 → ⚠️ 存疑，待人工复核**
+- **char_linghu_muchen_1736_01 ↔ char_lu_xuejian_1807_01：cos 0.473 → ⚠️ 存疑，待人工复核**
+- **char_linghu_muchen_1736_01 ↔ char_luo_tiange_1534_01：cos 0.461 → ⚠️ 存疑，待人工复核**
+- **char_linghu_muchen_1736_01 ↔ char_qiao_banxia_1204_01：cos 0.217 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_shangguan_weiyu_1014_01：cos 0.244 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_situ_muchen_1835_01：cos 0.430 → ⚠️ 存疑，待人工复核**
+- **char_linghu_muchen_1736_01 ↔ char_situ_yuwei_0934_01：cos 0.242 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_song_anran_1604_01：cos 0.520 → ⚠️ 存疑，待人工复核**
+- **char_linghu_muchen_1736_01 ↔ char_wen_lingsu_1635_01：cos 0.537 → ⚠️ 存疑，待人工复核**
+- **char_linghu_muchen_1736_01 ↔ char_xue_hongyu_1034_01：cos 0.175 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_xue_mengli_1234_01：cos 0.278 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_xue_sitian_1508_01：cos 0.449 → ⚠️ 存疑，待人工复核**
+- **char_linghu_muchen_1736_01 ↔ char_yin_qingdai_1305_01：cos 0.246 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_yuchi_wanzhao_1134_01：cos 0.241 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_yuchi_zhixia_0914_01：cos 0.184 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_cheng_yuwei_1103_01：cos 0.208 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_chu_lingsu_1533_01：cos 0.416 → ⚠️ 存疑，待人工复核**
+- **char_linghu_muchen_1736_01 ↔ char_fu_linger_1433_01：cos 0.058 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_fu_yuhan_1000_01：cos 0.173 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_gu_sitian_1003_01：cos 0.163 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_liang_chuxia_1503_01：cos -0.023 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_liang_mengli_1203_01：cos 0.337 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_linghu_muchen_1736_01 ↔ char_shen_xiaorou_1233_01：cos 0.340 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_linghu_muchen_1736_01 ↔ char_shen_xinyue_1404_01：cos 0.243 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_tan_muchen_1133_01：cos 0.249 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_xi_shanshan_1303_01：cos 0.327 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_linghu_muchen_1736_01 ↔ char_xue_huaiyu_1034_01：cos 0.196 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_yuchi_lingsu_1333_01：cos 0.277 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_bai_anran_0430_01：cos 0.212 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_bai_yuhan_0830_01：cos 0.121 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_cen_yuhan_1934_01：cos 0.214 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_chu_ruoli_0800_01：cos 0.342 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_linghu_muchen_1736_01 ↔ char_fu_caiwei_1833_01：cos 0.234 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_fu_wanzhao_1100_01：cos 0.405 → ⚠️ 存疑，待人工复核**
+- **char_linghu_muchen_1736_01 ↔ char_gu_chaoyan_1904_01：cos 0.343 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_linghu_muchen_1736_01 ↔ char_huo_ruoxi_1200_01：cos 0.206 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_jiang_zhiruo_0300_01：cos 0.117 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_liang_tiange_1303_01：cos 0.243 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_liang_yuyan_1333_01：cos 0.366 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_linghu_muchen_1736_01 ↔ char_linghu_chuxia_2204_01：cos 0.130 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_lu_muchen_0530_01：cos 0.273 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_murong_manshu_1704_01：cos 0.302 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_linghu_muchen_1736_01 ↔ char_murong_weiyu_0930_01：cos 0.273 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_murong_xingzhu_0200_01：cos 0.044 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_ning_chuxia_0000_01：cos 0.074 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.314 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_linghu_muchen_1736_01 ↔ char_qin_linger_1634_01：cos 0.249 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_qin_suqiu_0630_01：cos 0.235 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_qin_zhixia_1130_01：cos 0.232 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_ruan_lingjun_2034_01：cos 0.239 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_ruan_tiange_1403_01：cos 0.160 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_shen_hongyu_1734_01：cos 0.185 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_situ_caiwei_0100_01：cos 0.455 → ⚠️ 存疑，待人工复核**
+- **char_linghu_muchen_1736_01 ↔ char_situ_yuhan_0600_01：cos 0.310 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_linghu_muchen_1736_01 ↔ char_song_wanzhao_1503_01：cos 0.246 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_tan_shanshan_0700_01：cos 0.254 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_tang_sitian_0900_01：cos 0.460 → ⚠️ 存疑，待人工复核**
+- **char_linghu_muchen_1736_01 ↔ char_tantai_weiyu_1433_01：cos 0.107 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_tantai_xingzhu_0230_01：cos 0.025 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_tantai_yuwei_0730_01：cos -0.093 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_wen_manshu_1030_01：cos 0.372 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_linghu_muchen_1736_01 ↔ char_xi_weiyu_2134_01：cos 0.209 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_xue_banxia_0330_01：cos 0.240 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_ye_hongyu_0500_01：cos 0.278 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_ye_linger_2004_01：cos 0.264 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_ye_lingjun_0130_01：cos 0.150 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_ye_shanshan_0400_01：cos 0.102 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_ye_yuhan_1804_01：cos 0.210 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_yuchi_ruoli_1000_01：cos 0.155 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_yun_banxia_0030_01：cos 0.330 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_linghu_muchen_1736_01 ↔ char_zhong_manshu_2104_01：cos 0.219 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_anya_song：cos 0.253 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_ayano：cos 0.130 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_chen_xiawei：cos 0.186 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_jia：cos 0.212 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_jiang_yueyao：cos 0.282 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_lin_qingwan：cos 0.427 → ⚠️ 存疑，待人工复核**
+- **char_linghu_muchen_1736_01 ↔ char_liu_yinuo_1923_10：cos -0.027 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_luo_qingchuan_1805：cos 0.228 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_pei_yuhan_2300_01：cos 0.004 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_qing_luo：cos 0.237 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_ray_ling：cos 0.417 → ⚠️ 存疑，待人工复核**
+- **char_linghu_muchen_1736_01 ↔ char_runcha：cos 0.031 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_shen_zhilan：cos 0.429 → ⚠️ 存疑，待人工复核**
+- **char_linghu_muchen_1736_01 ↔ char_su_xiaotang：cos 0.255 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_tang_mengli_2200_01：cos 0.108 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_wen_xiaorou_2140_01：cos 0.067 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_ye_muchen_2100_01：cos 0.101 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_yin_xinyue_2330_01：cos 0.109 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_zhao_ruoxi：cos 0.381 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_linghu_muchen_1736_01 ↔ char_duo：cos 0.165 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_duo3_2：cos 0.231 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_cen_zhiwei_1936_01：cos 0.566 → ⚠️ 存疑，待人工复核**
+- **char_linghu_muchen_1736_01 ↔ char_jiang_ruoli_2007_01：cos 0.546 → ⚠️ 存疑，待人工复核**
+- **char_linghu_muchen_1736_01 ↔ char_xiaog3：cos -0.160 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_xi_manshu_2045_01：cos 0.445 → ⚠️ 存疑，待人工复核**
+- **char_linghu_muchen_1736_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.461 → ⚠️ 存疑，待人工复核**
+- **char_linghu_muchen_1736_01 ↔ char_linghu_zhixia_2133_01：cos 0.492 → ⚠️ 存疑，待人工复核**
+- **char_linghu_muchen_1736_01 ↔ char_qiao_weiyu_2134_01：cos 0.506 → ⚠️ 存疑，待人工复核**
+- **char_linghu_muchen_1736_01 ↔ char_jiang_qinghuan_2203_01：cos 0.448 → ⚠️ 存疑，待人工复核**
+- **char_linghu_muchen_1736_01 ↔ char_cen_youqing_2204_01：cos 0.354 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_linghu_muchen_1736_01 ↔ char_zhong_xiaorou_2233_01：cos 0.399 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_linghu_muchen_1736_01 ↔ char_tan_youqing_2234_01：cos 0.399 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_linghu_muchen_1736_01 ↔ char_tantai_lingsu_2303_01：cos 0.459 → ⚠️ 存疑，待人工复核**
+- **char_linghu_muchen_1736_01 ↔ char_qiao_qinghuan_2304_01：cos 0.459 → ⚠️ 存疑，待人工复核**
+- **char_linghu_muchen_1736_01 ↔ char_chu_muchen_0004_01：cos 0.022 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_qiao_chaoyan_0004_01：cos -0.057 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_xue_qinghuan_0034_01：cos -0.029 → 不同身份**
+- **char_linghu_muchen_1736_01 ↔ char_tang_yuwei_0217_01：cos 0.308 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_linghu_muchen_1736_01 ↔ char_ouyang_chuxia_0250_01：cos 0.505 → ⚠️ 存疑，待人工复核**
+- **char_linghu_muchen_1736_01 ↔ char_bai_zhiruo_0305_01：cos 0.438 → ⚠️ 存疑，待人工复核**
+- **char_linghu_muchen_1736_01 ↔ char_pei_shanshan_0456_01：cos 0.472 → ⚠️ 存疑，待人工复核**
+- **char_linghu_muchen_1736_01 ↔ char_xi_qingchuan_0618_01：cos 0.468 → ⚠️ 存疑，待人工复核**
+- **char_linghu_muchen_1736_01 ↔ char_zhong_linger_0732_01：cos 0.450 → ⚠️ 存疑，待人工复核**
+- **char_linghu_muchen_1736_01 ↔ char_hua_qingdai_1029_01：cos 0.556 → ⚠️ 存疑，待人工复核**
+- **char_linghu_muchen_1736_01 ↔ char_tang_banxia_1156_01：cos 0.471 → ⚠️ 存疑，待人工复核**
+- **char_linghu_muchen_1736_01 ↔ char_gu_weiyu_1321_01：cos 0.511 → ⚠️ 存疑，待人工复核**
+- **char_linghu_muchen_1736_01 ↔ char_cheng_hongyu_1435_01：cos 0.456 → ⚠️ 存疑，待人工复核**
+- **char_linghu_muchen_1736_01 ↔ char_hua_chuxia_1549_01：cos 0.476 → ⚠️ 存疑，待人工复核**
+- **char_linghu_muchen_1736_01 ↔ char_pei_manshu_1701_01：cos 0.369 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_linghu_muchen_1736_01 ↔ char_ye_nanqiao_1811_01：cos 0.439 → ⚠️ 存疑，待人工复核**
+- **char_linghu_muchen_1736_01 ↔ char_murong_yuyan_1942_01：cos 0.377 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_linghu_muchen_1736_01 ↔ char_nangong_lingjun_2054_01：cos 0.421 → ⚠️ 存疑，待人工复核**
+- **char_lu_sitian_1405_01 ↔ char_lu_xuejian_1807_01：cos 0.485 → ⚠️ 存疑，待人工复核**
+- **char_lu_sitian_1405_01 ↔ char_luo_tiange_1534_01：cos 0.438 → ⚠️ 存疑，待人工复核**
+- **char_lu_sitian_1405_01 ↔ char_qiao_banxia_1204_01：cos 0.205 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_shangguan_weiyu_1014_01：cos 0.227 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_situ_muchen_1835_01：cos 0.487 → ⚠️ 存疑，待人工复核**
+- **char_lu_sitian_1405_01 ↔ char_situ_yuwei_0934_01：cos 0.224 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_song_anran_1604_01：cos 0.467 → ⚠️ 存疑，待人工复核**
+- **char_lu_sitian_1405_01 ↔ char_wen_lingsu_1635_01：cos 0.272 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_xue_hongyu_1034_01：cos 0.160 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_xue_mengli_1234_01：cos 0.230 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_xue_sitian_1508_01：cos 0.543 → ⚠️ 存疑，待人工复核**
+- **char_lu_sitian_1405_01 ↔ char_yin_qingdai_1305_01：cos 0.203 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_yuchi_wanzhao_1134_01：cos 0.187 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_yuchi_zhixia_0914_01：cos 0.174 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_cheng_yuwei_1103_01：cos 0.233 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_chu_lingsu_1533_01：cos 0.400 → ⚠️ 存疑，待人工复核**
+- **char_lu_sitian_1405_01 ↔ char_fu_linger_1433_01：cos 0.115 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_fu_yuhan_1000_01：cos 0.189 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_gu_sitian_1003_01：cos 0.113 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_liang_chuxia_1503_01：cos 0.072 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_liang_mengli_1203_01：cos 0.274 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_shen_xiaorou_1233_01：cos 0.269 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_shen_xinyue_1404_01：cos 0.265 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_tan_muchen_1133_01：cos 0.188 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_xi_shanshan_1303_01：cos 0.259 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_xue_huaiyu_1034_01：cos 0.079 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_yuchi_lingsu_1333_01：cos 0.290 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_bai_anran_0430_01：cos 0.169 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_bai_yuhan_0830_01：cos 0.213 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_cen_yuhan_1934_01：cos 0.163 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_chu_ruoli_0800_01：cos 0.239 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_fu_caiwei_1833_01：cos 0.229 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_fu_wanzhao_1100_01：cos 0.279 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_gu_chaoyan_1904_01：cos 0.235 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_huo_ruoxi_1200_01：cos 0.132 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_jiang_zhiruo_0300_01：cos 0.135 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_liang_tiange_1303_01：cos 0.135 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_liang_yuyan_1333_01：cos 0.309 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_sitian_1405_01 ↔ char_linghu_chuxia_2204_01：cos 0.005 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_lu_muchen_0530_01：cos 0.092 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_murong_manshu_1704_01：cos 0.244 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_murong_weiyu_0930_01：cos 0.149 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_murong_xingzhu_0200_01：cos 0.084 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_ning_chuxia_0000_01：cos 0.100 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.180 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_qin_linger_1634_01：cos 0.182 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_qin_suqiu_0630_01：cos 0.180 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_qin_zhixia_1130_01：cos 0.208 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_ruan_lingjun_2034_01：cos 0.117 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_ruan_tiange_1403_01：cos 0.121 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_shen_hongyu_1734_01：cos 0.208 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_situ_caiwei_0100_01：cos 0.338 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_sitian_1405_01 ↔ char_situ_yuhan_0600_01：cos 0.251 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_song_wanzhao_1503_01：cos 0.189 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_tan_shanshan_0700_01：cos 0.067 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_tang_sitian_0900_01：cos 0.401 → ⚠️ 存疑，待人工复核**
+- **char_lu_sitian_1405_01 ↔ char_tantai_weiyu_1433_01：cos 0.024 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_tantai_xingzhu_0230_01：cos 0.046 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_tantai_yuwei_0730_01：cos 0.010 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_wen_manshu_1030_01：cos 0.360 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_sitian_1405_01 ↔ char_xi_weiyu_2134_01：cos 0.204 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_xue_banxia_0330_01：cos 0.185 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_ye_hongyu_0500_01：cos 0.188 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_ye_linger_2004_01：cos 0.180 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_ye_lingjun_0130_01：cos 0.082 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_ye_shanshan_0400_01：cos 0.173 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_ye_yuhan_1804_01：cos 0.184 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_yuchi_ruoli_1000_01：cos 0.182 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_yun_banxia_0030_01：cos 0.242 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_zhong_manshu_2104_01：cos 0.261 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_anya_song：cos 0.184 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_ayano：cos 0.132 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_chen_xiawei：cos 0.164 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_jia：cos 0.285 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_jiang_yueyao：cos 0.271 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_lin_qingwan：cos 0.431 → ⚠️ 存疑，待人工复核**
+- **char_lu_sitian_1405_01 ↔ char_liu_yinuo_1923_10：cos -0.002 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_luo_qingchuan_1805：cos 0.278 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_pei_yuhan_2300_01：cos 0.068 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_qing_luo：cos 0.373 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_sitian_1405_01 ↔ char_ray_ling：cos 0.299 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_runcha：cos 0.032 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_shen_zhilan：cos 0.382 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_sitian_1405_01 ↔ char_su_xiaotang：cos 0.207 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_tang_mengli_2200_01：cos 0.175 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_wen_xiaorou_2140_01：cos 0.043 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_ye_muchen_2100_01：cos 0.137 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_yin_xinyue_2330_01：cos 0.078 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_zhao_ruoxi：cos 0.402 → ⚠️ 存疑，待人工复核**
+- **char_lu_sitian_1405_01 ↔ char_duo：cos 0.198 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_duo3_2：cos 0.150 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_cen_zhiwei_1936_01：cos 0.528 → ⚠️ 存疑，待人工复核**
+- **char_lu_sitian_1405_01 ↔ char_jiang_ruoli_2007_01：cos 0.406 → ⚠️ 存疑，待人工复核**
+- **char_lu_sitian_1405_01 ↔ char_xiaog3：cos -0.148 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_xi_manshu_2045_01：cos 0.457 → ⚠️ 存疑，待人工复核**
+- **char_lu_sitian_1405_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.225 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_linghu_zhixia_2133_01：cos 0.332 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_sitian_1405_01 ↔ char_qiao_weiyu_2134_01：cos 0.510 → ⚠️ 存疑，待人工复核**
+- **char_lu_sitian_1405_01 ↔ char_jiang_qinghuan_2203_01：cos 0.382 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_sitian_1405_01 ↔ char_cen_youqing_2204_01：cos 0.284 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_zhong_xiaorou_2233_01：cos 0.401 → ⚠️ 存疑，待人工复核**
+- **char_lu_sitian_1405_01 ↔ char_tan_youqing_2234_01：cos 0.401 → ⚠️ 存疑，待人工复核**
+- **char_lu_sitian_1405_01 ↔ char_tantai_lingsu_2303_01：cos 0.424 → ⚠️ 存疑，待人工复核**
+- **char_lu_sitian_1405_01 ↔ char_qiao_qinghuan_2304_01：cos 0.424 → ⚠️ 存疑，待人工复核**
+- **char_lu_sitian_1405_01 ↔ char_chu_muchen_0004_01：cos -0.018 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_qiao_chaoyan_0004_01：cos 0.006 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_xue_qinghuan_0034_01：cos 0.010 → 不同身份**
+- **char_lu_sitian_1405_01 ↔ char_tang_yuwei_0217_01：cos 0.412 → ⚠️ 存疑，待人工复核**
+- **char_lu_sitian_1405_01 ↔ char_ouyang_chuxia_0250_01：cos 0.396 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_sitian_1405_01 ↔ char_bai_zhiruo_0305_01：cos 0.434 → ⚠️ 存疑，待人工复核**
+- **char_lu_sitian_1405_01 ↔ char_pei_shanshan_0456_01：cos 0.436 → ⚠️ 存疑，待人工复核**
+- **char_lu_sitian_1405_01 ↔ char_xi_qingchuan_0618_01：cos 0.393 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_sitian_1405_01 ↔ char_zhong_linger_0732_01：cos 0.342 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_sitian_1405_01 ↔ char_hua_qingdai_1029_01：cos 0.507 → ⚠️ 存疑，待人工复核**
+- **char_lu_sitian_1405_01 ↔ char_tang_banxia_1156_01：cos 0.354 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_sitian_1405_01 ↔ char_gu_weiyu_1321_01：cos 0.464 → ⚠️ 存疑，待人工复核**
+- **char_lu_sitian_1405_01 ↔ char_cheng_hongyu_1435_01：cos 0.430 → ⚠️ 存疑，待人工复核**
+- **char_lu_sitian_1405_01 ↔ char_hua_chuxia_1549_01：cos 0.377 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_sitian_1405_01 ↔ char_pei_manshu_1701_01：cos 0.343 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_sitian_1405_01 ↔ char_ye_nanqiao_1811_01：cos 0.403 → ⚠️ 存疑，待人工复核**
+- **char_lu_sitian_1405_01 ↔ char_murong_yuyan_1942_01：cos 0.330 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_sitian_1405_01 ↔ char_nangong_lingjun_2054_01：cos 0.408 → ⚠️ 存疑，待人工复核**
+- **char_lu_xuejian_1807_01 ↔ char_luo_tiange_1534_01：cos 0.359 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_xuejian_1807_01 ↔ char_qiao_banxia_1204_01：cos 0.335 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_xuejian_1807_01 ↔ char_shangguan_weiyu_1014_01：cos 0.271 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_situ_muchen_1835_01：cos 0.286 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_situ_yuwei_0934_01：cos 0.251 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_song_anran_1604_01：cos 0.583 → ⚠️ 存疑，待人工复核**
+- **char_lu_xuejian_1807_01 ↔ char_wen_lingsu_1635_01：cos 0.367 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_xuejian_1807_01 ↔ char_xue_hongyu_1034_01：cos 0.179 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_xue_mengli_1234_01：cos 0.240 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_xue_sitian_1508_01：cos 0.412 → ⚠️ 存疑，待人工复核**
+- **char_lu_xuejian_1807_01 ↔ char_yin_qingdai_1305_01：cos 0.387 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_xuejian_1807_01 ↔ char_yuchi_wanzhao_1134_01：cos 0.224 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_yuchi_zhixia_0914_01：cos 0.231 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_cheng_yuwei_1103_01：cos 0.380 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_xuejian_1807_01 ↔ char_chu_lingsu_1533_01：cos 0.392 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_xuejian_1807_01 ↔ char_fu_linger_1433_01：cos 0.247 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_fu_yuhan_1000_01：cos 0.191 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_gu_sitian_1003_01：cos 0.334 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_xuejian_1807_01 ↔ char_liang_chuxia_1503_01：cos 0.133 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_liang_mengli_1203_01：cos 0.279 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_shen_xiaorou_1233_01：cos 0.163 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_shen_xinyue_1404_01：cos 0.357 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_xuejian_1807_01 ↔ char_tan_muchen_1133_01：cos 0.190 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_xi_shanshan_1303_01：cos 0.196 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_xue_huaiyu_1034_01：cos 0.094 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_yuchi_lingsu_1333_01：cos 0.386 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_xuejian_1807_01 ↔ char_bai_anran_0430_01：cos 0.235 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_bai_yuhan_0830_01：cos 0.333 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_xuejian_1807_01 ↔ char_cen_yuhan_1934_01：cos 0.194 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_chu_ruoli_0800_01：cos 0.279 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_fu_caiwei_1833_01：cos 0.315 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_xuejian_1807_01 ↔ char_fu_wanzhao_1100_01：cos 0.278 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_gu_chaoyan_1904_01：cos 0.242 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_huo_ruoxi_1200_01：cos 0.162 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_jiang_zhiruo_0300_01：cos 0.337 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_xuejian_1807_01 ↔ char_liang_tiange_1303_01：cos 0.189 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_liang_yuyan_1333_01：cos 0.437 → ⚠️ 存疑，待人工复核**
+- **char_lu_xuejian_1807_01 ↔ char_linghu_chuxia_2204_01：cos 0.098 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_lu_muchen_0530_01：cos 0.164 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_murong_manshu_1704_01：cos 0.256 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_murong_weiyu_0930_01：cos 0.132 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_murong_xingzhu_0200_01：cos 0.254 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_ning_chuxia_0000_01：cos 0.287 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.229 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_qin_linger_1634_01：cos 0.186 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_qin_suqiu_0630_01：cos 0.301 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_xuejian_1807_01 ↔ char_qin_zhixia_1130_01：cos 0.264 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_ruan_lingjun_2034_01：cos 0.191 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_ruan_tiange_1403_01：cos 0.112 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_shen_hongyu_1734_01：cos 0.282 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_situ_caiwei_0100_01：cos 0.325 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_xuejian_1807_01 ↔ char_situ_yuhan_0600_01：cos 0.257 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_song_wanzhao_1503_01：cos 0.192 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_tan_shanshan_0700_01：cos 0.124 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_tang_sitian_0900_01：cos 0.406 → ⚠️ 存疑，待人工复核**
+- **char_lu_xuejian_1807_01 ↔ char_tantai_weiyu_1433_01：cos 0.073 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_tantai_xingzhu_0230_01：cos 0.228 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_tantai_yuwei_0730_01：cos 0.180 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_wen_manshu_1030_01：cos 0.316 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_xuejian_1807_01 ↔ char_xi_weiyu_2134_01：cos 0.324 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_xuejian_1807_01 ↔ char_xue_banxia_0330_01：cos 0.186 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_ye_hongyu_0500_01：cos 0.133 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_ye_linger_2004_01：cos 0.143 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_ye_lingjun_0130_01：cos 0.077 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_ye_shanshan_0400_01：cos 0.300 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_xuejian_1807_01 ↔ char_ye_yuhan_1804_01：cos 0.222 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_yuchi_ruoli_1000_01：cos 0.251 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_yun_banxia_0030_01：cos 0.271 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_zhong_manshu_2104_01：cos 0.370 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_xuejian_1807_01 ↔ char_anya_song：cos 0.170 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_ayano：cos 0.256 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_chen_xiawei：cos 0.172 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_jia：cos 0.316 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_xuejian_1807_01 ↔ char_jiang_yueyao：cos 0.241 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_lin_qingwan：cos 0.345 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_xuejian_1807_01 ↔ char_liu_yinuo_1923_10：cos -0.011 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_luo_qingchuan_1805：cos 0.320 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_xuejian_1807_01 ↔ char_pei_yuhan_2300_01：cos 0.254 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_qing_luo：cos 0.439 → ⚠️ 存疑，待人工复核**
+- **char_lu_xuejian_1807_01 ↔ char_ray_ling：cos 0.237 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_runcha：cos 0.208 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_shen_zhilan：cos 0.347 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_xuejian_1807_01 ↔ char_su_xiaotang：cos 0.113 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_tang_mengli_2200_01：cos 0.208 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_wen_xiaorou_2140_01：cos 0.161 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_ye_muchen_2100_01：cos 0.355 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_xuejian_1807_01 ↔ char_yin_xinyue_2330_01：cos 0.285 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_zhao_ruoxi：cos 0.451 → ⚠️ 存疑，待人工复核**
+- **char_lu_xuejian_1807_01 ↔ char_duo：cos 0.135 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_duo3_2：cos 0.283 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_cen_zhiwei_1936_01：cos 0.400 → ⚠️ 存疑，待人工复核**
+- **char_lu_xuejian_1807_01 ↔ char_jiang_ruoli_2007_01：cos 0.402 → ⚠️ 存疑，待人工复核**
+- **char_lu_xuejian_1807_01 ↔ char_xiaog3：cos -0.015 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_xi_manshu_2045_01：cos 0.563 → ⚠️ 存疑，待人工复核**
+- **char_lu_xuejian_1807_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.318 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_xuejian_1807_01 ↔ char_linghu_zhixia_2133_01：cos 0.390 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_xuejian_1807_01 ↔ char_qiao_weiyu_2134_01：cos 0.382 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_xuejian_1807_01 ↔ char_jiang_qinghuan_2203_01：cos 0.525 → ⚠️ 存疑，待人工复核**
+- **char_lu_xuejian_1807_01 ↔ char_cen_youqing_2204_01：cos 0.240 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_zhong_xiaorou_2233_01：cos 0.480 → ⚠️ 存疑，待人工复核**
+- **char_lu_xuejian_1807_01 ↔ char_tan_youqing_2234_01：cos 0.480 → ⚠️ 存疑，待人工复核**
+- **char_lu_xuejian_1807_01 ↔ char_tantai_lingsu_2303_01：cos 0.388 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_xuejian_1807_01 ↔ char_qiao_qinghuan_2304_01：cos 0.388 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_xuejian_1807_01 ↔ char_chu_muchen_0004_01：cos -0.083 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_qiao_chaoyan_0004_01：cos 0.002 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_xue_qinghuan_0034_01：cos 0.046 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_tang_yuwei_0217_01：cos 0.421 → ⚠️ 存疑，待人工复核**
+- **char_lu_xuejian_1807_01 ↔ char_ouyang_chuxia_0250_01：cos 0.405 → ⚠️ 存疑，待人工复核**
+- **char_lu_xuejian_1807_01 ↔ char_bai_zhiruo_0305_01：cos 0.449 → ⚠️ 存疑，待人工复核**
+- **char_lu_xuejian_1807_01 ↔ char_pei_shanshan_0456_01：cos 0.534 → ⚠️ 存疑，待人工复核**
+- **char_lu_xuejian_1807_01 ↔ char_xi_qingchuan_0618_01：cos 0.426 → ⚠️ 存疑，待人工复核**
+- **char_lu_xuejian_1807_01 ↔ char_zhong_linger_0732_01：cos 0.281 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_hua_qingdai_1029_01：cos 0.388 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_xuejian_1807_01 ↔ char_tang_banxia_1156_01：cos 0.410 → ⚠️ 存疑，待人工复核**
+- **char_lu_xuejian_1807_01 ↔ char_gu_weiyu_1321_01：cos 0.491 → ⚠️ 存疑，待人工复核**
+- **char_lu_xuejian_1807_01 ↔ char_cheng_hongyu_1435_01：cos 0.305 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_xuejian_1807_01 ↔ char_hua_chuxia_1549_01：cos 0.315 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_xuejian_1807_01 ↔ char_pei_manshu_1701_01：cos 0.280 → 不同身份**
+- **char_lu_xuejian_1807_01 ↔ char_ye_nanqiao_1811_01：cos 0.421 → ⚠️ 存疑，待人工复核**
+- **char_lu_xuejian_1807_01 ↔ char_murong_yuyan_1942_01：cos 0.531 → ⚠️ 存疑，待人工复核**
+- **char_lu_xuejian_1807_01 ↔ char_nangong_lingjun_2054_01：cos 0.231 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_qiao_banxia_1204_01：cos 0.296 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_shangguan_weiyu_1014_01：cos 0.297 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_situ_muchen_1835_01：cos 0.555 → ⚠️ 存疑，待人工复核**
+- **char_luo_tiange_1534_01 ↔ char_situ_yuwei_0934_01：cos 0.388 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_tiange_1534_01 ↔ char_song_anran_1604_01：cos 0.352 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_tiange_1534_01 ↔ char_wen_lingsu_1635_01：cos 0.486 → ⚠️ 存疑，待人工复核**
+- **char_luo_tiange_1534_01 ↔ char_xue_hongyu_1034_01：cos 0.367 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_tiange_1534_01 ↔ char_xue_mengli_1234_01：cos 0.377 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_tiange_1534_01 ↔ char_xue_sitian_1508_01：cos 0.425 → ⚠️ 存疑，待人工复核**
+- **char_luo_tiange_1534_01 ↔ char_yin_qingdai_1305_01：cos 0.306 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_tiange_1534_01 ↔ char_yuchi_wanzhao_1134_01：cos 0.310 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_tiange_1534_01 ↔ char_yuchi_zhixia_0914_01：cos 0.303 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_tiange_1534_01 ↔ char_cheng_yuwei_1103_01：cos 0.357 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_tiange_1534_01 ↔ char_chu_lingsu_1533_01：cos 0.407 → ⚠️ 存疑，待人工复核**
+- **char_luo_tiange_1534_01 ↔ char_fu_linger_1433_01：cos 0.199 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_fu_yuhan_1000_01：cos 0.386 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_tiange_1534_01 ↔ char_gu_sitian_1003_01：cos 0.213 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_liang_chuxia_1503_01：cos 0.127 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_liang_mengli_1203_01：cos 0.368 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_tiange_1534_01 ↔ char_shen_xiaorou_1233_01：cos 0.378 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_tiange_1534_01 ↔ char_shen_xinyue_1404_01：cos 0.341 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_tiange_1534_01 ↔ char_tan_muchen_1133_01：cos 0.274 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_xi_shanshan_1303_01：cos 0.389 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_tiange_1534_01 ↔ char_xue_huaiyu_1034_01：cos 0.366 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_tiange_1534_01 ↔ char_yuchi_lingsu_1333_01：cos 0.377 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_tiange_1534_01 ↔ char_bai_anran_0430_01：cos 0.279 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_bai_yuhan_0830_01：cos 0.251 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_cen_yuhan_1934_01：cos 0.328 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_tiange_1534_01 ↔ char_chu_ruoli_0800_01：cos 0.393 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_tiange_1534_01 ↔ char_fu_caiwei_1833_01：cos 0.305 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_tiange_1534_01 ↔ char_fu_wanzhao_1100_01：cos 0.373 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_tiange_1534_01 ↔ char_gu_chaoyan_1904_01：cos 0.410 → ⚠️ 存疑，待人工复核**
+- **char_luo_tiange_1534_01 ↔ char_huo_ruoxi_1200_01：cos 0.221 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_jiang_zhiruo_0300_01：cos 0.210 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_liang_tiange_1303_01：cos 0.367 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_tiange_1534_01 ↔ char_liang_yuyan_1333_01：cos 0.365 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_tiange_1534_01 ↔ char_linghu_chuxia_2204_01：cos 0.190 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_lu_muchen_0530_01：cos 0.354 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_tiange_1534_01 ↔ char_murong_manshu_1704_01：cos 0.288 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_murong_weiyu_0930_01：cos 0.400 → ⚠️ 存疑，待人工复核**
+- **char_luo_tiange_1534_01 ↔ char_murong_xingzhu_0200_01：cos 0.141 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_ning_chuxia_0000_01：cos 0.192 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.337 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_tiange_1534_01 ↔ char_qin_linger_1634_01：cos 0.309 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_tiange_1534_01 ↔ char_qin_suqiu_0630_01：cos 0.297 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_qin_zhixia_1130_01：cos 0.401 → ⚠️ 存疑，待人工复核**
+- **char_luo_tiange_1534_01 ↔ char_ruan_lingjun_2034_01：cos 0.277 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_ruan_tiange_1403_01：cos 0.325 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_tiange_1534_01 ↔ char_shen_hongyu_1734_01：cos 0.335 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_tiange_1534_01 ↔ char_situ_caiwei_0100_01：cos 0.396 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_tiange_1534_01 ↔ char_situ_yuhan_0600_01：cos 0.401 → ⚠️ 存疑，待人工复核**
+- **char_luo_tiange_1534_01 ↔ char_song_wanzhao_1503_01：cos 0.356 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_tiange_1534_01 ↔ char_tan_shanshan_0700_01：cos 0.332 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_tiange_1534_01 ↔ char_tang_sitian_0900_01：cos 0.392 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_tiange_1534_01 ↔ char_tantai_weiyu_1433_01：cos 0.267 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_tantai_xingzhu_0230_01：cos 0.128 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_tantai_yuwei_0730_01：cos 0.060 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_wen_manshu_1030_01：cos 0.422 → ⚠️ 存疑，待人工复核**
+- **char_luo_tiange_1534_01 ↔ char_xi_weiyu_2134_01：cos 0.292 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_xue_banxia_0330_01：cos 0.289 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_ye_hongyu_0500_01：cos 0.378 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_tiange_1534_01 ↔ char_ye_linger_2004_01：cos 0.373 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_tiange_1534_01 ↔ char_ye_lingjun_0130_01：cos 0.310 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_tiange_1534_01 ↔ char_ye_shanshan_0400_01：cos 0.261 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_ye_yuhan_1804_01：cos 0.417 → ⚠️ 存疑，待人工复核**
+- **char_luo_tiange_1534_01 ↔ char_yuchi_ruoli_1000_01：cos 0.273 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_yun_banxia_0030_01：cos 0.458 → ⚠️ 存疑，待人工复核**
+- **char_luo_tiange_1534_01 ↔ char_zhong_manshu_2104_01：cos 0.337 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_tiange_1534_01 ↔ char_anya_song：cos 0.283 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_ayano：cos 0.132 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_chen_xiawei：cos 0.115 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_jia：cos 0.108 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_jiang_yueyao：cos 0.260 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_lin_qingwan：cos 0.447 → ⚠️ 存疑，待人工复核**
+- **char_luo_tiange_1534_01 ↔ char_liu_yinuo_1923_10：cos -0.006 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_luo_qingchuan_1805：cos 0.373 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_tiange_1534_01 ↔ char_pei_yuhan_2300_01：cos 0.184 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_qing_luo：cos 0.241 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_ray_ling：cos 0.407 → ⚠️ 存疑，待人工复核**
+- **char_luo_tiange_1534_01 ↔ char_runcha：cos 0.053 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_shen_zhilan：cos 0.358 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_tiange_1534_01 ↔ char_su_xiaotang：cos 0.284 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_tang_mengli_2200_01：cos 0.226 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_wen_xiaorou_2140_01：cos 0.177 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_ye_muchen_2100_01：cos 0.254 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_yin_xinyue_2330_01：cos 0.152 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_zhao_ruoxi：cos 0.390 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_tiange_1534_01 ↔ char_duo：cos 0.140 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_duo3_2：cos 0.160 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_cen_zhiwei_1936_01：cos 0.505 → ⚠️ 存疑，待人工复核**
+- **char_luo_tiange_1534_01 ↔ char_jiang_ruoli_2007_01：cos 0.599 → ⚠️ 存疑，待人工复核**
+- **char_luo_tiange_1534_01 ↔ char_xiaog3：cos -0.005 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_xi_manshu_2045_01：cos 0.423 → ⚠️ 存疑，待人工复核**
+- **char_luo_tiange_1534_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.550 → ⚠️ 存疑，待人工复核**
+- **char_luo_tiange_1534_01 ↔ char_linghu_zhixia_2133_01：cos 0.567 → ⚠️ 存疑，待人工复核**
+- **char_luo_tiange_1534_01 ↔ char_qiao_weiyu_2134_01：cos 0.568 → ⚠️ 存疑，待人工复核**
+- **char_luo_tiange_1534_01 ↔ char_jiang_qinghuan_2203_01：cos 0.287 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_cen_youqing_2204_01：cos 0.200 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_zhong_xiaorou_2233_01：cos 0.363 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_tiange_1534_01 ↔ char_tan_youqing_2234_01：cos 0.363 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_tiange_1534_01 ↔ char_tantai_lingsu_2303_01：cos 0.511 → ⚠️ 存疑，待人工复核**
+- **char_luo_tiange_1534_01 ↔ char_qiao_qinghuan_2304_01：cos 0.511 → ⚠️ 存疑，待人工复核**
+- **char_luo_tiange_1534_01 ↔ char_chu_muchen_0004_01：cos 0.029 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_qiao_chaoyan_0004_01：cos -0.044 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_xue_qinghuan_0034_01：cos -0.015 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_tang_yuwei_0217_01：cos 0.320 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_tiange_1534_01 ↔ char_ouyang_chuxia_0250_01：cos 0.299 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_bai_zhiruo_0305_01：cos 0.501 → ⚠️ 存疑，待人工复核**
+- **char_luo_tiange_1534_01 ↔ char_pei_shanshan_0456_01：cos 0.427 → ⚠️ 存疑，待人工复核**
+- **char_luo_tiange_1534_01 ↔ char_xi_qingchuan_0618_01：cos 0.324 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_tiange_1534_01 ↔ char_zhong_linger_0732_01：cos 0.462 → ⚠️ 存疑，待人工复核**
+- **char_luo_tiange_1534_01 ↔ char_hua_qingdai_1029_01：cos 0.537 → ⚠️ 存疑，待人工复核**
+- **char_luo_tiange_1534_01 ↔ char_tang_banxia_1156_01：cos 0.472 → ⚠️ 存疑，待人工复核**
+- **char_luo_tiange_1534_01 ↔ char_gu_weiyu_1321_01：cos 0.492 → ⚠️ 存疑，待人工复核**
+- **char_luo_tiange_1534_01 ↔ char_cheng_hongyu_1435_01：cos 0.323 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_tiange_1534_01 ↔ char_hua_chuxia_1549_01：cos 0.327 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_tiange_1534_01 ↔ char_pei_manshu_1701_01：cos 0.379 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_tiange_1534_01 ↔ char_ye_nanqiao_1811_01：cos 0.408 → ⚠️ 存疑，待人工复核**
+- **char_luo_tiange_1534_01 ↔ char_murong_yuyan_1942_01：cos 0.283 → 不同身份**
+- **char_luo_tiange_1534_01 ↔ char_nangong_lingjun_2054_01：cos 0.394 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qiao_banxia_1204_01 ↔ char_shangguan_weiyu_1014_01：cos 0.734 → 同一身份**
+- **char_qiao_banxia_1204_01 ↔ char_situ_muchen_1835_01：cos 0.245 → 不同身份**
+- **char_qiao_banxia_1204_01 ↔ char_situ_yuwei_0934_01：cos 0.704 → 同一身份**
+- **char_qiao_banxia_1204_01 ↔ char_song_anran_1604_01：cos 0.218 → 不同身份**
+- **char_qiao_banxia_1204_01 ↔ char_wen_lingsu_1635_01：cos 0.171 → 不同身份**
+- **char_qiao_banxia_1204_01 ↔ char_xue_hongyu_1034_01：cos 0.604 → 同一身份**
+- **char_qiao_banxia_1204_01 ↔ char_xue_mengli_1234_01：cos 0.689 → 同一身份**
+- **char_qiao_banxia_1204_01 ↔ char_xue_sitian_1508_01：cos 0.150 → 不同身份**
+- **char_qiao_banxia_1204_01 ↔ char_yin_qingdai_1305_01：cos 0.625 → 同一身份**
+- **char_qiao_banxia_1204_01 ↔ char_yuchi_wanzhao_1134_01：cos 0.714 → 同一身份**
+- **char_qiao_banxia_1204_01 ↔ char_yuchi_zhixia_0914_01：cos 0.625 → 同一身份**
+- **char_qiao_banxia_1204_01 ↔ char_cheng_yuwei_1103_01：cos 0.702 → 同一身份**
+- **char_qiao_banxia_1204_01 ↔ char_chu_lingsu_1533_01：cos 0.637 → 同一身份**
+- **char_qiao_banxia_1204_01 ↔ char_fu_linger_1433_01：cos 0.696 → 同一身份**
+- **char_qiao_banxia_1204_01 ↔ char_fu_yuhan_1000_01：cos 0.529 → ⚠️ 存疑，待人工复核**
+- **char_qiao_banxia_1204_01 ↔ char_gu_sitian_1003_01：cos 0.653 → 同一身份**
+- **char_qiao_banxia_1204_01 ↔ char_liang_chuxia_1503_01：cos 0.644 → 同一身份**
+- **char_qiao_banxia_1204_01 ↔ char_liang_mengli_1203_01：cos 0.663 → 同一身份**
+- **char_qiao_banxia_1204_01 ↔ char_shen_xiaorou_1233_01：cos 0.457 → ⚠️ 存疑，待人工复核**
+- **char_qiao_banxia_1204_01 ↔ char_shen_xinyue_1404_01：cos 0.705 → 同一身份**
+- **char_qiao_banxia_1204_01 ↔ char_tan_muchen_1133_01：cos 0.671 → 同一身份**
+- **char_qiao_banxia_1204_01 ↔ char_xi_shanshan_1303_01：cos 0.517 → ⚠️ 存疑，待人工复核**
+- **char_qiao_banxia_1204_01 ↔ char_xue_huaiyu_1034_01：cos 0.409 → ⚠️ 存疑，待人工复核**
+- **char_qiao_banxia_1204_01 ↔ char_yuchi_lingsu_1333_01：cos 0.697 → 同一身份**
+- **char_qiao_banxia_1204_01 ↔ char_bai_anran_0430_01：cos 0.608 → 同一身份**
+- **char_qiao_banxia_1204_01 ↔ char_bai_yuhan_0830_01：cos 0.714 → 同一身份**
+- **char_qiao_banxia_1204_01 ↔ char_cen_yuhan_1934_01：cos 0.628 → 同一身份**
+- **char_qiao_banxia_1204_01 ↔ char_chu_ruoli_0800_01：cos 0.596 → ⚠️ 存疑，待人工复核**
+- **char_qiao_banxia_1204_01 ↔ char_fu_caiwei_1833_01：cos 0.748 → 同一身份**
+- **char_qiao_banxia_1204_01 ↔ char_fu_wanzhao_1100_01：cos 0.607 → 同一身份**
+- **char_qiao_banxia_1204_01 ↔ char_gu_chaoyan_1904_01：cos 0.564 → ⚠️ 存疑，待人工复核**
+- **char_qiao_banxia_1204_01 ↔ char_huo_ruoxi_1200_01：cos 0.591 → ⚠️ 存疑，待人工复核**
+- **char_qiao_banxia_1204_01 ↔ char_jiang_zhiruo_0300_01：cos 0.699 → 同一身份**
+- **char_qiao_banxia_1204_01 ↔ char_liang_tiange_1303_01：cos 0.574 → ⚠️ 存疑，待人工复核**
+- **char_qiao_banxia_1204_01 ↔ char_liang_yuyan_1333_01：cos 0.719 → 同一身份**
+- **char_qiao_banxia_1204_01 ↔ char_linghu_chuxia_2204_01：cos 0.474 → ⚠️ 存疑，待人工复核**
+- **char_qiao_banxia_1204_01 ↔ char_lu_muchen_0530_01：cos 0.481 → ⚠️ 存疑，待人工复核**
+- **char_qiao_banxia_1204_01 ↔ char_murong_manshu_1704_01：cos 0.692 → 同一身份**
+- **char_qiao_banxia_1204_01 ↔ char_murong_weiyu_0930_01：cos 0.545 → ⚠️ 存疑，待人工复核**
+- **char_qiao_banxia_1204_01 ↔ char_murong_xingzhu_0200_01：cos 0.636 → 同一身份**
+- **char_qiao_banxia_1204_01 ↔ char_ning_chuxia_0000_01：cos 0.729 → 同一身份**
+- **char_qiao_banxia_1204_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.601 → 同一身份**
+- **char_qiao_banxia_1204_01 ↔ char_qin_linger_1634_01：cos 0.611 → 同一身份**
+- **char_qiao_banxia_1204_01 ↔ char_qin_suqiu_0630_01：cos 0.643 → 同一身份**
+- **char_qiao_banxia_1204_01 ↔ char_qin_zhixia_1130_01：cos 0.501 → ⚠️ 存疑，待人工复核**
+- **char_qiao_banxia_1204_01 ↔ char_ruan_lingjun_2034_01：cos 0.629 → 同一身份**
+- **char_qiao_banxia_1204_01 ↔ char_ruan_tiange_1403_01：cos 0.586 → ⚠️ 存疑，待人工复核**
+- **char_qiao_banxia_1204_01 ↔ char_shen_hongyu_1734_01：cos 0.742 → 同一身份**
+- **char_qiao_banxia_1204_01 ↔ char_situ_caiwei_0100_01：cos 0.575 → ⚠️ 存疑，待人工复核**
+- **char_qiao_banxia_1204_01 ↔ char_situ_yuhan_0600_01：cos 0.719 → 同一身份**
+- **char_qiao_banxia_1204_01 ↔ char_song_wanzhao_1503_01：cos 0.632 → 同一身份**
+- **char_qiao_banxia_1204_01 ↔ char_tan_shanshan_0700_01：cos 0.495 → ⚠️ 存疑，待人工复核**
+- **char_qiao_banxia_1204_01 ↔ char_tang_sitian_0900_01：cos 0.608 → 同一身份**
+- **char_qiao_banxia_1204_01 ↔ char_tantai_weiyu_1433_01：cos 0.439 → ⚠️ 存疑，待人工复核**
+- **char_qiao_banxia_1204_01 ↔ char_tantai_xingzhu_0230_01：cos 0.634 → 同一身份**
+- **char_qiao_banxia_1204_01 ↔ char_tantai_yuwei_0730_01：cos 0.629 → 同一身份**
+- **char_qiao_banxia_1204_01 ↔ char_wen_manshu_1030_01：cos 0.550 → ⚠️ 存疑，待人工复核**
+- **char_qiao_banxia_1204_01 ↔ char_xi_weiyu_2134_01：cos 0.674 → 同一身份**
+- **char_qiao_banxia_1204_01 ↔ char_xue_banxia_0330_01：cos 0.479 → ⚠️ 存疑，待人工复核**
+- **char_qiao_banxia_1204_01 ↔ char_ye_hongyu_0500_01：cos 0.505 → ⚠️ 存疑，待人工复核**
+- **char_qiao_banxia_1204_01 ↔ char_ye_linger_2004_01：cos 0.533 → ⚠️ 存疑，待人工复核**
+- **char_qiao_banxia_1204_01 ↔ char_ye_lingjun_0130_01：cos 0.495 → ⚠️ 存疑，待人工复核**
+- **char_qiao_banxia_1204_01 ↔ char_ye_shanshan_0400_01：cos 0.709 → 同一身份**
+- **char_qiao_banxia_1204_01 ↔ char_ye_yuhan_1804_01：cos 0.610 → 同一身份**
+- **char_qiao_banxia_1204_01 ↔ char_yuchi_ruoli_1000_01：cos 0.695 → 同一身份**
+- **char_qiao_banxia_1204_01 ↔ char_yun_banxia_0030_01：cos 0.408 → ⚠️ 存疑，待人工复核**
+- **char_qiao_banxia_1204_01 ↔ char_zhong_manshu_2104_01：cos 0.622 → 同一身份**
+- **char_qiao_banxia_1204_01 ↔ char_anya_song：cos 0.122 → 不同身份**
+- **char_qiao_banxia_1204_01 ↔ char_ayano：cos 0.082 → 不同身份**
+- **char_qiao_banxia_1204_01 ↔ char_chen_xiawei：cos 0.124 → 不同身份**
+- **char_qiao_banxia_1204_01 ↔ char_jia：cos 0.153 → 不同身份**
+- **char_qiao_banxia_1204_01 ↔ char_jiang_yueyao：cos 0.229 → 不同身份**
+- **char_qiao_banxia_1204_01 ↔ char_lin_qingwan：cos 0.254 → 不同身份**
+- **char_qiao_banxia_1204_01 ↔ char_liu_yinuo_1923_10：cos -0.033 → 不同身份**
+- **char_qiao_banxia_1204_01 ↔ char_luo_qingchuan_1805：cos 0.665 → 同一身份**
+- **char_qiao_banxia_1204_01 ↔ char_pei_yuhan_2300_01：cos 0.645 → 同一身份**
+- **char_qiao_banxia_1204_01 ↔ char_qing_luo：cos 0.254 → 不同身份**
+- **char_qiao_banxia_1204_01 ↔ char_ray_ling：cos 0.137 → 不同身份**
+- **char_qiao_banxia_1204_01 ↔ char_runcha：cos 0.038 → 不同身份**
+- **char_qiao_banxia_1204_01 ↔ char_shen_zhilan：cos 0.148 → 不同身份**
+- **char_qiao_banxia_1204_01 ↔ char_su_xiaotang：cos 0.044 → 不同身份**
+- **char_qiao_banxia_1204_01 ↔ char_tang_mengli_2200_01：cos 0.741 → 同一身份**
+- **char_qiao_banxia_1204_01 ↔ char_wen_xiaorou_2140_01：cos 0.733 → 同一身份**
+- **char_qiao_banxia_1204_01 ↔ char_ye_muchen_2100_01：cos 0.720 → 同一身份**
+- **char_qiao_banxia_1204_01 ↔ char_yin_xinyue_2330_01：cos 0.686 → 同一身份**
+- **char_qiao_banxia_1204_01 ↔ char_zhao_ruoxi：cos 0.176 → 不同身份**
+- **char_qiao_banxia_1204_01 ↔ char_duo：cos 0.153 → 不同身份**
+- **char_qiao_banxia_1204_01 ↔ char_duo3_2：cos 0.157 → 不同身份**
+- **char_qiao_banxia_1204_01 ↔ char_cen_zhiwei_1936_01：cos 0.260 → 不同身份**
+- **char_qiao_banxia_1204_01 ↔ char_jiang_ruoli_2007_01：cos 0.188 → 不同身份**
+- **char_qiao_banxia_1204_01 ↔ char_xiaog3：cos 0.286 → 不同身份**
+- **char_qiao_banxia_1204_01 ↔ char_xi_manshu_2045_01：cos 0.271 → 不同身份**
+- **char_qiao_banxia_1204_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.205 → 不同身份**
+- **char_qiao_banxia_1204_01 ↔ char_linghu_zhixia_2133_01：cos 0.266 → 不同身份**
+- **char_qiao_banxia_1204_01 ↔ char_qiao_weiyu_2134_01：cos 0.156 → 不同身份**
+- **char_qiao_banxia_1204_01 ↔ char_jiang_qinghuan_2203_01：cos 0.382 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qiao_banxia_1204_01 ↔ char_cen_youqing_2204_01：cos 0.042 → 不同身份**
+- **char_qiao_banxia_1204_01 ↔ char_zhong_xiaorou_2233_01：cos 0.261 → 不同身份**
+- **char_qiao_banxia_1204_01 ↔ char_tan_youqing_2234_01：cos 0.261 → 不同身份**
+- **char_qiao_banxia_1204_01 ↔ char_tantai_lingsu_2303_01：cos 0.418 → ⚠️ 存疑，待人工复核**
+- **char_qiao_banxia_1204_01 ↔ char_qiao_qinghuan_2304_01：cos 0.418 → ⚠️ 存疑，待人工复核**
+- **char_qiao_banxia_1204_01 ↔ char_chu_muchen_0004_01：cos -0.003 → 不同身份**
+- **char_qiao_banxia_1204_01 ↔ char_qiao_chaoyan_0004_01：cos -0.002 → 不同身份**
+- **char_qiao_banxia_1204_01 ↔ char_xue_qinghuan_0034_01：cos -0.022 → 不同身份**
+- **char_qiao_banxia_1204_01 ↔ char_tang_yuwei_0217_01：cos 0.266 → 不同身份**
+- **char_qiao_banxia_1204_01 ↔ char_ouyang_chuxia_0250_01：cos 0.272 → 不同身份**
+- **char_qiao_banxia_1204_01 ↔ char_bai_zhiruo_0305_01：cos 0.443 → ⚠️ 存疑，待人工复核**
+- **char_qiao_banxia_1204_01 ↔ char_pei_shanshan_0456_01：cos 0.396 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qiao_banxia_1204_01 ↔ char_xi_qingchuan_0618_01：cos 0.410 → ⚠️ 存疑，待人工复核**
+- **char_qiao_banxia_1204_01 ↔ char_zhong_linger_0732_01：cos 0.245 → 不同身份**
+- **char_qiao_banxia_1204_01 ↔ char_hua_qingdai_1029_01：cos 0.335 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qiao_banxia_1204_01 ↔ char_tang_banxia_1156_01：cos 0.405 → ⚠️ 存疑，待人工复核**
+- **char_qiao_banxia_1204_01 ↔ char_gu_weiyu_1321_01：cos 0.323 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qiao_banxia_1204_01 ↔ char_cheng_hongyu_1435_01：cos 0.224 → 不同身份**
+- **char_qiao_banxia_1204_01 ↔ char_hua_chuxia_1549_01：cos 0.156 → 不同身份**
+- **char_qiao_banxia_1204_01 ↔ char_pei_manshu_1701_01：cos 0.327 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qiao_banxia_1204_01 ↔ char_ye_nanqiao_1811_01：cos 0.324 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qiao_banxia_1204_01 ↔ char_murong_yuyan_1942_01：cos 0.402 → ⚠️ 存疑，待人工复核**
+- **char_qiao_banxia_1204_01 ↔ char_nangong_lingjun_2054_01：cos 0.252 → 不同身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_situ_muchen_1835_01：cos 0.293 → 不同身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_situ_yuwei_0934_01：cos 0.719 → 同一身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_song_anran_1604_01：cos 0.186 → 不同身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_wen_lingsu_1635_01：cos 0.146 → 不同身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_xue_hongyu_1034_01：cos 0.638 → 同一身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_xue_mengli_1234_01：cos 0.692 → 同一身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_xue_sitian_1508_01：cos 0.190 → 不同身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_yin_qingdai_1305_01：cos 0.594 → ⚠️ 存疑，待人工复核**
+- **char_shangguan_weiyu_1014_01 ↔ char_yuchi_wanzhao_1134_01：cos 0.641 → 同一身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_yuchi_zhixia_0914_01：cos 0.624 → 同一身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_cheng_yuwei_1103_01：cos 0.595 → ⚠️ 存疑，待人工复核**
+- **char_shangguan_weiyu_1014_01 ↔ char_chu_lingsu_1533_01：cos 0.593 → ⚠️ 存疑，待人工复核**
+- **char_shangguan_weiyu_1014_01 ↔ char_fu_linger_1433_01：cos 0.595 → ⚠️ 存疑，待人工复核**
+- **char_shangguan_weiyu_1014_01 ↔ char_fu_yuhan_1000_01：cos 0.596 → ⚠️ 存疑，待人工复核**
+- **char_shangguan_weiyu_1014_01 ↔ char_gu_sitian_1003_01：cos 0.612 → 同一身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_liang_chuxia_1503_01：cos 0.586 → ⚠️ 存疑，待人工复核**
+- **char_shangguan_weiyu_1014_01 ↔ char_liang_mengli_1203_01：cos 0.691 → 同一身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_shen_xiaorou_1233_01：cos 0.557 → ⚠️ 存疑，待人工复核**
+- **char_shangguan_weiyu_1014_01 ↔ char_shen_xinyue_1404_01：cos 0.618 → 同一身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_tan_muchen_1133_01：cos 0.758 → 同一身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_xi_shanshan_1303_01：cos 0.623 → 同一身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_xue_huaiyu_1034_01：cos 0.405 → ⚠️ 存疑，待人工复核**
+- **char_shangguan_weiyu_1014_01 ↔ char_yuchi_lingsu_1333_01：cos 0.711 → 同一身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_bai_anran_0430_01：cos 0.654 → 同一身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_bai_yuhan_0830_01：cos 0.631 → 同一身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_cen_yuhan_1934_01：cos 0.673 → 同一身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_chu_ruoli_0800_01：cos 0.636 → 同一身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_fu_caiwei_1833_01：cos 0.709 → 同一身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_fu_wanzhao_1100_01：cos 0.662 → 同一身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_gu_chaoyan_1904_01：cos 0.657 → 同一身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_huo_ruoxi_1200_01：cos 0.713 → 同一身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_jiang_zhiruo_0300_01：cos 0.640 → 同一身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_liang_tiange_1303_01：cos 0.582 → ⚠️ 存疑，待人工复核**
+- **char_shangguan_weiyu_1014_01 ↔ char_liang_yuyan_1333_01：cos 0.686 → 同一身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_linghu_chuxia_2204_01：cos 0.512 → ⚠️ 存疑，待人工复核**
+- **char_shangguan_weiyu_1014_01 ↔ char_lu_muchen_0530_01：cos 0.584 → ⚠️ 存疑，待人工复核**
+- **char_shangguan_weiyu_1014_01 ↔ char_murong_manshu_1704_01：cos 0.759 → 同一身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_murong_weiyu_0930_01：cos 0.581 → ⚠️ 存疑，待人工复核**
+- **char_shangguan_weiyu_1014_01 ↔ char_murong_xingzhu_0200_01：cos 0.528 → ⚠️ 存疑，待人工复核**
+- **char_shangguan_weiyu_1014_01 ↔ char_ning_chuxia_0000_01：cos 0.714 → 同一身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.581 → ⚠️ 存疑，待人工复核**
+- **char_shangguan_weiyu_1014_01 ↔ char_qin_linger_1634_01：cos 0.690 → 同一身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_qin_suqiu_0630_01：cos 0.647 → 同一身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_qin_zhixia_1130_01：cos 0.555 → ⚠️ 存疑，待人工复核**
+- **char_shangguan_weiyu_1014_01 ↔ char_ruan_lingjun_2034_01：cos 0.712 → 同一身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_ruan_tiange_1403_01：cos 0.583 → ⚠️ 存疑，待人工复核**
+- **char_shangguan_weiyu_1014_01 ↔ char_shen_hongyu_1734_01：cos 0.671 → 同一身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_situ_caiwei_0100_01：cos 0.580 → ⚠️ 存疑，待人工复核**
+- **char_shangguan_weiyu_1014_01 ↔ char_situ_yuhan_0600_01：cos 0.731 → 同一身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_song_wanzhao_1503_01：cos 0.685 → 同一身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_tan_shanshan_0700_01：cos 0.530 → ⚠️ 存疑，待人工复核**
+- **char_shangguan_weiyu_1014_01 ↔ char_tang_sitian_0900_01：cos 0.625 → 同一身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_tantai_weiyu_1433_01：cos 0.453 → ⚠️ 存疑，待人工复核**
+- **char_shangguan_weiyu_1014_01 ↔ char_tantai_xingzhu_0230_01：cos 0.541 → ⚠️ 存疑，待人工复核**
+- **char_shangguan_weiyu_1014_01 ↔ char_tantai_yuwei_0730_01：cos 0.549 → ⚠️ 存疑，待人工复核**
+- **char_shangguan_weiyu_1014_01 ↔ char_wen_manshu_1030_01：cos 0.686 → 同一身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_xi_weiyu_2134_01：cos 0.612 → 同一身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_xue_banxia_0330_01：cos 0.603 → 同一身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_ye_hongyu_0500_01：cos 0.575 → ⚠️ 存疑，待人工复核**
+- **char_shangguan_weiyu_1014_01 ↔ char_ye_linger_2004_01：cos 0.589 → ⚠️ 存疑，待人工复核**
+- **char_shangguan_weiyu_1014_01 ↔ char_ye_lingjun_0130_01：cos 0.553 → ⚠️ 存疑，待人工复核**
+- **char_shangguan_weiyu_1014_01 ↔ char_ye_shanshan_0400_01：cos 0.589 → ⚠️ 存疑，待人工复核**
+- **char_shangguan_weiyu_1014_01 ↔ char_ye_yuhan_1804_01：cos 0.624 → 同一身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_yuchi_ruoli_1000_01：cos 0.618 → 同一身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_yun_banxia_0030_01：cos 0.419 → ⚠️ 存疑，待人工复核**
+- **char_shangguan_weiyu_1014_01 ↔ char_zhong_manshu_2104_01：cos 0.585 → ⚠️ 存疑，待人工复核**
+- **char_shangguan_weiyu_1014_01 ↔ char_anya_song：cos 0.045 → 不同身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_ayano：cos 0.094 → 不同身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_chen_xiawei：cos 0.100 → 不同身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_jia：cos 0.116 → 不同身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_jiang_yueyao：cos 0.180 → 不同身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_lin_qingwan：cos 0.321 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shangguan_weiyu_1014_01 ↔ char_liu_yinuo_1923_10：cos -0.009 → 不同身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_luo_qingchuan_1805：cos 0.704 → 同一身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_pei_yuhan_2300_01：cos 0.572 → ⚠️ 存疑，待人工复核**
+- **char_shangguan_weiyu_1014_01 ↔ char_qing_luo：cos 0.169 → 不同身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_ray_ling：cos 0.137 → 不同身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_runcha：cos 0.035 → 不同身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_shen_zhilan：cos 0.170 → 不同身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_su_xiaotang：cos 0.062 → 不同身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_tang_mengli_2200_01：cos 0.634 → 同一身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_wen_xiaorou_2140_01：cos 0.657 → 同一身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_ye_muchen_2100_01：cos 0.639 → 同一身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_yin_xinyue_2330_01：cos 0.646 → 同一身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_zhao_ruoxi：cos 0.191 → 不同身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_duo：cos 0.225 → 不同身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_duo3_2：cos 0.176 → 不同身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_cen_zhiwei_1936_01：cos 0.279 → 不同身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_jiang_ruoli_2007_01：cos 0.254 → 不同身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_xiaog3：cos 0.190 → 不同身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_xi_manshu_2045_01：cos 0.251 → 不同身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.197 → 不同身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_linghu_zhixia_2133_01：cos 0.256 → 不同身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_qiao_weiyu_2134_01：cos 0.174 → 不同身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_jiang_qinghuan_2203_01：cos 0.322 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shangguan_weiyu_1014_01 ↔ char_cen_youqing_2204_01：cos 0.114 → 不同身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_zhong_xiaorou_2233_01：cos 0.268 → 不同身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_tan_youqing_2234_01：cos 0.268 → 不同身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_tantai_lingsu_2303_01：cos 0.418 → ⚠️ 存疑，待人工复核**
+- **char_shangguan_weiyu_1014_01 ↔ char_qiao_qinghuan_2304_01：cos 0.418 → ⚠️ 存疑，待人工复核**
+- **char_shangguan_weiyu_1014_01 ↔ char_chu_muchen_0004_01：cos 0.015 → 不同身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_qiao_chaoyan_0004_01：cos -0.038 → 不同身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_xue_qinghuan_0034_01：cos -0.031 → 不同身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_tang_yuwei_0217_01：cos 0.255 → 不同身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_ouyang_chuxia_0250_01：cos 0.275 → 不同身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_bai_zhiruo_0305_01：cos 0.400 → ⚠️ 存疑，待人工复核**
+- **char_shangguan_weiyu_1014_01 ↔ char_pei_shanshan_0456_01：cos 0.358 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shangguan_weiyu_1014_01 ↔ char_xi_qingchuan_0618_01：cos 0.339 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shangguan_weiyu_1014_01 ↔ char_zhong_linger_0732_01：cos 0.277 → 不同身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_hua_qingdai_1029_01：cos 0.349 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shangguan_weiyu_1014_01 ↔ char_tang_banxia_1156_01：cos 0.457 → ⚠️ 存疑，待人工复核**
+- **char_shangguan_weiyu_1014_01 ↔ char_gu_weiyu_1321_01：cos 0.343 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shangguan_weiyu_1014_01 ↔ char_cheng_hongyu_1435_01：cos 0.258 → 不同身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_hua_chuxia_1549_01：cos 0.206 → 不同身份**
+- **char_shangguan_weiyu_1014_01 ↔ char_pei_manshu_1701_01：cos 0.315 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shangguan_weiyu_1014_01 ↔ char_ye_nanqiao_1811_01：cos 0.334 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shangguan_weiyu_1014_01 ↔ char_murong_yuyan_1942_01：cos 0.314 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shangguan_weiyu_1014_01 ↔ char_nangong_lingjun_2054_01：cos 0.314 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_muchen_1835_01 ↔ char_situ_yuwei_0934_01：cos 0.315 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_muchen_1835_01 ↔ char_song_anran_1604_01：cos 0.450 → ⚠️ 存疑，待人工复核**
+- **char_situ_muchen_1835_01 ↔ char_wen_lingsu_1635_01：cos 0.354 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_muchen_1835_01 ↔ char_xue_hongyu_1034_01：cos 0.233 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_xue_mengli_1234_01：cos 0.309 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_muchen_1835_01 ↔ char_xue_sitian_1508_01：cos 0.460 → ⚠️ 存疑，待人工复核**
+- **char_situ_muchen_1835_01 ↔ char_yin_qingdai_1305_01：cos 0.245 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_yuchi_wanzhao_1134_01：cos 0.292 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_yuchi_zhixia_0914_01：cos 0.189 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_cheng_yuwei_1103_01：cos 0.277 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_chu_lingsu_1533_01：cos 0.402 → ⚠️ 存疑，待人工复核**
+- **char_situ_muchen_1835_01 ↔ char_fu_linger_1433_01：cos 0.133 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_fu_yuhan_1000_01：cos 0.285 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_gu_sitian_1003_01：cos 0.121 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_liang_chuxia_1503_01：cos 0.172 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_liang_mengli_1203_01：cos 0.316 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_muchen_1835_01 ↔ char_shen_xiaorou_1233_01：cos 0.386 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_muchen_1835_01 ↔ char_shen_xinyue_1404_01：cos 0.319 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_muchen_1835_01 ↔ char_tan_muchen_1133_01：cos 0.269 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_xi_shanshan_1303_01：cos 0.377 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_muchen_1835_01 ↔ char_xue_huaiyu_1034_01：cos 0.246 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_yuchi_lingsu_1333_01：cos 0.264 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_bai_anran_0430_01：cos 0.187 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_bai_yuhan_0830_01：cos 0.253 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_cen_yuhan_1934_01：cos 0.213 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_chu_ruoli_0800_01：cos 0.275 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_fu_caiwei_1833_01：cos 0.293 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_fu_wanzhao_1100_01：cos 0.358 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_muchen_1835_01 ↔ char_gu_chaoyan_1904_01：cos 0.297 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_huo_ruoxi_1200_01：cos 0.238 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_jiang_zhiruo_0300_01：cos 0.190 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_liang_tiange_1303_01：cos 0.271 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_liang_yuyan_1333_01：cos 0.347 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_muchen_1835_01 ↔ char_linghu_chuxia_2204_01：cos 0.085 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_lu_muchen_0530_01：cos 0.290 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_murong_manshu_1704_01：cos 0.328 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_muchen_1835_01 ↔ char_murong_weiyu_0930_01：cos 0.352 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_muchen_1835_01 ↔ char_murong_xingzhu_0200_01：cos 0.116 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_ning_chuxia_0000_01：cos 0.083 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.245 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_qin_linger_1634_01：cos 0.267 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_qin_suqiu_0630_01：cos 0.202 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_qin_zhixia_1130_01：cos 0.313 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_muchen_1835_01 ↔ char_ruan_lingjun_2034_01：cos 0.273 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_ruan_tiange_1403_01：cos 0.227 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_shen_hongyu_1734_01：cos 0.324 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_muchen_1835_01 ↔ char_situ_caiwei_0100_01：cos 0.364 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_muchen_1835_01 ↔ char_situ_yuhan_0600_01：cos 0.335 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_muchen_1835_01 ↔ char_song_wanzhao_1503_01：cos 0.340 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_muchen_1835_01 ↔ char_tan_shanshan_0700_01：cos 0.256 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_tang_sitian_0900_01：cos 0.356 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_muchen_1835_01 ↔ char_tantai_weiyu_1433_01：cos 0.109 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_tantai_xingzhu_0230_01：cos 0.029 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_tantai_yuwei_0730_01：cos -0.007 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_wen_manshu_1030_01：cos 0.457 → ⚠️ 存疑，待人工复核**
+- **char_situ_muchen_1835_01 ↔ char_xi_weiyu_2134_01：cos 0.264 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_xue_banxia_0330_01：cos 0.229 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_ye_hongyu_0500_01：cos 0.267 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_ye_linger_2004_01：cos 0.278 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_ye_lingjun_0130_01：cos 0.189 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_ye_shanshan_0400_01：cos 0.248 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_ye_yuhan_1804_01：cos 0.328 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_muchen_1835_01 ↔ char_yuchi_ruoli_1000_01：cos 0.286 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_yun_banxia_0030_01：cos 0.416 → ⚠️ 存疑，待人工复核**
+- **char_situ_muchen_1835_01 ↔ char_zhong_manshu_2104_01：cos 0.293 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_anya_song：cos 0.229 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_ayano：cos 0.104 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_chen_xiawei：cos 0.144 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_jia：cos 0.210 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_jiang_yueyao：cos 0.288 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_lin_qingwan：cos 0.416 → ⚠️ 存疑，待人工复核**
+- **char_situ_muchen_1835_01 ↔ char_liu_yinuo_1923_10：cos -0.086 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_luo_qingchuan_1805：cos 0.270 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_pei_yuhan_2300_01：cos 0.114 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_qing_luo：cos 0.213 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_ray_ling：cos 0.338 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_muchen_1835_01 ↔ char_runcha：cos 0.115 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_shen_zhilan：cos 0.419 → ⚠️ 存疑，待人工复核**
+- **char_situ_muchen_1835_01 ↔ char_su_xiaotang：cos 0.355 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_muchen_1835_01 ↔ char_tang_mengli_2200_01：cos 0.215 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_wen_xiaorou_2140_01：cos 0.152 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_ye_muchen_2100_01：cos 0.188 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_yin_xinyue_2330_01：cos 0.133 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_zhao_ruoxi：cos 0.392 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_muchen_1835_01 ↔ char_duo：cos 0.195 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_duo3_2：cos 0.189 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_cen_zhiwei_1936_01：cos 0.450 → ⚠️ 存疑，待人工复核**
+- **char_situ_muchen_1835_01 ↔ char_jiang_ruoli_2007_01：cos 0.570 → ⚠️ 存疑，待人工复核**
+- **char_situ_muchen_1835_01 ↔ char_xiaog3：cos -0.075 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_xi_manshu_2045_01：cos 0.329 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_muchen_1835_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.369 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_muchen_1835_01 ↔ char_linghu_zhixia_2133_01：cos 0.418 → ⚠️ 存疑，待人工复核**
+- **char_situ_muchen_1835_01 ↔ char_qiao_weiyu_2134_01：cos 0.528 → ⚠️ 存疑，待人工复核**
+- **char_situ_muchen_1835_01 ↔ char_jiang_qinghuan_2203_01：cos 0.306 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_muchen_1835_01 ↔ char_cen_youqing_2204_01：cos 0.199 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_zhong_xiaorou_2233_01：cos 0.399 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_muchen_1835_01 ↔ char_tan_youqing_2234_01：cos 0.399 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_muchen_1835_01 ↔ char_tantai_lingsu_2303_01：cos 0.481 → ⚠️ 存疑，待人工复核**
+- **char_situ_muchen_1835_01 ↔ char_qiao_qinghuan_2304_01：cos 0.481 → ⚠️ 存疑，待人工复核**
+- **char_situ_muchen_1835_01 ↔ char_chu_muchen_0004_01：cos 0.078 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_qiao_chaoyan_0004_01：cos -0.038 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_xue_qinghuan_0034_01：cos 0.003 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_tang_yuwei_0217_01：cos 0.334 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_muchen_1835_01 ↔ char_ouyang_chuxia_0250_01：cos 0.405 → ⚠️ 存疑，待人工复核**
+- **char_situ_muchen_1835_01 ↔ char_bai_zhiruo_0305_01：cos 0.377 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_muchen_1835_01 ↔ char_pei_shanshan_0456_01：cos 0.397 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_muchen_1835_01 ↔ char_xi_qingchuan_0618_01：cos 0.396 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_muchen_1835_01 ↔ char_zhong_linger_0732_01：cos 0.469 → ⚠️ 存疑，待人工复核**
+- **char_situ_muchen_1835_01 ↔ char_hua_qingdai_1029_01：cos 0.569 → ⚠️ 存疑，待人工复核**
+- **char_situ_muchen_1835_01 ↔ char_tang_banxia_1156_01：cos 0.415 → ⚠️ 存疑，待人工复核**
+- **char_situ_muchen_1835_01 ↔ char_gu_weiyu_1321_01：cos 0.449 → ⚠️ 存疑，待人工复核**
+- **char_situ_muchen_1835_01 ↔ char_cheng_hongyu_1435_01：cos 0.368 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_muchen_1835_01 ↔ char_hua_chuxia_1549_01：cos 0.377 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_muchen_1835_01 ↔ char_pei_manshu_1701_01：cos 0.428 → ⚠️ 存疑，待人工复核**
+- **char_situ_muchen_1835_01 ↔ char_ye_nanqiao_1811_01：cos 0.403 → ⚠️ 存疑，待人工复核**
+- **char_situ_muchen_1835_01 ↔ char_murong_yuyan_1942_01：cos 0.224 → 不同身份**
+- **char_situ_muchen_1835_01 ↔ char_nangong_lingjun_2054_01：cos 0.387 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_yuwei_0934_01 ↔ char_song_anran_1604_01：cos 0.262 → 不同身份**
+- **char_situ_yuwei_0934_01 ↔ char_wen_lingsu_1635_01：cos 0.290 → 不同身份**
+- **char_situ_yuwei_0934_01 ↔ char_xue_hongyu_1034_01：cos 0.688 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_xue_mengli_1234_01：cos 0.731 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_xue_sitian_1508_01：cos 0.261 → 不同身份**
+- **char_situ_yuwei_0934_01 ↔ char_yin_qingdai_1305_01：cos 0.584 → ⚠️ 存疑，待人工复核**
+- **char_situ_yuwei_0934_01 ↔ char_yuchi_wanzhao_1134_01：cos 0.737 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_yuchi_zhixia_0914_01：cos 0.645 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_cheng_yuwei_1103_01：cos 0.701 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_chu_lingsu_1533_01：cos 0.621 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_fu_linger_1433_01：cos 0.696 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_fu_yuhan_1000_01：cos 0.568 → ⚠️ 存疑，待人工复核**
+- **char_situ_yuwei_0934_01 ↔ char_gu_sitian_1003_01：cos 0.565 → ⚠️ 存疑，待人工复核**
+- **char_situ_yuwei_0934_01 ↔ char_liang_chuxia_1503_01：cos 0.623 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_liang_mengli_1203_01：cos 0.730 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_shen_xiaorou_1233_01：cos 0.635 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_shen_xinyue_1404_01：cos 0.719 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_tan_muchen_1133_01：cos 0.685 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_xi_shanshan_1303_01：cos 0.615 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_xue_huaiyu_1034_01：cos 0.573 → ⚠️ 存疑，待人工复核**
+- **char_situ_yuwei_0934_01 ↔ char_yuchi_lingsu_1333_01：cos 0.684 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_bai_anran_0430_01：cos 0.613 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_bai_yuhan_0830_01：cos 0.684 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_cen_yuhan_1934_01：cos 0.651 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_chu_ruoli_0800_01：cos 0.741 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_fu_caiwei_1833_01：cos 0.729 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_fu_wanzhao_1100_01：cos 0.678 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_gu_chaoyan_1904_01：cos 0.681 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_huo_ruoxi_1200_01：cos 0.643 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_jiang_zhiruo_0300_01：cos 0.653 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_liang_tiange_1303_01：cos 0.671 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_liang_yuyan_1333_01：cos 0.745 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_linghu_chuxia_2204_01：cos 0.529 → ⚠️ 存疑，待人工复核**
+- **char_situ_yuwei_0934_01 ↔ char_lu_muchen_0530_01：cos 0.594 → ⚠️ 存疑，待人工复核**
+- **char_situ_yuwei_0934_01 ↔ char_murong_manshu_1704_01：cos 0.661 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_murong_weiyu_0930_01：cos 0.578 → ⚠️ 存疑，待人工复核**
+- **char_situ_yuwei_0934_01 ↔ char_murong_xingzhu_0200_01：cos 0.515 → ⚠️ 存疑，待人工复核**
+- **char_situ_yuwei_0934_01 ↔ char_ning_chuxia_0000_01：cos 0.694 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.697 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_qin_linger_1634_01：cos 0.700 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_qin_suqiu_0630_01：cos 0.629 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_qin_zhixia_1130_01：cos 0.563 → ⚠️ 存疑，待人工复核**
+- **char_situ_yuwei_0934_01 ↔ char_ruan_lingjun_2034_01：cos 0.681 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_ruan_tiange_1403_01：cos 0.660 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_shen_hongyu_1734_01：cos 0.747 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_situ_caiwei_0100_01：cos 0.608 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_situ_yuhan_0600_01：cos 0.724 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_song_wanzhao_1503_01：cos 0.629 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_tan_shanshan_0700_01：cos 0.635 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_tang_sitian_0900_01：cos 0.594 → ⚠️ 存疑，待人工复核**
+- **char_situ_yuwei_0934_01 ↔ char_tantai_weiyu_1433_01：cos 0.547 → ⚠️ 存疑，待人工复核**
+- **char_situ_yuwei_0934_01 ↔ char_tantai_xingzhu_0230_01：cos 0.534 → ⚠️ 存疑，待人工复核**
+- **char_situ_yuwei_0934_01 ↔ char_tantai_yuwei_0730_01：cos 0.547 → ⚠️ 存疑，待人工复核**
+- **char_situ_yuwei_0934_01 ↔ char_wen_manshu_1030_01：cos 0.735 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_xi_weiyu_2134_01：cos 0.704 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_xue_banxia_0330_01：cos 0.625 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_ye_hongyu_0500_01：cos 0.634 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_ye_linger_2004_01：cos 0.661 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_ye_lingjun_0130_01：cos 0.638 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_ye_shanshan_0400_01：cos 0.657 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_ye_yuhan_1804_01：cos 0.663 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_yuchi_ruoli_1000_01：cos 0.705 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_yun_banxia_0030_01：cos 0.450 → ⚠️ 存疑，待人工复核**
+- **char_situ_yuwei_0934_01 ↔ char_zhong_manshu_2104_01：cos 0.683 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_anya_song：cos 0.148 → 不同身份**
+- **char_situ_yuwei_0934_01 ↔ char_ayano：cos 0.089 → 不同身份**
+- **char_situ_yuwei_0934_01 ↔ char_chen_xiawei：cos 0.096 → 不同身份**
+- **char_situ_yuwei_0934_01 ↔ char_jia：cos 0.133 → 不同身份**
+- **char_situ_yuwei_0934_01 ↔ char_jiang_yueyao：cos 0.209 → 不同身份**
+- **char_situ_yuwei_0934_01 ↔ char_lin_qingwan：cos 0.297 → 不同身份**
+- **char_situ_yuwei_0934_01 ↔ char_liu_yinuo_1923_10：cos -0.042 → 不同身份**
+- **char_situ_yuwei_0934_01 ↔ char_luo_qingchuan_1805：cos 0.702 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_pei_yuhan_2300_01：cos 0.679 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_qing_luo：cos 0.228 → 不同身份**
+- **char_situ_yuwei_0934_01 ↔ char_ray_ling：cos 0.210 → 不同身份**
+- **char_situ_yuwei_0934_01 ↔ char_runcha：cos -0.037 → 不同身份**
+- **char_situ_yuwei_0934_01 ↔ char_shen_zhilan：cos 0.185 → 不同身份**
+- **char_situ_yuwei_0934_01 ↔ char_su_xiaotang：cos 0.031 → 不同身份**
+- **char_situ_yuwei_0934_01 ↔ char_tang_mengli_2200_01：cos 0.651 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_wen_xiaorou_2140_01：cos 0.747 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_ye_muchen_2100_01：cos 0.706 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_yin_xinyue_2330_01：cos 0.686 → 同一身份**
+- **char_situ_yuwei_0934_01 ↔ char_zhao_ruoxi：cos 0.254 → 不同身份**
+- **char_situ_yuwei_0934_01 ↔ char_duo：cos 0.120 → 不同身份**
+- **char_situ_yuwei_0934_01 ↔ char_duo3_2：cos 0.151 → 不同身份**
+- **char_situ_yuwei_0934_01 ↔ char_cen_zhiwei_1936_01：cos 0.361 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_yuwei_0934_01 ↔ char_jiang_ruoli_2007_01：cos 0.287 → 不同身份**
+- **char_situ_yuwei_0934_01 ↔ char_xiaog3：cos 0.097 → 不同身份**
+- **char_situ_yuwei_0934_01 ↔ char_xi_manshu_2045_01：cos 0.295 → 不同身份**
+- **char_situ_yuwei_0934_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.283 → 不同身份**
+- **char_situ_yuwei_0934_01 ↔ char_linghu_zhixia_2133_01：cos 0.344 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_yuwei_0934_01 ↔ char_qiao_weiyu_2134_01：cos 0.206 → 不同身份**
+- **char_situ_yuwei_0934_01 ↔ char_jiang_qinghuan_2203_01：cos 0.336 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_yuwei_0934_01 ↔ char_cen_youqing_2204_01：cos 0.021 → 不同身份**
+- **char_situ_yuwei_0934_01 ↔ char_zhong_xiaorou_2233_01：cos 0.310 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_yuwei_0934_01 ↔ char_tan_youqing_2234_01：cos 0.310 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_yuwei_0934_01 ↔ char_tantai_lingsu_2303_01：cos 0.381 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_yuwei_0934_01 ↔ char_qiao_qinghuan_2304_01：cos 0.381 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_yuwei_0934_01 ↔ char_chu_muchen_0004_01：cos 0.030 → 不同身份**
+- **char_situ_yuwei_0934_01 ↔ char_qiao_chaoyan_0004_01：cos -0.074 → 不同身份**
+- **char_situ_yuwei_0934_01 ↔ char_xue_qinghuan_0034_01：cos -0.052 → 不同身份**
+- **char_situ_yuwei_0934_01 ↔ char_tang_yuwei_0217_01：cos 0.318 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_yuwei_0934_01 ↔ char_ouyang_chuxia_0250_01：cos 0.209 → 不同身份**
+- **char_situ_yuwei_0934_01 ↔ char_bai_zhiruo_0305_01：cos 0.428 → ⚠️ 存疑，待人工复核**
+- **char_situ_yuwei_0934_01 ↔ char_pei_shanshan_0456_01：cos 0.417 → ⚠️ 存疑，待人工复核**
+- **char_situ_yuwei_0934_01 ↔ char_xi_qingchuan_0618_01：cos 0.352 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_yuwei_0934_01 ↔ char_zhong_linger_0732_01：cos 0.343 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_yuwei_0934_01 ↔ char_hua_qingdai_1029_01：cos 0.350 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_yuwei_0934_01 ↔ char_tang_banxia_1156_01：cos 0.374 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_yuwei_0934_01 ↔ char_gu_weiyu_1321_01：cos 0.289 → 不同身份**
+- **char_situ_yuwei_0934_01 ↔ char_cheng_hongyu_1435_01：cos 0.268 → 不同身份**
+- **char_situ_yuwei_0934_01 ↔ char_hua_chuxia_1549_01：cos 0.210 → 不同身份**
+- **char_situ_yuwei_0934_01 ↔ char_pei_manshu_1701_01：cos 0.316 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_yuwei_0934_01 ↔ char_ye_nanqiao_1811_01：cos 0.292 → 不同身份**
+- **char_situ_yuwei_0934_01 ↔ char_murong_yuyan_1942_01：cos 0.359 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_yuwei_0934_01 ↔ char_nangong_lingjun_2054_01：cos 0.287 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_wen_lingsu_1635_01：cos 0.364 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_song_anran_1604_01 ↔ char_xue_hongyu_1034_01：cos 0.261 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_xue_mengli_1234_01：cos 0.231 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_xue_sitian_1508_01：cos 0.499 → ⚠️ 存疑，待人工复核**
+- **char_song_anran_1604_01 ↔ char_yin_qingdai_1305_01：cos 0.295 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_yuchi_wanzhao_1134_01：cos 0.263 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_yuchi_zhixia_0914_01：cos 0.199 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_cheng_yuwei_1103_01：cos 0.306 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_song_anran_1604_01 ↔ char_chu_lingsu_1533_01：cos 0.358 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_song_anran_1604_01 ↔ char_fu_linger_1433_01：cos 0.184 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_fu_yuhan_1000_01：cos 0.194 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_gu_sitian_1003_01：cos 0.241 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_liang_chuxia_1503_01：cos 0.110 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_liang_mengli_1203_01：cos 0.246 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_shen_xiaorou_1233_01：cos 0.281 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_shen_xinyue_1404_01：cos 0.298 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_tan_muchen_1133_01：cos 0.166 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_xi_shanshan_1303_01：cos 0.270 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_xue_huaiyu_1034_01：cos 0.204 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_yuchi_lingsu_1333_01：cos 0.236 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_bai_anran_0430_01：cos 0.162 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_bai_yuhan_0830_01：cos 0.174 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_cen_yuhan_1934_01：cos 0.174 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_chu_ruoli_0800_01：cos 0.325 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_song_anran_1604_01 ↔ char_fu_caiwei_1833_01：cos 0.229 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_fu_wanzhao_1100_01：cos 0.275 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_gu_chaoyan_1904_01：cos 0.301 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_song_anran_1604_01 ↔ char_huo_ruoxi_1200_01：cos 0.205 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_jiang_zhiruo_0300_01：cos 0.195 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_liang_tiange_1303_01：cos 0.266 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_liang_yuyan_1333_01：cos 0.375 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_song_anran_1604_01 ↔ char_linghu_chuxia_2204_01：cos 0.129 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_lu_muchen_0530_01：cos 0.219 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_murong_manshu_1704_01：cos 0.231 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_murong_weiyu_0930_01：cos 0.221 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_murong_xingzhu_0200_01：cos 0.163 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_ning_chuxia_0000_01：cos 0.136 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.285 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_qin_linger_1634_01：cos 0.208 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_qin_suqiu_0630_01：cos 0.231 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_qin_zhixia_1130_01：cos 0.260 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_ruan_lingjun_2034_01：cos 0.257 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_ruan_tiange_1403_01：cos 0.175 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_shen_hongyu_1734_01：cos 0.252 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_situ_caiwei_0100_01：cos 0.307 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_song_anran_1604_01 ↔ char_situ_yuhan_0600_01：cos 0.263 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_song_wanzhao_1503_01：cos 0.182 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_tan_shanshan_0700_01：cos 0.247 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_tang_sitian_0900_01：cos 0.326 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_song_anran_1604_01 ↔ char_tantai_weiyu_1433_01：cos 0.163 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_tantai_xingzhu_0230_01：cos 0.144 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_tantai_yuwei_0730_01：cos 0.067 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_wen_manshu_1030_01：cos 0.286 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_xi_weiyu_2134_01：cos 0.210 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_xue_banxia_0330_01：cos 0.202 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_ye_hongyu_0500_01：cos 0.249 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_ye_linger_2004_01：cos 0.223 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_ye_lingjun_0130_01：cos 0.179 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_ye_shanshan_0400_01：cos 0.231 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_ye_yuhan_1804_01：cos 0.237 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_yuchi_ruoli_1000_01：cos 0.187 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_yun_banxia_0030_01：cos 0.221 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_zhong_manshu_2104_01：cos 0.291 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_anya_song：cos 0.259 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_ayano：cos 0.185 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_chen_xiawei：cos 0.041 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_jia：cos 0.313 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_song_anran_1604_01 ↔ char_jiang_yueyao：cos 0.222 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_lin_qingwan：cos 0.371 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_song_anran_1604_01 ↔ char_liu_yinuo_1923_10：cos -0.037 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_luo_qingchuan_1805：cos 0.248 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_pei_yuhan_2300_01：cos 0.124 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_qing_luo：cos 0.368 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_song_anran_1604_01 ↔ char_ray_ling：cos 0.357 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_song_anran_1604_01 ↔ char_runcha：cos 0.100 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_shen_zhilan：cos 0.361 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_song_anran_1604_01 ↔ char_su_xiaotang：cos 0.229 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_tang_mengli_2200_01：cos 0.148 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_wen_xiaorou_2140_01：cos 0.114 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_ye_muchen_2100_01：cos 0.237 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_yin_xinyue_2330_01：cos 0.195 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_zhao_ruoxi：cos 0.417 → ⚠️ 存疑，待人工复核**
+- **char_song_anran_1604_01 ↔ char_duo：cos 0.231 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_duo3_2：cos 0.203 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_cen_zhiwei_1936_01：cos 0.505 → ⚠️ 存疑，待人工复核**
+- **char_song_anran_1604_01 ↔ char_jiang_ruoli_2007_01：cos 0.512 → ⚠️ 存疑，待人工复核**
+- **char_song_anran_1604_01 ↔ char_xiaog3：cos -0.131 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_xi_manshu_2045_01：cos 0.456 → ⚠️ 存疑，待人工复核**
+- **char_song_anran_1604_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.396 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_song_anran_1604_01 ↔ char_linghu_zhixia_2133_01：cos 0.356 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_song_anran_1604_01 ↔ char_qiao_weiyu_2134_01：cos 0.426 → ⚠️ 存疑，待人工复核**
+- **char_song_anran_1604_01 ↔ char_jiang_qinghuan_2203_01：cos 0.434 → ⚠️ 存疑，待人工复核**
+- **char_song_anran_1604_01 ↔ char_cen_youqing_2204_01：cos 0.278 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_zhong_xiaorou_2233_01：cos 0.444 → ⚠️ 存疑，待人工复核**
+- **char_song_anran_1604_01 ↔ char_tan_youqing_2234_01：cos 0.444 → ⚠️ 存疑，待人工复核**
+- **char_song_anran_1604_01 ↔ char_tantai_lingsu_2303_01：cos 0.430 → ⚠️ 存疑，待人工复核**
+- **char_song_anran_1604_01 ↔ char_qiao_qinghuan_2304_01：cos 0.430 → ⚠️ 存疑，待人工复核**
+- **char_song_anran_1604_01 ↔ char_chu_muchen_0004_01：cos -0.045 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_qiao_chaoyan_0004_01：cos -0.063 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_xue_qinghuan_0034_01：cos -0.023 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_tang_yuwei_0217_01：cos 0.457 → ⚠️ 存疑，待人工复核**
+- **char_song_anran_1604_01 ↔ char_ouyang_chuxia_0250_01：cos 0.382 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_song_anran_1604_01 ↔ char_bai_zhiruo_0305_01：cos 0.405 → ⚠️ 存疑，待人工复核**
+- **char_song_anran_1604_01 ↔ char_pei_shanshan_0456_01：cos 0.459 → ⚠️ 存疑，待人工复核**
+- **char_song_anran_1604_01 ↔ char_xi_qingchuan_0618_01：cos 0.414 → ⚠️ 存疑，待人工复核**
+- **char_song_anran_1604_01 ↔ char_zhong_linger_0732_01：cos 0.370 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_song_anran_1604_01 ↔ char_hua_qingdai_1029_01：cos 0.443 → ⚠️ 存疑，待人工复核**
+- **char_song_anran_1604_01 ↔ char_tang_banxia_1156_01：cos 0.411 → ⚠️ 存疑，待人工复核**
+- **char_song_anran_1604_01 ↔ char_gu_weiyu_1321_01：cos 0.554 → ⚠️ 存疑，待人工复核**
+- **char_song_anran_1604_01 ↔ char_cheng_hongyu_1435_01：cos 0.341 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_song_anran_1604_01 ↔ char_hua_chuxia_1549_01：cos 0.298 → 不同身份**
+- **char_song_anran_1604_01 ↔ char_pei_manshu_1701_01：cos 0.307 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_song_anran_1604_01 ↔ char_ye_nanqiao_1811_01：cos 0.325 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_song_anran_1604_01 ↔ char_murong_yuyan_1942_01：cos 0.418 → ⚠️ 存疑，待人工复核**
+- **char_song_anran_1604_01 ↔ char_nangong_lingjun_2054_01：cos 0.305 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_lingsu_1635_01 ↔ char_xue_hongyu_1034_01：cos 0.258 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_xue_mengli_1234_01：cos 0.314 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_lingsu_1635_01 ↔ char_xue_sitian_1508_01：cos 0.303 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_lingsu_1635_01 ↔ char_yin_qingdai_1305_01：cos 0.182 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_yuchi_wanzhao_1134_01：cos 0.259 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_yuchi_zhixia_0914_01：cos 0.212 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_cheng_yuwei_1103_01：cos 0.262 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_chu_lingsu_1533_01：cos 0.345 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_lingsu_1635_01 ↔ char_fu_linger_1433_01：cos 0.140 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_fu_yuhan_1000_01：cos 0.299 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_gu_sitian_1003_01：cos 0.118 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_liang_chuxia_1503_01：cos -0.001 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_liang_mengli_1203_01：cos 0.319 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_lingsu_1635_01 ↔ char_shen_xiaorou_1233_01：cos 0.372 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_lingsu_1635_01 ↔ char_shen_xinyue_1404_01：cos 0.279 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_tan_muchen_1133_01：cos 0.162 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_xi_shanshan_1303_01：cos 0.305 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_lingsu_1635_01 ↔ char_xue_huaiyu_1034_01：cos 0.402 → ⚠️ 存疑，待人工复核**
+- **char_wen_lingsu_1635_01 ↔ char_yuchi_lingsu_1333_01：cos 0.273 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_bai_anran_0430_01：cos 0.213 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_bai_yuhan_0830_01：cos 0.171 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_cen_yuhan_1934_01：cos 0.234 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_chu_ruoli_0800_01：cos 0.313 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_lingsu_1635_01 ↔ char_fu_caiwei_1833_01：cos 0.184 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_fu_wanzhao_1100_01：cos 0.311 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_lingsu_1635_01 ↔ char_gu_chaoyan_1904_01：cos 0.331 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_lingsu_1635_01 ↔ char_huo_ruoxi_1200_01：cos 0.198 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_jiang_zhiruo_0300_01：cos 0.155 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_liang_tiange_1303_01：cos 0.394 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_lingsu_1635_01 ↔ char_liang_yuyan_1333_01：cos 0.308 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_lingsu_1635_01 ↔ char_linghu_chuxia_2204_01：cos 0.222 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_lu_muchen_0530_01：cos 0.367 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_lingsu_1635_01 ↔ char_murong_manshu_1704_01：cos 0.212 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_murong_weiyu_0930_01：cos 0.320 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_lingsu_1635_01 ↔ char_murong_xingzhu_0200_01：cos 0.022 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_ning_chuxia_0000_01：cos 0.092 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.357 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_lingsu_1635_01 ↔ char_qin_linger_1634_01：cos 0.162 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_qin_suqiu_0630_01：cos 0.157 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_qin_zhixia_1130_01：cos 0.239 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_ruan_lingjun_2034_01：cos 0.224 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_ruan_tiange_1403_01：cos 0.264 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_shen_hongyu_1734_01：cos 0.203 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_situ_caiwei_0100_01：cos 0.299 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_situ_yuhan_0600_01：cos 0.237 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_song_wanzhao_1503_01：cos 0.262 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_tan_shanshan_0700_01：cos 0.366 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_lingsu_1635_01 ↔ char_tang_sitian_0900_01：cos 0.302 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_lingsu_1635_01 ↔ char_tantai_weiyu_1433_01：cos 0.287 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_tantai_xingzhu_0230_01：cos -0.053 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_tantai_yuwei_0730_01：cos 0.016 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_wen_manshu_1030_01：cos 0.314 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_lingsu_1635_01 ↔ char_xi_weiyu_2134_01：cos 0.246 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_xue_banxia_0330_01：cos 0.293 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_ye_hongyu_0500_01：cos 0.351 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_lingsu_1635_01 ↔ char_ye_linger_2004_01：cos 0.330 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_lingsu_1635_01 ↔ char_ye_lingjun_0130_01：cos 0.304 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_lingsu_1635_01 ↔ char_ye_shanshan_0400_01：cos 0.170 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_ye_yuhan_1804_01：cos 0.260 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_yuchi_ruoli_1000_01：cos 0.134 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_yun_banxia_0030_01：cos 0.336 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_lingsu_1635_01 ↔ char_zhong_manshu_2104_01：cos 0.221 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_anya_song：cos 0.290 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_ayano：cos -0.038 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_chen_xiawei：cos 0.085 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_jia：cos 0.071 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_jiang_yueyao：cos 0.224 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_lin_qingwan：cos 0.377 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_lingsu_1635_01 ↔ char_liu_yinuo_1923_10：cos -0.039 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_luo_qingchuan_1805：cos 0.262 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_pei_yuhan_2300_01：cos 0.083 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_qing_luo：cos 0.100 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_ray_ling：cos 0.403 → ⚠️ 存疑，待人工复核**
+- **char_wen_lingsu_1635_01 ↔ char_runcha：cos -0.015 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_shen_zhilan：cos 0.387 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_lingsu_1635_01 ↔ char_su_xiaotang：cos 0.166 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_tang_mengli_2200_01：cos 0.086 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_wen_xiaorou_2140_01：cos 0.094 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_ye_muchen_2100_01：cos 0.159 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_yin_xinyue_2330_01：cos 0.101 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_zhao_ruoxi：cos 0.419 → ⚠️ 存疑，待人工复核**
+- **char_wen_lingsu_1635_01 ↔ char_duo：cos 0.062 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_duo3_2：cos 0.155 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_cen_zhiwei_1936_01：cos 0.630 → 同一身份**
+- **char_wen_lingsu_1635_01 ↔ char_jiang_ruoli_2007_01：cos 0.516 → ⚠️ 存疑，待人工复核**
+- **char_wen_lingsu_1635_01 ↔ char_xiaog3：cos -0.079 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_xi_manshu_2045_01：cos 0.434 → ⚠️ 存疑，待人工复核**
+- **char_wen_lingsu_1635_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.723 → 同一身份**
+- **char_wen_lingsu_1635_01 ↔ char_linghu_zhixia_2133_01：cos 0.719 → 同一身份**
+- **char_wen_lingsu_1635_01 ↔ char_qiao_weiyu_2134_01：cos 0.472 → ⚠️ 存疑，待人工复核**
+- **char_wen_lingsu_1635_01 ↔ char_jiang_qinghuan_2203_01：cos 0.318 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_lingsu_1635_01 ↔ char_cen_youqing_2204_01：cos 0.243 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_zhong_xiaorou_2233_01：cos 0.348 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_lingsu_1635_01 ↔ char_tan_youqing_2234_01：cos 0.348 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_lingsu_1635_01 ↔ char_tantai_lingsu_2303_01：cos 0.320 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_lingsu_1635_01 ↔ char_qiao_qinghuan_2304_01：cos 0.320 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_lingsu_1635_01 ↔ char_chu_muchen_0004_01：cos -0.066 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_qiao_chaoyan_0004_01：cos -0.080 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_xue_qinghuan_0034_01：cos 0.012 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_tang_yuwei_0217_01：cos 0.204 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_ouyang_chuxia_0250_01：cos 0.326 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_lingsu_1635_01 ↔ char_bai_zhiruo_0305_01：cos 0.400 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_lingsu_1635_01 ↔ char_pei_shanshan_0456_01：cos 0.388 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_lingsu_1635_01 ↔ char_xi_qingchuan_0618_01：cos 0.273 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_zhong_linger_0732_01：cos 0.399 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_lingsu_1635_01 ↔ char_hua_qingdai_1029_01：cos 0.422 → ⚠️ 存疑，待人工复核**
+- **char_wen_lingsu_1635_01 ↔ char_tang_banxia_1156_01：cos 0.389 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_lingsu_1635_01 ↔ char_gu_weiyu_1321_01：cos 0.360 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_lingsu_1635_01 ↔ char_cheng_hongyu_1435_01：cos 0.316 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_lingsu_1635_01 ↔ char_hua_chuxia_1549_01：cos 0.373 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_lingsu_1635_01 ↔ char_pei_manshu_1701_01：cos 0.251 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_ye_nanqiao_1811_01：cos 0.337 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_lingsu_1635_01 ↔ char_murong_yuyan_1942_01：cos 0.286 → 不同身份**
+- **char_wen_lingsu_1635_01 ↔ char_nangong_lingjun_2054_01：cos 0.376 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_hongyu_1034_01 ↔ char_xue_mengli_1234_01：cos 0.669 → 同一身份**
+- **char_xue_hongyu_1034_01 ↔ char_xue_sitian_1508_01：cos 0.232 → 不同身份**
+- **char_xue_hongyu_1034_01 ↔ char_yin_qingdai_1305_01：cos 0.524 → ⚠️ 存疑，待人工复核**
+- **char_xue_hongyu_1034_01 ↔ char_yuchi_wanzhao_1134_01：cos 0.649 → 同一身份**
+- **char_xue_hongyu_1034_01 ↔ char_yuchi_zhixia_0914_01：cos 0.738 → 同一身份**
+- **char_xue_hongyu_1034_01 ↔ char_cheng_yuwei_1103_01：cos 0.560 → ⚠️ 存疑，待人工复核**
+- **char_xue_hongyu_1034_01 ↔ char_chu_lingsu_1533_01：cos 0.529 → ⚠️ 存疑，待人工复核**
+- **char_xue_hongyu_1034_01 ↔ char_fu_linger_1433_01：cos 0.567 → ⚠️ 存疑，待人工复核**
+- **char_xue_hongyu_1034_01 ↔ char_fu_yuhan_1000_01：cos 0.566 → ⚠️ 存疑，待人工复核**
+- **char_xue_hongyu_1034_01 ↔ char_gu_sitian_1003_01：cos 0.516 → ⚠️ 存疑，待人工复核**
+- **char_xue_hongyu_1034_01 ↔ char_liang_chuxia_1503_01：cos 0.501 → ⚠️ 存疑，待人工复核**
+- **char_xue_hongyu_1034_01 ↔ char_liang_mengli_1203_01：cos 0.606 → 同一身份**
+- **char_xue_hongyu_1034_01 ↔ char_shen_xiaorou_1233_01：cos 0.723 → 同一身份**
+- **char_xue_hongyu_1034_01 ↔ char_shen_xinyue_1404_01：cos 0.522 → ⚠️ 存疑，待人工复核**
+- **char_xue_hongyu_1034_01 ↔ char_tan_muchen_1133_01：cos 0.658 → 同一身份**
+- **char_xue_hongyu_1034_01 ↔ char_xi_shanshan_1303_01：cos 0.606 → 同一身份**
+- **char_xue_hongyu_1034_01 ↔ char_xue_huaiyu_1034_01：cos 0.653 → 同一身份**
+- **char_xue_hongyu_1034_01 ↔ char_yuchi_lingsu_1333_01：cos 0.589 → ⚠️ 存疑，待人工复核**
+- **char_xue_hongyu_1034_01 ↔ char_bai_anran_0430_01：cos 0.455 → ⚠️ 存疑，待人工复核**
+- **char_xue_hongyu_1034_01 ↔ char_bai_yuhan_0830_01：cos 0.522 → ⚠️ 存疑，待人工复核**
+- **char_xue_hongyu_1034_01 ↔ char_cen_yuhan_1934_01：cos 0.754 → 同一身份**
+- **char_xue_hongyu_1034_01 ↔ char_chu_ruoli_0800_01：cos 0.729 → 同一身份**
+- **char_xue_hongyu_1034_01 ↔ char_fu_caiwei_1833_01：cos 0.584 → ⚠️ 存疑，待人工复核**
+- **char_xue_hongyu_1034_01 ↔ char_fu_wanzhao_1100_01：cos 0.528 → ⚠️ 存疑，待人工复核**
+- **char_xue_hongyu_1034_01 ↔ char_gu_chaoyan_1904_01：cos 0.740 → 同一身份**
+- **char_xue_hongyu_1034_01 ↔ char_huo_ruoxi_1200_01：cos 0.664 → 同一身份**
+- **char_xue_hongyu_1034_01 ↔ char_jiang_zhiruo_0300_01：cos 0.519 → ⚠️ 存疑，待人工复核**
+- **char_xue_hongyu_1034_01 ↔ char_liang_tiange_1303_01：cos 0.698 → 同一身份**
+- **char_xue_hongyu_1034_01 ↔ char_liang_yuyan_1333_01：cos 0.588 → ⚠️ 存疑，待人工复核**
+- **char_xue_hongyu_1034_01 ↔ char_linghu_chuxia_2204_01：cos 0.696 → 同一身份**
+- **char_xue_hongyu_1034_01 ↔ char_lu_muchen_0530_01：cos 0.682 → 同一身份**
+- **char_xue_hongyu_1034_01 ↔ char_murong_manshu_1704_01：cos 0.626 → 同一身份**
+- **char_xue_hongyu_1034_01 ↔ char_murong_weiyu_0930_01：cos 0.553 → ⚠️ 存疑，待人工复核**
+- **char_xue_hongyu_1034_01 ↔ char_murong_xingzhu_0200_01：cos 0.488 → ⚠️ 存疑，待人工复核**
+- **char_xue_hongyu_1034_01 ↔ char_ning_chuxia_0000_01：cos 0.539 → ⚠️ 存疑，待人工复核**
+- **char_xue_hongyu_1034_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.708 → 同一身份**
+- **char_xue_hongyu_1034_01 ↔ char_qin_linger_1634_01：cos 0.643 → 同一身份**
+- **char_xue_hongyu_1034_01 ↔ char_qin_suqiu_0630_01：cos 0.563 → ⚠️ 存疑，待人工复核**
+- **char_xue_hongyu_1034_01 ↔ char_qin_zhixia_1130_01：cos 0.563 → ⚠️ 存疑，待人工复核**
+- **char_xue_hongyu_1034_01 ↔ char_ruan_lingjun_2034_01：cos 0.655 → 同一身份**
+- **char_xue_hongyu_1034_01 ↔ char_ruan_tiange_1403_01：cos 0.745 → 同一身份**
+- **char_xue_hongyu_1034_01 ↔ char_shen_hongyu_1734_01：cos 0.555 → ⚠️ 存疑，待人工复核**
+- **char_xue_hongyu_1034_01 ↔ char_situ_caiwei_0100_01：cos 0.477 → ⚠️ 存疑，待人工复核**
+- **char_xue_hongyu_1034_01 ↔ char_situ_yuhan_0600_01：cos 0.689 → 同一身份**
+- **char_xue_hongyu_1034_01 ↔ char_song_wanzhao_1503_01：cos 0.607 → 同一身份**
+- **char_xue_hongyu_1034_01 ↔ char_tan_shanshan_0700_01：cos 0.648 → 同一身份**
+- **char_xue_hongyu_1034_01 ↔ char_tang_sitian_0900_01：cos 0.491 → ⚠️ 存疑，待人工复核**
+- **char_xue_hongyu_1034_01 ↔ char_tantai_weiyu_1433_01：cos 0.731 → 同一身份**
+- **char_xue_hongyu_1034_01 ↔ char_tantai_xingzhu_0230_01：cos 0.454 → ⚠️ 存疑，待人工复核**
+- **char_xue_hongyu_1034_01 ↔ char_tantai_yuwei_0730_01：cos 0.508 → ⚠️ 存疑，待人工复核**
+- **char_xue_hongyu_1034_01 ↔ char_wen_manshu_1030_01：cos 0.605 → 同一身份**
+- **char_xue_hongyu_1034_01 ↔ char_xi_weiyu_2134_01：cos 0.524 → ⚠️ 存疑，待人工复核**
+- **char_xue_hongyu_1034_01 ↔ char_xue_banxia_0330_01：cos 0.736 → 同一身份**
+- **char_xue_hongyu_1034_01 ↔ char_ye_hongyu_0500_01：cos 0.781 → 同一身份**
+- **char_xue_hongyu_1034_01 ↔ char_ye_linger_2004_01：cos 0.756 → 同一身份**
+- **char_xue_hongyu_1034_01 ↔ char_ye_lingjun_0130_01：cos 0.759 → 同一身份**
+- **char_xue_hongyu_1034_01 ↔ char_ye_shanshan_0400_01：cos 0.625 → 同一身份**
+- **char_xue_hongyu_1034_01 ↔ char_ye_yuhan_1804_01：cos 0.641 → 同一身份**
+- **char_xue_hongyu_1034_01 ↔ char_yuchi_ruoli_1000_01：cos 0.568 → ⚠️ 存疑，待人工复核**
+- **char_xue_hongyu_1034_01 ↔ char_yun_banxia_0030_01：cos 0.437 → ⚠️ 存疑，待人工复核**
+- **char_xue_hongyu_1034_01 ↔ char_zhong_manshu_2104_01：cos 0.516 → ⚠️ 存疑，待人工复核**
+- **char_xue_hongyu_1034_01 ↔ char_anya_song：cos 0.143 → 不同身份**
+- **char_xue_hongyu_1034_01 ↔ char_ayano：cos 0.104 → 不同身份**
+- **char_xue_hongyu_1034_01 ↔ char_chen_xiawei：cos 0.005 → 不同身份**
+- **char_xue_hongyu_1034_01 ↔ char_jia：cos 0.121 → 不同身份**
+- **char_xue_hongyu_1034_01 ↔ char_jiang_yueyao：cos 0.083 → 不同身份**
+- **char_xue_hongyu_1034_01 ↔ char_lin_qingwan：cos 0.240 → 不同身份**
+- **char_xue_hongyu_1034_01 ↔ char_liu_yinuo_1923_10：cos -0.047 → 不同身份**
+- **char_xue_hongyu_1034_01 ↔ char_luo_qingchuan_1805：cos 0.686 → 同一身份**
+- **char_xue_hongyu_1034_01 ↔ char_pei_yuhan_2300_01：cos 0.545 → ⚠️ 存疑，待人工复核**
+- **char_xue_hongyu_1034_01 ↔ char_qing_luo：cos 0.126 → 不同身份**
+- **char_xue_hongyu_1034_01 ↔ char_ray_ling：cos 0.322 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_hongyu_1034_01 ↔ char_runcha：cos 0.063 → 不同身份**
+- **char_xue_hongyu_1034_01 ↔ char_shen_zhilan：cos 0.189 → 不同身份**
+- **char_xue_hongyu_1034_01 ↔ char_su_xiaotang：cos 0.057 → 不同身份**
+- **char_xue_hongyu_1034_01 ↔ char_tang_mengli_2200_01：cos 0.539 → ⚠️ 存疑，待人工复核**
+- **char_xue_hongyu_1034_01 ↔ char_wen_xiaorou_2140_01：cos 0.553 → ⚠️ 存疑，待人工复核**
+- **char_xue_hongyu_1034_01 ↔ char_ye_muchen_2100_01：cos 0.545 → ⚠️ 存疑，待人工复核**
+- **char_xue_hongyu_1034_01 ↔ char_yin_xinyue_2330_01：cos 0.536 → ⚠️ 存疑，待人工复核**
+- **char_xue_hongyu_1034_01 ↔ char_zhao_ruoxi：cos 0.128 → 不同身份**
+- **char_xue_hongyu_1034_01 ↔ char_duo：cos 0.170 → 不同身份**
+- **char_xue_hongyu_1034_01 ↔ char_duo3_2：cos 0.197 → 不同身份**
+- **char_xue_hongyu_1034_01 ↔ char_cen_zhiwei_1936_01：cos 0.342 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_hongyu_1034_01 ↔ char_jiang_ruoli_2007_01：cos 0.257 → 不同身份**
+- **char_xue_hongyu_1034_01 ↔ char_xiaog3：cos 0.126 → 不同身份**
+- **char_xue_hongyu_1034_01 ↔ char_xi_manshu_2045_01：cos 0.169 → 不同身份**
+- **char_xue_hongyu_1034_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.331 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_hongyu_1034_01 ↔ char_linghu_zhixia_2133_01：cos 0.323 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_hongyu_1034_01 ↔ char_qiao_weiyu_2134_01：cos 0.194 → 不同身份**
+- **char_xue_hongyu_1034_01 ↔ char_jiang_qinghuan_2203_01：cos 0.202 → 不同身份**
+- **char_xue_hongyu_1034_01 ↔ char_cen_youqing_2204_01：cos -0.009 → 不同身份**
+- **char_xue_hongyu_1034_01 ↔ char_zhong_xiaorou_2233_01：cos 0.208 → 不同身份**
+- **char_xue_hongyu_1034_01 ↔ char_tan_youqing_2234_01：cos 0.208 → 不同身份**
+- **char_xue_hongyu_1034_01 ↔ char_tantai_lingsu_2303_01：cos 0.338 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_hongyu_1034_01 ↔ char_qiao_qinghuan_2304_01：cos 0.338 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_hongyu_1034_01 ↔ char_chu_muchen_0004_01：cos 0.049 → 不同身份**
+- **char_xue_hongyu_1034_01 ↔ char_qiao_chaoyan_0004_01：cos -0.089 → 不同身份**
+- **char_xue_hongyu_1034_01 ↔ char_xue_qinghuan_0034_01：cos -0.017 → 不同身份**
+- **char_xue_hongyu_1034_01 ↔ char_tang_yuwei_0217_01：cos 0.151 → 不同身份**
+- **char_xue_hongyu_1034_01 ↔ char_ouyang_chuxia_0250_01：cos 0.120 → 不同身份**
+- **char_xue_hongyu_1034_01 ↔ char_bai_zhiruo_0305_01：cos 0.319 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_hongyu_1034_01 ↔ char_pei_shanshan_0456_01：cos 0.293 → 不同身份**
+- **char_xue_hongyu_1034_01 ↔ char_xi_qingchuan_0618_01：cos 0.250 → 不同身份**
+- **char_xue_hongyu_1034_01 ↔ char_zhong_linger_0732_01：cos 0.298 → 不同身份**
+- **char_xue_hongyu_1034_01 ↔ char_hua_qingdai_1029_01：cos 0.256 → 不同身份**
+- **char_xue_hongyu_1034_01 ↔ char_tang_banxia_1156_01：cos 0.330 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_hongyu_1034_01 ↔ char_gu_weiyu_1321_01：cos 0.241 → 不同身份**
+- **char_xue_hongyu_1034_01 ↔ char_cheng_hongyu_1435_01：cos 0.136 → 不同身份**
+- **char_xue_hongyu_1034_01 ↔ char_hua_chuxia_1549_01：cos 0.143 → 不同身份**
+- **char_xue_hongyu_1034_01 ↔ char_pei_manshu_1701_01：cos 0.232 → 不同身份**
+- **char_xue_hongyu_1034_01 ↔ char_ye_nanqiao_1811_01：cos 0.168 → 不同身份**
+- **char_xue_hongyu_1034_01 ↔ char_murong_yuyan_1942_01：cos 0.191 → 不同身份**
+- **char_xue_hongyu_1034_01 ↔ char_nangong_lingjun_2054_01：cos 0.271 → 不同身份**
+- **char_xue_mengli_1234_01 ↔ char_xue_sitian_1508_01：cos 0.238 → 不同身份**
+- **char_xue_mengli_1234_01 ↔ char_yin_qingdai_1305_01：cos 0.588 → ⚠️ 存疑，待人工复核**
+- **char_xue_mengli_1234_01 ↔ char_yuchi_wanzhao_1134_01：cos 0.737 → 同一身份**
+- **char_xue_mengli_1234_01 ↔ char_yuchi_zhixia_0914_01：cos 0.617 → 同一身份**
+- **char_xue_mengli_1234_01 ↔ char_cheng_yuwei_1103_01：cos 0.606 → 同一身份**
+- **char_xue_mengli_1234_01 ↔ char_chu_lingsu_1533_01：cos 0.663 → 同一身份**
+- **char_xue_mengli_1234_01 ↔ char_fu_linger_1433_01：cos 0.623 → 同一身份**
+- **char_xue_mengli_1234_01 ↔ char_fu_yuhan_1000_01：cos 0.615 → 同一身份**
+- **char_xue_mengli_1234_01 ↔ char_gu_sitian_1003_01：cos 0.548 → ⚠️ 存疑，待人工复核**
+- **char_xue_mengli_1234_01 ↔ char_liang_chuxia_1503_01：cos 0.524 → ⚠️ 存疑，待人工复核**
+- **char_xue_mengli_1234_01 ↔ char_liang_mengli_1203_01：cos 0.781 → 同一身份**
+- **char_xue_mengli_1234_01 ↔ char_shen_xiaorou_1233_01：cos 0.651 → 同一身份**
+- **char_xue_mengli_1234_01 ↔ char_shen_xinyue_1404_01：cos 0.630 → 同一身份**
+- **char_xue_mengli_1234_01 ↔ char_tan_muchen_1133_01：cos 0.684 → 同一身份**
+- **char_xue_mengli_1234_01 ↔ char_xi_shanshan_1303_01：cos 0.678 → 同一身份**
+- **char_xue_mengli_1234_01 ↔ char_xue_huaiyu_1034_01：cos 0.537 → ⚠️ 存疑，待人工复核**
+- **char_xue_mengli_1234_01 ↔ char_yuchi_lingsu_1333_01：cos 0.664 → 同一身份**
+- **char_xue_mengli_1234_01 ↔ char_bai_anran_0430_01：cos 0.615 → 同一身份**
+- **char_xue_mengli_1234_01 ↔ char_bai_yuhan_0830_01：cos 0.627 → 同一身份**
+- **char_xue_mengli_1234_01 ↔ char_cen_yuhan_1934_01：cos 0.689 → 同一身份**
+- **char_xue_mengli_1234_01 ↔ char_chu_ruoli_0800_01：cos 0.707 → 同一身份**
+- **char_xue_mengli_1234_01 ↔ char_fu_caiwei_1833_01：cos 0.696 → 同一身份**
+- **char_xue_mengli_1234_01 ↔ char_fu_wanzhao_1100_01：cos 0.721 → 同一身份**
+- **char_xue_mengli_1234_01 ↔ char_gu_chaoyan_1904_01：cos 0.714 → 同一身份**
+- **char_xue_mengli_1234_01 ↔ char_huo_ruoxi_1200_01：cos 0.673 → 同一身份**
+- **char_xue_mengli_1234_01 ↔ char_jiang_zhiruo_0300_01：cos 0.581 → ⚠️ 存疑，待人工复核**
+- **char_xue_mengli_1234_01 ↔ char_liang_tiange_1303_01：cos 0.677 → 同一身份**
+- **char_xue_mengli_1234_01 ↔ char_liang_yuyan_1333_01：cos 0.692 → 同一身份**
+- **char_xue_mengli_1234_01 ↔ char_linghu_chuxia_2204_01：cos 0.498 → ⚠️ 存疑，待人工复核**
+- **char_xue_mengli_1234_01 ↔ char_lu_muchen_0530_01：cos 0.647 → 同一身份**
+- **char_xue_mengli_1234_01 ↔ char_murong_manshu_1704_01：cos 0.787 → 同一身份**
+- **char_xue_mengli_1234_01 ↔ char_murong_weiyu_0930_01：cos 0.675 → 同一身份**
+- **char_xue_mengli_1234_01 ↔ char_murong_xingzhu_0200_01：cos 0.505 → ⚠️ 存疑，待人工复核**
+- **char_xue_mengli_1234_01 ↔ char_ning_chuxia_0000_01：cos 0.565 → ⚠️ 存疑，待人工复核**
+- **char_xue_mengli_1234_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.658 → 同一身份**
+- **char_xue_mengli_1234_01 ↔ char_qin_linger_1634_01：cos 0.705 → 同一身份**
+- **char_xue_mengli_1234_01 ↔ char_qin_suqiu_0630_01：cos 0.609 → 同一身份**
+- **char_xue_mengli_1234_01 ↔ char_qin_zhixia_1130_01：cos 0.526 → ⚠️ 存疑，待人工复核**
+- **char_xue_mengli_1234_01 ↔ char_ruan_lingjun_2034_01：cos 0.734 → 同一身份**
+- **char_xue_mengli_1234_01 ↔ char_ruan_tiange_1403_01：cos 0.608 → 同一身份**
+- **char_xue_mengli_1234_01 ↔ char_shen_hongyu_1734_01：cos 0.691 → 同一身份**
+- **char_xue_mengli_1234_01 ↔ char_situ_caiwei_0100_01：cos 0.589 → ⚠️ 存疑，待人工复核**
+- **char_xue_mengli_1234_01 ↔ char_situ_yuhan_0600_01：cos 0.735 → 同一身份**
+- **char_xue_mengli_1234_01 ↔ char_song_wanzhao_1503_01：cos 0.650 → 同一身份**
+- **char_xue_mengli_1234_01 ↔ char_tan_shanshan_0700_01：cos 0.608 → 同一身份**
+- **char_xue_mengli_1234_01 ↔ char_tang_sitian_0900_01：cos 0.605 → 同一身份**
+- **char_xue_mengli_1234_01 ↔ char_tantai_weiyu_1433_01：cos 0.514 → ⚠️ 存疑，待人工复核**
+- **char_xue_mengli_1234_01 ↔ char_tantai_xingzhu_0230_01：cos 0.492 → ⚠️ 存疑，待人工复核**
+- **char_xue_mengli_1234_01 ↔ char_tantai_yuwei_0730_01：cos 0.500 → ⚠️ 存疑，待人工复核**
+- **char_xue_mengli_1234_01 ↔ char_wen_manshu_1030_01：cos 0.676 → 同一身份**
+- **char_xue_mengli_1234_01 ↔ char_xi_weiyu_2134_01：cos 0.646 → 同一身份**
+- **char_xue_mengli_1234_01 ↔ char_xue_banxia_0330_01：cos 0.628 → 同一身份**
+- **char_xue_mengli_1234_01 ↔ char_ye_hongyu_0500_01：cos 0.675 → 同一身份**
+- **char_xue_mengli_1234_01 ↔ char_ye_linger_2004_01：cos 0.665 → 同一身份**
+- **char_xue_mengli_1234_01 ↔ char_ye_lingjun_0130_01：cos 0.570 → ⚠️ 存疑，待人工复核**
+- **char_xue_mengli_1234_01 ↔ char_ye_shanshan_0400_01：cos 0.617 → 同一身份**
+- **char_xue_mengli_1234_01 ↔ char_ye_yuhan_1804_01：cos 0.663 → 同一身份**
+- **char_xue_mengli_1234_01 ↔ char_yuchi_ruoli_1000_01：cos 0.593 → ⚠️ 存疑，待人工复核**
+- **char_xue_mengli_1234_01 ↔ char_yun_banxia_0030_01：cos 0.546 → ⚠️ 存疑，待人工复核**
+- **char_xue_mengli_1234_01 ↔ char_zhong_manshu_2104_01：cos 0.598 → ⚠️ 存疑，待人工复核**
+- **char_xue_mengli_1234_01 ↔ char_anya_song：cos 0.168 → 不同身份**
+- **char_xue_mengli_1234_01 ↔ char_ayano：cos 0.079 → 不同身份**
+- **char_xue_mengli_1234_01 ↔ char_chen_xiawei：cos 0.068 → 不同身份**
+- **char_xue_mengli_1234_01 ↔ char_jia：cos 0.063 → 不同身份**
+- **char_xue_mengli_1234_01 ↔ char_jiang_yueyao：cos 0.185 → 不同身份**
+- **char_xue_mengli_1234_01 ↔ char_lin_qingwan：cos 0.316 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_mengli_1234_01 ↔ char_liu_yinuo_1923_10：cos 0.008 → 不同身份**
+- **char_xue_mengli_1234_01 ↔ char_luo_qingchuan_1805：cos 0.675 → 同一身份**
+- **char_xue_mengli_1234_01 ↔ char_pei_yuhan_2300_01：cos 0.593 → ⚠️ 存疑，待人工复核**
+- **char_xue_mengli_1234_01 ↔ char_qing_luo：cos 0.203 → 不同身份**
+- **char_xue_mengli_1234_01 ↔ char_ray_ling：cos 0.253 → 不同身份**
+- **char_xue_mengli_1234_01 ↔ char_runcha：cos 0.008 → 不同身份**
+- **char_xue_mengli_1234_01 ↔ char_shen_zhilan：cos 0.247 → 不同身份**
+- **char_xue_mengli_1234_01 ↔ char_su_xiaotang：cos 0.104 → 不同身份**
+- **char_xue_mengli_1234_01 ↔ char_tang_mengli_2200_01：cos 0.616 → 同一身份**
+- **char_xue_mengli_1234_01 ↔ char_wen_xiaorou_2140_01：cos 0.674 → 同一身份**
+- **char_xue_mengli_1234_01 ↔ char_ye_muchen_2100_01：cos 0.600 → ⚠️ 存疑，待人工复核**
+- **char_xue_mengli_1234_01 ↔ char_yin_xinyue_2330_01：cos 0.599 → ⚠️ 存疑，待人工复核**
+- **char_xue_mengli_1234_01 ↔ char_zhao_ruoxi：cos 0.195 → 不同身份**
+- **char_xue_mengli_1234_01 ↔ char_duo：cos 0.210 → 不同身份**
+- **char_xue_mengli_1234_01 ↔ char_duo3_2：cos 0.104 → 不同身份**
+- **char_xue_mengli_1234_01 ↔ char_cen_zhiwei_1936_01：cos 0.382 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_mengli_1234_01 ↔ char_jiang_ruoli_2007_01：cos 0.291 → 不同身份**
+- **char_xue_mengli_1234_01 ↔ char_xiaog3：cos 0.124 → 不同身份**
+- **char_xue_mengli_1234_01 ↔ char_xi_manshu_2045_01：cos 0.269 → 不同身份**
+- **char_xue_mengli_1234_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.336 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_mengli_1234_01 ↔ char_linghu_zhixia_2133_01：cos 0.385 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_mengli_1234_01 ↔ char_qiao_weiyu_2134_01：cos 0.225 → 不同身份**
+- **char_xue_mengli_1234_01 ↔ char_jiang_qinghuan_2203_01：cos 0.352 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_mengli_1234_01 ↔ char_cen_youqing_2204_01：cos 0.065 → 不同身份**
+- **char_xue_mengli_1234_01 ↔ char_zhong_xiaorou_2233_01：cos 0.242 → 不同身份**
+- **char_xue_mengli_1234_01 ↔ char_tan_youqing_2234_01：cos 0.242 → 不同身份**
+- **char_xue_mengli_1234_01 ↔ char_tantai_lingsu_2303_01：cos 0.399 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_mengli_1234_01 ↔ char_qiao_qinghuan_2304_01：cos 0.399 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_mengli_1234_01 ↔ char_chu_muchen_0004_01：cos 0.004 → 不同身份**
+- **char_xue_mengli_1234_01 ↔ char_qiao_chaoyan_0004_01：cos -0.054 → 不同身份**
+- **char_xue_mengli_1234_01 ↔ char_xue_qinghuan_0034_01：cos -0.051 → 不同身份**
+- **char_xue_mengli_1234_01 ↔ char_tang_yuwei_0217_01：cos 0.257 → 不同身份**
+- **char_xue_mengli_1234_01 ↔ char_ouyang_chuxia_0250_01：cos 0.233 → 不同身份**
+- **char_xue_mengli_1234_01 ↔ char_bai_zhiruo_0305_01：cos 0.397 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_mengli_1234_01 ↔ char_pei_shanshan_0456_01：cos 0.366 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_mengli_1234_01 ↔ char_xi_qingchuan_0618_01：cos 0.338 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_mengli_1234_01 ↔ char_zhong_linger_0732_01：cos 0.339 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_mengli_1234_01 ↔ char_hua_qingdai_1029_01：cos 0.365 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_mengli_1234_01 ↔ char_tang_banxia_1156_01：cos 0.414 → ⚠️ 存疑，待人工复核**
+- **char_xue_mengli_1234_01 ↔ char_gu_weiyu_1321_01：cos 0.317 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_mengli_1234_01 ↔ char_cheng_hongyu_1435_01：cos 0.243 → 不同身份**
+- **char_xue_mengli_1234_01 ↔ char_hua_chuxia_1549_01：cos 0.210 → 不同身份**
+- **char_xue_mengli_1234_01 ↔ char_pei_manshu_1701_01：cos 0.267 → 不同身份**
+- **char_xue_mengli_1234_01 ↔ char_ye_nanqiao_1811_01：cos 0.293 → 不同身份**
+- **char_xue_mengli_1234_01 ↔ char_murong_yuyan_1942_01：cos 0.301 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_mengli_1234_01 ↔ char_nangong_lingjun_2054_01：cos 0.323 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_sitian_1508_01 ↔ char_yin_qingdai_1305_01：cos 0.303 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_sitian_1508_01 ↔ char_yuchi_wanzhao_1134_01：cos 0.171 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_yuchi_zhixia_0914_01：cos 0.171 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_cheng_yuwei_1103_01：cos 0.324 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_sitian_1508_01 ↔ char_chu_lingsu_1533_01：cos 0.390 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_sitian_1508_01 ↔ char_fu_linger_1433_01：cos 0.129 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_fu_yuhan_1000_01：cos 0.230 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_gu_sitian_1003_01：cos 0.209 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_liang_chuxia_1503_01：cos 0.098 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_liang_mengli_1203_01：cos 0.273 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_shen_xiaorou_1233_01：cos 0.276 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_shen_xinyue_1404_01：cos 0.293 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_tan_muchen_1133_01：cos 0.243 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_xi_shanshan_1303_01：cos 0.277 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_xue_huaiyu_1034_01：cos 0.240 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_yuchi_lingsu_1333_01：cos 0.236 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_bai_anran_0430_01：cos 0.199 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_bai_yuhan_0830_01：cos 0.176 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_cen_yuhan_1934_01：cos 0.176 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_chu_ruoli_0800_01：cos 0.263 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_fu_caiwei_1833_01：cos 0.249 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_fu_wanzhao_1100_01：cos 0.278 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_gu_chaoyan_1904_01：cos 0.228 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_huo_ruoxi_1200_01：cos 0.206 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_jiang_zhiruo_0300_01：cos 0.163 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_liang_tiange_1303_01：cos 0.139 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_liang_yuyan_1333_01：cos 0.355 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_sitian_1508_01 ↔ char_linghu_chuxia_2204_01：cos 0.074 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_lu_muchen_0530_01：cos 0.208 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_murong_manshu_1704_01：cos 0.251 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_murong_weiyu_0930_01：cos 0.250 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_murong_xingzhu_0200_01：cos 0.122 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_ning_chuxia_0000_01：cos 0.110 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.170 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_qin_linger_1634_01：cos 0.165 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_qin_suqiu_0630_01：cos 0.205 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_qin_zhixia_1130_01：cos 0.323 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_sitian_1508_01 ↔ char_ruan_lingjun_2034_01：cos 0.183 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_ruan_tiange_1403_01：cos 0.182 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_shen_hongyu_1734_01：cos 0.252 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_situ_caiwei_0100_01：cos 0.289 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_situ_yuhan_0600_01：cos 0.219 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_song_wanzhao_1503_01：cos 0.253 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_tan_shanshan_0700_01：cos 0.128 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_tang_sitian_0900_01：cos 0.375 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_sitian_1508_01 ↔ char_tantai_weiyu_1433_01：cos 0.098 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_tantai_xingzhu_0230_01：cos 0.122 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_tantai_yuwei_0730_01：cos 0.054 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_wen_manshu_1030_01：cos 0.329 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_sitian_1508_01 ↔ char_xi_weiyu_2134_01：cos 0.247 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_xue_banxia_0330_01：cos 0.145 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_ye_hongyu_0500_01：cos 0.219 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_ye_linger_2004_01：cos 0.130 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_ye_lingjun_0130_01：cos 0.156 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_ye_shanshan_0400_01：cos 0.216 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_ye_yuhan_1804_01：cos 0.281 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_yuchi_ruoli_1000_01：cos 0.239 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_yun_banxia_0030_01：cos 0.227 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_zhong_manshu_2104_01：cos 0.333 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_sitian_1508_01 ↔ char_anya_song：cos 0.242 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_ayano：cos 0.153 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_chen_xiawei：cos 0.185 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_jia：cos 0.203 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_jiang_yueyao：cos 0.289 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_lin_qingwan：cos 0.350 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_sitian_1508_01 ↔ char_liu_yinuo_1923_10：cos -0.012 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_luo_qingchuan_1805：cos 0.255 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_pei_yuhan_2300_01：cos 0.160 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_qing_luo：cos 0.359 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_sitian_1508_01 ↔ char_ray_ling：cos 0.318 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_sitian_1508_01 ↔ char_runcha：cos 0.076 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_shen_zhilan：cos 0.404 → ⚠️ 存疑，待人工复核**
+- **char_xue_sitian_1508_01 ↔ char_su_xiaotang：cos 0.233 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_tang_mengli_2200_01：cos 0.159 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_wen_xiaorou_2140_01：cos 0.075 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_ye_muchen_2100_01：cos 0.188 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_yin_xinyue_2330_01：cos 0.119 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_zhao_ruoxi：cos 0.409 → ⚠️ 存疑，待人工复核**
+- **char_xue_sitian_1508_01 ↔ char_duo：cos 0.128 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_duo3_2：cos 0.175 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_cen_zhiwei_1936_01：cos 0.396 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_sitian_1508_01 ↔ char_jiang_ruoli_2007_01：cos 0.537 → ⚠️ 存疑，待人工复核**
+- **char_xue_sitian_1508_01 ↔ char_xiaog3：cos -0.004 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_xi_manshu_2045_01：cos 0.410 → ⚠️ 存疑，待人工复核**
+- **char_xue_sitian_1508_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.322 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_sitian_1508_01 ↔ char_linghu_zhixia_2133_01：cos 0.362 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_sitian_1508_01 ↔ char_qiao_weiyu_2134_01：cos 0.578 → ⚠️ 存疑，待人工复核**
+- **char_xue_sitian_1508_01 ↔ char_jiang_qinghuan_2203_01：cos 0.279 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_cen_youqing_2204_01：cos 0.139 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_zhong_xiaorou_2233_01：cos 0.484 → ⚠️ 存疑，待人工复核**
+- **char_xue_sitian_1508_01 ↔ char_tan_youqing_2234_01：cos 0.484 → ⚠️ 存疑，待人工复核**
+- **char_xue_sitian_1508_01 ↔ char_tantai_lingsu_2303_01：cos 0.335 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_sitian_1508_01 ↔ char_qiao_qinghuan_2304_01：cos 0.335 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_sitian_1508_01 ↔ char_chu_muchen_0004_01：cos -0.021 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_qiao_chaoyan_0004_01：cos -0.054 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_xue_qinghuan_0034_01：cos 0.007 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_tang_yuwei_0217_01：cos 0.379 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_sitian_1508_01 ↔ char_ouyang_chuxia_0250_01：cos 0.355 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_sitian_1508_01 ↔ char_bai_zhiruo_0305_01：cos 0.342 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_sitian_1508_01 ↔ char_pei_shanshan_0456_01：cos 0.368 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_sitian_1508_01 ↔ char_xi_qingchuan_0618_01：cos 0.316 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_sitian_1508_01 ↔ char_zhong_linger_0732_01：cos 0.394 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_sitian_1508_01 ↔ char_hua_qingdai_1029_01：cos 0.342 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_sitian_1508_01 ↔ char_tang_banxia_1156_01：cos 0.275 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_gu_weiyu_1321_01：cos 0.401 → ⚠️ 存疑，待人工复核**
+- **char_xue_sitian_1508_01 ↔ char_cheng_hongyu_1435_01：cos 0.349 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_sitian_1508_01 ↔ char_hua_chuxia_1549_01：cos 0.311 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_sitian_1508_01 ↔ char_pei_manshu_1701_01：cos 0.249 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_ye_nanqiao_1811_01：cos 0.294 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_murong_yuyan_1942_01：cos 0.143 → 不同身份**
+- **char_xue_sitian_1508_01 ↔ char_nangong_lingjun_2054_01：cos 0.321 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yin_qingdai_1305_01 ↔ char_yuchi_wanzhao_1134_01：cos 0.597 → ⚠️ 存疑，待人工复核**
+- **char_yin_qingdai_1305_01 ↔ char_yuchi_zhixia_0914_01：cos 0.517 → ⚠️ 存疑，待人工复核**
+- **char_yin_qingdai_1305_01 ↔ char_cheng_yuwei_1103_01：cos 0.550 → ⚠️ 存疑，待人工复核**
+- **char_yin_qingdai_1305_01 ↔ char_chu_lingsu_1533_01：cos 0.612 → 同一身份**
+- **char_yin_qingdai_1305_01 ↔ char_fu_linger_1433_01：cos 0.636 → 同一身份**
+- **char_yin_qingdai_1305_01 ↔ char_fu_yuhan_1000_01：cos 0.510 → ⚠️ 存疑，待人工复核**
+- **char_yin_qingdai_1305_01 ↔ char_gu_sitian_1003_01：cos 0.716 → 同一身份**
+- **char_yin_qingdai_1305_01 ↔ char_liang_chuxia_1503_01：cos 0.492 → ⚠️ 存疑，待人工复核**
+- **char_yin_qingdai_1305_01 ↔ char_liang_mengli_1203_01：cos 0.607 → 同一身份**
+- **char_yin_qingdai_1305_01 ↔ char_shen_xiaorou_1233_01：cos 0.376 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yin_qingdai_1305_01 ↔ char_shen_xinyue_1404_01：cos 0.595 → ⚠️ 存疑，待人工复核**
+- **char_yin_qingdai_1305_01 ↔ char_tan_muchen_1133_01：cos 0.546 → ⚠️ 存疑，待人工复核**
+- **char_yin_qingdai_1305_01 ↔ char_xi_shanshan_1303_01：cos 0.545 → ⚠️ 存疑，待人工复核**
+- **char_yin_qingdai_1305_01 ↔ char_xue_huaiyu_1034_01：cos 0.383 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yin_qingdai_1305_01 ↔ char_yuchi_lingsu_1333_01：cos 0.601 → 同一身份**
+- **char_yin_qingdai_1305_01 ↔ char_bai_anran_0430_01：cos 0.624 → 同一身份**
+- **char_yin_qingdai_1305_01 ↔ char_bai_yuhan_0830_01：cos 0.632 → 同一身份**
+- **char_yin_qingdai_1305_01 ↔ char_cen_yuhan_1934_01：cos 0.502 → ⚠️ 存疑，待人工复核**
+- **char_yin_qingdai_1305_01 ↔ char_chu_ruoli_0800_01：cos 0.584 → ⚠️ 存疑，待人工复核**
+- **char_yin_qingdai_1305_01 ↔ char_fu_caiwei_1833_01：cos 0.655 → 同一身份**
+- **char_yin_qingdai_1305_01 ↔ char_fu_wanzhao_1100_01：cos 0.539 → ⚠️ 存疑，待人工复核**
+- **char_yin_qingdai_1305_01 ↔ char_gu_chaoyan_1904_01：cos 0.494 → ⚠️ 存疑，待人工复核**
+- **char_yin_qingdai_1305_01 ↔ char_huo_ruoxi_1200_01：cos 0.556 → ⚠️ 存疑，待人工复核**
+- **char_yin_qingdai_1305_01 ↔ char_jiang_zhiruo_0300_01：cos 0.602 → 同一身份**
+- **char_yin_qingdai_1305_01 ↔ char_liang_tiange_1303_01：cos 0.468 → ⚠️ 存疑，待人工复核**
+- **char_yin_qingdai_1305_01 ↔ char_liang_yuyan_1333_01：cos 0.673 → 同一身份**
+- **char_yin_qingdai_1305_01 ↔ char_linghu_chuxia_2204_01：cos 0.395 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yin_qingdai_1305_01 ↔ char_lu_muchen_0530_01：cos 0.469 → ⚠️ 存疑，待人工复核**
+- **char_yin_qingdai_1305_01 ↔ char_murong_manshu_1704_01：cos 0.589 → ⚠️ 存疑，待人工复核**
+- **char_yin_qingdai_1305_01 ↔ char_murong_weiyu_0930_01：cos 0.472 → ⚠️ 存疑，待人工复核**
+- **char_yin_qingdai_1305_01 ↔ char_murong_xingzhu_0200_01：cos 0.641 → 同一身份**
+- **char_yin_qingdai_1305_01 ↔ char_ning_chuxia_0000_01：cos 0.599 → ⚠️ 存疑，待人工复核**
+- **char_yin_qingdai_1305_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.496 → ⚠️ 存疑，待人工复核**
+- **char_yin_qingdai_1305_01 ↔ char_qin_linger_1634_01：cos 0.606 → 同一身份**
+- **char_yin_qingdai_1305_01 ↔ char_qin_suqiu_0630_01：cos 0.667 → 同一身份**
+- **char_yin_qingdai_1305_01 ↔ char_qin_zhixia_1130_01：cos 0.593 → ⚠️ 存疑，待人工复核**
+- **char_yin_qingdai_1305_01 ↔ char_ruan_lingjun_2034_01：cos 0.549 → ⚠️ 存疑，待人工复核**
+- **char_yin_qingdai_1305_01 ↔ char_ruan_tiange_1403_01：cos 0.526 → ⚠️ 存疑，待人工复核**
+- **char_yin_qingdai_1305_01 ↔ char_shen_hongyu_1734_01：cos 0.712 → 同一身份**
+- **char_yin_qingdai_1305_01 ↔ char_situ_caiwei_0100_01：cos 0.447 → ⚠️ 存疑，待人工复核**
+- **char_yin_qingdai_1305_01 ↔ char_situ_yuhan_0600_01：cos 0.593 → ⚠️ 存疑，待人工复核**
+- **char_yin_qingdai_1305_01 ↔ char_song_wanzhao_1503_01：cos 0.570 → ⚠️ 存疑，待人工复核**
+- **char_yin_qingdai_1305_01 ↔ char_tan_shanshan_0700_01：cos 0.392 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yin_qingdai_1305_01 ↔ char_tang_sitian_0900_01：cos 0.614 → 同一身份**
+- **char_yin_qingdai_1305_01 ↔ char_tantai_weiyu_1433_01：cos 0.358 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yin_qingdai_1305_01 ↔ char_tantai_xingzhu_0230_01：cos 0.671 → 同一身份**
+- **char_yin_qingdai_1305_01 ↔ char_tantai_yuwei_0730_01：cos 0.449 → ⚠️ 存疑，待人工复核**
+- **char_yin_qingdai_1305_01 ↔ char_wen_manshu_1030_01：cos 0.533 → ⚠️ 存疑，待人工复核**
+- **char_yin_qingdai_1305_01 ↔ char_xi_weiyu_2134_01：cos 0.664 → 同一身份**
+- **char_yin_qingdai_1305_01 ↔ char_xue_banxia_0330_01：cos 0.390 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yin_qingdai_1305_01 ↔ char_ye_hongyu_0500_01：cos 0.485 → ⚠️ 存疑，待人工复核**
+- **char_yin_qingdai_1305_01 ↔ char_ye_linger_2004_01：cos 0.433 → ⚠️ 存疑，待人工复核**
+- **char_yin_qingdai_1305_01 ↔ char_ye_lingjun_0130_01：cos 0.428 → ⚠️ 存疑，待人工复核**
+- **char_yin_qingdai_1305_01 ↔ char_ye_shanshan_0400_01：cos 0.593 → ⚠️ 存疑，待人工复核**
+- **char_yin_qingdai_1305_01 ↔ char_ye_yuhan_1804_01：cos 0.563 → ⚠️ 存疑，待人工复核**
+- **char_yin_qingdai_1305_01 ↔ char_yuchi_ruoli_1000_01：cos 0.659 → 同一身份**
+- **char_yin_qingdai_1305_01 ↔ char_yun_banxia_0030_01：cos 0.432 → ⚠️ 存疑，待人工复核**
+- **char_yin_qingdai_1305_01 ↔ char_zhong_manshu_2104_01：cos 0.664 → 同一身份**
+- **char_yin_qingdai_1305_01 ↔ char_anya_song：cos 0.018 → 不同身份**
+- **char_yin_qingdai_1305_01 ↔ char_ayano：cos 0.210 → 不同身份**
+- **char_yin_qingdai_1305_01 ↔ char_chen_xiawei：cos 0.232 → 不同身份**
+- **char_yin_qingdai_1305_01 ↔ char_jia：cos 0.168 → 不同身份**
+- **char_yin_qingdai_1305_01 ↔ char_jiang_yueyao：cos 0.216 → 不同身份**
+- **char_yin_qingdai_1305_01 ↔ char_lin_qingwan：cos 0.371 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yin_qingdai_1305_01 ↔ char_liu_yinuo_1923_10：cos -0.020 → 不同身份**
+- **char_yin_qingdai_1305_01 ↔ char_luo_qingchuan_1805：cos 0.593 → ⚠️ 存疑，待人工复核**
+- **char_yin_qingdai_1305_01 ↔ char_pei_yuhan_2300_01：cos 0.563 → ⚠️ 存疑，待人工复核**
+- **char_yin_qingdai_1305_01 ↔ char_qing_luo：cos 0.324 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yin_qingdai_1305_01 ↔ char_ray_ling：cos 0.212 → 不同身份**
+- **char_yin_qingdai_1305_01 ↔ char_runcha：cos 0.042 → 不同身份**
+- **char_yin_qingdai_1305_01 ↔ char_shen_zhilan：cos 0.238 → 不同身份**
+- **char_yin_qingdai_1305_01 ↔ char_su_xiaotang：cos 0.162 → 不同身份**
+- **char_yin_qingdai_1305_01 ↔ char_tang_mengli_2200_01：cos 0.622 → 同一身份**
+- **char_yin_qingdai_1305_01 ↔ char_wen_xiaorou_2140_01：cos 0.572 → ⚠️ 存疑，待人工复核**
+- **char_yin_qingdai_1305_01 ↔ char_ye_muchen_2100_01：cos 0.599 → ⚠️ 存疑，待人工复核**
+- **char_yin_qingdai_1305_01 ↔ char_yin_xinyue_2330_01：cos 0.613 → 同一身份**
+- **char_yin_qingdai_1305_01 ↔ char_zhao_ruoxi：cos 0.248 → 不同身份**
+- **char_yin_qingdai_1305_01 ↔ char_duo：cos 0.196 → 不同身份**
+- **char_yin_qingdai_1305_01 ↔ char_duo3_2：cos 0.205 → 不同身份**
+- **char_yin_qingdai_1305_01 ↔ char_cen_zhiwei_1936_01：cos 0.318 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yin_qingdai_1305_01 ↔ char_jiang_ruoli_2007_01：cos 0.240 → 不同身份**
+- **char_yin_qingdai_1305_01 ↔ char_xiaog3：cos 0.255 → 不同身份**
+- **char_yin_qingdai_1305_01 ↔ char_xi_manshu_2045_01：cos 0.252 → 不同身份**
+- **char_yin_qingdai_1305_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.196 → 不同身份**
+- **char_yin_qingdai_1305_01 ↔ char_linghu_zhixia_2133_01：cos 0.266 → 不同身份**
+- **char_yin_qingdai_1305_01 ↔ char_qiao_weiyu_2134_01：cos 0.229 → 不同身份**
+- **char_yin_qingdai_1305_01 ↔ char_jiang_qinghuan_2203_01：cos 0.382 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yin_qingdai_1305_01 ↔ char_cen_youqing_2204_01：cos 0.074 → 不同身份**
+- **char_yin_qingdai_1305_01 ↔ char_zhong_xiaorou_2233_01：cos 0.326 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yin_qingdai_1305_01 ↔ char_tan_youqing_2234_01：cos 0.326 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yin_qingdai_1305_01 ↔ char_tantai_lingsu_2303_01：cos 0.389 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yin_qingdai_1305_01 ↔ char_qiao_qinghuan_2304_01：cos 0.389 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yin_qingdai_1305_01 ↔ char_chu_muchen_0004_01：cos 0.022 → 不同身份**
+- **char_yin_qingdai_1305_01 ↔ char_qiao_chaoyan_0004_01：cos 0.015 → 不同身份**
+- **char_yin_qingdai_1305_01 ↔ char_xue_qinghuan_0034_01：cos 0.012 → 不同身份**
+- **char_yin_qingdai_1305_01 ↔ char_tang_yuwei_0217_01：cos 0.356 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yin_qingdai_1305_01 ↔ char_ouyang_chuxia_0250_01：cos 0.326 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yin_qingdai_1305_01 ↔ char_bai_zhiruo_0305_01：cos 0.407 → ⚠️ 存疑，待人工复核**
+- **char_yin_qingdai_1305_01 ↔ char_pei_shanshan_0456_01：cos 0.439 → ⚠️ 存疑，待人工复核**
+- **char_yin_qingdai_1305_01 ↔ char_xi_qingchuan_0618_01：cos 0.435 → ⚠️ 存疑，待人工复核**
+- **char_yin_qingdai_1305_01 ↔ char_zhong_linger_0732_01：cos 0.322 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yin_qingdai_1305_01 ↔ char_hua_qingdai_1029_01：cos 0.359 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yin_qingdai_1305_01 ↔ char_tang_banxia_1156_01：cos 0.377 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yin_qingdai_1305_01 ↔ char_gu_weiyu_1321_01：cos 0.365 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yin_qingdai_1305_01 ↔ char_cheng_hongyu_1435_01：cos 0.294 → 不同身份**
+- **char_yin_qingdai_1305_01 ↔ char_hua_chuxia_1549_01：cos 0.292 → 不同身份**
+- **char_yin_qingdai_1305_01 ↔ char_pei_manshu_1701_01：cos 0.364 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yin_qingdai_1305_01 ↔ char_ye_nanqiao_1811_01：cos 0.342 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yin_qingdai_1305_01 ↔ char_murong_yuyan_1942_01：cos 0.372 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yin_qingdai_1305_01 ↔ char_nangong_lingjun_2054_01：cos 0.316 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yuchi_wanzhao_1134_01 ↔ char_yuchi_zhixia_0914_01：cos 0.629 → 同一身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_cheng_yuwei_1103_01：cos 0.623 → 同一身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_chu_lingsu_1533_01：cos 0.609 → 同一身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_fu_linger_1433_01：cos 0.654 → 同一身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_fu_yuhan_1000_01：cos 0.546 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_wanzhao_1134_01 ↔ char_gu_sitian_1003_01：cos 0.585 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_wanzhao_1134_01 ↔ char_liang_chuxia_1503_01：cos 0.627 → 同一身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_liang_mengli_1203_01：cos 0.655 → 同一身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_shen_xiaorou_1233_01：cos 0.549 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_wanzhao_1134_01 ↔ char_shen_xinyue_1404_01：cos 0.701 → 同一身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_tan_muchen_1133_01：cos 0.621 → 同一身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_xi_shanshan_1303_01：cos 0.636 → 同一身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_xue_huaiyu_1034_01：cos 0.596 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_wanzhao_1134_01 ↔ char_yuchi_lingsu_1333_01：cos 0.673 → 同一身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_bai_anran_0430_01：cos 0.544 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_wanzhao_1134_01 ↔ char_bai_yuhan_0830_01：cos 0.679 → 同一身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_cen_yuhan_1934_01：cos 0.659 → 同一身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_chu_ruoli_0800_01：cos 0.648 → 同一身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_fu_caiwei_1833_01：cos 0.696 → 同一身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_fu_wanzhao_1100_01：cos 0.604 → 同一身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_gu_chaoyan_1904_01：cos 0.652 → 同一身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_huo_ruoxi_1200_01：cos 0.572 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_wanzhao_1134_01 ↔ char_jiang_zhiruo_0300_01：cos 0.613 → 同一身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_liang_tiange_1303_01：cos 0.625 → 同一身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_liang_yuyan_1333_01：cos 0.672 → 同一身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_linghu_chuxia_2204_01：cos 0.575 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_wanzhao_1134_01 ↔ char_lu_muchen_0530_01：cos 0.596 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_wanzhao_1134_01 ↔ char_murong_manshu_1704_01：cos 0.649 → 同一身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_murong_weiyu_0930_01：cos 0.626 → 同一身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_murong_xingzhu_0200_01：cos 0.564 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_wanzhao_1134_01 ↔ char_ning_chuxia_0000_01：cos 0.602 → 同一身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.647 → 同一身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_qin_linger_1634_01：cos 0.632 → 同一身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_qin_suqiu_0630_01：cos 0.643 → 同一身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_qin_zhixia_1130_01：cos 0.565 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_wanzhao_1134_01 ↔ char_ruan_lingjun_2034_01：cos 0.692 → 同一身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_ruan_tiange_1403_01：cos 0.691 → 同一身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_shen_hongyu_1734_01：cos 0.773 → 同一身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_situ_caiwei_0100_01：cos 0.509 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_wanzhao_1134_01 ↔ char_situ_yuhan_0600_01：cos 0.707 → 同一身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_song_wanzhao_1503_01：cos 0.596 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_wanzhao_1134_01 ↔ char_tan_shanshan_0700_01：cos 0.590 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_wanzhao_1134_01 ↔ char_tang_sitian_0900_01：cos 0.546 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_wanzhao_1134_01 ↔ char_tantai_weiyu_1433_01：cos 0.555 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_wanzhao_1134_01 ↔ char_tantai_xingzhu_0230_01：cos 0.516 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_wanzhao_1134_01 ↔ char_tantai_yuwei_0730_01：cos 0.569 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_wanzhao_1134_01 ↔ char_wen_manshu_1030_01：cos 0.606 → 同一身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_xi_weiyu_2134_01：cos 0.657 → 同一身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_xue_banxia_0330_01：cos 0.623 → 同一身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_ye_hongyu_0500_01：cos 0.624 → 同一身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_ye_linger_2004_01：cos 0.665 → 同一身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_ye_lingjun_0130_01：cos 0.607 → 同一身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_ye_shanshan_0400_01：cos 0.679 → 同一身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_ye_yuhan_1804_01：cos 0.653 → 同一身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_yuchi_ruoli_1000_01：cos 0.630 → 同一身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_yun_banxia_0030_01：cos 0.504 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_wanzhao_1134_01 ↔ char_zhong_manshu_2104_01：cos 0.600 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_wanzhao_1134_01 ↔ char_anya_song：cos 0.137 → 不同身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_ayano：cos 0.105 → 不同身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_chen_xiawei：cos 0.144 → 不同身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_jia：cos 0.152 → 不同身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_jiang_yueyao：cos 0.281 → 不同身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_lin_qingwan：cos 0.319 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yuchi_wanzhao_1134_01 ↔ char_liu_yinuo_1923_10：cos -0.015 → 不同身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_luo_qingchuan_1805：cos 0.712 → 同一身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_pei_yuhan_2300_01：cos 0.576 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_wanzhao_1134_01 ↔ char_qing_luo：cos 0.197 → 不同身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_ray_ling：cos 0.224 → 不同身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_runcha：cos 0.015 → 不同身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_shen_zhilan：cos 0.177 → 不同身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_su_xiaotang：cos 0.116 → 不同身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_tang_mengli_2200_01：cos 0.679 → 同一身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_wen_xiaorou_2140_01：cos 0.714 → 同一身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_ye_muchen_2100_01：cos 0.638 → 同一身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_yin_xinyue_2330_01：cos 0.648 → 同一身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_zhao_ruoxi：cos 0.221 → 不同身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_duo：cos 0.230 → 不同身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_duo3_2：cos 0.178 → 不同身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_cen_zhiwei_1936_01：cos 0.403 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_wanzhao_1134_01 ↔ char_jiang_ruoli_2007_01：cos 0.257 → 不同身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_xiaog3：cos 0.119 → 不同身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_xi_manshu_2045_01：cos 0.255 → 不同身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.335 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yuchi_wanzhao_1134_01 ↔ char_linghu_zhixia_2133_01：cos 0.326 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yuchi_wanzhao_1134_01 ↔ char_qiao_weiyu_2134_01：cos 0.189 → 不同身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_jiang_qinghuan_2203_01：cos 0.371 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yuchi_wanzhao_1134_01 ↔ char_cen_youqing_2204_01：cos 0.040 → 不同身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_zhong_xiaorou_2233_01：cos 0.301 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yuchi_wanzhao_1134_01 ↔ char_tan_youqing_2234_01：cos 0.301 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yuchi_wanzhao_1134_01 ↔ char_tantai_lingsu_2303_01：cos 0.412 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_wanzhao_1134_01 ↔ char_qiao_qinghuan_2304_01：cos 0.412 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_wanzhao_1134_01 ↔ char_chu_muchen_0004_01：cos 0.015 → 不同身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_qiao_chaoyan_0004_01：cos -0.075 → 不同身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_xue_qinghuan_0034_01：cos -0.005 → 不同身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_tang_yuwei_0217_01：cos 0.257 → 不同身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_ouyang_chuxia_0250_01：cos 0.246 → 不同身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_bai_zhiruo_0305_01：cos 0.386 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yuchi_wanzhao_1134_01 ↔ char_pei_shanshan_0456_01：cos 0.379 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yuchi_wanzhao_1134_01 ↔ char_xi_qingchuan_0618_01：cos 0.443 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_wanzhao_1134_01 ↔ char_zhong_linger_0732_01：cos 0.400 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yuchi_wanzhao_1134_01 ↔ char_hua_qingdai_1029_01：cos 0.350 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yuchi_wanzhao_1134_01 ↔ char_tang_banxia_1156_01：cos 0.414 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_wanzhao_1134_01 ↔ char_gu_weiyu_1321_01：cos 0.333 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yuchi_wanzhao_1134_01 ↔ char_cheng_hongyu_1435_01：cos 0.232 → 不同身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_hua_chuxia_1549_01：cos 0.215 → 不同身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_pei_manshu_1701_01：cos 0.308 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yuchi_wanzhao_1134_01 ↔ char_ye_nanqiao_1811_01：cos 0.298 → 不同身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_murong_yuyan_1942_01：cos 0.284 → 不同身份**
+- **char_yuchi_wanzhao_1134_01 ↔ char_nangong_lingjun_2054_01：cos 0.306 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yuchi_zhixia_0914_01 ↔ char_cheng_yuwei_1103_01：cos 0.545 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_zhixia_0914_01 ↔ char_chu_lingsu_1533_01：cos 0.489 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_zhixia_0914_01 ↔ char_fu_linger_1433_01：cos 0.614 → 同一身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_fu_yuhan_1000_01：cos 0.598 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_zhixia_0914_01 ↔ char_gu_sitian_1003_01：cos 0.562 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_zhixia_0914_01 ↔ char_liang_chuxia_1503_01：cos 0.545 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_zhixia_0914_01 ↔ char_liang_mengli_1203_01：cos 0.556 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_zhixia_0914_01 ↔ char_shen_xiaorou_1233_01：cos 0.590 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_zhixia_0914_01 ↔ char_shen_xinyue_1404_01：cos 0.594 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_zhixia_0914_01 ↔ char_tan_muchen_1133_01：cos 0.628 → 同一身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_xi_shanshan_1303_01：cos 0.460 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_zhixia_0914_01 ↔ char_xue_huaiyu_1034_01：cos 0.623 → 同一身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_yuchi_lingsu_1333_01：cos 0.692 → 同一身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_bai_anran_0430_01：cos 0.473 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_zhixia_0914_01 ↔ char_bai_yuhan_0830_01：cos 0.528 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_zhixia_0914_01 ↔ char_cen_yuhan_1934_01：cos 0.717 → 同一身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_chu_ruoli_0800_01：cos 0.655 → 同一身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_fu_caiwei_1833_01：cos 0.591 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_zhixia_0914_01 ↔ char_fu_wanzhao_1100_01：cos 0.499 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_zhixia_0914_01 ↔ char_gu_chaoyan_1904_01：cos 0.634 → 同一身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_huo_ruoxi_1200_01：cos 0.650 → 同一身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_jiang_zhiruo_0300_01：cos 0.580 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_zhixia_0914_01 ↔ char_liang_tiange_1303_01：cos 0.666 → 同一身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_liang_yuyan_1333_01：cos 0.595 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_zhixia_0914_01 ↔ char_linghu_chuxia_2204_01：cos 0.747 → 同一身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_lu_muchen_0530_01：cos 0.661 → 同一身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_murong_manshu_1704_01：cos 0.576 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_zhixia_0914_01 ↔ char_murong_weiyu_0930_01：cos 0.540 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_zhixia_0914_01 ↔ char_murong_xingzhu_0200_01：cos 0.533 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_zhixia_0914_01 ↔ char_ning_chuxia_0000_01：cos 0.530 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_zhixia_0914_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.718 → 同一身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_qin_linger_1634_01：cos 0.612 → 同一身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_qin_suqiu_0630_01：cos 0.591 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_zhixia_0914_01 ↔ char_qin_zhixia_1130_01：cos 0.531 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_zhixia_0914_01 ↔ char_ruan_lingjun_2034_01：cos 0.553 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_zhixia_0914_01 ↔ char_ruan_tiange_1403_01：cos 0.735 → 同一身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_shen_hongyu_1734_01：cos 0.601 → 同一身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_situ_caiwei_0100_01：cos 0.424 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_zhixia_0914_01 ↔ char_situ_yuhan_0600_01：cos 0.620 → 同一身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_song_wanzhao_1503_01：cos 0.584 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_zhixia_0914_01 ↔ char_tan_shanshan_0700_01：cos 0.606 → 同一身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_tang_sitian_0900_01：cos 0.495 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_zhixia_0914_01 ↔ char_tantai_weiyu_1433_01：cos 0.714 → 同一身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_tantai_xingzhu_0230_01：cos 0.504 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_zhixia_0914_01 ↔ char_tantai_yuwei_0730_01：cos 0.601 → 同一身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_wen_manshu_1030_01：cos 0.555 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_zhixia_0914_01 ↔ char_xi_weiyu_2134_01：cos 0.525 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_zhixia_0914_01 ↔ char_xue_banxia_0330_01：cos 0.674 → 同一身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_ye_hongyu_0500_01：cos 0.635 → 同一身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_ye_linger_2004_01：cos 0.696 → 同一身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_ye_lingjun_0130_01：cos 0.718 → 同一身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_ye_shanshan_0400_01：cos 0.625 → 同一身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_ye_yuhan_1804_01：cos 0.594 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_zhixia_0914_01 ↔ char_yuchi_ruoli_1000_01：cos 0.532 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_zhixia_0914_01 ↔ char_yun_banxia_0030_01：cos 0.379 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yuchi_zhixia_0914_01 ↔ char_zhong_manshu_2104_01：cos 0.467 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_zhixia_0914_01 ↔ char_anya_song：cos 0.181 → 不同身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_ayano：cos 0.145 → 不同身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_chen_xiawei：cos 0.040 → 不同身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_jia：cos 0.100 → 不同身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_jiang_yueyao：cos 0.074 → 不同身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_lin_qingwan：cos 0.140 → 不同身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_liu_yinuo_1923_10：cos -0.040 → 不同身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_luo_qingchuan_1805：cos 0.693 → 同一身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_pei_yuhan_2300_01：cos 0.584 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_zhixia_0914_01 ↔ char_qing_luo：cos 0.126 → 不同身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_ray_ling：cos 0.267 → 不同身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_runcha：cos 0.049 → 不同身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_shen_zhilan：cos 0.208 → 不同身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_su_xiaotang：cos 0.100 → 不同身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_tang_mengli_2200_01：cos 0.552 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_zhixia_0914_01 ↔ char_wen_xiaorou_2140_01：cos 0.610 → 同一身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_ye_muchen_2100_01：cos 0.605 → 同一身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_yin_xinyue_2330_01：cos 0.568 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_zhixia_0914_01 ↔ char_zhao_ruoxi：cos 0.112 → 不同身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_duo：cos 0.124 → 不同身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_duo3_2：cos 0.209 → 不同身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_cen_zhiwei_1936_01：cos 0.289 → 不同身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_jiang_ruoli_2007_01：cos 0.227 → 不同身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_xiaog3：cos 0.151 → 不同身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_xi_manshu_2045_01：cos 0.185 → 不同身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.290 → 不同身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_linghu_zhixia_2133_01：cos 0.330 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yuchi_zhixia_0914_01 ↔ char_qiao_weiyu_2134_01：cos 0.183 → 不同身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_jiang_qinghuan_2203_01：cos 0.177 → 不同身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_cen_youqing_2204_01：cos -0.029 → 不同身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_zhong_xiaorou_2233_01：cos 0.199 → 不同身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_tan_youqing_2234_01：cos 0.199 → 不同身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_tantai_lingsu_2303_01：cos 0.284 → 不同身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_qiao_qinghuan_2304_01：cos 0.284 → 不同身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_chu_muchen_0004_01：cos 0.010 → 不同身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_qiao_chaoyan_0004_01：cos -0.127 → 不同身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_xue_qinghuan_0034_01：cos -0.004 → 不同身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_tang_yuwei_0217_01：cos 0.191 → 不同身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_ouyang_chuxia_0250_01：cos 0.112 → 不同身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_bai_zhiruo_0305_01：cos 0.328 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yuchi_zhixia_0914_01 ↔ char_pei_shanshan_0456_01：cos 0.223 → 不同身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_xi_qingchuan_0618_01：cos 0.196 → 不同身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_zhong_linger_0732_01：cos 0.250 → 不同身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_hua_qingdai_1029_01：cos 0.244 → 不同身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_tang_banxia_1156_01：cos 0.211 → 不同身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_gu_weiyu_1321_01：cos 0.165 → 不同身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_cheng_hongyu_1435_01：cos 0.058 → 不同身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_hua_chuxia_1549_01：cos 0.060 → 不同身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_pei_manshu_1701_01：cos 0.171 → 不同身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_ye_nanqiao_1811_01：cos 0.109 → 不同身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_murong_yuyan_1942_01：cos 0.203 → 不同身份**
+- **char_yuchi_zhixia_0914_01 ↔ char_nangong_lingjun_2054_01：cos 0.245 → 不同身份**
+- **char_cheng_yuwei_1103_01 ↔ char_chu_lingsu_1533_01：cos 0.588 → ⚠️ 存疑，待人工复核**
+- **char_cheng_yuwei_1103_01 ↔ char_fu_linger_1433_01：cos 0.737 → 同一身份**
+- **char_cheng_yuwei_1103_01 ↔ char_fu_yuhan_1000_01：cos 0.536 → ⚠️ 存疑，待人工复核**
+- **char_cheng_yuwei_1103_01 ↔ char_gu_sitian_1003_01：cos 0.574 → ⚠️ 存疑，待人工复核**
+- **char_cheng_yuwei_1103_01 ↔ char_liang_chuxia_1503_01：cos 0.632 → 同一身份**
+- **char_cheng_yuwei_1103_01 ↔ char_liang_mengli_1203_01：cos 0.633 → 同一身份**
+- **char_cheng_yuwei_1103_01 ↔ char_shen_xiaorou_1233_01：cos 0.454 → ⚠️ 存疑，待人工复核**
+- **char_cheng_yuwei_1103_01 ↔ char_shen_xinyue_1404_01：cos 0.721 → 同一身份**
+- **char_cheng_yuwei_1103_01 ↔ char_tan_muchen_1133_01：cos 0.549 → ⚠️ 存疑，待人工复核**
+- **char_cheng_yuwei_1103_01 ↔ char_xi_shanshan_1303_01：cos 0.491 → ⚠️ 存疑，待人工复核**
+- **char_cheng_yuwei_1103_01 ↔ char_xue_huaiyu_1034_01：cos 0.471 → ⚠️ 存疑，待人工复核**
+- **char_cheng_yuwei_1103_01 ↔ char_yuchi_lingsu_1333_01：cos 0.666 → 同一身份**
+- **char_cheng_yuwei_1103_01 ↔ char_bai_anran_0430_01：cos 0.585 → ⚠️ 存疑，待人工复核**
+- **char_cheng_yuwei_1103_01 ↔ char_bai_yuhan_0830_01：cos 0.690 → 同一身份**
+- **char_cheng_yuwei_1103_01 ↔ char_cen_yuhan_1934_01：cos 0.522 → ⚠️ 存疑，待人工复核**
+- **char_cheng_yuwei_1103_01 ↔ char_chu_ruoli_0800_01：cos 0.608 → 同一身份**
+- **char_cheng_yuwei_1103_01 ↔ char_fu_caiwei_1833_01：cos 0.721 → 同一身份**
+- **char_cheng_yuwei_1103_01 ↔ char_fu_wanzhao_1100_01：cos 0.586 → ⚠️ 存疑，待人工复核**
+- **char_cheng_yuwei_1103_01 ↔ char_gu_chaoyan_1904_01：cos 0.537 → ⚠️ 存疑，待人工复核**
+- **char_cheng_yuwei_1103_01 ↔ char_huo_ruoxi_1200_01：cos 0.491 → ⚠️ 存疑，待人工复核**
+- **char_cheng_yuwei_1103_01 ↔ char_jiang_zhiruo_0300_01：cos 0.743 → 同一身份**
+- **char_cheng_yuwei_1103_01 ↔ char_liang_tiange_1303_01：cos 0.552 → ⚠️ 存疑，待人工复核**
+- **char_cheng_yuwei_1103_01 ↔ char_liang_yuyan_1333_01：cos 0.639 → 同一身份**
+- **char_cheng_yuwei_1103_01 ↔ char_linghu_chuxia_2204_01：cos 0.414 → ⚠️ 存疑，待人工复核**
+- **char_cheng_yuwei_1103_01 ↔ char_lu_muchen_0530_01：cos 0.461 → ⚠️ 存疑，待人工复核**
+- **char_cheng_yuwei_1103_01 ↔ char_murong_manshu_1704_01：cos 0.591 → ⚠️ 存疑，待人工复核**
+- **char_cheng_yuwei_1103_01 ↔ char_murong_weiyu_0930_01：cos 0.538 → ⚠️ 存疑，待人工复核**
+- **char_cheng_yuwei_1103_01 ↔ char_murong_xingzhu_0200_01：cos 0.598 → ⚠️ 存疑，待人工复核**
+- **char_cheng_yuwei_1103_01 ↔ char_ning_chuxia_0000_01：cos 0.718 → 同一身份**
+- **char_cheng_yuwei_1103_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.570 → ⚠️ 存疑，待人工复核**
+- **char_cheng_yuwei_1103_01 ↔ char_qin_linger_1634_01：cos 0.550 → ⚠️ 存疑，待人工复核**
+- **char_cheng_yuwei_1103_01 ↔ char_qin_suqiu_0630_01：cos 0.535 → ⚠️ 存疑，待人工复核**
+- **char_cheng_yuwei_1103_01 ↔ char_qin_zhixia_1130_01：cos 0.501 → ⚠️ 存疑，待人工复核**
+- **char_cheng_yuwei_1103_01 ↔ char_ruan_lingjun_2034_01：cos 0.577 → ⚠️ 存疑，待人工复核**
+- **char_cheng_yuwei_1103_01 ↔ char_ruan_tiange_1403_01：cos 0.583 → ⚠️ 存疑，待人工复核**
+- **char_cheng_yuwei_1103_01 ↔ char_shen_hongyu_1734_01：cos 0.738 → 同一身份**
+- **char_cheng_yuwei_1103_01 ↔ char_situ_caiwei_0100_01：cos 0.502 → ⚠️ 存疑，待人工复核**
+- **char_cheng_yuwei_1103_01 ↔ char_situ_yuhan_0600_01：cos 0.618 → 同一身份**
+- **char_cheng_yuwei_1103_01 ↔ char_song_wanzhao_1503_01：cos 0.607 → 同一身份**
+- **char_cheng_yuwei_1103_01 ↔ char_tan_shanshan_0700_01：cos 0.492 → ⚠️ 存疑，待人工复核**
+- **char_cheng_yuwei_1103_01 ↔ char_tang_sitian_0900_01：cos 0.539 → ⚠️ 存疑，待人工复核**
+- **char_cheng_yuwei_1103_01 ↔ char_tantai_weiyu_1433_01：cos 0.501 → ⚠️ 存疑，待人工复核**
+- **char_cheng_yuwei_1103_01 ↔ char_tantai_xingzhu_0230_01：cos 0.555 → ⚠️ 存疑，待人工复核**
+- **char_cheng_yuwei_1103_01 ↔ char_tantai_yuwei_0730_01：cos 0.631 → 同一身份**
+- **char_cheng_yuwei_1103_01 ↔ char_wen_manshu_1030_01：cos 0.552 → ⚠️ 存疑，待人工复核**
+- **char_cheng_yuwei_1103_01 ↔ char_xi_weiyu_2134_01：cos 0.674 → 同一身份**
+- **char_cheng_yuwei_1103_01 ↔ char_xue_banxia_0330_01：cos 0.443 → ⚠️ 存疑，待人工复核**
+- **char_cheng_yuwei_1103_01 ↔ char_ye_hongyu_0500_01：cos 0.504 → ⚠️ 存疑，待人工复核**
+- **char_cheng_yuwei_1103_01 ↔ char_ye_linger_2004_01：cos 0.517 → ⚠️ 存疑，待人工复核**
+- **char_cheng_yuwei_1103_01 ↔ char_ye_lingjun_0130_01：cos 0.521 → ⚠️ 存疑，待人工复核**
+- **char_cheng_yuwei_1103_01 ↔ char_ye_shanshan_0400_01：cos 0.720 → 同一身份**
+- **char_cheng_yuwei_1103_01 ↔ char_ye_yuhan_1804_01：cos 0.616 → 同一身份**
+- **char_cheng_yuwei_1103_01 ↔ char_yuchi_ruoli_1000_01：cos 0.643 → 同一身份**
+- **char_cheng_yuwei_1103_01 ↔ char_yun_banxia_0030_01：cos 0.431 → ⚠️ 存疑，待人工复核**
+- **char_cheng_yuwei_1103_01 ↔ char_zhong_manshu_2104_01：cos 0.708 → 同一身份**
+- **char_cheng_yuwei_1103_01 ↔ char_anya_song：cos 0.161 → 不同身份**
+- **char_cheng_yuwei_1103_01 ↔ char_ayano：cos 0.161 → 不同身份**
+- **char_cheng_yuwei_1103_01 ↔ char_chen_xiawei：cos 0.109 → 不同身份**
+- **char_cheng_yuwei_1103_01 ↔ char_jia：cos 0.102 → 不同身份**
+- **char_cheng_yuwei_1103_01 ↔ char_jiang_yueyao：cos 0.253 → 不同身份**
+- **char_cheng_yuwei_1103_01 ↔ char_lin_qingwan：cos 0.223 → 不同身份**
+- **char_cheng_yuwei_1103_01 ↔ char_liu_yinuo_1923_10：cos -0.047 → 不同身份**
+- **char_cheng_yuwei_1103_01 ↔ char_luo_qingchuan_1805：cos 0.648 → 同一身份**
+- **char_cheng_yuwei_1103_01 ↔ char_pei_yuhan_2300_01：cos 0.693 → 同一身份**
+- **char_cheng_yuwei_1103_01 ↔ char_qing_luo：cos 0.313 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cheng_yuwei_1103_01 ↔ char_ray_ling：cos 0.192 → 不同身份**
+- **char_cheng_yuwei_1103_01 ↔ char_runcha：cos 0.094 → 不同身份**
+- **char_cheng_yuwei_1103_01 ↔ char_shen_zhilan：cos 0.167 → 不同身份**
+- **char_cheng_yuwei_1103_01 ↔ char_su_xiaotang：cos 0.071 → 不同身份**
+- **char_cheng_yuwei_1103_01 ↔ char_tang_mengli_2200_01：cos 0.679 → 同一身份**
+- **char_cheng_yuwei_1103_01 ↔ char_wen_xiaorou_2140_01：cos 0.648 → 同一身份**
+- **char_cheng_yuwei_1103_01 ↔ char_ye_muchen_2100_01：cos 0.724 → 同一身份**
+- **char_cheng_yuwei_1103_01 ↔ char_yin_xinyue_2330_01：cos 0.681 → 同一身份**
+- **char_cheng_yuwei_1103_01 ↔ char_zhao_ruoxi：cos 0.287 → 不同身份**
+- **char_cheng_yuwei_1103_01 ↔ char_duo：cos 0.147 → 不同身份**
+- **char_cheng_yuwei_1103_01 ↔ char_duo3_2：cos 0.123 → 不同身份**
+- **char_cheng_yuwei_1103_01 ↔ char_cen_zhiwei_1936_01：cos 0.315 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cheng_yuwei_1103_01 ↔ char_jiang_ruoli_2007_01：cos 0.314 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cheng_yuwei_1103_01 ↔ char_xiaog3：cos 0.253 → 不同身份**
+- **char_cheng_yuwei_1103_01 ↔ char_xi_manshu_2045_01：cos 0.291 → 不同身份**
+- **char_cheng_yuwei_1103_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.306 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cheng_yuwei_1103_01 ↔ char_linghu_zhixia_2133_01：cos 0.373 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cheng_yuwei_1103_01 ↔ char_qiao_weiyu_2134_01：cos 0.257 → 不同身份**
+- **char_cheng_yuwei_1103_01 ↔ char_jiang_qinghuan_2203_01：cos 0.433 → ⚠️ 存疑，待人工复核**
+- **char_cheng_yuwei_1103_01 ↔ char_cen_youqing_2204_01：cos -0.012 → 不同身份**
+- **char_cheng_yuwei_1103_01 ↔ char_zhong_xiaorou_2233_01：cos 0.403 → ⚠️ 存疑，待人工复核**
+- **char_cheng_yuwei_1103_01 ↔ char_tan_youqing_2234_01：cos 0.403 → ⚠️ 存疑，待人工复核**
+- **char_cheng_yuwei_1103_01 ↔ char_tantai_lingsu_2303_01：cos 0.413 → ⚠️ 存疑，待人工复核**
+- **char_cheng_yuwei_1103_01 ↔ char_qiao_qinghuan_2304_01：cos 0.413 → ⚠️ 存疑，待人工复核**
+- **char_cheng_yuwei_1103_01 ↔ char_chu_muchen_0004_01：cos -0.084 → 不同身份**
+- **char_cheng_yuwei_1103_01 ↔ char_qiao_chaoyan_0004_01：cos -0.032 → 不同身份**
+- **char_cheng_yuwei_1103_01 ↔ char_xue_qinghuan_0034_01：cos -0.015 → 不同身份**
+- **char_cheng_yuwei_1103_01 ↔ char_tang_yuwei_0217_01：cos 0.281 → 不同身份**
+- **char_cheng_yuwei_1103_01 ↔ char_ouyang_chuxia_0250_01：cos 0.241 → 不同身份**
+- **char_cheng_yuwei_1103_01 ↔ char_bai_zhiruo_0305_01：cos 0.478 → ⚠️ 存疑，待人工复核**
+- **char_cheng_yuwei_1103_01 ↔ char_pei_shanshan_0456_01：cos 0.484 → ⚠️ 存疑，待人工复核**
+- **char_cheng_yuwei_1103_01 ↔ char_xi_qingchuan_0618_01：cos 0.415 → ⚠️ 存疑，待人工复核**
+- **char_cheng_yuwei_1103_01 ↔ char_zhong_linger_0732_01：cos 0.289 → 不同身份**
+- **char_cheng_yuwei_1103_01 ↔ char_hua_qingdai_1029_01：cos 0.335 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cheng_yuwei_1103_01 ↔ char_tang_banxia_1156_01：cos 0.355 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cheng_yuwei_1103_01 ↔ char_gu_weiyu_1321_01：cos 0.323 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cheng_yuwei_1103_01 ↔ char_cheng_hongyu_1435_01：cos 0.318 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cheng_yuwei_1103_01 ↔ char_hua_chuxia_1549_01：cos 0.215 → 不同身份**
+- **char_cheng_yuwei_1103_01 ↔ char_pei_manshu_1701_01：cos 0.291 → 不同身份**
+- **char_cheng_yuwei_1103_01 ↔ char_ye_nanqiao_1811_01：cos 0.294 → 不同身份**
+- **char_cheng_yuwei_1103_01 ↔ char_murong_yuyan_1942_01：cos 0.434 → ⚠️ 存疑，待人工复核**
+- **char_cheng_yuwei_1103_01 ↔ char_nangong_lingjun_2054_01：cos 0.212 → 不同身份**
+- **char_chu_lingsu_1533_01 ↔ char_fu_linger_1433_01：cos 0.497 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_fu_yuhan_1000_01：cos 0.550 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_gu_sitian_1003_01：cos 0.498 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_liang_chuxia_1503_01：cos 0.450 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_liang_mengli_1203_01：cos 0.681 → 同一身份**
+- **char_chu_lingsu_1533_01 ↔ char_shen_xiaorou_1233_01：cos 0.506 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_shen_xinyue_1404_01：cos 0.573 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_tan_muchen_1133_01：cos 0.535 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_xi_shanshan_1303_01：cos 0.529 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_xue_huaiyu_1034_01：cos 0.402 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_yuchi_lingsu_1333_01：cos 0.586 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_bai_anran_0430_01：cos 0.528 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_bai_yuhan_0830_01：cos 0.540 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_cen_yuhan_1934_01：cos 0.543 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_chu_ruoli_0800_01：cos 0.604 → 同一身份**
+- **char_chu_lingsu_1533_01 ↔ char_fu_caiwei_1833_01：cos 0.653 → 同一身份**
+- **char_chu_lingsu_1533_01 ↔ char_fu_wanzhao_1100_01：cos 0.656 → 同一身份**
+- **char_chu_lingsu_1533_01 ↔ char_gu_chaoyan_1904_01：cos 0.579 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_huo_ruoxi_1200_01：cos 0.489 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_jiang_zhiruo_0300_01：cos 0.575 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_liang_tiange_1303_01：cos 0.542 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_liang_yuyan_1333_01：cos 0.713 → 同一身份**
+- **char_chu_lingsu_1533_01 ↔ char_linghu_chuxia_2204_01：cos 0.355 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_chu_lingsu_1533_01 ↔ char_lu_muchen_0530_01：cos 0.518 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_murong_manshu_1704_01：cos 0.616 → 同一身份**
+- **char_chu_lingsu_1533_01 ↔ char_murong_weiyu_0930_01：cos 0.547 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_murong_xingzhu_0200_01：cos 0.478 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_ning_chuxia_0000_01：cos 0.527 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.568 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_qin_linger_1634_01：cos 0.530 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_qin_suqiu_0630_01：cos 0.650 → 同一身份**
+- **char_chu_lingsu_1533_01 ↔ char_qin_zhixia_1130_01：cos 0.525 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_ruan_lingjun_2034_01：cos 0.567 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_ruan_tiange_1403_01：cos 0.462 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_shen_hongyu_1734_01：cos 0.626 → 同一身份**
+- **char_chu_lingsu_1533_01 ↔ char_situ_caiwei_0100_01：cos 0.698 → 同一身份**
+- **char_chu_lingsu_1533_01 ↔ char_situ_yuhan_0600_01：cos 0.698 → 同一身份**
+- **char_chu_lingsu_1533_01 ↔ char_song_wanzhao_1503_01：cos 0.631 → 同一身份**
+- **char_chu_lingsu_1533_01 ↔ char_tan_shanshan_0700_01：cos 0.434 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_tang_sitian_0900_01：cos 0.691 → 同一身份**
+- **char_chu_lingsu_1533_01 ↔ char_tantai_weiyu_1433_01：cos 0.345 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_chu_lingsu_1533_01 ↔ char_tantai_xingzhu_0230_01：cos 0.426 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_tantai_yuwei_0730_01：cos 0.313 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_chu_lingsu_1533_01 ↔ char_wen_manshu_1030_01：cos 0.684 → 同一身份**
+- **char_chu_lingsu_1533_01 ↔ char_xi_weiyu_2134_01：cos 0.611 → 同一身份**
+- **char_chu_lingsu_1533_01 ↔ char_xue_banxia_0330_01：cos 0.455 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_ye_hongyu_0500_01：cos 0.546 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_ye_linger_2004_01：cos 0.514 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_ye_lingjun_0130_01：cos 0.465 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_ye_shanshan_0400_01：cos 0.550 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_ye_yuhan_1804_01：cos 0.529 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_yuchi_ruoli_1000_01：cos 0.580 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_yun_banxia_0030_01：cos 0.502 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_zhong_manshu_2104_01：cos 0.578 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_anya_song：cos 0.245 → 不同身份**
+- **char_chu_lingsu_1533_01 ↔ char_ayano：cos 0.128 → 不同身份**
+- **char_chu_lingsu_1533_01 ↔ char_chen_xiawei：cos 0.282 → 不同身份**
+- **char_chu_lingsu_1533_01 ↔ char_jia：cos 0.232 → 不同身份**
+- **char_chu_lingsu_1533_01 ↔ char_jiang_yueyao：cos 0.381 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_chu_lingsu_1533_01 ↔ char_lin_qingwan：cos 0.484 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_liu_yinuo_1923_10：cos -0.020 → 不同身份**
+- **char_chu_lingsu_1533_01 ↔ char_luo_qingchuan_1805：cos 0.632 → 同一身份**
+- **char_chu_lingsu_1533_01 ↔ char_pei_yuhan_2300_01：cos 0.475 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_qing_luo：cos 0.212 → 不同身份**
+- **char_chu_lingsu_1533_01 ↔ char_ray_ling：cos 0.357 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_chu_lingsu_1533_01 ↔ char_runcha：cos 0.020 → 不同身份**
+- **char_chu_lingsu_1533_01 ↔ char_shen_zhilan：cos 0.391 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_chu_lingsu_1533_01 ↔ char_su_xiaotang：cos 0.230 → 不同身份**
+- **char_chu_lingsu_1533_01 ↔ char_tang_mengli_2200_01：cos 0.525 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_wen_xiaorou_2140_01：cos 0.509 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_ye_muchen_2100_01：cos 0.543 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_yin_xinyue_2330_01：cos 0.510 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_zhao_ruoxi：cos 0.433 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_duo：cos 0.192 → 不同身份**
+- **char_chu_lingsu_1533_01 ↔ char_duo3_2：cos 0.093 → 不同身份**
+- **char_chu_lingsu_1533_01 ↔ char_cen_zhiwei_1936_01：cos 0.490 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_jiang_ruoli_2007_01：cos 0.346 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_chu_lingsu_1533_01 ↔ char_xiaog3：cos 0.069 → 不同身份**
+- **char_chu_lingsu_1533_01 ↔ char_xi_manshu_2045_01：cos 0.394 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_chu_lingsu_1533_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.369 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_chu_lingsu_1533_01 ↔ char_linghu_zhixia_2133_01：cos 0.458 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_qiao_weiyu_2134_01：cos 0.433 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_jiang_qinghuan_2203_01：cos 0.471 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_cen_youqing_2204_01：cos 0.217 → 不同身份**
+- **char_chu_lingsu_1533_01 ↔ char_zhong_xiaorou_2233_01：cos 0.369 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_chu_lingsu_1533_01 ↔ char_tan_youqing_2234_01：cos 0.369 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_chu_lingsu_1533_01 ↔ char_tantai_lingsu_2303_01：cos 0.496 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_qiao_qinghuan_2304_01：cos 0.496 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_chu_muchen_0004_01：cos 0.005 → 不同身份**
+- **char_chu_lingsu_1533_01 ↔ char_qiao_chaoyan_0004_01：cos -0.009 → 不同身份**
+- **char_chu_lingsu_1533_01 ↔ char_xue_qinghuan_0034_01：cos -0.033 → 不同身份**
+- **char_chu_lingsu_1533_01 ↔ char_tang_yuwei_0217_01：cos 0.404 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_ouyang_chuxia_0250_01：cos 0.413 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_bai_zhiruo_0305_01：cos 0.498 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_pei_shanshan_0456_01：cos 0.465 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_xi_qingchuan_0618_01：cos 0.538 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_zhong_linger_0732_01：cos 0.442 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_hua_qingdai_1029_01：cos 0.510 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_tang_banxia_1156_01：cos 0.514 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_gu_weiyu_1321_01：cos 0.512 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_cheng_hongyu_1435_01：cos 0.419 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_hua_chuxia_1549_01：cos 0.459 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_pei_manshu_1701_01：cos 0.468 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_ye_nanqiao_1811_01：cos 0.425 → ⚠️ 存疑，待人工复核**
+- **char_chu_lingsu_1533_01 ↔ char_murong_yuyan_1942_01：cos 0.346 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_chu_lingsu_1533_01 ↔ char_nangong_lingjun_2054_01：cos 0.450 → ⚠️ 存疑，待人工复核**
+- **char_fu_linger_1433_01 ↔ char_fu_yuhan_1000_01：cos 0.522 → ⚠️ 存疑，待人工复核**
+- **char_fu_linger_1433_01 ↔ char_gu_sitian_1003_01：cos 0.659 → 同一身份**
+- **char_fu_linger_1433_01 ↔ char_liang_chuxia_1503_01：cos 0.740 → 同一身份**
+- **char_fu_linger_1433_01 ↔ char_liang_mengli_1203_01：cos 0.635 → 同一身份**
+- **char_fu_linger_1433_01 ↔ char_shen_xiaorou_1233_01：cos 0.447 → ⚠️ 存疑，待人工复核**
+- **char_fu_linger_1433_01 ↔ char_shen_xinyue_1404_01：cos 0.662 → 同一身份**
+- **char_fu_linger_1433_01 ↔ char_tan_muchen_1133_01：cos 0.552 → ⚠️ 存疑，待人工复核**
+- **char_fu_linger_1433_01 ↔ char_xi_shanshan_1303_01：cos 0.466 → ⚠️ 存疑，待人工复核**
+- **char_fu_linger_1433_01 ↔ char_xue_huaiyu_1034_01：cos 0.489 → ⚠️ 存疑，待人工复核**
+- **char_fu_linger_1433_01 ↔ char_yuchi_lingsu_1333_01：cos 0.655 → 同一身份**
+- **char_fu_linger_1433_01 ↔ char_bai_anran_0430_01：cos 0.614 → 同一身份**
+- **char_fu_linger_1433_01 ↔ char_bai_yuhan_0830_01：cos 0.739 → 同一身份**
+- **char_fu_linger_1433_01 ↔ char_cen_yuhan_1934_01：cos 0.532 → ⚠️ 存疑，待人工复核**
+- **char_fu_linger_1433_01 ↔ char_chu_ruoli_0800_01：cos 0.644 → 同一身份**
+- **char_fu_linger_1433_01 ↔ char_fu_caiwei_1833_01：cos 0.675 → 同一身份**
+- **char_fu_linger_1433_01 ↔ char_fu_wanzhao_1100_01：cos 0.522 → ⚠️ 存疑，待人工复核**
+- **char_fu_linger_1433_01 ↔ char_gu_chaoyan_1904_01：cos 0.503 → ⚠️ 存疑，待人工复核**
+- **char_fu_linger_1433_01 ↔ char_huo_ruoxi_1200_01：cos 0.585 → ⚠️ 存疑，待人工复核**
+- **char_fu_linger_1433_01 ↔ char_jiang_zhiruo_0300_01：cos 0.770 → 同一身份**
+- **char_fu_linger_1433_01 ↔ char_liang_tiange_1303_01：cos 0.553 → ⚠️ 存疑，待人工复核**
+- **char_fu_linger_1433_01 ↔ char_liang_yuyan_1333_01：cos 0.606 → 同一身份**
+- **char_fu_linger_1433_01 ↔ char_linghu_chuxia_2204_01：cos 0.500 → ⚠️ 存疑，待人工复核**
+- **char_fu_linger_1433_01 ↔ char_lu_muchen_0530_01：cos 0.445 → ⚠️ 存疑，待人工复核**
+- **char_fu_linger_1433_01 ↔ char_murong_manshu_1704_01：cos 0.570 → ⚠️ 存疑，待人工复核**
+- **char_fu_linger_1433_01 ↔ char_murong_weiyu_0930_01：cos 0.468 → ⚠️ 存疑，待人工复核**
+- **char_fu_linger_1433_01 ↔ char_murong_xingzhu_0200_01：cos 0.723 → 同一身份**
+- **char_fu_linger_1433_01 ↔ char_ning_chuxia_0000_01：cos 0.780 → 同一身份**
+- **char_fu_linger_1433_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.576 → ⚠️ 存疑，待人工复核**
+- **char_fu_linger_1433_01 ↔ char_qin_linger_1634_01：cos 0.644 → 同一身份**
+- **char_fu_linger_1433_01 ↔ char_qin_suqiu_0630_01：cos 0.617 → 同一身份**
+- **char_fu_linger_1433_01 ↔ char_qin_zhixia_1130_01：cos 0.483 → ⚠️ 存疑，待人工复核**
+- **char_fu_linger_1433_01 ↔ char_ruan_lingjun_2034_01：cos 0.559 → ⚠️ 存疑，待人工复核**
+- **char_fu_linger_1433_01 ↔ char_ruan_tiange_1403_01：cos 0.632 → 同一身份**
+- **char_fu_linger_1433_01 ↔ char_shen_hongyu_1734_01：cos 0.793 → 同一身份**
+- **char_fu_linger_1433_01 ↔ char_situ_caiwei_0100_01：cos 0.431 → ⚠️ 存疑，待人工复核**
+- **char_fu_linger_1433_01 ↔ char_situ_yuhan_0600_01：cos 0.602 → 同一身份**
+- **char_fu_linger_1433_01 ↔ char_song_wanzhao_1503_01：cos 0.547 → ⚠️ 存疑，待人工复核**
+- **char_fu_linger_1433_01 ↔ char_tan_shanshan_0700_01：cos 0.508 → ⚠️ 存疑，待人工复核**
+- **char_fu_linger_1433_01 ↔ char_tang_sitian_0900_01：cos 0.523 → ⚠️ 存疑，待人工复核**
+- **char_fu_linger_1433_01 ↔ char_tantai_weiyu_1433_01：cos 0.561 → ⚠️ 存疑，待人工复核**
+- **char_fu_linger_1433_01 ↔ char_tantai_xingzhu_0230_01：cos 0.675 → 同一身份**
+- **char_fu_linger_1433_01 ↔ char_tantai_yuwei_0730_01：cos 0.701 → 同一身份**
+- **char_fu_linger_1433_01 ↔ char_wen_manshu_1030_01：cos 0.500 → ⚠️ 存疑，待人工复核**
+- **char_fu_linger_1433_01 ↔ char_xi_weiyu_2134_01：cos 0.720 → 同一身份**
+- **char_fu_linger_1433_01 ↔ char_xue_banxia_0330_01：cos 0.476 → ⚠️ 存疑，待人工复核**
+- **char_fu_linger_1433_01 ↔ char_ye_hongyu_0500_01：cos 0.489 → ⚠️ 存疑，待人工复核**
+- **char_fu_linger_1433_01 ↔ char_ye_linger_2004_01：cos 0.565 → ⚠️ 存疑，待人工复核**
+- **char_fu_linger_1433_01 ↔ char_ye_lingjun_0130_01：cos 0.525 → ⚠️ 存疑，待人工复核**
+- **char_fu_linger_1433_01 ↔ char_ye_shanshan_0400_01：cos 0.770 → 同一身份**
+- **char_fu_linger_1433_01 ↔ char_ye_yuhan_1804_01：cos 0.621 → 同一身份**
+- **char_fu_linger_1433_01 ↔ char_yuchi_ruoli_1000_01：cos 0.726 → 同一身份**
+- **char_fu_linger_1433_01 ↔ char_yun_banxia_0030_01：cos 0.330 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_linger_1433_01 ↔ char_zhong_manshu_2104_01：cos 0.713 → 同一身份**
+- **char_fu_linger_1433_01 ↔ char_anya_song：cos 0.069 → 不同身份**
+- **char_fu_linger_1433_01 ↔ char_ayano：cos 0.159 → 不同身份**
+- **char_fu_linger_1433_01 ↔ char_chen_xiawei：cos 0.102 → 不同身份**
+- **char_fu_linger_1433_01 ↔ char_jia：cos 0.031 → 不同身份**
+- **char_fu_linger_1433_01 ↔ char_jiang_yueyao：cos 0.147 → 不同身份**
+- **char_fu_linger_1433_01 ↔ char_lin_qingwan：cos 0.159 → 不同身份**
+- **char_fu_linger_1433_01 ↔ char_liu_yinuo_1923_10：cos -0.007 → 不同身份**
+- **char_fu_linger_1433_01 ↔ char_luo_qingchuan_1805：cos 0.610 → 同一身份**
+- **char_fu_linger_1433_01 ↔ char_pei_yuhan_2300_01：cos 0.753 → 同一身份**
+- **char_fu_linger_1433_01 ↔ char_qing_luo：cos 0.276 → 不同身份**
+- **char_fu_linger_1433_01 ↔ char_ray_ling：cos 0.051 → 不同身份**
+- **char_fu_linger_1433_01 ↔ char_runcha：cos 0.044 → 不同身份**
+- **char_fu_linger_1433_01 ↔ char_shen_zhilan：cos 0.075 → 不同身份**
+- **char_fu_linger_1433_01 ↔ char_su_xiaotang：cos 0.036 → 不同身份**
+- **char_fu_linger_1433_01 ↔ char_tang_mengli_2200_01：cos 0.715 → 同一身份**
+- **char_fu_linger_1433_01 ↔ char_wen_xiaorou_2140_01：cos 0.746 → 同一身份**
+- **char_fu_linger_1433_01 ↔ char_ye_muchen_2100_01：cos 0.817 → 同一身份**
+- **char_fu_linger_1433_01 ↔ char_yin_xinyue_2330_01：cos 0.778 → 同一身份**
+- **char_fu_linger_1433_01 ↔ char_zhao_ruoxi：cos 0.123 → 不同身份**
+- **char_fu_linger_1433_01 ↔ char_duo：cos 0.083 → 不同身份**
+- **char_fu_linger_1433_01 ↔ char_duo3_2：cos 0.138 → 不同身份**
+- **char_fu_linger_1433_01 ↔ char_cen_zhiwei_1936_01：cos 0.260 → 不同身份**
+- **char_fu_linger_1433_01 ↔ char_jiang_ruoli_2007_01：cos 0.103 → 不同身份**
+- **char_fu_linger_1433_01 ↔ char_xiaog3：cos 0.368 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_linger_1433_01 ↔ char_xi_manshu_2045_01：cos 0.152 → 不同身份**
+- **char_fu_linger_1433_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.168 → 不同身份**
+- **char_fu_linger_1433_01 ↔ char_linghu_zhixia_2133_01：cos 0.209 → 不同身份**
+- **char_fu_linger_1433_01 ↔ char_qiao_weiyu_2134_01：cos 0.026 → 不同身份**
+- **char_fu_linger_1433_01 ↔ char_jiang_qinghuan_2203_01：cos 0.333 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_linger_1433_01 ↔ char_cen_youqing_2204_01：cos -0.055 → 不同身份**
+- **char_fu_linger_1433_01 ↔ char_zhong_xiaorou_2233_01：cos 0.212 → 不同身份**
+- **char_fu_linger_1433_01 ↔ char_tan_youqing_2234_01：cos 0.212 → 不同身份**
+- **char_fu_linger_1433_01 ↔ char_tantai_lingsu_2303_01：cos 0.270 → 不同身份**
+- **char_fu_linger_1433_01 ↔ char_qiao_qinghuan_2304_01：cos 0.270 → 不同身份**
+- **char_fu_linger_1433_01 ↔ char_chu_muchen_0004_01：cos -0.011 → 不同身份**
+- **char_fu_linger_1433_01 ↔ char_qiao_chaoyan_0004_01：cos -0.026 → 不同身份**
+- **char_fu_linger_1433_01 ↔ char_xue_qinghuan_0034_01：cos -0.014 → 不同身份**
+- **char_fu_linger_1433_01 ↔ char_tang_yuwei_0217_01：cos 0.238 → 不同身份**
+- **char_fu_linger_1433_01 ↔ char_ouyang_chuxia_0250_01：cos 0.119 → 不同身份**
+- **char_fu_linger_1433_01 ↔ char_bai_zhiruo_0305_01：cos 0.350 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_linger_1433_01 ↔ char_pei_shanshan_0456_01：cos 0.363 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_linger_1433_01 ↔ char_xi_qingchuan_0618_01：cos 0.311 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_linger_1433_01 ↔ char_zhong_linger_0732_01：cos 0.180 → 不同身份**
+- **char_fu_linger_1433_01 ↔ char_hua_qingdai_1029_01：cos 0.224 → 不同身份**
+- **char_fu_linger_1433_01 ↔ char_tang_banxia_1156_01：cos 0.261 → 不同身份**
+- **char_fu_linger_1433_01 ↔ char_gu_weiyu_1321_01：cos 0.183 → 不同身份**
+- **char_fu_linger_1433_01 ↔ char_cheng_hongyu_1435_01：cos 0.154 → 不同身份**
+- **char_fu_linger_1433_01 ↔ char_hua_chuxia_1549_01：cos 0.110 → 不同身份**
+- **char_fu_linger_1433_01 ↔ char_pei_manshu_1701_01：cos 0.204 → 不同身份**
+- **char_fu_linger_1433_01 ↔ char_ye_nanqiao_1811_01：cos 0.179 → 不同身份**
+- **char_fu_linger_1433_01 ↔ char_murong_yuyan_1942_01：cos 0.365 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_linger_1433_01 ↔ char_nangong_lingjun_2054_01：cos 0.140 → 不同身份**
+- **char_fu_yuhan_1000_01 ↔ char_gu_sitian_1003_01：cos 0.444 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_liang_chuxia_1503_01：cos 0.467 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_liang_mengli_1203_01：cos 0.534 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_shen_xiaorou_1233_01：cos 0.429 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_shen_xinyue_1404_01：cos 0.512 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_tan_muchen_1133_01：cos 0.599 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_xi_shanshan_1303_01：cos 0.553 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_xue_huaiyu_1034_01：cos 0.515 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_yuchi_lingsu_1333_01：cos 0.599 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_bai_anran_0430_01：cos 0.559 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_bai_yuhan_0830_01：cos 0.452 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_cen_yuhan_1934_01：cos 0.481 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_chu_ruoli_0800_01：cos 0.512 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_fu_caiwei_1833_01：cos 0.575 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_fu_wanzhao_1100_01：cos 0.501 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_gu_chaoyan_1904_01：cos 0.480 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_huo_ruoxi_1200_01：cos 0.591 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_jiang_zhiruo_0300_01：cos 0.517 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_liang_tiange_1303_01：cos 0.578 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_liang_yuyan_1333_01：cos 0.521 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_linghu_chuxia_2204_01：cos 0.517 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_lu_muchen_0530_01：cos 0.587 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_murong_manshu_1704_01：cos 0.562 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_murong_weiyu_0930_01：cos 0.698 → 同一身份**
+- **char_fu_yuhan_1000_01 ↔ char_murong_xingzhu_0200_01：cos 0.438 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_ning_chuxia_0000_01：cos 0.541 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.551 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_qin_linger_1634_01：cos 0.531 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_qin_suqiu_0630_01：cos 0.512 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_qin_zhixia_1130_01：cos 0.625 → 同一身份**
+- **char_fu_yuhan_1000_01 ↔ char_ruan_lingjun_2034_01：cos 0.564 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_ruan_tiange_1403_01：cos 0.593 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_shen_hongyu_1734_01：cos 0.579 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_situ_caiwei_0100_01：cos 0.436 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_situ_yuhan_0600_01：cos 0.593 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_song_wanzhao_1503_01：cos 0.680 → 同一身份**
+- **char_fu_yuhan_1000_01 ↔ char_tan_shanshan_0700_01：cos 0.547 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_tang_sitian_0900_01：cos 0.527 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_tantai_weiyu_1433_01：cos 0.523 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_tantai_xingzhu_0230_01：cos 0.358 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_yuhan_1000_01 ↔ char_tantai_yuwei_0730_01：cos 0.473 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_wen_manshu_1030_01：cos 0.545 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_xi_weiyu_2134_01：cos 0.493 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_xue_banxia_0330_01：cos 0.516 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_ye_hongyu_0500_01：cos 0.495 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_ye_linger_2004_01：cos 0.532 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_ye_lingjun_0130_01：cos 0.609 → 同一身份**
+- **char_fu_yuhan_1000_01 ↔ char_ye_shanshan_0400_01：cos 0.476 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_ye_yuhan_1804_01：cos 0.664 → 同一身份**
+- **char_fu_yuhan_1000_01 ↔ char_yuchi_ruoli_1000_01：cos 0.464 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_yun_banxia_0030_01：cos 0.601 → 同一身份**
+- **char_fu_yuhan_1000_01 ↔ char_zhong_manshu_2104_01：cos 0.522 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_anya_song：cos 0.211 → 不同身份**
+- **char_fu_yuhan_1000_01 ↔ char_ayano：cos 0.114 → 不同身份**
+- **char_fu_yuhan_1000_01 ↔ char_chen_xiawei：cos 0.076 → 不同身份**
+- **char_fu_yuhan_1000_01 ↔ char_jia：cos 0.132 → 不同身份**
+- **char_fu_yuhan_1000_01 ↔ char_jiang_yueyao：cos 0.235 → 不同身份**
+- **char_fu_yuhan_1000_01 ↔ char_lin_qingwan：cos 0.291 → 不同身份**
+- **char_fu_yuhan_1000_01 ↔ char_liu_yinuo_1923_10：cos -0.081 → 不同身份**
+- **char_fu_yuhan_1000_01 ↔ char_luo_qingchuan_1805：cos 0.625 → 同一身份**
+- **char_fu_yuhan_1000_01 ↔ char_pei_yuhan_2300_01：cos 0.512 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_qing_luo：cos 0.094 → 不同身份**
+- **char_fu_yuhan_1000_01 ↔ char_ray_ling：cos 0.236 → 不同身份**
+- **char_fu_yuhan_1000_01 ↔ char_runcha：cos 0.025 → 不同身份**
+- **char_fu_yuhan_1000_01 ↔ char_shen_zhilan：cos 0.154 → 不同身份**
+- **char_fu_yuhan_1000_01 ↔ char_su_xiaotang：cos 0.128 → 不同身份**
+- **char_fu_yuhan_1000_01 ↔ char_tang_mengli_2200_01：cos 0.480 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_wen_xiaorou_2140_01：cos 0.543 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_ye_muchen_2100_01：cos 0.574 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_yin_xinyue_2330_01：cos 0.572 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_zhao_ruoxi：cos 0.172 → 不同身份**
+- **char_fu_yuhan_1000_01 ↔ char_duo：cos 0.297 → 不同身份**
+- **char_fu_yuhan_1000_01 ↔ char_duo3_2：cos 0.068 → 不同身份**
+- **char_fu_yuhan_1000_01 ↔ char_cen_zhiwei_1936_01：cos 0.319 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_yuhan_1000_01 ↔ char_jiang_ruoli_2007_01：cos 0.217 → 不同身份**
+- **char_fu_yuhan_1000_01 ↔ char_xiaog3：cos 0.163 → 不同身份**
+- **char_fu_yuhan_1000_01 ↔ char_xi_manshu_2045_01：cos 0.159 → 不同身份**
+- **char_fu_yuhan_1000_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.360 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_yuhan_1000_01 ↔ char_linghu_zhixia_2133_01：cos 0.384 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_yuhan_1000_01 ↔ char_qiao_weiyu_2134_01：cos 0.263 → 不同身份**
+- **char_fu_yuhan_1000_01 ↔ char_jiang_qinghuan_2203_01：cos 0.252 → 不同身份**
+- **char_fu_yuhan_1000_01 ↔ char_cen_youqing_2204_01：cos 0.096 → 不同身份**
+- **char_fu_yuhan_1000_01 ↔ char_zhong_xiaorou_2233_01：cos 0.218 → 不同身份**
+- **char_fu_yuhan_1000_01 ↔ char_tan_youqing_2234_01：cos 0.218 → 不同身份**
+- **char_fu_yuhan_1000_01 ↔ char_tantai_lingsu_2303_01：cos 0.464 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_qiao_qinghuan_2304_01：cos 0.464 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_chu_muchen_0004_01：cos -0.069 → 不同身份**
+- **char_fu_yuhan_1000_01 ↔ char_qiao_chaoyan_0004_01：cos -0.111 → 不同身份**
+- **char_fu_yuhan_1000_01 ↔ char_xue_qinghuan_0034_01：cos 0.041 → 不同身份**
+- **char_fu_yuhan_1000_01 ↔ char_tang_yuwei_0217_01：cos 0.164 → 不同身份**
+- **char_fu_yuhan_1000_01 ↔ char_ouyang_chuxia_0250_01：cos 0.219 → 不同身份**
+- **char_fu_yuhan_1000_01 ↔ char_bai_zhiruo_0305_01：cos 0.402 → ⚠️ 存疑，待人工复核**
+- **char_fu_yuhan_1000_01 ↔ char_pei_shanshan_0456_01：cos 0.318 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_yuhan_1000_01 ↔ char_xi_qingchuan_0618_01：cos 0.199 → 不同身份**
+- **char_fu_yuhan_1000_01 ↔ char_zhong_linger_0732_01：cos 0.315 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_yuhan_1000_01 ↔ char_hua_qingdai_1029_01：cos 0.339 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_yuhan_1000_01 ↔ char_tang_banxia_1156_01：cos 0.363 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_yuhan_1000_01 ↔ char_gu_weiyu_1321_01：cos 0.284 → 不同身份**
+- **char_fu_yuhan_1000_01 ↔ char_cheng_hongyu_1435_01：cos 0.211 → 不同身份**
+- **char_fu_yuhan_1000_01 ↔ char_hua_chuxia_1549_01：cos 0.188 → 不同身份**
+- **char_fu_yuhan_1000_01 ↔ char_pei_manshu_1701_01：cos 0.245 → 不同身份**
+- **char_fu_yuhan_1000_01 ↔ char_ye_nanqiao_1811_01：cos 0.246 → 不同身份**
+- **char_fu_yuhan_1000_01 ↔ char_murong_yuyan_1942_01：cos 0.214 → 不同身份**
+- **char_fu_yuhan_1000_01 ↔ char_nangong_lingjun_2054_01：cos 0.307 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_gu_sitian_1003_01 ↔ char_liang_chuxia_1503_01：cos 0.550 → ⚠️ 存疑，待人工复核**
+- **char_gu_sitian_1003_01 ↔ char_liang_mengli_1203_01：cos 0.569 → ⚠️ 存疑，待人工复核**
+- **char_gu_sitian_1003_01 ↔ char_shen_xiaorou_1233_01：cos 0.352 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_gu_sitian_1003_01 ↔ char_shen_xinyue_1404_01：cos 0.548 → ⚠️ 存疑，待人工复核**
+- **char_gu_sitian_1003_01 ↔ char_tan_muchen_1133_01：cos 0.511 → ⚠️ 存疑，待人工复核**
+- **char_gu_sitian_1003_01 ↔ char_xi_shanshan_1303_01：cos 0.457 → ⚠️ 存疑，待人工复核**
+- **char_gu_sitian_1003_01 ↔ char_xue_huaiyu_1034_01：cos 0.377 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_gu_sitian_1003_01 ↔ char_yuchi_lingsu_1333_01：cos 0.597 → ⚠️ 存疑，待人工复核**
+- **char_gu_sitian_1003_01 ↔ char_bai_anran_0430_01：cos 0.612 → 同一身份**
+- **char_gu_sitian_1003_01 ↔ char_bai_yuhan_0830_01：cos 0.636 → 同一身份**
+- **char_gu_sitian_1003_01 ↔ char_cen_yuhan_1934_01：cos 0.494 → ⚠️ 存疑，待人工复核**
+- **char_gu_sitian_1003_01 ↔ char_chu_ruoli_0800_01：cos 0.532 → ⚠️ 存疑，待人工复核**
+- **char_gu_sitian_1003_01 ↔ char_fu_caiwei_1833_01：cos 0.592 → ⚠️ 存疑，待人工复核**
+- **char_gu_sitian_1003_01 ↔ char_fu_wanzhao_1100_01：cos 0.465 → ⚠️ 存疑，待人工复核**
+- **char_gu_sitian_1003_01 ↔ char_gu_chaoyan_1904_01：cos 0.428 → ⚠️ 存疑，待人工复核**
+- **char_gu_sitian_1003_01 ↔ char_huo_ruoxi_1200_01：cos 0.534 → ⚠️ 存疑，待人工复核**
+- **char_gu_sitian_1003_01 ↔ char_jiang_zhiruo_0300_01：cos 0.630 → 同一身份**
+- **char_gu_sitian_1003_01 ↔ char_liang_tiange_1303_01：cos 0.468 → ⚠️ 存疑，待人工复核**
+- **char_gu_sitian_1003_01 ↔ char_liang_yuyan_1333_01：cos 0.572 → ⚠️ 存疑，待人工复核**
+- **char_gu_sitian_1003_01 ↔ char_linghu_chuxia_2204_01：cos 0.439 → ⚠️ 存疑，待人工复核**
+- **char_gu_sitian_1003_01 ↔ char_lu_muchen_0530_01：cos 0.415 → ⚠️ 存疑，待人工复核**
+- **char_gu_sitian_1003_01 ↔ char_murong_manshu_1704_01：cos 0.536 → ⚠️ 存疑，待人工复核**
+- **char_gu_sitian_1003_01 ↔ char_murong_weiyu_0930_01：cos 0.455 → ⚠️ 存疑，待人工复核**
+- **char_gu_sitian_1003_01 ↔ char_murong_xingzhu_0200_01：cos 0.713 → 同一身份**
+- **char_gu_sitian_1003_01 ↔ char_ning_chuxia_0000_01：cos 0.664 → 同一身份**
+- **char_gu_sitian_1003_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.474 → ⚠️ 存疑，待人工复核**
+- **char_gu_sitian_1003_01 ↔ char_qin_linger_1634_01：cos 0.539 → ⚠️ 存疑，待人工复核**
+- **char_gu_sitian_1003_01 ↔ char_qin_suqiu_0630_01：cos 0.651 → 同一身份**
+- **char_gu_sitian_1003_01 ↔ char_qin_zhixia_1130_01：cos 0.579 → ⚠️ 存疑，待人工复核**
+- **char_gu_sitian_1003_01 ↔ char_ruan_lingjun_2034_01：cos 0.519 → ⚠️ 存疑，待人工复核**
+- **char_gu_sitian_1003_01 ↔ char_ruan_tiange_1403_01：cos 0.526 → ⚠️ 存疑，待人工复核**
+- **char_gu_sitian_1003_01 ↔ char_shen_hongyu_1734_01：cos 0.659 → 同一身份**
+- **char_gu_sitian_1003_01 ↔ char_situ_caiwei_0100_01：cos 0.370 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_gu_sitian_1003_01 ↔ char_situ_yuhan_0600_01：cos 0.574 → ⚠️ 存疑，待人工复核**
+- **char_gu_sitian_1003_01 ↔ char_song_wanzhao_1503_01：cos 0.475 → ⚠️ 存疑，待人工复核**
+- **char_gu_sitian_1003_01 ↔ char_tan_shanshan_0700_01：cos 0.413 → ⚠️ 存疑，待人工复核**
+- **char_gu_sitian_1003_01 ↔ char_tang_sitian_0900_01：cos 0.507 → ⚠️ 存疑，待人工复核**
+- **char_gu_sitian_1003_01 ↔ char_tantai_weiyu_1433_01：cos 0.407 → ⚠️ 存疑，待人工复核**
+- **char_gu_sitian_1003_01 ↔ char_tantai_xingzhu_0230_01：cos 0.776 → 同一身份**
+- **char_gu_sitian_1003_01 ↔ char_tantai_yuwei_0730_01：cos 0.596 → ⚠️ 存疑，待人工复核**
+- **char_gu_sitian_1003_01 ↔ char_wen_manshu_1030_01：cos 0.441 → ⚠️ 存疑，待人工复核**
+- **char_gu_sitian_1003_01 ↔ char_xi_weiyu_2134_01：cos 0.606 → 同一身份**
+- **char_gu_sitian_1003_01 ↔ char_xue_banxia_0330_01：cos 0.408 → ⚠️ 存疑，待人工复核**
+- **char_gu_sitian_1003_01 ↔ char_ye_hongyu_0500_01：cos 0.418 → ⚠️ 存疑，待人工复核**
+- **char_gu_sitian_1003_01 ↔ char_ye_linger_2004_01：cos 0.404 → ⚠️ 存疑，待人工复核**
+- **char_gu_sitian_1003_01 ↔ char_ye_lingjun_0130_01：cos 0.438 → ⚠️ 存疑，待人工复核**
+- **char_gu_sitian_1003_01 ↔ char_ye_shanshan_0400_01：cos 0.684 → 同一身份**
+- **char_gu_sitian_1003_01 ↔ char_ye_yuhan_1804_01：cos 0.539 → ⚠️ 存疑，待人工复核**
+- **char_gu_sitian_1003_01 ↔ char_yuchi_ruoli_1000_01：cos 0.557 → ⚠️ 存疑，待人工复核**
+- **char_gu_sitian_1003_01 ↔ char_yun_banxia_0030_01：cos 0.285 → 不同身份**
+- **char_gu_sitian_1003_01 ↔ char_zhong_manshu_2104_01：cos 0.588 → ⚠️ 存疑，待人工复核**
+- **char_gu_sitian_1003_01 ↔ char_anya_song：cos 0.110 → 不同身份**
+- **char_gu_sitian_1003_01 ↔ char_ayano：cos 0.194 → 不同身份**
+- **char_gu_sitian_1003_01 ↔ char_chen_xiawei：cos 0.185 → 不同身份**
+- **char_gu_sitian_1003_01 ↔ char_jia：cos 0.183 → 不同身份**
+- **char_gu_sitian_1003_01 ↔ char_jiang_yueyao：cos 0.121 → 不同身份**
+- **char_gu_sitian_1003_01 ↔ char_lin_qingwan：cos 0.235 → 不同身份**
+- **char_gu_sitian_1003_01 ↔ char_liu_yinuo_1923_10：cos -0.018 → 不同身份**
+- **char_gu_sitian_1003_01 ↔ char_luo_qingchuan_1805：cos 0.594 → ⚠️ 存疑，待人工复核**
+- **char_gu_sitian_1003_01 ↔ char_pei_yuhan_2300_01：cos 0.595 → ⚠️ 存疑，待人工复核**
+- **char_gu_sitian_1003_01 ↔ char_qing_luo：cos 0.340 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_gu_sitian_1003_01 ↔ char_ray_ling：cos 0.087 → 不同身份**
+- **char_gu_sitian_1003_01 ↔ char_runcha：cos 0.087 → 不同身份**
+- **char_gu_sitian_1003_01 ↔ char_shen_zhilan：cos 0.090 → 不同身份**
+- **char_gu_sitian_1003_01 ↔ char_su_xiaotang：cos 0.128 → 不同身份**
+- **char_gu_sitian_1003_01 ↔ char_tang_mengli_2200_01：cos 0.620 → 同一身份**
+- **char_gu_sitian_1003_01 ↔ char_wen_xiaorou_2140_01：cos 0.622 → 同一身份**
+- **char_gu_sitian_1003_01 ↔ char_ye_muchen_2100_01：cos 0.630 → 同一身份**
+- **char_gu_sitian_1003_01 ↔ char_yin_xinyue_2330_01：cos 0.623 → 同一身份**
+- **char_gu_sitian_1003_01 ↔ char_zhao_ruoxi：cos 0.197 → 不同身份**
+- **char_gu_sitian_1003_01 ↔ char_duo：cos 0.180 → 不同身份**
+- **char_gu_sitian_1003_01 ↔ char_duo3_2：cos 0.193 → 不同身份**
+- **char_gu_sitian_1003_01 ↔ char_cen_zhiwei_1936_01：cos 0.222 → 不同身份**
+- **char_gu_sitian_1003_01 ↔ char_jiang_ruoli_2007_01：cos 0.160 → 不同身份**
+- **char_gu_sitian_1003_01 ↔ char_xiaog3：cos 0.313 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_gu_sitian_1003_01 ↔ char_xi_manshu_2045_01：cos 0.215 → 不同身份**
+- **char_gu_sitian_1003_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.202 → 不同身份**
+- **char_gu_sitian_1003_01 ↔ char_linghu_zhixia_2133_01：cos 0.218 → 不同身份**
+- **char_gu_sitian_1003_01 ↔ char_qiao_weiyu_2134_01：cos 0.102 → 不同身份**
+- **char_gu_sitian_1003_01 ↔ char_jiang_qinghuan_2203_01：cos 0.309 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_gu_sitian_1003_01 ↔ char_cen_youqing_2204_01：cos -0.011 → 不同身份**
+- **char_gu_sitian_1003_01 ↔ char_zhong_xiaorou_2233_01：cos 0.285 → 不同身份**
+- **char_gu_sitian_1003_01 ↔ char_tan_youqing_2234_01：cos 0.285 → 不同身份**
+- **char_gu_sitian_1003_01 ↔ char_tantai_lingsu_2303_01：cos 0.329 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_gu_sitian_1003_01 ↔ char_qiao_qinghuan_2304_01：cos 0.329 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_gu_sitian_1003_01 ↔ char_chu_muchen_0004_01：cos -0.006 → 不同身份**
+- **char_gu_sitian_1003_01 ↔ char_qiao_chaoyan_0004_01：cos -0.014 → 不同身份**
+- **char_gu_sitian_1003_01 ↔ char_xue_qinghuan_0034_01：cos -0.008 → 不同身份**
+- **char_gu_sitian_1003_01 ↔ char_tang_yuwei_0217_01：cos 0.282 → 不同身份**
+- **char_gu_sitian_1003_01 ↔ char_ouyang_chuxia_0250_01：cos 0.164 → 不同身份**
+- **char_gu_sitian_1003_01 ↔ char_bai_zhiruo_0305_01：cos 0.304 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_gu_sitian_1003_01 ↔ char_pei_shanshan_0456_01：cos 0.348 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_gu_sitian_1003_01 ↔ char_xi_qingchuan_0618_01：cos 0.361 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_gu_sitian_1003_01 ↔ char_zhong_linger_0732_01：cos 0.189 → 不同身份**
+- **char_gu_sitian_1003_01 ↔ char_hua_qingdai_1029_01：cos 0.267 → 不同身份**
+- **char_gu_sitian_1003_01 ↔ char_tang_banxia_1156_01：cos 0.330 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_gu_sitian_1003_01 ↔ char_gu_weiyu_1321_01：cos 0.280 → 不同身份**
+- **char_gu_sitian_1003_01 ↔ char_cheng_hongyu_1435_01：cos 0.190 → 不同身份**
+- **char_gu_sitian_1003_01 ↔ char_hua_chuxia_1549_01：cos 0.154 → 不同身份**
+- **char_gu_sitian_1003_01 ↔ char_pei_manshu_1701_01：cos 0.268 → 不同身份**
+- **char_gu_sitian_1003_01 ↔ char_ye_nanqiao_1811_01：cos 0.216 → 不同身份**
+- **char_gu_sitian_1003_01 ↔ char_murong_yuyan_1942_01：cos 0.361 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_gu_sitian_1003_01 ↔ char_nangong_lingjun_2054_01：cos 0.131 → 不同身份**
+- **char_liang_chuxia_1503_01 ↔ char_liang_mengli_1203_01：cos 0.502 → ⚠️ 存疑，待人工复核**
+- **char_liang_chuxia_1503_01 ↔ char_shen_xiaorou_1233_01：cos 0.369 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_liang_chuxia_1503_01 ↔ char_shen_xinyue_1404_01：cos 0.665 → 同一身份**
+- **char_liang_chuxia_1503_01 ↔ char_tan_muchen_1133_01：cos 0.504 → ⚠️ 存疑，待人工复核**
+- **char_liang_chuxia_1503_01 ↔ char_xi_shanshan_1303_01：cos 0.361 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_liang_chuxia_1503_01 ↔ char_xue_huaiyu_1034_01：cos 0.421 → ⚠️ 存疑，待人工复核**
+- **char_liang_chuxia_1503_01 ↔ char_yuchi_lingsu_1333_01：cos 0.614 → 同一身份**
+- **char_liang_chuxia_1503_01 ↔ char_bai_anran_0430_01：cos 0.497 → ⚠️ 存疑，待人工复核**
+- **char_liang_chuxia_1503_01 ↔ char_bai_yuhan_0830_01：cos 0.707 → 同一身份**
+- **char_liang_chuxia_1503_01 ↔ char_cen_yuhan_1934_01：cos 0.513 → ⚠️ 存疑，待人工复核**
+- **char_liang_chuxia_1503_01 ↔ char_chu_ruoli_0800_01：cos 0.540 → ⚠️ 存疑，待人工复核**
+- **char_liang_chuxia_1503_01 ↔ char_fu_caiwei_1833_01：cos 0.610 → 同一身份**
+- **char_liang_chuxia_1503_01 ↔ char_fu_wanzhao_1100_01：cos 0.458 → ⚠️ 存疑，待人工复核**
+- **char_liang_chuxia_1503_01 ↔ char_gu_chaoyan_1904_01：cos 0.399 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_liang_chuxia_1503_01 ↔ char_huo_ruoxi_1200_01：cos 0.563 → ⚠️ 存疑，待人工复核**
+- **char_liang_chuxia_1503_01 ↔ char_jiang_zhiruo_0300_01：cos 0.674 → 同一身份**
+- **char_liang_chuxia_1503_01 ↔ char_liang_tiange_1303_01：cos 0.469 → ⚠️ 存疑，待人工复核**
+- **char_liang_chuxia_1503_01 ↔ char_liang_yuyan_1333_01：cos 0.556 → ⚠️ 存疑，待人工复核**
+- **char_liang_chuxia_1503_01 ↔ char_linghu_chuxia_2204_01：cos 0.509 → ⚠️ 存疑，待人工复核**
+- **char_liang_chuxia_1503_01 ↔ char_lu_muchen_0530_01：cos 0.410 → ⚠️ 存疑，待人工复核**
+- **char_liang_chuxia_1503_01 ↔ char_murong_manshu_1704_01：cos 0.571 → ⚠️ 存疑，待人工复核**
+- **char_liang_chuxia_1503_01 ↔ char_murong_weiyu_0930_01：cos 0.466 → ⚠️ 存疑，待人工复核**
+- **char_liang_chuxia_1503_01 ↔ char_murong_xingzhu_0200_01：cos 0.642 → 同一身份**
+- **char_liang_chuxia_1503_01 ↔ char_ning_chuxia_0000_01：cos 0.664 → 同一身份**
+- **char_liang_chuxia_1503_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.418 → ⚠️ 存疑，待人工复核**
+- **char_liang_chuxia_1503_01 ↔ char_qin_linger_1634_01：cos 0.511 → ⚠️ 存疑，待人工复核**
+- **char_liang_chuxia_1503_01 ↔ char_qin_suqiu_0630_01：cos 0.521 → ⚠️ 存疑，待人工复核**
+- **char_liang_chuxia_1503_01 ↔ char_qin_zhixia_1130_01：cos 0.418 → ⚠️ 存疑，待人工复核**
+- **char_liang_chuxia_1503_01 ↔ char_ruan_lingjun_2034_01：cos 0.504 → ⚠️ 存疑，待人工复核**
+- **char_liang_chuxia_1503_01 ↔ char_ruan_tiange_1403_01：cos 0.591 → ⚠️ 存疑，待人工复核**
+- **char_liang_chuxia_1503_01 ↔ char_shen_hongyu_1734_01：cos 0.700 → 同一身份**
+- **char_liang_chuxia_1503_01 ↔ char_situ_caiwei_0100_01：cos 0.388 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_liang_chuxia_1503_01 ↔ char_situ_yuhan_0600_01：cos 0.559 → ⚠️ 存疑，待人工复核**
+- **char_liang_chuxia_1503_01 ↔ char_song_wanzhao_1503_01：cos 0.572 → ⚠️ 存疑，待人工复核**
+- **char_liang_chuxia_1503_01 ↔ char_tan_shanshan_0700_01：cos 0.414 → ⚠️ 存疑，待人工复核**
+- **char_liang_chuxia_1503_01 ↔ char_tang_sitian_0900_01：cos 0.423 → ⚠️ 存疑，待人工复核**
+- **char_liang_chuxia_1503_01 ↔ char_tantai_weiyu_1433_01：cos 0.496 → ⚠️ 存疑，待人工复核**
+- **char_liang_chuxia_1503_01 ↔ char_tantai_xingzhu_0230_01：cos 0.596 → ⚠️ 存疑，待人工复核**
+- **char_liang_chuxia_1503_01 ↔ char_tantai_yuwei_0730_01：cos 0.735 → 同一身份**
+- **char_liang_chuxia_1503_01 ↔ char_wen_manshu_1030_01：cos 0.473 → ⚠️ 存疑，待人工复核**
+- **char_liang_chuxia_1503_01 ↔ char_xi_weiyu_2134_01：cos 0.565 → ⚠️ 存疑，待人工复核**
+- **char_liang_chuxia_1503_01 ↔ char_xue_banxia_0330_01：cos 0.425 → ⚠️ 存疑，待人工复核**
+- **char_liang_chuxia_1503_01 ↔ char_ye_hongyu_0500_01：cos 0.409 → ⚠️ 存疑，待人工复核**
+- **char_liang_chuxia_1503_01 ↔ char_ye_linger_2004_01：cos 0.507 → ⚠️ 存疑，待人工复核**
+- **char_liang_chuxia_1503_01 ↔ char_ye_lingjun_0130_01：cos 0.475 → ⚠️ 存疑，待人工复核**
+- **char_liang_chuxia_1503_01 ↔ char_ye_shanshan_0400_01：cos 0.731 → 同一身份**
+- **char_liang_chuxia_1503_01 ↔ char_ye_yuhan_1804_01：cos 0.586 → ⚠️ 存疑，待人工复核**
+- **char_liang_chuxia_1503_01 ↔ char_yuchi_ruoli_1000_01：cos 0.619 → 同一身份**
+- **char_liang_chuxia_1503_01 ↔ char_yun_banxia_0030_01：cos 0.315 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_liang_chuxia_1503_01 ↔ char_zhong_manshu_2104_01：cos 0.579 → ⚠️ 存疑，待人工复核**
+- **char_liang_chuxia_1503_01 ↔ char_anya_song：cos -0.006 → 不同身份**
+- **char_liang_chuxia_1503_01 ↔ char_ayano：cos 0.139 → 不同身份**
+- **char_liang_chuxia_1503_01 ↔ char_chen_xiawei：cos 0.125 → 不同身份**
+- **char_liang_chuxia_1503_01 ↔ char_jia：cos 0.096 → 不同身份**
+- **char_liang_chuxia_1503_01 ↔ char_jiang_yueyao：cos 0.162 → 不同身份**
+- **char_liang_chuxia_1503_01 ↔ char_lin_qingwan：cos 0.106 → 不同身份**
+- **char_liang_chuxia_1503_01 ↔ char_liu_yinuo_1923_10：cos 0.027 → 不同身份**
+- **char_liang_chuxia_1503_01 ↔ char_luo_qingchuan_1805：cos 0.530 → ⚠️ 存疑，待人工复核**
+- **char_liang_chuxia_1503_01 ↔ char_pei_yuhan_2300_01：cos 0.688 → 同一身份**
+- **char_liang_chuxia_1503_01 ↔ char_qing_luo：cos 0.187 → 不同身份**
+- **char_liang_chuxia_1503_01 ↔ char_ray_ling：cos -0.047 → 不同身份**
+- **char_liang_chuxia_1503_01 ↔ char_runcha：cos 0.062 → 不同身份**
+- **char_liang_chuxia_1503_01 ↔ char_shen_zhilan：cos 0.034 → 不同身份**
+- **char_liang_chuxia_1503_01 ↔ char_su_xiaotang：cos -0.012 → 不同身份**
+- **char_liang_chuxia_1503_01 ↔ char_tang_mengli_2200_01：cos 0.701 → 同一身份**
+- **char_liang_chuxia_1503_01 ↔ char_wen_xiaorou_2140_01：cos 0.756 → 同一身份**
+- **char_liang_chuxia_1503_01 ↔ char_ye_muchen_2100_01：cos 0.663 → 同一身份**
+- **char_liang_chuxia_1503_01 ↔ char_yin_xinyue_2330_01：cos 0.739 → 同一身份**
+- **char_liang_chuxia_1503_01 ↔ char_zhao_ruoxi：cos 0.123 → 不同身份**
+- **char_liang_chuxia_1503_01 ↔ char_duo：cos 0.145 → 不同身份**
+- **char_liang_chuxia_1503_01 ↔ char_duo3_2：cos 0.190 → 不同身份**
+- **char_liang_chuxia_1503_01 ↔ char_cen_zhiwei_1936_01：cos 0.148 → 不同身份**
+- **char_liang_chuxia_1503_01 ↔ char_jiang_ruoli_2007_01：cos 0.064 → 不同身份**
+- **char_liang_chuxia_1503_01 ↔ char_xiaog3：cos 0.359 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_liang_chuxia_1503_01 ↔ char_xi_manshu_2045_01：cos 0.072 → 不同身份**
+- **char_liang_chuxia_1503_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.078 → 不同身份**
+- **char_liang_chuxia_1503_01 ↔ char_linghu_zhixia_2133_01：cos 0.102 → 不同身份**
+- **char_liang_chuxia_1503_01 ↔ char_qiao_weiyu_2134_01：cos 0.004 → 不同身份**
+- **char_liang_chuxia_1503_01 ↔ char_jiang_qinghuan_2203_01：cos 0.240 → 不同身份**
+- **char_liang_chuxia_1503_01 ↔ char_cen_youqing_2204_01：cos -0.050 → 不同身份**
+- **char_liang_chuxia_1503_01 ↔ char_zhong_xiaorou_2233_01：cos 0.183 → 不同身份**
+- **char_liang_chuxia_1503_01 ↔ char_tan_youqing_2234_01：cos 0.183 → 不同身份**
+- **char_liang_chuxia_1503_01 ↔ char_tantai_lingsu_2303_01：cos 0.242 → 不同身份**
+- **char_liang_chuxia_1503_01 ↔ char_qiao_qinghuan_2304_01：cos 0.242 → 不同身份**
+- **char_liang_chuxia_1503_01 ↔ char_chu_muchen_0004_01：cos 0.015 → 不同身份**
+- **char_liang_chuxia_1503_01 ↔ char_qiao_chaoyan_0004_01：cos -0.051 → 不同身份**
+- **char_liang_chuxia_1503_01 ↔ char_xue_qinghuan_0034_01：cos -0.012 → 不同身份**
+- **char_liang_chuxia_1503_01 ↔ char_tang_yuwei_0217_01：cos 0.137 → 不同身份**
+- **char_liang_chuxia_1503_01 ↔ char_ouyang_chuxia_0250_01：cos 0.069 → 不同身份**
+- **char_liang_chuxia_1503_01 ↔ char_bai_zhiruo_0305_01：cos 0.263 → 不同身份**
+- **char_liang_chuxia_1503_01 ↔ char_pei_shanshan_0456_01：cos 0.227 → 不同身份**
+- **char_liang_chuxia_1503_01 ↔ char_xi_qingchuan_0618_01：cos 0.263 → 不同身份**
+- **char_liang_chuxia_1503_01 ↔ char_zhong_linger_0732_01：cos 0.087 → 不同身份**
+- **char_liang_chuxia_1503_01 ↔ char_hua_qingdai_1029_01：cos 0.131 → 不同身份**
+- **char_liang_chuxia_1503_01 ↔ char_tang_banxia_1156_01：cos 0.178 → 不同身份**
+- **char_liang_chuxia_1503_01 ↔ char_gu_weiyu_1321_01：cos 0.135 → 不同身份**
+- **char_liang_chuxia_1503_01 ↔ char_cheng_hongyu_1435_01：cos 0.123 → 不同身份**
+- **char_liang_chuxia_1503_01 ↔ char_hua_chuxia_1549_01：cos 0.075 → 不同身份**
+- **char_liang_chuxia_1503_01 ↔ char_pei_manshu_1701_01：cos 0.188 → 不同身份**
+- **char_liang_chuxia_1503_01 ↔ char_ye_nanqiao_1811_01：cos 0.127 → 不同身份**
+- **char_liang_chuxia_1503_01 ↔ char_murong_yuyan_1942_01：cos 0.222 → 不同身份**
+- **char_liang_chuxia_1503_01 ↔ char_nangong_lingjun_2054_01：cos 0.097 → 不同身份**
+- **char_liang_mengli_1203_01 ↔ char_shen_xiaorou_1233_01：cos 0.652 → 同一身份**
+- **char_liang_mengli_1203_01 ↔ char_shen_xinyue_1404_01：cos 0.684 → 同一身份**
+- **char_liang_mengli_1203_01 ↔ char_tan_muchen_1133_01：cos 0.636 → 同一身份**
+- **char_liang_mengli_1203_01 ↔ char_xi_shanshan_1303_01：cos 0.702 → 同一身份**
+- **char_liang_mengli_1203_01 ↔ char_xue_huaiyu_1034_01：cos 0.475 → ⚠️ 存疑，待人工复核**
+- **char_liang_mengli_1203_01 ↔ char_yuchi_lingsu_1333_01：cos 0.618 → 同一身份**
+- **char_liang_mengli_1203_01 ↔ char_bai_anran_0430_01：cos 0.672 → 同一身份**
+- **char_liang_mengli_1203_01 ↔ char_bai_yuhan_0830_01：cos 0.627 → 同一身份**
+- **char_liang_mengli_1203_01 ↔ char_cen_yuhan_1934_01：cos 0.643 → 同一身份**
+- **char_liang_mengli_1203_01 ↔ char_chu_ruoli_0800_01：cos 0.748 → 同一身份**
+- **char_liang_mengli_1203_01 ↔ char_fu_caiwei_1833_01：cos 0.696 → 同一身份**
+- **char_liang_mengli_1203_01 ↔ char_fu_wanzhao_1100_01：cos 0.800 → 同一身份**
+- **char_liang_mengli_1203_01 ↔ char_gu_chaoyan_1904_01：cos 0.723 → 同一身份**
+- **char_liang_mengli_1203_01 ↔ char_huo_ruoxi_1200_01：cos 0.606 → 同一身份**
+- **char_liang_mengli_1203_01 ↔ char_jiang_zhiruo_0300_01：cos 0.647 → 同一身份**
+- **char_liang_mengli_1203_01 ↔ char_liang_tiange_1303_01：cos 0.634 → 同一身份**
+- **char_liang_mengli_1203_01 ↔ char_liang_yuyan_1333_01：cos 0.700 → 同一身份**
+- **char_liang_mengli_1203_01 ↔ char_linghu_chuxia_2204_01：cos 0.432 → ⚠️ 存疑，待人工复核**
+- **char_liang_mengli_1203_01 ↔ char_lu_muchen_0530_01：cos 0.581 → ⚠️ 存疑，待人工复核**
+- **char_liang_mengli_1203_01 ↔ char_murong_manshu_1704_01：cos 0.742 → 同一身份**
+- **char_liang_mengli_1203_01 ↔ char_murong_weiyu_0930_01：cos 0.622 → 同一身份**
+- **char_liang_mengli_1203_01 ↔ char_murong_xingzhu_0200_01：cos 0.492 → ⚠️ 存疑，待人工复核**
+- **char_liang_mengli_1203_01 ↔ char_ning_chuxia_0000_01：cos 0.569 → ⚠️ 存疑，待人工复核**
+- **char_liang_mengli_1203_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.693 → 同一身份**
+- **char_liang_mengli_1203_01 ↔ char_qin_linger_1634_01：cos 0.747 → 同一身份**
+- **char_liang_mengli_1203_01 ↔ char_qin_suqiu_0630_01：cos 0.675 → 同一身份**
+- **char_liang_mengli_1203_01 ↔ char_qin_zhixia_1130_01：cos 0.531 → ⚠️ 存疑，待人工复核**
+- **char_liang_mengli_1203_01 ↔ char_ruan_lingjun_2034_01：cos 0.672 → 同一身份**
+- **char_liang_mengli_1203_01 ↔ char_ruan_tiange_1403_01：cos 0.611 → 同一身份**
+- **char_liang_mengli_1203_01 ↔ char_shen_hongyu_1734_01：cos 0.715 → 同一身份**
+- **char_liang_mengli_1203_01 ↔ char_situ_caiwei_0100_01：cos 0.677 → 同一身份**
+- **char_liang_mengli_1203_01 ↔ char_situ_yuhan_0600_01：cos 0.766 → 同一身份**
+- **char_liang_mengli_1203_01 ↔ char_song_wanzhao_1503_01：cos 0.561 → ⚠️ 存疑，待人工复核**
+- **char_liang_mengli_1203_01 ↔ char_tan_shanshan_0700_01：cos 0.562 → ⚠️ 存疑，待人工复核**
+- **char_liang_mengli_1203_01 ↔ char_tang_sitian_0900_01：cos 0.698 → 同一身份**
+- **char_liang_mengli_1203_01 ↔ char_tantai_weiyu_1433_01：cos 0.469 → ⚠️ 存疑，待人工复核**
+- **char_liang_mengli_1203_01 ↔ char_tantai_xingzhu_0230_01：cos 0.486 → ⚠️ 存疑，待人工复核**
+- **char_liang_mengli_1203_01 ↔ char_tantai_yuwei_0730_01：cos 0.440 → ⚠️ 存疑，待人工复核**
+- **char_liang_mengli_1203_01 ↔ char_wen_manshu_1030_01：cos 0.738 → 同一身份**
+- **char_liang_mengli_1203_01 ↔ char_xi_weiyu_2134_01：cos 0.726 → 同一身份**
+- **char_liang_mengli_1203_01 ↔ char_xue_banxia_0330_01：cos 0.587 → ⚠️ 存疑，待人工复核**
+- **char_liang_mengli_1203_01 ↔ char_ye_hongyu_0500_01：cos 0.655 → 同一身份**
+- **char_liang_mengli_1203_01 ↔ char_ye_linger_2004_01：cos 0.678 → 同一身份**
+- **char_liang_mengli_1203_01 ↔ char_ye_lingjun_0130_01：cos 0.544 → ⚠️ 存疑，待人工复核**
+- **char_liang_mengli_1203_01 ↔ char_ye_shanshan_0400_01：cos 0.616 → 同一身份**
+- **char_liang_mengli_1203_01 ↔ char_ye_yuhan_1804_01：cos 0.632 → 同一身份**
+- **char_liang_mengli_1203_01 ↔ char_yuchi_ruoli_1000_01：cos 0.675 → 同一身份**
+- **char_liang_mengli_1203_01 ↔ char_yun_banxia_0030_01：cos 0.511 → ⚠️ 存疑，待人工复核**
+- **char_liang_mengli_1203_01 ↔ char_zhong_manshu_2104_01：cos 0.669 → 同一身份**
+- **char_liang_mengli_1203_01 ↔ char_anya_song：cos 0.189 → 不同身份**
+- **char_liang_mengli_1203_01 ↔ char_ayano：cos 0.135 → 不同身份**
+- **char_liang_mengli_1203_01 ↔ char_chen_xiawei：cos 0.154 → 不同身份**
+- **char_liang_mengli_1203_01 ↔ char_jia：cos 0.062 → 不同身份**
+- **char_liang_mengli_1203_01 ↔ char_jiang_yueyao：cos 0.229 → 不同身份**
+- **char_liang_mengli_1203_01 ↔ char_lin_qingwan：cos 0.339 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_liang_mengli_1203_01 ↔ char_liu_yinuo_1923_10：cos -0.052 → 不同身份**
+- **char_liang_mengli_1203_01 ↔ char_luo_qingchuan_1805：cos 0.678 → 同一身份**
+- **char_liang_mengli_1203_01 ↔ char_pei_yuhan_2300_01：cos 0.538 → ⚠️ 存疑，待人工复核**
+- **char_liang_mengli_1203_01 ↔ char_qing_luo：cos 0.173 → 不同身份**
+- **char_liang_mengli_1203_01 ↔ char_ray_ling：cos 0.287 → 不同身份**
+- **char_liang_mengli_1203_01 ↔ char_runcha：cos -0.027 → 不同身份**
+- **char_liang_mengli_1203_01 ↔ char_shen_zhilan：cos 0.290 → 不同身份**
+- **char_liang_mengli_1203_01 ↔ char_su_xiaotang：cos 0.091 → 不同身份**
+- **char_liang_mengli_1203_01 ↔ char_tang_mengli_2200_01：cos 0.597 → ⚠️ 存疑，待人工复核**
+- **char_liang_mengli_1203_01 ↔ char_wen_xiaorou_2140_01：cos 0.612 → 同一身份**
+- **char_liang_mengli_1203_01 ↔ char_ye_muchen_2100_01：cos 0.585 → ⚠️ 存疑，待人工复核**
+- **char_liang_mengli_1203_01 ↔ char_yin_xinyue_2330_01：cos 0.603 → 同一身份**
+- **char_liang_mengli_1203_01 ↔ char_zhao_ruoxi：cos 0.278 → 不同身份**
+- **char_liang_mengli_1203_01 ↔ char_duo：cos 0.181 → 不同身份**
+- **char_liang_mengli_1203_01 ↔ char_duo3_2：cos 0.077 → 不同身份**
+- **char_liang_mengli_1203_01 ↔ char_cen_zhiwei_1936_01：cos 0.462 → ⚠️ 存疑，待人工复核**
+- **char_liang_mengli_1203_01 ↔ char_jiang_ruoli_2007_01：cos 0.318 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_liang_mengli_1203_01 ↔ char_xiaog3：cos 0.115 → 不同身份**
+- **char_liang_mengli_1203_01 ↔ char_xi_manshu_2045_01：cos 0.344 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_liang_mengli_1203_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.371 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_liang_mengli_1203_01 ↔ char_linghu_zhixia_2133_01：cos 0.421 → ⚠️ 存疑，待人工复核**
+- **char_liang_mengli_1203_01 ↔ char_qiao_weiyu_2134_01：cos 0.295 → 不同身份**
+- **char_liang_mengli_1203_01 ↔ char_jiang_qinghuan_2203_01：cos 0.462 → ⚠️ 存疑，待人工复核**
+- **char_liang_mengli_1203_01 ↔ char_cen_youqing_2204_01：cos 0.133 → 不同身份**
+- **char_liang_mengli_1203_01 ↔ char_zhong_xiaorou_2233_01：cos 0.327 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_liang_mengli_1203_01 ↔ char_tan_youqing_2234_01：cos 0.327 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_liang_mengli_1203_01 ↔ char_tantai_lingsu_2303_01：cos 0.427 → ⚠️ 存疑，待人工复核**
+- **char_liang_mengli_1203_01 ↔ char_qiao_qinghuan_2304_01：cos 0.427 → ⚠️ 存疑，待人工复核**
+- **char_liang_mengli_1203_01 ↔ char_chu_muchen_0004_01：cos 0.036 → 不同身份**
+- **char_liang_mengli_1203_01 ↔ char_qiao_chaoyan_0004_01：cos -0.022 → 不同身份**
+- **char_liang_mengli_1203_01 ↔ char_xue_qinghuan_0034_01：cos 0.003 → 不同身份**
+- **char_liang_mengli_1203_01 ↔ char_tang_yuwei_0217_01：cos 0.251 → 不同身份**
+- **char_liang_mengli_1203_01 ↔ char_ouyang_chuxia_0250_01：cos 0.297 → 不同身份**
+- **char_liang_mengli_1203_01 ↔ char_bai_zhiruo_0305_01：cos 0.493 → ⚠️ 存疑，待人工复核**
+- **char_liang_mengli_1203_01 ↔ char_pei_shanshan_0456_01：cos 0.451 → ⚠️ 存疑，待人工复核**
+- **char_liang_mengli_1203_01 ↔ char_xi_qingchuan_0618_01：cos 0.465 → ⚠️ 存疑，待人工复核**
+- **char_liang_mengli_1203_01 ↔ char_zhong_linger_0732_01：cos 0.401 → ⚠️ 存疑，待人工复核**
+- **char_liang_mengli_1203_01 ↔ char_hua_qingdai_1029_01：cos 0.452 → ⚠️ 存疑，待人工复核**
+- **char_liang_mengli_1203_01 ↔ char_tang_banxia_1156_01：cos 0.429 → ⚠️ 存疑，待人工复核**
+- **char_liang_mengli_1203_01 ↔ char_gu_weiyu_1321_01：cos 0.375 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_liang_mengli_1203_01 ↔ char_cheng_hongyu_1435_01：cos 0.349 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_liang_mengli_1203_01 ↔ char_hua_chuxia_1549_01：cos 0.274 → 不同身份**
+- **char_liang_mengli_1203_01 ↔ char_pei_manshu_1701_01：cos 0.339 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_liang_mengli_1203_01 ↔ char_ye_nanqiao_1811_01：cos 0.330 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_liang_mengli_1203_01 ↔ char_murong_yuyan_1942_01：cos 0.362 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_liang_mengli_1203_01 ↔ char_nangong_lingjun_2054_01：cos 0.385 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_xiaorou_1233_01 ↔ char_shen_xinyue_1404_01：cos 0.500 → ⚠️ 存疑，待人工复核**
+- **char_shen_xiaorou_1233_01 ↔ char_tan_muchen_1133_01：cos 0.575 → ⚠️ 存疑，待人工复核**
+- **char_shen_xiaorou_1233_01 ↔ char_xi_shanshan_1303_01：cos 0.627 → 同一身份**
+- **char_shen_xiaorou_1233_01 ↔ char_xue_huaiyu_1034_01：cos 0.636 → 同一身份**
+- **char_shen_xiaorou_1233_01 ↔ char_yuchi_lingsu_1333_01：cos 0.529 → ⚠️ 存疑，待人工复核**
+- **char_shen_xiaorou_1233_01 ↔ char_bai_anran_0430_01：cos 0.394 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_xiaorou_1233_01 ↔ char_bai_yuhan_0830_01：cos 0.414 → ⚠️ 存疑，待人工复核**
+- **char_shen_xiaorou_1233_01 ↔ char_cen_yuhan_1934_01：cos 0.710 → 同一身份**
+- **char_shen_xiaorou_1233_01 ↔ char_chu_ruoli_0800_01：cos 0.720 → 同一身份**
+- **char_shen_xiaorou_1233_01 ↔ char_fu_caiwei_1833_01：cos 0.509 → ⚠️ 存疑，待人工复核**
+- **char_shen_xiaorou_1233_01 ↔ char_fu_wanzhao_1100_01：cos 0.580 → ⚠️ 存疑，待人工复核**
+- **char_shen_xiaorou_1233_01 ↔ char_gu_chaoyan_1904_01：cos 0.763 → 同一身份**
+- **char_shen_xiaorou_1233_01 ↔ char_huo_ruoxi_1200_01：cos 0.561 → ⚠️ 存疑，待人工复核**
+- **char_shen_xiaorou_1233_01 ↔ char_jiang_zhiruo_0300_01：cos 0.400 → ⚠️ 存疑，待人工复核**
+- **char_shen_xiaorou_1233_01 ↔ char_liang_tiange_1303_01：cos 0.736 → 同一身份**
+- **char_shen_xiaorou_1233_01 ↔ char_liang_yuyan_1333_01：cos 0.517 → ⚠️ 存疑，待人工复核**
+- **char_shen_xiaorou_1233_01 ↔ char_linghu_chuxia_2204_01：cos 0.562 → ⚠️ 存疑，待人工复核**
+- **char_shen_xiaorou_1233_01 ↔ char_lu_muchen_0530_01：cos 0.686 → 同一身份**
+- **char_shen_xiaorou_1233_01 ↔ char_murong_manshu_1704_01：cos 0.624 → 同一身份**
+- **char_shen_xiaorou_1233_01 ↔ char_murong_weiyu_0930_01：cos 0.536 → ⚠️ 存疑，待人工复核**
+- **char_shen_xiaorou_1233_01 ↔ char_murong_xingzhu_0200_01：cos 0.307 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_xiaorou_1233_01 ↔ char_ning_chuxia_0000_01：cos 0.376 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_xiaorou_1233_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.706 → 同一身份**
+- **char_shen_xiaorou_1233_01 ↔ char_qin_linger_1634_01：cos 0.655 → 同一身份**
+- **char_shen_xiaorou_1233_01 ↔ char_qin_suqiu_0630_01：cos 0.471 → ⚠️ 存疑，待人工复核**
+- **char_shen_xiaorou_1233_01 ↔ char_qin_zhixia_1130_01：cos 0.442 → ⚠️ 存疑，待人工复核**
+- **char_shen_xiaorou_1233_01 ↔ char_ruan_lingjun_2034_01：cos 0.593 → ⚠️ 存疑，待人工复核**
+- **char_shen_xiaorou_1233_01 ↔ char_ruan_tiange_1403_01：cos 0.654 → 同一身份**
+- **char_shen_xiaorou_1233_01 ↔ char_shen_hongyu_1734_01：cos 0.479 → ⚠️ 存疑，待人工复核**
+- **char_shen_xiaorou_1233_01 ↔ char_situ_caiwei_0100_01：cos 0.516 → ⚠️ 存疑，待人工复核**
+- **char_shen_xiaorou_1233_01 ↔ char_situ_yuhan_0600_01：cos 0.610 → 同一身份**
+- **char_shen_xiaorou_1233_01 ↔ char_song_wanzhao_1503_01：cos 0.505 → ⚠️ 存疑，待人工复核**
+- **char_shen_xiaorou_1233_01 ↔ char_tan_shanshan_0700_01：cos 0.666 → 同一身份**
+- **char_shen_xiaorou_1233_01 ↔ char_tang_sitian_0900_01：cos 0.523 → ⚠️ 存疑，待人工复核**
+- **char_shen_xiaorou_1233_01 ↔ char_tantai_weiyu_1433_01：cos 0.582 → ⚠️ 存疑，待人工复核**
+- **char_shen_xiaorou_1233_01 ↔ char_tantai_xingzhu_0230_01：cos 0.276 → 不同身份**
+- **char_shen_xiaorou_1233_01 ↔ char_tantai_yuwei_0730_01：cos 0.308 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_xiaorou_1233_01 ↔ char_wen_manshu_1030_01：cos 0.667 → 同一身份**
+- **char_shen_xiaorou_1233_01 ↔ char_xi_weiyu_2134_01：cos 0.515 → ⚠️ 存疑，待人工复核**
+- **char_shen_xiaorou_1233_01 ↔ char_xue_banxia_0330_01：cos 0.751 → 同一身份**
+- **char_shen_xiaorou_1233_01 ↔ char_ye_hongyu_0500_01：cos 0.768 → 同一身份**
+- **char_shen_xiaorou_1233_01 ↔ char_ye_linger_2004_01：cos 0.767 → 同一身份**
+- **char_shen_xiaorou_1233_01 ↔ char_ye_lingjun_0130_01：cos 0.686 → 同一身份**
+- **char_shen_xiaorou_1233_01 ↔ char_ye_shanshan_0400_01：cos 0.500 → ⚠️ 存疑，待人工复核**
+- **char_shen_xiaorou_1233_01 ↔ char_ye_yuhan_1804_01：cos 0.541 → ⚠️ 存疑，待人工复核**
+- **char_shen_xiaorou_1233_01 ↔ char_yuchi_ruoli_1000_01：cos 0.478 → ⚠️ 存疑，待人工复核**
+- **char_shen_xiaorou_1233_01 ↔ char_yun_banxia_0030_01：cos 0.418 → ⚠️ 存疑，待人工复核**
+- **char_shen_xiaorou_1233_01 ↔ char_zhong_manshu_2104_01：cos 0.452 → ⚠️ 存疑，待人工复核**
+- **char_shen_xiaorou_1233_01 ↔ char_anya_song：cos 0.192 → 不同身份**
+- **char_shen_xiaorou_1233_01 ↔ char_ayano：cos -0.016 → 不同身份**
+- **char_shen_xiaorou_1233_01 ↔ char_chen_xiawei：cos 0.054 → 不同身份**
+- **char_shen_xiaorou_1233_01 ↔ char_jia：cos 0.050 → 不同身份**
+- **char_shen_xiaorou_1233_01 ↔ char_jiang_yueyao：cos 0.086 → 不同身份**
+- **char_shen_xiaorou_1233_01 ↔ char_lin_qingwan：cos 0.276 → 不同身份**
+- **char_shen_xiaorou_1233_01 ↔ char_liu_yinuo_1923_10：cos -0.013 → 不同身份**
+- **char_shen_xiaorou_1233_01 ↔ char_luo_qingchuan_1805：cos 0.572 → ⚠️ 存疑，待人工复核**
+- **char_shen_xiaorou_1233_01 ↔ char_pei_yuhan_2300_01：cos 0.399 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_xiaorou_1233_01 ↔ char_qing_luo：cos 0.117 → 不同身份**
+- **char_shen_xiaorou_1233_01 ↔ char_ray_ling：cos 0.373 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_xiaorou_1233_01 ↔ char_runcha：cos 0.020 → 不同身份**
+- **char_shen_xiaorou_1233_01 ↔ char_shen_zhilan：cos 0.300 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_xiaorou_1233_01 ↔ char_su_xiaotang：cos 0.126 → 不同身份**
+- **char_shen_xiaorou_1233_01 ↔ char_tang_mengli_2200_01：cos 0.365 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_xiaorou_1233_01 ↔ char_wen_xiaorou_2140_01：cos 0.445 → ⚠️ 存疑，待人工复核**
+- **char_shen_xiaorou_1233_01 ↔ char_ye_muchen_2100_01：cos 0.410 → ⚠️ 存疑，待人工复核**
+- **char_shen_xiaorou_1233_01 ↔ char_yin_xinyue_2330_01：cos 0.380 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_xiaorou_1233_01 ↔ char_zhao_ruoxi：cos 0.170 → 不同身份**
+- **char_shen_xiaorou_1233_01 ↔ char_duo：cos 0.114 → 不同身份**
+- **char_shen_xiaorou_1233_01 ↔ char_duo3_2：cos 0.147 → 不同身份**
+- **char_shen_xiaorou_1233_01 ↔ char_cen_zhiwei_1936_01：cos 0.479 → ⚠️ 存疑，待人工复核**
+- **char_shen_xiaorou_1233_01 ↔ char_jiang_ruoli_2007_01：cos 0.388 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_xiaorou_1233_01 ↔ char_xiaog3：cos 0.035 → 不同身份**
+- **char_shen_xiaorou_1233_01 ↔ char_xi_manshu_2045_01：cos 0.274 → 不同身份**
+- **char_shen_xiaorou_1233_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.397 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_xiaorou_1233_01 ↔ char_linghu_zhixia_2133_01：cos 0.451 → ⚠️ 存疑，待人工复核**
+- **char_shen_xiaorou_1233_01 ↔ char_qiao_weiyu_2134_01：cos 0.309 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_xiaorou_1233_01 ↔ char_jiang_qinghuan_2203_01：cos 0.219 → 不同身份**
+- **char_shen_xiaorou_1233_01 ↔ char_cen_youqing_2204_01：cos 0.062 → 不同身份**
+- **char_shen_xiaorou_1233_01 ↔ char_zhong_xiaorou_2233_01：cos 0.229 → 不同身份**
+- **char_shen_xiaorou_1233_01 ↔ char_tan_youqing_2234_01：cos 0.229 → 不同身份**
+- **char_shen_xiaorou_1233_01 ↔ char_tantai_lingsu_2303_01：cos 0.311 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_xiaorou_1233_01 ↔ char_qiao_qinghuan_2304_01：cos 0.311 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_xiaorou_1233_01 ↔ char_chu_muchen_0004_01：cos 0.063 → 不同身份**
+- **char_shen_xiaorou_1233_01 ↔ char_qiao_chaoyan_0004_01：cos -0.092 → 不同身份**
+- **char_shen_xiaorou_1233_01 ↔ char_xue_qinghuan_0034_01：cos -0.018 → 不同身份**
+- **char_shen_xiaorou_1233_01 ↔ char_tang_yuwei_0217_01：cos 0.208 → 不同身份**
+- **char_shen_xiaorou_1233_01 ↔ char_ouyang_chuxia_0250_01：cos 0.171 → 不同身份**
+- **char_shen_xiaorou_1233_01 ↔ char_bai_zhiruo_0305_01：cos 0.308 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_xiaorou_1233_01 ↔ char_pei_shanshan_0456_01：cos 0.276 → 不同身份**
+- **char_shen_xiaorou_1233_01 ↔ char_xi_qingchuan_0618_01：cos 0.266 → 不同身份**
+- **char_shen_xiaorou_1233_01 ↔ char_zhong_linger_0732_01：cos 0.351 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_xiaorou_1233_01 ↔ char_hua_qingdai_1029_01：cos 0.303 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_xiaorou_1233_01 ↔ char_tang_banxia_1156_01：cos 0.384 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_xiaorou_1233_01 ↔ char_gu_weiyu_1321_01：cos 0.243 → 不同身份**
+- **char_shen_xiaorou_1233_01 ↔ char_cheng_hongyu_1435_01：cos 0.246 → 不同身份**
+- **char_shen_xiaorou_1233_01 ↔ char_hua_chuxia_1549_01：cos 0.241 → 不同身份**
+- **char_shen_xiaorou_1233_01 ↔ char_pei_manshu_1701_01：cos 0.256 → 不同身份**
+- **char_shen_xiaorou_1233_01 ↔ char_ye_nanqiao_1811_01：cos 0.193 → 不同身份**
+- **char_shen_xiaorou_1233_01 ↔ char_murong_yuyan_1942_01：cos 0.211 → 不同身份**
+- **char_shen_xiaorou_1233_01 ↔ char_nangong_lingjun_2054_01：cos 0.414 → ⚠️ 存疑，待人工复核**
+- **char_shen_xinyue_1404_01 ↔ char_tan_muchen_1133_01：cos 0.589 → ⚠️ 存疑，待人工复核**
+- **char_shen_xinyue_1404_01 ↔ char_xi_shanshan_1303_01：cos 0.534 → ⚠️ 存疑，待人工复核**
+- **char_shen_xinyue_1404_01 ↔ char_xue_huaiyu_1034_01：cos 0.487 → ⚠️ 存疑，待人工复核**
+- **char_shen_xinyue_1404_01 ↔ char_yuchi_lingsu_1333_01：cos 0.705 → 同一身份**
+- **char_shen_xinyue_1404_01 ↔ char_bai_anran_0430_01：cos 0.598 → ⚠️ 存疑，待人工复核**
+- **char_shen_xinyue_1404_01 ↔ char_bai_yuhan_0830_01：cos 0.725 → 同一身份**
+- **char_shen_xinyue_1404_01 ↔ char_cen_yuhan_1934_01：cos 0.558 → ⚠️ 存疑，待人工复核**
+- **char_shen_xinyue_1404_01 ↔ char_chu_ruoli_0800_01：cos 0.646 → 同一身份**
+- **char_shen_xinyue_1404_01 ↔ char_fu_caiwei_1833_01：cos 0.717 → 同一身份**
+- **char_shen_xinyue_1404_01 ↔ char_fu_wanzhao_1100_01：cos 0.622 → 同一身份**
+- **char_shen_xinyue_1404_01 ↔ char_gu_chaoyan_1904_01：cos 0.590 → ⚠️ 存疑，待人工复核**
+- **char_shen_xinyue_1404_01 ↔ char_huo_ruoxi_1200_01：cos 0.519 → ⚠️ 存疑，待人工复核**
+- **char_shen_xinyue_1404_01 ↔ char_jiang_zhiruo_0300_01：cos 0.667 → 同一身份**
+- **char_shen_xinyue_1404_01 ↔ char_liang_tiange_1303_01：cos 0.540 → ⚠️ 存疑，待人工复核**
+- **char_shen_xinyue_1404_01 ↔ char_liang_yuyan_1333_01：cos 0.730 → 同一身份**
+- **char_shen_xinyue_1404_01 ↔ char_linghu_chuxia_2204_01：cos 0.446 → ⚠️ 存疑，待人工复核**
+- **char_shen_xinyue_1404_01 ↔ char_lu_muchen_0530_01：cos 0.505 → ⚠️ 存疑，待人工复核**
+- **char_shen_xinyue_1404_01 ↔ char_murong_manshu_1704_01：cos 0.660 → 同一身份**
+- **char_shen_xinyue_1404_01 ↔ char_murong_weiyu_0930_01：cos 0.515 → ⚠️ 存疑，待人工复核**
+- **char_shen_xinyue_1404_01 ↔ char_murong_xingzhu_0200_01：cos 0.484 → ⚠️ 存疑，待人工复核**
+- **char_shen_xinyue_1404_01 ↔ char_ning_chuxia_0000_01：cos 0.636 → 同一身份**
+- **char_shen_xinyue_1404_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.594 → ⚠️ 存疑，待人工复核**
+- **char_shen_xinyue_1404_01 ↔ char_qin_linger_1634_01：cos 0.610 → 同一身份**
+- **char_shen_xinyue_1404_01 ↔ char_qin_suqiu_0630_01：cos 0.607 → 同一身份**
+- **char_shen_xinyue_1404_01 ↔ char_qin_zhixia_1130_01：cos 0.538 → ⚠️ 存疑，待人工复核**
+- **char_shen_xinyue_1404_01 ↔ char_ruan_lingjun_2034_01：cos 0.595 → ⚠️ 存疑，待人工复核**
+- **char_shen_xinyue_1404_01 ↔ char_ruan_tiange_1403_01：cos 0.640 → 同一身份**
+- **char_shen_xinyue_1404_01 ↔ char_shen_hongyu_1734_01：cos 0.766 → 同一身份**
+- **char_shen_xinyue_1404_01 ↔ char_situ_caiwei_0100_01：cos 0.586 → ⚠️ 存疑，待人工复核**
+- **char_shen_xinyue_1404_01 ↔ char_situ_yuhan_0600_01：cos 0.647 → 同一身份**
+- **char_shen_xinyue_1404_01 ↔ char_song_wanzhao_1503_01：cos 0.600 → 同一身份**
+- **char_shen_xinyue_1404_01 ↔ char_tan_shanshan_0700_01：cos 0.523 → ⚠️ 存疑，待人工复核**
+- **char_shen_xinyue_1404_01 ↔ char_tang_sitian_0900_01：cos 0.640 → 同一身份**
+- **char_shen_xinyue_1404_01 ↔ char_tantai_weiyu_1433_01：cos 0.459 → ⚠️ 存疑，待人工复核**
+- **char_shen_xinyue_1404_01 ↔ char_tantai_xingzhu_0230_01：cos 0.521 → ⚠️ 存疑，待人工复核**
+- **char_shen_xinyue_1404_01 ↔ char_tantai_yuwei_0730_01：cos 0.526 → ⚠️ 存疑，待人工复核**
+- **char_shen_xinyue_1404_01 ↔ char_wen_manshu_1030_01：cos 0.612 → 同一身份**
+- **char_shen_xinyue_1404_01 ↔ char_xi_weiyu_2134_01：cos 0.721 → 同一身份**
+- **char_shen_xinyue_1404_01 ↔ char_xue_banxia_0330_01：cos 0.518 → ⚠️ 存疑，待人工复核**
+- **char_shen_xinyue_1404_01 ↔ char_ye_hongyu_0500_01：cos 0.553 → ⚠️ 存疑，待人工复核**
+- **char_shen_xinyue_1404_01 ↔ char_ye_linger_2004_01：cos 0.537 → ⚠️ 存疑，待人工复核**
+- **char_shen_xinyue_1404_01 ↔ char_ye_lingjun_0130_01：cos 0.513 → ⚠️ 存疑，待人工复核**
+- **char_shen_xinyue_1404_01 ↔ char_ye_shanshan_0400_01：cos 0.625 → 同一身份**
+- **char_shen_xinyue_1404_01 ↔ char_ye_yuhan_1804_01：cos 0.670 → 同一身份**
+- **char_shen_xinyue_1404_01 ↔ char_yuchi_ruoli_1000_01：cos 0.696 → 同一身份**
+- **char_shen_xinyue_1404_01 ↔ char_yun_banxia_0030_01：cos 0.505 → ⚠️ 存疑，待人工复核**
+- **char_shen_xinyue_1404_01 ↔ char_zhong_manshu_2104_01：cos 0.675 → 同一身份**
+- **char_shen_xinyue_1404_01 ↔ char_anya_song：cos 0.111 → 不同身份**
+- **char_shen_xinyue_1404_01 ↔ char_ayano：cos 0.138 → 不同身份**
+- **char_shen_xinyue_1404_01 ↔ char_chen_xiawei：cos 0.133 → 不同身份**
+- **char_shen_xinyue_1404_01 ↔ char_jia：cos 0.081 → 不同身份**
+- **char_shen_xinyue_1404_01 ↔ char_jiang_yueyao：cos 0.288 → 不同身份**
+- **char_shen_xinyue_1404_01 ↔ char_lin_qingwan：cos 0.261 → 不同身份**
+- **char_shen_xinyue_1404_01 ↔ char_liu_yinuo_1923_10：cos -0.028 → 不同身份**
+- **char_shen_xinyue_1404_01 ↔ char_luo_qingchuan_1805：cos 0.640 → 同一身份**
+- **char_shen_xinyue_1404_01 ↔ char_pei_yuhan_2300_01：cos 0.636 → 同一身份**
+- **char_shen_xinyue_1404_01 ↔ char_qing_luo：cos 0.276 → 不同身份**
+- **char_shen_xinyue_1404_01 ↔ char_ray_ling：cos 0.193 → 不同身份**
+- **char_shen_xinyue_1404_01 ↔ char_runcha：cos -0.057 → 不同身份**
+- **char_shen_xinyue_1404_01 ↔ char_shen_zhilan：cos 0.264 → 不同身份**
+- **char_shen_xinyue_1404_01 ↔ char_su_xiaotang：cos 0.075 → 不同身份**
+- **char_shen_xinyue_1404_01 ↔ char_tang_mengli_2200_01：cos 0.646 → 同一身份**
+- **char_shen_xinyue_1404_01 ↔ char_wen_xiaorou_2140_01：cos 0.654 → 同一身份**
+- **char_shen_xinyue_1404_01 ↔ char_ye_muchen_2100_01：cos 0.652 → 同一身份**
+- **char_shen_xinyue_1404_01 ↔ char_yin_xinyue_2330_01：cos 0.684 → 同一身份**
+- **char_shen_xinyue_1404_01 ↔ char_zhao_ruoxi：cos 0.326 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_xinyue_1404_01 ↔ char_duo：cos 0.151 → 不同身份**
+- **char_shen_xinyue_1404_01 ↔ char_duo3_2：cos 0.179 → 不同身份**
+- **char_shen_xinyue_1404_01 ↔ char_cen_zhiwei_1936_01：cos 0.364 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_xinyue_1404_01 ↔ char_jiang_ruoli_2007_01：cos 0.321 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_xinyue_1404_01 ↔ char_xiaog3：cos 0.136 → 不同身份**
+- **char_shen_xinyue_1404_01 ↔ char_xi_manshu_2045_01：cos 0.309 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_xinyue_1404_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.306 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_xinyue_1404_01 ↔ char_linghu_zhixia_2133_01：cos 0.371 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_xinyue_1404_01 ↔ char_qiao_weiyu_2134_01：cos 0.236 → 不同身份**
+- **char_shen_xinyue_1404_01 ↔ char_jiang_qinghuan_2203_01：cos 0.463 → ⚠️ 存疑，待人工复核**
+- **char_shen_xinyue_1404_01 ↔ char_cen_youqing_2204_01：cos 0.074 → 不同身份**
+- **char_shen_xinyue_1404_01 ↔ char_zhong_xiaorou_2233_01：cos 0.366 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_xinyue_1404_01 ↔ char_tan_youqing_2234_01：cos 0.366 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_xinyue_1404_01 ↔ char_tantai_lingsu_2303_01：cos 0.439 → ⚠️ 存疑，待人工复核**
+- **char_shen_xinyue_1404_01 ↔ char_qiao_qinghuan_2304_01：cos 0.439 → ⚠️ 存疑，待人工复核**
+- **char_shen_xinyue_1404_01 ↔ char_chu_muchen_0004_01：cos -0.024 → 不同身份**
+- **char_shen_xinyue_1404_01 ↔ char_qiao_chaoyan_0004_01：cos -0.072 → 不同身份**
+- **char_shen_xinyue_1404_01 ↔ char_xue_qinghuan_0034_01：cos -0.037 → 不同身份**
+- **char_shen_xinyue_1404_01 ↔ char_tang_yuwei_0217_01：cos 0.251 → 不同身份**
+- **char_shen_xinyue_1404_01 ↔ char_ouyang_chuxia_0250_01：cos 0.274 → 不同身份**
+- **char_shen_xinyue_1404_01 ↔ char_bai_zhiruo_0305_01：cos 0.504 → ⚠️ 存疑，待人工复核**
+- **char_shen_xinyue_1404_01 ↔ char_pei_shanshan_0456_01：cos 0.478 → ⚠️ 存疑，待人工复核**
+- **char_shen_xinyue_1404_01 ↔ char_xi_qingchuan_0618_01：cos 0.449 → ⚠️ 存疑，待人工复核**
+- **char_shen_xinyue_1404_01 ↔ char_zhong_linger_0732_01：cos 0.343 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_xinyue_1404_01 ↔ char_hua_qingdai_1029_01：cos 0.380 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_xinyue_1404_01 ↔ char_tang_banxia_1156_01：cos 0.404 → ⚠️ 存疑，待人工复核**
+- **char_shen_xinyue_1404_01 ↔ char_gu_weiyu_1321_01：cos 0.301 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_xinyue_1404_01 ↔ char_cheng_hongyu_1435_01：cos 0.323 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_xinyue_1404_01 ↔ char_hua_chuxia_1549_01：cos 0.205 → 不同身份**
+- **char_shen_xinyue_1404_01 ↔ char_pei_manshu_1701_01：cos 0.290 → 不同身份**
+- **char_shen_xinyue_1404_01 ↔ char_ye_nanqiao_1811_01：cos 0.326 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_xinyue_1404_01 ↔ char_murong_yuyan_1942_01：cos 0.430 → ⚠️ 存疑，待人工复核**
+- **char_shen_xinyue_1404_01 ↔ char_nangong_lingjun_2054_01：cos 0.279 → 不同身份**
+- **char_tan_muchen_1133_01 ↔ char_xi_shanshan_1303_01：cos 0.661 → 同一身份**
+- **char_tan_muchen_1133_01 ↔ char_xue_huaiyu_1034_01：cos 0.505 → ⚠️ 存疑，待人工复核**
+- **char_tan_muchen_1133_01 ↔ char_yuchi_lingsu_1333_01：cos 0.654 → 同一身份**
+- **char_tan_muchen_1133_01 ↔ char_bai_anran_0430_01：cos 0.649 → 同一身份**
+- **char_tan_muchen_1133_01 ↔ char_bai_yuhan_0830_01：cos 0.572 → ⚠️ 存疑，待人工复核**
+- **char_tan_muchen_1133_01 ↔ char_cen_yuhan_1934_01：cos 0.664 → 同一身份**
+- **char_tan_muchen_1133_01 ↔ char_chu_ruoli_0800_01：cos 0.562 → ⚠️ 存疑，待人工复核**
+- **char_tan_muchen_1133_01 ↔ char_fu_caiwei_1833_01：cos 0.704 → 同一身份**
+- **char_tan_muchen_1133_01 ↔ char_fu_wanzhao_1100_01：cos 0.616 → 同一身份**
+- **char_tan_muchen_1133_01 ↔ char_gu_chaoyan_1904_01：cos 0.661 → 同一身份**
+- **char_tan_muchen_1133_01 ↔ char_huo_ruoxi_1200_01：cos 0.747 → 同一身份**
+- **char_tan_muchen_1133_01 ↔ char_jiang_zhiruo_0300_01：cos 0.521 → ⚠️ 存疑，待人工复核**
+- **char_tan_muchen_1133_01 ↔ char_liang_tiange_1303_01：cos 0.606 → 同一身份**
+- **char_tan_muchen_1133_01 ↔ char_liang_yuyan_1333_01：cos 0.628 → 同一身份**
+- **char_tan_muchen_1133_01 ↔ char_linghu_chuxia_2204_01：cos 0.545 → ⚠️ 存疑，待人工复核**
+- **char_tan_muchen_1133_01 ↔ char_lu_muchen_0530_01：cos 0.649 → 同一身份**
+- **char_tan_muchen_1133_01 ↔ char_murong_manshu_1704_01：cos 0.707 → 同一身份**
+- **char_tan_muchen_1133_01 ↔ char_murong_weiyu_0930_01：cos 0.598 → ⚠️ 存疑，待人工复核**
+- **char_tan_muchen_1133_01 ↔ char_murong_xingzhu_0200_01：cos 0.470 → ⚠️ 存疑，待人工复核**
+- **char_tan_muchen_1133_01 ↔ char_ning_chuxia_0000_01：cos 0.576 → ⚠️ 存疑，待人工复核**
+- **char_tan_muchen_1133_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.593 → ⚠️ 存疑，待人工复核**
+- **char_tan_muchen_1133_01 ↔ char_qin_linger_1634_01：cos 0.646 → 同一身份**
+- **char_tan_muchen_1133_01 ↔ char_qin_suqiu_0630_01：cos 0.617 → 同一身份**
+- **char_tan_muchen_1133_01 ↔ char_qin_zhixia_1130_01：cos 0.563 → ⚠️ 存疑，待人工复核**
+- **char_tan_muchen_1133_01 ↔ char_ruan_lingjun_2034_01：cos 0.657 → 同一身份**
+- **char_tan_muchen_1133_01 ↔ char_ruan_tiange_1403_01：cos 0.623 → 同一身份**
+- **char_tan_muchen_1133_01 ↔ char_shen_hongyu_1734_01：cos 0.661 → 同一身份**
+- **char_tan_muchen_1133_01 ↔ char_situ_caiwei_0100_01：cos 0.461 → ⚠️ 存疑，待人工复核**
+- **char_tan_muchen_1133_01 ↔ char_situ_yuhan_0600_01：cos 0.622 → 同一身份**
+- **char_tan_muchen_1133_01 ↔ char_song_wanzhao_1503_01：cos 0.666 → 同一身份**
+- **char_tan_muchen_1133_01 ↔ char_tan_shanshan_0700_01：cos 0.617 → 同一身份**
+- **char_tan_muchen_1133_01 ↔ char_tang_sitian_0900_01：cos 0.574 → ⚠️ 存疑，待人工复核**
+- **char_tan_muchen_1133_01 ↔ char_tantai_weiyu_1433_01：cos 0.523 → ⚠️ 存疑，待人工复核**
+- **char_tan_muchen_1133_01 ↔ char_tantai_xingzhu_0230_01：cos 0.499 → ⚠️ 存疑，待人工复核**
+- **char_tan_muchen_1133_01 ↔ char_tantai_yuwei_0730_01：cos 0.502 → ⚠️ 存疑，待人工复核**
+- **char_tan_muchen_1133_01 ↔ char_wen_manshu_1030_01：cos 0.610 → 同一身份**
+- **char_tan_muchen_1133_01 ↔ char_xi_weiyu_2134_01：cos 0.582 → ⚠️ 存疑，待人工复核**
+- **char_tan_muchen_1133_01 ↔ char_xue_banxia_0330_01：cos 0.599 → ⚠️ 存疑，待人工复核**
+- **char_tan_muchen_1133_01 ↔ char_ye_hongyu_0500_01：cos 0.599 → ⚠️ 存疑，待人工复核**
+- **char_tan_muchen_1133_01 ↔ char_ye_linger_2004_01：cos 0.581 → ⚠️ 存疑，待人工复核**
+- **char_tan_muchen_1133_01 ↔ char_ye_lingjun_0130_01：cos 0.644 → 同一身份**
+- **char_tan_muchen_1133_01 ↔ char_ye_shanshan_0400_01：cos 0.526 → ⚠️ 存疑，待人工复核**
+- **char_tan_muchen_1133_01 ↔ char_ye_yuhan_1804_01：cos 0.658 → 同一身份**
+- **char_tan_muchen_1133_01 ↔ char_yuchi_ruoli_1000_01：cos 0.664 → 同一身份**
+- **char_tan_muchen_1133_01 ↔ char_yun_banxia_0030_01：cos 0.457 → ⚠️ 存疑，待人工复核**
+- **char_tan_muchen_1133_01 ↔ char_zhong_manshu_2104_01：cos 0.591 → ⚠️ 存疑，待人工复核**
+- **char_tan_muchen_1133_01 ↔ char_anya_song：cos 0.138 → 不同身份**
+- **char_tan_muchen_1133_01 ↔ char_ayano：cos 0.065 → 不同身份**
+- **char_tan_muchen_1133_01 ↔ char_chen_xiawei：cos 0.115 → 不同身份**
+- **char_tan_muchen_1133_01 ↔ char_jia：cos 0.092 → 不同身份**
+- **char_tan_muchen_1133_01 ↔ char_jiang_yueyao：cos 0.241 → 不同身份**
+- **char_tan_muchen_1133_01 ↔ char_lin_qingwan：cos 0.256 → 不同身份**
+- **char_tan_muchen_1133_01 ↔ char_liu_yinuo_1923_10：cos -0.039 → 不同身份**
+- **char_tan_muchen_1133_01 ↔ char_luo_qingchuan_1805：cos 0.616 → 同一身份**
+- **char_tan_muchen_1133_01 ↔ char_pei_yuhan_2300_01：cos 0.621 → 同一身份**
+- **char_tan_muchen_1133_01 ↔ char_qing_luo：cos 0.195 → 不同身份**
+- **char_tan_muchen_1133_01 ↔ char_ray_ling：cos 0.162 → 不同身份**
+- **char_tan_muchen_1133_01 ↔ char_runcha：cos -0.021 → 不同身份**
+- **char_tan_muchen_1133_01 ↔ char_shen_zhilan：cos 0.179 → 不同身份**
+- **char_tan_muchen_1133_01 ↔ char_su_xiaotang：cos 0.083 → 不同身份**
+- **char_tan_muchen_1133_01 ↔ char_tang_mengli_2200_01：cos 0.625 → 同一身份**
+- **char_tan_muchen_1133_01 ↔ char_wen_xiaorou_2140_01：cos 0.658 → 同一身份**
+- **char_tan_muchen_1133_01 ↔ char_ye_muchen_2100_01：cos 0.599 → ⚠️ 存疑，待人工复核**
+- **char_tan_muchen_1133_01 ↔ char_yin_xinyue_2330_01：cos 0.618 → 同一身份**
+- **char_tan_muchen_1133_01 ↔ char_zhao_ruoxi：cos 0.147 → 不同身份**
+- **char_tan_muchen_1133_01 ↔ char_duo：cos 0.198 → 不同身份**
+- **char_tan_muchen_1133_01 ↔ char_duo3_2：cos 0.160 → 不同身份**
+- **char_tan_muchen_1133_01 ↔ char_cen_zhiwei_1936_01：cos 0.237 → 不同身份**
+- **char_tan_muchen_1133_01 ↔ char_jiang_ruoli_2007_01：cos 0.254 → 不同身份**
+- **char_tan_muchen_1133_01 ↔ char_xiaog3：cos 0.190 → 不同身份**
+- **char_tan_muchen_1133_01 ↔ char_xi_manshu_2045_01：cos 0.184 → 不同身份**
+- **char_tan_muchen_1133_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.232 → 不同身份**
+- **char_tan_muchen_1133_01 ↔ char_linghu_zhixia_2133_01：cos 0.235 → 不同身份**
+- **char_tan_muchen_1133_01 ↔ char_qiao_weiyu_2134_01：cos 0.175 → 不同身份**
+- **char_tan_muchen_1133_01 ↔ char_jiang_qinghuan_2203_01：cos 0.279 → 不同身份**
+- **char_tan_muchen_1133_01 ↔ char_cen_youqing_2204_01：cos 0.084 → 不同身份**
+- **char_tan_muchen_1133_01 ↔ char_zhong_xiaorou_2233_01：cos 0.197 → 不同身份**
+- **char_tan_muchen_1133_01 ↔ char_tan_youqing_2234_01：cos 0.197 → 不同身份**
+- **char_tan_muchen_1133_01 ↔ char_tantai_lingsu_2303_01：cos 0.433 → ⚠️ 存疑，待人工复核**
+- **char_tan_muchen_1133_01 ↔ char_qiao_qinghuan_2304_01：cos 0.433 → ⚠️ 存疑，待人工复核**
+- **char_tan_muchen_1133_01 ↔ char_chu_muchen_0004_01：cos -0.009 → 不同身份**
+- **char_tan_muchen_1133_01 ↔ char_qiao_chaoyan_0004_01：cos -0.057 → 不同身份**
+- **char_tan_muchen_1133_01 ↔ char_xue_qinghuan_0034_01：cos -0.020 → 不同身份**
+- **char_tan_muchen_1133_01 ↔ char_tang_yuwei_0217_01：cos 0.204 → 不同身份**
+- **char_tan_muchen_1133_01 ↔ char_ouyang_chuxia_0250_01：cos 0.285 → 不同身份**
+- **char_tan_muchen_1133_01 ↔ char_bai_zhiruo_0305_01：cos 0.398 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tan_muchen_1133_01 ↔ char_pei_shanshan_0456_01：cos 0.352 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tan_muchen_1133_01 ↔ char_xi_qingchuan_0618_01：cos 0.294 → 不同身份**
+- **char_tan_muchen_1133_01 ↔ char_zhong_linger_0732_01：cos 0.369 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tan_muchen_1133_01 ↔ char_hua_qingdai_1029_01：cos 0.310 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tan_muchen_1133_01 ↔ char_tang_banxia_1156_01：cos 0.399 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tan_muchen_1133_01 ↔ char_gu_weiyu_1321_01：cos 0.313 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tan_muchen_1133_01 ↔ char_cheng_hongyu_1435_01：cos 0.204 → 不同身份**
+- **char_tan_muchen_1133_01 ↔ char_hua_chuxia_1549_01：cos 0.161 → 不同身份**
+- **char_tan_muchen_1133_01 ↔ char_pei_manshu_1701_01：cos 0.253 → 不同身份**
+- **char_tan_muchen_1133_01 ↔ char_ye_nanqiao_1811_01：cos 0.256 → 不同身份**
+- **char_tan_muchen_1133_01 ↔ char_murong_yuyan_1942_01：cos 0.214 → 不同身份**
+- **char_tan_muchen_1133_01 ↔ char_nangong_lingjun_2054_01：cos 0.289 → 不同身份**
+- **char_xi_shanshan_1303_01 ↔ char_xue_huaiyu_1034_01：cos 0.461 → ⚠️ 存疑，待人工复核**
+- **char_xi_shanshan_1303_01 ↔ char_yuchi_lingsu_1333_01：cos 0.547 → ⚠️ 存疑，待人工复核**
+- **char_xi_shanshan_1303_01 ↔ char_bai_anran_0430_01：cos 0.615 → 同一身份**
+- **char_xi_shanshan_1303_01 ↔ char_bai_yuhan_0830_01：cos 0.490 → ⚠️ 存疑，待人工复核**
+- **char_xi_shanshan_1303_01 ↔ char_cen_yuhan_1934_01：cos 0.569 → ⚠️ 存疑，待人工复核**
+- **char_xi_shanshan_1303_01 ↔ char_chu_ruoli_0800_01：cos 0.637 → 同一身份**
+- **char_xi_shanshan_1303_01 ↔ char_fu_caiwei_1833_01：cos 0.613 → 同一身份**
+- **char_xi_shanshan_1303_01 ↔ char_fu_wanzhao_1100_01：cos 0.661 → 同一身份**
+- **char_xi_shanshan_1303_01 ↔ char_gu_chaoyan_1904_01：cos 0.660 → 同一身份**
+- **char_xi_shanshan_1303_01 ↔ char_huo_ruoxi_1200_01：cos 0.610 → 同一身份**
+- **char_xi_shanshan_1303_01 ↔ char_jiang_zhiruo_0300_01：cos 0.495 → ⚠️ 存疑，待人工复核**
+- **char_xi_shanshan_1303_01 ↔ char_liang_tiange_1303_01：cos 0.580 → ⚠️ 存疑，待人工复核**
+- **char_xi_shanshan_1303_01 ↔ char_liang_yuyan_1333_01：cos 0.563 → ⚠️ 存疑，待人工复核**
+- **char_xi_shanshan_1303_01 ↔ char_linghu_chuxia_2204_01：cos 0.457 → ⚠️ 存疑，待人工复核**
+- **char_xi_shanshan_1303_01 ↔ char_lu_muchen_0530_01：cos 0.561 → ⚠️ 存疑，待人工复核**
+- **char_xi_shanshan_1303_01 ↔ char_murong_manshu_1704_01：cos 0.639 → 同一身份**
+- **char_xi_shanshan_1303_01 ↔ char_murong_weiyu_0930_01：cos 0.644 → 同一身份**
+- **char_xi_shanshan_1303_01 ↔ char_murong_xingzhu_0200_01：cos 0.381 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xi_shanshan_1303_01 ↔ char_ning_chuxia_0000_01：cos 0.461 → ⚠️ 存疑，待人工复核**
+- **char_xi_shanshan_1303_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.600 → 同一身份**
+- **char_xi_shanshan_1303_01 ↔ char_qin_linger_1634_01：cos 0.710 → 同一身份**
+- **char_xi_shanshan_1303_01 ↔ char_qin_suqiu_0630_01：cos 0.568 → ⚠️ 存疑，待人工复核**
+- **char_xi_shanshan_1303_01 ↔ char_qin_zhixia_1130_01：cos 0.599 → ⚠️ 存疑，待人工复核**
+- **char_xi_shanshan_1303_01 ↔ char_ruan_lingjun_2034_01：cos 0.661 → 同一身份**
+- **char_xi_shanshan_1303_01 ↔ char_ruan_tiange_1403_01：cos 0.629 → 同一身份**
+- **char_xi_shanshan_1303_01 ↔ char_shen_hongyu_1734_01：cos 0.592 → ⚠️ 存疑，待人工复核**
+- **char_xi_shanshan_1303_01 ↔ char_situ_caiwei_0100_01：cos 0.534 → ⚠️ 存疑，待人工复核**
+- **char_xi_shanshan_1303_01 ↔ char_situ_yuhan_0600_01：cos 0.643 → 同一身份**
+- **char_xi_shanshan_1303_01 ↔ char_song_wanzhao_1503_01：cos 0.578 → ⚠️ 存疑，待人工复核**
+- **char_xi_shanshan_1303_01 ↔ char_tan_shanshan_0700_01：cos 0.543 → ⚠️ 存疑，待人工复核**
+- **char_xi_shanshan_1303_01 ↔ char_tang_sitian_0900_01：cos 0.560 → ⚠️ 存疑，待人工复核**
+- **char_xi_shanshan_1303_01 ↔ char_tantai_weiyu_1433_01：cos 0.456 → ⚠️ 存疑，待人工复核**
+- **char_xi_shanshan_1303_01 ↔ char_tantai_xingzhu_0230_01：cos 0.349 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xi_shanshan_1303_01 ↔ char_tantai_yuwei_0730_01：cos 0.303 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xi_shanshan_1303_01 ↔ char_wen_manshu_1030_01：cos 0.621 → 同一身份**
+- **char_xi_shanshan_1303_01 ↔ char_xi_weiyu_2134_01：cos 0.606 → 同一身份**
+- **char_xi_shanshan_1303_01 ↔ char_xue_banxia_0330_01：cos 0.534 → ⚠️ 存疑，待人工复核**
+- **char_xi_shanshan_1303_01 ↔ char_ye_hongyu_0500_01：cos 0.636 → 同一身份**
+- **char_xi_shanshan_1303_01 ↔ char_ye_linger_2004_01：cos 0.610 → 同一身份**
+- **char_xi_shanshan_1303_01 ↔ char_ye_lingjun_0130_01：cos 0.550 → ⚠️ 存疑，待人工复核**
+- **char_xi_shanshan_1303_01 ↔ char_ye_shanshan_0400_01：cos 0.487 → ⚠️ 存疑，待人工复核**
+- **char_xi_shanshan_1303_01 ↔ char_ye_yuhan_1804_01：cos 0.654 → 同一身份**
+- **char_xi_shanshan_1303_01 ↔ char_yuchi_ruoli_1000_01：cos 0.503 → ⚠️ 存疑，待人工复核**
+- **char_xi_shanshan_1303_01 ↔ char_yun_banxia_0030_01：cos 0.605 → 同一身份**
+- **char_xi_shanshan_1303_01 ↔ char_zhong_manshu_2104_01：cos 0.547 → ⚠️ 存疑，待人工复核**
+- **char_xi_shanshan_1303_01 ↔ char_anya_song：cos 0.156 → 不同身份**
+- **char_xi_shanshan_1303_01 ↔ char_ayano：cos 0.136 → 不同身份**
+- **char_xi_shanshan_1303_01 ↔ char_chen_xiawei：cos 0.143 → 不同身份**
+- **char_xi_shanshan_1303_01 ↔ char_jia：cos 0.138 → 不同身份**
+- **char_xi_shanshan_1303_01 ↔ char_jiang_yueyao：cos 0.279 → 不同身份**
+- **char_xi_shanshan_1303_01 ↔ char_lin_qingwan：cos 0.298 → 不同身份**
+- **char_xi_shanshan_1303_01 ↔ char_liu_yinuo_1923_10：cos -0.073 → 不同身份**
+- **char_xi_shanshan_1303_01 ↔ char_luo_qingchuan_1805：cos 0.571 → ⚠️ 存疑，待人工复核**
+- **char_xi_shanshan_1303_01 ↔ char_pei_yuhan_2300_01：cos 0.419 → ⚠️ 存疑，待人工复核**
+- **char_xi_shanshan_1303_01 ↔ char_qing_luo：cos 0.199 → 不同身份**
+- **char_xi_shanshan_1303_01 ↔ char_ray_ling：cos 0.260 → 不同身份**
+- **char_xi_shanshan_1303_01 ↔ char_runcha：cos 0.037 → 不同身份**
+- **char_xi_shanshan_1303_01 ↔ char_shen_zhilan：cos 0.262 → 不同身份**
+- **char_xi_shanshan_1303_01 ↔ char_su_xiaotang：cos 0.173 → 不同身份**
+- **char_xi_shanshan_1303_01 ↔ char_tang_mengli_2200_01：cos 0.422 → ⚠️ 存疑，待人工复核**
+- **char_xi_shanshan_1303_01 ↔ char_wen_xiaorou_2140_01：cos 0.495 → ⚠️ 存疑，待人工复核**
+- **char_xi_shanshan_1303_01 ↔ char_ye_muchen_2100_01：cos 0.473 → ⚠️ 存疑，待人工复核**
+- **char_xi_shanshan_1303_01 ↔ char_yin_xinyue_2330_01：cos 0.453 → ⚠️ 存疑，待人工复核**
+- **char_xi_shanshan_1303_01 ↔ char_zhao_ruoxi：cos 0.206 → 不同身份**
+- **char_xi_shanshan_1303_01 ↔ char_duo：cos 0.243 → 不同身份**
+- **char_xi_shanshan_1303_01 ↔ char_duo3_2：cos 0.215 → 不同身份**
+- **char_xi_shanshan_1303_01 ↔ char_cen_zhiwei_1936_01：cos 0.384 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xi_shanshan_1303_01 ↔ char_jiang_ruoli_2007_01：cos 0.351 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xi_shanshan_1303_01 ↔ char_xiaog3：cos 0.019 → 不同身份**
+- **char_xi_shanshan_1303_01 ↔ char_xi_manshu_2045_01：cos 0.275 → 不同身份**
+- **char_xi_shanshan_1303_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.355 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xi_shanshan_1303_01 ↔ char_linghu_zhixia_2133_01：cos 0.340 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xi_shanshan_1303_01 ↔ char_qiao_weiyu_2134_01：cos 0.292 → 不同身份**
+- **char_xi_shanshan_1303_01 ↔ char_jiang_qinghuan_2203_01：cos 0.382 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xi_shanshan_1303_01 ↔ char_cen_youqing_2204_01：cos 0.190 → 不同身份**
+- **char_xi_shanshan_1303_01 ↔ char_zhong_xiaorou_2233_01：cos 0.325 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xi_shanshan_1303_01 ↔ char_tan_youqing_2234_01：cos 0.325 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xi_shanshan_1303_01 ↔ char_tantai_lingsu_2303_01：cos 0.459 → ⚠️ 存疑，待人工复核**
+- **char_xi_shanshan_1303_01 ↔ char_qiao_qinghuan_2304_01：cos 0.459 → ⚠️ 存疑，待人工复核**
+- **char_xi_shanshan_1303_01 ↔ char_chu_muchen_0004_01：cos 0.067 → 不同身份**
+- **char_xi_shanshan_1303_01 ↔ char_qiao_chaoyan_0004_01：cos -0.043 → 不同身份**
+- **char_xi_shanshan_1303_01 ↔ char_xue_qinghuan_0034_01：cos 0.023 → 不同身份**
+- **char_xi_shanshan_1303_01 ↔ char_tang_yuwei_0217_01：cos 0.216 → 不同身份**
+- **char_xi_shanshan_1303_01 ↔ char_ouyang_chuxia_0250_01：cos 0.260 → 不同身份**
+- **char_xi_shanshan_1303_01 ↔ char_bai_zhiruo_0305_01：cos 0.353 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xi_shanshan_1303_01 ↔ char_pei_shanshan_0456_01：cos 0.397 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xi_shanshan_1303_01 ↔ char_xi_qingchuan_0618_01：cos 0.350 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xi_shanshan_1303_01 ↔ char_zhong_linger_0732_01：cos 0.421 → ⚠️ 存疑，待人工复核**
+- **char_xi_shanshan_1303_01 ↔ char_hua_qingdai_1029_01：cos 0.418 → ⚠️ 存疑，待人工复核**
+- **char_xi_shanshan_1303_01 ↔ char_tang_banxia_1156_01：cos 0.464 → ⚠️ 存疑，待人工复核**
+- **char_xi_shanshan_1303_01 ↔ char_gu_weiyu_1321_01：cos 0.318 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xi_shanshan_1303_01 ↔ char_cheng_hongyu_1435_01：cos 0.298 → 不同身份**
+- **char_xi_shanshan_1303_01 ↔ char_hua_chuxia_1549_01：cos 0.259 → 不同身份**
+- **char_xi_shanshan_1303_01 ↔ char_pei_manshu_1701_01：cos 0.281 → 不同身份**
+- **char_xi_shanshan_1303_01 ↔ char_ye_nanqiao_1811_01：cos 0.338 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xi_shanshan_1303_01 ↔ char_murong_yuyan_1942_01：cos 0.303 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xi_shanshan_1303_01 ↔ char_nangong_lingjun_2054_01：cos 0.391 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_huaiyu_1034_01 ↔ char_yuchi_lingsu_1333_01：cos 0.489 → ⚠️ 存疑，待人工复核**
+- **char_xue_huaiyu_1034_01 ↔ char_bai_anran_0430_01：cos 0.372 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_huaiyu_1034_01 ↔ char_bai_yuhan_0830_01：cos 0.390 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_huaiyu_1034_01 ↔ char_cen_yuhan_1934_01：cos 0.616 → 同一身份**
+- **char_xue_huaiyu_1034_01 ↔ char_chu_ruoli_0800_01：cos 0.560 → ⚠️ 存疑，待人工复核**
+- **char_xue_huaiyu_1034_01 ↔ char_fu_caiwei_1833_01：cos 0.440 → ⚠️ 存疑，待人工复核**
+- **char_xue_huaiyu_1034_01 ↔ char_fu_wanzhao_1100_01：cos 0.422 → ⚠️ 存疑，待人工复核**
+- **char_xue_huaiyu_1034_01 ↔ char_gu_chaoyan_1904_01：cos 0.643 → 同一身份**
+- **char_xue_huaiyu_1034_01 ↔ char_huo_ruoxi_1200_01：cos 0.540 → ⚠️ 存疑，待人工复核**
+- **char_xue_huaiyu_1034_01 ↔ char_jiang_zhiruo_0300_01：cos 0.405 → ⚠️ 存疑，待人工复核**
+- **char_xue_huaiyu_1034_01 ↔ char_liang_tiange_1303_01：cos 0.779 → 同一身份**
+- **char_xue_huaiyu_1034_01 ↔ char_liang_yuyan_1333_01：cos 0.434 → ⚠️ 存疑，待人工复核**
+- **char_xue_huaiyu_1034_01 ↔ char_linghu_chuxia_2204_01：cos 0.736 → 同一身份**
+- **char_xue_huaiyu_1034_01 ↔ char_lu_muchen_0530_01：cos 0.781 → 同一身份**
+- **char_xue_huaiyu_1034_01 ↔ char_murong_manshu_1704_01：cos 0.448 → ⚠️ 存疑，待人工复核**
+- **char_xue_huaiyu_1034_01 ↔ char_murong_weiyu_0930_01：cos 0.564 → ⚠️ 存疑，待人工复核**
+- **char_xue_huaiyu_1034_01 ↔ char_murong_xingzhu_0200_01：cos 0.361 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_huaiyu_1034_01 ↔ char_ning_chuxia_0000_01：cos 0.387 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_huaiyu_1034_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.686 → 同一身份**
+- **char_xue_huaiyu_1034_01 ↔ char_qin_linger_1634_01：cos 0.480 → ⚠️ 存疑，待人工复核**
+- **char_xue_huaiyu_1034_01 ↔ char_qin_suqiu_0630_01：cos 0.408 → ⚠️ 存疑，待人工复核**
+- **char_xue_huaiyu_1034_01 ↔ char_qin_zhixia_1130_01：cos 0.500 → ⚠️ 存疑，待人工复核**
+- **char_xue_huaiyu_1034_01 ↔ char_ruan_lingjun_2034_01：cos 0.484 → ⚠️ 存疑，待人工复核**
+- **char_xue_huaiyu_1034_01 ↔ char_ruan_tiange_1403_01：cos 0.744 → 同一身份**
+- **char_xue_huaiyu_1034_01 ↔ char_shen_hongyu_1734_01：cos 0.517 → ⚠️ 存疑，待人工复核**
+- **char_xue_huaiyu_1034_01 ↔ char_situ_caiwei_0100_01：cos 0.356 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_huaiyu_1034_01 ↔ char_situ_yuhan_0600_01：cos 0.517 → ⚠️ 存疑，待人工复核**
+- **char_xue_huaiyu_1034_01 ↔ char_song_wanzhao_1503_01：cos 0.528 → ⚠️ 存疑，待人工复核**
+- **char_xue_huaiyu_1034_01 ↔ char_tan_shanshan_0700_01：cos 0.774 → 同一身份**
+- **char_xue_huaiyu_1034_01 ↔ char_tang_sitian_0900_01：cos 0.363 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_huaiyu_1034_01 ↔ char_tantai_weiyu_1433_01：cos 0.772 → 同一身份**
+- **char_xue_huaiyu_1034_01 ↔ char_tantai_xingzhu_0230_01：cos 0.296 → 不同身份**
+- **char_xue_huaiyu_1034_01 ↔ char_tantai_yuwei_0730_01：cos 0.410 → ⚠️ 存疑，待人工复核**
+- **char_xue_huaiyu_1034_01 ↔ char_wen_manshu_1030_01：cos 0.440 → ⚠️ 存疑，待人工复核**
+- **char_xue_huaiyu_1034_01 ↔ char_xi_weiyu_2134_01：cos 0.400 → ⚠️ 存疑，待人工复核**
+- **char_xue_huaiyu_1034_01 ↔ char_xue_banxia_0330_01：cos 0.665 → 同一身份**
+- **char_xue_huaiyu_1034_01 ↔ char_ye_hongyu_0500_01：cos 0.689 → 同一身份**
+- **char_xue_huaiyu_1034_01 ↔ char_ye_linger_2004_01：cos 0.744 → 同一身份**
+- **char_xue_huaiyu_1034_01 ↔ char_ye_lingjun_0130_01：cos 0.802 → 同一身份**
+- **char_xue_huaiyu_1034_01 ↔ char_ye_shanshan_0400_01：cos 0.484 → ⚠️ 存疑，待人工复核**
+- **char_xue_huaiyu_1034_01 ↔ char_ye_yuhan_1804_01：cos 0.591 → ⚠️ 存疑，待人工复核**
+- **char_xue_huaiyu_1034_01 ↔ char_yuchi_ruoli_1000_01：cos 0.474 → ⚠️ 存疑，待人工复核**
+- **char_xue_huaiyu_1034_01 ↔ char_yun_banxia_0030_01：cos 0.360 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_huaiyu_1034_01 ↔ char_zhong_manshu_2104_01：cos 0.448 → ⚠️ 存疑，待人工复核**
+- **char_xue_huaiyu_1034_01 ↔ char_anya_song：cos 0.136 → 不同身份**
+- **char_xue_huaiyu_1034_01 ↔ char_ayano：cos 0.089 → 不同身份**
+- **char_xue_huaiyu_1034_01 ↔ char_chen_xiawei：cos -0.011 → 不同身份**
+- **char_xue_huaiyu_1034_01 ↔ char_jia：cos -0.050 → 不同身份**
+- **char_xue_huaiyu_1034_01 ↔ char_jiang_yueyao：cos 0.090 → 不同身份**
+- **char_xue_huaiyu_1034_01 ↔ char_lin_qingwan：cos 0.192 → 不同身份**
+- **char_xue_huaiyu_1034_01 ↔ char_liu_yinuo_1923_10：cos -0.044 → 不同身份**
+- **char_xue_huaiyu_1034_01 ↔ char_luo_qingchuan_1805：cos 0.511 → ⚠️ 存疑，待人工复核**
+- **char_xue_huaiyu_1034_01 ↔ char_pei_yuhan_2300_01：cos 0.429 → ⚠️ 存疑，待人工复核**
+- **char_xue_huaiyu_1034_01 ↔ char_qing_luo：cos 0.016 → 不同身份**
+- **char_xue_huaiyu_1034_01 ↔ char_ray_ling：cos 0.266 → 不同身份**
+- **char_xue_huaiyu_1034_01 ↔ char_runcha：cos -0.048 → 不同身份**
+- **char_xue_huaiyu_1034_01 ↔ char_shen_zhilan：cos 0.261 → 不同身份**
+- **char_xue_huaiyu_1034_01 ↔ char_su_xiaotang：cos 0.085 → 不同身份**
+- **char_xue_huaiyu_1034_01 ↔ char_tang_mengli_2200_01：cos 0.433 → ⚠️ 存疑，待人工复核**
+- **char_xue_huaiyu_1034_01 ↔ char_wen_xiaorou_2140_01：cos 0.458 → ⚠️ 存疑，待人工复核**
+- **char_xue_huaiyu_1034_01 ↔ char_ye_muchen_2100_01：cos 0.457 → ⚠️ 存疑，待人工复核**
+- **char_xue_huaiyu_1034_01 ↔ char_yin_xinyue_2330_01：cos 0.430 → ⚠️ 存疑，待人工复核**
+- **char_xue_huaiyu_1034_01 ↔ char_zhao_ruoxi：cos 0.173 → 不同身份**
+- **char_xue_huaiyu_1034_01 ↔ char_duo：cos 0.097 → 不同身份**
+- **char_xue_huaiyu_1034_01 ↔ char_duo3_2：cos 0.133 → 不同身份**
+- **char_xue_huaiyu_1034_01 ↔ char_cen_zhiwei_1936_01：cos 0.398 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_huaiyu_1034_01 ↔ char_jiang_ruoli_2007_01：cos 0.369 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_huaiyu_1034_01 ↔ char_xiaog3：cos 0.150 → 不同身份**
+- **char_xue_huaiyu_1034_01 ↔ char_xi_manshu_2045_01：cos 0.181 → 不同身份**
+- **char_xue_huaiyu_1034_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.497 → ⚠️ 存疑，待人工复核**
+- **char_xue_huaiyu_1034_01 ↔ char_linghu_zhixia_2133_01：cos 0.445 → ⚠️ 存疑，待人工复核**
+- **char_xue_huaiyu_1034_01 ↔ char_qiao_weiyu_2134_01：cos 0.237 → 不同身份**
+- **char_xue_huaiyu_1034_01 ↔ char_jiang_qinghuan_2203_01：cos 0.140 → 不同身份**
+- **char_xue_huaiyu_1034_01 ↔ char_cen_youqing_2204_01：cos 0.003 → 不同身份**
+- **char_xue_huaiyu_1034_01 ↔ char_zhong_xiaorou_2233_01：cos 0.198 → 不同身份**
+- **char_xue_huaiyu_1034_01 ↔ char_tan_youqing_2234_01：cos 0.198 → 不同身份**
+- **char_xue_huaiyu_1034_01 ↔ char_tantai_lingsu_2303_01：cos 0.243 → 不同身份**
+- **char_xue_huaiyu_1034_01 ↔ char_qiao_qinghuan_2304_01：cos 0.243 → 不同身份**
+- **char_xue_huaiyu_1034_01 ↔ char_chu_muchen_0004_01：cos 0.011 → 不同身份**
+- **char_xue_huaiyu_1034_01 ↔ char_qiao_chaoyan_0004_01：cos -0.110 → 不同身份**
+- **char_xue_huaiyu_1034_01 ↔ char_xue_qinghuan_0034_01：cos 0.047 → 不同身份**
+- **char_xue_huaiyu_1034_01 ↔ char_tang_yuwei_0217_01：cos 0.103 → 不同身份**
+- **char_xue_huaiyu_1034_01 ↔ char_ouyang_chuxia_0250_01：cos 0.116 → 不同身份**
+- **char_xue_huaiyu_1034_01 ↔ char_bai_zhiruo_0305_01：cos 0.284 → 不同身份**
+- **char_xue_huaiyu_1034_01 ↔ char_pei_shanshan_0456_01：cos 0.203 → 不同身份**
+- **char_xue_huaiyu_1034_01 ↔ char_xi_qingchuan_0618_01：cos 0.150 → 不同身份**
+- **char_xue_huaiyu_1034_01 ↔ char_zhong_linger_0732_01：cos 0.318 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_huaiyu_1034_01 ↔ char_hua_qingdai_1029_01：cos 0.202 → 不同身份**
+- **char_xue_huaiyu_1034_01 ↔ char_tang_banxia_1156_01：cos 0.236 → 不同身份**
+- **char_xue_huaiyu_1034_01 ↔ char_gu_weiyu_1321_01：cos 0.122 → 不同身份**
+- **char_xue_huaiyu_1034_01 ↔ char_cheng_hongyu_1435_01：cos 0.118 → 不同身份**
+- **char_xue_huaiyu_1034_01 ↔ char_hua_chuxia_1549_01：cos 0.149 → 不同身份**
+- **char_xue_huaiyu_1034_01 ↔ char_pei_manshu_1701_01：cos 0.175 → 不同身份**
+- **char_xue_huaiyu_1034_01 ↔ char_ye_nanqiao_1811_01：cos 0.119 → 不同身份**
+- **char_xue_huaiyu_1034_01 ↔ char_murong_yuyan_1942_01：cos 0.028 → 不同身份**
+- **char_xue_huaiyu_1034_01 ↔ char_nangong_lingjun_2054_01：cos 0.316 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yuchi_lingsu_1333_01 ↔ char_bai_anran_0430_01：cos 0.610 → 同一身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_bai_yuhan_0830_01：cos 0.639 → 同一身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_cen_yuhan_1934_01：cos 0.598 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_lingsu_1333_01 ↔ char_chu_ruoli_0800_01：cos 0.607 → 同一身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_fu_caiwei_1833_01：cos 0.712 → 同一身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_fu_wanzhao_1100_01：cos 0.571 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_lingsu_1333_01 ↔ char_gu_chaoyan_1904_01：cos 0.564 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_lingsu_1333_01 ↔ char_huo_ruoxi_1200_01：cos 0.579 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_lingsu_1333_01 ↔ char_jiang_zhiruo_0300_01：cos 0.678 → 同一身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_liang_tiange_1303_01：cos 0.600 → 同一身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_liang_yuyan_1333_01：cos 0.698 → 同一身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_linghu_chuxia_2204_01：cos 0.603 → 同一身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_lu_muchen_0530_01：cos 0.569 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_lingsu_1333_01 ↔ char_murong_manshu_1704_01：cos 0.651 → 同一身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_murong_weiyu_0930_01：cos 0.546 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_lingsu_1333_01 ↔ char_murong_xingzhu_0200_01：cos 0.575 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_lingsu_1333_01 ↔ char_ning_chuxia_0000_01：cos 0.711 → 同一身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.619 → 同一身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_qin_linger_1634_01：cos 0.590 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_lingsu_1333_01 ↔ char_qin_suqiu_0630_01：cos 0.683 → 同一身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_qin_zhixia_1130_01：cos 0.570 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_lingsu_1333_01 ↔ char_ruan_lingjun_2034_01：cos 0.574 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_lingsu_1333_01 ↔ char_ruan_tiange_1403_01：cos 0.610 → 同一身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_shen_hongyu_1734_01：cos 0.721 → 同一身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_situ_caiwei_0100_01：cos 0.518 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_lingsu_1333_01 ↔ char_situ_yuhan_0600_01：cos 0.670 → 同一身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_song_wanzhao_1503_01：cos 0.623 → 同一身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_tan_shanshan_0700_01：cos 0.562 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_lingsu_1333_01 ↔ char_tang_sitian_0900_01：cos 0.638 → 同一身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_tantai_weiyu_1433_01：cos 0.512 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_lingsu_1333_01 ↔ char_tantai_xingzhu_0230_01：cos 0.545 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_lingsu_1333_01 ↔ char_tantai_yuwei_0730_01：cos 0.604 → 同一身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_wen_manshu_1030_01：cos 0.646 → 同一身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_xi_weiyu_2134_01：cos 0.675 → 同一身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_xue_banxia_0330_01：cos 0.551 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_lingsu_1333_01 ↔ char_ye_hongyu_0500_01：cos 0.525 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_lingsu_1333_01 ↔ char_ye_linger_2004_01：cos 0.580 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_lingsu_1333_01 ↔ char_ye_lingjun_0130_01：cos 0.580 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_lingsu_1333_01 ↔ char_ye_shanshan_0400_01：cos 0.642 → 同一身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_ye_yuhan_1804_01：cos 0.596 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_lingsu_1333_01 ↔ char_yuchi_ruoli_1000_01：cos 0.600 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_lingsu_1333_01 ↔ char_yun_banxia_0030_01：cos 0.434 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_lingsu_1333_01 ↔ char_zhong_manshu_2104_01：cos 0.611 → 同一身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_anya_song：cos 0.166 → 不同身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_ayano：cos 0.135 → 不同身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_chen_xiawei：cos 0.119 → 不同身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_jia：cos 0.151 → 不同身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_jiang_yueyao：cos 0.220 → 不同身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_lin_qingwan：cos 0.251 → 不同身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_liu_yinuo_1923_10：cos 0.015 → 不同身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_luo_qingchuan_1805：cos 0.719 → 同一身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_pei_yuhan_2300_01：cos 0.658 → 同一身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_qing_luo：cos 0.243 → 不同身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_ray_ling：cos 0.218 → 不同身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_runcha：cos 0.005 → 不同身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_shen_zhilan：cos 0.196 → 不同身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_su_xiaotang：cos 0.101 → 不同身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_tang_mengli_2200_01：cos 0.666 → 同一身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_wen_xiaorou_2140_01：cos 0.604 → 同一身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_ye_muchen_2100_01：cos 0.658 → 同一身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_yin_xinyue_2330_01：cos 0.685 → 同一身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_zhao_ruoxi：cos 0.244 → 不同身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_duo：cos 0.173 → 不同身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_duo3_2：cos 0.217 → 不同身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_cen_zhiwei_1936_01：cos 0.367 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yuchi_lingsu_1333_01 ↔ char_jiang_ruoli_2007_01：cos 0.260 → 不同身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_xiaog3：cos 0.226 → 不同身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_xi_manshu_2045_01：cos 0.271 → 不同身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.308 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yuchi_lingsu_1333_01 ↔ char_linghu_zhixia_2133_01：cos 0.396 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yuchi_lingsu_1333_01 ↔ char_qiao_weiyu_2134_01：cos 0.239 → 不同身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_jiang_qinghuan_2203_01：cos 0.332 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yuchi_lingsu_1333_01 ↔ char_cen_youqing_2204_01：cos 0.136 → 不同身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_zhong_xiaorou_2233_01：cos 0.256 → 不同身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_tan_youqing_2234_01：cos 0.256 → 不同身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_tantai_lingsu_2303_01：cos 0.380 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yuchi_lingsu_1333_01 ↔ char_qiao_qinghuan_2304_01：cos 0.380 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yuchi_lingsu_1333_01 ↔ char_chu_muchen_0004_01：cos -0.026 → 不同身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_qiao_chaoyan_0004_01：cos -0.042 → 不同身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_xue_qinghuan_0034_01：cos -0.053 → 不同身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_tang_yuwei_0217_01：cos 0.254 → 不同身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_ouyang_chuxia_0250_01：cos 0.218 → 不同身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_bai_zhiruo_0305_01：cos 0.411 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_lingsu_1333_01 ↔ char_pei_shanshan_0456_01：cos 0.409 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_lingsu_1333_01 ↔ char_xi_qingchuan_0618_01：cos 0.338 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yuchi_lingsu_1333_01 ↔ char_zhong_linger_0732_01：cos 0.254 → 不同身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_hua_qingdai_1029_01：cos 0.288 → 不同身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_tang_banxia_1156_01：cos 0.371 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yuchi_lingsu_1333_01 ↔ char_gu_weiyu_1321_01：cos 0.278 → 不同身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_cheng_hongyu_1435_01：cos 0.202 → 不同身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_hua_chuxia_1549_01：cos 0.161 → 不同身份**
+- **char_yuchi_lingsu_1333_01 ↔ char_pei_manshu_1701_01：cos 0.314 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yuchi_lingsu_1333_01 ↔ char_ye_nanqiao_1811_01：cos 0.326 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yuchi_lingsu_1333_01 ↔ char_murong_yuyan_1942_01：cos 0.361 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yuchi_lingsu_1333_01 ↔ char_nangong_lingjun_2054_01：cos 0.264 → 不同身份**
+- **char_bai_anran_0430_01 ↔ char_bai_yuhan_0830_01：cos 0.640 → 同一身份**
+- **char_bai_anran_0430_01 ↔ char_cen_yuhan_1934_01：cos 0.531 → ⚠️ 存疑，待人工复核**
+- **char_bai_anran_0430_01 ↔ char_chu_ruoli_0800_01：cos 0.513 → ⚠️ 存疑，待人工复核**
+- **char_bai_anran_0430_01 ↔ char_fu_caiwei_1833_01：cos 0.669 → 同一身份**
+- **char_bai_anran_0430_01 ↔ char_fu_wanzhao_1100_01：cos 0.625 → 同一身份**
+- **char_bai_anran_0430_01 ↔ char_gu_chaoyan_1904_01：cos 0.493 → ⚠️ 存疑，待人工复核**
+- **char_bai_anran_0430_01 ↔ char_huo_ruoxi_1200_01：cos 0.591 → ⚠️ 存疑，待人工复核**
+- **char_bai_anran_0430_01 ↔ char_jiang_zhiruo_0300_01：cos 0.585 → ⚠️ 存疑，待人工复核**
+- **char_bai_anran_0430_01 ↔ char_liang_tiange_1303_01：cos 0.527 → ⚠️ 存疑，待人工复核**
+- **char_bai_anran_0430_01 ↔ char_liang_yuyan_1333_01：cos 0.635 → 同一身份**
+- **char_bai_anran_0430_01 ↔ char_linghu_chuxia_2204_01：cos 0.390 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_bai_anran_0430_01 ↔ char_lu_muchen_0530_01：cos 0.446 → ⚠️ 存疑，待人工复核**
+- **char_bai_anran_0430_01 ↔ char_murong_manshu_1704_01：cos 0.664 → 同一身份**
+- **char_bai_anran_0430_01 ↔ char_murong_weiyu_0930_01：cos 0.550 → ⚠️ 存疑，待人工复核**
+- **char_bai_anran_0430_01 ↔ char_murong_xingzhu_0200_01：cos 0.556 → ⚠️ 存疑，待人工复核**
+- **char_bai_anran_0430_01 ↔ char_ning_chuxia_0000_01：cos 0.644 → 同一身份**
+- **char_bai_anran_0430_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.497 → ⚠️ 存疑，待人工复核**
+- **char_bai_anran_0430_01 ↔ char_qin_linger_1634_01：cos 0.641 → 同一身份**
+- **char_bai_anran_0430_01 ↔ char_qin_suqiu_0630_01：cos 0.650 → 同一身份**
+- **char_bai_anran_0430_01 ↔ char_qin_zhixia_1130_01：cos 0.634 → 同一身份**
+- **char_bai_anran_0430_01 ↔ char_ruan_lingjun_2034_01：cos 0.635 → 同一身份**
+- **char_bai_anran_0430_01 ↔ char_ruan_tiange_1403_01：cos 0.530 → ⚠️ 存疑，待人工复核**
+- **char_bai_anran_0430_01 ↔ char_shen_hongyu_1734_01：cos 0.692 → 同一身份**
+- **char_bai_anran_0430_01 ↔ char_situ_caiwei_0100_01：cos 0.546 → ⚠️ 存疑，待人工复核**
+- **char_bai_anran_0430_01 ↔ char_situ_yuhan_0600_01：cos 0.610 → 同一身份**
+- **char_bai_anran_0430_01 ↔ char_song_wanzhao_1503_01：cos 0.559 → ⚠️ 存疑，待人工复核**
+- **char_bai_anran_0430_01 ↔ char_tan_shanshan_0700_01：cos 0.486 → ⚠️ 存疑，待人工复核**
+- **char_bai_anran_0430_01 ↔ char_tang_sitian_0900_01：cos 0.558 → ⚠️ 存疑，待人工复核**
+- **char_bai_anran_0430_01 ↔ char_tantai_weiyu_1433_01：cos 0.384 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_bai_anran_0430_01 ↔ char_tantai_xingzhu_0230_01：cos 0.578 → ⚠️ 存疑，待人工复核**
+- **char_bai_anran_0430_01 ↔ char_tantai_yuwei_0730_01：cos 0.459 → ⚠️ 存疑，待人工复核**
+- **char_bai_anran_0430_01 ↔ char_wen_manshu_1030_01：cos 0.521 → ⚠️ 存疑，待人工复核**
+- **char_bai_anran_0430_01 ↔ char_xi_weiyu_2134_01：cos 0.677 → 同一身份**
+- **char_bai_anran_0430_01 ↔ char_xue_banxia_0330_01：cos 0.408 → ⚠️ 存疑，待人工复核**
+- **char_bai_anran_0430_01 ↔ char_ye_hongyu_0500_01：cos 0.459 → ⚠️ 存疑，待人工复核**
+- **char_bai_anran_0430_01 ↔ char_ye_linger_2004_01：cos 0.432 → ⚠️ 存疑，待人工复核**
+- **char_bai_anran_0430_01 ↔ char_ye_lingjun_0130_01：cos 0.461 → ⚠️ 存疑，待人工复核**
+- **char_bai_anran_0430_01 ↔ char_ye_shanshan_0400_01：cos 0.495 → ⚠️ 存疑，待人工复核**
+- **char_bai_anran_0430_01 ↔ char_ye_yuhan_1804_01：cos 0.626 → 同一身份**
+- **char_bai_anran_0430_01 ↔ char_yuchi_ruoli_1000_01：cos 0.629 → 同一身份**
+- **char_bai_anran_0430_01 ↔ char_yun_banxia_0030_01：cos 0.492 → ⚠️ 存疑，待人工复核**
+- **char_bai_anran_0430_01 ↔ char_zhong_manshu_2104_01：cos 0.634 → 同一身份**
+- **char_bai_anran_0430_01 ↔ char_anya_song：cos 0.057 → 不同身份**
+- **char_bai_anran_0430_01 ↔ char_ayano：cos 0.126 → 不同身份**
+- **char_bai_anran_0430_01 ↔ char_chen_xiawei：cos 0.212 → 不同身份**
+- **char_bai_anran_0430_01 ↔ char_jia：cos 0.036 → 不同身份**
+- **char_bai_anran_0430_01 ↔ char_jiang_yueyao：cos 0.267 → 不同身份**
+- **char_bai_anran_0430_01 ↔ char_lin_qingwan：cos 0.346 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_bai_anran_0430_01 ↔ char_liu_yinuo_1923_10：cos -0.066 → 不同身份**
+- **char_bai_anran_0430_01 ↔ char_luo_qingchuan_1805：cos 0.564 → ⚠️ 存疑，待人工复核**
+- **char_bai_anran_0430_01 ↔ char_pei_yuhan_2300_01：cos 0.574 → ⚠️ 存疑，待人工复核**
+- **char_bai_anran_0430_01 ↔ char_qing_luo：cos 0.262 → 不同身份**
+- **char_bai_anran_0430_01 ↔ char_ray_ling：cos 0.112 → 不同身份**
+- **char_bai_anran_0430_01 ↔ char_runcha：cos -0.036 → 不同身份**
+- **char_bai_anran_0430_01 ↔ char_shen_zhilan：cos 0.175 → 不同身份**
+- **char_bai_anran_0430_01 ↔ char_su_xiaotang：cos 0.040 → 不同身份**
+- **char_bai_anran_0430_01 ↔ char_tang_mengli_2200_01：cos 0.605 → 同一身份**
+- **char_bai_anran_0430_01 ↔ char_wen_xiaorou_2140_01：cos 0.626 → 同一身份**
+- **char_bai_anran_0430_01 ↔ char_ye_muchen_2100_01：cos 0.617 → 同一身份**
+- **char_bai_anran_0430_01 ↔ char_yin_xinyue_2330_01：cos 0.595 → ⚠️ 存疑，待人工复核**
+- **char_bai_anran_0430_01 ↔ char_zhao_ruoxi：cos 0.206 → 不同身份**
+- **char_bai_anran_0430_01 ↔ char_duo：cos 0.227 → 不同身份**
+- **char_bai_anran_0430_01 ↔ char_duo3_2：cos 0.106 → 不同身份**
+- **char_bai_anran_0430_01 ↔ char_cen_zhiwei_1936_01：cos 0.239 → 不同身份**
+- **char_bai_anran_0430_01 ↔ char_jiang_ruoli_2007_01：cos 0.240 → 不同身份**
+- **char_bai_anran_0430_01 ↔ char_xiaog3：cos 0.180 → 不同身份**
+- **char_bai_anran_0430_01 ↔ char_xi_manshu_2045_01：cos 0.204 → 不同身份**
+- **char_bai_anran_0430_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.235 → 不同身份**
+- **char_bai_anran_0430_01 ↔ char_linghu_zhixia_2133_01：cos 0.238 → 不同身份**
+- **char_bai_anran_0430_01 ↔ char_qiao_weiyu_2134_01：cos 0.131 → 不同身份**
+- **char_bai_anran_0430_01 ↔ char_jiang_qinghuan_2203_01：cos 0.385 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_bai_anran_0430_01 ↔ char_cen_youqing_2204_01：cos 0.162 → 不同身份**
+- **char_bai_anran_0430_01 ↔ char_zhong_xiaorou_2233_01：cos 0.249 → 不同身份**
+- **char_bai_anran_0430_01 ↔ char_tan_youqing_2234_01：cos 0.249 → 不同身份**
+- **char_bai_anran_0430_01 ↔ char_tantai_lingsu_2303_01：cos 0.497 → ⚠️ 存疑，待人工复核**
+- **char_bai_anran_0430_01 ↔ char_qiao_qinghuan_2304_01：cos 0.497 → ⚠️ 存疑，待人工复核**
+- **char_bai_anran_0430_01 ↔ char_chu_muchen_0004_01：cos -0.014 → 不同身份**
+- **char_bai_anran_0430_01 ↔ char_qiao_chaoyan_0004_01：cos -0.020 → 不同身份**
+- **char_bai_anran_0430_01 ↔ char_xue_qinghuan_0034_01：cos -0.027 → 不同身份**
+- **char_bai_anran_0430_01 ↔ char_tang_yuwei_0217_01：cos 0.270 → 不同身份**
+- **char_bai_anran_0430_01 ↔ char_ouyang_chuxia_0250_01：cos 0.298 → 不同身份**
+- **char_bai_anran_0430_01 ↔ char_bai_zhiruo_0305_01：cos 0.444 → ⚠️ 存疑，待人工复核**
+- **char_bai_anran_0430_01 ↔ char_pei_shanshan_0456_01：cos 0.424 → ⚠️ 存疑，待人工复核**
+- **char_bai_anran_0430_01 ↔ char_xi_qingchuan_0618_01：cos 0.405 → ⚠️ 存疑，待人工复核**
+- **char_bai_anran_0430_01 ↔ char_zhong_linger_0732_01：cos 0.353 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_bai_anran_0430_01 ↔ char_hua_qingdai_1029_01：cos 0.374 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_bai_anran_0430_01 ↔ char_tang_banxia_1156_01：cos 0.466 → ⚠️ 存疑，待人工复核**
+- **char_bai_anran_0430_01 ↔ char_gu_weiyu_1321_01：cos 0.327 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_bai_anran_0430_01 ↔ char_cheng_hongyu_1435_01：cos 0.343 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_bai_anran_0430_01 ↔ char_hua_chuxia_1549_01：cos 0.287 → 不同身份**
+- **char_bai_anran_0430_01 ↔ char_pei_manshu_1701_01：cos 0.302 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_bai_anran_0430_01 ↔ char_ye_nanqiao_1811_01：cos 0.344 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_bai_anran_0430_01 ↔ char_murong_yuyan_1942_01：cos 0.389 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_bai_anran_0430_01 ↔ char_nangong_lingjun_2054_01：cos 0.241 → 不同身份**
+- **char_bai_yuhan_0830_01 ↔ char_cen_yuhan_1934_01：cos 0.507 → ⚠️ 存疑，待人工复核**
+- **char_bai_yuhan_0830_01 ↔ char_chu_ruoli_0800_01：cos 0.525 → ⚠️ 存疑，待人工复核**
+- **char_bai_yuhan_0830_01 ↔ char_fu_caiwei_1833_01：cos 0.684 → 同一身份**
+- **char_bai_yuhan_0830_01 ↔ char_fu_wanzhao_1100_01：cos 0.552 → ⚠️ 存疑，待人工复核**
+- **char_bai_yuhan_0830_01 ↔ char_gu_chaoyan_1904_01：cos 0.471 → ⚠️ 存疑，待人工复核**
+- **char_bai_yuhan_0830_01 ↔ char_huo_ruoxi_1200_01：cos 0.502 → ⚠️ 存疑，待人工复核**
+- **char_bai_yuhan_0830_01 ↔ char_jiang_zhiruo_0300_01：cos 0.695 → 同一身份**
+- **char_bai_yuhan_0830_01 ↔ char_liang_tiange_1303_01：cos 0.468 → ⚠️ 存疑，待人工复核**
+- **char_bai_yuhan_0830_01 ↔ char_liang_yuyan_1333_01：cos 0.708 → 同一身份**
+- **char_bai_yuhan_0830_01 ↔ char_linghu_chuxia_2204_01：cos 0.365 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_bai_yuhan_0830_01 ↔ char_lu_muchen_0530_01：cos 0.364 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_bai_yuhan_0830_01 ↔ char_murong_manshu_1704_01：cos 0.610 → 同一身份**
+- **char_bai_yuhan_0830_01 ↔ char_murong_weiyu_0930_01：cos 0.448 → ⚠️ 存疑，待人工复核**
+- **char_bai_yuhan_0830_01 ↔ char_murong_xingzhu_0200_01：cos 0.585 → ⚠️ 存疑，待人工复核**
+- **char_bai_yuhan_0830_01 ↔ char_ning_chuxia_0000_01：cos 0.701 → 同一身份**
+- **char_bai_yuhan_0830_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.518 → ⚠️ 存疑，待人工复核**
+- **char_bai_yuhan_0830_01 ↔ char_qin_linger_1634_01：cos 0.558 → ⚠️ 存疑，待人工复核**
+- **char_bai_yuhan_0830_01 ↔ char_qin_suqiu_0630_01：cos 0.593 → ⚠️ 存疑，待人工复核**
+- **char_bai_yuhan_0830_01 ↔ char_qin_zhixia_1130_01：cos 0.571 → ⚠️ 存疑，待人工复核**
+- **char_bai_yuhan_0830_01 ↔ char_ruan_lingjun_2034_01：cos 0.528 → ⚠️ 存疑，待人工复核**
+- **char_bai_yuhan_0830_01 ↔ char_ruan_tiange_1403_01：cos 0.569 → ⚠️ 存疑，待人工复核**
+- **char_bai_yuhan_0830_01 ↔ char_shen_hongyu_1734_01：cos 0.776 → 同一身份**
+- **char_bai_yuhan_0830_01 ↔ char_situ_caiwei_0100_01：cos 0.482 → ⚠️ 存疑，待人工复核**
+- **char_bai_yuhan_0830_01 ↔ char_situ_yuhan_0600_01：cos 0.623 → 同一身份**
+- **char_bai_yuhan_0830_01 ↔ char_song_wanzhao_1503_01：cos 0.587 → ⚠️ 存疑，待人工复核**
+- **char_bai_yuhan_0830_01 ↔ char_tan_shanshan_0700_01：cos 0.399 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_bai_yuhan_0830_01 ↔ char_tang_sitian_0900_01：cos 0.568 → ⚠️ 存疑，待人工复核**
+- **char_bai_yuhan_0830_01 ↔ char_tantai_weiyu_1433_01：cos 0.400 → ⚠️ 存疑，待人工复核**
+- **char_bai_yuhan_0830_01 ↔ char_tantai_xingzhu_0230_01：cos 0.589 → ⚠️ 存疑，待人工复核**
+- **char_bai_yuhan_0830_01 ↔ char_tantai_yuwei_0730_01：cos 0.646 → 同一身份**
+- **char_bai_yuhan_0830_01 ↔ char_wen_manshu_1030_01：cos 0.522 → ⚠️ 存疑，待人工复核**
+- **char_bai_yuhan_0830_01 ↔ char_xi_weiyu_2134_01：cos 0.716 → 同一身份**
+- **char_bai_yuhan_0830_01 ↔ char_xue_banxia_0330_01：cos 0.399 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_bai_yuhan_0830_01 ↔ char_ye_hongyu_0500_01：cos 0.453 → ⚠️ 存疑，待人工复核**
+- **char_bai_yuhan_0830_01 ↔ char_ye_linger_2004_01：cos 0.437 → ⚠️ 存疑，待人工复核**
+- **char_bai_yuhan_0830_01 ↔ char_ye_lingjun_0130_01：cos 0.400 → ⚠️ 存疑，待人工复核**
+- **char_bai_yuhan_0830_01 ↔ char_ye_shanshan_0400_01：cos 0.713 → 同一身份**
+- **char_bai_yuhan_0830_01 ↔ char_ye_yuhan_1804_01：cos 0.588 → ⚠️ 存疑，待人工复核**
+- **char_bai_yuhan_0830_01 ↔ char_yuchi_ruoli_1000_01：cos 0.746 → 同一身份**
+- **char_bai_yuhan_0830_01 ↔ char_yun_banxia_0030_01：cos 0.406 → ⚠️ 存疑，待人工复核**
+- **char_bai_yuhan_0830_01 ↔ char_zhong_manshu_2104_01：cos 0.686 → 同一身份**
+- **char_bai_yuhan_0830_01 ↔ char_anya_song：cos 0.078 → 不同身份**
+- **char_bai_yuhan_0830_01 ↔ char_ayano：cos 0.157 → 不同身份**
+- **char_bai_yuhan_0830_01 ↔ char_chen_xiawei：cos 0.194 → 不同身份**
+- **char_bai_yuhan_0830_01 ↔ char_jia：cos 0.135 → 不同身份**
+- **char_bai_yuhan_0830_01 ↔ char_jiang_yueyao：cos 0.236 → 不同身份**
+- **char_bai_yuhan_0830_01 ↔ char_lin_qingwan：cos 0.261 → 不同身份**
+- **char_bai_yuhan_0830_01 ↔ char_liu_yinuo_1923_10：cos -0.000 → 不同身份**
+- **char_bai_yuhan_0830_01 ↔ char_luo_qingchuan_1805：cos 0.590 → ⚠️ 存疑，待人工复核**
+- **char_bai_yuhan_0830_01 ↔ char_pei_yuhan_2300_01：cos 0.711 → 同一身份**
+- **char_bai_yuhan_0830_01 ↔ char_qing_luo：cos 0.369 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_bai_yuhan_0830_01 ↔ char_ray_ling：cos 0.033 → 不同身份**
+- **char_bai_yuhan_0830_01 ↔ char_runcha：cos 0.042 → 不同身份**
+- **char_bai_yuhan_0830_01 ↔ char_shen_zhilan：cos 0.070 → 不同身份**
+- **char_bai_yuhan_0830_01 ↔ char_su_xiaotang：cos 0.078 → 不同身份**
+- **char_bai_yuhan_0830_01 ↔ char_tang_mengli_2200_01：cos 0.732 → 同一身份**
+- **char_bai_yuhan_0830_01 ↔ char_wen_xiaorou_2140_01：cos 0.703 → 同一身份**
+- **char_bai_yuhan_0830_01 ↔ char_ye_muchen_2100_01：cos 0.699 → 同一身份**
+- **char_bai_yuhan_0830_01 ↔ char_yin_xinyue_2330_01：cos 0.712 → 同一身份**
+- **char_bai_yuhan_0830_01 ↔ char_zhao_ruoxi：cos 0.198 → 不同身份**
+- **char_bai_yuhan_0830_01 ↔ char_duo：cos 0.190 → 不同身份**
+- **char_bai_yuhan_0830_01 ↔ char_duo3_2：cos 0.165 → 不同身份**
+- **char_bai_yuhan_0830_01 ↔ char_cen_zhiwei_1936_01：cos 0.251 → 不同身份**
+- **char_bai_yuhan_0830_01 ↔ char_jiang_ruoli_2007_01：cos 0.230 → 不同身份**
+- **char_bai_yuhan_0830_01 ↔ char_xiaog3：cos 0.270 → 不同身份**
+- **char_bai_yuhan_0830_01 ↔ char_xi_manshu_2045_01：cos 0.235 → 不同身份**
+- **char_bai_yuhan_0830_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.175 → 不同身份**
+- **char_bai_yuhan_0830_01 ↔ char_linghu_zhixia_2133_01：cos 0.211 → 不同身份**
+- **char_bai_yuhan_0830_01 ↔ char_qiao_weiyu_2134_01：cos 0.069 → 不同身份**
+- **char_bai_yuhan_0830_01 ↔ char_jiang_qinghuan_2203_01：cos 0.367 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_bai_yuhan_0830_01 ↔ char_cen_youqing_2204_01：cos -0.023 → 不同身份**
+- **char_bai_yuhan_0830_01 ↔ char_zhong_xiaorou_2233_01：cos 0.294 → 不同身份**
+- **char_bai_yuhan_0830_01 ↔ char_tan_youqing_2234_01：cos 0.294 → 不同身份**
+- **char_bai_yuhan_0830_01 ↔ char_tantai_lingsu_2303_01：cos 0.354 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_bai_yuhan_0830_01 ↔ char_qiao_qinghuan_2304_01：cos 0.354 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_bai_yuhan_0830_01 ↔ char_chu_muchen_0004_01：cos 0.021 → 不同身份**
+- **char_bai_yuhan_0830_01 ↔ char_qiao_chaoyan_0004_01：cos 0.015 → 不同身份**
+- **char_bai_yuhan_0830_01 ↔ char_xue_qinghuan_0034_01：cos -0.007 → 不同身份**
+- **char_bai_yuhan_0830_01 ↔ char_tang_yuwei_0217_01：cos 0.256 → 不同身份**
+- **char_bai_yuhan_0830_01 ↔ char_ouyang_chuxia_0250_01：cos 0.286 → 不同身份**
+- **char_bai_yuhan_0830_01 ↔ char_bai_zhiruo_0305_01：cos 0.396 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_bai_yuhan_0830_01 ↔ char_pei_shanshan_0456_01：cos 0.400 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_bai_yuhan_0830_01 ↔ char_xi_qingchuan_0618_01：cos 0.453 → ⚠️ 存疑，待人工复核**
+- **char_bai_yuhan_0830_01 ↔ char_zhong_linger_0732_01：cos 0.254 → 不同身份**
+- **char_bai_yuhan_0830_01 ↔ char_hua_qingdai_1029_01：cos 0.283 → 不同身份**
+- **char_bai_yuhan_0830_01 ↔ char_tang_banxia_1156_01：cos 0.357 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_bai_yuhan_0830_01 ↔ char_gu_weiyu_1321_01：cos 0.265 → 不同身份**
+- **char_bai_yuhan_0830_01 ↔ char_cheng_hongyu_1435_01：cos 0.253 → 不同身份**
+- **char_bai_yuhan_0830_01 ↔ char_hua_chuxia_1549_01：cos 0.182 → 不同身份**
+- **char_bai_yuhan_0830_01 ↔ char_pei_manshu_1701_01：cos 0.249 → 不同身份**
+- **char_bai_yuhan_0830_01 ↔ char_ye_nanqiao_1811_01：cos 0.289 → 不同身份**
+- **char_bai_yuhan_0830_01 ↔ char_murong_yuyan_1942_01：cos 0.439 → ⚠️ 存疑，待人工复核**
+- **char_bai_yuhan_0830_01 ↔ char_nangong_lingjun_2054_01：cos 0.127 → 不同身份**
+- **char_cen_yuhan_1934_01 ↔ char_chu_ruoli_0800_01：cos 0.699 → 同一身份**
+- **char_cen_yuhan_1934_01 ↔ char_fu_caiwei_1833_01：cos 0.609 → 同一身份**
+- **char_cen_yuhan_1934_01 ↔ char_fu_wanzhao_1100_01：cos 0.572 → ⚠️ 存疑，待人工复核**
+- **char_cen_yuhan_1934_01 ↔ char_gu_chaoyan_1904_01：cos 0.750 → 同一身份**
+- **char_cen_yuhan_1934_01 ↔ char_huo_ruoxi_1200_01：cos 0.656 → 同一身份**
+- **char_cen_yuhan_1934_01 ↔ char_jiang_zhiruo_0300_01：cos 0.505 → ⚠️ 存疑，待人工复核**
+- **char_cen_yuhan_1934_01 ↔ char_liang_tiange_1303_01：cos 0.723 → 同一身份**
+- **char_cen_yuhan_1934_01 ↔ char_liang_yuyan_1333_01：cos 0.594 → ⚠️ 存疑，待人工复核**
+- **char_cen_yuhan_1934_01 ↔ char_linghu_chuxia_2204_01：cos 0.673 → 同一身份**
+- **char_cen_yuhan_1934_01 ↔ char_lu_muchen_0530_01：cos 0.730 → 同一身份**
+- **char_cen_yuhan_1934_01 ↔ char_murong_manshu_1704_01：cos 0.689 → 同一身份**
+- **char_cen_yuhan_1934_01 ↔ char_murong_weiyu_0930_01：cos 0.553 → ⚠️ 存疑，待人工复核**
+- **char_cen_yuhan_1934_01 ↔ char_murong_xingzhu_0200_01：cos 0.495 → ⚠️ 存疑，待人工复核**
+- **char_cen_yuhan_1934_01 ↔ char_ning_chuxia_0000_01：cos 0.473 → ⚠️ 存疑，待人工复核**
+- **char_cen_yuhan_1934_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.676 → 同一身份**
+- **char_cen_yuhan_1934_01 ↔ char_qin_linger_1634_01：cos 0.667 → 同一身份**
+- **char_cen_yuhan_1934_01 ↔ char_qin_suqiu_0630_01：cos 0.551 → ⚠️ 存疑，待人工复核**
+- **char_cen_yuhan_1934_01 ↔ char_qin_zhixia_1130_01：cos 0.515 → ⚠️ 存疑，待人工复核**
+- **char_cen_yuhan_1934_01 ↔ char_ruan_lingjun_2034_01：cos 0.690 → 同一身份**
+- **char_cen_yuhan_1934_01 ↔ char_ruan_tiange_1403_01：cos 0.696 → 同一身份**
+- **char_cen_yuhan_1934_01 ↔ char_shen_hongyu_1734_01：cos 0.580 → ⚠️ 存疑，待人工复核**
+- **char_cen_yuhan_1934_01 ↔ char_situ_caiwei_0100_01：cos 0.491 → ⚠️ 存疑，待人工复核**
+- **char_cen_yuhan_1934_01 ↔ char_situ_yuhan_0600_01：cos 0.711 → 同一身份**
+- **char_cen_yuhan_1934_01 ↔ char_song_wanzhao_1503_01：cos 0.608 → 同一身份**
+- **char_cen_yuhan_1934_01 ↔ char_tan_shanshan_0700_01：cos 0.687 → 同一身份**
+- **char_cen_yuhan_1934_01 ↔ char_tang_sitian_0900_01：cos 0.523 → ⚠️ 存疑，待人工复核**
+- **char_cen_yuhan_1934_01 ↔ char_tantai_weiyu_1433_01：cos 0.660 → 同一身份**
+- **char_cen_yuhan_1934_01 ↔ char_tantai_xingzhu_0230_01：cos 0.504 → ⚠️ 存疑，待人工复核**
+- **char_cen_yuhan_1934_01 ↔ char_tantai_yuwei_0730_01：cos 0.500 → ⚠️ 存疑，待人工复核**
+- **char_cen_yuhan_1934_01 ↔ char_wen_manshu_1030_01：cos 0.588 → ⚠️ 存疑，待人工复核**
+- **char_cen_yuhan_1934_01 ↔ char_xi_weiyu_2134_01：cos 0.539 → ⚠️ 存疑，待人工复核**
+- **char_cen_yuhan_1934_01 ↔ char_xue_banxia_0330_01：cos 0.765 → 同一身份**
+- **char_cen_yuhan_1934_01 ↔ char_ye_hongyu_0500_01：cos 0.760 → 同一身份**
+- **char_cen_yuhan_1934_01 ↔ char_ye_linger_2004_01：cos 0.747 → 同一身份**
+- **char_cen_yuhan_1934_01 ↔ char_ye_lingjun_0130_01：cos 0.702 → 同一身份**
+- **char_cen_yuhan_1934_01 ↔ char_ye_shanshan_0400_01：cos 0.560 → ⚠️ 存疑，待人工复核**
+- **char_cen_yuhan_1934_01 ↔ char_ye_yuhan_1804_01：cos 0.596 → ⚠️ 存疑，待人工复核**
+- **char_cen_yuhan_1934_01 ↔ char_yuchi_ruoli_1000_01：cos 0.548 → ⚠️ 存疑，待人工复核**
+- **char_cen_yuhan_1934_01 ↔ char_yun_banxia_0030_01：cos 0.411 → ⚠️ 存疑，待人工复核**
+- **char_cen_yuhan_1934_01 ↔ char_zhong_manshu_2104_01：cos 0.504 → ⚠️ 存疑，待人工复核**
+- **char_cen_yuhan_1934_01 ↔ char_anya_song：cos 0.137 → 不同身份**
+- **char_cen_yuhan_1934_01 ↔ char_ayano：cos 0.032 → 不同身份**
+- **char_cen_yuhan_1934_01 ↔ char_chen_xiawei：cos 0.080 → 不同身份**
+- **char_cen_yuhan_1934_01 ↔ char_jia：cos 0.047 → 不同身份**
+- **char_cen_yuhan_1934_01 ↔ char_jiang_yueyao：cos 0.109 → 不同身份**
+- **char_cen_yuhan_1934_01 ↔ char_lin_qingwan：cos 0.219 → 不同身份**
+- **char_cen_yuhan_1934_01 ↔ char_liu_yinuo_1923_10：cos 0.000 → 不同身份**
+- **char_cen_yuhan_1934_01 ↔ char_luo_qingchuan_1805：cos 0.649 → 同一身份**
+- **char_cen_yuhan_1934_01 ↔ char_pei_yuhan_2300_01：cos 0.552 → ⚠️ 存疑，待人工复核**
+- **char_cen_yuhan_1934_01 ↔ char_qing_luo：cos 0.068 → 不同身份**
+- **char_cen_yuhan_1934_01 ↔ char_ray_ling：cos 0.307 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cen_yuhan_1934_01 ↔ char_runcha：cos -0.013 → 不同身份**
+- **char_cen_yuhan_1934_01 ↔ char_shen_zhilan：cos 0.285 → 不同身份**
+- **char_cen_yuhan_1934_01 ↔ char_su_xiaotang：cos 0.065 → 不同身份**
+- **char_cen_yuhan_1934_01 ↔ char_tang_mengli_2200_01：cos 0.545 → ⚠️ 存疑，待人工复核**
+- **char_cen_yuhan_1934_01 ↔ char_wen_xiaorou_2140_01：cos 0.591 → ⚠️ 存疑，待人工复核**
+- **char_cen_yuhan_1934_01 ↔ char_ye_muchen_2100_01：cos 0.518 → ⚠️ 存疑，待人工复核**
+- **char_cen_yuhan_1934_01 ↔ char_yin_xinyue_2330_01：cos 0.524 → ⚠️ 存疑，待人工复核**
+- **char_cen_yuhan_1934_01 ↔ char_zhao_ruoxi：cos 0.165 → 不同身份**
+- **char_cen_yuhan_1934_01 ↔ char_duo：cos 0.130 → 不同身份**
+- **char_cen_yuhan_1934_01 ↔ char_duo3_2：cos 0.210 → 不同身份**
+- **char_cen_yuhan_1934_01 ↔ char_cen_zhiwei_1936_01：cos 0.369 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cen_yuhan_1934_01 ↔ char_jiang_ruoli_2007_01：cos 0.266 → 不同身份**
+- **char_cen_yuhan_1934_01 ↔ char_xiaog3：cos 0.113 → 不同身份**
+- **char_cen_yuhan_1934_01 ↔ char_xi_manshu_2045_01：cos 0.222 → 不同身份**
+- **char_cen_yuhan_1934_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.339 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cen_yuhan_1934_01 ↔ char_linghu_zhixia_2133_01：cos 0.319 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cen_yuhan_1934_01 ↔ char_qiao_weiyu_2134_01：cos 0.215 → 不同身份**
+- **char_cen_yuhan_1934_01 ↔ char_jiang_qinghuan_2203_01：cos 0.204 → 不同身份**
+- **char_cen_yuhan_1934_01 ↔ char_cen_youqing_2204_01：cos 0.043 → 不同身份**
+- **char_cen_yuhan_1934_01 ↔ char_zhong_xiaorou_2233_01：cos 0.236 → 不同身份**
+- **char_cen_yuhan_1934_01 ↔ char_tan_youqing_2234_01：cos 0.236 → 不同身份**
+- **char_cen_yuhan_1934_01 ↔ char_tantai_lingsu_2303_01：cos 0.302 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cen_yuhan_1934_01 ↔ char_qiao_qinghuan_2304_01：cos 0.302 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cen_yuhan_1934_01 ↔ char_chu_muchen_0004_01：cos 0.021 → 不同身份**
+- **char_cen_yuhan_1934_01 ↔ char_qiao_chaoyan_0004_01：cos -0.106 → 不同身份**
+- **char_cen_yuhan_1934_01 ↔ char_xue_qinghuan_0034_01：cos -0.003 → 不同身份**
+- **char_cen_yuhan_1934_01 ↔ char_tang_yuwei_0217_01：cos 0.190 → 不同身份**
+- **char_cen_yuhan_1934_01 ↔ char_ouyang_chuxia_0250_01：cos 0.178 → 不同身份**
+- **char_cen_yuhan_1934_01 ↔ char_bai_zhiruo_0305_01：cos 0.306 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cen_yuhan_1934_01 ↔ char_pei_shanshan_0456_01：cos 0.265 → 不同身份**
+- **char_cen_yuhan_1934_01 ↔ char_xi_qingchuan_0618_01：cos 0.227 → 不同身份**
+- **char_cen_yuhan_1934_01 ↔ char_zhong_linger_0732_01：cos 0.343 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cen_yuhan_1934_01 ↔ char_hua_qingdai_1029_01：cos 0.258 → 不同身份**
+- **char_cen_yuhan_1934_01 ↔ char_tang_banxia_1156_01：cos 0.366 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cen_yuhan_1934_01 ↔ char_gu_weiyu_1321_01：cos 0.250 → 不同身份**
+- **char_cen_yuhan_1934_01 ↔ char_cheng_hongyu_1435_01：cos 0.198 → 不同身份**
+- **char_cen_yuhan_1934_01 ↔ char_hua_chuxia_1549_01：cos 0.231 → 不同身份**
+- **char_cen_yuhan_1934_01 ↔ char_pei_manshu_1701_01：cos 0.262 → 不同身份**
+- **char_cen_yuhan_1934_01 ↔ char_ye_nanqiao_1811_01：cos 0.241 → 不同身份**
+- **char_cen_yuhan_1934_01 ↔ char_murong_yuyan_1942_01：cos 0.221 → 不同身份**
+- **char_cen_yuhan_1934_01 ↔ char_nangong_lingjun_2054_01：cos 0.325 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_chu_ruoli_0800_01 ↔ char_fu_caiwei_1833_01：cos 0.614 → 同一身份**
+- **char_chu_ruoli_0800_01 ↔ char_fu_wanzhao_1100_01：cos 0.654 → 同一身份**
+- **char_chu_ruoli_0800_01 ↔ char_gu_chaoyan_1904_01：cos 0.767 → 同一身份**
+- **char_chu_ruoli_0800_01 ↔ char_huo_ruoxi_1200_01：cos 0.636 → 同一身份**
+- **char_chu_ruoli_0800_01 ↔ char_jiang_zhiruo_0300_01：cos 0.600 → 同一身份**
+- **char_chu_ruoli_0800_01 ↔ char_liang_tiange_1303_01：cos 0.667 → 同一身份**
+- **char_chu_ruoli_0800_01 ↔ char_liang_yuyan_1333_01：cos 0.667 → 同一身份**
+- **char_chu_ruoli_0800_01 ↔ char_linghu_chuxia_2204_01：cos 0.523 → ⚠️ 存疑，待人工复核**
+- **char_chu_ruoli_0800_01 ↔ char_lu_muchen_0530_01：cos 0.623 → 同一身份**
+- **char_chu_ruoli_0800_01 ↔ char_murong_manshu_1704_01：cos 0.717 → 同一身份**
+- **char_chu_ruoli_0800_01 ↔ char_murong_weiyu_0930_01：cos 0.556 → ⚠️ 存疑，待人工复核**
+- **char_chu_ruoli_0800_01 ↔ char_murong_xingzhu_0200_01：cos 0.477 → ⚠️ 存疑，待人工复核**
+- **char_chu_ruoli_0800_01 ↔ char_ning_chuxia_0000_01：cos 0.563 → ⚠️ 存疑，待人工复核**
+- **char_chu_ruoli_0800_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.726 → 同一身份**
+- **char_chu_ruoli_0800_01 ↔ char_qin_linger_1634_01：cos 0.756 → 同一身份**
+- **char_chu_ruoli_0800_01 ↔ char_qin_suqiu_0630_01：cos 0.637 → 同一身份**
+- **char_chu_ruoli_0800_01 ↔ char_qin_zhixia_1130_01：cos 0.502 → ⚠️ 存疑，待人工复核**
+- **char_chu_ruoli_0800_01 ↔ char_ruan_lingjun_2034_01：cos 0.725 → 同一身份**
+- **char_chu_ruoli_0800_01 ↔ char_ruan_tiange_1403_01：cos 0.680 → 同一身份**
+- **char_chu_ruoli_0800_01 ↔ char_shen_hongyu_1734_01：cos 0.646 → 同一身份**
+- **char_chu_ruoli_0800_01 ↔ char_situ_caiwei_0100_01：cos 0.627 → 同一身份**
+- **char_chu_ruoli_0800_01 ↔ char_situ_yuhan_0600_01：cos 0.709 → 同一身份**
+- **char_chu_ruoli_0800_01 ↔ char_song_wanzhao_1503_01：cos 0.567 → ⚠️ 存疑，待人工复核**
+- **char_chu_ruoli_0800_01 ↔ char_tan_shanshan_0700_01：cos 0.586 → ⚠️ 存疑，待人工复核**
+- **char_chu_ruoli_0800_01 ↔ char_tang_sitian_0900_01：cos 0.655 → 同一身份**
+- **char_chu_ruoli_0800_01 ↔ char_tantai_weiyu_1433_01：cos 0.555 → ⚠️ 存疑，待人工复核**
+- **char_chu_ruoli_0800_01 ↔ char_tantai_xingzhu_0230_01：cos 0.481 → ⚠️ 存疑，待人工复核**
+- **char_chu_ruoli_0800_01 ↔ char_tantai_yuwei_0730_01：cos 0.427 → ⚠️ 存疑，待人工复核**
+- **char_chu_ruoli_0800_01 ↔ char_wen_manshu_1030_01：cos 0.738 → 同一身份**
+- **char_chu_ruoli_0800_01 ↔ char_xi_weiyu_2134_01：cos 0.647 → 同一身份**
+- **char_chu_ruoli_0800_01 ↔ char_xue_banxia_0330_01：cos 0.691 → 同一身份**
+- **char_chu_ruoli_0800_01 ↔ char_ye_hongyu_0500_01：cos 0.751 → 同一身份**
+- **char_chu_ruoli_0800_01 ↔ char_ye_linger_2004_01：cos 0.734 → 同一身份**
+- **char_chu_ruoli_0800_01 ↔ char_ye_lingjun_0130_01：cos 0.603 → 同一身份**
+- **char_chu_ruoli_0800_01 ↔ char_ye_shanshan_0400_01：cos 0.645 → 同一身份**
+- **char_chu_ruoli_0800_01 ↔ char_ye_yuhan_1804_01：cos 0.662 → 同一身份**
+- **char_chu_ruoli_0800_01 ↔ char_yuchi_ruoli_1000_01：cos 0.573 → ⚠️ 存疑，待人工复核**
+- **char_chu_ruoli_0800_01 ↔ char_yun_banxia_0030_01：cos 0.453 → ⚠️ 存疑，待人工复核**
+- **char_chu_ruoli_0800_01 ↔ char_zhong_manshu_2104_01：cos 0.578 → ⚠️ 存疑，待人工复核**
+- **char_chu_ruoli_0800_01 ↔ char_anya_song：cos 0.124 → 不同身份**
+- **char_chu_ruoli_0800_01 ↔ char_ayano：cos 0.146 → 不同身份**
+- **char_chu_ruoli_0800_01 ↔ char_chen_xiawei：cos 0.049 → 不同身份**
+- **char_chu_ruoli_0800_01 ↔ char_jia：cos 0.077 → 不同身份**
+- **char_chu_ruoli_0800_01 ↔ char_jiang_yueyao：cos 0.094 → 不同身份**
+- **char_chu_ruoli_0800_01 ↔ char_lin_qingwan：cos 0.282 → 不同身份**
+- **char_chu_ruoli_0800_01 ↔ char_liu_yinuo_1923_10：cos -0.018 → 不同身份**
+- **char_chu_ruoli_0800_01 ↔ char_luo_qingchuan_1805：cos 0.615 → 同一身份**
+- **char_chu_ruoli_0800_01 ↔ char_pei_yuhan_2300_01：cos 0.509 → ⚠️ 存疑，待人工复核**
+- **char_chu_ruoli_0800_01 ↔ char_qing_luo：cos 0.151 → 不同身份**
+- **char_chu_ruoli_0800_01 ↔ char_ray_ling：cos 0.278 → 不同身份**
+- **char_chu_ruoli_0800_01 ↔ char_runcha：cos 0.018 → 不同身份**
+- **char_chu_ruoli_0800_01 ↔ char_shen_zhilan：cos 0.279 → 不同身份**
+- **char_chu_ruoli_0800_01 ↔ char_su_xiaotang：cos 0.067 → 不同身份**
+- **char_chu_ruoli_0800_01 ↔ char_tang_mengli_2200_01：cos 0.494 → ⚠️ 存疑，待人工复核**
+- **char_chu_ruoli_0800_01 ↔ char_wen_xiaorou_2140_01：cos 0.566 → ⚠️ 存疑，待人工复核**
+- **char_chu_ruoli_0800_01 ↔ char_ye_muchen_2100_01：cos 0.611 → 同一身份**
+- **char_chu_ruoli_0800_01 ↔ char_yin_xinyue_2330_01：cos 0.533 → ⚠️ 存疑，待人工复核**
+- **char_chu_ruoli_0800_01 ↔ char_zhao_ruoxi：cos 0.230 → 不同身份**
+- **char_chu_ruoli_0800_01 ↔ char_duo：cos 0.154 → 不同身份**
+- **char_chu_ruoli_0800_01 ↔ char_duo3_2：cos 0.188 → 不同身份**
+- **char_chu_ruoli_0800_01 ↔ char_cen_zhiwei_1936_01：cos 0.454 → ⚠️ 存疑，待人工复核**
+- **char_chu_ruoli_0800_01 ↔ char_jiang_ruoli_2007_01：cos 0.316 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_chu_ruoli_0800_01 ↔ char_xiaog3：cos 0.063 → 不同身份**
+- **char_chu_ruoli_0800_01 ↔ char_xi_manshu_2045_01：cos 0.279 → 不同身份**
+- **char_chu_ruoli_0800_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.333 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_chu_ruoli_0800_01 ↔ char_linghu_zhixia_2133_01：cos 0.399 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_chu_ruoli_0800_01 ↔ char_qiao_weiyu_2134_01：cos 0.235 → 不同身份**
+- **char_chu_ruoli_0800_01 ↔ char_jiang_qinghuan_2203_01：cos 0.342 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_chu_ruoli_0800_01 ↔ char_cen_youqing_2204_01：cos 0.019 → 不同身份**
+- **char_chu_ruoli_0800_01 ↔ char_zhong_xiaorou_2233_01：cos 0.259 → 不同身份**
+- **char_chu_ruoli_0800_01 ↔ char_tan_youqing_2234_01：cos 0.259 → 不同身份**
+- **char_chu_ruoli_0800_01 ↔ char_tantai_lingsu_2303_01：cos 0.417 → ⚠️ 存疑，待人工复核**
+- **char_chu_ruoli_0800_01 ↔ char_qiao_qinghuan_2304_01：cos 0.417 → ⚠️ 存疑，待人工复核**
+- **char_chu_ruoli_0800_01 ↔ char_chu_muchen_0004_01：cos 0.069 → 不同身份**
+- **char_chu_ruoli_0800_01 ↔ char_qiao_chaoyan_0004_01：cos -0.121 → 不同身份**
+- **char_chu_ruoli_0800_01 ↔ char_xue_qinghuan_0034_01：cos -0.015 → 不同身份**
+- **char_chu_ruoli_0800_01 ↔ char_tang_yuwei_0217_01：cos 0.238 → 不同身份**
+- **char_chu_ruoli_0800_01 ↔ char_ouyang_chuxia_0250_01：cos 0.192 → 不同身份**
+- **char_chu_ruoli_0800_01 ↔ char_bai_zhiruo_0305_01：cos 0.405 → ⚠️ 存疑，待人工复核**
+- **char_chu_ruoli_0800_01 ↔ char_pei_shanshan_0456_01：cos 0.393 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_chu_ruoli_0800_01 ↔ char_xi_qingchuan_0618_01：cos 0.331 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_chu_ruoli_0800_01 ↔ char_zhong_linger_0732_01：cos 0.328 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_chu_ruoli_0800_01 ↔ char_hua_qingdai_1029_01：cos 0.365 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_chu_ruoli_0800_01 ↔ char_tang_banxia_1156_01：cos 0.409 → ⚠️ 存疑，待人工复核**
+- **char_chu_ruoli_0800_01 ↔ char_gu_weiyu_1321_01：cos 0.306 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_chu_ruoli_0800_01 ↔ char_cheng_hongyu_1435_01：cos 0.258 → 不同身份**
+- **char_chu_ruoli_0800_01 ↔ char_hua_chuxia_1549_01：cos 0.277 → 不同身份**
+- **char_chu_ruoli_0800_01 ↔ char_pei_manshu_1701_01：cos 0.261 → 不同身份**
+- **char_chu_ruoli_0800_01 ↔ char_ye_nanqiao_1811_01：cos 0.259 → 不同身份**
+- **char_chu_ruoli_0800_01 ↔ char_murong_yuyan_1942_01：cos 0.345 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_chu_ruoli_0800_01 ↔ char_nangong_lingjun_2054_01：cos 0.333 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_caiwei_1833_01 ↔ char_fu_wanzhao_1100_01：cos 0.652 → 同一身份**
+- **char_fu_caiwei_1833_01 ↔ char_gu_chaoyan_1904_01：cos 0.559 → ⚠️ 存疑，待人工复核**
+- **char_fu_caiwei_1833_01 ↔ char_huo_ruoxi_1200_01：cos 0.581 → ⚠️ 存疑，待人工复核**
+- **char_fu_caiwei_1833_01 ↔ char_jiang_zhiruo_0300_01：cos 0.708 → 同一身份**
+- **char_fu_caiwei_1833_01 ↔ char_liang_tiange_1303_01：cos 0.588 → ⚠️ 存疑，待人工复核**
+- **char_fu_caiwei_1833_01 ↔ char_liang_yuyan_1333_01：cos 0.708 → 同一身份**
+- **char_fu_caiwei_1833_01 ↔ char_linghu_chuxia_2204_01：cos 0.430 → ⚠️ 存疑，待人工复核**
+- **char_fu_caiwei_1833_01 ↔ char_lu_muchen_0530_01：cos 0.526 → ⚠️ 存疑，待人工复核**
+- **char_fu_caiwei_1833_01 ↔ char_murong_manshu_1704_01：cos 0.703 → 同一身份**
+- **char_fu_caiwei_1833_01 ↔ char_murong_weiyu_0930_01：cos 0.563 → ⚠️ 存疑，待人工复核**
+- **char_fu_caiwei_1833_01 ↔ char_murong_xingzhu_0200_01：cos 0.599 → ⚠️ 存疑，待人工复核**
+- **char_fu_caiwei_1833_01 ↔ char_ning_chuxia_0000_01：cos 0.703 → 同一身份**
+- **char_fu_caiwei_1833_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.569 → ⚠️ 存疑，待人工复核**
+- **char_fu_caiwei_1833_01 ↔ char_qin_linger_1634_01：cos 0.689 → 同一身份**
+- **char_fu_caiwei_1833_01 ↔ char_qin_suqiu_0630_01：cos 0.614 → 同一身份**
+- **char_fu_caiwei_1833_01 ↔ char_qin_zhixia_1130_01：cos 0.550 → ⚠️ 存疑，待人工复核**
+- **char_fu_caiwei_1833_01 ↔ char_ruan_lingjun_2034_01：cos 0.655 → 同一身份**
+- **char_fu_caiwei_1833_01 ↔ char_ruan_tiange_1403_01：cos 0.592 → ⚠️ 存疑，待人工复核**
+- **char_fu_caiwei_1833_01 ↔ char_shen_hongyu_1734_01：cos 0.749 → 同一身份**
+- **char_fu_caiwei_1833_01 ↔ char_situ_caiwei_0100_01：cos 0.572 → ⚠️ 存疑，待人工复核**
+- **char_fu_caiwei_1833_01 ↔ char_situ_yuhan_0600_01：cos 0.685 → 同一身份**
+- **char_fu_caiwei_1833_01 ↔ char_song_wanzhao_1503_01：cos 0.682 → 同一身份**
+- **char_fu_caiwei_1833_01 ↔ char_tan_shanshan_0700_01：cos 0.540 → ⚠️ 存疑，待人工复核**
+- **char_fu_caiwei_1833_01 ↔ char_tang_sitian_0900_01：cos 0.639 → 同一身份**
+- **char_fu_caiwei_1833_01 ↔ char_tantai_weiyu_1433_01：cos 0.493 → ⚠️ 存疑，待人工复核**
+- **char_fu_caiwei_1833_01 ↔ char_tantai_xingzhu_0230_01：cos 0.588 → ⚠️ 存疑，待人工复核**
+- **char_fu_caiwei_1833_01 ↔ char_tantai_yuwei_0730_01：cos 0.556 → ⚠️ 存疑，待人工复核**
+- **char_fu_caiwei_1833_01 ↔ char_wen_manshu_1030_01：cos 0.604 → 同一身份**
+- **char_fu_caiwei_1833_01 ↔ char_xi_weiyu_2134_01：cos 0.723 → 同一身份**
+- **char_fu_caiwei_1833_01 ↔ char_xue_banxia_0330_01：cos 0.497 → ⚠️ 存疑，待人工复核**
+- **char_fu_caiwei_1833_01 ↔ char_ye_hongyu_0500_01：cos 0.533 → ⚠️ 存疑，待人工复核**
+- **char_fu_caiwei_1833_01 ↔ char_ye_linger_2004_01：cos 0.556 → ⚠️ 存疑，待人工复核**
+- **char_fu_caiwei_1833_01 ↔ char_ye_lingjun_0130_01：cos 0.561 → ⚠️ 存疑，待人工复核**
+- **char_fu_caiwei_1833_01 ↔ char_ye_shanshan_0400_01：cos 0.645 → 同一身份**
+- **char_fu_caiwei_1833_01 ↔ char_ye_yuhan_1804_01：cos 0.630 → 同一身份**
+- **char_fu_caiwei_1833_01 ↔ char_yuchi_ruoli_1000_01：cos 0.745 → 同一身份**
+- **char_fu_caiwei_1833_01 ↔ char_yun_banxia_0030_01：cos 0.516 → ⚠️ 存疑，待人工复核**
+- **char_fu_caiwei_1833_01 ↔ char_zhong_manshu_2104_01：cos 0.722 → 同一身份**
+- **char_fu_caiwei_1833_01 ↔ char_anya_song：cos 0.115 → 不同身份**
+- **char_fu_caiwei_1833_01 ↔ char_ayano：cos 0.088 → 不同身份**
+- **char_fu_caiwei_1833_01 ↔ char_chen_xiawei：cos 0.192 → 不同身份**
+- **char_fu_caiwei_1833_01 ↔ char_jia：cos 0.081 → 不同身份**
+- **char_fu_caiwei_1833_01 ↔ char_jiang_yueyao：cos 0.283 → 不同身份**
+- **char_fu_caiwei_1833_01 ↔ char_lin_qingwan：cos 0.306 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_caiwei_1833_01 ↔ char_liu_yinuo_1923_10：cos -0.032 → 不同身份**
+- **char_fu_caiwei_1833_01 ↔ char_luo_qingchuan_1805：cos 0.683 → 同一身份**
+- **char_fu_caiwei_1833_01 ↔ char_pei_yuhan_2300_01：cos 0.714 → 同一身份**
+- **char_fu_caiwei_1833_01 ↔ char_qing_luo：cos 0.269 → 不同身份**
+- **char_fu_caiwei_1833_01 ↔ char_ray_ling：cos 0.201 → 不同身份**
+- **char_fu_caiwei_1833_01 ↔ char_runcha：cos -0.045 → 不同身份**
+- **char_fu_caiwei_1833_01 ↔ char_shen_zhilan：cos 0.212 → 不同身份**
+- **char_fu_caiwei_1833_01 ↔ char_su_xiaotang：cos 0.072 → 不同身份**
+- **char_fu_caiwei_1833_01 ↔ char_tang_mengli_2200_01：cos 0.723 → 同一身份**
+- **char_fu_caiwei_1833_01 ↔ char_wen_xiaorou_2140_01：cos 0.714 → 同一身份**
+- **char_fu_caiwei_1833_01 ↔ char_ye_muchen_2100_01：cos 0.697 → 同一身份**
+- **char_fu_caiwei_1833_01 ↔ char_yin_xinyue_2330_01：cos 0.711 → 同一身份**
+- **char_fu_caiwei_1833_01 ↔ char_zhao_ruoxi：cos 0.305 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_caiwei_1833_01 ↔ char_duo：cos 0.186 → 不同身份**
+- **char_fu_caiwei_1833_01 ↔ char_duo3_2：cos 0.111 → 不同身份**
+- **char_fu_caiwei_1833_01 ↔ char_cen_zhiwei_1936_01：cos 0.313 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_caiwei_1833_01 ↔ char_jiang_ruoli_2007_01：cos 0.235 → 不同身份**
+- **char_fu_caiwei_1833_01 ↔ char_xiaog3：cos 0.214 → 不同身份**
+- **char_fu_caiwei_1833_01 ↔ char_xi_manshu_2045_01：cos 0.308 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_caiwei_1833_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.233 → 不同身份**
+- **char_fu_caiwei_1833_01 ↔ char_linghu_zhixia_2133_01：cos 0.272 → 不同身份**
+- **char_fu_caiwei_1833_01 ↔ char_qiao_weiyu_2134_01：cos 0.197 → 不同身份**
+- **char_fu_caiwei_1833_01 ↔ char_jiang_qinghuan_2203_01：cos 0.395 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_caiwei_1833_01 ↔ char_cen_youqing_2204_01：cos 0.111 → 不同身份**
+- **char_fu_caiwei_1833_01 ↔ char_zhong_xiaorou_2233_01：cos 0.341 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_caiwei_1833_01 ↔ char_tan_youqing_2234_01：cos 0.341 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_caiwei_1833_01 ↔ char_tantai_lingsu_2303_01：cos 0.437 → ⚠️ 存疑，待人工复核**
+- **char_fu_caiwei_1833_01 ↔ char_qiao_qinghuan_2304_01：cos 0.437 → ⚠️ 存疑，待人工复核**
+- **char_fu_caiwei_1833_01 ↔ char_chu_muchen_0004_01：cos -0.030 → 不同身份**
+- **char_fu_caiwei_1833_01 ↔ char_qiao_chaoyan_0004_01：cos -0.016 → 不同身份**
+- **char_fu_caiwei_1833_01 ↔ char_xue_qinghuan_0034_01：cos -0.038 → 不同身份**
+- **char_fu_caiwei_1833_01 ↔ char_tang_yuwei_0217_01：cos 0.346 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_caiwei_1833_01 ↔ char_ouyang_chuxia_0250_01：cos 0.265 → 不同身份**
+- **char_fu_caiwei_1833_01 ↔ char_bai_zhiruo_0305_01：cos 0.458 → ⚠️ 存疑，待人工复核**
+- **char_fu_caiwei_1833_01 ↔ char_pei_shanshan_0456_01：cos 0.450 → ⚠️ 存疑，待人工复核**
+- **char_fu_caiwei_1833_01 ↔ char_xi_qingchuan_0618_01：cos 0.408 → ⚠️ 存疑，待人工复核**
+- **char_fu_caiwei_1833_01 ↔ char_zhong_linger_0732_01：cos 0.348 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_caiwei_1833_01 ↔ char_hua_qingdai_1029_01：cos 0.336 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_caiwei_1833_01 ↔ char_tang_banxia_1156_01：cos 0.436 → ⚠️ 存疑，待人工复核**
+- **char_fu_caiwei_1833_01 ↔ char_gu_weiyu_1321_01：cos 0.367 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_caiwei_1833_01 ↔ char_cheng_hongyu_1435_01：cos 0.302 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_caiwei_1833_01 ↔ char_hua_chuxia_1549_01：cos 0.224 → 不同身份**
+- **char_fu_caiwei_1833_01 ↔ char_pei_manshu_1701_01：cos 0.310 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_caiwei_1833_01 ↔ char_ye_nanqiao_1811_01：cos 0.290 → 不同身份**
+- **char_fu_caiwei_1833_01 ↔ char_murong_yuyan_1942_01：cos 0.365 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_caiwei_1833_01 ↔ char_nangong_lingjun_2054_01：cos 0.268 → 不同身份**
+- **char_fu_wanzhao_1100_01 ↔ char_gu_chaoyan_1904_01：cos 0.700 → 同一身份**
+- **char_fu_wanzhao_1100_01 ↔ char_huo_ruoxi_1200_01：cos 0.592 → ⚠️ 存疑，待人工复核**
+- **char_fu_wanzhao_1100_01 ↔ char_jiang_zhiruo_0300_01：cos 0.554 → ⚠️ 存疑，待人工复核**
+- **char_fu_wanzhao_1100_01 ↔ char_liang_tiange_1303_01：cos 0.579 → ⚠️ 存疑，待人工复核**
+- **char_fu_wanzhao_1100_01 ↔ char_liang_yuyan_1333_01：cos 0.682 → 同一身份**
+- **char_fu_wanzhao_1100_01 ↔ char_linghu_chuxia_2204_01：cos 0.364 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_wanzhao_1100_01 ↔ char_lu_muchen_0530_01：cos 0.536 → ⚠️ 存疑，待人工复核**
+- **char_fu_wanzhao_1100_01 ↔ char_murong_manshu_1704_01：cos 0.730 → 同一身份**
+- **char_fu_wanzhao_1100_01 ↔ char_murong_weiyu_0930_01：cos 0.602 → 同一身份**
+- **char_fu_wanzhao_1100_01 ↔ char_murong_xingzhu_0200_01：cos 0.378 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_wanzhao_1100_01 ↔ char_ning_chuxia_0000_01：cos 0.512 → ⚠️ 存疑，待人工复核**
+- **char_fu_wanzhao_1100_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.611 → 同一身份**
+- **char_fu_wanzhao_1100_01 ↔ char_qin_linger_1634_01：cos 0.717 → 同一身份**
+- **char_fu_wanzhao_1100_01 ↔ char_qin_suqiu_0630_01：cos 0.596 → ⚠️ 存疑，待人工复核**
+- **char_fu_wanzhao_1100_01 ↔ char_qin_zhixia_1130_01：cos 0.461 → ⚠️ 存疑，待人工复核**
+- **char_fu_wanzhao_1100_01 ↔ char_ruan_lingjun_2034_01：cos 0.693 → 同一身份**
+- **char_fu_wanzhao_1100_01 ↔ char_ruan_tiange_1403_01：cos 0.543 → ⚠️ 存疑，待人工复核**
+- **char_fu_wanzhao_1100_01 ↔ char_shen_hongyu_1734_01：cos 0.648 → 同一身份**
+- **char_fu_wanzhao_1100_01 ↔ char_situ_caiwei_0100_01：cos 0.704 → 同一身份**
+- **char_fu_wanzhao_1100_01 ↔ char_situ_yuhan_0600_01：cos 0.652 → 同一身份**
+- **char_fu_wanzhao_1100_01 ↔ char_song_wanzhao_1503_01：cos 0.599 → ⚠️ 存疑，待人工复核**
+- **char_fu_wanzhao_1100_01 ↔ char_tan_shanshan_0700_01：cos 0.528 → ⚠️ 存疑，待人工复核**
+- **char_fu_wanzhao_1100_01 ↔ char_tang_sitian_0900_01：cos 0.690 → 同一身份**
+- **char_fu_wanzhao_1100_01 ↔ char_tantai_weiyu_1433_01：cos 0.389 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_wanzhao_1100_01 ↔ char_tantai_xingzhu_0230_01：cos 0.441 → ⚠️ 存疑，待人工复核**
+- **char_fu_wanzhao_1100_01 ↔ char_tantai_yuwei_0730_01：cos 0.380 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_wanzhao_1100_01 ↔ char_wen_manshu_1030_01：cos 0.633 → 同一身份**
+- **char_fu_wanzhao_1100_01 ↔ char_xi_weiyu_2134_01：cos 0.621 → 同一身份**
+- **char_fu_wanzhao_1100_01 ↔ char_xue_banxia_0330_01：cos 0.518 → ⚠️ 存疑，待人工复核**
+- **char_fu_wanzhao_1100_01 ↔ char_ye_hongyu_0500_01：cos 0.581 → ⚠️ 存疑，待人工复核**
+- **char_fu_wanzhao_1100_01 ↔ char_ye_linger_2004_01：cos 0.596 → ⚠️ 存疑，待人工复核**
+- **char_fu_wanzhao_1100_01 ↔ char_ye_lingjun_0130_01：cos 0.467 → ⚠️ 存疑，待人工复核**
+- **char_fu_wanzhao_1100_01 ↔ char_ye_shanshan_0400_01：cos 0.488 → ⚠️ 存疑，待人工复核**
+- **char_fu_wanzhao_1100_01 ↔ char_ye_yuhan_1804_01：cos 0.568 → ⚠️ 存疑，待人工复核**
+- **char_fu_wanzhao_1100_01 ↔ char_yuchi_ruoli_1000_01：cos 0.627 → 同一身份**
+- **char_fu_wanzhao_1100_01 ↔ char_yun_banxia_0030_01：cos 0.505 → ⚠️ 存疑，待人工复核**
+- **char_fu_wanzhao_1100_01 ↔ char_zhong_manshu_2104_01：cos 0.649 → 同一身份**
+- **char_fu_wanzhao_1100_01 ↔ char_anya_song：cos 0.139 → 不同身份**
+- **char_fu_wanzhao_1100_01 ↔ char_ayano：cos 0.131 → 不同身份**
+- **char_fu_wanzhao_1100_01 ↔ char_chen_xiawei：cos 0.138 → 不同身份**
+- **char_fu_wanzhao_1100_01 ↔ char_jia：cos 0.124 → 不同身份**
+- **char_fu_wanzhao_1100_01 ↔ char_jiang_yueyao：cos 0.345 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_wanzhao_1100_01 ↔ char_lin_qingwan：cos 0.363 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_wanzhao_1100_01 ↔ char_liu_yinuo_1923_10：cos -0.001 → 不同身份**
+- **char_fu_wanzhao_1100_01 ↔ char_luo_qingchuan_1805：cos 0.613 → 同一身份**
+- **char_fu_wanzhao_1100_01 ↔ char_pei_yuhan_2300_01：cos 0.436 → ⚠️ 存疑，待人工复核**
+- **char_fu_wanzhao_1100_01 ↔ char_qing_luo：cos 0.181 → 不同身份**
+- **char_fu_wanzhao_1100_01 ↔ char_ray_ling：cos 0.254 → 不同身份**
+- **char_fu_wanzhao_1100_01 ↔ char_runcha：cos -0.070 → 不同身份**
+- **char_fu_wanzhao_1100_01 ↔ char_shen_zhilan：cos 0.258 → 不同身份**
+- **char_fu_wanzhao_1100_01 ↔ char_su_xiaotang：cos 0.070 → 不同身份**
+- **char_fu_wanzhao_1100_01 ↔ char_tang_mengli_2200_01：cos 0.516 → ⚠️ 存疑，待人工复核**
+- **char_fu_wanzhao_1100_01 ↔ char_wen_xiaorou_2140_01：cos 0.541 → ⚠️ 存疑，待人工复核**
+- **char_fu_wanzhao_1100_01 ↔ char_ye_muchen_2100_01：cos 0.517 → ⚠️ 存疑，待人工复核**
+- **char_fu_wanzhao_1100_01 ↔ char_yin_xinyue_2330_01：cos 0.519 → ⚠️ 存疑，待人工复核**
+- **char_fu_wanzhao_1100_01 ↔ char_zhao_ruoxi：cos 0.306 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_wanzhao_1100_01 ↔ char_duo：cos 0.163 → 不同身份**
+- **char_fu_wanzhao_1100_01 ↔ char_duo3_2：cos 0.126 → 不同身份**
+- **char_fu_wanzhao_1100_01 ↔ char_cen_zhiwei_1936_01：cos 0.433 → ⚠️ 存疑，待人工复核**
+- **char_fu_wanzhao_1100_01 ↔ char_jiang_ruoli_2007_01：cos 0.344 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_wanzhao_1100_01 ↔ char_xiaog3：cos 0.038 → 不同身份**
+- **char_fu_wanzhao_1100_01 ↔ char_xi_manshu_2045_01：cos 0.309 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_wanzhao_1100_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.281 → 不同身份**
+- **char_fu_wanzhao_1100_01 ↔ char_linghu_zhixia_2133_01：cos 0.315 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_wanzhao_1100_01 ↔ char_qiao_weiyu_2134_01：cos 0.264 → 不同身份**
+- **char_fu_wanzhao_1100_01 ↔ char_jiang_qinghuan_2203_01：cos 0.492 → ⚠️ 存疑，待人工复核**
+- **char_fu_wanzhao_1100_01 ↔ char_cen_youqing_2204_01：cos 0.261 → 不同身份**
+- **char_fu_wanzhao_1100_01 ↔ char_zhong_xiaorou_2233_01：cos 0.325 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_wanzhao_1100_01 ↔ char_tan_youqing_2234_01：cos 0.325 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_wanzhao_1100_01 ↔ char_tantai_lingsu_2303_01：cos 0.443 → ⚠️ 存疑，待人工复核**
+- **char_fu_wanzhao_1100_01 ↔ char_qiao_qinghuan_2304_01：cos 0.443 → ⚠️ 存疑，待人工复核**
+- **char_fu_wanzhao_1100_01 ↔ char_chu_muchen_0004_01：cos 0.029 → 不同身份**
+- **char_fu_wanzhao_1100_01 ↔ char_qiao_chaoyan_0004_01：cos -0.031 → 不同身份**
+- **char_fu_wanzhao_1100_01 ↔ char_xue_qinghuan_0034_01：cos -0.041 → 不同身份**
+- **char_fu_wanzhao_1100_01 ↔ char_tang_yuwei_0217_01：cos 0.228 → 不同身份**
+- **char_fu_wanzhao_1100_01 ↔ char_ouyang_chuxia_0250_01：cos 0.370 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_wanzhao_1100_01 ↔ char_bai_zhiruo_0305_01：cos 0.468 → ⚠️ 存疑，待人工复核**
+- **char_fu_wanzhao_1100_01 ↔ char_pei_shanshan_0456_01：cos 0.471 → ⚠️ 存疑，待人工复核**
+- **char_fu_wanzhao_1100_01 ↔ char_xi_qingchuan_0618_01：cos 0.486 → ⚠️ 存疑，待人工复核**
+- **char_fu_wanzhao_1100_01 ↔ char_zhong_linger_0732_01：cos 0.416 → ⚠️ 存疑，待人工复核**
+- **char_fu_wanzhao_1100_01 ↔ char_hua_qingdai_1029_01：cos 0.467 → ⚠️ 存疑，待人工复核**
+- **char_fu_wanzhao_1100_01 ↔ char_tang_banxia_1156_01：cos 0.456 → ⚠️ 存疑，待人工复核**
+- **char_fu_wanzhao_1100_01 ↔ char_gu_weiyu_1321_01：cos 0.448 → ⚠️ 存疑，待人工复核**
+- **char_fu_wanzhao_1100_01 ↔ char_cheng_hongyu_1435_01：cos 0.403 → ⚠️ 存疑，待人工复核**
+- **char_fu_wanzhao_1100_01 ↔ char_hua_chuxia_1549_01：cos 0.346 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_wanzhao_1100_01 ↔ char_pei_manshu_1701_01：cos 0.383 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_wanzhao_1100_01 ↔ char_ye_nanqiao_1811_01：cos 0.363 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_wanzhao_1100_01 ↔ char_murong_yuyan_1942_01：cos 0.379 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_fu_wanzhao_1100_01 ↔ char_nangong_lingjun_2054_01：cos 0.408 → ⚠️ 存疑，待人工复核**
+- **char_gu_chaoyan_1904_01 ↔ char_huo_ruoxi_1200_01：cos 0.626 → 同一身份**
+- **char_gu_chaoyan_1904_01 ↔ char_jiang_zhiruo_0300_01：cos 0.475 → ⚠️ 存疑，待人工复核**
+- **char_gu_chaoyan_1904_01 ↔ char_liang_tiange_1303_01：cos 0.735 → 同一身份**
+- **char_gu_chaoyan_1904_01 ↔ char_liang_yuyan_1333_01：cos 0.601 → 同一身份**
+- **char_gu_chaoyan_1904_01 ↔ char_linghu_chuxia_2204_01：cos 0.572 → ⚠️ 存疑，待人工复核**
+- **char_gu_chaoyan_1904_01 ↔ char_lu_muchen_0530_01：cos 0.733 → 同一身份**
+- **char_gu_chaoyan_1904_01 ↔ char_murong_manshu_1704_01：cos 0.664 → 同一身份**
+- **char_gu_chaoyan_1904_01 ↔ char_murong_weiyu_0930_01：cos 0.641 → 同一身份**
+- **char_gu_chaoyan_1904_01 ↔ char_murong_xingzhu_0200_01：cos 0.371 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_gu_chaoyan_1904_01 ↔ char_ning_chuxia_0000_01：cos 0.452 → ⚠️ 存疑，待人工复核**
+- **char_gu_chaoyan_1904_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.757 → 同一身份**
+- **char_gu_chaoyan_1904_01 ↔ char_qin_linger_1634_01：cos 0.687 → 同一身份**
+- **char_gu_chaoyan_1904_01 ↔ char_qin_suqiu_0630_01：cos 0.586 → ⚠️ 存疑，待人工复核**
+- **char_gu_chaoyan_1904_01 ↔ char_qin_zhixia_1130_01：cos 0.489 → ⚠️ 存疑，待人工复核**
+- **char_gu_chaoyan_1904_01 ↔ char_ruan_lingjun_2034_01：cos 0.694 → 同一身份**
+- **char_gu_chaoyan_1904_01 ↔ char_ruan_tiange_1403_01：cos 0.706 → 同一身份**
+- **char_gu_chaoyan_1904_01 ↔ char_shen_hongyu_1734_01：cos 0.590 → ⚠️ 存疑，待人工复核**
+- **char_gu_chaoyan_1904_01 ↔ char_situ_caiwei_0100_01：cos 0.579 → ⚠️ 存疑，待人工复核**
+- **char_gu_chaoyan_1904_01 ↔ char_situ_yuhan_0600_01：cos 0.662 → 同一身份**
+- **char_gu_chaoyan_1904_01 ↔ char_song_wanzhao_1503_01：cos 0.589 → ⚠️ 存疑，待人工复核**
+- **char_gu_chaoyan_1904_01 ↔ char_tan_shanshan_0700_01：cos 0.671 → 同一身份**
+- **char_gu_chaoyan_1904_01 ↔ char_tang_sitian_0900_01：cos 0.591 → ⚠️ 存疑，待人工复核**
+- **char_gu_chaoyan_1904_01 ↔ char_tantai_weiyu_1433_01：cos 0.574 → ⚠️ 存疑，待人工复核**
+- **char_gu_chaoyan_1904_01 ↔ char_tantai_xingzhu_0230_01：cos 0.379 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_gu_chaoyan_1904_01 ↔ char_tantai_yuwei_0730_01：cos 0.332 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_gu_chaoyan_1904_01 ↔ char_wen_manshu_1030_01：cos 0.651 → 同一身份**
+- **char_gu_chaoyan_1904_01 ↔ char_xi_weiyu_2134_01：cos 0.535 → ⚠️ 存疑，待人工复核**
+- **char_gu_chaoyan_1904_01 ↔ char_xue_banxia_0330_01：cos 0.752 → 同一身份**
+- **char_gu_chaoyan_1904_01 ↔ char_ye_hongyu_0500_01：cos 0.799 → 同一身份**
+- **char_gu_chaoyan_1904_01 ↔ char_ye_linger_2004_01：cos 0.791 → 同一身份**
+- **char_gu_chaoyan_1904_01 ↔ char_ye_lingjun_0130_01：cos 0.670 → 同一身份**
+- **char_gu_chaoyan_1904_01 ↔ char_ye_shanshan_0400_01：cos 0.525 → ⚠️ 存疑，待人工复核**
+- **char_gu_chaoyan_1904_01 ↔ char_ye_yuhan_1804_01：cos 0.621 → 同一身份**
+- **char_gu_chaoyan_1904_01 ↔ char_yuchi_ruoli_1000_01：cos 0.534 → ⚠️ 存疑，待人工复核**
+- **char_gu_chaoyan_1904_01 ↔ char_yun_banxia_0030_01：cos 0.463 → ⚠️ 存疑，待人工复核**
+- **char_gu_chaoyan_1904_01 ↔ char_zhong_manshu_2104_01：cos 0.530 → ⚠️ 存疑，待人工复核**
+- **char_gu_chaoyan_1904_01 ↔ char_anya_song：cos 0.134 → 不同身份**
+- **char_gu_chaoyan_1904_01 ↔ char_ayano：cos 0.122 → 不同身份**
+- **char_gu_chaoyan_1904_01 ↔ char_chen_xiawei：cos 0.016 → 不同身份**
+- **char_gu_chaoyan_1904_01 ↔ char_jia：cos 0.064 → 不同身份**
+- **char_gu_chaoyan_1904_01 ↔ char_jiang_yueyao：cos 0.131 → 不同身份**
+- **char_gu_chaoyan_1904_01 ↔ char_lin_qingwan：cos 0.317 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_gu_chaoyan_1904_01 ↔ char_liu_yinuo_1923_10：cos -0.007 → 不同身份**
+- **char_gu_chaoyan_1904_01 ↔ char_luo_qingchuan_1805：cos 0.626 → 同一身份**
+- **char_gu_chaoyan_1904_01 ↔ char_pei_yuhan_2300_01：cos 0.395 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_gu_chaoyan_1904_01 ↔ char_qing_luo：cos 0.084 → 不同身份**
+- **char_gu_chaoyan_1904_01 ↔ char_ray_ling：cos 0.293 → 不同身份**
+- **char_gu_chaoyan_1904_01 ↔ char_runcha：cos 0.022 → 不同身份**
+- **char_gu_chaoyan_1904_01 ↔ char_shen_zhilan：cos 0.279 → 不同身份**
+- **char_gu_chaoyan_1904_01 ↔ char_su_xiaotang：cos 0.057 → 不同身份**
+- **char_gu_chaoyan_1904_01 ↔ char_tang_mengli_2200_01：cos 0.465 → ⚠️ 存疑，待人工复核**
+- **char_gu_chaoyan_1904_01 ↔ char_wen_xiaorou_2140_01：cos 0.508 → ⚠️ 存疑，待人工复核**
+- **char_gu_chaoyan_1904_01 ↔ char_ye_muchen_2100_01：cos 0.506 → ⚠️ 存疑，待人工复核**
+- **char_gu_chaoyan_1904_01 ↔ char_yin_xinyue_2330_01：cos 0.471 → ⚠️ 存疑，待人工复核**
+- **char_gu_chaoyan_1904_01 ↔ char_zhao_ruoxi：cos 0.247 → 不同身份**
+- **char_gu_chaoyan_1904_01 ↔ char_duo：cos 0.200 → 不同身份**
+- **char_gu_chaoyan_1904_01 ↔ char_duo3_2：cos 0.118 → 不同身份**
+- **char_gu_chaoyan_1904_01 ↔ char_cen_zhiwei_1936_01：cos 0.486 → ⚠️ 存疑，待人工复核**
+- **char_gu_chaoyan_1904_01 ↔ char_jiang_ruoli_2007_01：cos 0.401 → ⚠️ 存疑，待人工复核**
+- **char_gu_chaoyan_1904_01 ↔ char_xiaog3：cos 0.011 → 不同身份**
+- **char_gu_chaoyan_1904_01 ↔ char_xi_manshu_2045_01：cos 0.287 → 不同身份**
+- **char_gu_chaoyan_1904_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.391 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_gu_chaoyan_1904_01 ↔ char_linghu_zhixia_2133_01：cos 0.395 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_gu_chaoyan_1904_01 ↔ char_qiao_weiyu_2134_01：cos 0.302 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_gu_chaoyan_1904_01 ↔ char_jiang_qinghuan_2203_01：cos 0.308 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_gu_chaoyan_1904_01 ↔ char_cen_youqing_2204_01：cos 0.104 → 不同身份**
+- **char_gu_chaoyan_1904_01 ↔ char_zhong_xiaorou_2233_01：cos 0.208 → 不同身份**
+- **char_gu_chaoyan_1904_01 ↔ char_tan_youqing_2234_01：cos 0.208 → 不同身份**
+- **char_gu_chaoyan_1904_01 ↔ char_tantai_lingsu_2303_01：cos 0.355 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_gu_chaoyan_1904_01 ↔ char_qiao_qinghuan_2304_01：cos 0.355 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_gu_chaoyan_1904_01 ↔ char_chu_muchen_0004_01：cos 0.027 → 不同身份**
+- **char_gu_chaoyan_1904_01 ↔ char_qiao_chaoyan_0004_01：cos -0.052 → 不同身份**
+- **char_gu_chaoyan_1904_01 ↔ char_xue_qinghuan_0034_01：cos 0.009 → 不同身份**
+- **char_gu_chaoyan_1904_01 ↔ char_tang_yuwei_0217_01：cos 0.182 → 不同身份**
+- **char_gu_chaoyan_1904_01 ↔ char_ouyang_chuxia_0250_01：cos 0.194 → 不同身份**
+- **char_gu_chaoyan_1904_01 ↔ char_bai_zhiruo_0305_01：cos 0.434 → ⚠️ 存疑，待人工复核**
+- **char_gu_chaoyan_1904_01 ↔ char_pei_shanshan_0456_01：cos 0.352 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_gu_chaoyan_1904_01 ↔ char_xi_qingchuan_0618_01：cos 0.313 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_gu_chaoyan_1904_01 ↔ char_zhong_linger_0732_01：cos 0.374 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_gu_chaoyan_1904_01 ↔ char_hua_qingdai_1029_01：cos 0.379 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_gu_chaoyan_1904_01 ↔ char_tang_banxia_1156_01：cos 0.459 → ⚠️ 存疑，待人工复核**
+- **char_gu_chaoyan_1904_01 ↔ char_gu_weiyu_1321_01：cos 0.322 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_gu_chaoyan_1904_01 ↔ char_cheng_hongyu_1435_01：cos 0.263 → 不同身份**
+- **char_gu_chaoyan_1904_01 ↔ char_hua_chuxia_1549_01：cos 0.286 → 不同身份**
+- **char_gu_chaoyan_1904_01 ↔ char_pei_manshu_1701_01：cos 0.244 → 不同身份**
+- **char_gu_chaoyan_1904_01 ↔ char_ye_nanqiao_1811_01：cos 0.286 → 不同身份**
+- **char_gu_chaoyan_1904_01 ↔ char_murong_yuyan_1942_01：cos 0.271 → 不同身份**
+- **char_gu_chaoyan_1904_01 ↔ char_nangong_lingjun_2054_01：cos 0.421 → ⚠️ 存疑，待人工复核**
+- **char_huo_ruoxi_1200_01 ↔ char_jiang_zhiruo_0300_01：cos 0.543 → ⚠️ 存疑，待人工复核**
+- **char_huo_ruoxi_1200_01 ↔ char_liang_tiange_1303_01：cos 0.654 → 同一身份**
+- **char_huo_ruoxi_1200_01 ↔ char_liang_yuyan_1333_01：cos 0.602 → 同一身份**
+- **char_huo_ruoxi_1200_01 ↔ char_linghu_chuxia_2204_01：cos 0.607 → 同一身份**
+- **char_huo_ruoxi_1200_01 ↔ char_lu_muchen_0530_01：cos 0.672 → 同一身份**
+- **char_huo_ruoxi_1200_01 ↔ char_murong_manshu_1704_01：cos 0.680 → 同一身份**
+- **char_huo_ruoxi_1200_01 ↔ char_murong_weiyu_0930_01：cos 0.617 → 同一身份**
+- **char_huo_ruoxi_1200_01 ↔ char_murong_xingzhu_0200_01：cos 0.502 → ⚠️ 存疑，待人工复核**
+- **char_huo_ruoxi_1200_01 ↔ char_ning_chuxia_0000_01：cos 0.518 → ⚠️ 存疑，待人工复核**
+- **char_huo_ruoxi_1200_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.582 → ⚠️ 存疑，待人工复核**
+- **char_huo_ruoxi_1200_01 ↔ char_qin_linger_1634_01：cos 0.662 → 同一身份**
+- **char_huo_ruoxi_1200_01 ↔ char_qin_suqiu_0630_01：cos 0.562 → ⚠️ 存疑，待人工复核**
+- **char_huo_ruoxi_1200_01 ↔ char_qin_zhixia_1130_01：cos 0.502 → ⚠️ 存疑，待人工复核**
+- **char_huo_ruoxi_1200_01 ↔ char_ruan_lingjun_2034_01：cos 0.679 → 同一身份**
+- **char_huo_ruoxi_1200_01 ↔ char_ruan_tiange_1403_01：cos 0.660 → 同一身份**
+- **char_huo_ruoxi_1200_01 ↔ char_shen_hongyu_1734_01：cos 0.638 → 同一身份**
+- **char_huo_ruoxi_1200_01 ↔ char_situ_caiwei_0100_01：cos 0.434 → ⚠️ 存疑，待人工复核**
+- **char_huo_ruoxi_1200_01 ↔ char_situ_yuhan_0600_01：cos 0.616 → 同一身份**
+- **char_huo_ruoxi_1200_01 ↔ char_song_wanzhao_1503_01：cos 0.654 → 同一身份**
+- **char_huo_ruoxi_1200_01 ↔ char_tan_shanshan_0700_01：cos 0.633 → 同一身份**
+- **char_huo_ruoxi_1200_01 ↔ char_tang_sitian_0900_01：cos 0.502 → ⚠️ 存疑，待人工复核**
+- **char_huo_ruoxi_1200_01 ↔ char_tantai_weiyu_1433_01：cos 0.594 → ⚠️ 存疑，待人工复核**
+- **char_huo_ruoxi_1200_01 ↔ char_tantai_xingzhu_0230_01：cos 0.505 → ⚠️ 存疑，待人工复核**
+- **char_huo_ruoxi_1200_01 ↔ char_tantai_yuwei_0730_01：cos 0.525 → ⚠️ 存疑，待人工复核**
+- **char_huo_ruoxi_1200_01 ↔ char_wen_manshu_1030_01：cos 0.589 → ⚠️ 存疑，待人工复核**
+- **char_huo_ruoxi_1200_01 ↔ char_xi_weiyu_2134_01：cos 0.495 → ⚠️ 存疑，待人工复核**
+- **char_huo_ruoxi_1200_01 ↔ char_xue_banxia_0330_01：cos 0.637 → 同一身份**
+- **char_huo_ruoxi_1200_01 ↔ char_ye_hongyu_0500_01：cos 0.641 → 同一身份**
+- **char_huo_ruoxi_1200_01 ↔ char_ye_linger_2004_01：cos 0.647 → 同一身份**
+- **char_huo_ruoxi_1200_01 ↔ char_ye_lingjun_0130_01：cos 0.641 → 同一身份**
+- **char_huo_ruoxi_1200_01 ↔ char_ye_shanshan_0400_01：cos 0.547 → ⚠️ 存疑，待人工复核**
+- **char_huo_ruoxi_1200_01 ↔ char_ye_yuhan_1804_01：cos 0.663 → 同一身份**
+- **char_huo_ruoxi_1200_01 ↔ char_yuchi_ruoli_1000_01：cos 0.550 → ⚠️ 存疑，待人工复核**
+- **char_huo_ruoxi_1200_01 ↔ char_yun_banxia_0030_01：cos 0.433 → ⚠️ 存疑，待人工复核**
+- **char_huo_ruoxi_1200_01 ↔ char_zhong_manshu_2104_01：cos 0.532 → ⚠️ 存疑，待人工复核**
+- **char_huo_ruoxi_1200_01 ↔ char_anya_song：cos 0.083 → 不同身份**
+- **char_huo_ruoxi_1200_01 ↔ char_ayano：cos 0.117 → 不同身份**
+- **char_huo_ruoxi_1200_01 ↔ char_chen_xiawei：cos 0.043 → 不同身份**
+- **char_huo_ruoxi_1200_01 ↔ char_jia：cos 0.098 → 不同身份**
+- **char_huo_ruoxi_1200_01 ↔ char_jiang_yueyao：cos 0.124 → 不同身份**
+- **char_huo_ruoxi_1200_01 ↔ char_lin_qingwan：cos 0.218 → 不同身份**
+- **char_huo_ruoxi_1200_01 ↔ char_liu_yinuo_1923_10：cos -0.104 → 不同身份**
+- **char_huo_ruoxi_1200_01 ↔ char_luo_qingchuan_1805：cos 0.544 → ⚠️ 存疑，待人工复核**
+- **char_huo_ruoxi_1200_01 ↔ char_pei_yuhan_2300_01：cos 0.564 → ⚠️ 存疑，待人工复核**
+- **char_huo_ruoxi_1200_01 ↔ char_qing_luo：cos 0.082 → 不同身份**
+- **char_huo_ruoxi_1200_01 ↔ char_ray_ling：cos 0.200 → 不同身份**
+- **char_huo_ruoxi_1200_01 ↔ char_runcha：cos 0.048 → 不同身份**
+- **char_huo_ruoxi_1200_01 ↔ char_shen_zhilan：cos 0.245 → 不同身份**
+- **char_huo_ruoxi_1200_01 ↔ char_su_xiaotang：cos 0.068 → 不同身份**
+- **char_huo_ruoxi_1200_01 ↔ char_tang_mengli_2200_01：cos 0.573 → ⚠️ 存疑，待人工复核**
+- **char_huo_ruoxi_1200_01 ↔ char_wen_xiaorou_2140_01：cos 0.616 → 同一身份**
+- **char_huo_ruoxi_1200_01 ↔ char_ye_muchen_2100_01：cos 0.533 → ⚠️ 存疑，待人工复核**
+- **char_huo_ruoxi_1200_01 ↔ char_yin_xinyue_2330_01：cos 0.586 → ⚠️ 存疑，待人工复核**
+- **char_huo_ruoxi_1200_01 ↔ char_zhao_ruoxi：cos 0.117 → 不同身份**
+- **char_huo_ruoxi_1200_01 ↔ char_duo：cos 0.233 → 不同身份**
+- **char_huo_ruoxi_1200_01 ↔ char_duo3_2：cos 0.207 → 不同身份**
+- **char_huo_ruoxi_1200_01 ↔ char_cen_zhiwei_1936_01：cos 0.305 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_huo_ruoxi_1200_01 ↔ char_jiang_ruoli_2007_01：cos 0.207 → 不同身份**
+- **char_huo_ruoxi_1200_01 ↔ char_xiaog3：cos 0.204 → 不同身份**
+- **char_huo_ruoxi_1200_01 ↔ char_xi_manshu_2045_01：cos 0.114 → 不同身份**
+- **char_huo_ruoxi_1200_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.245 → 不同身份**
+- **char_huo_ruoxi_1200_01 ↔ char_linghu_zhixia_2133_01：cos 0.237 → 不同身份**
+- **char_huo_ruoxi_1200_01 ↔ char_qiao_weiyu_2134_01：cos 0.141 → 不同身份**
+- **char_huo_ruoxi_1200_01 ↔ char_jiang_qinghuan_2203_01：cos 0.194 → 不同身份**
+- **char_huo_ruoxi_1200_01 ↔ char_cen_youqing_2204_01：cos 0.052 → 不同身份**
+- **char_huo_ruoxi_1200_01 ↔ char_zhong_xiaorou_2233_01：cos 0.203 → 不同身份**
+- **char_huo_ruoxi_1200_01 ↔ char_tan_youqing_2234_01：cos 0.203 → 不同身份**
+- **char_huo_ruoxi_1200_01 ↔ char_tantai_lingsu_2303_01：cos 0.351 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_huo_ruoxi_1200_01 ↔ char_qiao_qinghuan_2304_01：cos 0.351 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_huo_ruoxi_1200_01 ↔ char_chu_muchen_0004_01：cos 0.034 → 不同身份**
+- **char_huo_ruoxi_1200_01 ↔ char_qiao_chaoyan_0004_01：cos -0.106 → 不同身份**
+- **char_huo_ruoxi_1200_01 ↔ char_xue_qinghuan_0034_01：cos -0.044 → 不同身份**
+- **char_huo_ruoxi_1200_01 ↔ char_tang_yuwei_0217_01：cos 0.178 → 不同身份**
+- **char_huo_ruoxi_1200_01 ↔ char_ouyang_chuxia_0250_01：cos 0.168 → 不同身份**
+- **char_huo_ruoxi_1200_01 ↔ char_bai_zhiruo_0305_01：cos 0.357 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_huo_ruoxi_1200_01 ↔ char_pei_shanshan_0456_01：cos 0.247 → 不同身份**
+- **char_huo_ruoxi_1200_01 ↔ char_xi_qingchuan_0618_01：cos 0.226 → 不同身份**
+- **char_huo_ruoxi_1200_01 ↔ char_zhong_linger_0732_01：cos 0.259 → 不同身份**
+- **char_huo_ruoxi_1200_01 ↔ char_hua_qingdai_1029_01：cos 0.255 → 不同身份**
+- **char_huo_ruoxi_1200_01 ↔ char_tang_banxia_1156_01：cos 0.340 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_huo_ruoxi_1200_01 ↔ char_gu_weiyu_1321_01：cos 0.255 → 不同身份**
+- **char_huo_ruoxi_1200_01 ↔ char_cheng_hongyu_1435_01：cos 0.145 → 不同身份**
+- **char_huo_ruoxi_1200_01 ↔ char_hua_chuxia_1549_01：cos 0.138 → 不同身份**
+- **char_huo_ruoxi_1200_01 ↔ char_pei_manshu_1701_01：cos 0.266 → 不同身份**
+- **char_huo_ruoxi_1200_01 ↔ char_ye_nanqiao_1811_01：cos 0.234 → 不同身份**
+- **char_huo_ruoxi_1200_01 ↔ char_murong_yuyan_1942_01：cos 0.187 → 不同身份**
+- **char_huo_ruoxi_1200_01 ↔ char_nangong_lingjun_2054_01：cos 0.325 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_jiang_zhiruo_0300_01 ↔ char_liang_tiange_1303_01：cos 0.523 → ⚠️ 存疑，待人工复核**
+- **char_jiang_zhiruo_0300_01 ↔ char_liang_yuyan_1333_01：cos 0.652 → 同一身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_linghu_chuxia_2204_01：cos 0.440 → ⚠️ 存疑，待人工复核**
+- **char_jiang_zhiruo_0300_01 ↔ char_lu_muchen_0530_01：cos 0.468 → ⚠️ 存疑，待人工复核**
+- **char_jiang_zhiruo_0300_01 ↔ char_murong_manshu_1704_01：cos 0.582 → ⚠️ 存疑，待人工复核**
+- **char_jiang_zhiruo_0300_01 ↔ char_murong_weiyu_0930_01：cos 0.490 → ⚠️ 存疑，待人工复核**
+- **char_jiang_zhiruo_0300_01 ↔ char_murong_xingzhu_0200_01：cos 0.680 → 同一身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_ning_chuxia_0000_01：cos 0.765 → 同一身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.543 → ⚠️ 存疑，待人工复核**
+- **char_jiang_zhiruo_0300_01 ↔ char_qin_linger_1634_01：cos 0.596 → ⚠️ 存疑，待人工复核**
+- **char_jiang_zhiruo_0300_01 ↔ char_qin_suqiu_0630_01：cos 0.634 → 同一身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_qin_zhixia_1130_01：cos 0.481 → ⚠️ 存疑，待人工复核**
+- **char_jiang_zhiruo_0300_01 ↔ char_ruan_lingjun_2034_01：cos 0.551 → ⚠️ 存疑，待人工复核**
+- **char_jiang_zhiruo_0300_01 ↔ char_ruan_tiange_1403_01：cos 0.572 → ⚠️ 存疑，待人工复核**
+- **char_jiang_zhiruo_0300_01 ↔ char_shen_hongyu_1734_01：cos 0.710 → 同一身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_situ_caiwei_0100_01：cos 0.509 → ⚠️ 存疑，待人工复核**
+- **char_jiang_zhiruo_0300_01 ↔ char_situ_yuhan_0600_01：cos 0.666 → 同一身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_song_wanzhao_1503_01：cos 0.571 → ⚠️ 存疑，待人工复核**
+- **char_jiang_zhiruo_0300_01 ↔ char_tan_shanshan_0700_01：cos 0.452 → ⚠️ 存疑，待人工复核**
+- **char_jiang_zhiruo_0300_01 ↔ char_tang_sitian_0900_01：cos 0.600 → 同一身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_tantai_weiyu_1433_01：cos 0.461 → ⚠️ 存疑，待人工复核**
+- **char_jiang_zhiruo_0300_01 ↔ char_tantai_xingzhu_0230_01：cos 0.568 → ⚠️ 存疑，待人工复核**
+- **char_jiang_zhiruo_0300_01 ↔ char_tantai_yuwei_0730_01：cos 0.663 → 同一身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_wen_manshu_1030_01：cos 0.544 → ⚠️ 存疑，待人工复核**
+- **char_jiang_zhiruo_0300_01 ↔ char_xi_weiyu_2134_01：cos 0.714 → 同一身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_xue_banxia_0330_01：cos 0.434 → ⚠️ 存疑，待人工复核**
+- **char_jiang_zhiruo_0300_01 ↔ char_ye_hongyu_0500_01：cos 0.436 → ⚠️ 存疑，待人工复核**
+- **char_jiang_zhiruo_0300_01 ↔ char_ye_linger_2004_01：cos 0.511 → ⚠️ 存疑，待人工复核**
+- **char_jiang_zhiruo_0300_01 ↔ char_ye_lingjun_0130_01：cos 0.485 → ⚠️ 存疑，待人工复核**
+- **char_jiang_zhiruo_0300_01 ↔ char_ye_shanshan_0400_01：cos 0.718 → 同一身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_ye_yuhan_1804_01：cos 0.557 → ⚠️ 存疑，待人工复核**
+- **char_jiang_zhiruo_0300_01 ↔ char_yuchi_ruoli_1000_01：cos 0.667 → 同一身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_yun_banxia_0030_01：cos 0.396 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_jiang_zhiruo_0300_01 ↔ char_zhong_manshu_2104_01：cos 0.670 → 同一身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_anya_song：cos 0.087 → 不同身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_ayano：cos 0.171 → 不同身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_chen_xiawei：cos 0.085 → 不同身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_jia：cos 0.173 → 不同身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_jiang_yueyao：cos 0.254 → 不同身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_lin_qingwan：cos 0.163 → 不同身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_liu_yinuo_1923_10：cos -0.020 → 不同身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_luo_qingchuan_1805：cos 0.663 → 同一身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_pei_yuhan_2300_01：cos 0.641 → 同一身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_qing_luo：cos 0.230 → 不同身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_ray_ling：cos 0.122 → 不同身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_runcha：cos 0.127 → 不同身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_shen_zhilan：cos 0.130 → 不同身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_su_xiaotang：cos 0.045 → 不同身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_tang_mengli_2200_01：cos 0.652 → 同一身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_wen_xiaorou_2140_01：cos 0.661 → 同一身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_ye_muchen_2100_01：cos 0.715 → 同一身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_yin_xinyue_2330_01：cos 0.720 → 同一身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_zhao_ruoxi：cos 0.181 → 不同身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_duo：cos 0.095 → 不同身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_duo3_2：cos 0.183 → 不同身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_cen_zhiwei_1936_01：cos 0.277 → 不同身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_jiang_ruoli_2007_01：cos 0.128 → 不同身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_xiaog3：cos 0.317 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_jiang_zhiruo_0300_01 ↔ char_xi_manshu_2045_01：cos 0.231 → 不同身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.217 → 不同身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_linghu_zhixia_2133_01：cos 0.276 → 不同身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_qiao_weiyu_2134_01：cos 0.088 → 不同身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_jiang_qinghuan_2203_01：cos 0.410 → ⚠️ 存疑，待人工复核**
+- **char_jiang_zhiruo_0300_01 ↔ char_cen_youqing_2204_01：cos 0.064 → 不同身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_zhong_xiaorou_2233_01：cos 0.263 → 不同身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_tan_youqing_2234_01：cos 0.263 → 不同身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_tantai_lingsu_2303_01：cos 0.318 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_jiang_zhiruo_0300_01 ↔ char_qiao_qinghuan_2304_01：cos 0.318 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_jiang_zhiruo_0300_01 ↔ char_chu_muchen_0004_01：cos -0.036 → 不同身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_qiao_chaoyan_0004_01：cos -0.038 → 不同身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_xue_qinghuan_0034_01：cos -0.025 → 不同身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_tang_yuwei_0217_01：cos 0.239 → 不同身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_ouyang_chuxia_0250_01：cos 0.168 → 不同身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_bai_zhiruo_0305_01：cos 0.358 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_jiang_zhiruo_0300_01 ↔ char_pei_shanshan_0456_01：cos 0.392 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_jiang_zhiruo_0300_01 ↔ char_xi_qingchuan_0618_01：cos 0.364 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_jiang_zhiruo_0300_01 ↔ char_zhong_linger_0732_01：cos 0.167 → 不同身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_hua_qingdai_1029_01：cos 0.280 → 不同身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_tang_banxia_1156_01：cos 0.309 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_jiang_zhiruo_0300_01 ↔ char_gu_weiyu_1321_01：cos 0.269 → 不同身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_cheng_hongyu_1435_01：cos 0.144 → 不同身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_hua_chuxia_1549_01：cos 0.124 → 不同身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_pei_manshu_1701_01：cos 0.236 → 不同身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_ye_nanqiao_1811_01：cos 0.232 → 不同身份**
+- **char_jiang_zhiruo_0300_01 ↔ char_murong_yuyan_1942_01：cos 0.414 → ⚠️ 存疑，待人工复核**
+- **char_jiang_zhiruo_0300_01 ↔ char_nangong_lingjun_2054_01：cos 0.136 → 不同身份**
+- **char_liang_tiange_1303_01 ↔ char_liang_yuyan_1333_01：cos 0.555 → ⚠️ 存疑，待人工复核**
+- **char_liang_tiange_1303_01 ↔ char_linghu_chuxia_2204_01：cos 0.698 → 同一身份**
+- **char_liang_tiange_1303_01 ↔ char_lu_muchen_0530_01：cos 0.776 → 同一身份**
+- **char_liang_tiange_1303_01 ↔ char_murong_manshu_1704_01：cos 0.615 → 同一身份**
+- **char_liang_tiange_1303_01 ↔ char_murong_weiyu_0930_01：cos 0.649 → 同一身份**
+- **char_liang_tiange_1303_01 ↔ char_murong_xingzhu_0200_01：cos 0.464 → ⚠️ 存疑，待人工复核**
+- **char_liang_tiange_1303_01 ↔ char_ning_chuxia_0000_01：cos 0.521 → ⚠️ 存疑，待人工复核**
+- **char_liang_tiange_1303_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.741 → 同一身份**
+- **char_liang_tiange_1303_01 ↔ char_qin_linger_1634_01：cos 0.628 → 同一身份**
+- **char_liang_tiange_1303_01 ↔ char_qin_suqiu_0630_01：cos 0.548 → ⚠️ 存疑，待人工复核**
+- **char_liang_tiange_1303_01 ↔ char_qin_zhixia_1130_01：cos 0.524 → ⚠️ 存疑，待人工复核**
+- **char_liang_tiange_1303_01 ↔ char_ruan_lingjun_2034_01：cos 0.612 → 同一身份**
+- **char_liang_tiange_1303_01 ↔ char_ruan_tiange_1403_01：cos 0.716 → 同一身份**
+- **char_liang_tiange_1303_01 ↔ char_shen_hongyu_1734_01：cos 0.603 → 同一身份**
+- **char_liang_tiange_1303_01 ↔ char_situ_caiwei_0100_01：cos 0.498 → ⚠️ 存疑，待人工复核**
+- **char_liang_tiange_1303_01 ↔ char_situ_yuhan_0600_01：cos 0.638 → 同一身份**
+- **char_liang_tiange_1303_01 ↔ char_song_wanzhao_1503_01：cos 0.595 → ⚠️ 存疑，待人工复核**
+- **char_liang_tiange_1303_01 ↔ char_tan_shanshan_0700_01：cos 0.825 → 同一身份**
+- **char_liang_tiange_1303_01 ↔ char_tang_sitian_0900_01：cos 0.477 → ⚠️ 存疑，待人工复核**
+- **char_liang_tiange_1303_01 ↔ char_tantai_weiyu_1433_01：cos 0.706 → 同一身份**
+- **char_liang_tiange_1303_01 ↔ char_tantai_xingzhu_0230_01：cos 0.402 → ⚠️ 存疑，待人工复核**
+- **char_liang_tiange_1303_01 ↔ char_tantai_yuwei_0730_01：cos 0.441 → ⚠️ 存疑，待人工复核**
+- **char_liang_tiange_1303_01 ↔ char_wen_manshu_1030_01：cos 0.574 → ⚠️ 存疑，待人工复核**
+- **char_liang_tiange_1303_01 ↔ char_xi_weiyu_2134_01：cos 0.527 → ⚠️ 存疑，待人工复核**
+- **char_liang_tiange_1303_01 ↔ char_xue_banxia_0330_01：cos 0.721 → 同一身份**
+- **char_liang_tiange_1303_01 ↔ char_ye_hongyu_0500_01：cos 0.762 → 同一身份**
+- **char_liang_tiange_1303_01 ↔ char_ye_linger_2004_01：cos 0.788 → 同一身份**
+- **char_liang_tiange_1303_01 ↔ char_ye_lingjun_0130_01：cos 0.788 → 同一身份**
+- **char_liang_tiange_1303_01 ↔ char_ye_shanshan_0400_01：cos 0.571 → ⚠️ 存疑，待人工复核**
+- **char_liang_tiange_1303_01 ↔ char_ye_yuhan_1804_01：cos 0.614 → 同一身份**
+- **char_liang_tiange_1303_01 ↔ char_yuchi_ruoli_1000_01：cos 0.510 → ⚠️ 存疑，待人工复核**
+- **char_liang_tiange_1303_01 ↔ char_yun_banxia_0030_01：cos 0.394 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_liang_tiange_1303_01 ↔ char_zhong_manshu_2104_01：cos 0.504 → ⚠️ 存疑，待人工复核**
+- **char_liang_tiange_1303_01 ↔ char_anya_song：cos 0.197 → 不同身份**
+- **char_liang_tiange_1303_01 ↔ char_ayano：cos 0.020 → 不同身份**
+- **char_liang_tiange_1303_01 ↔ char_chen_xiawei：cos 0.033 → 不同身份**
+- **char_liang_tiange_1303_01 ↔ char_jia：cos 0.035 → 不同身份**
+- **char_liang_tiange_1303_01 ↔ char_jiang_yueyao：cos 0.125 → 不同身份**
+- **char_liang_tiange_1303_01 ↔ char_lin_qingwan：cos 0.238 → 不同身份**
+- **char_liang_tiange_1303_01 ↔ char_liu_yinuo_1923_10：cos -0.049 → 不同身份**
+- **char_liang_tiange_1303_01 ↔ char_luo_qingchuan_1805：cos 0.606 → 同一身份**
+- **char_liang_tiange_1303_01 ↔ char_pei_yuhan_2300_01：cos 0.518 → ⚠️ 存疑，待人工复核**
+- **char_liang_tiange_1303_01 ↔ char_qing_luo：cos 0.070 → 不同身份**
+- **char_liang_tiange_1303_01 ↔ char_ray_ling：cos 0.334 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_liang_tiange_1303_01 ↔ char_runcha：cos -0.024 → 不同身份**
+- **char_liang_tiange_1303_01 ↔ char_shen_zhilan：cos 0.250 → 不同身份**
+- **char_liang_tiange_1303_01 ↔ char_su_xiaotang：cos 0.071 → 不同身份**
+- **char_liang_tiange_1303_01 ↔ char_tang_mengli_2200_01：cos 0.497 → ⚠️ 存疑，待人工复核**
+- **char_liang_tiange_1303_01 ↔ char_wen_xiaorou_2140_01：cos 0.582 → ⚠️ 存疑，待人工复核**
+- **char_liang_tiange_1303_01 ↔ char_ye_muchen_2100_01：cos 0.535 → ⚠️ 存疑，待人工复核**
+- **char_liang_tiange_1303_01 ↔ char_yin_xinyue_2330_01：cos 0.509 → ⚠️ 存疑，待人工复核**
+- **char_liang_tiange_1303_01 ↔ char_zhao_ruoxi：cos 0.201 → 不同身份**
+- **char_liang_tiange_1303_01 ↔ char_duo：cos 0.122 → 不同身份**
+- **char_liang_tiange_1303_01 ↔ char_duo3_2：cos 0.125 → 不同身份**
+- **char_liang_tiange_1303_01 ↔ char_cen_zhiwei_1936_01：cos 0.442 → ⚠️ 存疑，待人工复核**
+- **char_liang_tiange_1303_01 ↔ char_jiang_ruoli_2007_01：cos 0.370 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_liang_tiange_1303_01 ↔ char_xiaog3：cos 0.101 → 不同身份**
+- **char_liang_tiange_1303_01 ↔ char_xi_manshu_2045_01：cos 0.246 → 不同身份**
+- **char_liang_tiange_1303_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.492 → ⚠️ 存疑，待人工复核**
+- **char_liang_tiange_1303_01 ↔ char_linghu_zhixia_2133_01：cos 0.482 → ⚠️ 存疑，待人工复核**
+- **char_liang_tiange_1303_01 ↔ char_qiao_weiyu_2134_01：cos 0.252 → 不同身份**
+- **char_liang_tiange_1303_01 ↔ char_jiang_qinghuan_2203_01：cos 0.217 → 不同身份**
+- **char_liang_tiange_1303_01 ↔ char_cen_youqing_2204_01：cos 0.073 → 不同身份**
+- **char_liang_tiange_1303_01 ↔ char_zhong_xiaorou_2233_01：cos 0.204 → 不同身份**
+- **char_liang_tiange_1303_01 ↔ char_tan_youqing_2234_01：cos 0.204 → 不同身份**
+- **char_liang_tiange_1303_01 ↔ char_tantai_lingsu_2303_01：cos 0.345 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_liang_tiange_1303_01 ↔ char_qiao_qinghuan_2304_01：cos 0.345 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_liang_tiange_1303_01 ↔ char_chu_muchen_0004_01：cos 0.005 → 不同身份**
+- **char_liang_tiange_1303_01 ↔ char_qiao_chaoyan_0004_01：cos -0.043 → 不同身份**
+- **char_liang_tiange_1303_01 ↔ char_xue_qinghuan_0034_01：cos -0.003 → 不同身份**
+- **char_liang_tiange_1303_01 ↔ char_tang_yuwei_0217_01：cos 0.183 → 不同身份**
+- **char_liang_tiange_1303_01 ↔ char_ouyang_chuxia_0250_01：cos 0.171 → 不同身份**
+- **char_liang_tiange_1303_01 ↔ char_bai_zhiruo_0305_01：cos 0.357 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_liang_tiange_1303_01 ↔ char_pei_shanshan_0456_01：cos 0.278 → 不同身份**
+- **char_liang_tiange_1303_01 ↔ char_xi_qingchuan_0618_01：cos 0.218 → 不同身份**
+- **char_liang_tiange_1303_01 ↔ char_zhong_linger_0732_01：cos 0.283 → 不同身份**
+- **char_liang_tiange_1303_01 ↔ char_hua_qingdai_1029_01：cos 0.274 → 不同身份**
+- **char_liang_tiange_1303_01 ↔ char_tang_banxia_1156_01：cos 0.377 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_liang_tiange_1303_01 ↔ char_gu_weiyu_1321_01：cos 0.226 → 不同身份**
+- **char_liang_tiange_1303_01 ↔ char_cheng_hongyu_1435_01：cos 0.189 → 不同身份**
+- **char_liang_tiange_1303_01 ↔ char_hua_chuxia_1549_01：cos 0.222 → 不同身份**
+- **char_liang_tiange_1303_01 ↔ char_pei_manshu_1701_01：cos 0.289 → 不同身份**
+- **char_liang_tiange_1303_01 ↔ char_ye_nanqiao_1811_01：cos 0.214 → 不同身份**
+- **char_liang_tiange_1303_01 ↔ char_murong_yuyan_1942_01：cos 0.178 → 不同身份**
+- **char_liang_tiange_1303_01 ↔ char_nangong_lingjun_2054_01：cos 0.362 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_liang_yuyan_1333_01 ↔ char_linghu_chuxia_2204_01：cos 0.440 → ⚠️ 存疑，待人工复核**
+- **char_liang_yuyan_1333_01 ↔ char_lu_muchen_0530_01：cos 0.512 → ⚠️ 存疑，待人工复核**
+- **char_liang_yuyan_1333_01 ↔ char_murong_manshu_1704_01：cos 0.733 → 同一身份**
+- **char_liang_yuyan_1333_01 ↔ char_murong_weiyu_0930_01：cos 0.532 → ⚠️ 存疑，待人工复核**
+- **char_liang_yuyan_1333_01 ↔ char_murong_xingzhu_0200_01：cos 0.500 → ⚠️ 存疑，待人工复核**
+- **char_liang_yuyan_1333_01 ↔ char_ning_chuxia_0000_01：cos 0.615 → 同一身份**
+- **char_liang_yuyan_1333_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.613 → 同一身份**
+- **char_liang_yuyan_1333_01 ↔ char_qin_linger_1634_01：cos 0.627 → 同一身份**
+- **char_liang_yuyan_1333_01 ↔ char_qin_suqiu_0630_01：cos 0.674 → 同一身份**
+- **char_liang_yuyan_1333_01 ↔ char_qin_zhixia_1130_01：cos 0.557 → ⚠️ 存疑，待人工复核**
+- **char_liang_yuyan_1333_01 ↔ char_ruan_lingjun_2034_01：cos 0.651 → 同一身份**
+- **char_liang_yuyan_1333_01 ↔ char_ruan_tiange_1403_01：cos 0.543 → ⚠️ 存疑，待人工复核**
+- **char_liang_yuyan_1333_01 ↔ char_shen_hongyu_1734_01：cos 0.721 → 同一身份**
+- **char_liang_yuyan_1333_01 ↔ char_situ_caiwei_0100_01：cos 0.618 → 同一身份**
+- **char_liang_yuyan_1333_01 ↔ char_situ_yuhan_0600_01：cos 0.716 → 同一身份**
+- **char_liang_yuyan_1333_01 ↔ char_song_wanzhao_1503_01：cos 0.633 → 同一身份**
+- **char_liang_yuyan_1333_01 ↔ char_tan_shanshan_0700_01：cos 0.486 → ⚠️ 存疑，待人工复核**
+- **char_liang_yuyan_1333_01 ↔ char_tang_sitian_0900_01：cos 0.708 → 同一身份**
+- **char_liang_yuyan_1333_01 ↔ char_tantai_weiyu_1433_01：cos 0.397 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_liang_yuyan_1333_01 ↔ char_tantai_xingzhu_0230_01：cos 0.508 → ⚠️ 存疑，待人工复核**
+- **char_liang_yuyan_1333_01 ↔ char_tantai_yuwei_0730_01：cos 0.488 → ⚠️ 存疑，待人工复核**
+- **char_liang_yuyan_1333_01 ↔ char_wen_manshu_1030_01：cos 0.703 → 同一身份**
+- **char_liang_yuyan_1333_01 ↔ char_xi_weiyu_2134_01：cos 0.703 → 同一身份**
+- **char_liang_yuyan_1333_01 ↔ char_xue_banxia_0330_01：cos 0.493 → ⚠️ 存疑，待人工复核**
+- **char_liang_yuyan_1333_01 ↔ char_ye_hongyu_0500_01：cos 0.556 → ⚠️ 存疑，待人工复核**
+- **char_liang_yuyan_1333_01 ↔ char_ye_linger_2004_01：cos 0.513 → ⚠️ 存疑，待人工复核**
+- **char_liang_yuyan_1333_01 ↔ char_ye_lingjun_0130_01：cos 0.462 → ⚠️ 存疑，待人工复核**
+- **char_liang_yuyan_1333_01 ↔ char_ye_shanshan_0400_01：cos 0.581 → ⚠️ 存疑，待人工复核**
+- **char_liang_yuyan_1333_01 ↔ char_ye_yuhan_1804_01：cos 0.649 → 同一身份**
+- **char_liang_yuyan_1333_01 ↔ char_yuchi_ruoli_1000_01：cos 0.681 → 同一身份**
+- **char_liang_yuyan_1333_01 ↔ char_yun_banxia_0030_01：cos 0.530 → ⚠️ 存疑，待人工复核**
+- **char_liang_yuyan_1333_01 ↔ char_zhong_manshu_2104_01：cos 0.664 → 同一身份**
+- **char_liang_yuyan_1333_01 ↔ char_anya_song：cos 0.157 → 不同身份**
+- **char_liang_yuyan_1333_01 ↔ char_ayano：cos 0.186 → 不同身份**
+- **char_liang_yuyan_1333_01 ↔ char_chen_xiawei：cos 0.148 → 不同身份**
+- **char_liang_yuyan_1333_01 ↔ char_jia：cos 0.194 → 不同身份**
+- **char_liang_yuyan_1333_01 ↔ char_jiang_yueyao：cos 0.260 → 不同身份**
+- **char_liang_yuyan_1333_01 ↔ char_lin_qingwan：cos 0.424 → ⚠️ 存疑，待人工复核**
+- **char_liang_yuyan_1333_01 ↔ char_liu_yinuo_1923_10：cos -0.018 → 不同身份**
+- **char_liang_yuyan_1333_01 ↔ char_luo_qingchuan_1805：cos 0.663 → 同一身份**
+- **char_liang_yuyan_1333_01 ↔ char_pei_yuhan_2300_01：cos 0.611 → 同一身份**
+- **char_liang_yuyan_1333_01 ↔ char_qing_luo：cos 0.314 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_liang_yuyan_1333_01 ↔ char_ray_ling：cos 0.243 → 不同身份**
+- **char_liang_yuyan_1333_01 ↔ char_runcha：cos 0.033 → 不同身份**
+- **char_liang_yuyan_1333_01 ↔ char_shen_zhilan：cos 0.292 → 不同身份**
+- **char_liang_yuyan_1333_01 ↔ char_su_xiaotang：cos 0.090 → 不同身份**
+- **char_liang_yuyan_1333_01 ↔ char_tang_mengli_2200_01：cos 0.655 → 同一身份**
+- **char_liang_yuyan_1333_01 ↔ char_wen_xiaorou_2140_01：cos 0.630 → 同一身份**
+- **char_liang_yuyan_1333_01 ↔ char_ye_muchen_2100_01：cos 0.632 → 同一身份**
+- **char_liang_yuyan_1333_01 ↔ char_yin_xinyue_2330_01：cos 0.654 → 同一身份**
+- **char_liang_yuyan_1333_01 ↔ char_zhao_ruoxi：cos 0.323 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_liang_yuyan_1333_01 ↔ char_duo：cos 0.178 → 不同身份**
+- **char_liang_yuyan_1333_01 ↔ char_duo3_2：cos 0.224 → 不同身份**
+- **char_liang_yuyan_1333_01 ↔ char_cen_zhiwei_1936_01：cos 0.396 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_liang_yuyan_1333_01 ↔ char_jiang_ruoli_2007_01：cos 0.345 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_liang_yuyan_1333_01 ↔ char_xiaog3：cos 0.080 → 不同身份**
+- **char_liang_yuyan_1333_01 ↔ char_xi_manshu_2045_01：cos 0.329 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_liang_yuyan_1333_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.300 → 不同身份**
+- **char_liang_yuyan_1333_01 ↔ char_linghu_zhixia_2133_01：cos 0.367 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_liang_yuyan_1333_01 ↔ char_qiao_weiyu_2134_01：cos 0.273 → 不同身份**
+- **char_liang_yuyan_1333_01 ↔ char_jiang_qinghuan_2203_01：cos 0.469 → ⚠️ 存疑，待人工复核**
+- **char_liang_yuyan_1333_01 ↔ char_cen_youqing_2204_01：cos 0.145 → 不同身份**
+- **char_liang_yuyan_1333_01 ↔ char_zhong_xiaorou_2233_01：cos 0.366 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_liang_yuyan_1333_01 ↔ char_tan_youqing_2234_01：cos 0.366 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_liang_yuyan_1333_01 ↔ char_tantai_lingsu_2303_01：cos 0.460 → ⚠️ 存疑，待人工复核**
+- **char_liang_yuyan_1333_01 ↔ char_qiao_qinghuan_2304_01：cos 0.460 → ⚠️ 存疑，待人工复核**
+- **char_liang_yuyan_1333_01 ↔ char_chu_muchen_0004_01：cos -0.022 → 不同身份**
+- **char_liang_yuyan_1333_01 ↔ char_qiao_chaoyan_0004_01：cos -0.034 → 不同身份**
+- **char_liang_yuyan_1333_01 ↔ char_xue_qinghuan_0034_01：cos -0.037 → 不同身份**
+- **char_liang_yuyan_1333_01 ↔ char_tang_yuwei_0217_01：cos 0.347 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_liang_yuyan_1333_01 ↔ char_ouyang_chuxia_0250_01：cos 0.344 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_liang_yuyan_1333_01 ↔ char_bai_zhiruo_0305_01：cos 0.477 → ⚠️ 存疑，待人工复核**
+- **char_liang_yuyan_1333_01 ↔ char_pei_shanshan_0456_01：cos 0.541 → ⚠️ 存疑，待人工复核**
+- **char_liang_yuyan_1333_01 ↔ char_xi_qingchuan_0618_01：cos 0.506 → ⚠️ 存疑，待人工复核**
+- **char_liang_yuyan_1333_01 ↔ char_zhong_linger_0732_01：cos 0.400 → ⚠️ 存疑，待人工复核**
+- **char_liang_yuyan_1333_01 ↔ char_hua_qingdai_1029_01：cos 0.431 → ⚠️ 存疑，待人工复核**
+- **char_liang_yuyan_1333_01 ↔ char_tang_banxia_1156_01：cos 0.508 → ⚠️ 存疑，待人工复核**
+- **char_liang_yuyan_1333_01 ↔ char_gu_weiyu_1321_01：cos 0.435 → ⚠️ 存疑，待人工复核**
+- **char_liang_yuyan_1333_01 ↔ char_cheng_hongyu_1435_01：cos 0.323 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_liang_yuyan_1333_01 ↔ char_hua_chuxia_1549_01：cos 0.300 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_liang_yuyan_1333_01 ↔ char_pei_manshu_1701_01：cos 0.368 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_liang_yuyan_1333_01 ↔ char_ye_nanqiao_1811_01：cos 0.375 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_liang_yuyan_1333_01 ↔ char_murong_yuyan_1942_01：cos 0.448 → ⚠️ 存疑，待人工复核**
+- **char_liang_yuyan_1333_01 ↔ char_nangong_lingjun_2054_01：cos 0.323 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_linghu_chuxia_2204_01 ↔ char_lu_muchen_0530_01：cos 0.730 → 同一身份**
+- **char_linghu_chuxia_2204_01 ↔ char_murong_manshu_1704_01：cos 0.469 → ⚠️ 存疑，待人工复核**
+- **char_linghu_chuxia_2204_01 ↔ char_murong_weiyu_0930_01：cos 0.530 → ⚠️ 存疑，待人工复核**
+- **char_linghu_chuxia_2204_01 ↔ char_murong_xingzhu_0200_01：cos 0.462 → ⚠️ 存疑，待人工复核**
+- **char_linghu_chuxia_2204_01 ↔ char_ning_chuxia_0000_01：cos 0.436 → ⚠️ 存疑，待人工复核**
+- **char_linghu_chuxia_2204_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.638 → 同一身份**
+- **char_linghu_chuxia_2204_01 ↔ char_qin_linger_1634_01：cos 0.497 → ⚠️ 存疑，待人工复核**
+- **char_linghu_chuxia_2204_01 ↔ char_qin_suqiu_0630_01：cos 0.512 → ⚠️ 存疑，待人工复核**
+- **char_linghu_chuxia_2204_01 ↔ char_qin_zhixia_1130_01：cos 0.472 → ⚠️ 存疑，待人工复核**
+- **char_linghu_chuxia_2204_01 ↔ char_ruan_lingjun_2034_01：cos 0.502 → ⚠️ 存疑，待人工复核**
+- **char_linghu_chuxia_2204_01 ↔ char_ruan_tiange_1403_01：cos 0.729 → 同一身份**
+- **char_linghu_chuxia_2204_01 ↔ char_shen_hongyu_1734_01：cos 0.482 → ⚠️ 存疑，待人工复核**
+- **char_linghu_chuxia_2204_01 ↔ char_situ_caiwei_0100_01：cos 0.316 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_linghu_chuxia_2204_01 ↔ char_situ_yuhan_0600_01：cos 0.487 → ⚠️ 存疑，待人工复核**
+- **char_linghu_chuxia_2204_01 ↔ char_song_wanzhao_1503_01：cos 0.554 → ⚠️ 存疑，待人工复核**
+- **char_linghu_chuxia_2204_01 ↔ char_tan_shanshan_0700_01：cos 0.696 → 同一身份**
+- **char_linghu_chuxia_2204_01 ↔ char_tang_sitian_0900_01：cos 0.315 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_linghu_chuxia_2204_01 ↔ char_tantai_weiyu_1433_01：cos 0.802 → 同一身份**
+- **char_linghu_chuxia_2204_01 ↔ char_tantai_xingzhu_0230_01：cos 0.397 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_linghu_chuxia_2204_01 ↔ char_tantai_yuwei_0730_01：cos 0.512 → ⚠️ 存疑，待人工复核**
+- **char_linghu_chuxia_2204_01 ↔ char_wen_manshu_1030_01：cos 0.418 → ⚠️ 存疑，待人工复核**
+- **char_linghu_chuxia_2204_01 ↔ char_xi_weiyu_2134_01：cos 0.372 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_linghu_chuxia_2204_01 ↔ char_xue_banxia_0330_01：cos 0.687 → 同一身份**
+- **char_linghu_chuxia_2204_01 ↔ char_ye_hongyu_0500_01：cos 0.632 → 同一身份**
+- **char_linghu_chuxia_2204_01 ↔ char_ye_linger_2004_01：cos 0.728 → 同一身份**
+- **char_linghu_chuxia_2204_01 ↔ char_ye_lingjun_0130_01：cos 0.814 → 同一身份**
+- **char_linghu_chuxia_2204_01 ↔ char_ye_shanshan_0400_01：cos 0.499 → ⚠️ 存疑，待人工复核**
+- **char_linghu_chuxia_2204_01 ↔ char_ye_yuhan_1804_01：cos 0.548 → ⚠️ 存疑，待人工复核**
+- **char_linghu_chuxia_2204_01 ↔ char_yuchi_ruoli_1000_01：cos 0.372 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_linghu_chuxia_2204_01 ↔ char_yun_banxia_0030_01：cos 0.296 → 不同身份**
+- **char_linghu_chuxia_2204_01 ↔ char_zhong_manshu_2104_01：cos 0.373 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_linghu_chuxia_2204_01 ↔ char_anya_song：cos 0.105 → 不同身份**
+- **char_linghu_chuxia_2204_01 ↔ char_ayano：cos 0.122 → 不同身份**
+- **char_linghu_chuxia_2204_01 ↔ char_chen_xiawei：cos 0.000 → 不同身份**
+- **char_linghu_chuxia_2204_01 ↔ char_jia：cos 0.023 → 不同身份**
+- **char_linghu_chuxia_2204_01 ↔ char_jiang_yueyao：cos 0.053 → 不同身份**
+- **char_linghu_chuxia_2204_01 ↔ char_lin_qingwan：cos 0.086 → 不同身份**
+- **char_linghu_chuxia_2204_01 ↔ char_liu_yinuo_1923_10：cos -0.017 → 不同身份**
+- **char_linghu_chuxia_2204_01 ↔ char_luo_qingchuan_1805：cos 0.549 → ⚠️ 存疑，待人工复核**
+- **char_linghu_chuxia_2204_01 ↔ char_pei_yuhan_2300_01：cos 0.465 → ⚠️ 存疑，待人工复核**
+- **char_linghu_chuxia_2204_01 ↔ char_qing_luo：cos 0.047 → 不同身份**
+- **char_linghu_chuxia_2204_01 ↔ char_ray_ling：cos 0.220 → 不同身份**
+- **char_linghu_chuxia_2204_01 ↔ char_runcha：cos -0.013 → 不同身份**
+- **char_linghu_chuxia_2204_01 ↔ char_shen_zhilan：cos 0.163 → 不同身份**
+- **char_linghu_chuxia_2204_01 ↔ char_su_xiaotang：cos 0.002 → 不同身份**
+- **char_linghu_chuxia_2204_01 ↔ char_tang_mengli_2200_01：cos 0.428 → ⚠️ 存疑，待人工复核**
+- **char_linghu_chuxia_2204_01 ↔ char_wen_xiaorou_2140_01：cos 0.512 → ⚠️ 存疑，待人工复核**
+- **char_linghu_chuxia_2204_01 ↔ char_ye_muchen_2100_01：cos 0.455 → ⚠️ 存疑，待人工复核**
+- **char_linghu_chuxia_2204_01 ↔ char_yin_xinyue_2330_01：cos 0.496 → ⚠️ 存疑，待人工复核**
+- **char_linghu_chuxia_2204_01 ↔ char_zhao_ruoxi：cos 0.027 → 不同身份**
+- **char_linghu_chuxia_2204_01 ↔ char_duo：cos 0.114 → 不同身份**
+- **char_linghu_chuxia_2204_01 ↔ char_duo3_2：cos 0.212 → 不同身份**
+- **char_linghu_chuxia_2204_01 ↔ char_cen_zhiwei_1936_01：cos 0.237 → 不同身份**
+- **char_linghu_chuxia_2204_01 ↔ char_jiang_ruoli_2007_01：cos 0.202 → 不同身份**
+- **char_linghu_chuxia_2204_01 ↔ char_xiaog3：cos 0.184 → 不同身份**
+- **char_linghu_chuxia_2204_01 ↔ char_xi_manshu_2045_01：cos 0.093 → 不同身份**
+- **char_linghu_chuxia_2204_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.324 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_linghu_chuxia_2204_01 ↔ char_linghu_zhixia_2133_01：cos 0.314 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_linghu_chuxia_2204_01 ↔ char_qiao_weiyu_2134_01：cos 0.096 → 不同身份**
+- **char_linghu_chuxia_2204_01 ↔ char_jiang_qinghuan_2203_01：cos 0.102 → 不同身份**
+- **char_linghu_chuxia_2204_01 ↔ char_cen_youqing_2204_01：cos -0.005 → 不同身份**
+- **char_linghu_chuxia_2204_01 ↔ char_zhong_xiaorou_2233_01：cos 0.116 → 不同身份**
+- **char_linghu_chuxia_2204_01 ↔ char_tan_youqing_2234_01：cos 0.116 → 不同身份**
+- **char_linghu_chuxia_2204_01 ↔ char_tantai_lingsu_2303_01：cos 0.164 → 不同身份**
+- **char_linghu_chuxia_2204_01 ↔ char_qiao_qinghuan_2304_01：cos 0.164 → 不同身份**
+- **char_linghu_chuxia_2204_01 ↔ char_chu_muchen_0004_01：cos 0.051 → 不同身份**
+- **char_linghu_chuxia_2204_01 ↔ char_qiao_chaoyan_0004_01：cos -0.113 → 不同身份**
+- **char_linghu_chuxia_2204_01 ↔ char_xue_qinghuan_0034_01：cos 0.042 → 不同身份**
+- **char_linghu_chuxia_2204_01 ↔ char_tang_yuwei_0217_01：cos 0.075 → 不同身份**
+- **char_linghu_chuxia_2204_01 ↔ char_ouyang_chuxia_0250_01：cos 0.035 → 不同身份**
+- **char_linghu_chuxia_2204_01 ↔ char_bai_zhiruo_0305_01：cos 0.145 → 不同身份**
+- **char_linghu_chuxia_2204_01 ↔ char_pei_shanshan_0456_01：cos 0.112 → 不同身份**
+- **char_linghu_chuxia_2204_01 ↔ char_xi_qingchuan_0618_01：cos 0.090 → 不同身份**
+- **char_linghu_chuxia_2204_01 ↔ char_zhong_linger_0732_01：cos 0.201 → 不同身份**
+- **char_linghu_chuxia_2204_01 ↔ char_hua_qingdai_1029_01：cos 0.136 → 不同身份**
+- **char_linghu_chuxia_2204_01 ↔ char_tang_banxia_1156_01：cos 0.148 → 不同身份**
+- **char_linghu_chuxia_2204_01 ↔ char_gu_weiyu_1321_01：cos 0.056 → 不同身份**
+- **char_linghu_chuxia_2204_01 ↔ char_cheng_hongyu_1435_01：cos 0.004 → 不同身份**
+- **char_linghu_chuxia_2204_01 ↔ char_hua_chuxia_1549_01：cos 0.035 → 不同身份**
+- **char_linghu_chuxia_2204_01 ↔ char_pei_manshu_1701_01：cos 0.141 → 不同身份**
+- **char_linghu_chuxia_2204_01 ↔ char_ye_nanqiao_1811_01：cos 0.074 → 不同身份**
+- **char_linghu_chuxia_2204_01 ↔ char_murong_yuyan_1942_01：cos 0.049 → 不同身份**
+- **char_linghu_chuxia_2204_01 ↔ char_nangong_lingjun_2054_01：cos 0.206 → 不同身份**
+- **char_lu_muchen_0530_01 ↔ char_murong_manshu_1704_01：cos 0.602 → 同一身份**
+- **char_lu_muchen_0530_01 ↔ char_murong_weiyu_0930_01：cos 0.656 → 同一身份**
+- **char_lu_muchen_0530_01 ↔ char_murong_xingzhu_0200_01：cos 0.390 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_muchen_0530_01 ↔ char_ning_chuxia_0000_01：cos 0.407 → ⚠️ 存疑，待人工复核**
+- **char_lu_muchen_0530_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.663 → 同一身份**
+- **char_lu_muchen_0530_01 ↔ char_qin_linger_1634_01：cos 0.614 → 同一身份**
+- **char_lu_muchen_0530_01 ↔ char_qin_suqiu_0630_01：cos 0.507 → ⚠️ 存疑，待人工复核**
+- **char_lu_muchen_0530_01 ↔ char_qin_zhixia_1130_01：cos 0.513 → ⚠️ 存疑，待人工复核**
+- **char_lu_muchen_0530_01 ↔ char_ruan_lingjun_2034_01：cos 0.607 → 同一身份**
+- **char_lu_muchen_0530_01 ↔ char_ruan_tiange_1403_01：cos 0.698 → 同一身份**
+- **char_lu_muchen_0530_01 ↔ char_shen_hongyu_1734_01：cos 0.533 → ⚠️ 存疑，待人工复核**
+- **char_lu_muchen_0530_01 ↔ char_situ_caiwei_0100_01：cos 0.411 → ⚠️ 存疑，待人工复核**
+- **char_lu_muchen_0530_01 ↔ char_situ_yuhan_0600_01：cos 0.619 → 同一身份**
+- **char_lu_muchen_0530_01 ↔ char_song_wanzhao_1503_01：cos 0.636 → 同一身份**
+- **char_lu_muchen_0530_01 ↔ char_tan_shanshan_0700_01：cos 0.797 → 同一身份**
+- **char_lu_muchen_0530_01 ↔ char_tang_sitian_0900_01：cos 0.477 → ⚠️ 存疑，待人工复核**
+- **char_lu_muchen_0530_01 ↔ char_tantai_weiyu_1433_01：cos 0.712 → 同一身份**
+- **char_lu_muchen_0530_01 ↔ char_tantai_xingzhu_0230_01：cos 0.342 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_muchen_0530_01 ↔ char_tantai_yuwei_0730_01：cos 0.418 → ⚠️ 存疑，待人工复核**
+- **char_lu_muchen_0530_01 ↔ char_wen_manshu_1030_01：cos 0.564 → ⚠️ 存疑，待人工复核**
+- **char_lu_muchen_0530_01 ↔ char_xi_weiyu_2134_01：cos 0.463 → ⚠️ 存疑，待人工复核**
+- **char_lu_muchen_0530_01 ↔ char_xue_banxia_0330_01：cos 0.753 → 同一身份**
+- **char_lu_muchen_0530_01 ↔ char_ye_hongyu_0500_01：cos 0.728 → 同一身份**
+- **char_lu_muchen_0530_01 ↔ char_ye_linger_2004_01：cos 0.780 → 同一身份**
+- **char_lu_muchen_0530_01 ↔ char_ye_lingjun_0130_01：cos 0.795 → 同一身份**
+- **char_lu_muchen_0530_01 ↔ char_ye_shanshan_0400_01：cos 0.465 → ⚠️ 存疑，待人工复核**
+- **char_lu_muchen_0530_01 ↔ char_ye_yuhan_1804_01：cos 0.615 → 同一身份**
+- **char_lu_muchen_0530_01 ↔ char_yuchi_ruoli_1000_01：cos 0.481 → ⚠️ 存疑，待人工复核**
+- **char_lu_muchen_0530_01 ↔ char_yun_banxia_0030_01：cos 0.486 → ⚠️ 存疑，待人工复核**
+- **char_lu_muchen_0530_01 ↔ char_zhong_manshu_2104_01：cos 0.432 → ⚠️ 存疑，待人工复核**
+- **char_lu_muchen_0530_01 ↔ char_anya_song：cos 0.152 → 不同身份**
+- **char_lu_muchen_0530_01 ↔ char_ayano：cos 0.112 → 不同身份**
+- **char_lu_muchen_0530_01 ↔ char_chen_xiawei：cos 0.030 → 不同身份**
+- **char_lu_muchen_0530_01 ↔ char_jia：cos 0.050 → 不同身份**
+- **char_lu_muchen_0530_01 ↔ char_jiang_yueyao：cos 0.081 → 不同身份**
+- **char_lu_muchen_0530_01 ↔ char_lin_qingwan：cos 0.194 → 不同身份**
+- **char_lu_muchen_0530_01 ↔ char_liu_yinuo_1923_10：cos -0.029 → 不同身份**
+- **char_lu_muchen_0530_01 ↔ char_luo_qingchuan_1805：cos 0.565 → ⚠️ 存疑，待人工复核**
+- **char_lu_muchen_0530_01 ↔ char_pei_yuhan_2300_01：cos 0.438 → ⚠️ 存疑，待人工复核**
+- **char_lu_muchen_0530_01 ↔ char_qing_luo：cos -0.018 → 不同身份**
+- **char_lu_muchen_0530_01 ↔ char_ray_ling：cos 0.338 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_muchen_0530_01 ↔ char_runcha：cos 0.027 → 不同身份**
+- **char_lu_muchen_0530_01 ↔ char_shen_zhilan：cos 0.289 → 不同身份**
+- **char_lu_muchen_0530_01 ↔ char_su_xiaotang：cos 0.105 → 不同身份**
+- **char_lu_muchen_0530_01 ↔ char_tang_mengli_2200_01：cos 0.449 → ⚠️ 存疑，待人工复核**
+- **char_lu_muchen_0530_01 ↔ char_wen_xiaorou_2140_01：cos 0.496 → ⚠️ 存疑，待人工复核**
+- **char_lu_muchen_0530_01 ↔ char_ye_muchen_2100_01：cos 0.430 → ⚠️ 存疑，待人工复核**
+- **char_lu_muchen_0530_01 ↔ char_yin_xinyue_2330_01：cos 0.459 → ⚠️ 存疑，待人工复核**
+- **char_lu_muchen_0530_01 ↔ char_zhao_ruoxi：cos 0.167 → 不同身份**
+- **char_lu_muchen_0530_01 ↔ char_duo：cos 0.170 → 不同身份**
+- **char_lu_muchen_0530_01 ↔ char_duo3_2：cos 0.182 → 不同身份**
+- **char_lu_muchen_0530_01 ↔ char_cen_zhiwei_1936_01：cos 0.416 → ⚠️ 存疑，待人工复核**
+- **char_lu_muchen_0530_01 ↔ char_jiang_ruoli_2007_01：cos 0.292 → 不同身份**
+- **char_lu_muchen_0530_01 ↔ char_xiaog3：cos 0.121 → 不同身份**
+- **char_lu_muchen_0530_01 ↔ char_xi_manshu_2045_01：cos 0.195 → 不同身份**
+- **char_lu_muchen_0530_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.492 → ⚠️ 存疑，待人工复核**
+- **char_lu_muchen_0530_01 ↔ char_linghu_zhixia_2133_01：cos 0.454 → ⚠️ 存疑，待人工复核**
+- **char_lu_muchen_0530_01 ↔ char_qiao_weiyu_2134_01：cos 0.258 → 不同身份**
+- **char_lu_muchen_0530_01 ↔ char_jiang_qinghuan_2203_01：cos 0.191 → 不同身份**
+- **char_lu_muchen_0530_01 ↔ char_cen_youqing_2204_01：cos 0.128 → 不同身份**
+- **char_lu_muchen_0530_01 ↔ char_zhong_xiaorou_2233_01：cos 0.203 → 不同身份**
+- **char_lu_muchen_0530_01 ↔ char_tan_youqing_2234_01：cos 0.203 → 不同身份**
+- **char_lu_muchen_0530_01 ↔ char_tantai_lingsu_2303_01：cos 0.334 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_muchen_0530_01 ↔ char_qiao_qinghuan_2304_01：cos 0.334 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_muchen_0530_01 ↔ char_chu_muchen_0004_01：cos 0.029 → 不同身份**
+- **char_lu_muchen_0530_01 ↔ char_qiao_chaoyan_0004_01：cos -0.096 → 不同身份**
+- **char_lu_muchen_0530_01 ↔ char_xue_qinghuan_0034_01：cos -0.004 → 不同身份**
+- **char_lu_muchen_0530_01 ↔ char_tang_yuwei_0217_01：cos 0.127 → 不同身份**
+- **char_lu_muchen_0530_01 ↔ char_ouyang_chuxia_0250_01：cos 0.166 → 不同身份**
+- **char_lu_muchen_0530_01 ↔ char_bai_zhiruo_0305_01：cos 0.319 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_muchen_0530_01 ↔ char_pei_shanshan_0456_01：cos 0.250 → 不同身份**
+- **char_lu_muchen_0530_01 ↔ char_xi_qingchuan_0618_01：cos 0.192 → 不同身份**
+- **char_lu_muchen_0530_01 ↔ char_zhong_linger_0732_01：cos 0.324 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_muchen_0530_01 ↔ char_hua_qingdai_1029_01：cos 0.278 → 不同身份**
+- **char_lu_muchen_0530_01 ↔ char_tang_banxia_1156_01：cos 0.342 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lu_muchen_0530_01 ↔ char_gu_weiyu_1321_01：cos 0.211 → 不同身份**
+- **char_lu_muchen_0530_01 ↔ char_cheng_hongyu_1435_01：cos 0.125 → 不同身份**
+- **char_lu_muchen_0530_01 ↔ char_hua_chuxia_1549_01：cos 0.185 → 不同身份**
+- **char_lu_muchen_0530_01 ↔ char_pei_manshu_1701_01：cos 0.250 → 不同身份**
+- **char_lu_muchen_0530_01 ↔ char_ye_nanqiao_1811_01：cos 0.175 → 不同身份**
+- **char_lu_muchen_0530_01 ↔ char_murong_yuyan_1942_01：cos 0.077 → 不同身份**
+- **char_lu_muchen_0530_01 ↔ char_nangong_lingjun_2054_01：cos 0.353 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_murong_manshu_1704_01 ↔ char_murong_weiyu_0930_01：cos 0.618 → 同一身份**
+- **char_murong_manshu_1704_01 ↔ char_murong_xingzhu_0200_01：cos 0.492 → ⚠️ 存疑，待人工复核**
+- **char_murong_manshu_1704_01 ↔ char_ning_chuxia_0000_01：cos 0.559 → ⚠️ 存疑，待人工复核**
+- **char_murong_manshu_1704_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.581 → ⚠️ 存疑，待人工复核**
+- **char_murong_manshu_1704_01 ↔ char_qin_linger_1634_01：cos 0.734 → 同一身份**
+- **char_murong_manshu_1704_01 ↔ char_qin_suqiu_0630_01：cos 0.621 → 同一身份**
+- **char_murong_manshu_1704_01 ↔ char_qin_zhixia_1130_01：cos 0.510 → ⚠️ 存疑，待人工复核**
+- **char_murong_manshu_1704_01 ↔ char_ruan_lingjun_2034_01：cos 0.780 → 同一身份**
+- **char_murong_manshu_1704_01 ↔ char_ruan_tiange_1403_01：cos 0.597 → ⚠️ 存疑，待人工复核**
+- **char_murong_manshu_1704_01 ↔ char_shen_hongyu_1734_01：cos 0.667 → 同一身份**
+- **char_murong_manshu_1704_01 ↔ char_situ_caiwei_0100_01：cos 0.557 → ⚠️ 存疑，待人工复核**
+- **char_murong_manshu_1704_01 ↔ char_situ_yuhan_0600_01：cos 0.703 → 同一身份**
+- **char_murong_manshu_1704_01 ↔ char_song_wanzhao_1503_01：cos 0.659 → 同一身份**
+- **char_murong_manshu_1704_01 ↔ char_tan_shanshan_0700_01：cos 0.561 → ⚠️ 存疑，待人工复核**
+- **char_murong_manshu_1704_01 ↔ char_tang_sitian_0900_01：cos 0.649 → 同一身份**
+- **char_murong_manshu_1704_01 ↔ char_tantai_weiyu_1433_01：cos 0.453 → ⚠️ 存疑，待人工复核**
+- **char_murong_manshu_1704_01 ↔ char_tantai_xingzhu_0230_01：cos 0.503 → ⚠️ 存疑，待人工复核**
+- **char_murong_manshu_1704_01 ↔ char_tantai_yuwei_0730_01：cos 0.475 → ⚠️ 存疑，待人工复核**
+- **char_murong_manshu_1704_01 ↔ char_wen_manshu_1030_01：cos 0.670 → 同一身份**
+- **char_murong_manshu_1704_01 ↔ char_xi_weiyu_2134_01：cos 0.628 → 同一身份**
+- **char_murong_manshu_1704_01 ↔ char_xue_banxia_0330_01：cos 0.623 → 同一身份**
+- **char_murong_manshu_1704_01 ↔ char_ye_hongyu_0500_01：cos 0.676 → 同一身份**
+- **char_murong_manshu_1704_01 ↔ char_ye_linger_2004_01：cos 0.613 → 同一身份**
+- **char_murong_manshu_1704_01 ↔ char_ye_lingjun_0130_01：cos 0.515 → ⚠️ 存疑，待人工复核**
+- **char_murong_manshu_1704_01 ↔ char_ye_shanshan_0400_01：cos 0.574 → ⚠️ 存疑，待人工复核**
+- **char_murong_manshu_1704_01 ↔ char_ye_yuhan_1804_01：cos 0.702 → 同一身份**
+- **char_murong_manshu_1704_01 ↔ char_yuchi_ruoli_1000_01：cos 0.589 → ⚠️ 存疑，待人工复核**
+- **char_murong_manshu_1704_01 ↔ char_yun_banxia_0030_01：cos 0.533 → ⚠️ 存疑，待人工复核**
+- **char_murong_manshu_1704_01 ↔ char_zhong_manshu_2104_01：cos 0.604 → 同一身份**
+- **char_murong_manshu_1704_01 ↔ char_anya_song：cos 0.058 → 不同身份**
+- **char_murong_manshu_1704_01 ↔ char_ayano：cos 0.058 → 不同身份**
+- **char_murong_manshu_1704_01 ↔ char_chen_xiawei：cos 0.125 → 不同身份**
+- **char_murong_manshu_1704_01 ↔ char_jia：cos 0.085 → 不同身份**
+- **char_murong_manshu_1704_01 ↔ char_jiang_yueyao：cos 0.177 → 不同身份**
+- **char_murong_manshu_1704_01 ↔ char_lin_qingwan：cos 0.279 → 不同身份**
+- **char_murong_manshu_1704_01 ↔ char_liu_yinuo_1923_10：cos -0.015 → 不同身份**
+- **char_murong_manshu_1704_01 ↔ char_luo_qingchuan_1805：cos 0.641 → 同一身份**
+- **char_murong_manshu_1704_01 ↔ char_pei_yuhan_2300_01：cos 0.593 → ⚠️ 存疑，待人工复核**
+- **char_murong_manshu_1704_01 ↔ char_qing_luo：cos 0.204 → 不同身份**
+- **char_murong_manshu_1704_01 ↔ char_ray_ling：cos 0.183 → 不同身份**
+- **char_murong_manshu_1704_01 ↔ char_runcha：cos 0.017 → 不同身份**
+- **char_murong_manshu_1704_01 ↔ char_shen_zhilan：cos 0.184 → 不同身份**
+- **char_murong_manshu_1704_01 ↔ char_su_xiaotang：cos 0.083 → 不同身份**
+- **char_murong_manshu_1704_01 ↔ char_tang_mengli_2200_01：cos 0.615 → 同一身份**
+- **char_murong_manshu_1704_01 ↔ char_wen_xiaorou_2140_01：cos 0.624 → 同一身份**
+- **char_murong_manshu_1704_01 ↔ char_ye_muchen_2100_01：cos 0.562 → ⚠️ 存疑，待人工复核**
+- **char_murong_manshu_1704_01 ↔ char_yin_xinyue_2330_01：cos 0.618 → 同一身份**
+- **char_murong_manshu_1704_01 ↔ char_zhao_ruoxi：cos 0.175 → 不同身份**
+- **char_murong_manshu_1704_01 ↔ char_duo：cos 0.235 → 不同身份**
+- **char_murong_manshu_1704_01 ↔ char_duo3_2：cos 0.173 → 不同身份**
+- **char_murong_manshu_1704_01 ↔ char_cen_zhiwei_1936_01：cos 0.335 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_murong_manshu_1704_01 ↔ char_jiang_ruoli_2007_01：cos 0.269 → 不同身份**
+- **char_murong_manshu_1704_01 ↔ char_xiaog3：cos 0.161 → 不同身份**
+- **char_murong_manshu_1704_01 ↔ char_xi_manshu_2045_01：cos 0.196 → 不同身份**
+- **char_murong_manshu_1704_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.254 → 不同身份**
+- **char_murong_manshu_1704_01 ↔ char_linghu_zhixia_2133_01：cos 0.312 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_murong_manshu_1704_01 ↔ char_qiao_weiyu_2134_01：cos 0.186 → 不同身份**
+- **char_murong_manshu_1704_01 ↔ char_jiang_qinghuan_2203_01：cos 0.382 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_murong_manshu_1704_01 ↔ char_cen_youqing_2204_01：cos 0.107 → 不同身份**
+- **char_murong_manshu_1704_01 ↔ char_zhong_xiaorou_2233_01：cos 0.240 → 不同身份**
+- **char_murong_manshu_1704_01 ↔ char_tan_youqing_2234_01：cos 0.240 → 不同身份**
+- **char_murong_manshu_1704_01 ↔ char_tantai_lingsu_2303_01：cos 0.447 → ⚠️ 存疑，待人工复核**
+- **char_murong_manshu_1704_01 ↔ char_qiao_qinghuan_2304_01：cos 0.447 → ⚠️ 存疑，待人工复核**
+- **char_murong_manshu_1704_01 ↔ char_chu_muchen_0004_01：cos 0.043 → 不同身份**
+- **char_murong_manshu_1704_01 ↔ char_qiao_chaoyan_0004_01：cos -0.058 → 不同身份**
+- **char_murong_manshu_1704_01 ↔ char_xue_qinghuan_0034_01：cos -0.041 → 不同身份**
+- **char_murong_manshu_1704_01 ↔ char_tang_yuwei_0217_01：cos 0.183 → 不同身份**
+- **char_murong_manshu_1704_01 ↔ char_ouyang_chuxia_0250_01：cos 0.251 → 不同身份**
+- **char_murong_manshu_1704_01 ↔ char_bai_zhiruo_0305_01：cos 0.348 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_murong_manshu_1704_01 ↔ char_pei_shanshan_0456_01：cos 0.399 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_murong_manshu_1704_01 ↔ char_xi_qingchuan_0618_01：cos 0.360 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_murong_manshu_1704_01 ↔ char_zhong_linger_0732_01：cos 0.285 → 不同身份**
+- **char_murong_manshu_1704_01 ↔ char_hua_qingdai_1029_01：cos 0.367 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_murong_manshu_1704_01 ↔ char_tang_banxia_1156_01：cos 0.453 → ⚠️ 存疑，待人工复核**
+- **char_murong_manshu_1704_01 ↔ char_gu_weiyu_1321_01：cos 0.344 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_murong_manshu_1704_01 ↔ char_cheng_hongyu_1435_01：cos 0.296 → 不同身份**
+- **char_murong_manshu_1704_01 ↔ char_hua_chuxia_1549_01：cos 0.245 → 不同身份**
+- **char_murong_manshu_1704_01 ↔ char_pei_manshu_1701_01：cos 0.321 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_murong_manshu_1704_01 ↔ char_ye_nanqiao_1811_01：cos 0.293 → 不同身份**
+- **char_murong_manshu_1704_01 ↔ char_murong_yuyan_1942_01：cos 0.299 → 不同身份**
+- **char_murong_manshu_1704_01 ↔ char_nangong_lingjun_2054_01：cos 0.298 → 不同身份**
+- **char_murong_weiyu_0930_01 ↔ char_murong_xingzhu_0200_01：cos 0.462 → ⚠️ 存疑，待人工复核**
+- **char_murong_weiyu_0930_01 ↔ char_ning_chuxia_0000_01：cos 0.479 → ⚠️ 存疑，待人工复核**
+- **char_murong_weiyu_0930_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.537 → ⚠️ 存疑，待人工复核**
+- **char_murong_weiyu_0930_01 ↔ char_qin_linger_1634_01：cos 0.556 → ⚠️ 存疑，待人工复核**
+- **char_murong_weiyu_0930_01 ↔ char_qin_suqiu_0630_01：cos 0.500 → ⚠️ 存疑，待人工复核**
+- **char_murong_weiyu_0930_01 ↔ char_qin_zhixia_1130_01：cos 0.594 → ⚠️ 存疑，待人工复核**
+- **char_murong_weiyu_0930_01 ↔ char_ruan_lingjun_2034_01：cos 0.638 → 同一身份**
+- **char_murong_weiyu_0930_01 ↔ char_ruan_tiange_1403_01：cos 0.640 → 同一身份**
+- **char_murong_weiyu_0930_01 ↔ char_shen_hongyu_1734_01：cos 0.605 → 同一身份**
+- **char_murong_weiyu_0930_01 ↔ char_situ_caiwei_0100_01：cos 0.482 → ⚠️ 存疑，待人工复核**
+- **char_murong_weiyu_0930_01 ↔ char_situ_yuhan_0600_01：cos 0.573 → ⚠️ 存疑，待人工复核**
+- **char_murong_weiyu_0930_01 ↔ char_song_wanzhao_1503_01：cos 0.738 → 同一身份**
+- **char_murong_weiyu_0930_01 ↔ char_tan_shanshan_0700_01：cos 0.611 → 同一身份**
+- **char_murong_weiyu_0930_01 ↔ char_tang_sitian_0900_01：cos 0.500 → ⚠️ 存疑，待人工复核**
+- **char_murong_weiyu_0930_01 ↔ char_tantai_weiyu_1433_01：cos 0.536 → ⚠️ 存疑，待人工复核**
+- **char_murong_weiyu_0930_01 ↔ char_tantai_xingzhu_0230_01：cos 0.403 → ⚠️ 存疑，待人工复核**
+- **char_murong_weiyu_0930_01 ↔ char_tantai_yuwei_0730_01：cos 0.406 → ⚠️ 存疑，待人工复核**
+- **char_murong_weiyu_0930_01 ↔ char_wen_manshu_1030_01：cos 0.556 → ⚠️ 存疑，待人工复核**
+- **char_murong_weiyu_0930_01 ↔ char_xi_weiyu_2134_01：cos 0.441 → ⚠️ 存疑，待人工复核**
+- **char_murong_weiyu_0930_01 ↔ char_xue_banxia_0330_01：cos 0.574 → ⚠️ 存疑，待人工复核**
+- **char_murong_weiyu_0930_01 ↔ char_ye_hongyu_0500_01：cos 0.590 → ⚠️ 存疑，待人工复核**
+- **char_murong_weiyu_0930_01 ↔ char_ye_linger_2004_01：cos 0.627 → 同一身份**
+- **char_murong_weiyu_0930_01 ↔ char_ye_lingjun_0130_01：cos 0.602 → 同一身份**
+- **char_murong_weiyu_0930_01 ↔ char_ye_shanshan_0400_01：cos 0.483 → ⚠️ 存疑，待人工复核**
+- **char_murong_weiyu_0930_01 ↔ char_ye_yuhan_1804_01：cos 0.662 → 同一身份**
+- **char_murong_weiyu_0930_01 ↔ char_yuchi_ruoli_1000_01：cos 0.473 → ⚠️ 存疑，待人工复核**
+- **char_murong_weiyu_0930_01 ↔ char_yun_banxia_0030_01：cos 0.600 → ⚠️ 存疑，待人工复核**
+- **char_murong_weiyu_0930_01 ↔ char_zhong_manshu_2104_01：cos 0.515 → ⚠️ 存疑，待人工复核**
+- **char_murong_weiyu_0930_01 ↔ char_anya_song：cos 0.167 → 不同身份**
+- **char_murong_weiyu_0930_01 ↔ char_ayano：cos 0.096 → 不同身份**
+- **char_murong_weiyu_0930_01 ↔ char_chen_xiawei：cos 0.099 → 不同身份**
+- **char_murong_weiyu_0930_01 ↔ char_jia：cos 0.068 → 不同身份**
+- **char_murong_weiyu_0930_01 ↔ char_jiang_yueyao：cos 0.265 → 不同身份**
+- **char_murong_weiyu_0930_01 ↔ char_lin_qingwan：cos 0.289 → 不同身份**
+- **char_murong_weiyu_0930_01 ↔ char_liu_yinuo_1923_10：cos -0.081 → 不同身份**
+- **char_murong_weiyu_0930_01 ↔ char_luo_qingchuan_1805：cos 0.542 → ⚠️ 存疑，待人工复核**
+- **char_murong_weiyu_0930_01 ↔ char_pei_yuhan_2300_01：cos 0.429 → ⚠️ 存疑，待人工复核**
+- **char_murong_weiyu_0930_01 ↔ char_qing_luo：cos 0.081 → 不同身份**
+- **char_murong_weiyu_0930_01 ↔ char_ray_ling：cos 0.206 → 不同身份**
+- **char_murong_weiyu_0930_01 ↔ char_runcha：cos 0.063 → 不同身份**
+- **char_murong_weiyu_0930_01 ↔ char_shen_zhilan：cos 0.120 → 不同身份**
+- **char_murong_weiyu_0930_01 ↔ char_su_xiaotang：cos 0.092 → 不同身份**
+- **char_murong_weiyu_0930_01 ↔ char_tang_mengli_2200_01：cos 0.506 → ⚠️ 存疑，待人工复核**
+- **char_murong_weiyu_0930_01 ↔ char_wen_xiaorou_2140_01：cos 0.587 → ⚠️ 存疑，待人工复核**
+- **char_murong_weiyu_0930_01 ↔ char_ye_muchen_2100_01：cos 0.460 → ⚠️ 存疑，待人工复核**
+- **char_murong_weiyu_0930_01 ↔ char_yin_xinyue_2330_01：cos 0.496 → ⚠️ 存疑，待人工复核**
+- **char_murong_weiyu_0930_01 ↔ char_zhao_ruoxi：cos 0.224 → 不同身份**
+- **char_murong_weiyu_0930_01 ↔ char_duo：cos 0.303 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_murong_weiyu_0930_01 ↔ char_duo3_2：cos 0.059 → 不同身份**
+- **char_murong_weiyu_0930_01 ↔ char_cen_zhiwei_1936_01：cos 0.388 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_murong_weiyu_0930_01 ↔ char_jiang_ruoli_2007_01：cos 0.331 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_murong_weiyu_0930_01 ↔ char_xiaog3：cos 0.141 → 不同身份**
+- **char_murong_weiyu_0930_01 ↔ char_xi_manshu_2045_01：cos 0.193 → 不同身份**
+- **char_murong_weiyu_0930_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.394 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_murong_weiyu_0930_01 ↔ char_linghu_zhixia_2133_01：cos 0.426 → ⚠️ 存疑，待人工复核**
+- **char_murong_weiyu_0930_01 ↔ char_qiao_weiyu_2134_01：cos 0.275 → 不同身份**
+- **char_murong_weiyu_0930_01 ↔ char_jiang_qinghuan_2203_01：cos 0.269 → 不同身份**
+- **char_murong_weiyu_0930_01 ↔ char_cen_youqing_2204_01：cos 0.110 → 不同身份**
+- **char_murong_weiyu_0930_01 ↔ char_zhong_xiaorou_2233_01：cos 0.201 → 不同身份**
+- **char_murong_weiyu_0930_01 ↔ char_tan_youqing_2234_01：cos 0.201 → 不同身份**
+- **char_murong_weiyu_0930_01 ↔ char_tantai_lingsu_2303_01：cos 0.445 → ⚠️ 存疑，待人工复核**
+- **char_murong_weiyu_0930_01 ↔ char_qiao_qinghuan_2304_01：cos 0.445 → ⚠️ 存疑，待人工复核**
+- **char_murong_weiyu_0930_01 ↔ char_chu_muchen_0004_01：cos -0.009 → 不同身份**
+- **char_murong_weiyu_0930_01 ↔ char_qiao_chaoyan_0004_01：cos -0.073 → 不同身份**
+- **char_murong_weiyu_0930_01 ↔ char_xue_qinghuan_0034_01：cos -0.007 → 不同身份**
+- **char_murong_weiyu_0930_01 ↔ char_tang_yuwei_0217_01：cos 0.177 → 不同身份**
+- **char_murong_weiyu_0930_01 ↔ char_ouyang_chuxia_0250_01：cos 0.197 → 不同身份**
+- **char_murong_weiyu_0930_01 ↔ char_bai_zhiruo_0305_01：cos 0.471 → ⚠️ 存疑，待人工复核**
+- **char_murong_weiyu_0930_01 ↔ char_pei_shanshan_0456_01：cos 0.276 → 不同身份**
+- **char_murong_weiyu_0930_01 ↔ char_xi_qingchuan_0618_01：cos 0.288 → 不同身份**
+- **char_murong_weiyu_0930_01 ↔ char_zhong_linger_0732_01：cos 0.361 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_murong_weiyu_0930_01 ↔ char_hua_qingdai_1029_01：cos 0.406 → ⚠️ 存疑，待人工复核**
+- **char_murong_weiyu_0930_01 ↔ char_tang_banxia_1156_01：cos 0.419 → ⚠️ 存疑，待人工复核**
+- **char_murong_weiyu_0930_01 ↔ char_gu_weiyu_1321_01：cos 0.304 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_murong_weiyu_0930_01 ↔ char_cheng_hongyu_1435_01：cos 0.255 → 不同身份**
+- **char_murong_weiyu_0930_01 ↔ char_hua_chuxia_1549_01：cos 0.258 → 不同身份**
+- **char_murong_weiyu_0930_01 ↔ char_pei_manshu_1701_01：cos 0.225 → 不同身份**
+- **char_murong_weiyu_0930_01 ↔ char_ye_nanqiao_1811_01：cos 0.240 → 不同身份**
+- **char_murong_weiyu_0930_01 ↔ char_murong_yuyan_1942_01：cos 0.160 → 不同身份**
+- **char_murong_weiyu_0930_01 ↔ char_nangong_lingjun_2054_01：cos 0.354 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_murong_xingzhu_0200_01 ↔ char_ning_chuxia_0000_01：cos 0.694 → 同一身份**
+- **char_murong_xingzhu_0200_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.392 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_murong_xingzhu_0200_01 ↔ char_qin_linger_1634_01：cos 0.482 → ⚠️ 存疑，待人工复核**
+- **char_murong_xingzhu_0200_01 ↔ char_qin_suqiu_0630_01：cos 0.556 → ⚠️ 存疑，待人工复核**
+- **char_murong_xingzhu_0200_01 ↔ char_qin_zhixia_1130_01：cos 0.471 → ⚠️ 存疑，待人工复核**
+- **char_murong_xingzhu_0200_01 ↔ char_ruan_lingjun_2034_01：cos 0.452 → ⚠️ 存疑，待人工复核**
+- **char_murong_xingzhu_0200_01 ↔ char_ruan_tiange_1403_01：cos 0.496 → ⚠️ 存疑，待人工复核**
+- **char_murong_xingzhu_0200_01 ↔ char_shen_hongyu_1734_01：cos 0.621 → 同一身份**
+- **char_murong_xingzhu_0200_01 ↔ char_situ_caiwei_0100_01：cos 0.288 → 不同身份**
+- **char_murong_xingzhu_0200_01 ↔ char_situ_yuhan_0600_01：cos 0.521 → ⚠️ 存疑，待人工复核**
+- **char_murong_xingzhu_0200_01 ↔ char_song_wanzhao_1503_01：cos 0.476 → ⚠️ 存疑，待人工复核**
+- **char_murong_xingzhu_0200_01 ↔ char_tan_shanshan_0700_01：cos 0.399 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_murong_xingzhu_0200_01 ↔ char_tang_sitian_0900_01：cos 0.393 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_murong_xingzhu_0200_01 ↔ char_tantai_weiyu_1433_01：cos 0.493 → ⚠️ 存疑，待人工复核**
+- **char_murong_xingzhu_0200_01 ↔ char_tantai_xingzhu_0230_01：cos 0.777 → 同一身份**
+- **char_murong_xingzhu_0200_01 ↔ char_tantai_yuwei_0730_01：cos 0.595 → ⚠️ 存疑，待人工复核**
+- **char_murong_xingzhu_0200_01 ↔ char_wen_manshu_1030_01：cos 0.366 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_murong_xingzhu_0200_01 ↔ char_xi_weiyu_2134_01：cos 0.522 → ⚠️ 存疑，待人工复核**
+- **char_murong_xingzhu_0200_01 ↔ char_xue_banxia_0330_01：cos 0.385 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_murong_xingzhu_0200_01 ↔ char_ye_hongyu_0500_01：cos 0.378 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_murong_xingzhu_0200_01 ↔ char_ye_linger_2004_01：cos 0.456 → ⚠️ 存疑，待人工复核**
+- **char_murong_xingzhu_0200_01 ↔ char_ye_lingjun_0130_01：cos 0.465 → ⚠️ 存疑，待人工复核**
+- **char_murong_xingzhu_0200_01 ↔ char_ye_shanshan_0400_01：cos 0.654 → 同一身份**
+- **char_murong_xingzhu_0200_01 ↔ char_ye_yuhan_1804_01：cos 0.513 → ⚠️ 存疑，待人工复核**
+- **char_murong_xingzhu_0200_01 ↔ char_yuchi_ruoli_1000_01：cos 0.565 → ⚠️ 存疑，待人工复核**
+- **char_murong_xingzhu_0200_01 ↔ char_yun_banxia_0030_01：cos 0.291 → 不同身份**
+- **char_murong_xingzhu_0200_01 ↔ char_zhong_manshu_2104_01：cos 0.623 → 同一身份**
+- **char_murong_xingzhu_0200_01 ↔ char_anya_song：cos 0.044 → 不同身份**
+- **char_murong_xingzhu_0200_01 ↔ char_ayano：cos 0.164 → 不同身份**
+- **char_murong_xingzhu_0200_01 ↔ char_chen_xiawei：cos 0.140 → 不同身份**
+- **char_murong_xingzhu_0200_01 ↔ char_jia：cos 0.129 → 不同身份**
+- **char_murong_xingzhu_0200_01 ↔ char_jiang_yueyao：cos 0.103 → 不同身份**
+- **char_murong_xingzhu_0200_01 ↔ char_lin_qingwan：cos 0.182 → 不同身份**
+- **char_murong_xingzhu_0200_01 ↔ char_liu_yinuo_1923_10：cos -0.004 → 不同身份**
+- **char_murong_xingzhu_0200_01 ↔ char_luo_qingchuan_1805：cos 0.536 → ⚠️ 存疑，待人工复核**
+- **char_murong_xingzhu_0200_01 ↔ char_pei_yuhan_2300_01：cos 0.602 → 同一身份**
+- **char_murong_xingzhu_0200_01 ↔ char_qing_luo：cos 0.251 → 不同身份**
+- **char_murong_xingzhu_0200_01 ↔ char_ray_ling：cos 0.033 → 不同身份**
+- **char_murong_xingzhu_0200_01 ↔ char_runcha：cos 0.119 → 不同身份**
+- **char_murong_xingzhu_0200_01 ↔ char_shen_zhilan：cos 0.027 → 不同身份**
+- **char_murong_xingzhu_0200_01 ↔ char_su_xiaotang：cos 0.100 → 不同身份**
+- **char_murong_xingzhu_0200_01 ↔ char_tang_mengli_2200_01：cos 0.668 → 同一身份**
+- **char_murong_xingzhu_0200_01 ↔ char_wen_xiaorou_2140_01：cos 0.665 → 同一身份**
+- **char_murong_xingzhu_0200_01 ↔ char_ye_muchen_2100_01：cos 0.669 → 同一身份**
+- **char_murong_xingzhu_0200_01 ↔ char_yin_xinyue_2330_01：cos 0.657 → 同一身份**
+- **char_murong_xingzhu_0200_01 ↔ char_zhao_ruoxi：cos 0.123 → 不同身份**
+- **char_murong_xingzhu_0200_01 ↔ char_duo：cos 0.192 → 不同身份**
+- **char_murong_xingzhu_0200_01 ↔ char_duo3_2：cos 0.066 → 不同身份**
+- **char_murong_xingzhu_0200_01 ↔ char_cen_zhiwei_1936_01：cos 0.177 → 不同身份**
+- **char_murong_xingzhu_0200_01 ↔ char_jiang_ruoli_2007_01：cos 0.058 → 不同身份**
+- **char_murong_xingzhu_0200_01 ↔ char_xiaog3：cos 0.370 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_murong_xingzhu_0200_01 ↔ char_xi_manshu_2045_01：cos 0.091 → 不同身份**
+- **char_murong_xingzhu_0200_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.155 → 不同身份**
+- **char_murong_xingzhu_0200_01 ↔ char_linghu_zhixia_2133_01：cos 0.167 → 不同身份**
+- **char_murong_xingzhu_0200_01 ↔ char_qiao_weiyu_2134_01：cos 0.084 → 不同身份**
+- **char_murong_xingzhu_0200_01 ↔ char_jiang_qinghuan_2203_01：cos 0.296 → 不同身份**
+- **char_murong_xingzhu_0200_01 ↔ char_cen_youqing_2204_01：cos -0.027 → 不同身份**
+- **char_murong_xingzhu_0200_01 ↔ char_zhong_xiaorou_2233_01：cos 0.165 → 不同身份**
+- **char_murong_xingzhu_0200_01 ↔ char_tan_youqing_2234_01：cos 0.165 → 不同身份**
+- **char_murong_xingzhu_0200_01 ↔ char_tantai_lingsu_2303_01：cos 0.299 → 不同身份**
+- **char_murong_xingzhu_0200_01 ↔ char_qiao_qinghuan_2304_01：cos 0.299 → 不同身份**
+- **char_murong_xingzhu_0200_01 ↔ char_chu_muchen_0004_01：cos -0.025 → 不同身份**
+- **char_murong_xingzhu_0200_01 ↔ char_qiao_chaoyan_0004_01：cos 0.007 → 不同身份**
+- **char_murong_xingzhu_0200_01 ↔ char_xue_qinghuan_0034_01：cos 0.028 → 不同身份**
+- **char_murong_xingzhu_0200_01 ↔ char_tang_yuwei_0217_01：cos 0.299 → 不同身份**
+- **char_murong_xingzhu_0200_01 ↔ char_ouyang_chuxia_0250_01：cos 0.063 → 不同身份**
+- **char_murong_xingzhu_0200_01 ↔ char_bai_zhiruo_0305_01：cos 0.328 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_murong_xingzhu_0200_01 ↔ char_pei_shanshan_0456_01：cos 0.254 → 不同身份**
+- **char_murong_xingzhu_0200_01 ↔ char_xi_qingchuan_0618_01：cos 0.255 → 不同身份**
+- **char_murong_xingzhu_0200_01 ↔ char_zhong_linger_0732_01：cos 0.129 → 不同身份**
+- **char_murong_xingzhu_0200_01 ↔ char_hua_qingdai_1029_01：cos 0.196 → 不同身份**
+- **char_murong_xingzhu_0200_01 ↔ char_tang_banxia_1156_01：cos 0.257 → 不同身份**
+- **char_murong_xingzhu_0200_01 ↔ char_gu_weiyu_1321_01：cos 0.179 → 不同身份**
+- **char_murong_xingzhu_0200_01 ↔ char_cheng_hongyu_1435_01：cos 0.112 → 不同身份**
+- **char_murong_xingzhu_0200_01 ↔ char_hua_chuxia_1549_01：cos 0.120 → 不同身份**
+- **char_murong_xingzhu_0200_01 ↔ char_pei_manshu_1701_01：cos 0.182 → 不同身份**
+- **char_murong_xingzhu_0200_01 ↔ char_ye_nanqiao_1811_01：cos 0.176 → 不同身份**
+- **char_murong_xingzhu_0200_01 ↔ char_murong_yuyan_1942_01：cos 0.246 → 不同身份**
+- **char_murong_xingzhu_0200_01 ↔ char_nangong_lingjun_2054_01：cos 0.072 → 不同身份**
+- **char_ning_chuxia_0000_01 ↔ char_ouyang_zhiwei_1233_01：cos 0.513 → ⚠️ 存疑，待人工复核**
+- **char_ning_chuxia_0000_01 ↔ char_qin_linger_1634_01：cos 0.582 → ⚠️ 存疑，待人工复核**
+- **char_ning_chuxia_0000_01 ↔ char_qin_suqiu_0630_01：cos 0.619 → 同一身份**
+- **char_ning_chuxia_0000_01 ↔ char_qin_zhixia_1130_01：cos 0.479 → ⚠️ 存疑，待人工复核**
+- **char_ning_chuxia_0000_01 ↔ char_ruan_lingjun_2034_01：cos 0.543 → ⚠️ 存疑，待人工复核**
+- **char_ning_chuxia_0000_01 ↔ char_ruan_tiange_1403_01：cos 0.525 → ⚠️ 存疑，待人工复核**
+- **char_ning_chuxia_0000_01 ↔ char_shen_hongyu_1734_01：cos 0.718 → 同一身份**
+- **char_ning_chuxia_0000_01 ↔ char_situ_caiwei_0100_01：cos 0.464 → ⚠️ 存疑，待人工复核**
+- **char_ning_chuxia_0000_01 ↔ char_situ_yuhan_0600_01：cos 0.605 → 同一身份**
+- **char_ning_chuxia_0000_01 ↔ char_song_wanzhao_1503_01：cos 0.538 → ⚠️ 存疑，待人工复核**
+- **char_ning_chuxia_0000_01 ↔ char_tan_shanshan_0700_01：cos 0.457 → ⚠️ 存疑，待人工复核**
+- **char_ning_chuxia_0000_01 ↔ char_tang_sitian_0900_01：cos 0.555 → ⚠️ 存疑，待人工复核**
+- **char_ning_chuxia_0000_01 ↔ char_tantai_weiyu_1433_01：cos 0.441 → ⚠️ 存疑，待人工复核**
+- **char_ning_chuxia_0000_01 ↔ char_tantai_xingzhu_0230_01：cos 0.671 → 同一身份**
+- **char_ning_chuxia_0000_01 ↔ char_tantai_yuwei_0730_01：cos 0.642 → 同一身份**
+- **char_ning_chuxia_0000_01 ↔ char_wen_manshu_1030_01：cos 0.515 → ⚠️ 存疑，待人工复核**
+- **char_ning_chuxia_0000_01 ↔ char_xi_weiyu_2134_01：cos 0.685 → 同一身份**
+- **char_ning_chuxia_0000_01 ↔ char_xue_banxia_0330_01：cos 0.412 → ⚠️ 存疑，待人工复核**
+- **char_ning_chuxia_0000_01 ↔ char_ye_hongyu_0500_01：cos 0.433 → ⚠️ 存疑，待人工复核**
+- **char_ning_chuxia_0000_01 ↔ char_ye_linger_2004_01：cos 0.480 → ⚠️ 存疑，待人工复核**
+- **char_ning_chuxia_0000_01 ↔ char_ye_lingjun_0130_01：cos 0.478 → ⚠️ 存疑，待人工复核**
+- **char_ning_chuxia_0000_01 ↔ char_ye_shanshan_0400_01：cos 0.657 → 同一身份**
+- **char_ning_chuxia_0000_01 ↔ char_ye_yuhan_1804_01：cos 0.580 → ⚠️ 存疑，待人工复核**
+- **char_ning_chuxia_0000_01 ↔ char_yuchi_ruoli_1000_01：cos 0.683 → 同一身份**
+- **char_ning_chuxia_0000_01 ↔ char_yun_banxia_0030_01：cos 0.295 → 不同身份**
+- **char_ning_chuxia_0000_01 ↔ char_zhong_manshu_2104_01：cos 0.691 → 同一身份**
+- **char_ning_chuxia_0000_01 ↔ char_anya_song：cos 0.025 → 不同身份**
+- **char_ning_chuxia_0000_01 ↔ char_ayano：cos 0.125 → 不同身份**
+- **char_ning_chuxia_0000_01 ↔ char_chen_xiawei：cos 0.135 → 不同身份**
+- **char_ning_chuxia_0000_01 ↔ char_jia：cos 0.075 → 不同身份**
+- **char_ning_chuxia_0000_01 ↔ char_jiang_yueyao：cos 0.142 → 不同身份**
+- **char_ning_chuxia_0000_01 ↔ char_lin_qingwan：cos 0.220 → 不同身份**
+- **char_ning_chuxia_0000_01 ↔ char_liu_yinuo_1923_10：cos -0.001 → 不同身份**
+- **char_ning_chuxia_0000_01 ↔ char_luo_qingchuan_1805：cos 0.620 → 同一身份**
+- **char_ning_chuxia_0000_01 ↔ char_pei_yuhan_2300_01：cos 0.694 → 同一身份**
+- **char_ning_chuxia_0000_01 ↔ char_qing_luo：cos 0.261 → 不同身份**
+- **char_ning_chuxia_0000_01 ↔ char_ray_ling：cos -0.003 → 不同身份**
+- **char_ning_chuxia_0000_01 ↔ char_runcha：cos 0.041 → 不同身份**
+- **char_ning_chuxia_0000_01 ↔ char_shen_zhilan：cos -0.002 → 不同身份**
+- **char_ning_chuxia_0000_01 ↔ char_su_xiaotang：cos 0.002 → 不同身份**
+- **char_ning_chuxia_0000_01 ↔ char_tang_mengli_2200_01：cos 0.711 → 同一身份**
+- **char_ning_chuxia_0000_01 ↔ char_wen_xiaorou_2140_01：cos 0.729 → 同一身份**
+- **char_ning_chuxia_0000_01 ↔ char_ye_muchen_2100_01：cos 0.800 → 同一身份**
+- **char_ning_chuxia_0000_01 ↔ char_yin_xinyue_2330_01：cos 0.733 → 同一身份**
+- **char_ning_chuxia_0000_01 ↔ char_zhao_ruoxi：cos 0.149 → 不同身份**
+- **char_ning_chuxia_0000_01 ↔ char_duo：cos 0.117 → 不同身份**
+- **char_ning_chuxia_0000_01 ↔ char_duo3_2：cos 0.082 → 不同身份**
+- **char_ning_chuxia_0000_01 ↔ char_cen_zhiwei_1936_01：cos 0.185 → 不同身份**
+- **char_ning_chuxia_0000_01 ↔ char_jiang_ruoli_2007_01：cos 0.064 → 不同身份**
+- **char_ning_chuxia_0000_01 ↔ char_xiaog3：cos 0.335 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ning_chuxia_0000_01 ↔ char_xi_manshu_2045_01：cos 0.206 → 不同身份**
+- **char_ning_chuxia_0000_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.111 → 不同身份**
+- **char_ning_chuxia_0000_01 ↔ char_linghu_zhixia_2133_01：cos 0.211 → 不同身份**
+- **char_ning_chuxia_0000_01 ↔ char_qiao_weiyu_2134_01：cos 0.027 → 不同身份**
+- **char_ning_chuxia_0000_01 ↔ char_jiang_qinghuan_2203_01：cos 0.302 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ning_chuxia_0000_01 ↔ char_cen_youqing_2204_01：cos -0.002 → 不同身份**
+- **char_ning_chuxia_0000_01 ↔ char_zhong_xiaorou_2233_01：cos 0.192 → 不同身份**
+- **char_ning_chuxia_0000_01 ↔ char_tan_youqing_2234_01：cos 0.192 → 不同身份**
+- **char_ning_chuxia_0000_01 ↔ char_tantai_lingsu_2303_01：cos 0.323 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ning_chuxia_0000_01 ↔ char_qiao_qinghuan_2304_01：cos 0.323 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ning_chuxia_0000_01 ↔ char_chu_muchen_0004_01：cos -0.030 → 不同身份**
+- **char_ning_chuxia_0000_01 ↔ char_qiao_chaoyan_0004_01：cos -0.006 → 不同身份**
+- **char_ning_chuxia_0000_01 ↔ char_xue_qinghuan_0034_01：cos -0.046 → 不同身份**
+- **char_ning_chuxia_0000_01 ↔ char_tang_yuwei_0217_01：cos 0.198 → 不同身份**
+- **char_ning_chuxia_0000_01 ↔ char_ouyang_chuxia_0250_01：cos 0.146 → 不同身份**
+- **char_ning_chuxia_0000_01 ↔ char_bai_zhiruo_0305_01：cos 0.344 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ning_chuxia_0000_01 ↔ char_pei_shanshan_0456_01：cos 0.350 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ning_chuxia_0000_01 ↔ char_xi_qingchuan_0618_01：cos 0.292 → 不同身份**
+- **char_ning_chuxia_0000_01 ↔ char_zhong_linger_0732_01：cos 0.090 → 不同身份**
+- **char_ning_chuxia_0000_01 ↔ char_hua_qingdai_1029_01：cos 0.202 → 不同身份**
+- **char_ning_chuxia_0000_01 ↔ char_tang_banxia_1156_01：cos 0.333 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ning_chuxia_0000_01 ↔ char_gu_weiyu_1321_01：cos 0.173 → 不同身份**
+- **char_ning_chuxia_0000_01 ↔ char_cheng_hongyu_1435_01：cos 0.178 → 不同身份**
+- **char_ning_chuxia_0000_01 ↔ char_hua_chuxia_1549_01：cos 0.102 → 不同身份**
+- **char_ning_chuxia_0000_01 ↔ char_pei_manshu_1701_01：cos 0.256 → 不同身份**
+- **char_ning_chuxia_0000_01 ↔ char_ye_nanqiao_1811_01：cos 0.233 → 不同身份**
+- **char_ning_chuxia_0000_01 ↔ char_murong_yuyan_1942_01：cos 0.339 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ning_chuxia_0000_01 ↔ char_nangong_lingjun_2054_01：cos 0.096 → 不同身份**
+- **char_ouyang_zhiwei_1233_01 ↔ char_qin_linger_1634_01：cos 0.653 → 同一身份**
+- **char_ouyang_zhiwei_1233_01 ↔ char_qin_suqiu_0630_01：cos 0.577 → ⚠️ 存疑，待人工复核**
+- **char_ouyang_zhiwei_1233_01 ↔ char_qin_zhixia_1130_01：cos 0.532 → ⚠️ 存疑，待人工复核**
+- **char_ouyang_zhiwei_1233_01 ↔ char_ruan_lingjun_2034_01：cos 0.619 → 同一身份**
+- **char_ouyang_zhiwei_1233_01 ↔ char_ruan_tiange_1403_01：cos 0.716 → 同一身份**
+- **char_ouyang_zhiwei_1233_01 ↔ char_shen_hongyu_1734_01：cos 0.582 → ⚠️ 存疑，待人工复核**
+- **char_ouyang_zhiwei_1233_01 ↔ char_situ_caiwei_0100_01：cos 0.571 → ⚠️ 存疑，待人工复核**
+- **char_ouyang_zhiwei_1233_01 ↔ char_situ_yuhan_0600_01：cos 0.680 → 同一身份**
+- **char_ouyang_zhiwei_1233_01 ↔ char_song_wanzhao_1503_01：cos 0.560 → ⚠️ 存疑，待人工复核**
+- **char_ouyang_zhiwei_1233_01 ↔ char_tan_shanshan_0700_01：cos 0.711 → 同一身份**
+- **char_ouyang_zhiwei_1233_01 ↔ char_tang_sitian_0900_01：cos 0.587 → ⚠️ 存疑，待人工复核**
+- **char_ouyang_zhiwei_1233_01 ↔ char_tantai_weiyu_1433_01：cos 0.615 → 同一身份**
+- **char_ouyang_zhiwei_1233_01 ↔ char_tantai_xingzhu_0230_01：cos 0.372 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ouyang_zhiwei_1233_01 ↔ char_tantai_yuwei_0730_01：cos 0.412 → ⚠️ 存疑，待人工复核**
+- **char_ouyang_zhiwei_1233_01 ↔ char_wen_manshu_1030_01：cos 0.609 → 同一身份**
+- **char_ouyang_zhiwei_1233_01 ↔ char_xi_weiyu_2134_01：cos 0.587 → ⚠️ 存疑，待人工复核**
+- **char_ouyang_zhiwei_1233_01 ↔ char_xue_banxia_0330_01：cos 0.712 → 同一身份**
+- **char_ouyang_zhiwei_1233_01 ↔ char_ye_hongyu_0500_01：cos 0.740 → 同一身份**
+- **char_ouyang_zhiwei_1233_01 ↔ char_ye_linger_2004_01：cos 0.749 → 同一身份**
+- **char_ouyang_zhiwei_1233_01 ↔ char_ye_lingjun_0130_01：cos 0.672 → 同一身份**
+- **char_ouyang_zhiwei_1233_01 ↔ char_ye_shanshan_0400_01：cos 0.567 → ⚠️ 存疑，待人工复核**
+- **char_ouyang_zhiwei_1233_01 ↔ char_ye_yuhan_1804_01：cos 0.590 → ⚠️ 存疑，待人工复核**
+- **char_ouyang_zhiwei_1233_01 ↔ char_yuchi_ruoli_1000_01：cos 0.548 → ⚠️ 存疑，待人工复核**
+- **char_ouyang_zhiwei_1233_01 ↔ char_yun_banxia_0030_01：cos 0.430 → ⚠️ 存疑，待人工复核**
+- **char_ouyang_zhiwei_1233_01 ↔ char_zhong_manshu_2104_01：cos 0.539 → ⚠️ 存疑，待人工复核**
+- **char_ouyang_zhiwei_1233_01 ↔ char_anya_song：cos 0.233 → 不同身份**
+- **char_ouyang_zhiwei_1233_01 ↔ char_ayano：cos 0.094 → 不同身份**
+- **char_ouyang_zhiwei_1233_01 ↔ char_chen_xiawei：cos 0.022 → 不同身份**
+- **char_ouyang_zhiwei_1233_01 ↔ char_jia：cos 0.072 → 不同身份**
+- **char_ouyang_zhiwei_1233_01 ↔ char_jiang_yueyao：cos 0.186 → 不同身份**
+- **char_ouyang_zhiwei_1233_01 ↔ char_lin_qingwan：cos 0.219 → 不同身份**
+- **char_ouyang_zhiwei_1233_01 ↔ char_liu_yinuo_1923_10：cos -0.030 → 不同身份**
+- **char_ouyang_zhiwei_1233_01 ↔ char_luo_qingchuan_1805：cos 0.694 → 同一身份**
+- **char_ouyang_zhiwei_1233_01 ↔ char_pei_yuhan_2300_01：cos 0.490 → ⚠️ 存疑，待人工复核**
+- **char_ouyang_zhiwei_1233_01 ↔ char_qing_luo：cos 0.107 → 不同身份**
+- **char_ouyang_zhiwei_1233_01 ↔ char_ray_ling：cos 0.318 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ouyang_zhiwei_1233_01 ↔ char_runcha：cos -0.026 → 不同身份**
+- **char_ouyang_zhiwei_1233_01 ↔ char_shen_zhilan：cos 0.308 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ouyang_zhiwei_1233_01 ↔ char_su_xiaotang：cos 0.112 → 不同身份**
+- **char_ouyang_zhiwei_1233_01 ↔ char_tang_mengli_2200_01：cos 0.437 → ⚠️ 存疑，待人工复核**
+- **char_ouyang_zhiwei_1233_01 ↔ char_wen_xiaorou_2140_01：cos 0.539 → ⚠️ 存疑，待人工复核**
+- **char_ouyang_zhiwei_1233_01 ↔ char_ye_muchen_2100_01：cos 0.564 → ⚠️ 存疑，待人工复核**
+- **char_ouyang_zhiwei_1233_01 ↔ char_yin_xinyue_2330_01：cos 0.512 → ⚠️ 存疑，待人工复核**
+- **char_ouyang_zhiwei_1233_01 ↔ char_zhao_ruoxi：cos 0.146 → 不同身份**
+- **char_ouyang_zhiwei_1233_01 ↔ char_duo：cos 0.125 → 不同身份**
+- **char_ouyang_zhiwei_1233_01 ↔ char_duo3_2：cos 0.174 → 不同身份**
+- **char_ouyang_zhiwei_1233_01 ↔ char_cen_zhiwei_1936_01：cos 0.419 → ⚠️ 存疑，待人工复核**
+- **char_ouyang_zhiwei_1233_01 ↔ char_jiang_ruoli_2007_01：cos 0.350 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ouyang_zhiwei_1233_01 ↔ char_xiaog3：cos 0.017 → 不同身份**
+- **char_ouyang_zhiwei_1233_01 ↔ char_xi_manshu_2045_01：cos 0.265 → 不同身份**
+- **char_ouyang_zhiwei_1233_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.406 → ⚠️ 存疑，待人工复核**
+- **char_ouyang_zhiwei_1233_01 ↔ char_linghu_zhixia_2133_01：cos 0.421 → ⚠️ 存疑，待人工复核**
+- **char_ouyang_zhiwei_1233_01 ↔ char_qiao_weiyu_2134_01：cos 0.295 → 不同身份**
+- **char_ouyang_zhiwei_1233_01 ↔ char_jiang_qinghuan_2203_01：cos 0.292 → 不同身份**
+- **char_ouyang_zhiwei_1233_01 ↔ char_cen_youqing_2204_01：cos 0.047 → 不同身份**
+- **char_ouyang_zhiwei_1233_01 ↔ char_zhong_xiaorou_2233_01：cos 0.195 → 不同身份**
+- **char_ouyang_zhiwei_1233_01 ↔ char_tan_youqing_2234_01：cos 0.195 → 不同身份**
+- **char_ouyang_zhiwei_1233_01 ↔ char_tantai_lingsu_2303_01：cos 0.326 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ouyang_zhiwei_1233_01 ↔ char_qiao_qinghuan_2304_01：cos 0.326 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ouyang_zhiwei_1233_01 ↔ char_chu_muchen_0004_01：cos 0.038 → 不同身份**
+- **char_ouyang_zhiwei_1233_01 ↔ char_qiao_chaoyan_0004_01：cos -0.088 → 不同身份**
+- **char_ouyang_zhiwei_1233_01 ↔ char_xue_qinghuan_0034_01：cos -0.027 → 不同身份**
+- **char_ouyang_zhiwei_1233_01 ↔ char_tang_yuwei_0217_01：cos 0.186 → 不同身份**
+- **char_ouyang_zhiwei_1233_01 ↔ char_ouyang_chuxia_0250_01：cos 0.237 → 不同身份**
+- **char_ouyang_zhiwei_1233_01 ↔ char_bai_zhiruo_0305_01：cos 0.344 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ouyang_zhiwei_1233_01 ↔ char_pei_shanshan_0456_01：cos 0.374 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ouyang_zhiwei_1233_01 ↔ char_xi_qingchuan_0618_01：cos 0.333 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ouyang_zhiwei_1233_01 ↔ char_zhong_linger_0732_01：cos 0.368 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ouyang_zhiwei_1233_01 ↔ char_hua_qingdai_1029_01：cos 0.327 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ouyang_zhiwei_1233_01 ↔ char_tang_banxia_1156_01：cos 0.372 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ouyang_zhiwei_1233_01 ↔ char_gu_weiyu_1321_01：cos 0.268 → 不同身份**
+- **char_ouyang_zhiwei_1233_01 ↔ char_cheng_hongyu_1435_01：cos 0.216 → 不同身份**
+- **char_ouyang_zhiwei_1233_01 ↔ char_hua_chuxia_1549_01：cos 0.230 → 不同身份**
+- **char_ouyang_zhiwei_1233_01 ↔ char_pei_manshu_1701_01：cos 0.255 → 不同身份**
+- **char_ouyang_zhiwei_1233_01 ↔ char_ye_nanqiao_1811_01：cos 0.237 → 不同身份**
+- **char_ouyang_zhiwei_1233_01 ↔ char_murong_yuyan_1942_01：cos 0.325 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ouyang_zhiwei_1233_01 ↔ char_nangong_lingjun_2054_01：cos 0.369 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qin_linger_1634_01 ↔ char_qin_suqiu_0630_01：cos 0.570 → ⚠️ 存疑，待人工复核**
+- **char_qin_linger_1634_01 ↔ char_qin_zhixia_1130_01：cos 0.540 → ⚠️ 存疑，待人工复核**
+- **char_qin_linger_1634_01 ↔ char_ruan_lingjun_2034_01：cos 0.706 → 同一身份**
+- **char_qin_linger_1634_01 ↔ char_ruan_tiange_1403_01：cos 0.651 → 同一身份**
+- **char_qin_linger_1634_01 ↔ char_shen_hongyu_1734_01：cos 0.640 → 同一身份**
+- **char_qin_linger_1634_01 ↔ char_situ_caiwei_0100_01：cos 0.565 → ⚠️ 存疑，待人工复核**
+- **char_qin_linger_1634_01 ↔ char_situ_yuhan_0600_01：cos 0.759 → 同一身份**
+- **char_qin_linger_1634_01 ↔ char_song_wanzhao_1503_01：cos 0.566 → ⚠️ 存疑，待人工复核**
+- **char_qin_linger_1634_01 ↔ char_tan_shanshan_0700_01：cos 0.575 → ⚠️ 存疑，待人工复核**
+- **char_qin_linger_1634_01 ↔ char_tang_sitian_0900_01：cos 0.645 → 同一身份**
+- **char_qin_linger_1634_01 ↔ char_tantai_weiyu_1433_01：cos 0.507 → ⚠️ 存疑，待人工复核**
+- **char_qin_linger_1634_01 ↔ char_tantai_xingzhu_0230_01：cos 0.501 → ⚠️ 存疑，待人工复核**
+- **char_qin_linger_1634_01 ↔ char_tantai_yuwei_0730_01：cos 0.446 → ⚠️ 存疑，待人工复核**
+- **char_qin_linger_1634_01 ↔ char_wen_manshu_1030_01：cos 0.643 → 同一身份**
+- **char_qin_linger_1634_01 ↔ char_xi_weiyu_2134_01：cos 0.716 → 同一身份**
+- **char_qin_linger_1634_01 ↔ char_xue_banxia_0330_01：cos 0.608 → 同一身份**
+- **char_qin_linger_1634_01 ↔ char_ye_hongyu_0500_01：cos 0.662 → 同一身份**
+- **char_qin_linger_1634_01 ↔ char_ye_linger_2004_01：cos 0.675 → 同一身份**
+- **char_qin_linger_1634_01 ↔ char_ye_lingjun_0130_01：cos 0.544 → ⚠️ 存疑，待人工复核**
+- **char_qin_linger_1634_01 ↔ char_ye_shanshan_0400_01：cos 0.557 → ⚠️ 存疑，待人工复核**
+- **char_qin_linger_1634_01 ↔ char_ye_yuhan_1804_01：cos 0.655 → 同一身份**
+- **char_qin_linger_1634_01 ↔ char_yuchi_ruoli_1000_01：cos 0.642 → 同一身份**
+- **char_qin_linger_1634_01 ↔ char_yun_banxia_0030_01：cos 0.519 → ⚠️ 存疑，待人工复核**
+- **char_qin_linger_1634_01 ↔ char_zhong_manshu_2104_01：cos 0.630 → 同一身份**
+- **char_qin_linger_1634_01 ↔ char_anya_song：cos 0.092 → 不同身份**
+- **char_qin_linger_1634_01 ↔ char_ayano：cos 0.105 → 不同身份**
+- **char_qin_linger_1634_01 ↔ char_chen_xiawei：cos 0.120 → 不同身份**
+- **char_qin_linger_1634_01 ↔ char_jia：cos 0.047 → 不同身份**
+- **char_qin_linger_1634_01 ↔ char_jiang_yueyao：cos 0.163 → 不同身份**
+- **char_qin_linger_1634_01 ↔ char_lin_qingwan：cos 0.225 → 不同身份**
+- **char_qin_linger_1634_01 ↔ char_liu_yinuo_1923_10：cos -0.032 → 不同身份**
+- **char_qin_linger_1634_01 ↔ char_luo_qingchuan_1805：cos 0.632 → 同一身份**
+- **char_qin_linger_1634_01 ↔ char_pei_yuhan_2300_01：cos 0.530 → ⚠️ 存疑，待人工复核**
+- **char_qin_linger_1634_01 ↔ char_qing_luo：cos 0.130 → 不同身份**
+- **char_qin_linger_1634_01 ↔ char_ray_ling：cos 0.218 → 不同身份**
+- **char_qin_linger_1634_01 ↔ char_runcha：cos -0.049 → 不同身份**
+- **char_qin_linger_1634_01 ↔ char_shen_zhilan：cos 0.243 → 不同身份**
+- **char_qin_linger_1634_01 ↔ char_su_xiaotang：cos 0.065 → 不同身份**
+- **char_qin_linger_1634_01 ↔ char_tang_mengli_2200_01：cos 0.550 → ⚠️ 存疑，待人工复核**
+- **char_qin_linger_1634_01 ↔ char_wen_xiaorou_2140_01：cos 0.628 → 同一身份**
+- **char_qin_linger_1634_01 ↔ char_ye_muchen_2100_01：cos 0.616 → 同一身份**
+- **char_qin_linger_1634_01 ↔ char_yin_xinyue_2330_01：cos 0.555 → ⚠️ 存疑，待人工复核**
+- **char_qin_linger_1634_01 ↔ char_zhao_ruoxi：cos 0.156 → 不同身份**
+- **char_qin_linger_1634_01 ↔ char_duo：cos 0.144 → 不同身份**
+- **char_qin_linger_1634_01 ↔ char_duo3_2：cos 0.167 → 不同身份**
+- **char_qin_linger_1634_01 ↔ char_cen_zhiwei_1936_01：cos 0.318 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qin_linger_1634_01 ↔ char_jiang_ruoli_2007_01：cos 0.203 → 不同身份**
+- **char_qin_linger_1634_01 ↔ char_xiaog3：cos 0.111 → 不同身份**
+- **char_qin_linger_1634_01 ↔ char_xi_manshu_2045_01：cos 0.195 → 不同身份**
+- **char_qin_linger_1634_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.237 → 不同身份**
+- **char_qin_linger_1634_01 ↔ char_linghu_zhixia_2133_01：cos 0.243 → 不同身份**
+- **char_qin_linger_1634_01 ↔ char_qiao_weiyu_2134_01：cos 0.134 → 不同身份**
+- **char_qin_linger_1634_01 ↔ char_jiang_qinghuan_2203_01：cos 0.336 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qin_linger_1634_01 ↔ char_cen_youqing_2204_01：cos 0.116 → 不同身份**
+- **char_qin_linger_1634_01 ↔ char_zhong_xiaorou_2233_01：cos 0.241 → 不同身份**
+- **char_qin_linger_1634_01 ↔ char_tan_youqing_2234_01：cos 0.241 → 不同身份**
+- **char_qin_linger_1634_01 ↔ char_tantai_lingsu_2303_01：cos 0.361 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qin_linger_1634_01 ↔ char_qiao_qinghuan_2304_01：cos 0.361 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qin_linger_1634_01 ↔ char_chu_muchen_0004_01：cos 0.051 → 不同身份**
+- **char_qin_linger_1634_01 ↔ char_qiao_chaoyan_0004_01：cos -0.095 → 不同身份**
+- **char_qin_linger_1634_01 ↔ char_xue_qinghuan_0034_01：cos -0.056 → 不同身份**
+- **char_qin_linger_1634_01 ↔ char_tang_yuwei_0217_01：cos 0.192 → 不同身份**
+- **char_qin_linger_1634_01 ↔ char_ouyang_chuxia_0250_01：cos 0.211 → 不同身份**
+- **char_qin_linger_1634_01 ↔ char_bai_zhiruo_0305_01：cos 0.323 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qin_linger_1634_01 ↔ char_pei_shanshan_0456_01：cos 0.392 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qin_linger_1634_01 ↔ char_xi_qingchuan_0618_01：cos 0.306 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qin_linger_1634_01 ↔ char_zhong_linger_0732_01：cos 0.315 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qin_linger_1634_01 ↔ char_hua_qingdai_1029_01：cos 0.331 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qin_linger_1634_01 ↔ char_tang_banxia_1156_01：cos 0.377 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qin_linger_1634_01 ↔ char_gu_weiyu_1321_01：cos 0.292 → 不同身份**
+- **char_qin_linger_1634_01 ↔ char_cheng_hongyu_1435_01：cos 0.216 → 不同身份**
+- **char_qin_linger_1634_01 ↔ char_hua_chuxia_1549_01：cos 0.185 → 不同身份**
+- **char_qin_linger_1634_01 ↔ char_pei_manshu_1701_01：cos 0.286 → 不同身份**
+- **char_qin_linger_1634_01 ↔ char_ye_nanqiao_1811_01：cos 0.264 → 不同身份**
+- **char_qin_linger_1634_01 ↔ char_murong_yuyan_1942_01：cos 0.283 → 不同身份**
+- **char_qin_linger_1634_01 ↔ char_nangong_lingjun_2054_01：cos 0.311 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qin_suqiu_0630_01 ↔ char_qin_zhixia_1130_01：cos 0.553 → ⚠️ 存疑，待人工复核**
+- **char_qin_suqiu_0630_01 ↔ char_ruan_lingjun_2034_01：cos 0.626 → 同一身份**
+- **char_qin_suqiu_0630_01 ↔ char_ruan_tiange_1403_01：cos 0.536 → ⚠️ 存疑，待人工复核**
+- **char_qin_suqiu_0630_01 ↔ char_shen_hongyu_1734_01：cos 0.712 → 同一身份**
+- **char_qin_suqiu_0630_01 ↔ char_situ_caiwei_0100_01：cos 0.565 → ⚠️ 存疑，待人工复核**
+- **char_qin_suqiu_0630_01 ↔ char_situ_yuhan_0600_01：cos 0.626 → 同一身份**
+- **char_qin_suqiu_0630_01 ↔ char_song_wanzhao_1503_01：cos 0.574 → ⚠️ 存疑，待人工复核**
+- **char_qin_suqiu_0630_01 ↔ char_tan_shanshan_0700_01：cos 0.441 → ⚠️ 存疑，待人工复核**
+- **char_qin_suqiu_0630_01 ↔ char_tang_sitian_0900_01：cos 0.597 → ⚠️ 存疑，待人工复核**
+- **char_qin_suqiu_0630_01 ↔ char_tantai_weiyu_1433_01：cos 0.382 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qin_suqiu_0630_01 ↔ char_tantai_xingzhu_0230_01：cos 0.563 → ⚠️ 存疑，待人工复核**
+- **char_qin_suqiu_0630_01 ↔ char_tantai_yuwei_0730_01：cos 0.491 → ⚠️ 存疑，待人工复核**
+- **char_qin_suqiu_0630_01 ↔ char_wen_manshu_1030_01：cos 0.617 → 同一身份**
+- **char_qin_suqiu_0630_01 ↔ char_xi_weiyu_2134_01：cos 0.644 → 同一身份**
+- **char_qin_suqiu_0630_01 ↔ char_xue_banxia_0330_01：cos 0.485 → ⚠️ 存疑，待人工复核**
+- **char_qin_suqiu_0630_01 ↔ char_ye_hongyu_0500_01：cos 0.542 → ⚠️ 存疑，待人工复核**
+- **char_qin_suqiu_0630_01 ↔ char_ye_linger_2004_01：cos 0.540 → ⚠️ 存疑，待人工复核**
+- **char_qin_suqiu_0630_01 ↔ char_ye_lingjun_0130_01：cos 0.537 → ⚠️ 存疑，待人工复核**
+- **char_qin_suqiu_0630_01 ↔ char_ye_shanshan_0400_01：cos 0.602 → 同一身份**
+- **char_qin_suqiu_0630_01 ↔ char_ye_yuhan_1804_01：cos 0.574 → ⚠️ 存疑，待人工复核**
+- **char_qin_suqiu_0630_01 ↔ char_yuchi_ruoli_1000_01：cos 0.627 → 同一身份**
+- **char_qin_suqiu_0630_01 ↔ char_yun_banxia_0030_01：cos 0.417 → ⚠️ 存疑，待人工复核**
+- **char_qin_suqiu_0630_01 ↔ char_zhong_manshu_2104_01：cos 0.546 → ⚠️ 存疑，待人工复核**
+- **char_qin_suqiu_0630_01 ↔ char_anya_song：cos 0.105 → 不同身份**
+- **char_qin_suqiu_0630_01 ↔ char_ayano：cos 0.198 → 不同身份**
+- **char_qin_suqiu_0630_01 ↔ char_chen_xiawei：cos 0.202 → 不同身份**
+- **char_qin_suqiu_0630_01 ↔ char_jia：cos 0.192 → 不同身份**
+- **char_qin_suqiu_0630_01 ↔ char_jiang_yueyao：cos 0.286 → 不同身份**
+- **char_qin_suqiu_0630_01 ↔ char_lin_qingwan：cos 0.331 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qin_suqiu_0630_01 ↔ char_liu_yinuo_1923_10：cos -0.025 → 不同身份**
+- **char_qin_suqiu_0630_01 ↔ char_luo_qingchuan_1805：cos 0.640 → 同一身份**
+- **char_qin_suqiu_0630_01 ↔ char_pei_yuhan_2300_01：cos 0.524 → ⚠️ 存疑，待人工复核**
+- **char_qin_suqiu_0630_01 ↔ char_qing_luo：cos 0.208 → 不同身份**
+- **char_qin_suqiu_0630_01 ↔ char_ray_ling：cos 0.218 → 不同身份**
+- **char_qin_suqiu_0630_01 ↔ char_runcha：cos 0.029 → 不同身份**
+- **char_qin_suqiu_0630_01 ↔ char_shen_zhilan：cos 0.194 → 不同身份**
+- **char_qin_suqiu_0630_01 ↔ char_su_xiaotang：cos 0.102 → 不同身份**
+- **char_qin_suqiu_0630_01 ↔ char_tang_mengli_2200_01：cos 0.573 → ⚠️ 存疑，待人工复核**
+- **char_qin_suqiu_0630_01 ↔ char_wen_xiaorou_2140_01：cos 0.574 → ⚠️ 存疑，待人工复核**
+- **char_qin_suqiu_0630_01 ↔ char_ye_muchen_2100_01：cos 0.618 → 同一身份**
+- **char_qin_suqiu_0630_01 ↔ char_yin_xinyue_2330_01：cos 0.614 → 同一身份**
+- **char_qin_suqiu_0630_01 ↔ char_zhao_ruoxi：cos 0.164 → 不同身份**
+- **char_qin_suqiu_0630_01 ↔ char_duo：cos 0.203 → 不同身份**
+- **char_qin_suqiu_0630_01 ↔ char_duo3_2：cos 0.187 → 不同身份**
+- **char_qin_suqiu_0630_01 ↔ char_cen_zhiwei_1936_01：cos 0.285 → 不同身份**
+- **char_qin_suqiu_0630_01 ↔ char_jiang_ruoli_2007_01：cos 0.177 → 不同身份**
+- **char_qin_suqiu_0630_01 ↔ char_xiaog3：cos 0.162 → 不同身份**
+- **char_qin_suqiu_0630_01 ↔ char_xi_manshu_2045_01：cos 0.240 → 不同身份**
+- **char_qin_suqiu_0630_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.195 → 不同身份**
+- **char_qin_suqiu_0630_01 ↔ char_linghu_zhixia_2133_01：cos 0.293 → 不同身份**
+- **char_qin_suqiu_0630_01 ↔ char_qiao_weiyu_2134_01：cos 0.160 → 不同身份**
+- **char_qin_suqiu_0630_01 ↔ char_jiang_qinghuan_2203_01：cos 0.382 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qin_suqiu_0630_01 ↔ char_cen_youqing_2204_01：cos 0.088 → 不同身份**
+- **char_qin_suqiu_0630_01 ↔ char_zhong_xiaorou_2233_01：cos 0.245 → 不同身份**
+- **char_qin_suqiu_0630_01 ↔ char_tan_youqing_2234_01：cos 0.245 → 不同身份**
+- **char_qin_suqiu_0630_01 ↔ char_tantai_lingsu_2303_01：cos 0.433 → ⚠️ 存疑，待人工复核**
+- **char_qin_suqiu_0630_01 ↔ char_qiao_qinghuan_2304_01：cos 0.433 → ⚠️ 存疑，待人工复核**
+- **char_qin_suqiu_0630_01 ↔ char_chu_muchen_0004_01：cos 0.032 → 不同身份**
+- **char_qin_suqiu_0630_01 ↔ char_qiao_chaoyan_0004_01：cos 0.022 → 不同身份**
+- **char_qin_suqiu_0630_01 ↔ char_xue_qinghuan_0034_01：cos -0.014 → 不同身份**
+- **char_qin_suqiu_0630_01 ↔ char_tang_yuwei_0217_01：cos 0.250 → 不同身份**
+- **char_qin_suqiu_0630_01 ↔ char_ouyang_chuxia_0250_01：cos 0.251 → 不同身份**
+- **char_qin_suqiu_0630_01 ↔ char_bai_zhiruo_0305_01：cos 0.381 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qin_suqiu_0630_01 ↔ char_pei_shanshan_0456_01：cos 0.405 → ⚠️ 存疑，待人工复核**
+- **char_qin_suqiu_0630_01 ↔ char_xi_qingchuan_0618_01：cos 0.450 → ⚠️ 存疑，待人工复核**
+- **char_qin_suqiu_0630_01 ↔ char_zhong_linger_0732_01：cos 0.327 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qin_suqiu_0630_01 ↔ char_hua_qingdai_1029_01：cos 0.363 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qin_suqiu_0630_01 ↔ char_tang_banxia_1156_01：cos 0.401 → ⚠️ 存疑，待人工复核**
+- **char_qin_suqiu_0630_01 ↔ char_gu_weiyu_1321_01：cos 0.320 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qin_suqiu_0630_01 ↔ char_cheng_hongyu_1435_01：cos 0.248 → 不同身份**
+- **char_qin_suqiu_0630_01 ↔ char_hua_chuxia_1549_01：cos 0.265 → 不同身份**
+- **char_qin_suqiu_0630_01 ↔ char_pei_manshu_1701_01：cos 0.373 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qin_suqiu_0630_01 ↔ char_ye_nanqiao_1811_01：cos 0.342 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qin_suqiu_0630_01 ↔ char_murong_yuyan_1942_01：cos 0.400 → ⚠️ 存疑，待人工复核**
+- **char_qin_suqiu_0630_01 ↔ char_nangong_lingjun_2054_01：cos 0.288 → 不同身份**
+- **char_qin_zhixia_1130_01 ↔ char_ruan_lingjun_2034_01：cos 0.551 → ⚠️ 存疑，待人工复核**
+- **char_qin_zhixia_1130_01 ↔ char_ruan_tiange_1403_01：cos 0.618 → 同一身份**
+- **char_qin_zhixia_1130_01 ↔ char_shen_hongyu_1734_01：cos 0.592 → ⚠️ 存疑，待人工复核**
+- **char_qin_zhixia_1130_01 ↔ char_situ_caiwei_0100_01：cos 0.469 → ⚠️ 存疑，待人工复核**
+- **char_qin_zhixia_1130_01 ↔ char_situ_yuhan_0600_01：cos 0.589 → ⚠️ 存疑，待人工复核**
+- **char_qin_zhixia_1130_01 ↔ char_song_wanzhao_1503_01：cos 0.586 → ⚠️ 存疑，待人工复核**
+- **char_qin_zhixia_1130_01 ↔ char_tan_shanshan_0700_01：cos 0.496 → ⚠️ 存疑，待人工复核**
+- **char_qin_zhixia_1130_01 ↔ char_tang_sitian_0900_01：cos 0.546 → ⚠️ 存疑，待人工复核**
+- **char_qin_zhixia_1130_01 ↔ char_tantai_weiyu_1433_01：cos 0.447 → ⚠️ 存疑，待人工复核**
+- **char_qin_zhixia_1130_01 ↔ char_tantai_xingzhu_0230_01：cos 0.448 → ⚠️ 存疑，待人工复核**
+- **char_qin_zhixia_1130_01 ↔ char_tantai_yuwei_0730_01：cos 0.373 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qin_zhixia_1130_01 ↔ char_wen_manshu_1030_01：cos 0.542 → ⚠️ 存疑，待人工复核**
+- **char_qin_zhixia_1130_01 ↔ char_xi_weiyu_2134_01：cos 0.567 → ⚠️ 存疑，待人工复核**
+- **char_qin_zhixia_1130_01 ↔ char_xue_banxia_0330_01：cos 0.491 → ⚠️ 存疑，待人工复核**
+- **char_qin_zhixia_1130_01 ↔ char_ye_hongyu_0500_01：cos 0.520 → ⚠️ 存疑，待人工复核**
+- **char_qin_zhixia_1130_01 ↔ char_ye_linger_2004_01：cos 0.433 → ⚠️ 存疑，待人工复核**
+- **char_qin_zhixia_1130_01 ↔ char_ye_lingjun_0130_01：cos 0.524 → ⚠️ 存疑，待人工复核**
+- **char_qin_zhixia_1130_01 ↔ char_ye_shanshan_0400_01：cos 0.512 → ⚠️ 存疑，待人工复核**
+- **char_qin_zhixia_1130_01 ↔ char_ye_yuhan_1804_01：cos 0.674 → 同一身份**
+- **char_qin_zhixia_1130_01 ↔ char_yuchi_ruoli_1000_01：cos 0.528 → ⚠️ 存疑，待人工复核**
+- **char_qin_zhixia_1130_01 ↔ char_yun_banxia_0030_01：cos 0.503 → ⚠️ 存疑，待人工复核**
+- **char_qin_zhixia_1130_01 ↔ char_zhong_manshu_2104_01：cos 0.541 → ⚠️ 存疑，待人工复核**
+- **char_qin_zhixia_1130_01 ↔ char_anya_song：cos 0.224 → 不同身份**
+- **char_qin_zhixia_1130_01 ↔ char_ayano：cos 0.144 → 不同身份**
+- **char_qin_zhixia_1130_01 ↔ char_chen_xiawei：cos 0.181 → 不同身份**
+- **char_qin_zhixia_1130_01 ↔ char_jia：cos 0.146 → 不同身份**
+- **char_qin_zhixia_1130_01 ↔ char_jiang_yueyao：cos 0.275 → 不同身份**
+- **char_qin_zhixia_1130_01 ↔ char_lin_qingwan：cos 0.263 → 不同身份**
+- **char_qin_zhixia_1130_01 ↔ char_liu_yinuo_1923_10：cos -0.083 → 不同身份**
+- **char_qin_zhixia_1130_01 ↔ char_luo_qingchuan_1805：cos 0.600 → 同一身份**
+- **char_qin_zhixia_1130_01 ↔ char_pei_yuhan_2300_01：cos 0.512 → ⚠️ 存疑，待人工复核**
+- **char_qin_zhixia_1130_01 ↔ char_qing_luo：cos 0.158 → 不同身份**
+- **char_qin_zhixia_1130_01 ↔ char_ray_ling：cos 0.229 → 不同身份**
+- **char_qin_zhixia_1130_01 ↔ char_runcha：cos 0.053 → 不同身份**
+- **char_qin_zhixia_1130_01 ↔ char_shen_zhilan：cos 0.187 → 不同身份**
+- **char_qin_zhixia_1130_01 ↔ char_su_xiaotang：cos 0.165 → 不同身份**
+- **char_qin_zhixia_1130_01 ↔ char_tang_mengli_2200_01：cos 0.468 → ⚠️ 存疑，待人工复核**
+- **char_qin_zhixia_1130_01 ↔ char_wen_xiaorou_2140_01：cos 0.497 → ⚠️ 存疑，待人工复核**
+- **char_qin_zhixia_1130_01 ↔ char_ye_muchen_2100_01：cos 0.526 → ⚠️ 存疑，待人工复核**
+- **char_qin_zhixia_1130_01 ↔ char_yin_xinyue_2330_01：cos 0.511 → ⚠️ 存疑，待人工复核**
+- **char_qin_zhixia_1130_01 ↔ char_zhao_ruoxi：cos 0.202 → 不同身份**
+- **char_qin_zhixia_1130_01 ↔ char_duo：cos 0.297 → 不同身份**
+- **char_qin_zhixia_1130_01 ↔ char_duo3_2：cos 0.167 → 不同身份**
+- **char_qin_zhixia_1130_01 ↔ char_cen_zhiwei_1936_01：cos 0.306 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qin_zhixia_1130_01 ↔ char_jiang_ruoli_2007_01：cos 0.364 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qin_zhixia_1130_01 ↔ char_xiaog3：cos 0.086 → 不同身份**
+- **char_qin_zhixia_1130_01 ↔ char_xi_manshu_2045_01：cos 0.236 → 不同身份**
+- **char_qin_zhixia_1130_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.362 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qin_zhixia_1130_01 ↔ char_linghu_zhixia_2133_01：cos 0.340 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qin_zhixia_1130_01 ↔ char_qiao_weiyu_2134_01：cos 0.275 → 不同身份**
+- **char_qin_zhixia_1130_01 ↔ char_jiang_qinghuan_2203_01：cos 0.280 → 不同身份**
+- **char_qin_zhixia_1130_01 ↔ char_cen_youqing_2204_01：cos 0.123 → 不同身份**
+- **char_qin_zhixia_1130_01 ↔ char_zhong_xiaorou_2233_01：cos 0.256 → 不同身份**
+- **char_qin_zhixia_1130_01 ↔ char_tan_youqing_2234_01：cos 0.256 → 不同身份**
+- **char_qin_zhixia_1130_01 ↔ char_tantai_lingsu_2303_01：cos 0.446 → ⚠️ 存疑，待人工复核**
+- **char_qin_zhixia_1130_01 ↔ char_qiao_qinghuan_2304_01：cos 0.446 → ⚠️ 存疑，待人工复核**
+- **char_qin_zhixia_1130_01 ↔ char_chu_muchen_0004_01：cos -0.019 → 不同身份**
+- **char_qin_zhixia_1130_01 ↔ char_qiao_chaoyan_0004_01：cos -0.041 → 不同身份**
+- **char_qin_zhixia_1130_01 ↔ char_xue_qinghuan_0034_01：cos 0.097 → 不同身份**
+- **char_qin_zhixia_1130_01 ↔ char_tang_yuwei_0217_01：cos 0.251 → 不同身份**
+- **char_qin_zhixia_1130_01 ↔ char_ouyang_chuxia_0250_01：cos 0.284 → 不同身份**
+- **char_qin_zhixia_1130_01 ↔ char_bai_zhiruo_0305_01：cos 0.369 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qin_zhixia_1130_01 ↔ char_pei_shanshan_0456_01：cos 0.346 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qin_zhixia_1130_01 ↔ char_xi_qingchuan_0618_01：cos 0.320 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qin_zhixia_1130_01 ↔ char_zhong_linger_0732_01：cos 0.357 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qin_zhixia_1130_01 ↔ char_hua_qingdai_1029_01：cos 0.319 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qin_zhixia_1130_01 ↔ char_tang_banxia_1156_01：cos 0.424 → ⚠️ 存疑，待人工复核**
+- **char_qin_zhixia_1130_01 ↔ char_gu_weiyu_1321_01：cos 0.298 → 不同身份**
+- **char_qin_zhixia_1130_01 ↔ char_cheng_hongyu_1435_01：cos 0.202 → 不同身份**
+- **char_qin_zhixia_1130_01 ↔ char_hua_chuxia_1549_01：cos 0.235 → 不同身份**
+- **char_qin_zhixia_1130_01 ↔ char_pei_manshu_1701_01：cos 0.213 → 不同身份**
+- **char_qin_zhixia_1130_01 ↔ char_ye_nanqiao_1811_01：cos 0.192 → 不同身份**
+- **char_qin_zhixia_1130_01 ↔ char_murong_yuyan_1942_01：cos 0.263 → 不同身份**
+- **char_qin_zhixia_1130_01 ↔ char_nangong_lingjun_2054_01：cos 0.227 → 不同身份**
+- **char_ruan_lingjun_2034_01 ↔ char_ruan_tiange_1403_01：cos 0.632 → 同一身份**
+- **char_ruan_lingjun_2034_01 ↔ char_shen_hongyu_1734_01：cos 0.650 → 同一身份**
+- **char_ruan_lingjun_2034_01 ↔ char_situ_caiwei_0100_01：cos 0.591 → ⚠️ 存疑，待人工复核**
+- **char_ruan_lingjun_2034_01 ↔ char_situ_yuhan_0600_01：cos 0.670 → 同一身份**
+- **char_ruan_lingjun_2034_01 ↔ char_song_wanzhao_1503_01：cos 0.609 → 同一身份**
+- **char_ruan_lingjun_2034_01 ↔ char_tan_shanshan_0700_01：cos 0.567 → ⚠️ 存疑，待人工复核**
+- **char_ruan_lingjun_2034_01 ↔ char_tang_sitian_0900_01：cos 0.567 → ⚠️ 存疑，待人工复核**
+- **char_ruan_lingjun_2034_01 ↔ char_tantai_weiyu_1433_01：cos 0.488 → ⚠️ 存疑，待人工复核**
+- **char_ruan_lingjun_2034_01 ↔ char_tantai_xingzhu_0230_01：cos 0.481 → ⚠️ 存疑，待人工复核**
+- **char_ruan_lingjun_2034_01 ↔ char_tantai_yuwei_0730_01：cos 0.445 → ⚠️ 存疑，待人工复核**
+- **char_ruan_lingjun_2034_01 ↔ char_wen_manshu_1030_01：cos 0.641 → 同一身份**
+- **char_ruan_lingjun_2034_01 ↔ char_xi_weiyu_2134_01：cos 0.589 → ⚠️ 存疑，待人工复核**
+- **char_ruan_lingjun_2034_01 ↔ char_xue_banxia_0330_01：cos 0.608 → 同一身份**
+- **char_ruan_lingjun_2034_01 ↔ char_ye_hongyu_0500_01：cos 0.675 → 同一身份**
+- **char_ruan_lingjun_2034_01 ↔ char_ye_linger_2004_01：cos 0.614 → 同一身份**
+- **char_ruan_lingjun_2034_01 ↔ char_ye_lingjun_0130_01：cos 0.584 → ⚠️ 存疑，待人工复核**
+- **char_ruan_lingjun_2034_01 ↔ char_ye_shanshan_0400_01：cos 0.564 → ⚠️ 存疑，待人工复核**
+- **char_ruan_lingjun_2034_01 ↔ char_ye_yuhan_1804_01：cos 0.689 → 同一身份**
+- **char_ruan_lingjun_2034_01 ↔ char_yuchi_ruoli_1000_01：cos 0.543 → ⚠️ 存疑，待人工复核**
+- **char_ruan_lingjun_2034_01 ↔ char_yun_banxia_0030_01：cos 0.533 → ⚠️ 存疑，待人工复核**
+- **char_ruan_lingjun_2034_01 ↔ char_zhong_manshu_2104_01：cos 0.611 → 同一身份**
+- **char_ruan_lingjun_2034_01 ↔ char_anya_song：cos 0.083 → 不同身份**
+- **char_ruan_lingjun_2034_01 ↔ char_ayano：cos 0.145 → 不同身份**
+- **char_ruan_lingjun_2034_01 ↔ char_chen_xiawei：cos 0.092 → 不同身份**
+- **char_ruan_lingjun_2034_01 ↔ char_jia：cos 0.085 → 不同身份**
+- **char_ruan_lingjun_2034_01 ↔ char_jiang_yueyao：cos 0.215 → 不同身份**
+- **char_ruan_lingjun_2034_01 ↔ char_lin_qingwan：cos 0.304 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ruan_lingjun_2034_01 ↔ char_liu_yinuo_1923_10：cos -0.052 → 不同身份**
+- **char_ruan_lingjun_2034_01 ↔ char_luo_qingchuan_1805：cos 0.613 → 同一身份**
+- **char_ruan_lingjun_2034_01 ↔ char_pei_yuhan_2300_01：cos 0.525 → ⚠️ 存疑，待人工复核**
+- **char_ruan_lingjun_2034_01 ↔ char_qing_luo：cos 0.158 → 不同身份**
+- **char_ruan_lingjun_2034_01 ↔ char_ray_ling：cos 0.220 → 不同身份**
+- **char_ruan_lingjun_2034_01 ↔ char_runcha：cos -0.017 → 不同身份**
+- **char_ruan_lingjun_2034_01 ↔ char_shen_zhilan：cos 0.191 → 不同身份**
+- **char_ruan_lingjun_2034_01 ↔ char_su_xiaotang：cos 0.083 → 不同身份**
+- **char_ruan_lingjun_2034_01 ↔ char_tang_mengli_2200_01：cos 0.538 → ⚠️ 存疑，待人工复核**
+- **char_ruan_lingjun_2034_01 ↔ char_wen_xiaorou_2140_01：cos 0.591 → ⚠️ 存疑，待人工复核**
+- **char_ruan_lingjun_2034_01 ↔ char_ye_muchen_2100_01：cos 0.542 → ⚠️ 存疑，待人工复核**
+- **char_ruan_lingjun_2034_01 ↔ char_yin_xinyue_2330_01：cos 0.587 → ⚠️ 存疑，待人工复核**
+- **char_ruan_lingjun_2034_01 ↔ char_zhao_ruoxi：cos 0.199 → 不同身份**
+- **char_ruan_lingjun_2034_01 ↔ char_duo：cos 0.295 → 不同身份**
+- **char_ruan_lingjun_2034_01 ↔ char_duo3_2：cos 0.198 → 不同身份**
+- **char_ruan_lingjun_2034_01 ↔ char_cen_zhiwei_1936_01：cos 0.266 → 不同身份**
+- **char_ruan_lingjun_2034_01 ↔ char_jiang_ruoli_2007_01：cos 0.253 → 不同身份**
+- **char_ruan_lingjun_2034_01 ↔ char_xiaog3：cos 0.108 → 不同身份**
+- **char_ruan_lingjun_2034_01 ↔ char_xi_manshu_2045_01：cos 0.131 → 不同身份**
+- **char_ruan_lingjun_2034_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.267 → 不同身份**
+- **char_ruan_lingjun_2034_01 ↔ char_linghu_zhixia_2133_01：cos 0.244 → 不同身份**
+- **char_ruan_lingjun_2034_01 ↔ char_qiao_weiyu_2134_01：cos 0.133 → 不同身份**
+- **char_ruan_lingjun_2034_01 ↔ char_jiang_qinghuan_2203_01：cos 0.371 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ruan_lingjun_2034_01 ↔ char_cen_youqing_2204_01：cos 0.130 → 不同身份**
+- **char_ruan_lingjun_2034_01 ↔ char_zhong_xiaorou_2233_01：cos 0.257 → 不同身份**
+- **char_ruan_lingjun_2034_01 ↔ char_tan_youqing_2234_01：cos 0.257 → 不同身份**
+- **char_ruan_lingjun_2034_01 ↔ char_tantai_lingsu_2303_01：cos 0.458 → ⚠️ 存疑，待人工复核**
+- **char_ruan_lingjun_2034_01 ↔ char_qiao_qinghuan_2304_01：cos 0.458 → ⚠️ 存疑，待人工复核**
+- **char_ruan_lingjun_2034_01 ↔ char_chu_muchen_0004_01：cos 0.040 → 不同身份**
+- **char_ruan_lingjun_2034_01 ↔ char_qiao_chaoyan_0004_01：cos -0.095 → 不同身份**
+- **char_ruan_lingjun_2034_01 ↔ char_xue_qinghuan_0034_01：cos -0.059 → 不同身份**
+- **char_ruan_lingjun_2034_01 ↔ char_tang_yuwei_0217_01：cos 0.236 → 不同身份**
+- **char_ruan_lingjun_2034_01 ↔ char_ouyang_chuxia_0250_01：cos 0.207 → 不同身份**
+- **char_ruan_lingjun_2034_01 ↔ char_bai_zhiruo_0305_01：cos 0.343 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ruan_lingjun_2034_01 ↔ char_pei_shanshan_0456_01：cos 0.396 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ruan_lingjun_2034_01 ↔ char_xi_qingchuan_0618_01：cos 0.380 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ruan_lingjun_2034_01 ↔ char_zhong_linger_0732_01：cos 0.339 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ruan_lingjun_2034_01 ↔ char_hua_qingdai_1029_01：cos 0.349 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ruan_lingjun_2034_01 ↔ char_tang_banxia_1156_01：cos 0.488 → ⚠️ 存疑，待人工复核**
+- **char_ruan_lingjun_2034_01 ↔ char_gu_weiyu_1321_01：cos 0.346 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ruan_lingjun_2034_01 ↔ char_cheng_hongyu_1435_01：cos 0.218 → 不同身份**
+- **char_ruan_lingjun_2034_01 ↔ char_hua_chuxia_1549_01：cos 0.267 → 不同身份**
+- **char_ruan_lingjun_2034_01 ↔ char_pei_manshu_1701_01：cos 0.342 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ruan_lingjun_2034_01 ↔ char_ye_nanqiao_1811_01：cos 0.271 → 不同身份**
+- **char_ruan_lingjun_2034_01 ↔ char_murong_yuyan_1942_01：cos 0.323 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ruan_lingjun_2034_01 ↔ char_nangong_lingjun_2054_01：cos 0.323 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ruan_tiange_1403_01 ↔ char_shen_hongyu_1734_01：cos 0.628 → 同一身份**
+- **char_ruan_tiange_1403_01 ↔ char_situ_caiwei_0100_01：cos 0.448 → ⚠️ 存疑，待人工复核**
+- **char_ruan_tiange_1403_01 ↔ char_situ_yuhan_0600_01：cos 0.640 → 同一身份**
+- **char_ruan_tiange_1403_01 ↔ char_song_wanzhao_1503_01：cos 0.620 → 同一身份**
+- **char_ruan_tiange_1403_01 ↔ char_tan_shanshan_0700_01：cos 0.689 → 同一身份**
+- **char_ruan_tiange_1403_01 ↔ char_tang_sitian_0900_01：cos 0.500 → ⚠️ 存疑，待人工复核**
+- **char_ruan_tiange_1403_01 ↔ char_tantai_weiyu_1433_01：cos 0.742 → 同一身份**
+- **char_ruan_tiange_1403_01 ↔ char_tantai_xingzhu_0230_01：cos 0.459 → ⚠️ 存疑，待人工复核**
+- **char_ruan_tiange_1403_01 ↔ char_tantai_yuwei_0730_01：cos 0.550 → ⚠️ 存疑，待人工复核**
+- **char_ruan_tiange_1403_01 ↔ char_wen_manshu_1030_01：cos 0.519 → ⚠️ 存疑，待人工复核**
+- **char_ruan_tiange_1403_01 ↔ char_xi_weiyu_2134_01：cos 0.567 → ⚠️ 存疑，待人工复核**
+- **char_ruan_tiange_1403_01 ↔ char_xue_banxia_0330_01：cos 0.732 → 同一身份**
+- **char_ruan_tiange_1403_01 ↔ char_ye_hongyu_0500_01：cos 0.753 → 同一身份**
+- **char_ruan_tiange_1403_01 ↔ char_ye_linger_2004_01：cos 0.740 → 同一身份**
+- **char_ruan_tiange_1403_01 ↔ char_ye_lingjun_0130_01：cos 0.776 → 同一身份**
+- **char_ruan_tiange_1403_01 ↔ char_ye_shanshan_0400_01：cos 0.645 → 同一身份**
+- **char_ruan_tiange_1403_01 ↔ char_ye_yuhan_1804_01：cos 0.689 → 同一身份**
+- **char_ruan_tiange_1403_01 ↔ char_yuchi_ruoli_1000_01：cos 0.587 → ⚠️ 存疑，待人工复核**
+- **char_ruan_tiange_1403_01 ↔ char_yun_banxia_0030_01：cos 0.482 → ⚠️ 存疑，待人工复核**
+- **char_ruan_tiange_1403_01 ↔ char_zhong_manshu_2104_01：cos 0.555 → ⚠️ 存疑，待人工复核**
+- **char_ruan_tiange_1403_01 ↔ char_anya_song：cos 0.079 → 不同身份**
+- **char_ruan_tiange_1403_01 ↔ char_ayano：cos 0.091 → 不同身份**
+- **char_ruan_tiange_1403_01 ↔ char_chen_xiawei：cos 0.060 → 不同身份**
+- **char_ruan_tiange_1403_01 ↔ char_jia：cos 0.068 → 不同身份**
+- **char_ruan_tiange_1403_01 ↔ char_jiang_yueyao：cos 0.163 → 不同身份**
+- **char_ruan_tiange_1403_01 ↔ char_lin_qingwan：cos 0.149 → 不同身份**
+- **char_ruan_tiange_1403_01 ↔ char_liu_yinuo_1923_10：cos -0.021 → 不同身份**
+- **char_ruan_tiange_1403_01 ↔ char_luo_qingchuan_1805：cos 0.646 → 同一身份**
+- **char_ruan_tiange_1403_01 ↔ char_pei_yuhan_2300_01：cos 0.510 → ⚠️ 存疑，待人工复核**
+- **char_ruan_tiange_1403_01 ↔ char_qing_luo：cos 0.119 → 不同身份**
+- **char_ruan_tiange_1403_01 ↔ char_ray_ling：cos 0.210 → 不同身份**
+- **char_ruan_tiange_1403_01 ↔ char_runcha：cos 0.013 → 不同身份**
+- **char_ruan_tiange_1403_01 ↔ char_shen_zhilan：cos 0.206 → 不同身份**
+- **char_ruan_tiange_1403_01 ↔ char_su_xiaotang：cos 0.070 → 不同身份**
+- **char_ruan_tiange_1403_01 ↔ char_tang_mengli_2200_01：cos 0.546 → ⚠️ 存疑，待人工复核**
+- **char_ruan_tiange_1403_01 ↔ char_wen_xiaorou_2140_01：cos 0.599 → ⚠️ 存疑，待人工复核**
+- **char_ruan_tiange_1403_01 ↔ char_ye_muchen_2100_01：cos 0.568 → ⚠️ 存疑，待人工复核**
+- **char_ruan_tiange_1403_01 ↔ char_yin_xinyue_2330_01：cos 0.573 → ⚠️ 存疑，待人工复核**
+- **char_ruan_tiange_1403_01 ↔ char_zhao_ruoxi：cos 0.124 → 不同身份**
+- **char_ruan_tiange_1403_01 ↔ char_duo：cos 0.159 → 不同身份**
+- **char_ruan_tiange_1403_01 ↔ char_duo3_2：cos 0.205 → 不同身份**
+- **char_ruan_tiange_1403_01 ↔ char_cen_zhiwei_1936_01：cos 0.351 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ruan_tiange_1403_01 ↔ char_jiang_ruoli_2007_01：cos 0.273 → 不同身份**
+- **char_ruan_tiange_1403_01 ↔ char_xiaog3：cos 0.153 → 不同身份**
+- **char_ruan_tiange_1403_01 ↔ char_xi_manshu_2045_01：cos 0.115 → 不同身份**
+- **char_ruan_tiange_1403_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.334 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ruan_tiange_1403_01 ↔ char_linghu_zhixia_2133_01：cos 0.326 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ruan_tiange_1403_01 ↔ char_qiao_weiyu_2134_01：cos 0.190 → 不同身份**
+- **char_ruan_tiange_1403_01 ↔ char_jiang_qinghuan_2203_01：cos 0.153 → 不同身份**
+- **char_ruan_tiange_1403_01 ↔ char_cen_youqing_2204_01：cos -0.010 → 不同身份**
+- **char_ruan_tiange_1403_01 ↔ char_zhong_xiaorou_2233_01：cos 0.187 → 不同身份**
+- **char_ruan_tiange_1403_01 ↔ char_tan_youqing_2234_01：cos 0.187 → 不同身份**
+- **char_ruan_tiange_1403_01 ↔ char_tantai_lingsu_2303_01：cos 0.289 → 不同身份**
+- **char_ruan_tiange_1403_01 ↔ char_qiao_qinghuan_2304_01：cos 0.289 → 不同身份**
+- **char_ruan_tiange_1403_01 ↔ char_chu_muchen_0004_01：cos 0.075 → 不同身份**
+- **char_ruan_tiange_1403_01 ↔ char_qiao_chaoyan_0004_01：cos -0.092 → 不同身份**
+- **char_ruan_tiange_1403_01 ↔ char_xue_qinghuan_0034_01：cos 0.046 → 不同身份**
+- **char_ruan_tiange_1403_01 ↔ char_tang_yuwei_0217_01：cos 0.085 → 不同身份**
+- **char_ruan_tiange_1403_01 ↔ char_ouyang_chuxia_0250_01：cos 0.096 → 不同身份**
+- **char_ruan_tiange_1403_01 ↔ char_bai_zhiruo_0305_01：cos 0.293 → 不同身份**
+- **char_ruan_tiange_1403_01 ↔ char_pei_shanshan_0456_01：cos 0.217 → 不同身份**
+- **char_ruan_tiange_1403_01 ↔ char_xi_qingchuan_0618_01：cos 0.194 → 不同身份**
+- **char_ruan_tiange_1403_01 ↔ char_zhong_linger_0732_01：cos 0.295 → 不同身份**
+- **char_ruan_tiange_1403_01 ↔ char_hua_qingdai_1029_01：cos 0.258 → 不同身份**
+- **char_ruan_tiange_1403_01 ↔ char_tang_banxia_1156_01：cos 0.279 → 不同身份**
+- **char_ruan_tiange_1403_01 ↔ char_gu_weiyu_1321_01：cos 0.137 → 不同身份**
+- **char_ruan_tiange_1403_01 ↔ char_cheng_hongyu_1435_01：cos 0.138 → 不同身份**
+- **char_ruan_tiange_1403_01 ↔ char_hua_chuxia_1549_01：cos 0.113 → 不同身份**
+- **char_ruan_tiange_1403_01 ↔ char_pei_manshu_1701_01：cos 0.178 → 不同身份**
+- **char_ruan_tiange_1403_01 ↔ char_ye_nanqiao_1811_01：cos 0.141 → 不同身份**
+- **char_ruan_tiange_1403_01 ↔ char_murong_yuyan_1942_01：cos 0.161 → 不同身份**
+- **char_ruan_tiange_1403_01 ↔ char_nangong_lingjun_2054_01：cos 0.254 → 不同身份**
+- **char_shen_hongyu_1734_01 ↔ char_situ_caiwei_0100_01：cos 0.544 → ⚠️ 存疑，待人工复核**
+- **char_shen_hongyu_1734_01 ↔ char_situ_yuhan_0600_01：cos 0.656 → 同一身份**
+- **char_shen_hongyu_1734_01 ↔ char_song_wanzhao_1503_01：cos 0.665 → 同一身份**
+- **char_shen_hongyu_1734_01 ↔ char_tan_shanshan_0700_01：cos 0.553 → ⚠️ 存疑，待人工复核**
+- **char_shen_hongyu_1734_01 ↔ char_tang_sitian_0900_01：cos 0.621 → 同一身份**
+- **char_shen_hongyu_1734_01 ↔ char_tantai_weiyu_1433_01：cos 0.480 → ⚠️ 存疑，待人工复核**
+- **char_shen_hongyu_1734_01 ↔ char_tantai_xingzhu_0230_01：cos 0.658 → 同一身份**
+- **char_shen_hongyu_1734_01 ↔ char_tantai_yuwei_0730_01：cos 0.606 → 同一身份**
+- **char_shen_hongyu_1734_01 ↔ char_wen_manshu_1030_01：cos 0.631 → 同一身份**
+- **char_shen_hongyu_1734_01 ↔ char_xi_weiyu_2134_01：cos 0.741 → 同一身份**
+- **char_shen_hongyu_1734_01 ↔ char_xue_banxia_0330_01：cos 0.498 → ⚠️ 存疑，待人工复核**
+- **char_shen_hongyu_1734_01 ↔ char_ye_hongyu_0500_01：cos 0.538 → ⚠️ 存疑，待人工复核**
+- **char_shen_hongyu_1734_01 ↔ char_ye_linger_2004_01：cos 0.578 → ⚠️ 存疑，待人工复核**
+- **char_shen_hongyu_1734_01 ↔ char_ye_lingjun_0130_01：cos 0.544 → ⚠️ 存疑，待人工复核**
+- **char_shen_hongyu_1734_01 ↔ char_ye_shanshan_0400_01：cos 0.730 → 同一身份**
+- **char_shen_hongyu_1734_01 ↔ char_ye_yuhan_1804_01：cos 0.696 → 同一身份**
+- **char_shen_hongyu_1734_01 ↔ char_yuchi_ruoli_1000_01：cos 0.752 → 同一身份**
+- **char_shen_hongyu_1734_01 ↔ char_yun_banxia_0030_01：cos 0.457 → ⚠️ 存疑，待人工复核**
+- **char_shen_hongyu_1734_01 ↔ char_zhong_manshu_2104_01：cos 0.724 → 同一身份**
+- **char_shen_hongyu_1734_01 ↔ char_anya_song：cos 0.110 → 不同身份**
+- **char_shen_hongyu_1734_01 ↔ char_ayano：cos 0.163 → 不同身份**
+- **char_shen_hongyu_1734_01 ↔ char_chen_xiawei：cos 0.182 → 不同身份**
+- **char_shen_hongyu_1734_01 ↔ char_jia：cos 0.104 → 不同身份**
+- **char_shen_hongyu_1734_01 ↔ char_jiang_yueyao：cos 0.295 → 不同身份**
+- **char_shen_hongyu_1734_01 ↔ char_lin_qingwan：cos 0.310 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_hongyu_1734_01 ↔ char_liu_yinuo_1923_10：cos -0.052 → 不同身份**
+- **char_shen_hongyu_1734_01 ↔ char_luo_qingchuan_1805：cos 0.656 → 同一身份**
+- **char_shen_hongyu_1734_01 ↔ char_pei_yuhan_2300_01：cos 0.691 → 同一身份**
+- **char_shen_hongyu_1734_01 ↔ char_qing_luo：cos 0.273 → 不同身份**
+- **char_shen_hongyu_1734_01 ↔ char_ray_ling：cos 0.142 → 不同身份**
+- **char_shen_hongyu_1734_01 ↔ char_runcha：cos -0.006 → 不同身份**
+- **char_shen_hongyu_1734_01 ↔ char_shen_zhilan：cos 0.195 → 不同身份**
+- **char_shen_hongyu_1734_01 ↔ char_su_xiaotang：cos 0.122 → 不同身份**
+- **char_shen_hongyu_1734_01 ↔ char_tang_mengli_2200_01：cos 0.750 → 同一身份**
+- **char_shen_hongyu_1734_01 ↔ char_wen_xiaorou_2140_01：cos 0.755 → 同一身份**
+- **char_shen_hongyu_1734_01 ↔ char_ye_muchen_2100_01：cos 0.745 → 同一身份**
+- **char_shen_hongyu_1734_01 ↔ char_yin_xinyue_2330_01：cos 0.749 → 同一身份**
+- **char_shen_hongyu_1734_01 ↔ char_zhao_ruoxi：cos 0.296 → 不同身份**
+- **char_shen_hongyu_1734_01 ↔ char_duo：cos 0.166 → 不同身份**
+- **char_shen_hongyu_1734_01 ↔ char_duo3_2：cos 0.133 → 不同身份**
+- **char_shen_hongyu_1734_01 ↔ char_cen_zhiwei_1936_01：cos 0.348 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_hongyu_1734_01 ↔ char_jiang_ruoli_2007_01：cos 0.288 → 不同身份**
+- **char_shen_hongyu_1734_01 ↔ char_xiaog3：cos 0.278 → 不同身份**
+- **char_shen_hongyu_1734_01 ↔ char_xi_manshu_2045_01：cos 0.287 → 不同身份**
+- **char_shen_hongyu_1734_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.264 → 不同身份**
+- **char_shen_hongyu_1734_01 ↔ char_linghu_zhixia_2133_01：cos 0.306 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_hongyu_1734_01 ↔ char_qiao_weiyu_2134_01：cos 0.204 → 不同身份**
+- **char_shen_hongyu_1734_01 ↔ char_jiang_qinghuan_2203_01：cos 0.414 → ⚠️ 存疑，待人工复核**
+- **char_shen_hongyu_1734_01 ↔ char_cen_youqing_2204_01：cos 0.019 → 不同身份**
+- **char_shen_hongyu_1734_01 ↔ char_zhong_xiaorou_2233_01：cos 0.345 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_hongyu_1734_01 ↔ char_tan_youqing_2234_01：cos 0.345 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_hongyu_1734_01 ↔ char_tantai_lingsu_2303_01：cos 0.433 → ⚠️ 存疑，待人工复核**
+- **char_shen_hongyu_1734_01 ↔ char_qiao_qinghuan_2304_01：cos 0.433 → ⚠️ 存疑，待人工复核**
+- **char_shen_hongyu_1734_01 ↔ char_chu_muchen_0004_01：cos -0.013 → 不同身份**
+- **char_shen_hongyu_1734_01 ↔ char_qiao_chaoyan_0004_01：cos -0.056 → 不同身份**
+- **char_shen_hongyu_1734_01 ↔ char_xue_qinghuan_0034_01：cos -0.027 → 不同身份**
+- **char_shen_hongyu_1734_01 ↔ char_tang_yuwei_0217_01：cos 0.280 → 不同身份**
+- **char_shen_hongyu_1734_01 ↔ char_ouyang_chuxia_0250_01：cos 0.249 → 不同身份**
+- **char_shen_hongyu_1734_01 ↔ char_bai_zhiruo_0305_01：cos 0.477 → ⚠️ 存疑，待人工复核**
+- **char_shen_hongyu_1734_01 ↔ char_pei_shanshan_0456_01：cos 0.417 → ⚠️ 存疑，待人工复核**
+- **char_shen_hongyu_1734_01 ↔ char_xi_qingchuan_0618_01：cos 0.462 → ⚠️ 存疑，待人工复核**
+- **char_shen_hongyu_1734_01 ↔ char_zhong_linger_0732_01：cos 0.323 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_hongyu_1734_01 ↔ char_hua_qingdai_1029_01：cos 0.333 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_hongyu_1734_01 ↔ char_tang_banxia_1156_01：cos 0.392 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_hongyu_1734_01 ↔ char_gu_weiyu_1321_01：cos 0.313 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_hongyu_1734_01 ↔ char_cheng_hongyu_1435_01：cos 0.295 → 不同身份**
+- **char_shen_hongyu_1734_01 ↔ char_hua_chuxia_1549_01：cos 0.249 → 不同身份**
+- **char_shen_hongyu_1734_01 ↔ char_pei_manshu_1701_01：cos 0.345 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_hongyu_1734_01 ↔ char_ye_nanqiao_1811_01：cos 0.314 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_hongyu_1734_01 ↔ char_murong_yuyan_1942_01：cos 0.357 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_hongyu_1734_01 ↔ char_nangong_lingjun_2054_01：cos 0.286 → 不同身份**
+- **char_situ_caiwei_0100_01 ↔ char_situ_yuhan_0600_01：cos 0.649 → 同一身份**
+- **char_situ_caiwei_0100_01 ↔ char_song_wanzhao_1503_01：cos 0.527 → ⚠️ 存疑，待人工复核**
+- **char_situ_caiwei_0100_01 ↔ char_tan_shanshan_0700_01：cos 0.397 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_caiwei_0100_01 ↔ char_tang_sitian_0900_01：cos 0.697 → 同一身份**
+- **char_situ_caiwei_0100_01 ↔ char_tantai_weiyu_1433_01：cos 0.294 → 不同身份**
+- **char_situ_caiwei_0100_01 ↔ char_tantai_xingzhu_0230_01：cos 0.311 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_caiwei_0100_01 ↔ char_tantai_yuwei_0730_01：cos 0.219 → 不同身份**
+- **char_situ_caiwei_0100_01 ↔ char_wen_manshu_1030_01：cos 0.636 → 同一身份**
+- **char_situ_caiwei_0100_01 ↔ char_xi_weiyu_2134_01：cos 0.566 → ⚠️ 存疑，待人工复核**
+- **char_situ_caiwei_0100_01 ↔ char_xue_banxia_0330_01：cos 0.432 → ⚠️ 存疑，待人工复核**
+- **char_situ_caiwei_0100_01 ↔ char_ye_hongyu_0500_01：cos 0.478 → ⚠️ 存疑，待人工复核**
+- **char_situ_caiwei_0100_01 ↔ char_ye_linger_2004_01：cos 0.448 → ⚠️ 存疑，待人工复核**
+- **char_situ_caiwei_0100_01 ↔ char_ye_lingjun_0130_01：cos 0.396 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_caiwei_0100_01 ↔ char_ye_shanshan_0400_01：cos 0.473 → ⚠️ 存疑，待人工复核**
+- **char_situ_caiwei_0100_01 ↔ char_ye_yuhan_1804_01：cos 0.459 → ⚠️ 存疑，待人工复核**
+- **char_situ_caiwei_0100_01 ↔ char_yuchi_ruoli_1000_01：cos 0.483 → ⚠️ 存疑，待人工复核**
+- **char_situ_caiwei_0100_01 ↔ char_yun_banxia_0030_01：cos 0.475 → ⚠️ 存疑，待人工复核**
+- **char_situ_caiwei_0100_01 ↔ char_zhong_manshu_2104_01：cos 0.502 → ⚠️ 存疑，待人工复核**
+- **char_situ_caiwei_0100_01 ↔ char_anya_song：cos 0.246 → 不同身份**
+- **char_situ_caiwei_0100_01 ↔ char_ayano：cos 0.135 → 不同身份**
+- **char_situ_caiwei_0100_01 ↔ char_chen_xiawei：cos 0.185 → 不同身份**
+- **char_situ_caiwei_0100_01 ↔ char_jia：cos 0.184 → 不同身份**
+- **char_situ_caiwei_0100_01 ↔ char_jiang_yueyao：cos 0.321 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_caiwei_0100_01 ↔ char_lin_qingwan：cos 0.423 → ⚠️ 存疑，待人工复核**
+- **char_situ_caiwei_0100_01 ↔ char_liu_yinuo_1923_10：cos -0.012 → 不同身份**
+- **char_situ_caiwei_0100_01 ↔ char_luo_qingchuan_1805：cos 0.561 → ⚠️ 存疑，待人工复核**
+- **char_situ_caiwei_0100_01 ↔ char_pei_yuhan_2300_01：cos 0.332 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_caiwei_0100_01 ↔ char_qing_luo：cos 0.164 → 不同身份**
+- **char_situ_caiwei_0100_01 ↔ char_ray_ling：cos 0.297 → 不同身份**
+- **char_situ_caiwei_0100_01 ↔ char_runcha：cos -0.049 → 不同身份**
+- **char_situ_caiwei_0100_01 ↔ char_shen_zhilan：cos 0.349 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_caiwei_0100_01 ↔ char_su_xiaotang：cos 0.122 → 不同身份**
+- **char_situ_caiwei_0100_01 ↔ char_tang_mengli_2200_01：cos 0.353 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_caiwei_0100_01 ↔ char_wen_xiaorou_2140_01：cos 0.439 → ⚠️ 存疑，待人工复核**
+- **char_situ_caiwei_0100_01 ↔ char_ye_muchen_2100_01：cos 0.429 → ⚠️ 存疑，待人工复核**
+- **char_situ_caiwei_0100_01 ↔ char_yin_xinyue_2330_01：cos 0.401 → ⚠️ 存疑，待人工复核**
+- **char_situ_caiwei_0100_01 ↔ char_zhao_ruoxi：cos 0.373 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_caiwei_0100_01 ↔ char_duo：cos 0.125 → 不同身份**
+- **char_situ_caiwei_0100_01 ↔ char_duo3_2：cos 0.114 → 不同身份**
+- **char_situ_caiwei_0100_01 ↔ char_cen_zhiwei_1936_01：cos 0.352 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_caiwei_0100_01 ↔ char_jiang_ruoli_2007_01：cos 0.375 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_caiwei_0100_01 ↔ char_xiaog3：cos -0.030 → 不同身份**
+- **char_situ_caiwei_0100_01 ↔ char_xi_manshu_2045_01：cos 0.348 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_caiwei_0100_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.266 → 不同身份**
+- **char_situ_caiwei_0100_01 ↔ char_linghu_zhixia_2133_01：cos 0.327 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_caiwei_0100_01 ↔ char_qiao_weiyu_2134_01：cos 0.294 → 不同身份**
+- **char_situ_caiwei_0100_01 ↔ char_jiang_qinghuan_2203_01：cos 0.476 → ⚠️ 存疑，待人工复核**
+- **char_situ_caiwei_0100_01 ↔ char_cen_youqing_2204_01：cos 0.256 → 不同身份**
+- **char_situ_caiwei_0100_01 ↔ char_zhong_xiaorou_2233_01：cos 0.351 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_caiwei_0100_01 ↔ char_tan_youqing_2234_01：cos 0.351 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_caiwei_0100_01 ↔ char_tantai_lingsu_2303_01：cos 0.461 → ⚠️ 存疑，待人工复核**
+- **char_situ_caiwei_0100_01 ↔ char_qiao_qinghuan_2304_01：cos 0.461 → ⚠️ 存疑，待人工复核**
+- **char_situ_caiwei_0100_01 ↔ char_chu_muchen_0004_01：cos 0.068 → 不同身份**
+- **char_situ_caiwei_0100_01 ↔ char_qiao_chaoyan_0004_01：cos -0.056 → 不同身份**
+- **char_situ_caiwei_0100_01 ↔ char_xue_qinghuan_0034_01：cos -0.024 → 不同身份**
+- **char_situ_caiwei_0100_01 ↔ char_tang_yuwei_0217_01：cos 0.342 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_caiwei_0100_01 ↔ char_ouyang_chuxia_0250_01：cos 0.417 → ⚠️ 存疑，待人工复核**
+- **char_situ_caiwei_0100_01 ↔ char_bai_zhiruo_0305_01：cos 0.468 → ⚠️ 存疑，待人工复核**
+- **char_situ_caiwei_0100_01 ↔ char_pei_shanshan_0456_01：cos 0.412 → ⚠️ 存疑，待人工复核**
+- **char_situ_caiwei_0100_01 ↔ char_xi_qingchuan_0618_01：cos 0.462 → ⚠️ 存疑，待人工复核**
+- **char_situ_caiwei_0100_01 ↔ char_zhong_linger_0732_01：cos 0.399 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_caiwei_0100_01 ↔ char_hua_qingdai_1029_01：cos 0.422 → ⚠️ 存疑，待人工复核**
+- **char_situ_caiwei_0100_01 ↔ char_tang_banxia_1156_01：cos 0.472 → ⚠️ 存疑，待人工复核**
+- **char_situ_caiwei_0100_01 ↔ char_gu_weiyu_1321_01：cos 0.379 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_caiwei_0100_01 ↔ char_cheng_hongyu_1435_01：cos 0.425 → ⚠️ 存疑，待人工复核**
+- **char_situ_caiwei_0100_01 ↔ char_hua_chuxia_1549_01：cos 0.407 → ⚠️ 存疑，待人工复核**
+- **char_situ_caiwei_0100_01 ↔ char_pei_manshu_1701_01：cos 0.425 → ⚠️ 存疑，待人工复核**
+- **char_situ_caiwei_0100_01 ↔ char_ye_nanqiao_1811_01：cos 0.422 → ⚠️ 存疑，待人工复核**
+- **char_situ_caiwei_0100_01 ↔ char_murong_yuyan_1942_01：cos 0.425 → ⚠️ 存疑，待人工复核**
+- **char_situ_caiwei_0100_01 ↔ char_nangong_lingjun_2054_01：cos 0.412 → ⚠️ 存疑，待人工复核**
+- **char_situ_yuhan_0600_01 ↔ char_song_wanzhao_1503_01：cos 0.604 → 同一身份**
+- **char_situ_yuhan_0600_01 ↔ char_tan_shanshan_0700_01：cos 0.587 → ⚠️ 存疑，待人工复核**
+- **char_situ_yuhan_0600_01 ↔ char_tang_sitian_0900_01：cos 0.661 → 同一身份**
+- **char_situ_yuhan_0600_01 ↔ char_tantai_weiyu_1433_01：cos 0.508 → ⚠️ 存疑，待人工复核**
+- **char_situ_yuhan_0600_01 ↔ char_tantai_xingzhu_0230_01：cos 0.478 → ⚠️ 存疑，待人工复核**
+- **char_situ_yuhan_0600_01 ↔ char_tantai_yuwei_0730_01：cos 0.500 → ⚠️ 存疑，待人工复核**
+- **char_situ_yuhan_0600_01 ↔ char_wen_manshu_1030_01：cos 0.716 → 同一身份**
+- **char_situ_yuhan_0600_01 ↔ char_xi_weiyu_2134_01：cos 0.668 → 同一身份**
+- **char_situ_yuhan_0600_01 ↔ char_xue_banxia_0330_01：cos 0.597 → ⚠️ 存疑，待人工复核**
+- **char_situ_yuhan_0600_01 ↔ char_ye_hongyu_0500_01：cos 0.657 → 同一身份**
+- **char_situ_yuhan_0600_01 ↔ char_ye_linger_2004_01：cos 0.653 → 同一身份**
+- **char_situ_yuhan_0600_01 ↔ char_ye_lingjun_0130_01：cos 0.575 → ⚠️ 存疑，待人工复核**
+- **char_situ_yuhan_0600_01 ↔ char_ye_shanshan_0400_01：cos 0.621 → 同一身份**
+- **char_situ_yuhan_0600_01 ↔ char_ye_yuhan_1804_01：cos 0.605 → 同一身份**
+- **char_situ_yuhan_0600_01 ↔ char_yuchi_ruoli_1000_01：cos 0.642 → 同一身份**
+- **char_situ_yuhan_0600_01 ↔ char_yun_banxia_0030_01：cos 0.546 → ⚠️ 存疑，待人工复核**
+- **char_situ_yuhan_0600_01 ↔ char_zhong_manshu_2104_01：cos 0.597 → ⚠️ 存疑，待人工复核**
+- **char_situ_yuhan_0600_01 ↔ char_anya_song：cos 0.201 → 不同身份**
+- **char_situ_yuhan_0600_01 ↔ char_ayano：cos 0.149 → 不同身份**
+- **char_situ_yuhan_0600_01 ↔ char_chen_xiawei：cos 0.170 → 不同身份**
+- **char_situ_yuhan_0600_01 ↔ char_jia：cos 0.155 → 不同身份**
+- **char_situ_yuhan_0600_01 ↔ char_jiang_yueyao：cos 0.276 → 不同身份**
+- **char_situ_yuhan_0600_01 ↔ char_lin_qingwan：cos 0.307 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_yuhan_0600_01 ↔ char_liu_yinuo_1923_10：cos -0.041 → 不同身份**
+- **char_situ_yuhan_0600_01 ↔ char_luo_qingchuan_1805：cos 0.733 → 同一身份**
+- **char_situ_yuhan_0600_01 ↔ char_pei_yuhan_2300_01：cos 0.569 → ⚠️ 存疑，待人工复核**
+- **char_situ_yuhan_0600_01 ↔ char_qing_luo：cos 0.126 → 不同身份**
+- **char_situ_yuhan_0600_01 ↔ char_ray_ling：cos 0.309 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_yuhan_0600_01 ↔ char_runcha：cos 0.027 → 不同身份**
+- **char_situ_yuhan_0600_01 ↔ char_shen_zhilan：cos 0.319 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_yuhan_0600_01 ↔ char_su_xiaotang：cos 0.173 → 不同身份**
+- **char_situ_yuhan_0600_01 ↔ char_tang_mengli_2200_01：cos 0.609 → 同一身份**
+- **char_situ_yuhan_0600_01 ↔ char_wen_xiaorou_2140_01：cos 0.638 → 同一身份**
+- **char_situ_yuhan_0600_01 ↔ char_ye_muchen_2100_01：cos 0.606 → 同一身份**
+- **char_situ_yuhan_0600_01 ↔ char_yin_xinyue_2330_01：cos 0.618 → 同一身份**
+- **char_situ_yuhan_0600_01 ↔ char_zhao_ruoxi：cos 0.252 → 不同身份**
+- **char_situ_yuhan_0600_01 ↔ char_duo：cos 0.162 → 不同身份**
+- **char_situ_yuhan_0600_01 ↔ char_duo3_2：cos 0.179 → 不同身份**
+- **char_situ_yuhan_0600_01 ↔ char_cen_zhiwei_1936_01：cos 0.413 → ⚠️ 存疑，待人工复核**
+- **char_situ_yuhan_0600_01 ↔ char_jiang_ruoli_2007_01：cos 0.286 → 不同身份**
+- **char_situ_yuhan_0600_01 ↔ char_xiaog3：cos 0.130 → 不同身份**
+- **char_situ_yuhan_0600_01 ↔ char_xi_manshu_2045_01：cos 0.297 → 不同身份**
+- **char_situ_yuhan_0600_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.347 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_yuhan_0600_01 ↔ char_linghu_zhixia_2133_01：cos 0.372 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_yuhan_0600_01 ↔ char_qiao_weiyu_2134_01：cos 0.265 → 不同身份**
+- **char_situ_yuhan_0600_01 ↔ char_jiang_qinghuan_2203_01：cos 0.352 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_yuhan_0600_01 ↔ char_cen_youqing_2204_01：cos 0.130 → 不同身份**
+- **char_situ_yuhan_0600_01 ↔ char_zhong_xiaorou_2233_01：cos 0.328 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_yuhan_0600_01 ↔ char_tan_youqing_2234_01：cos 0.328 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_yuhan_0600_01 ↔ char_tantai_lingsu_2303_01：cos 0.478 → ⚠️ 存疑，待人工复核**
+- **char_situ_yuhan_0600_01 ↔ char_qiao_qinghuan_2304_01：cos 0.478 → ⚠️ 存疑，待人工复核**
+- **char_situ_yuhan_0600_01 ↔ char_chu_muchen_0004_01：cos 0.017 → 不同身份**
+- **char_situ_yuhan_0600_01 ↔ char_qiao_chaoyan_0004_01：cos -0.067 → 不同身份**
+- **char_situ_yuhan_0600_01 ↔ char_xue_qinghuan_0034_01：cos -0.032 → 不同身份**
+- **char_situ_yuhan_0600_01 ↔ char_tang_yuwei_0217_01：cos 0.223 → 不同身份**
+- **char_situ_yuhan_0600_01 ↔ char_ouyang_chuxia_0250_01：cos 0.288 → 不同身份**
+- **char_situ_yuhan_0600_01 ↔ char_bai_zhiruo_0305_01：cos 0.421 → ⚠️ 存疑，待人工复核**
+- **char_situ_yuhan_0600_01 ↔ char_pei_shanshan_0456_01：cos 0.419 → ⚠️ 存疑，待人工复核**
+- **char_situ_yuhan_0600_01 ↔ char_xi_qingchuan_0618_01：cos 0.402 → ⚠️ 存疑，待人工复核**
+- **char_situ_yuhan_0600_01 ↔ char_zhong_linger_0732_01：cos 0.380 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_yuhan_0600_01 ↔ char_hua_qingdai_1029_01：cos 0.383 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_yuhan_0600_01 ↔ char_tang_banxia_1156_01：cos 0.467 → ⚠️ 存疑，待人工复核**
+- **char_situ_yuhan_0600_01 ↔ char_gu_weiyu_1321_01：cos 0.387 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_yuhan_0600_01 ↔ char_cheng_hongyu_1435_01：cos 0.248 → 不同身份**
+- **char_situ_yuhan_0600_01 ↔ char_hua_chuxia_1549_01：cos 0.248 → 不同身份**
+- **char_situ_yuhan_0600_01 ↔ char_pei_manshu_1701_01：cos 0.384 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_yuhan_0600_01 ↔ char_ye_nanqiao_1811_01：cos 0.314 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_yuhan_0600_01 ↔ char_murong_yuyan_1942_01：cos 0.346 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_situ_yuhan_0600_01 ↔ char_nangong_lingjun_2054_01：cos 0.315 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_song_wanzhao_1503_01 ↔ char_tan_shanshan_0700_01：cos 0.587 → ⚠️ 存疑，待人工复核**
+- **char_song_wanzhao_1503_01 ↔ char_tang_sitian_0900_01：cos 0.579 → ⚠️ 存疑，待人工复核**
+- **char_song_wanzhao_1503_01 ↔ char_tantai_weiyu_1433_01：cos 0.519 → ⚠️ 存疑，待人工复核**
+- **char_song_wanzhao_1503_01 ↔ char_tantai_xingzhu_0230_01：cos 0.460 → ⚠️ 存疑，待人工复核**
+- **char_song_wanzhao_1503_01 ↔ char_tantai_yuwei_0730_01：cos 0.499 → ⚠️ 存疑，待人工复核**
+- **char_song_wanzhao_1503_01 ↔ char_wen_manshu_1030_01：cos 0.573 → ⚠️ 存疑，待人工复核**
+- **char_song_wanzhao_1503_01 ↔ char_xi_weiyu_2134_01：cos 0.520 → ⚠️ 存疑，待人工复核**
+- **char_song_wanzhao_1503_01 ↔ char_xue_banxia_0330_01：cos 0.532 → ⚠️ 存疑，待人工复核**
+- **char_song_wanzhao_1503_01 ↔ char_ye_hongyu_0500_01：cos 0.599 → ⚠️ 存疑，待人工复核**
+- **char_song_wanzhao_1503_01 ↔ char_ye_linger_2004_01：cos 0.574 → ⚠️ 存疑，待人工复核**
+- **char_song_wanzhao_1503_01 ↔ char_ye_lingjun_0130_01：cos 0.574 → ⚠️ 存疑，待人工复核**
+- **char_song_wanzhao_1503_01 ↔ char_ye_shanshan_0400_01：cos 0.521 → ⚠️ 存疑，待人工复核**
+- **char_song_wanzhao_1503_01 ↔ char_ye_yuhan_1804_01：cos 0.652 → 同一身份**
+- **char_song_wanzhao_1503_01 ↔ char_yuchi_ruoli_1000_01：cos 0.615 → 同一身份**
+- **char_song_wanzhao_1503_01 ↔ char_yun_banxia_0030_01：cos 0.562 → ⚠️ 存疑，待人工复核**
+- **char_song_wanzhao_1503_01 ↔ char_zhong_manshu_2104_01：cos 0.560 → ⚠️ 存疑，待人工复核**
+- **char_song_wanzhao_1503_01 ↔ char_anya_song：cos 0.079 → 不同身份**
+- **char_song_wanzhao_1503_01 ↔ char_ayano：cos 0.079 → 不同身份**
+- **char_song_wanzhao_1503_01 ↔ char_chen_xiawei：cos 0.096 → 不同身份**
+- **char_song_wanzhao_1503_01 ↔ char_jia：cos 0.112 → 不同身份**
+- **char_song_wanzhao_1503_01 ↔ char_jiang_yueyao：cos 0.280 → 不同身份**
+- **char_song_wanzhao_1503_01 ↔ char_lin_qingwan：cos 0.239 → 不同身份**
+- **char_song_wanzhao_1503_01 ↔ char_liu_yinuo_1923_10：cos -0.033 → 不同身份**
+- **char_song_wanzhao_1503_01 ↔ char_luo_qingchuan_1805：cos 0.577 → ⚠️ 存疑，待人工复核**
+- **char_song_wanzhao_1503_01 ↔ char_pei_yuhan_2300_01：cos 0.548 → ⚠️ 存疑，待人工复核**
+- **char_song_wanzhao_1503_01 ↔ char_qing_luo：cos 0.105 → 不同身份**
+- **char_song_wanzhao_1503_01 ↔ char_ray_ling：cos 0.217 → 不同身份**
+- **char_song_wanzhao_1503_01 ↔ char_runcha：cos 0.013 → 不同身份**
+- **char_song_wanzhao_1503_01 ↔ char_shen_zhilan：cos 0.239 → 不同身份**
+- **char_song_wanzhao_1503_01 ↔ char_su_xiaotang：cos 0.060 → 不同身份**
+- **char_song_wanzhao_1503_01 ↔ char_tang_mengli_2200_01：cos 0.593 → ⚠️ 存疑，待人工复核**
+- **char_song_wanzhao_1503_01 ↔ char_wen_xiaorou_2140_01：cos 0.631 → 同一身份**
+- **char_song_wanzhao_1503_01 ↔ char_ye_muchen_2100_01：cos 0.544 → ⚠️ 存疑，待人工复核**
+- **char_song_wanzhao_1503_01 ↔ char_yin_xinyue_2330_01：cos 0.601 → 同一身份**
+- **char_song_wanzhao_1503_01 ↔ char_zhao_ruoxi：cos 0.220 → 不同身份**
+- **char_song_wanzhao_1503_01 ↔ char_duo：cos 0.192 → 不同身份**
+- **char_song_wanzhao_1503_01 ↔ char_duo3_2：cos 0.187 → 不同身份**
+- **char_song_wanzhao_1503_01 ↔ char_cen_zhiwei_1936_01：cos 0.326 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_song_wanzhao_1503_01 ↔ char_jiang_ruoli_2007_01：cos 0.324 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_song_wanzhao_1503_01 ↔ char_xiaog3：cos 0.188 → 不同身份**
+- **char_song_wanzhao_1503_01 ↔ char_xi_manshu_2045_01：cos 0.195 → 不同身份**
+- **char_song_wanzhao_1503_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.300 → 不同身份**
+- **char_song_wanzhao_1503_01 ↔ char_linghu_zhixia_2133_01：cos 0.335 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_song_wanzhao_1503_01 ↔ char_qiao_weiyu_2134_01：cos 0.217 → 不同身份**
+- **char_song_wanzhao_1503_01 ↔ char_jiang_qinghuan_2203_01：cos 0.300 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_song_wanzhao_1503_01 ↔ char_cen_youqing_2204_01：cos 0.077 → 不同身份**
+- **char_song_wanzhao_1503_01 ↔ char_zhong_xiaorou_2233_01：cos 0.229 → 不同身份**
+- **char_song_wanzhao_1503_01 ↔ char_tan_youqing_2234_01：cos 0.229 → 不同身份**
+- **char_song_wanzhao_1503_01 ↔ char_tantai_lingsu_2303_01：cos 0.432 → ⚠️ 存疑，待人工复核**
+- **char_song_wanzhao_1503_01 ↔ char_qiao_qinghuan_2304_01：cos 0.432 → ⚠️ 存疑，待人工复核**
+- **char_song_wanzhao_1503_01 ↔ char_chu_muchen_0004_01：cos -0.021 → 不同身份**
+- **char_song_wanzhao_1503_01 ↔ char_qiao_chaoyan_0004_01：cos -0.031 → 不同身份**
+- **char_song_wanzhao_1503_01 ↔ char_xue_qinghuan_0034_01：cos -0.018 → 不同身份**
+- **char_song_wanzhao_1503_01 ↔ char_tang_yuwei_0217_01：cos 0.212 → 不同身份**
+- **char_song_wanzhao_1503_01 ↔ char_ouyang_chuxia_0250_01：cos 0.273 → 不同身份**
+- **char_song_wanzhao_1503_01 ↔ char_bai_zhiruo_0305_01：cos 0.438 → ⚠️ 存疑，待人工复核**
+- **char_song_wanzhao_1503_01 ↔ char_pei_shanshan_0456_01：cos 0.322 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_song_wanzhao_1503_01 ↔ char_xi_qingchuan_0618_01：cos 0.344 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_song_wanzhao_1503_01 ↔ char_zhong_linger_0732_01：cos 0.371 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_song_wanzhao_1503_01 ↔ char_hua_qingdai_1029_01：cos 0.345 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_song_wanzhao_1503_01 ↔ char_tang_banxia_1156_01：cos 0.409 → ⚠️ 存疑，待人工复核**
+- **char_song_wanzhao_1503_01 ↔ char_gu_weiyu_1321_01：cos 0.323 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_song_wanzhao_1503_01 ↔ char_cheng_hongyu_1435_01：cos 0.271 → 不同身份**
+- **char_song_wanzhao_1503_01 ↔ char_hua_chuxia_1549_01：cos 0.299 → 不同身份**
+- **char_song_wanzhao_1503_01 ↔ char_pei_manshu_1701_01：cos 0.280 → 不同身份**
+- **char_song_wanzhao_1503_01 ↔ char_ye_nanqiao_1811_01：cos 0.287 → 不同身份**
+- **char_song_wanzhao_1503_01 ↔ char_murong_yuyan_1942_01：cos 0.270 → 不同身份**
+- **char_song_wanzhao_1503_01 ↔ char_nangong_lingjun_2054_01：cos 0.342 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tan_shanshan_0700_01 ↔ char_tang_sitian_0900_01：cos 0.415 → ⚠️ 存疑，待人工复核**
+- **char_tan_shanshan_0700_01 ↔ char_tantai_weiyu_1433_01：cos 0.749 → 同一身份**
+- **char_tan_shanshan_0700_01 ↔ char_tantai_xingzhu_0230_01：cos 0.355 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tan_shanshan_0700_01 ↔ char_tantai_yuwei_0730_01：cos 0.434 → ⚠️ 存疑，待人工复核**
+- **char_tan_shanshan_0700_01 ↔ char_wen_manshu_1030_01：cos 0.528 → ⚠️ 存疑，待人工复核**
+- **char_tan_shanshan_0700_01 ↔ char_xi_weiyu_2134_01：cos 0.436 → ⚠️ 存疑，待人工复核**
+- **char_tan_shanshan_0700_01 ↔ char_xue_banxia_0330_01：cos 0.732 → 同一身份**
+- **char_tan_shanshan_0700_01 ↔ char_ye_hongyu_0500_01：cos 0.723 → 同一身份**
+- **char_tan_shanshan_0700_01 ↔ char_ye_linger_2004_01：cos 0.775 → 同一身份**
+- **char_tan_shanshan_0700_01 ↔ char_ye_lingjun_0130_01：cos 0.773 → 同一身份**
+- **char_tan_shanshan_0700_01 ↔ char_ye_shanshan_0400_01：cos 0.475 → ⚠️ 存疑，待人工复核**
+- **char_tan_shanshan_0700_01 ↔ char_ye_yuhan_1804_01：cos 0.540 → ⚠️ 存疑，待人工复核**
+- **char_tan_shanshan_0700_01 ↔ char_yuchi_ruoli_1000_01：cos 0.516 → ⚠️ 存疑，待人工复核**
+- **char_tan_shanshan_0700_01 ↔ char_yun_banxia_0030_01：cos 0.392 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tan_shanshan_0700_01 ↔ char_zhong_manshu_2104_01：cos 0.502 → ⚠️ 存疑，待人工复核**
+- **char_tan_shanshan_0700_01 ↔ char_anya_song：cos 0.213 → 不同身份**
+- **char_tan_shanshan_0700_01 ↔ char_ayano：cos 0.017 → 不同身份**
+- **char_tan_shanshan_0700_01 ↔ char_chen_xiawei：cos 0.019 → 不同身份**
+- **char_tan_shanshan_0700_01 ↔ char_jia：cos -0.025 → 不同身份**
+- **char_tan_shanshan_0700_01 ↔ char_jiang_yueyao：cos 0.156 → 不同身份**
+- **char_tan_shanshan_0700_01 ↔ char_lin_qingwan：cos 0.185 → 不同身份**
+- **char_tan_shanshan_0700_01 ↔ char_liu_yinuo_1923_10：cos -0.041 → 不同身份**
+- **char_tan_shanshan_0700_01 ↔ char_luo_qingchuan_1805：cos 0.540 → ⚠️ 存疑，待人工复核**
+- **char_tan_shanshan_0700_01 ↔ char_pei_yuhan_2300_01：cos 0.482 → ⚠️ 存疑，待人工复核**
+- **char_tan_shanshan_0700_01 ↔ char_qing_luo：cos 0.040 → 不同身份**
+- **char_tan_shanshan_0700_01 ↔ char_ray_ling：cos 0.352 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tan_shanshan_0700_01 ↔ char_runcha：cos -0.041 → 不同身份**
+- **char_tan_shanshan_0700_01 ↔ char_shen_zhilan：cos 0.249 → 不同身份**
+- **char_tan_shanshan_0700_01 ↔ char_su_xiaotang：cos 0.080 → 不同身份**
+- **char_tan_shanshan_0700_01 ↔ char_tang_mengli_2200_01：cos 0.445 → ⚠️ 存疑，待人工复核**
+- **char_tan_shanshan_0700_01 ↔ char_wen_xiaorou_2140_01：cos 0.524 → ⚠️ 存疑，待人工复核**
+- **char_tan_shanshan_0700_01 ↔ char_ye_muchen_2100_01：cos 0.472 → ⚠️ 存疑，待人工复核**
+- **char_tan_shanshan_0700_01 ↔ char_yin_xinyue_2330_01：cos 0.499 → ⚠️ 存疑，待人工复核**
+- **char_tan_shanshan_0700_01 ↔ char_zhao_ruoxi：cos 0.234 → 不同身份**
+- **char_tan_shanshan_0700_01 ↔ char_duo：cos 0.099 → 不同身份**
+- **char_tan_shanshan_0700_01 ↔ char_duo3_2：cos 0.148 → 不同身份**
+- **char_tan_shanshan_0700_01 ↔ char_cen_zhiwei_1936_01：cos 0.430 → ⚠️ 存疑，待人工复核**
+- **char_tan_shanshan_0700_01 ↔ char_jiang_ruoli_2007_01：cos 0.374 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tan_shanshan_0700_01 ↔ char_xiaog3：cos 0.083 → 不同身份**
+- **char_tan_shanshan_0700_01 ↔ char_xi_manshu_2045_01：cos 0.220 → 不同身份**
+- **char_tan_shanshan_0700_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.487 → ⚠️ 存疑，待人工复核**
+- **char_tan_shanshan_0700_01 ↔ char_linghu_zhixia_2133_01：cos 0.433 → ⚠️ 存疑，待人工复核**
+- **char_tan_shanshan_0700_01 ↔ char_qiao_weiyu_2134_01：cos 0.235 → 不同身份**
+- **char_tan_shanshan_0700_01 ↔ char_jiang_qinghuan_2203_01：cos 0.163 → 不同身份**
+- **char_tan_shanshan_0700_01 ↔ char_cen_youqing_2204_01：cos 0.101 → 不同身份**
+- **char_tan_shanshan_0700_01 ↔ char_zhong_xiaorou_2233_01：cos 0.196 → 不同身份**
+- **char_tan_shanshan_0700_01 ↔ char_tan_youqing_2234_01：cos 0.196 → 不同身份**
+- **char_tan_shanshan_0700_01 ↔ char_tantai_lingsu_2303_01：cos 0.326 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tan_shanshan_0700_01 ↔ char_qiao_qinghuan_2304_01：cos 0.326 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tan_shanshan_0700_01 ↔ char_chu_muchen_0004_01：cos -0.007 → 不同身份**
+- **char_tan_shanshan_0700_01 ↔ char_qiao_chaoyan_0004_01：cos -0.081 → 不同身份**
+- **char_tan_shanshan_0700_01 ↔ char_xue_qinghuan_0034_01：cos 0.006 → 不同身份**
+- **char_tan_shanshan_0700_01 ↔ char_tang_yuwei_0217_01：cos 0.107 → 不同身份**
+- **char_tan_shanshan_0700_01 ↔ char_ouyang_chuxia_0250_01：cos 0.144 → 不同身份**
+- **char_tan_shanshan_0700_01 ↔ char_bai_zhiruo_0305_01：cos 0.324 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tan_shanshan_0700_01 ↔ char_pei_shanshan_0456_01：cos 0.245 → 不同身份**
+- **char_tan_shanshan_0700_01 ↔ char_xi_qingchuan_0618_01：cos 0.180 → 不同身份**
+- **char_tan_shanshan_0700_01 ↔ char_zhong_linger_0732_01：cos 0.323 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tan_shanshan_0700_01 ↔ char_hua_qingdai_1029_01：cos 0.241 → 不同身份**
+- **char_tan_shanshan_0700_01 ↔ char_tang_banxia_1156_01：cos 0.333 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tan_shanshan_0700_01 ↔ char_gu_weiyu_1321_01：cos 0.198 → 不同身份**
+- **char_tan_shanshan_0700_01 ↔ char_cheng_hongyu_1435_01：cos 0.174 → 不同身份**
+- **char_tan_shanshan_0700_01 ↔ char_hua_chuxia_1549_01：cos 0.166 → 不同身份**
+- **char_tan_shanshan_0700_01 ↔ char_pei_manshu_1701_01：cos 0.261 → 不同身份**
+- **char_tan_shanshan_0700_01 ↔ char_ye_nanqiao_1811_01：cos 0.158 → 不同身份**
+- **char_tan_shanshan_0700_01 ↔ char_murong_yuyan_1942_01：cos 0.136 → 不同身份**
+- **char_tan_shanshan_0700_01 ↔ char_nangong_lingjun_2054_01：cos 0.303 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tang_sitian_0900_01 ↔ char_tantai_weiyu_1433_01：cos 0.290 → 不同身份**
+- **char_tang_sitian_0900_01 ↔ char_tantai_xingzhu_0230_01：cos 0.447 → ⚠️ 存疑，待人工复核**
+- **char_tang_sitian_0900_01 ↔ char_tantai_yuwei_0730_01：cos 0.307 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tang_sitian_0900_01 ↔ char_wen_manshu_1030_01：cos 0.652 → 同一身份**
+- **char_tang_sitian_0900_01 ↔ char_xi_weiyu_2134_01：cos 0.683 → 同一身份**
+- **char_tang_sitian_0900_01 ↔ char_xue_banxia_0330_01：cos 0.465 → ⚠️ 存疑，待人工复核**
+- **char_tang_sitian_0900_01 ↔ char_ye_hongyu_0500_01：cos 0.553 → ⚠️ 存疑，待人工复核**
+- **char_tang_sitian_0900_01 ↔ char_ye_linger_2004_01：cos 0.467 → ⚠️ 存疑，待人工复核**
+- **char_tang_sitian_0900_01 ↔ char_ye_lingjun_0130_01：cos 0.381 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tang_sitian_0900_01 ↔ char_ye_shanshan_0400_01：cos 0.523 → ⚠️ 存疑，待人工复核**
+- **char_tang_sitian_0900_01 ↔ char_ye_yuhan_1804_01：cos 0.563 → ⚠️ 存疑，待人工复核**
+- **char_tang_sitian_0900_01 ↔ char_yuchi_ruoli_1000_01：cos 0.572 → ⚠️ 存疑，待人工复核**
+- **char_tang_sitian_0900_01 ↔ char_yun_banxia_0030_01：cos 0.508 → ⚠️ 存疑，待人工复核**
+- **char_tang_sitian_0900_01 ↔ char_zhong_manshu_2104_01：cos 0.579 → ⚠️ 存疑，待人工复核**
+- **char_tang_sitian_0900_01 ↔ char_anya_song：cos 0.195 → 不同身份**
+- **char_tang_sitian_0900_01 ↔ char_ayano：cos 0.146 → 不同身份**
+- **char_tang_sitian_0900_01 ↔ char_chen_xiawei：cos 0.185 → 不同身份**
+- **char_tang_sitian_0900_01 ↔ char_jia：cos 0.207 → 不同身份**
+- **char_tang_sitian_0900_01 ↔ char_jiang_yueyao：cos 0.297 → 不同身份**
+- **char_tang_sitian_0900_01 ↔ char_lin_qingwan：cos 0.399 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tang_sitian_0900_01 ↔ char_liu_yinuo_1923_10：cos 0.008 → 不同身份**
+- **char_tang_sitian_0900_01 ↔ char_luo_qingchuan_1805：cos 0.646 → 同一身份**
+- **char_tang_sitian_0900_01 ↔ char_pei_yuhan_2300_01：cos 0.440 → ⚠️ 存疑，待人工复核**
+- **char_tang_sitian_0900_01 ↔ char_qing_luo：cos 0.244 → 不同身份**
+- **char_tang_sitian_0900_01 ↔ char_ray_ling：cos 0.251 → 不同身份**
+- **char_tang_sitian_0900_01 ↔ char_runcha：cos 0.008 → 不同身份**
+- **char_tang_sitian_0900_01 ↔ char_shen_zhilan：cos 0.386 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tang_sitian_0900_01 ↔ char_su_xiaotang：cos 0.154 → 不同身份**
+- **char_tang_sitian_0900_01 ↔ char_tang_mengli_2200_01：cos 0.463 → ⚠️ 存疑，待人工复核**
+- **char_tang_sitian_0900_01 ↔ char_wen_xiaorou_2140_01：cos 0.450 → ⚠️ 存疑，待人工复核**
+- **char_tang_sitian_0900_01 ↔ char_ye_muchen_2100_01：cos 0.529 → ⚠️ 存疑，待人工复核**
+- **char_tang_sitian_0900_01 ↔ char_yin_xinyue_2330_01：cos 0.507 → ⚠️ 存疑，待人工复核**
+- **char_tang_sitian_0900_01 ↔ char_zhao_ruoxi：cos 0.375 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tang_sitian_0900_01 ↔ char_duo：cos 0.154 → 不同身份**
+- **char_tang_sitian_0900_01 ↔ char_duo3_2：cos 0.187 → 不同身份**
+- **char_tang_sitian_0900_01 ↔ char_cen_zhiwei_1936_01：cos 0.452 → ⚠️ 存疑，待人工复核**
+- **char_tang_sitian_0900_01 ↔ char_jiang_ruoli_2007_01：cos 0.369 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tang_sitian_0900_01 ↔ char_xiaog3：cos 0.061 → 不同身份**
+- **char_tang_sitian_0900_01 ↔ char_xi_manshu_2045_01：cos 0.377 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tang_sitian_0900_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.293 → 不同身份**
+- **char_tang_sitian_0900_01 ↔ char_linghu_zhixia_2133_01：cos 0.380 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tang_sitian_0900_01 ↔ char_qiao_weiyu_2134_01：cos 0.320 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tang_sitian_0900_01 ↔ char_jiang_qinghuan_2203_01：cos 0.485 → ⚠️ 存疑，待人工复核**
+- **char_tang_sitian_0900_01 ↔ char_cen_youqing_2204_01：cos 0.227 → 不同身份**
+- **char_tang_sitian_0900_01 ↔ char_zhong_xiaorou_2233_01：cos 0.287 → 不同身份**
+- **char_tang_sitian_0900_01 ↔ char_tan_youqing_2234_01：cos 0.287 → 不同身份**
+- **char_tang_sitian_0900_01 ↔ char_tantai_lingsu_2303_01：cos 0.509 → ⚠️ 存疑，待人工复核**
+- **char_tang_sitian_0900_01 ↔ char_qiao_qinghuan_2304_01：cos 0.509 → ⚠️ 存疑，待人工复核**
+- **char_tang_sitian_0900_01 ↔ char_chu_muchen_0004_01：cos 0.050 → 不同身份**
+- **char_tang_sitian_0900_01 ↔ char_qiao_chaoyan_0004_01：cos -0.038 → 不同身份**
+- **char_tang_sitian_0900_01 ↔ char_xue_qinghuan_0034_01：cos -0.010 → 不同身份**
+- **char_tang_sitian_0900_01 ↔ char_tang_yuwei_0217_01：cos 0.260 → 不同身份**
+- **char_tang_sitian_0900_01 ↔ char_ouyang_chuxia_0250_01：cos 0.421 → ⚠️ 存疑，待人工复核**
+- **char_tang_sitian_0900_01 ↔ char_bai_zhiruo_0305_01：cos 0.485 → ⚠️ 存疑，待人工复核**
+- **char_tang_sitian_0900_01 ↔ char_pei_shanshan_0456_01：cos 0.508 → ⚠️ 存疑，待人工复核**
+- **char_tang_sitian_0900_01 ↔ char_xi_qingchuan_0618_01：cos 0.498 → ⚠️ 存疑，待人工复核**
+- **char_tang_sitian_0900_01 ↔ char_zhong_linger_0732_01：cos 0.384 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tang_sitian_0900_01 ↔ char_hua_qingdai_1029_01：cos 0.418 → ⚠️ 存疑，待人工复核**
+- **char_tang_sitian_0900_01 ↔ char_tang_banxia_1156_01：cos 0.483 → ⚠️ 存疑，待人工复核**
+- **char_tang_sitian_0900_01 ↔ char_gu_weiyu_1321_01：cos 0.404 → ⚠️ 存疑，待人工复核**
+- **char_tang_sitian_0900_01 ↔ char_cheng_hongyu_1435_01：cos 0.368 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tang_sitian_0900_01 ↔ char_hua_chuxia_1549_01：cos 0.390 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tang_sitian_0900_01 ↔ char_pei_manshu_1701_01：cos 0.396 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tang_sitian_0900_01 ↔ char_ye_nanqiao_1811_01：cos 0.379 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tang_sitian_0900_01 ↔ char_murong_yuyan_1942_01：cos 0.428 → ⚠️ 存疑，待人工复核**
+- **char_tang_sitian_0900_01 ↔ char_nangong_lingjun_2054_01：cos 0.360 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tantai_weiyu_1433_01 ↔ char_tantai_xingzhu_0230_01：cos 0.381 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tantai_weiyu_1433_01 ↔ char_tantai_yuwei_0730_01：cos 0.525 → ⚠️ 存疑，待人工复核**
+- **char_tantai_weiyu_1433_01 ↔ char_wen_manshu_1030_01：cos 0.401 → ⚠️ 存疑，待人工复核**
+- **char_tantai_weiyu_1433_01 ↔ char_xi_weiyu_2134_01：cos 0.383 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tantai_weiyu_1433_01 ↔ char_xue_banxia_0330_01：cos 0.674 → 同一身份**
+- **char_tantai_weiyu_1433_01 ↔ char_ye_hongyu_0500_01：cos 0.633 → 同一身份**
+- **char_tantai_weiyu_1433_01 ↔ char_ye_linger_2004_01：cos 0.757 → 同一身份**
+- **char_tantai_weiyu_1433_01 ↔ char_ye_lingjun_0130_01：cos 0.837 → 同一身份**
+- **char_tantai_weiyu_1433_01 ↔ char_ye_shanshan_0400_01：cos 0.517 → ⚠️ 存疑，待人工复核**
+- **char_tantai_weiyu_1433_01 ↔ char_ye_yuhan_1804_01：cos 0.562 → ⚠️ 存疑，待人工复核**
+- **char_tantai_weiyu_1433_01 ↔ char_yuchi_ruoli_1000_01：cos 0.456 → ⚠️ 存疑，待人工复核**
+- **char_tantai_weiyu_1433_01 ↔ char_yun_banxia_0030_01：cos 0.345 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tantai_weiyu_1433_01 ↔ char_zhong_manshu_2104_01：cos 0.460 → ⚠️ 存疑，待人工复核**
+- **char_tantai_weiyu_1433_01 ↔ char_anya_song：cos 0.183 → 不同身份**
+- **char_tantai_weiyu_1433_01 ↔ char_ayano：cos 0.111 → 不同身份**
+- **char_tantai_weiyu_1433_01 ↔ char_chen_xiawei：cos -0.016 → 不同身份**
+- **char_tantai_weiyu_1433_01 ↔ char_jia：cos -0.046 → 不同身份**
+- **char_tantai_weiyu_1433_01 ↔ char_jiang_yueyao：cos 0.022 → 不同身份**
+- **char_tantai_weiyu_1433_01 ↔ char_lin_qingwan：cos 0.086 → 不同身份**
+- **char_tantai_weiyu_1433_01 ↔ char_liu_yinuo_1923_10：cos -0.011 → 不同身份**
+- **char_tantai_weiyu_1433_01 ↔ char_luo_qingchuan_1805：cos 0.507 → ⚠️ 存疑，待人工复核**
+- **char_tantai_weiyu_1433_01 ↔ char_pei_yuhan_2300_01：cos 0.530 → ⚠️ 存疑，待人工复核**
+- **char_tantai_weiyu_1433_01 ↔ char_qing_luo：cos 0.034 → 不同身份**
+- **char_tantai_weiyu_1433_01 ↔ char_ray_ling：cos 0.236 → 不同身份**
+- **char_tantai_weiyu_1433_01 ↔ char_runcha：cos -0.063 → 不同身份**
+- **char_tantai_weiyu_1433_01 ↔ char_shen_zhilan：cos 0.132 → 不同身份**
+- **char_tantai_weiyu_1433_01 ↔ char_su_xiaotang：cos 0.049 → 不同身份**
+- **char_tantai_weiyu_1433_01 ↔ char_tang_mengli_2200_01：cos 0.479 → ⚠️ 存疑，待人工复核**
+- **char_tantai_weiyu_1433_01 ↔ char_wen_xiaorou_2140_01：cos 0.514 → ⚠️ 存疑，待人工复核**
+- **char_tantai_weiyu_1433_01 ↔ char_ye_muchen_2100_01：cos 0.470 → ⚠️ 存疑，待人工复核**
+- **char_tantai_weiyu_1433_01 ↔ char_yin_xinyue_2330_01：cos 0.509 → ⚠️ 存疑，待人工复核**
+- **char_tantai_weiyu_1433_01 ↔ char_zhao_ruoxi：cos 0.073 → 不同身份**
+- **char_tantai_weiyu_1433_01 ↔ char_duo：cos 0.090 → 不同身份**
+- **char_tantai_weiyu_1433_01 ↔ char_duo3_2：cos 0.113 → 不同身份**
+- **char_tantai_weiyu_1433_01 ↔ char_cen_zhiwei_1936_01：cos 0.304 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tantai_weiyu_1433_01 ↔ char_jiang_ruoli_2007_01：cos 0.185 → 不同身份**
+- **char_tantai_weiyu_1433_01 ↔ char_xiaog3：cos 0.145 → 不同身份**
+- **char_tantai_weiyu_1433_01 ↔ char_xi_manshu_2045_01：cos 0.095 → 不同身份**
+- **char_tantai_weiyu_1433_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.418 → ⚠️ 存疑，待人工复核**
+- **char_tantai_weiyu_1433_01 ↔ char_linghu_zhixia_2133_01：cos 0.327 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tantai_weiyu_1433_01 ↔ char_qiao_weiyu_2134_01：cos 0.080 → 不同身份**
+- **char_tantai_weiyu_1433_01 ↔ char_jiang_qinghuan_2203_01：cos 0.114 → 不同身份**
+- **char_tantai_weiyu_1433_01 ↔ char_cen_youqing_2204_01：cos -0.005 → 不同身份**
+- **char_tantai_weiyu_1433_01 ↔ char_zhong_xiaorou_2233_01：cos 0.156 → 不同身份**
+- **char_tantai_weiyu_1433_01 ↔ char_tan_youqing_2234_01：cos 0.156 → 不同身份**
+- **char_tantai_weiyu_1433_01 ↔ char_tantai_lingsu_2303_01：cos 0.224 → 不同身份**
+- **char_tantai_weiyu_1433_01 ↔ char_qiao_qinghuan_2304_01：cos 0.224 → 不同身份**
+- **char_tantai_weiyu_1433_01 ↔ char_chu_muchen_0004_01：cos 0.014 → 不同身份**
+- **char_tantai_weiyu_1433_01 ↔ char_qiao_chaoyan_0004_01：cos -0.143 → 不同身份**
+- **char_tantai_weiyu_1433_01 ↔ char_xue_qinghuan_0034_01：cos 0.042 → 不同身份**
+- **char_tantai_weiyu_1433_01 ↔ char_tang_yuwei_0217_01：cos 0.123 → 不同身份**
+- **char_tantai_weiyu_1433_01 ↔ char_ouyang_chuxia_0250_01：cos -0.003 → 不同身份**
+- **char_tantai_weiyu_1433_01 ↔ char_bai_zhiruo_0305_01：cos 0.276 → 不同身份**
+- **char_tantai_weiyu_1433_01 ↔ char_pei_shanshan_0456_01：cos 0.146 → 不同身份**
+- **char_tantai_weiyu_1433_01 ↔ char_xi_qingchuan_0618_01：cos 0.089 → 不同身份**
+- **char_tantai_weiyu_1433_01 ↔ char_zhong_linger_0732_01：cos 0.206 → 不同身份**
+- **char_tantai_weiyu_1433_01 ↔ char_hua_qingdai_1029_01：cos 0.123 → 不同身份**
+- **char_tantai_weiyu_1433_01 ↔ char_tang_banxia_1156_01：cos 0.161 → 不同身份**
+- **char_tantai_weiyu_1433_01 ↔ char_gu_weiyu_1321_01：cos 0.078 → 不同身份**
+- **char_tantai_weiyu_1433_01 ↔ char_cheng_hongyu_1435_01：cos 0.044 → 不同身份**
+- **char_tantai_weiyu_1433_01 ↔ char_hua_chuxia_1549_01：cos 0.028 → 不同身份**
+- **char_tantai_weiyu_1433_01 ↔ char_pei_manshu_1701_01：cos 0.077 → 不同身份**
+- **char_tantai_weiyu_1433_01 ↔ char_ye_nanqiao_1811_01：cos 0.024 → 不同身份**
+- **char_tantai_weiyu_1433_01 ↔ char_murong_yuyan_1942_01：cos 0.043 → 不同身份**
+- **char_tantai_weiyu_1433_01 ↔ char_nangong_lingjun_2054_01：cos 0.205 → 不同身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_tantai_yuwei_0730_01：cos 0.598 → ⚠️ 存疑，待人工复核**
+- **char_tantai_xingzhu_0230_01 ↔ char_wen_manshu_1030_01：cos 0.358 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tantai_xingzhu_0230_01 ↔ char_xi_weiyu_2134_01：cos 0.532 → ⚠️ 存疑，待人工复核**
+- **char_tantai_xingzhu_0230_01 ↔ char_xue_banxia_0330_01：cos 0.345 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tantai_xingzhu_0230_01 ↔ char_ye_hongyu_0500_01：cos 0.397 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tantai_xingzhu_0230_01 ↔ char_ye_linger_2004_01：cos 0.345 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tantai_xingzhu_0230_01 ↔ char_ye_lingjun_0130_01：cos 0.374 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tantai_xingzhu_0230_01 ↔ char_ye_shanshan_0400_01：cos 0.595 → ⚠️ 存疑，待人工复核**
+- **char_tantai_xingzhu_0230_01 ↔ char_ye_yuhan_1804_01：cos 0.504 → ⚠️ 存疑，待人工复核**
+- **char_tantai_xingzhu_0230_01 ↔ char_yuchi_ruoli_1000_01：cos 0.598 → ⚠️ 存疑，待人工复核**
+- **char_tantai_xingzhu_0230_01 ↔ char_yun_banxia_0030_01：cos 0.177 → 不同身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_zhong_manshu_2104_01：cos 0.602 → 同一身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_anya_song：cos -0.014 → 不同身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_ayano：cos 0.122 → 不同身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_chen_xiawei：cos 0.157 → 不同身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_jia：cos 0.087 → 不同身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_jiang_yueyao：cos 0.084 → 不同身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_lin_qingwan：cos 0.140 → 不同身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_liu_yinuo_1923_10：cos 0.039 → 不同身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_luo_qingchuan_1805：cos 0.499 → ⚠️ 存疑，待人工复核**
+- **char_tantai_xingzhu_0230_01 ↔ char_pei_yuhan_2300_01：cos 0.609 → 同一身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_qing_luo：cos 0.311 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tantai_xingzhu_0230_01 ↔ char_ray_ling：cos -0.010 → 不同身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_runcha：cos 0.069 → 不同身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_shen_zhilan：cos 0.045 → 不同身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_su_xiaotang：cos 0.025 → 不同身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_tang_mengli_2200_01：cos 0.654 → 同一身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_wen_xiaorou_2140_01：cos 0.644 → 同一身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_ye_muchen_2100_01：cos 0.646 → 同一身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_yin_xinyue_2330_01：cos 0.621 → 同一身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_zhao_ruoxi：cos 0.145 → 不同身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_duo：cos 0.116 → 不同身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_duo3_2：cos 0.096 → 不同身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_cen_zhiwei_1936_01：cos 0.125 → 不同身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_jiang_ruoli_2007_01：cos 0.022 → 不同身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_xiaog3：cos 0.363 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tantai_xingzhu_0230_01 ↔ char_xi_manshu_2045_01：cos 0.101 → 不同身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.020 → 不同身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_linghu_zhixia_2133_01：cos 0.078 → 不同身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_qiao_weiyu_2134_01：cos 0.048 → 不同身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_jiang_qinghuan_2203_01：cos 0.242 → 不同身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_cen_youqing_2204_01：cos -0.122 → 不同身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_zhong_xiaorou_2233_01：cos 0.203 → 不同身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_tan_youqing_2234_01：cos 0.203 → 不同身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_tantai_lingsu_2303_01：cos 0.291 → 不同身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_qiao_qinghuan_2304_01：cos 0.291 → 不同身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_chu_muchen_0004_01：cos -0.005 → 不同身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_qiao_chaoyan_0004_01：cos 0.015 → 不同身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_xue_qinghuan_0034_01：cos -0.022 → 不同身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_tang_yuwei_0217_01：cos 0.265 → 不同身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_ouyang_chuxia_0250_01：cos 0.069 → 不同身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_bai_zhiruo_0305_01：cos 0.264 → 不同身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_pei_shanshan_0456_01：cos 0.249 → 不同身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_xi_qingchuan_0618_01：cos 0.258 → 不同身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_zhong_linger_0732_01：cos 0.133 → 不同身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_hua_qingdai_1029_01：cos 0.164 → 不同身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_tang_banxia_1156_01：cos 0.230 → 不同身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_gu_weiyu_1321_01：cos 0.172 → 不同身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_cheng_hongyu_1435_01：cos 0.139 → 不同身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_hua_chuxia_1549_01：cos 0.104 → 不同身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_pei_manshu_1701_01：cos 0.207 → 不同身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_ye_nanqiao_1811_01：cos 0.172 → 不同身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_murong_yuyan_1942_01：cos 0.299 → 不同身份**
+- **char_tantai_xingzhu_0230_01 ↔ char_nangong_lingjun_2054_01：cos 0.071 → 不同身份**
+- **char_tantai_yuwei_0730_01 ↔ char_wen_manshu_1030_01：cos 0.369 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tantai_yuwei_0730_01 ↔ char_xi_weiyu_2134_01：cos 0.499 → ⚠️ 存疑，待人工复核**
+- **char_tantai_yuwei_0730_01 ↔ char_xue_banxia_0330_01：cos 0.403 → ⚠️ 存疑，待人工复核**
+- **char_tantai_yuwei_0730_01 ↔ char_ye_hongyu_0500_01：cos 0.344 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tantai_yuwei_0730_01 ↔ char_ye_linger_2004_01：cos 0.430 → ⚠️ 存疑，待人工复核**
+- **char_tantai_yuwei_0730_01 ↔ char_ye_lingjun_0130_01：cos 0.474 → ⚠️ 存疑，待人工复核**
+- **char_tantai_yuwei_0730_01 ↔ char_ye_shanshan_0400_01：cos 0.648 → 同一身份**
+- **char_tantai_yuwei_0730_01 ↔ char_ye_yuhan_1804_01：cos 0.462 → ⚠️ 存疑，待人工复核**
+- **char_tantai_yuwei_0730_01 ↔ char_yuchi_ruoli_1000_01：cos 0.588 → ⚠️ 存疑，待人工复核**
+- **char_tantai_yuwei_0730_01 ↔ char_yun_banxia_0030_01：cos 0.220 → 不同身份**
+- **char_tantai_yuwei_0730_01 ↔ char_zhong_manshu_2104_01：cos 0.511 → ⚠️ 存疑，待人工复核**
+- **char_tantai_yuwei_0730_01 ↔ char_anya_song：cos 0.011 → 不同身份**
+- **char_tantai_yuwei_0730_01 ↔ char_ayano：cos 0.177 → 不同身份**
+- **char_tantai_yuwei_0730_01 ↔ char_chen_xiawei：cos 0.068 → 不同身份**
+- **char_tantai_yuwei_0730_01 ↔ char_jia：cos 0.133 → 不同身份**
+- **char_tantai_yuwei_0730_01 ↔ char_jiang_yueyao：cos 0.131 → 不同身份**
+- **char_tantai_yuwei_0730_01 ↔ char_lin_qingwan：cos 0.027 → 不同身份**
+- **char_tantai_yuwei_0730_01 ↔ char_liu_yinuo_1923_10：cos 0.009 → 不同身份**
+- **char_tantai_yuwei_0730_01 ↔ char_luo_qingchuan_1805：cos 0.554 → ⚠️ 存疑，待人工复核**
+- **char_tantai_yuwei_0730_01 ↔ char_pei_yuhan_2300_01：cos 0.692 → 同一身份**
+- **char_tantai_yuwei_0730_01 ↔ char_qing_luo：cos 0.196 → 不同身份**
+- **char_tantai_yuwei_0730_01 ↔ char_ray_ling：cos 0.019 → 不同身份**
+- **char_tantai_yuwei_0730_01 ↔ char_runcha：cos 0.152 → 不同身份**
+- **char_tantai_yuwei_0730_01 ↔ char_shen_zhilan：cos -0.026 → 不同身份**
+- **char_tantai_yuwei_0730_01 ↔ char_su_xiaotang：cos -0.051 → 不同身份**
+- **char_tantai_yuwei_0730_01 ↔ char_tang_mengli_2200_01：cos 0.720 → 同一身份**
+- **char_tantai_yuwei_0730_01 ↔ char_wen_xiaorou_2140_01：cos 0.698 → 同一身份**
+- **char_tantai_yuwei_0730_01 ↔ char_ye_muchen_2100_01：cos 0.660 → 同一身份**
+- **char_tantai_yuwei_0730_01 ↔ char_yin_xinyue_2330_01：cos 0.715 → 同一身份**
+- **char_tantai_yuwei_0730_01 ↔ char_zhao_ruoxi：cos 0.052 → 不同身份**
+- **char_tantai_yuwei_0730_01 ↔ char_duo：cos 0.086 → 不同身份**
+- **char_tantai_yuwei_0730_01 ↔ char_duo3_2：cos 0.194 → 不同身份**
+- **char_tantai_yuwei_0730_01 ↔ char_cen_zhiwei_1936_01：cos 0.110 → 不同身份**
+- **char_tantai_yuwei_0730_01 ↔ char_jiang_ruoli_2007_01：cos -0.018 → 不同身份**
+- **char_tantai_yuwei_0730_01 ↔ char_xiaog3：cos 0.429 → ⚠️ 存疑，待人工复核**
+- **char_tantai_yuwei_0730_01 ↔ char_xi_manshu_2045_01：cos 0.093 → 不同身份**
+- **char_tantai_yuwei_0730_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.095 → 不同身份**
+- **char_tantai_yuwei_0730_01 ↔ char_linghu_zhixia_2133_01：cos 0.118 → 不同身份**
+- **char_tantai_yuwei_0730_01 ↔ char_qiao_weiyu_2134_01：cos -0.040 → 不同身份**
+- **char_tantai_yuwei_0730_01 ↔ char_jiang_qinghuan_2203_01：cos 0.157 → 不同身份**
+- **char_tantai_yuwei_0730_01 ↔ char_cen_youqing_2204_01：cos -0.086 → 不同身份**
+- **char_tantai_yuwei_0730_01 ↔ char_zhong_xiaorou_2233_01：cos 0.192 → 不同身份**
+- **char_tantai_yuwei_0730_01 ↔ char_tan_youqing_2234_01：cos 0.192 → 不同身份**
+- **char_tantai_yuwei_0730_01 ↔ char_tantai_lingsu_2303_01：cos 0.190 → 不同身份**
+- **char_tantai_yuwei_0730_01 ↔ char_qiao_qinghuan_2304_01：cos 0.190 → 不同身份**
+- **char_tantai_yuwei_0730_01 ↔ char_chu_muchen_0004_01：cos -0.049 → 不同身份**
+- **char_tantai_yuwei_0730_01 ↔ char_qiao_chaoyan_0004_01：cos -0.046 → 不同身份**
+- **char_tantai_yuwei_0730_01 ↔ char_xue_qinghuan_0034_01：cos 0.054 → 不同身份**
+- **char_tantai_yuwei_0730_01 ↔ char_tang_yuwei_0217_01：cos 0.141 → 不同身份**
+- **char_tantai_yuwei_0730_01 ↔ char_ouyang_chuxia_0250_01：cos 0.055 → 不同身份**
+- **char_tantai_yuwei_0730_01 ↔ char_bai_zhiruo_0305_01：cos 0.202 → 不同身份**
+- **char_tantai_yuwei_0730_01 ↔ char_pei_shanshan_0456_01：cos 0.222 → 不同身份**
+- **char_tantai_yuwei_0730_01 ↔ char_xi_qingchuan_0618_01：cos 0.171 → 不同身份**
+- **char_tantai_yuwei_0730_01 ↔ char_zhong_linger_0732_01：cos 0.072 → 不同身份**
+- **char_tantai_yuwei_0730_01 ↔ char_hua_qingdai_1029_01：cos 0.096 → 不同身份**
+- **char_tantai_yuwei_0730_01 ↔ char_tang_banxia_1156_01：cos 0.132 → 不同身份**
+- **char_tantai_yuwei_0730_01 ↔ char_gu_weiyu_1321_01：cos 0.120 → 不同身份**
+- **char_tantai_yuwei_0730_01 ↔ char_cheng_hongyu_1435_01：cos 0.049 → 不同身份**
+- **char_tantai_yuwei_0730_01 ↔ char_hua_chuxia_1549_01：cos -0.044 → 不同身份**
+- **char_tantai_yuwei_0730_01 ↔ char_pei_manshu_1701_01：cos 0.148 → 不同身份**
+- **char_tantai_yuwei_0730_01 ↔ char_ye_nanqiao_1811_01：cos 0.098 → 不同身份**
+- **char_tantai_yuwei_0730_01 ↔ char_murong_yuyan_1942_01：cos 0.246 → 不同身份**
+- **char_tantai_yuwei_0730_01 ↔ char_nangong_lingjun_2054_01：cos 0.049 → 不同身份**
+- **char_wen_manshu_1030_01 ↔ char_xi_weiyu_2134_01：cos 0.619 → 同一身份**
+- **char_wen_manshu_1030_01 ↔ char_xue_banxia_0330_01：cos 0.606 → 同一身份**
+- **char_wen_manshu_1030_01 ↔ char_ye_hongyu_0500_01：cos 0.628 → 同一身份**
+- **char_wen_manshu_1030_01 ↔ char_ye_linger_2004_01：cos 0.621 → 同一身份**
+- **char_wen_manshu_1030_01 ↔ char_ye_lingjun_0130_01：cos 0.536 → ⚠️ 存疑，待人工复核**
+- **char_wen_manshu_1030_01 ↔ char_ye_shanshan_0400_01：cos 0.542 → ⚠️ 存疑，待人工复核**
+- **char_wen_manshu_1030_01 ↔ char_ye_yuhan_1804_01：cos 0.573 → ⚠️ 存疑，待人工复核**
+- **char_wen_manshu_1030_01 ↔ char_yuchi_ruoli_1000_01：cos 0.566 → ⚠️ 存疑，待人工复核**
+- **char_wen_manshu_1030_01 ↔ char_yun_banxia_0030_01：cos 0.521 → ⚠️ 存疑，待人工复核**
+- **char_wen_manshu_1030_01 ↔ char_zhong_manshu_2104_01：cos 0.549 → ⚠️ 存疑，待人工复核**
+- **char_wen_manshu_1030_01 ↔ char_anya_song：cos 0.163 → 不同身份**
+- **char_wen_manshu_1030_01 ↔ char_ayano：cos 0.093 → 不同身份**
+- **char_wen_manshu_1030_01 ↔ char_chen_xiawei：cos 0.159 → 不同身份**
+- **char_wen_manshu_1030_01 ↔ char_jia：cos 0.168 → 不同身份**
+- **char_wen_manshu_1030_01 ↔ char_jiang_yueyao：cos 0.241 → 不同身份**
+- **char_wen_manshu_1030_01 ↔ char_lin_qingwan：cos 0.425 → ⚠️ 存疑，待人工复核**
+- **char_wen_manshu_1030_01 ↔ char_liu_yinuo_1923_10：cos -0.035 → 不同身份**
+- **char_wen_manshu_1030_01 ↔ char_luo_qingchuan_1805：cos 0.635 → 同一身份**
+- **char_wen_manshu_1030_01 ↔ char_pei_yuhan_2300_01：cos 0.489 → ⚠️ 存疑，待人工复核**
+- **char_wen_manshu_1030_01 ↔ char_qing_luo：cos 0.134 → 不同身份**
+- **char_wen_manshu_1030_01 ↔ char_ray_ling：cos 0.294 → 不同身份**
+- **char_wen_manshu_1030_01 ↔ char_runcha：cos 0.072 → 不同身份**
+- **char_wen_manshu_1030_01 ↔ char_shen_zhilan：cos 0.325 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_manshu_1030_01 ↔ char_su_xiaotang：cos 0.131 → 不同身份**
+- **char_wen_manshu_1030_01 ↔ char_tang_mengli_2200_01：cos 0.476 → ⚠️ 存疑，待人工复核**
+- **char_wen_manshu_1030_01 ↔ char_wen_xiaorou_2140_01：cos 0.514 → ⚠️ 存疑，待人工复核**
+- **char_wen_manshu_1030_01 ↔ char_ye_muchen_2100_01：cos 0.523 → ⚠️ 存疑，待人工复核**
+- **char_wen_manshu_1030_01 ↔ char_yin_xinyue_2330_01：cos 0.502 → ⚠️ 存疑，待人工复核**
+- **char_wen_manshu_1030_01 ↔ char_zhao_ruoxi：cos 0.348 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_manshu_1030_01 ↔ char_duo：cos 0.158 → 不同身份**
+- **char_wen_manshu_1030_01 ↔ char_duo3_2：cos 0.174 → 不同身份**
+- **char_wen_manshu_1030_01 ↔ char_cen_zhiwei_1936_01：cos 0.452 → ⚠️ 存疑，待人工复核**
+- **char_wen_manshu_1030_01 ↔ char_jiang_ruoli_2007_01：cos 0.351 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_manshu_1030_01 ↔ char_xiaog3：cos 0.041 → 不同身份**
+- **char_wen_manshu_1030_01 ↔ char_xi_manshu_2045_01：cos 0.353 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_manshu_1030_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.314 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_manshu_1030_01 ↔ char_linghu_zhixia_2133_01：cos 0.434 → ⚠️ 存疑，待人工复核**
+- **char_wen_manshu_1030_01 ↔ char_qiao_weiyu_2134_01：cos 0.350 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_manshu_1030_01 ↔ char_jiang_qinghuan_2203_01：cos 0.342 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_manshu_1030_01 ↔ char_cen_youqing_2204_01：cos 0.108 → 不同身份**
+- **char_wen_manshu_1030_01 ↔ char_zhong_xiaorou_2233_01：cos 0.330 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_manshu_1030_01 ↔ char_tan_youqing_2234_01：cos 0.330 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_manshu_1030_01 ↔ char_tantai_lingsu_2303_01：cos 0.442 → ⚠️ 存疑，待人工复核**
+- **char_wen_manshu_1030_01 ↔ char_qiao_qinghuan_2304_01：cos 0.442 → ⚠️ 存疑，待人工复核**
+- **char_wen_manshu_1030_01 ↔ char_chu_muchen_0004_01：cos 0.042 → 不同身份**
+- **char_wen_manshu_1030_01 ↔ char_qiao_chaoyan_0004_01：cos -0.077 → 不同身份**
+- **char_wen_manshu_1030_01 ↔ char_xue_qinghuan_0034_01：cos 0.009 → 不同身份**
+- **char_wen_manshu_1030_01 ↔ char_tang_yuwei_0217_01：cos 0.278 → 不同身份**
+- **char_wen_manshu_1030_01 ↔ char_ouyang_chuxia_0250_01：cos 0.307 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_manshu_1030_01 ↔ char_bai_zhiruo_0305_01：cos 0.428 → ⚠️ 存疑，待人工复核**
+- **char_wen_manshu_1030_01 ↔ char_pei_shanshan_0456_01：cos 0.460 → ⚠️ 存疑，待人工复核**
+- **char_wen_manshu_1030_01 ↔ char_xi_qingchuan_0618_01：cos 0.419 → ⚠️ 存疑，待人工复核**
+- **char_wen_manshu_1030_01 ↔ char_zhong_linger_0732_01：cos 0.415 → ⚠️ 存疑，待人工复核**
+- **char_wen_manshu_1030_01 ↔ char_hua_qingdai_1029_01：cos 0.426 → ⚠️ 存疑，待人工复核**
+- **char_wen_manshu_1030_01 ↔ char_tang_banxia_1156_01：cos 0.460 → ⚠️ 存疑，待人工复核**
+- **char_wen_manshu_1030_01 ↔ char_gu_weiyu_1321_01：cos 0.382 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_manshu_1030_01 ↔ char_cheng_hongyu_1435_01：cos 0.352 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_manshu_1030_01 ↔ char_hua_chuxia_1549_01：cos 0.361 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_manshu_1030_01 ↔ char_pei_manshu_1701_01：cos 0.390 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_manshu_1030_01 ↔ char_ye_nanqiao_1811_01：cos 0.389 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_manshu_1030_01 ↔ char_murong_yuyan_1942_01：cos 0.333 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_manshu_1030_01 ↔ char_nangong_lingjun_2054_01：cos 0.447 → ⚠️ 存疑，待人工复核**
+- **char_xi_weiyu_2134_01 ↔ char_xue_banxia_0330_01：cos 0.425 → ⚠️ 存疑，待人工复核**
+- **char_xi_weiyu_2134_01 ↔ char_ye_hongyu_0500_01：cos 0.497 → ⚠️ 存疑，待人工复核**
+- **char_xi_weiyu_2134_01 ↔ char_ye_linger_2004_01：cos 0.479 → ⚠️ 存疑，待人工复核**
+- **char_xi_weiyu_2134_01 ↔ char_ye_lingjun_0130_01：cos 0.421 → ⚠️ 存疑，待人工复核**
+- **char_xi_weiyu_2134_01 ↔ char_ye_shanshan_0400_01：cos 0.677 → 同一身份**
+- **char_xi_weiyu_2134_01 ↔ char_ye_yuhan_1804_01：cos 0.647 → 同一身份**
+- **char_xi_weiyu_2134_01 ↔ char_yuchi_ruoli_1000_01：cos 0.722 → 同一身份**
+- **char_xi_weiyu_2134_01 ↔ char_yun_banxia_0030_01：cos 0.466 → ⚠️ 存疑，待人工复核**
+- **char_xi_weiyu_2134_01 ↔ char_zhong_manshu_2104_01：cos 0.688 → 同一身份**
+- **char_xi_weiyu_2134_01 ↔ char_anya_song：cos 0.161 → 不同身份**
+- **char_xi_weiyu_2134_01 ↔ char_ayano：cos 0.109 → 不同身份**
+- **char_xi_weiyu_2134_01 ↔ char_chen_xiawei：cos 0.197 → 不同身份**
+- **char_xi_weiyu_2134_01 ↔ char_jia：cos 0.092 → 不同身份**
+- **char_xi_weiyu_2134_01 ↔ char_jiang_yueyao：cos 0.300 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xi_weiyu_2134_01 ↔ char_lin_qingwan：cos 0.304 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xi_weiyu_2134_01 ↔ char_liu_yinuo_1923_10：cos -0.025 → 不同身份**
+- **char_xi_weiyu_2134_01 ↔ char_luo_qingchuan_1805：cos 0.657 → 同一身份**
+- **char_xi_weiyu_2134_01 ↔ char_pei_yuhan_2300_01：cos 0.665 → 同一身份**
+- **char_xi_weiyu_2134_01 ↔ char_qing_luo：cos 0.292 → 不同身份**
+- **char_xi_weiyu_2134_01 ↔ char_ray_ling：cos 0.133 → 不同身份**
+- **char_xi_weiyu_2134_01 ↔ char_runcha：cos -0.002 → 不同身份**
+- **char_xi_weiyu_2134_01 ↔ char_shen_zhilan：cos 0.173 → 不同身份**
+- **char_xi_weiyu_2134_01 ↔ char_su_xiaotang：cos 0.091 → 不同身份**
+- **char_xi_weiyu_2134_01 ↔ char_tang_mengli_2200_01：cos 0.635 → 同一身份**
+- **char_xi_weiyu_2134_01 ↔ char_wen_xiaorou_2140_01：cos 0.634 → 同一身份**
+- **char_xi_weiyu_2134_01 ↔ char_ye_muchen_2100_01：cos 0.708 → 同一身份**
+- **char_xi_weiyu_2134_01 ↔ char_yin_xinyue_2330_01：cos 0.637 → 同一身份**
+- **char_xi_weiyu_2134_01 ↔ char_zhao_ruoxi：cos 0.235 → 不同身份**
+- **char_xi_weiyu_2134_01 ↔ char_duo：cos 0.108 → 不同身份**
+- **char_xi_weiyu_2134_01 ↔ char_duo3_2：cos 0.132 → 不同身份**
+- **char_xi_weiyu_2134_01 ↔ char_cen_zhiwei_1936_01：cos 0.290 → 不同身份**
+- **char_xi_weiyu_2134_01 ↔ char_jiang_ruoli_2007_01：cos 0.227 → 不同身份**
+- **char_xi_weiyu_2134_01 ↔ char_xiaog3：cos 0.174 → 不同身份**
+- **char_xi_weiyu_2134_01 ↔ char_xi_manshu_2045_01：cos 0.310 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xi_weiyu_2134_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.237 → 不同身份**
+- **char_xi_weiyu_2134_01 ↔ char_linghu_zhixia_2133_01：cos 0.316 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xi_weiyu_2134_01 ↔ char_qiao_weiyu_2134_01：cos 0.180 → 不同身份**
+- **char_xi_weiyu_2134_01 ↔ char_jiang_qinghuan_2203_01：cos 0.517 → ⚠️ 存疑，待人工复核**
+- **char_xi_weiyu_2134_01 ↔ char_cen_youqing_2204_01：cos 0.084 → 不同身份**
+- **char_xi_weiyu_2134_01 ↔ char_zhong_xiaorou_2233_01：cos 0.324 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xi_weiyu_2134_01 ↔ char_tan_youqing_2234_01：cos 0.324 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xi_weiyu_2134_01 ↔ char_tantai_lingsu_2303_01：cos 0.386 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xi_weiyu_2134_01 ↔ char_qiao_qinghuan_2304_01：cos 0.386 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xi_weiyu_2134_01 ↔ char_chu_muchen_0004_01：cos 0.015 → 不同身份**
+- **char_xi_weiyu_2134_01 ↔ char_qiao_chaoyan_0004_01：cos -0.039 → 不同身份**
+- **char_xi_weiyu_2134_01 ↔ char_xue_qinghuan_0034_01：cos 0.004 → 不同身份**
+- **char_xi_weiyu_2134_01 ↔ char_tang_yuwei_0217_01：cos 0.282 → 不同身份**
+- **char_xi_weiyu_2134_01 ↔ char_ouyang_chuxia_0250_01：cos 0.344 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xi_weiyu_2134_01 ↔ char_bai_zhiruo_0305_01：cos 0.359 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xi_weiyu_2134_01 ↔ char_pei_shanshan_0456_01：cos 0.513 → ⚠️ 存疑，待人工复核**
+- **char_xi_weiyu_2134_01 ↔ char_xi_qingchuan_0618_01：cos 0.495 → ⚠️ 存疑，待人工复核**
+- **char_xi_weiyu_2134_01 ↔ char_zhong_linger_0732_01：cos 0.313 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xi_weiyu_2134_01 ↔ char_hua_qingdai_1029_01：cos 0.339 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xi_weiyu_2134_01 ↔ char_tang_banxia_1156_01：cos 0.426 → ⚠️ 存疑，待人工复核**
+- **char_xi_weiyu_2134_01 ↔ char_gu_weiyu_1321_01：cos 0.323 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xi_weiyu_2134_01 ↔ char_cheng_hongyu_1435_01：cos 0.298 → 不同身份**
+- **char_xi_weiyu_2134_01 ↔ char_hua_chuxia_1549_01：cos 0.240 → 不同身份**
+- **char_xi_weiyu_2134_01 ↔ char_pei_manshu_1701_01：cos 0.337 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xi_weiyu_2134_01 ↔ char_ye_nanqiao_1811_01：cos 0.355 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xi_weiyu_2134_01 ↔ char_murong_yuyan_1942_01：cos 0.463 → ⚠️ 存疑，待人工复核**
+- **char_xi_weiyu_2134_01 ↔ char_nangong_lingjun_2054_01：cos 0.246 → 不同身份**
+- **char_xue_banxia_0330_01 ↔ char_ye_hongyu_0500_01：cos 0.760 → 同一身份**
+- **char_xue_banxia_0330_01 ↔ char_ye_linger_2004_01：cos 0.793 → 同一身份**
+- **char_xue_banxia_0330_01 ↔ char_ye_lingjun_0130_01：cos 0.760 → 同一身份**
+- **char_xue_banxia_0330_01 ↔ char_ye_shanshan_0400_01：cos 0.489 → ⚠️ 存疑，待人工复核**
+- **char_xue_banxia_0330_01 ↔ char_ye_yuhan_1804_01：cos 0.572 → ⚠️ 存疑，待人工复核**
+- **char_xue_banxia_0330_01 ↔ char_yuchi_ruoli_1000_01：cos 0.465 → ⚠️ 存疑，待人工复核**
+- **char_xue_banxia_0330_01 ↔ char_yun_banxia_0030_01：cos 0.398 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_banxia_0330_01 ↔ char_zhong_manshu_2104_01：cos 0.416 → ⚠️ 存疑，待人工复核**
+- **char_xue_banxia_0330_01 ↔ char_anya_song：cos 0.127 → 不同身份**
+- **char_xue_banxia_0330_01 ↔ char_ayano：cos 0.095 → 不同身份**
+- **char_xue_banxia_0330_01 ↔ char_chen_xiawei：cos 0.014 → 不同身份**
+- **char_xue_banxia_0330_01 ↔ char_jia：cos 0.077 → 不同身份**
+- **char_xue_banxia_0330_01 ↔ char_jiang_yueyao：cos 0.028 → 不同身份**
+- **char_xue_banxia_0330_01 ↔ char_lin_qingwan：cos 0.191 → 不同身份**
+- **char_xue_banxia_0330_01 ↔ char_liu_yinuo_1923_10：cos -0.033 → 不同身份**
+- **char_xue_banxia_0330_01 ↔ char_luo_qingchuan_1805：cos 0.614 → 同一身份**
+- **char_xue_banxia_0330_01 ↔ char_pei_yuhan_2300_01：cos 0.433 → ⚠️ 存疑，待人工复核**
+- **char_xue_banxia_0330_01 ↔ char_qing_luo：cos 0.033 → 不同身份**
+- **char_xue_banxia_0330_01 ↔ char_ray_ling：cos 0.315 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_banxia_0330_01 ↔ char_runcha：cos 0.067 → 不同身份**
+- **char_xue_banxia_0330_01 ↔ char_shen_zhilan：cos 0.252 → 不同身份**
+- **char_xue_banxia_0330_01 ↔ char_su_xiaotang：cos 0.063 → 不同身份**
+- **char_xue_banxia_0330_01 ↔ char_tang_mengli_2200_01：cos 0.398 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_banxia_0330_01 ↔ char_wen_xiaorou_2140_01：cos 0.494 → ⚠️ 存疑，待人工复核**
+- **char_xue_banxia_0330_01 ↔ char_ye_muchen_2100_01：cos 0.419 → ⚠️ 存疑，待人工复核**
+- **char_xue_banxia_0330_01 ↔ char_yin_xinyue_2330_01：cos 0.449 → ⚠️ 存疑，待人工复核**
+- **char_xue_banxia_0330_01 ↔ char_zhao_ruoxi：cos 0.153 → 不同身份**
+- **char_xue_banxia_0330_01 ↔ char_duo：cos 0.230 → 不同身份**
+- **char_xue_banxia_0330_01 ↔ char_duo3_2：cos 0.150 → 不同身份**
+- **char_xue_banxia_0330_01 ↔ char_cen_zhiwei_1936_01：cos 0.441 → ⚠️ 存疑，待人工复核**
+- **char_xue_banxia_0330_01 ↔ char_jiang_ruoli_2007_01：cos 0.276 → 不同身份**
+- **char_xue_banxia_0330_01 ↔ char_xiaog3：cos 0.025 → 不同身份**
+- **char_xue_banxia_0330_01 ↔ char_xi_manshu_2045_01：cos 0.206 → 不同身份**
+- **char_xue_banxia_0330_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.362 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_banxia_0330_01 ↔ char_linghu_zhixia_2133_01：cos 0.366 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_banxia_0330_01 ↔ char_qiao_weiyu_2134_01：cos 0.200 → 不同身份**
+- **char_xue_banxia_0330_01 ↔ char_jiang_qinghuan_2203_01：cos 0.168 → 不同身份**
+- **char_xue_banxia_0330_01 ↔ char_cen_youqing_2204_01：cos 0.079 → 不同身份**
+- **char_xue_banxia_0330_01 ↔ char_zhong_xiaorou_2233_01：cos 0.172 → 不同身份**
+- **char_xue_banxia_0330_01 ↔ char_tan_youqing_2234_01：cos 0.172 → 不同身份**
+- **char_xue_banxia_0330_01 ↔ char_tantai_lingsu_2303_01：cos 0.298 → 不同身份**
+- **char_xue_banxia_0330_01 ↔ char_qiao_qinghuan_2304_01：cos 0.298 → 不同身份**
+- **char_xue_banxia_0330_01 ↔ char_chu_muchen_0004_01：cos 0.048 → 不同身份**
+- **char_xue_banxia_0330_01 ↔ char_qiao_chaoyan_0004_01：cos -0.117 → 不同身份**
+- **char_xue_banxia_0330_01 ↔ char_xue_qinghuan_0034_01：cos 0.014 → 不同身份**
+- **char_xue_banxia_0330_01 ↔ char_tang_yuwei_0217_01：cos 0.101 → 不同身份**
+- **char_xue_banxia_0330_01 ↔ char_ouyang_chuxia_0250_01：cos 0.104 → 不同身份**
+- **char_xue_banxia_0330_01 ↔ char_bai_zhiruo_0305_01：cos 0.285 → 不同身份**
+- **char_xue_banxia_0330_01 ↔ char_pei_shanshan_0456_01：cos 0.244 → 不同身份**
+- **char_xue_banxia_0330_01 ↔ char_xi_qingchuan_0618_01：cos 0.197 → 不同身份**
+- **char_xue_banxia_0330_01 ↔ char_zhong_linger_0732_01：cos 0.308 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_banxia_0330_01 ↔ char_hua_qingdai_1029_01：cos 0.239 → 不同身份**
+- **char_xue_banxia_0330_01 ↔ char_tang_banxia_1156_01：cos 0.366 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xue_banxia_0330_01 ↔ char_gu_weiyu_1321_01：cos 0.204 → 不同身份**
+- **char_xue_banxia_0330_01 ↔ char_cheng_hongyu_1435_01：cos 0.152 → 不同身份**
+- **char_xue_banxia_0330_01 ↔ char_hua_chuxia_1549_01：cos 0.204 → 不同身份**
+- **char_xue_banxia_0330_01 ↔ char_pei_manshu_1701_01：cos 0.202 → 不同身份**
+- **char_xue_banxia_0330_01 ↔ char_ye_nanqiao_1811_01：cos 0.173 → 不同身份**
+- **char_xue_banxia_0330_01 ↔ char_murong_yuyan_1942_01：cos 0.172 → 不同身份**
+- **char_xue_banxia_0330_01 ↔ char_nangong_lingjun_2054_01：cos 0.366 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ye_hongyu_0500_01 ↔ char_ye_linger_2004_01：cos 0.791 → 同一身份**
+- **char_ye_hongyu_0500_01 ↔ char_ye_lingjun_0130_01：cos 0.699 → 同一身份**
+- **char_ye_hongyu_0500_01 ↔ char_ye_shanshan_0400_01：cos 0.518 → ⚠️ 存疑，待人工复核**
+- **char_ye_hongyu_0500_01 ↔ char_ye_yuhan_1804_01：cos 0.616 → 同一身份**
+- **char_ye_hongyu_0500_01 ↔ char_yuchi_ruoli_1000_01：cos 0.519 → ⚠️ 存疑，待人工复核**
+- **char_ye_hongyu_0500_01 ↔ char_yun_banxia_0030_01：cos 0.446 → ⚠️ 存疑，待人工复核**
+- **char_ye_hongyu_0500_01 ↔ char_zhong_manshu_2104_01：cos 0.478 → ⚠️ 存疑，待人工复核**
+- **char_ye_hongyu_0500_01 ↔ char_anya_song：cos 0.131 → 不同身份**
+- **char_ye_hongyu_0500_01 ↔ char_ayano：cos -0.008 → 不同身份**
+- **char_ye_hongyu_0500_01 ↔ char_chen_xiawei：cos 0.047 → 不同身份**
+- **char_ye_hongyu_0500_01 ↔ char_jia：cos -0.001 → 不同身份**
+- **char_ye_hongyu_0500_01 ↔ char_jiang_yueyao：cos 0.098 → 不同身份**
+- **char_ye_hongyu_0500_01 ↔ char_lin_qingwan：cos 0.205 → 不同身份**
+- **char_ye_hongyu_0500_01 ↔ char_liu_yinuo_1923_10：cos -0.038 → 不同身份**
+- **char_ye_hongyu_0500_01 ↔ char_luo_qingchuan_1805：cos 0.597 → ⚠️ 存疑，待人工复核**
+- **char_ye_hongyu_0500_01 ↔ char_pei_yuhan_2300_01：cos 0.406 → ⚠️ 存疑，待人工复核**
+- **char_ye_hongyu_0500_01 ↔ char_qing_luo：cos 0.040 → 不同身份**
+- **char_ye_hongyu_0500_01 ↔ char_ray_ling：cos 0.362 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ye_hongyu_0500_01 ↔ char_runcha：cos -0.008 → 不同身份**
+- **char_ye_hongyu_0500_01 ↔ char_shen_zhilan：cos 0.326 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ye_hongyu_0500_01 ↔ char_su_xiaotang：cos 0.071 → 不同身份**
+- **char_ye_hongyu_0500_01 ↔ char_tang_mengli_2200_01：cos 0.440 → ⚠️ 存疑，待人工复核**
+- **char_ye_hongyu_0500_01 ↔ char_wen_xiaorou_2140_01：cos 0.479 → ⚠️ 存疑，待人工复核**
+- **char_ye_hongyu_0500_01 ↔ char_ye_muchen_2100_01：cos 0.458 → ⚠️ 存疑，待人工复核**
+- **char_ye_hongyu_0500_01 ↔ char_yin_xinyue_2330_01：cos 0.426 → ⚠️ 存疑，待人工复核**
+- **char_ye_hongyu_0500_01 ↔ char_zhao_ruoxi：cos 0.178 → 不同身份**
+- **char_ye_hongyu_0500_01 ↔ char_duo：cos 0.140 → 不同身份**
+- **char_ye_hongyu_0500_01 ↔ char_duo3_2：cos 0.134 → 不同身份**
+- **char_ye_hongyu_0500_01 ↔ char_cen_zhiwei_1936_01：cos 0.470 → ⚠️ 存疑，待人工复核**
+- **char_ye_hongyu_0500_01 ↔ char_jiang_ruoli_2007_01：cos 0.345 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ye_hongyu_0500_01 ↔ char_xiaog3：cos 0.045 → 不同身份**
+- **char_ye_hongyu_0500_01 ↔ char_xi_manshu_2045_01：cos 0.187 → 不同身份**
+- **char_ye_hongyu_0500_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.408 → ⚠️ 存疑，待人工复核**
+- **char_ye_hongyu_0500_01 ↔ char_linghu_zhixia_2133_01：cos 0.416 → ⚠️ 存疑，待人工复核**
+- **char_ye_hongyu_0500_01 ↔ char_qiao_weiyu_2134_01：cos 0.261 → 不同身份**
+- **char_ye_hongyu_0500_01 ↔ char_jiang_qinghuan_2203_01：cos 0.177 → 不同身份**
+- **char_ye_hongyu_0500_01 ↔ char_cen_youqing_2204_01：cos 0.026 → 不同身份**
+- **char_ye_hongyu_0500_01 ↔ char_zhong_xiaorou_2233_01：cos 0.212 → 不同身份**
+- **char_ye_hongyu_0500_01 ↔ char_tan_youqing_2234_01：cos 0.212 → 不同身份**
+- **char_ye_hongyu_0500_01 ↔ char_tantai_lingsu_2303_01：cos 0.333 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ye_hongyu_0500_01 ↔ char_qiao_qinghuan_2304_01：cos 0.333 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ye_hongyu_0500_01 ↔ char_chu_muchen_0004_01：cos 0.034 → 不同身份**
+- **char_ye_hongyu_0500_01 ↔ char_qiao_chaoyan_0004_01：cos -0.067 → 不同身份**
+- **char_ye_hongyu_0500_01 ↔ char_xue_qinghuan_0034_01：cos -0.016 → 不同身份**
+- **char_ye_hongyu_0500_01 ↔ char_tang_yuwei_0217_01：cos 0.084 → 不同身份**
+- **char_ye_hongyu_0500_01 ↔ char_ouyang_chuxia_0250_01：cos 0.140 → 不同身份**
+- **char_ye_hongyu_0500_01 ↔ char_bai_zhiruo_0305_01：cos 0.303 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ye_hongyu_0500_01 ↔ char_pei_shanshan_0456_01：cos 0.237 → 不同身份**
+- **char_ye_hongyu_0500_01 ↔ char_xi_qingchuan_0618_01：cos 0.243 → 不同身份**
+- **char_ye_hongyu_0500_01 ↔ char_zhong_linger_0732_01：cos 0.337 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ye_hongyu_0500_01 ↔ char_hua_qingdai_1029_01：cos 0.289 → 不同身份**
+- **char_ye_hongyu_0500_01 ↔ char_tang_banxia_1156_01：cos 0.346 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ye_hongyu_0500_01 ↔ char_gu_weiyu_1321_01：cos 0.236 → 不同身份**
+- **char_ye_hongyu_0500_01 ↔ char_cheng_hongyu_1435_01：cos 0.217 → 不同身份**
+- **char_ye_hongyu_0500_01 ↔ char_hua_chuxia_1549_01：cos 0.221 → 不同身份**
+- **char_ye_hongyu_0500_01 ↔ char_pei_manshu_1701_01：cos 0.274 → 不同身份**
+- **char_ye_hongyu_0500_01 ↔ char_ye_nanqiao_1811_01：cos 0.193 → 不同身份**
+- **char_ye_hongyu_0500_01 ↔ char_murong_yuyan_1942_01：cos 0.183 → 不同身份**
+- **char_ye_hongyu_0500_01 ↔ char_nangong_lingjun_2054_01：cos 0.375 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ye_linger_2004_01 ↔ char_ye_lingjun_0130_01：cos 0.810 → 同一身份**
+- **char_ye_linger_2004_01 ↔ char_ye_shanshan_0400_01：cos 0.551 → ⚠️ 存疑，待人工复核**
+- **char_ye_linger_2004_01 ↔ char_ye_yuhan_1804_01：cos 0.593 → ⚠️ 存疑，待人工复核**
+- **char_ye_linger_2004_01 ↔ char_yuchi_ruoli_1000_01：cos 0.554 → ⚠️ 存疑，待人工复核**
+- **char_ye_linger_2004_01 ↔ char_yun_banxia_0030_01：cos 0.425 → ⚠️ 存疑，待人工复核**
+- **char_ye_linger_2004_01 ↔ char_zhong_manshu_2104_01：cos 0.512 → ⚠️ 存疑，待人工复核**
+- **char_ye_linger_2004_01 ↔ char_anya_song：cos 0.170 → 不同身份**
+- **char_ye_linger_2004_01 ↔ char_ayano：cos 0.080 → 不同身份**
+- **char_ye_linger_2004_01 ↔ char_chen_xiawei：cos -0.007 → 不同身份**
+- **char_ye_linger_2004_01 ↔ char_jia：cos -0.024 → 不同身份**
+- **char_ye_linger_2004_01 ↔ char_jiang_yueyao：cos 0.101 → 不同身份**
+- **char_ye_linger_2004_01 ↔ char_lin_qingwan：cos 0.202 → 不同身份**
+- **char_ye_linger_2004_01 ↔ char_liu_yinuo_1923_10：cos -0.041 → 不同身份**
+- **char_ye_linger_2004_01 ↔ char_luo_qingchuan_1805：cos 0.620 → 同一身份**
+- **char_ye_linger_2004_01 ↔ char_pei_yuhan_2300_01：cos 0.460 → ⚠️ 存疑，待人工复核**
+- **char_ye_linger_2004_01 ↔ char_qing_luo：cos 0.030 → 不同身份**
+- **char_ye_linger_2004_01 ↔ char_ray_ling：cos 0.366 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ye_linger_2004_01 ↔ char_runcha：cos -0.040 → 不同身份**
+- **char_ye_linger_2004_01 ↔ char_shen_zhilan：cos 0.237 → 不同身份**
+- **char_ye_linger_2004_01 ↔ char_su_xiaotang：cos 0.086 → 不同身份**
+- **char_ye_linger_2004_01 ↔ char_tang_mengli_2200_01：cos 0.499 → ⚠️ 存疑，待人工复核**
+- **char_ye_linger_2004_01 ↔ char_wen_xiaorou_2140_01：cos 0.530 → ⚠️ 存疑，待人工复核**
+- **char_ye_linger_2004_01 ↔ char_ye_muchen_2100_01：cos 0.499 → ⚠️ 存疑，待人工复核**
+- **char_ye_linger_2004_01 ↔ char_yin_xinyue_2330_01：cos 0.516 → ⚠️ 存疑，待人工复核**
+- **char_ye_linger_2004_01 ↔ char_zhao_ruoxi：cos 0.165 → 不同身份**
+- **char_ye_linger_2004_01 ↔ char_duo：cos 0.128 → 不同身份**
+- **char_ye_linger_2004_01 ↔ char_duo3_2：cos 0.092 → 不同身份**
+- **char_ye_linger_2004_01 ↔ char_cen_zhiwei_1936_01：cos 0.474 → ⚠️ 存疑，待人工复核**
+- **char_ye_linger_2004_01 ↔ char_jiang_ruoli_2007_01：cos 0.284 → 不同身份**
+- **char_ye_linger_2004_01 ↔ char_xiaog3：cos 0.082 → 不同身份**
+- **char_ye_linger_2004_01 ↔ char_xi_manshu_2045_01：cos 0.216 → 不同身份**
+- **char_ye_linger_2004_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.431 → ⚠️ 存疑，待人工复核**
+- **char_ye_linger_2004_01 ↔ char_linghu_zhixia_2133_01：cos 0.453 → ⚠️ 存疑，待人工复核**
+- **char_ye_linger_2004_01 ↔ char_qiao_weiyu_2134_01：cos 0.235 → 不同身份**
+- **char_ye_linger_2004_01 ↔ char_jiang_qinghuan_2203_01：cos 0.213 → 不同身份**
+- **char_ye_linger_2004_01 ↔ char_cen_youqing_2204_01：cos 0.045 → 不同身份**
+- **char_ye_linger_2004_01 ↔ char_zhong_xiaorou_2233_01：cos 0.220 → 不同身份**
+- **char_ye_linger_2004_01 ↔ char_tan_youqing_2234_01：cos 0.220 → 不同身份**
+- **char_ye_linger_2004_01 ↔ char_tantai_lingsu_2303_01：cos 0.268 → 不同身份**
+- **char_ye_linger_2004_01 ↔ char_qiao_qinghuan_2304_01：cos 0.268 → 不同身份**
+- **char_ye_linger_2004_01 ↔ char_chu_muchen_0004_01：cos 0.042 → 不同身份**
+- **char_ye_linger_2004_01 ↔ char_qiao_chaoyan_0004_01：cos -0.072 → 不同身份**
+- **char_ye_linger_2004_01 ↔ char_xue_qinghuan_0034_01：cos 0.003 → 不同身份**
+- **char_ye_linger_2004_01 ↔ char_tang_yuwei_0217_01：cos 0.125 → 不同身份**
+- **char_ye_linger_2004_01 ↔ char_ouyang_chuxia_0250_01：cos 0.080 → 不同身份**
+- **char_ye_linger_2004_01 ↔ char_bai_zhiruo_0305_01：cos 0.348 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ye_linger_2004_01 ↔ char_pei_shanshan_0456_01：cos 0.236 → 不同身份**
+- **char_ye_linger_2004_01 ↔ char_xi_qingchuan_0618_01：cos 0.236 → 不同身份**
+- **char_ye_linger_2004_01 ↔ char_zhong_linger_0732_01：cos 0.297 → 不同身份**
+- **char_ye_linger_2004_01 ↔ char_hua_qingdai_1029_01：cos 0.288 → 不同身份**
+- **char_ye_linger_2004_01 ↔ char_tang_banxia_1156_01：cos 0.292 → 不同身份**
+- **char_ye_linger_2004_01 ↔ char_gu_weiyu_1321_01：cos 0.190 → 不同身份**
+- **char_ye_linger_2004_01 ↔ char_cheng_hongyu_1435_01：cos 0.151 → 不同身份**
+- **char_ye_linger_2004_01 ↔ char_hua_chuxia_1549_01：cos 0.155 → 不同身份**
+- **char_ye_linger_2004_01 ↔ char_pei_manshu_1701_01：cos 0.239 → 不同身份**
+- **char_ye_linger_2004_01 ↔ char_ye_nanqiao_1811_01：cos 0.154 → 不同身份**
+- **char_ye_linger_2004_01 ↔ char_murong_yuyan_1942_01：cos 0.106 → 不同身份**
+- **char_ye_linger_2004_01 ↔ char_nangong_lingjun_2054_01：cos 0.365 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ye_lingjun_0130_01 ↔ char_ye_shanshan_0400_01：cos 0.537 → ⚠️ 存疑，待人工复核**
+- **char_ye_lingjun_0130_01 ↔ char_ye_yuhan_1804_01：cos 0.596 → ⚠️ 存疑，待人工复核**
+- **char_ye_lingjun_0130_01 ↔ char_yuchi_ruoli_1000_01：cos 0.477 → ⚠️ 存疑，待人工复核**
+- **char_ye_lingjun_0130_01 ↔ char_yun_banxia_0030_01：cos 0.389 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ye_lingjun_0130_01 ↔ char_zhong_manshu_2104_01：cos 0.472 → ⚠️ 存疑，待人工复核**
+- **char_ye_lingjun_0130_01 ↔ char_anya_song：cos 0.152 → 不同身份**
+- **char_ye_lingjun_0130_01 ↔ char_ayano：cos 0.046 → 不同身份**
+- **char_ye_lingjun_0130_01 ↔ char_chen_xiawei：cos 0.045 → 不同身份**
+- **char_ye_lingjun_0130_01 ↔ char_jia：cos 0.011 → 不同身份**
+- **char_ye_lingjun_0130_01 ↔ char_jiang_yueyao：cos 0.092 → 不同身份**
+- **char_ye_lingjun_0130_01 ↔ char_lin_qingwan：cos 0.213 → 不同身份**
+- **char_ye_lingjun_0130_01 ↔ char_liu_yinuo_1923_10：cos -0.057 → 不同身份**
+- **char_ye_lingjun_0130_01 ↔ char_luo_qingchuan_1805：cos 0.614 → 同一身份**
+- **char_ye_lingjun_0130_01 ↔ char_pei_yuhan_2300_01：cos 0.494 → ⚠️ 存疑，待人工复核**
+- **char_ye_lingjun_0130_01 ↔ char_qing_luo：cos 0.072 → 不同身份**
+- **char_ye_lingjun_0130_01 ↔ char_ray_ling：cos 0.291 → 不同身份**
+- **char_ye_lingjun_0130_01 ↔ char_runcha：cos -0.048 → 不同身份**
+- **char_ye_lingjun_0130_01 ↔ char_shen_zhilan：cos 0.210 → 不同身份**
+- **char_ye_lingjun_0130_01 ↔ char_su_xiaotang：cos 0.098 → 不同身份**
+- **char_ye_lingjun_0130_01 ↔ char_tang_mengli_2200_01：cos 0.475 → ⚠️ 存疑，待人工复核**
+- **char_ye_lingjun_0130_01 ↔ char_wen_xiaorou_2140_01：cos 0.528 → ⚠️ 存疑，待人工复核**
+- **char_ye_lingjun_0130_01 ↔ char_ye_muchen_2100_01：cos 0.486 → ⚠️ 存疑，待人工复核**
+- **char_ye_lingjun_0130_01 ↔ char_yin_xinyue_2330_01：cos 0.515 → ⚠️ 存疑，待人工复核**
+- **char_ye_lingjun_0130_01 ↔ char_zhao_ruoxi：cos 0.144 → 不同身份**
+- **char_ye_lingjun_0130_01 ↔ char_duo：cos 0.169 → 不同身份**
+- **char_ye_lingjun_0130_01 ↔ char_duo3_2：cos 0.108 → 不同身份**
+- **char_ye_lingjun_0130_01 ↔ char_cen_zhiwei_1936_01：cos 0.354 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ye_lingjun_0130_01 ↔ char_jiang_ruoli_2007_01：cos 0.247 → 不同身份**
+- **char_ye_lingjun_0130_01 ↔ char_xiaog3：cos 0.128 → 不同身份**
+- **char_ye_lingjun_0130_01 ↔ char_xi_manshu_2045_01：cos 0.146 → 不同身份**
+- **char_ye_lingjun_0130_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.432 → ⚠️ 存疑，待人工复核**
+- **char_ye_lingjun_0130_01 ↔ char_linghu_zhixia_2133_01：cos 0.414 → ⚠️ 存疑，待人工复核**
+- **char_ye_lingjun_0130_01 ↔ char_qiao_weiyu_2134_01：cos 0.183 → 不同身份**
+- **char_ye_lingjun_0130_01 ↔ char_jiang_qinghuan_2203_01：cos 0.107 → 不同身份**
+- **char_ye_lingjun_0130_01 ↔ char_cen_youqing_2204_01：cos 0.032 → 不同身份**
+- **char_ye_lingjun_0130_01 ↔ char_zhong_xiaorou_2233_01：cos 0.185 → 不同身份**
+- **char_ye_lingjun_0130_01 ↔ char_tan_youqing_2234_01：cos 0.185 → 不同身份**
+- **char_ye_lingjun_0130_01 ↔ char_tantai_lingsu_2303_01：cos 0.285 → 不同身份**
+- **char_ye_lingjun_0130_01 ↔ char_qiao_qinghuan_2304_01：cos 0.285 → 不同身份**
+- **char_ye_lingjun_0130_01 ↔ char_chu_muchen_0004_01：cos 0.031 → 不同身份**
+- **char_ye_lingjun_0130_01 ↔ char_qiao_chaoyan_0004_01：cos -0.082 → 不同身份**
+- **char_ye_lingjun_0130_01 ↔ char_xue_qinghuan_0034_01：cos 0.018 → 不同身份**
+- **char_ye_lingjun_0130_01 ↔ char_tang_yuwei_0217_01：cos 0.146 → 不同身份**
+- **char_ye_lingjun_0130_01 ↔ char_ouyang_chuxia_0250_01：cos 0.066 → 不同身份**
+- **char_ye_lingjun_0130_01 ↔ char_bai_zhiruo_0305_01：cos 0.302 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ye_lingjun_0130_01 ↔ char_pei_shanshan_0456_01：cos 0.184 → 不同身份**
+- **char_ye_lingjun_0130_01 ↔ char_xi_qingchuan_0618_01：cos 0.129 → 不同身份**
+- **char_ye_lingjun_0130_01 ↔ char_zhong_linger_0732_01：cos 0.272 → 不同身份**
+- **char_ye_lingjun_0130_01 ↔ char_hua_qingdai_1029_01：cos 0.205 → 不同身份**
+- **char_ye_lingjun_0130_01 ↔ char_tang_banxia_1156_01：cos 0.285 → 不同身份**
+- **char_ye_lingjun_0130_01 ↔ char_gu_weiyu_1321_01：cos 0.126 → 不同身份**
+- **char_ye_lingjun_0130_01 ↔ char_cheng_hongyu_1435_01：cos 0.105 → 不同身份**
+- **char_ye_lingjun_0130_01 ↔ char_hua_chuxia_1549_01：cos 0.116 → 不同身份**
+- **char_ye_lingjun_0130_01 ↔ char_pei_manshu_1701_01：cos 0.200 → 不同身份**
+- **char_ye_lingjun_0130_01 ↔ char_ye_nanqiao_1811_01：cos 0.099 → 不同身份**
+- **char_ye_lingjun_0130_01 ↔ char_murong_yuyan_1942_01：cos 0.079 → 不同身份**
+- **char_ye_lingjun_0130_01 ↔ char_nangong_lingjun_2054_01：cos 0.309 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ye_shanshan_0400_01 ↔ char_ye_yuhan_1804_01：cos 0.554 → ⚠️ 存疑，待人工复核**
+- **char_ye_shanshan_0400_01 ↔ char_yuchi_ruoli_1000_01：cos 0.600 → ⚠️ 存疑，待人工复核**
+- **char_ye_shanshan_0400_01 ↔ char_yun_banxia_0030_01：cos 0.349 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ye_shanshan_0400_01 ↔ char_zhong_manshu_2104_01：cos 0.635 → 同一身份**
+- **char_ye_shanshan_0400_01 ↔ char_anya_song：cos 0.176 → 不同身份**
+- **char_ye_shanshan_0400_01 ↔ char_ayano：cos 0.170 → 不同身份**
+- **char_ye_shanshan_0400_01 ↔ char_chen_xiawei：cos 0.117 → 不同身份**
+- **char_ye_shanshan_0400_01 ↔ char_jia：cos 0.167 → 不同身份**
+- **char_ye_shanshan_0400_01 ↔ char_jiang_yueyao：cos 0.160 → 不同身份**
+- **char_ye_shanshan_0400_01 ↔ char_lin_qingwan：cos 0.190 → 不同身份**
+- **char_ye_shanshan_0400_01 ↔ char_liu_yinuo_1923_10：cos -0.026 → 不同身份**
+- **char_ye_shanshan_0400_01 ↔ char_luo_qingchuan_1805：cos 0.644 → 同一身份**
+- **char_ye_shanshan_0400_01 ↔ char_pei_yuhan_2300_01：cos 0.631 → 同一身份**
+- **char_ye_shanshan_0400_01 ↔ char_qing_luo：cos 0.256 → 不同身份**
+- **char_ye_shanshan_0400_01 ↔ char_ray_ling：cos 0.125 → 不同身份**
+- **char_ye_shanshan_0400_01 ↔ char_runcha：cos 0.141 → 不同身份**
+- **char_ye_shanshan_0400_01 ↔ char_shen_zhilan：cos 0.126 → 不同身份**
+- **char_ye_shanshan_0400_01 ↔ char_su_xiaotang：cos 0.120 → 不同身份**
+- **char_ye_shanshan_0400_01 ↔ char_tang_mengli_2200_01：cos 0.652 → 同一身份**
+- **char_ye_shanshan_0400_01 ↔ char_wen_xiaorou_2140_01：cos 0.657 → 同一身份**
+- **char_ye_shanshan_0400_01 ↔ char_ye_muchen_2100_01：cos 0.719 → 同一身份**
+- **char_ye_shanshan_0400_01 ↔ char_yin_xinyue_2330_01：cos 0.640 → 同一身份**
+- **char_ye_shanshan_0400_01 ↔ char_zhao_ruoxi：cos 0.194 → 不同身份**
+- **char_ye_shanshan_0400_01 ↔ char_duo：cos 0.169 → 不同身份**
+- **char_ye_shanshan_0400_01 ↔ char_duo3_2：cos 0.222 → 不同身份**
+- **char_ye_shanshan_0400_01 ↔ char_cen_zhiwei_1936_01：cos 0.262 → 不同身份**
+- **char_ye_shanshan_0400_01 ↔ char_jiang_ruoli_2007_01：cos 0.197 → 不同身份**
+- **char_ye_shanshan_0400_01 ↔ char_xiaog3：cos 0.311 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ye_shanshan_0400_01 ↔ char_xi_manshu_2045_01：cos 0.218 → 不同身份**
+- **char_ye_shanshan_0400_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.226 → 不同身份**
+- **char_ye_shanshan_0400_01 ↔ char_linghu_zhixia_2133_01：cos 0.264 → 不同身份**
+- **char_ye_shanshan_0400_01 ↔ char_qiao_weiyu_2134_01：cos 0.144 → 不同身份**
+- **char_ye_shanshan_0400_01 ↔ char_jiang_qinghuan_2203_01：cos 0.304 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ye_shanshan_0400_01 ↔ char_cen_youqing_2204_01：cos -0.067 → 不同身份**
+- **char_ye_shanshan_0400_01 ↔ char_zhong_xiaorou_2233_01：cos 0.265 → 不同身份**
+- **char_ye_shanshan_0400_01 ↔ char_tan_youqing_2234_01：cos 0.265 → 不同身份**
+- **char_ye_shanshan_0400_01 ↔ char_tantai_lingsu_2303_01：cos 0.297 → 不同身份**
+- **char_ye_shanshan_0400_01 ↔ char_qiao_qinghuan_2304_01：cos 0.297 → 不同身份**
+- **char_ye_shanshan_0400_01 ↔ char_chu_muchen_0004_01：cos 0.038 → 不同身份**
+- **char_ye_shanshan_0400_01 ↔ char_qiao_chaoyan_0004_01：cos -0.037 → 不同身份**
+- **char_ye_shanshan_0400_01 ↔ char_xue_qinghuan_0034_01：cos 0.022 → 不同身份**
+- **char_ye_shanshan_0400_01 ↔ char_tang_yuwei_0217_01：cos 0.225 → 不同身份**
+- **char_ye_shanshan_0400_01 ↔ char_ouyang_chuxia_0250_01：cos 0.158 → 不同身份**
+- **char_ye_shanshan_0400_01 ↔ char_bai_zhiruo_0305_01：cos 0.324 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ye_shanshan_0400_01 ↔ char_pei_shanshan_0456_01：cos 0.328 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ye_shanshan_0400_01 ↔ char_xi_qingchuan_0618_01：cos 0.336 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ye_shanshan_0400_01 ↔ char_zhong_linger_0732_01：cos 0.185 → 不同身份**
+- **char_ye_shanshan_0400_01 ↔ char_hua_qingdai_1029_01：cos 0.266 → 不同身份**
+- **char_ye_shanshan_0400_01 ↔ char_tang_banxia_1156_01：cos 0.283 → 不同身份**
+- **char_ye_shanshan_0400_01 ↔ char_gu_weiyu_1321_01：cos 0.240 → 不同身份**
+- **char_ye_shanshan_0400_01 ↔ char_cheng_hongyu_1435_01：cos 0.153 → 不同身份**
+- **char_ye_shanshan_0400_01 ↔ char_hua_chuxia_1549_01：cos 0.146 → 不同身份**
+- **char_ye_shanshan_0400_01 ↔ char_pei_manshu_1701_01：cos 0.243 → 不同身份**
+- **char_ye_shanshan_0400_01 ↔ char_ye_nanqiao_1811_01：cos 0.200 → 不同身份**
+- **char_ye_shanshan_0400_01 ↔ char_murong_yuyan_1942_01：cos 0.332 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ye_shanshan_0400_01 ↔ char_nangong_lingjun_2054_01：cos 0.197 → 不同身份**
+- **char_ye_yuhan_1804_01 ↔ char_yuchi_ruoli_1000_01：cos 0.605 → 同一身份**
+- **char_ye_yuhan_1804_01 ↔ char_yun_banxia_0030_01：cos 0.525 → ⚠️ 存疑，待人工复核**
+- **char_ye_yuhan_1804_01 ↔ char_zhong_manshu_2104_01：cos 0.593 → ⚠️ 存疑，待人工复核**
+- **char_ye_yuhan_1804_01 ↔ char_anya_song：cos 0.093 → 不同身份**
+- **char_ye_yuhan_1804_01 ↔ char_ayano：cos 0.166 → 不同身份**
+- **char_ye_yuhan_1804_01 ↔ char_chen_xiawei：cos 0.106 → 不同身份**
+- **char_ye_yuhan_1804_01 ↔ char_jia：cos 0.088 → 不同身份**
+- **char_ye_yuhan_1804_01 ↔ char_jiang_yueyao：cos 0.172 → 不同身份**
+- **char_ye_yuhan_1804_01 ↔ char_lin_qingwan：cos 0.261 → 不同身份**
+- **char_ye_yuhan_1804_01 ↔ char_liu_yinuo_1923_10：cos -0.057 → 不同身份**
+- **char_ye_yuhan_1804_01 ↔ char_luo_qingchuan_1805：cos 0.609 → 同一身份**
+- **char_ye_yuhan_1804_01 ↔ char_pei_yuhan_2300_01：cos 0.645 → 同一身份**
+- **char_ye_yuhan_1804_01 ↔ char_qing_luo：cos 0.191 → 不同身份**
+- **char_ye_yuhan_1804_01 ↔ char_ray_ling：cos 0.134 → 不同身份**
+- **char_ye_yuhan_1804_01 ↔ char_runcha：cos 0.038 → 不同身份**
+- **char_ye_yuhan_1804_01 ↔ char_shen_zhilan：cos 0.159 → 不同身份**
+- **char_ye_yuhan_1804_01 ↔ char_su_xiaotang：cos 0.066 → 不同身份**
+- **char_ye_yuhan_1804_01 ↔ char_tang_mengli_2200_01：cos 0.589 → ⚠️ 存疑，待人工复核**
+- **char_ye_yuhan_1804_01 ↔ char_wen_xiaorou_2140_01：cos 0.635 → 同一身份**
+- **char_ye_yuhan_1804_01 ↔ char_ye_muchen_2100_01：cos 0.652 → 同一身份**
+- **char_ye_yuhan_1804_01 ↔ char_yin_xinyue_2330_01：cos 0.650 → 同一身份**
+- **char_ye_yuhan_1804_01 ↔ char_zhao_ruoxi：cos 0.174 → 不同身份**
+- **char_ye_yuhan_1804_01 ↔ char_duo：cos 0.281 → 不同身份**
+- **char_ye_yuhan_1804_01 ↔ char_duo3_2：cos 0.154 → 不同身份**
+- **char_ye_yuhan_1804_01 ↔ char_cen_zhiwei_1936_01：cos 0.302 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ye_yuhan_1804_01 ↔ char_jiang_ruoli_2007_01：cos 0.313 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ye_yuhan_1804_01 ↔ char_xiaog3：cos 0.198 → 不同身份**
+- **char_ye_yuhan_1804_01 ↔ char_xi_manshu_2045_01：cos 0.150 → 不同身份**
+- **char_ye_yuhan_1804_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.371 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ye_yuhan_1804_01 ↔ char_linghu_zhixia_2133_01：cos 0.375 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ye_yuhan_1804_01 ↔ char_qiao_weiyu_2134_01：cos 0.236 → 不同身份**
+- **char_ye_yuhan_1804_01 ↔ char_jiang_qinghuan_2203_01：cos 0.338 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ye_yuhan_1804_01 ↔ char_cen_youqing_2204_01：cos 0.033 → 不同身份**
+- **char_ye_yuhan_1804_01 ↔ char_zhong_xiaorou_2233_01：cos 0.262 → 不同身份**
+- **char_ye_yuhan_1804_01 ↔ char_tan_youqing_2234_01：cos 0.262 → 不同身份**
+- **char_ye_yuhan_1804_01 ↔ char_tantai_lingsu_2303_01：cos 0.488 → ⚠️ 存疑，待人工复核**
+- **char_ye_yuhan_1804_01 ↔ char_qiao_qinghuan_2304_01：cos 0.488 → ⚠️ 存疑，待人工复核**
+- **char_ye_yuhan_1804_01 ↔ char_chu_muchen_0004_01：cos 0.022 → 不同身份**
+- **char_ye_yuhan_1804_01 ↔ char_qiao_chaoyan_0004_01：cos -0.105 → 不同身份**
+- **char_ye_yuhan_1804_01 ↔ char_xue_qinghuan_0034_01：cos -0.035 → 不同身份**
+- **char_ye_yuhan_1804_01 ↔ char_tang_yuwei_0217_01：cos 0.195 → 不同身份**
+- **char_ye_yuhan_1804_01 ↔ char_ouyang_chuxia_0250_01：cos 0.153 → 不同身份**
+- **char_ye_yuhan_1804_01 ↔ char_bai_zhiruo_0305_01：cos 0.329 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ye_yuhan_1804_01 ↔ char_pei_shanshan_0456_01：cos 0.395 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ye_yuhan_1804_01 ↔ char_xi_qingchuan_0618_01：cos 0.309 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ye_yuhan_1804_01 ↔ char_zhong_linger_0732_01：cos 0.294 → 不同身份**
+- **char_ye_yuhan_1804_01 ↔ char_hua_qingdai_1029_01：cos 0.328 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ye_yuhan_1804_01 ↔ char_tang_banxia_1156_01：cos 0.397 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ye_yuhan_1804_01 ↔ char_gu_weiyu_1321_01：cos 0.249 → 不同身份**
+- **char_ye_yuhan_1804_01 ↔ char_cheng_hongyu_1435_01：cos 0.211 → 不同身份**
+- **char_ye_yuhan_1804_01 ↔ char_hua_chuxia_1549_01：cos 0.190 → 不同身份**
+- **char_ye_yuhan_1804_01 ↔ char_pei_manshu_1701_01：cos 0.197 → 不同身份**
+- **char_ye_yuhan_1804_01 ↔ char_ye_nanqiao_1811_01：cos 0.196 → 不同身份**
+- **char_ye_yuhan_1804_01 ↔ char_murong_yuyan_1942_01：cos 0.232 → 不同身份**
+- **char_ye_yuhan_1804_01 ↔ char_nangong_lingjun_2054_01：cos 0.215 → 不同身份**
+- **char_yuchi_ruoli_1000_01 ↔ char_yun_banxia_0030_01：cos 0.393 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yuchi_ruoli_1000_01 ↔ char_zhong_manshu_2104_01：cos 0.744 → 同一身份**
+- **char_yuchi_ruoli_1000_01 ↔ char_anya_song：cos 0.076 → 不同身份**
+- **char_yuchi_ruoli_1000_01 ↔ char_ayano：cos 0.083 → 不同身份**
+- **char_yuchi_ruoli_1000_01 ↔ char_chen_xiawei：cos 0.113 → 不同身份**
+- **char_yuchi_ruoli_1000_01 ↔ char_jia：cos 0.042 → 不同身份**
+- **char_yuchi_ruoli_1000_01 ↔ char_jiang_yueyao：cos 0.263 → 不同身份**
+- **char_yuchi_ruoli_1000_01 ↔ char_lin_qingwan：cos 0.265 → 不同身份**
+- **char_yuchi_ruoli_1000_01 ↔ char_liu_yinuo_1923_10：cos 0.009 → 不同身份**
+- **char_yuchi_ruoli_1000_01 ↔ char_luo_qingchuan_1805：cos 0.575 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_ruoli_1000_01 ↔ char_pei_yuhan_2300_01：cos 0.683 → 同一身份**
+- **char_yuchi_ruoli_1000_01 ↔ char_qing_luo：cos 0.246 → 不同身份**
+- **char_yuchi_ruoli_1000_01 ↔ char_ray_ling：cos 0.172 → 不同身份**
+- **char_yuchi_ruoli_1000_01 ↔ char_runcha：cos -0.022 → 不同身份**
+- **char_yuchi_ruoli_1000_01 ↔ char_shen_zhilan：cos 0.188 → 不同身份**
+- **char_yuchi_ruoli_1000_01 ↔ char_su_xiaotang：cos 0.019 → 不同身份**
+- **char_yuchi_ruoli_1000_01 ↔ char_tang_mengli_2200_01：cos 0.750 → 同一身份**
+- **char_yuchi_ruoli_1000_01 ↔ char_wen_xiaorou_2140_01：cos 0.712 → 同一身份**
+- **char_yuchi_ruoli_1000_01 ↔ char_ye_muchen_2100_01：cos 0.698 → 同一身份**
+- **char_yuchi_ruoli_1000_01 ↔ char_yin_xinyue_2330_01：cos 0.690 → 同一身份**
+- **char_yuchi_ruoli_1000_01 ↔ char_zhao_ruoxi：cos 0.221 → 不同身份**
+- **char_yuchi_ruoli_1000_01 ↔ char_duo：cos 0.107 → 不同身份**
+- **char_yuchi_ruoli_1000_01 ↔ char_duo3_2：cos 0.098 → 不同身份**
+- **char_yuchi_ruoli_1000_01 ↔ char_cen_zhiwei_1936_01：cos 0.308 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yuchi_ruoli_1000_01 ↔ char_jiang_ruoli_2007_01：cos 0.216 → 不同身份**
+- **char_yuchi_ruoli_1000_01 ↔ char_xiaog3：cos 0.252 → 不同身份**
+- **char_yuchi_ruoli_1000_01 ↔ char_xi_manshu_2045_01：cos 0.279 → 不同身份**
+- **char_yuchi_ruoli_1000_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.139 → 不同身份**
+- **char_yuchi_ruoli_1000_01 ↔ char_linghu_zhixia_2133_01：cos 0.231 → 不同身份**
+- **char_yuchi_ruoli_1000_01 ↔ char_qiao_weiyu_2134_01：cos 0.160 → 不同身份**
+- **char_yuchi_ruoli_1000_01 ↔ char_jiang_qinghuan_2203_01：cos 0.394 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yuchi_ruoli_1000_01 ↔ char_cen_youqing_2204_01：cos 0.113 → 不同身份**
+- **char_yuchi_ruoli_1000_01 ↔ char_zhong_xiaorou_2233_01：cos 0.312 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yuchi_ruoli_1000_01 ↔ char_tan_youqing_2234_01：cos 0.312 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yuchi_ruoli_1000_01 ↔ char_tantai_lingsu_2303_01：cos 0.406 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_ruoli_1000_01 ↔ char_qiao_qinghuan_2304_01：cos 0.406 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_ruoli_1000_01 ↔ char_chu_muchen_0004_01：cos -0.011 → 不同身份**
+- **char_yuchi_ruoli_1000_01 ↔ char_qiao_chaoyan_0004_01：cos 0.007 → 不同身份**
+- **char_yuchi_ruoli_1000_01 ↔ char_xue_qinghuan_0034_01：cos -0.025 → 不同身份**
+- **char_yuchi_ruoli_1000_01 ↔ char_tang_yuwei_0217_01：cos 0.279 → 不同身份**
+- **char_yuchi_ruoli_1000_01 ↔ char_ouyang_chuxia_0250_01：cos 0.298 → 不同身份**
+- **char_yuchi_ruoli_1000_01 ↔ char_bai_zhiruo_0305_01：cos 0.469 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_ruoli_1000_01 ↔ char_pei_shanshan_0456_01：cos 0.443 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_ruoli_1000_01 ↔ char_xi_qingchuan_0618_01：cos 0.454 → ⚠️ 存疑，待人工复核**
+- **char_yuchi_ruoli_1000_01 ↔ char_zhong_linger_0732_01：cos 0.378 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yuchi_ruoli_1000_01 ↔ char_hua_qingdai_1029_01：cos 0.315 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yuchi_ruoli_1000_01 ↔ char_tang_banxia_1156_01：cos 0.364 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yuchi_ruoli_1000_01 ↔ char_gu_weiyu_1321_01：cos 0.301 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yuchi_ruoli_1000_01 ↔ char_cheng_hongyu_1435_01：cos 0.265 → 不同身份**
+- **char_yuchi_ruoli_1000_01 ↔ char_hua_chuxia_1549_01：cos 0.172 → 不同身份**
+- **char_yuchi_ruoli_1000_01 ↔ char_pei_manshu_1701_01：cos 0.341 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yuchi_ruoli_1000_01 ↔ char_ye_nanqiao_1811_01：cos 0.262 → 不同身份**
+- **char_yuchi_ruoli_1000_01 ↔ char_murong_yuyan_1942_01：cos 0.312 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yuchi_ruoli_1000_01 ↔ char_nangong_lingjun_2054_01：cos 0.269 → 不同身份**
+- **char_yun_banxia_0030_01 ↔ char_zhong_manshu_2104_01：cos 0.465 → ⚠️ 存疑，待人工复核**
+- **char_yun_banxia_0030_01 ↔ char_anya_song：cos 0.128 → 不同身份**
+- **char_yun_banxia_0030_01 ↔ char_ayano：cos 0.147 → 不同身份**
+- **char_yun_banxia_0030_01 ↔ char_chen_xiawei：cos 0.158 → 不同身份**
+- **char_yun_banxia_0030_01 ↔ char_jia：cos 0.089 → 不同身份**
+- **char_yun_banxia_0030_01 ↔ char_jiang_yueyao：cos 0.293 → 不同身份**
+- **char_yun_banxia_0030_01 ↔ char_lin_qingwan：cos 0.354 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yun_banxia_0030_01 ↔ char_liu_yinuo_1923_10：cos -0.087 → 不同身份**
+- **char_yun_banxia_0030_01 ↔ char_luo_qingchuan_1805：cos 0.456 → ⚠️ 存疑，待人工复核**
+- **char_yun_banxia_0030_01 ↔ char_pei_yuhan_2300_01：cos 0.307 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yun_banxia_0030_01 ↔ char_qing_luo：cos 0.125 → 不同身份**
+- **char_yun_banxia_0030_01 ↔ char_ray_ling：cos 0.286 → 不同身份**
+- **char_yun_banxia_0030_01 ↔ char_runcha：cos 0.009 → 不同身份**
+- **char_yun_banxia_0030_01 ↔ char_shen_zhilan：cos 0.261 → 不同身份**
+- **char_yun_banxia_0030_01 ↔ char_su_xiaotang：cos 0.151 → 不同身份**
+- **char_yun_banxia_0030_01 ↔ char_tang_mengli_2200_01：cos 0.344 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yun_banxia_0030_01 ↔ char_wen_xiaorou_2140_01：cos 0.408 → ⚠️ 存疑，待人工复核**
+- **char_yun_banxia_0030_01 ↔ char_ye_muchen_2100_01：cos 0.329 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yun_banxia_0030_01 ↔ char_yin_xinyue_2330_01：cos 0.386 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yun_banxia_0030_01 ↔ char_zhao_ruoxi：cos 0.227 → 不同身份**
+- **char_yun_banxia_0030_01 ↔ char_duo：cos 0.267 → 不同身份**
+- **char_yun_banxia_0030_01 ↔ char_duo3_2：cos 0.158 → 不同身份**
+- **char_yun_banxia_0030_01 ↔ char_cen_zhiwei_1936_01：cos 0.348 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yun_banxia_0030_01 ↔ char_jiang_ruoli_2007_01：cos 0.256 → 不同身份**
+- **char_yun_banxia_0030_01 ↔ char_xiaog3：cos 0.017 → 不同身份**
+- **char_yun_banxia_0030_01 ↔ char_xi_manshu_2045_01：cos 0.198 → 不同身份**
+- **char_yun_banxia_0030_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.374 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yun_banxia_0030_01 ↔ char_linghu_zhixia_2133_01：cos 0.324 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yun_banxia_0030_01 ↔ char_qiao_weiyu_2134_01：cos 0.328 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yun_banxia_0030_01 ↔ char_jiang_qinghuan_2203_01：cos 0.382 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yun_banxia_0030_01 ↔ char_cen_youqing_2204_01：cos 0.199 → 不同身份**
+- **char_yun_banxia_0030_01 ↔ char_zhong_xiaorou_2233_01：cos 0.275 → 不同身份**
+- **char_yun_banxia_0030_01 ↔ char_tan_youqing_2234_01：cos 0.275 → 不同身份**
+- **char_yun_banxia_0030_01 ↔ char_tantai_lingsu_2303_01：cos 0.509 → ⚠️ 存疑，待人工复核**
+- **char_yun_banxia_0030_01 ↔ char_qiao_qinghuan_2304_01：cos 0.509 → ⚠️ 存疑，待人工复核**
+- **char_yun_banxia_0030_01 ↔ char_chu_muchen_0004_01：cos 0.024 → 不同身份**
+- **char_yun_banxia_0030_01 ↔ char_qiao_chaoyan_0004_01：cos -0.057 → 不同身份**
+- **char_yun_banxia_0030_01 ↔ char_xue_qinghuan_0034_01：cos 0.050 → 不同身份**
+- **char_yun_banxia_0030_01 ↔ char_tang_yuwei_0217_01：cos 0.174 → 不同身份**
+- **char_yun_banxia_0030_01 ↔ char_ouyang_chuxia_0250_01：cos 0.284 → 不同身份**
+- **char_yun_banxia_0030_01 ↔ char_bai_zhiruo_0305_01：cos 0.429 → ⚠️ 存疑，待人工复核**
+- **char_yun_banxia_0030_01 ↔ char_pei_shanshan_0456_01：cos 0.437 → ⚠️ 存疑，待人工复核**
+- **char_yun_banxia_0030_01 ↔ char_xi_qingchuan_0618_01：cos 0.392 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yun_banxia_0030_01 ↔ char_zhong_linger_0732_01：cos 0.499 → ⚠️ 存疑，待人工复核**
+- **char_yun_banxia_0030_01 ↔ char_hua_qingdai_1029_01：cos 0.491 → ⚠️ 存疑，待人工复核**
+- **char_yun_banxia_0030_01 ↔ char_tang_banxia_1156_01：cos 0.452 → ⚠️ 存疑，待人工复核**
+- **char_yun_banxia_0030_01 ↔ char_gu_weiyu_1321_01：cos 0.385 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yun_banxia_0030_01 ↔ char_cheng_hongyu_1435_01：cos 0.296 → 不同身份**
+- **char_yun_banxia_0030_01 ↔ char_hua_chuxia_1549_01：cos 0.301 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yun_banxia_0030_01 ↔ char_pei_manshu_1701_01：cos 0.276 → 不同身份**
+- **char_yun_banxia_0030_01 ↔ char_ye_nanqiao_1811_01：cos 0.368 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yun_banxia_0030_01 ↔ char_murong_yuyan_1942_01：cos 0.286 → 不同身份**
+- **char_yun_banxia_0030_01 ↔ char_nangong_lingjun_2054_01：cos 0.350 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_zhong_manshu_2104_01 ↔ char_anya_song：cos 0.164 → 不同身份**
+- **char_zhong_manshu_2104_01 ↔ char_ayano：cos 0.196 → 不同身份**
+- **char_zhong_manshu_2104_01 ↔ char_chen_xiawei：cos 0.187 → 不同身份**
+- **char_zhong_manshu_2104_01 ↔ char_jia：cos 0.114 → 不同身份**
+- **char_zhong_manshu_2104_01 ↔ char_jiang_yueyao：cos 0.285 → 不同身份**
+- **char_zhong_manshu_2104_01 ↔ char_lin_qingwan：cos 0.321 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_zhong_manshu_2104_01 ↔ char_liu_yinuo_1923_10：cos -0.023 → 不同身份**
+- **char_zhong_manshu_2104_01 ↔ char_luo_qingchuan_1805：cos 0.583 → ⚠️ 存疑，待人工复核**
+- **char_zhong_manshu_2104_01 ↔ char_pei_yuhan_2300_01：cos 0.650 → 同一身份**
+- **char_zhong_manshu_2104_01 ↔ char_qing_luo：cos 0.318 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_zhong_manshu_2104_01 ↔ char_ray_ling：cos 0.181 → 不同身份**
+- **char_zhong_manshu_2104_01 ↔ char_runcha：cos -0.048 → 不同身份**
+- **char_zhong_manshu_2104_01 ↔ char_shen_zhilan：cos 0.191 → 不同身份**
+- **char_zhong_manshu_2104_01 ↔ char_su_xiaotang：cos 0.124 → 不同身份**
+- **char_zhong_manshu_2104_01 ↔ char_tang_mengli_2200_01：cos 0.675 → 同一身份**
+- **char_zhong_manshu_2104_01 ↔ char_wen_xiaorou_2140_01：cos 0.663 → 同一身份**
+- **char_zhong_manshu_2104_01 ↔ char_ye_muchen_2100_01：cos 0.696 → 同一身份**
+- **char_zhong_manshu_2104_01 ↔ char_yin_xinyue_2330_01：cos 0.696 → 同一身份**
+- **char_zhong_manshu_2104_01 ↔ char_zhao_ruoxi：cos 0.345 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_zhong_manshu_2104_01 ↔ char_duo：cos 0.163 → 不同身份**
+- **char_zhong_manshu_2104_01 ↔ char_duo3_2：cos 0.130 → 不同身份**
+- **char_zhong_manshu_2104_01 ↔ char_cen_zhiwei_1936_01：cos 0.367 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_zhong_manshu_2104_01 ↔ char_jiang_ruoli_2007_01：cos 0.306 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_zhong_manshu_2104_01 ↔ char_xiaog3：cos 0.232 → 不同身份**
+- **char_zhong_manshu_2104_01 ↔ char_xi_manshu_2045_01：cos 0.324 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_zhong_manshu_2104_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.294 → 不同身份**
+- **char_zhong_manshu_2104_01 ↔ char_linghu_zhixia_2133_01：cos 0.303 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_zhong_manshu_2104_01 ↔ char_qiao_weiyu_2134_01：cos 0.259 → 不同身份**
+- **char_zhong_manshu_2104_01 ↔ char_jiang_qinghuan_2203_01：cos 0.452 → ⚠️ 存疑，待人工复核**
+- **char_zhong_manshu_2104_01 ↔ char_cen_youqing_2204_01：cos 0.139 → 不同身份**
+- **char_zhong_manshu_2104_01 ↔ char_zhong_xiaorou_2233_01：cos 0.375 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_zhong_manshu_2104_01 ↔ char_tan_youqing_2234_01：cos 0.375 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_zhong_manshu_2104_01 ↔ char_tantai_lingsu_2303_01：cos 0.442 → ⚠️ 存疑，待人工复核**
+- **char_zhong_manshu_2104_01 ↔ char_qiao_qinghuan_2304_01：cos 0.442 → ⚠️ 存疑，待人工复核**
+- **char_zhong_manshu_2104_01 ↔ char_chu_muchen_0004_01：cos 0.002 → 不同身份**
+- **char_zhong_manshu_2104_01 ↔ char_qiao_chaoyan_0004_01：cos -0.031 → 不同身份**
+- **char_zhong_manshu_2104_01 ↔ char_xue_qinghuan_0034_01：cos 0.013 → 不同身份**
+- **char_zhong_manshu_2104_01 ↔ char_tang_yuwei_0217_01：cos 0.287 → 不同身份**
+- **char_zhong_manshu_2104_01 ↔ char_ouyang_chuxia_0250_01：cos 0.245 → 不同身份**
+- **char_zhong_manshu_2104_01 ↔ char_bai_zhiruo_0305_01：cos 0.466 → ⚠️ 存疑，待人工复核**
+- **char_zhong_manshu_2104_01 ↔ char_pei_shanshan_0456_01：cos 0.484 → ⚠️ 存疑，待人工复核**
+- **char_zhong_manshu_2104_01 ↔ char_xi_qingchuan_0618_01：cos 0.446 → ⚠️ 存疑，待人工复核**
+- **char_zhong_manshu_2104_01 ↔ char_zhong_linger_0732_01：cos 0.305 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_zhong_manshu_2104_01 ↔ char_hua_qingdai_1029_01：cos 0.334 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_zhong_manshu_2104_01 ↔ char_tang_banxia_1156_01：cos 0.421 → ⚠️ 存疑，待人工复核**
+- **char_zhong_manshu_2104_01 ↔ char_gu_weiyu_1321_01：cos 0.326 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_zhong_manshu_2104_01 ↔ char_cheng_hongyu_1435_01：cos 0.281 → 不同身份**
+- **char_zhong_manshu_2104_01 ↔ char_hua_chuxia_1549_01：cos 0.235 → 不同身份**
+- **char_zhong_manshu_2104_01 ↔ char_pei_manshu_1701_01：cos 0.324 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_zhong_manshu_2104_01 ↔ char_ye_nanqiao_1811_01：cos 0.307 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_zhong_manshu_2104_01 ↔ char_murong_yuyan_1942_01：cos 0.371 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_zhong_manshu_2104_01 ↔ char_nangong_lingjun_2054_01：cos 0.240 → 不同身份**
+- **char_anya_song ↔ char_ayano：cos 0.077 → 不同身份**
+- **char_anya_song ↔ char_chen_xiawei：cos 0.142 → 不同身份**
+- **char_anya_song ↔ char_jia：cos 0.186 → 不同身份**
+- **char_anya_song ↔ char_jiang_yueyao：cos 0.213 → 不同身份**
+- **char_anya_song ↔ char_lin_qingwan：cos 0.137 → 不同身份**
+- **char_anya_song ↔ char_liu_yinuo_1923_10：cos -0.036 → 不同身份**
+- **char_anya_song ↔ char_luo_qingchuan_1805：cos 0.216 → 不同身份**
+- **char_anya_song ↔ char_pei_yuhan_2300_01：cos 0.132 → 不同身份**
+- **char_anya_song ↔ char_qing_luo：cos 0.073 → 不同身份**
+- **char_anya_song ↔ char_ray_ling：cos 0.388 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_anya_song ↔ char_runcha：cos -0.012 → 不同身份**
+- **char_anya_song ↔ char_shen_zhilan：cos 0.117 → 不同身份**
+- **char_anya_song ↔ char_su_xiaotang：cos 0.376 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_anya_song ↔ char_tang_mengli_2200_01：cos 0.032 → 不同身份**
+- **char_anya_song ↔ char_wen_xiaorou_2140_01：cos 0.089 → 不同身份**
+- **char_anya_song ↔ char_ye_muchen_2100_01：cos 0.104 → 不同身份**
+- **char_anya_song ↔ char_yin_xinyue_2330_01：cos 0.053 → 不同身份**
+- **char_anya_song ↔ char_zhao_ruoxi：cos 0.203 → 不同身份**
+- **char_anya_song ↔ char_duo：cos 0.087 → 不同身份**
+- **char_anya_song ↔ char_duo3_2：cos -0.036 → 不同身份**
+- **char_anya_song ↔ char_cen_zhiwei_1936_01：cos 0.254 → 不同身份**
+- **char_anya_song ↔ char_jiang_ruoli_2007_01：cos 0.265 → 不同身份**
+- **char_anya_song ↔ char_xiaog3：cos -0.028 → 不同身份**
+- **char_anya_song ↔ char_xi_manshu_2045_01：cos 0.204 → 不同身份**
+- **char_anya_song ↔ char_huangfu_qingchuan_2104_01：cos 0.414 → ⚠️ 存疑，待人工复核**
+- **char_anya_song ↔ char_linghu_zhixia_2133_01：cos 0.305 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_anya_song ↔ char_qiao_weiyu_2134_01：cos 0.291 → 不同身份**
+- **char_anya_song ↔ char_jiang_qinghuan_2203_01：cos 0.135 → 不同身份**
+- **char_anya_song ↔ char_cen_youqing_2204_01：cos 0.082 → 不同身份**
+- **char_anya_song ↔ char_zhong_xiaorou_2233_01：cos 0.248 → 不同身份**
+- **char_anya_song ↔ char_tan_youqing_2234_01：cos 0.248 → 不同身份**
+- **char_anya_song ↔ char_tantai_lingsu_2303_01：cos 0.219 → 不同身份**
+- **char_anya_song ↔ char_qiao_qinghuan_2304_01：cos 0.219 → 不同身份**
+- **char_anya_song ↔ char_chu_muchen_0004_01：cos -0.069 → 不同身份**
+- **char_anya_song ↔ char_qiao_chaoyan_0004_01：cos -0.035 → 不同身份**
+- **char_anya_song ↔ char_xue_qinghuan_0034_01：cos 0.049 → 不同身份**
+- **char_anya_song ↔ char_tang_yuwei_0217_01：cos 0.161 → 不同身份**
+- **char_anya_song ↔ char_ouyang_chuxia_0250_01：cos 0.190 → 不同身份**
+- **char_anya_song ↔ char_bai_zhiruo_0305_01：cos 0.225 → 不同身份**
+- **char_anya_song ↔ char_pei_shanshan_0456_01：cos 0.143 → 不同身份**
+- **char_anya_song ↔ char_xi_qingchuan_0618_01：cos 0.204 → 不同身份**
+- **char_anya_song ↔ char_zhong_linger_0732_01：cos 0.211 → 不同身份**
+- **char_anya_song ↔ char_hua_qingdai_1029_01：cos 0.132 → 不同身份**
+- **char_anya_song ↔ char_tang_banxia_1156_01：cos 0.195 → 不同身份**
+- **char_anya_song ↔ char_gu_weiyu_1321_01：cos 0.264 → 不同身份**
+- **char_anya_song ↔ char_cheng_hongyu_1435_01：cos 0.074 → 不同身份**
+- **char_anya_song ↔ char_hua_chuxia_1549_01：cos 0.058 → 不同身份**
+- **char_anya_song ↔ char_pei_manshu_1701_01：cos 0.147 → 不同身份**
+- **char_anya_song ↔ char_ye_nanqiao_1811_01：cos 0.043 → 不同身份**
+- **char_anya_song ↔ char_murong_yuyan_1942_01：cos 0.113 → 不同身份**
+- **char_anya_song ↔ char_nangong_lingjun_2054_01：cos 0.183 → 不同身份**
+- **char_ayano ↔ char_chen_xiawei：cos 0.086 → 不同身份**
+- **char_ayano ↔ char_jia：cos 0.325 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ayano ↔ char_jiang_yueyao：cos 0.033 → 不同身份**
+- **char_ayano ↔ char_lin_qingwan：cos 0.057 → 不同身份**
+- **char_ayano ↔ char_liu_yinuo_1923_10：cos -0.035 → 不同身份**
+- **char_ayano ↔ char_luo_qingchuan_1805：cos 0.109 → 不同身份**
+- **char_ayano ↔ char_pei_yuhan_2300_01：cos 0.129 → 不同身份**
+- **char_ayano ↔ char_qing_luo：cos 0.180 → 不同身份**
+- **char_ayano ↔ char_ray_ling：cos 0.018 → 不同身份**
+- **char_ayano ↔ char_runcha：cos 0.239 → 不同身份**
+- **char_ayano ↔ char_shen_zhilan：cos 0.089 → 不同身份**
+- **char_ayano ↔ char_su_xiaotang：cos 0.210 → 不同身份**
+- **char_ayano ↔ char_tang_mengli_2200_01：cos 0.100 → 不同身份**
+- **char_ayano ↔ char_wen_xiaorou_2140_01：cos 0.098 → 不同身份**
+- **char_ayano ↔ char_ye_muchen_2100_01：cos 0.161 → 不同身份**
+- **char_ayano ↔ char_yin_xinyue_2330_01：cos 0.210 → 不同身份**
+- **char_ayano ↔ char_zhao_ruoxi：cos 0.057 → 不同身份**
+- **char_ayano ↔ char_duo：cos 0.251 → 不同身份**
+- **char_ayano ↔ char_duo3_2：cos 0.259 → 不同身份**
+- **char_ayano ↔ char_cen_zhiwei_1936_01：cos 0.041 → 不同身份**
+- **char_ayano ↔ char_jiang_ruoli_2007_01：cos 0.063 → 不同身份**
+- **char_ayano ↔ char_xiaog3：cos 0.083 → 不同身份**
+- **char_ayano ↔ char_xi_manshu_2045_01：cos -0.011 → 不同身份**
+- **char_ayano ↔ char_huangfu_qingchuan_2104_01：cos 0.103 → 不同身份**
+- **char_ayano ↔ char_linghu_zhixia_2133_01：cos -0.005 → 不同身份**
+- **char_ayano ↔ char_qiao_weiyu_2134_01：cos 0.037 → 不同身份**
+- **char_ayano ↔ char_jiang_qinghuan_2203_01：cos 0.206 → 不同身份**
+- **char_ayano ↔ char_cen_youqing_2204_01：cos 0.025 → 不同身份**
+- **char_ayano ↔ char_zhong_xiaorou_2233_01：cos 0.167 → 不同身份**
+- **char_ayano ↔ char_tan_youqing_2234_01：cos 0.167 → 不同身份**
+- **char_ayano ↔ char_tantai_lingsu_2303_01：cos 0.236 → 不同身份**
+- **char_ayano ↔ char_qiao_qinghuan_2304_01：cos 0.236 → 不同身份**
+- **char_ayano ↔ char_chu_muchen_0004_01：cos 0.027 → 不同身份**
+- **char_ayano ↔ char_qiao_chaoyan_0004_01：cos -0.099 → 不同身份**
+- **char_ayano ↔ char_xue_qinghuan_0034_01：cos 0.114 → 不同身份**
+- **char_ayano ↔ char_tang_yuwei_0217_01：cos 0.129 → 不同身份**
+- **char_ayano ↔ char_ouyang_chuxia_0250_01：cos 0.032 → 不同身份**
+- **char_ayano ↔ char_bai_zhiruo_0305_01：cos 0.135 → 不同身份**
+- **char_ayano ↔ char_pei_shanshan_0456_01：cos 0.208 → 不同身份**
+- **char_ayano ↔ char_xi_qingchuan_0618_01：cos 0.172 → 不同身份**
+- **char_ayano ↔ char_zhong_linger_0732_01：cos 0.080 → 不同身份**
+- **char_ayano ↔ char_hua_qingdai_1029_01：cos 0.180 → 不同身份**
+- **char_ayano ↔ char_tang_banxia_1156_01：cos 0.132 → 不同身份**
+- **char_ayano ↔ char_gu_weiyu_1321_01：cos 0.181 → 不同身份**
+- **char_ayano ↔ char_cheng_hongyu_1435_01：cos -0.024 → 不同身份**
+- **char_ayano ↔ char_hua_chuxia_1549_01：cos 0.066 → 不同身份**
+- **char_ayano ↔ char_pei_manshu_1701_01：cos 0.079 → 不同身份**
+- **char_ayano ↔ char_ye_nanqiao_1811_01：cos 0.083 → 不同身份**
+- **char_ayano ↔ char_murong_yuyan_1942_01：cos 0.244 → 不同身份**
+- **char_ayano ↔ char_nangong_lingjun_2054_01：cos 0.014 → 不同身份**
+- **char_chen_xiawei ↔ char_jia：cos 0.196 → 不同身份**
+- **char_chen_xiawei ↔ char_jiang_yueyao：cos 0.324 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_chen_xiawei ↔ char_lin_qingwan：cos 0.214 → 不同身份**
+- **char_chen_xiawei ↔ char_liu_yinuo_1923_10：cos 0.011 → 不同身份**
+- **char_chen_xiawei ↔ char_luo_qingchuan_1805：cos 0.147 → 不同身份**
+- **char_chen_xiawei ↔ char_pei_yuhan_2300_01：cos 0.149 → 不同身份**
+- **char_chen_xiawei ↔ char_qing_luo：cos 0.116 → 不同身份**
+- **char_chen_xiawei ↔ char_ray_ling：cos 0.107 → 不同身份**
+- **char_chen_xiawei ↔ char_runcha：cos -0.019 → 不同身份**
+- **char_chen_xiawei ↔ char_shen_zhilan：cos 0.152 → 不同身份**
+- **char_chen_xiawei ↔ char_su_xiaotang：cos 0.222 → 不同身份**
+- **char_chen_xiawei ↔ char_tang_mengli_2200_01：cos 0.158 → 不同身份**
+- **char_chen_xiawei ↔ char_wen_xiaorou_2140_01：cos 0.156 → 不同身份**
+- **char_chen_xiawei ↔ char_ye_muchen_2100_01：cos 0.147 → 不同身份**
+- **char_chen_xiawei ↔ char_yin_xinyue_2330_01：cos 0.130 → 不同身份**
+- **char_chen_xiawei ↔ char_zhao_ruoxi：cos 0.200 → 不同身份**
+- **char_chen_xiawei ↔ char_duo：cos 0.080 → 不同身份**
+- **char_chen_xiawei ↔ char_duo3_2：cos 0.102 → 不同身份**
+- **char_chen_xiawei ↔ char_cen_zhiwei_1936_01：cos 0.073 → 不同身份**
+- **char_chen_xiawei ↔ char_jiang_ruoli_2007_01：cos 0.074 → 不同身份**
+- **char_chen_xiawei ↔ char_xiaog3：cos 0.076 → 不同身份**
+- **char_chen_xiawei ↔ char_xi_manshu_2045_01：cos 0.127 → 不同身份**
+- **char_chen_xiawei ↔ char_huangfu_qingchuan_2104_01：cos 0.091 → 不同身份**
+- **char_chen_xiawei ↔ char_linghu_zhixia_2133_01：cos 0.111 → 不同身份**
+- **char_chen_xiawei ↔ char_qiao_weiyu_2134_01：cos 0.138 → 不同身份**
+- **char_chen_xiawei ↔ char_jiang_qinghuan_2203_01：cos 0.113 → 不同身份**
+- **char_chen_xiawei ↔ char_cen_youqing_2204_01：cos 0.085 → 不同身份**
+- **char_chen_xiawei ↔ char_zhong_xiaorou_2233_01：cos 0.290 → 不同身份**
+- **char_chen_xiawei ↔ char_tan_youqing_2234_01：cos 0.290 → 不同身份**
+- **char_chen_xiawei ↔ char_tantai_lingsu_2303_01：cos 0.190 → 不同身份**
+- **char_chen_xiawei ↔ char_qiao_qinghuan_2304_01：cos 0.190 → 不同身份**
+- **char_chen_xiawei ↔ char_chu_muchen_0004_01：cos 0.033 → 不同身份**
+- **char_chen_xiawei ↔ char_qiao_chaoyan_0004_01：cos 0.013 → 不同身份**
+- **char_chen_xiawei ↔ char_xue_qinghuan_0034_01：cos 0.012 → 不同身份**
+- **char_chen_xiawei ↔ char_tang_yuwei_0217_01：cos 0.169 → 不同身份**
+- **char_chen_xiawei ↔ char_ouyang_chuxia_0250_01：cos 0.230 → 不同身份**
+- **char_chen_xiawei ↔ char_bai_zhiruo_0305_01：cos 0.093 → 不同身份**
+- **char_chen_xiawei ↔ char_pei_shanshan_0456_01：cos 0.142 → 不同身份**
+- **char_chen_xiawei ↔ char_xi_qingchuan_0618_01：cos 0.255 → 不同身份**
+- **char_chen_xiawei ↔ char_zhong_linger_0732_01：cos 0.042 → 不同身份**
+- **char_chen_xiawei ↔ char_hua_qingdai_1029_01：cos 0.102 → 不同身份**
+- **char_chen_xiawei ↔ char_tang_banxia_1156_01：cos 0.159 → 不同身份**
+- **char_chen_xiawei ↔ char_gu_weiyu_1321_01：cos 0.135 → 不同身份**
+- **char_chen_xiawei ↔ char_cheng_hongyu_1435_01：cos 0.218 → 不同身份**
+- **char_chen_xiawei ↔ char_hua_chuxia_1549_01：cos 0.238 → 不同身份**
+- **char_chen_xiawei ↔ char_pei_manshu_1701_01：cos 0.257 → 不同身份**
+- **char_chen_xiawei ↔ char_ye_nanqiao_1811_01：cos 0.155 → 不同身份**
+- **char_chen_xiawei ↔ char_murong_yuyan_1942_01：cos 0.132 → 不同身份**
+- **char_chen_xiawei ↔ char_nangong_lingjun_2054_01：cos 0.146 → 不同身份**
+- **char_jia ↔ char_jiang_yueyao：cos 0.261 → 不同身份**
+- **char_jia ↔ char_lin_qingwan：cos 0.141 → 不同身份**
+- **char_jia ↔ char_liu_yinuo_1923_10：cos -0.046 → 不同身份**
+- **char_jia ↔ char_luo_qingchuan_1805：cos 0.176 → 不同身份**
+- **char_jia ↔ char_pei_yuhan_2300_01：cos 0.050 → 不同身份**
+- **char_jia ↔ char_qing_luo：cos 0.225 → 不同身份**
+- **char_jia ↔ char_ray_ling：cos 0.101 → 不同身份**
+- **char_jia ↔ char_runcha：cos 0.295 → 不同身份**
+- **char_jia ↔ char_shen_zhilan：cos 0.149 → 不同身份**
+- **char_jia ↔ char_su_xiaotang：cos 0.241 → 不同身份**
+- **char_jia ↔ char_tang_mengli_2200_01：cos 0.067 → 不同身份**
+- **char_jia ↔ char_wen_xiaorou_2140_01：cos 0.092 → 不同身份**
+- **char_jia ↔ char_ye_muchen_2100_01：cos 0.162 → 不同身份**
+- **char_jia ↔ char_yin_xinyue_2330_01：cos 0.102 → 不同身份**
+- **char_jia ↔ char_zhao_ruoxi：cos 0.191 → 不同身份**
+- **char_jia ↔ char_duo：cos 0.212 → 不同身份**
+- **char_jia ↔ char_duo3_2：cos 0.375 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_jia ↔ char_cen_zhiwei_1936_01：cos 0.105 → 不同身份**
+- **char_jia ↔ char_jiang_ruoli_2007_01：cos 0.108 → 不同身份**
+- **char_jia ↔ char_xiaog3：cos 0.067 → 不同身份**
+- **char_jia ↔ char_xi_manshu_2045_01：cos 0.211 → 不同身份**
+- **char_jia ↔ char_huangfu_qingchuan_2104_01：cos 0.103 → 不同身份**
+- **char_jia ↔ char_linghu_zhixia_2133_01：cos 0.087 → 不同身份**
+- **char_jia ↔ char_qiao_weiyu_2134_01：cos 0.192 → 不同身份**
+- **char_jia ↔ char_jiang_qinghuan_2203_01：cos 0.203 → 不同身份**
+- **char_jia ↔ char_cen_youqing_2204_01：cos 0.124 → 不同身份**
+- **char_jia ↔ char_zhong_xiaorou_2233_01：cos 0.278 → 不同身份**
+- **char_jia ↔ char_tan_youqing_2234_01：cos 0.278 → 不同身份**
+- **char_jia ↔ char_tantai_lingsu_2303_01：cos 0.263 → 不同身份**
+- **char_jia ↔ char_qiao_qinghuan_2304_01：cos 0.263 → 不同身份**
+- **char_jia ↔ char_chu_muchen_0004_01：cos 0.018 → 不同身份**
+- **char_jia ↔ char_qiao_chaoyan_0004_01：cos 0.024 → 不同身份**
+- **char_jia ↔ char_xue_qinghuan_0034_01：cos -0.044 → 不同身份**
+- **char_jia ↔ char_tang_yuwei_0217_01：cos 0.115 → 不同身份**
+- **char_jia ↔ char_ouyang_chuxia_0250_01：cos 0.166 → 不同身份**
+- **char_jia ↔ char_bai_zhiruo_0305_01：cos 0.096 → 不同身份**
+- **char_jia ↔ char_pei_shanshan_0456_01：cos 0.203 → 不同身份**
+- **char_jia ↔ char_xi_qingchuan_0618_01：cos 0.212 → 不同身份**
+- **char_jia ↔ char_zhong_linger_0732_01：cos 0.104 → 不同身份**
+- **char_jia ↔ char_hua_qingdai_1029_01：cos 0.142 → 不同身份**
+- **char_jia ↔ char_tang_banxia_1156_01：cos 0.161 → 不同身份**
+- **char_jia ↔ char_gu_weiyu_1321_01：cos 0.206 → 不同身份**
+- **char_jia ↔ char_cheng_hongyu_1435_01：cos 0.037 → 不同身份**
+- **char_jia ↔ char_hua_chuxia_1549_01：cos 0.153 → 不同身份**
+- **char_jia ↔ char_pei_manshu_1701_01：cos 0.230 → 不同身份**
+- **char_jia ↔ char_ye_nanqiao_1811_01：cos 0.206 → 不同身份**
+- **char_jia ↔ char_murong_yuyan_1942_01：cos 0.221 → 不同身份**
+- **char_jia ↔ char_nangong_lingjun_2054_01：cos 0.131 → 不同身份**
+- **char_jiang_yueyao ↔ char_lin_qingwan：cos 0.330 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_jiang_yueyao ↔ char_liu_yinuo_1923_10：cos 0.026 → 不同身份**
+- **char_jiang_yueyao ↔ char_luo_qingchuan_1805：cos 0.263 → 不同身份**
+- **char_jiang_yueyao ↔ char_pei_yuhan_2300_01：cos 0.129 → 不同身份**
+- **char_jiang_yueyao ↔ char_qing_luo：cos 0.145 → 不同身份**
+- **char_jiang_yueyao ↔ char_ray_ling：cos 0.222 → 不同身份**
+- **char_jiang_yueyao ↔ char_runcha：cos -0.057 → 不同身份**
+- **char_jiang_yueyao ↔ char_shen_zhilan：cos 0.262 → 不同身份**
+- **char_jiang_yueyao ↔ char_su_xiaotang：cos 0.216 → 不同身份**
+- **char_jiang_yueyao ↔ char_tang_mengli_2200_01：cos 0.182 → 不同身份**
+- **char_jiang_yueyao ↔ char_wen_xiaorou_2140_01：cos 0.164 → 不同身份**
+- **char_jiang_yueyao ↔ char_ye_muchen_2100_01：cos 0.164 → 不同身份**
+- **char_jiang_yueyao ↔ char_yin_xinyue_2330_01：cos 0.215 → 不同身份**
+- **char_jiang_yueyao ↔ char_zhao_ruoxi：cos 0.412 → ⚠️ 存疑，待人工复核**
+- **char_jiang_yueyao ↔ char_duo：cos 0.086 → 不同身份**
+- **char_jiang_yueyao ↔ char_duo3_2：cos 0.150 → 不同身份**
+- **char_jiang_yueyao ↔ char_cen_zhiwei_1936_01：cos 0.271 → 不同身份**
+- **char_jiang_yueyao ↔ char_jiang_ruoli_2007_01：cos 0.303 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_jiang_yueyao ↔ char_xiaog3：cos 0.002 → 不同身份**
+- **char_jiang_yueyao ↔ char_xi_manshu_2045_01：cos 0.319 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_jiang_yueyao ↔ char_huangfu_qingchuan_2104_01：cos 0.224 → 不同身份**
+- **char_jiang_yueyao ↔ char_linghu_zhixia_2133_01：cos 0.210 → 不同身份**
+- **char_jiang_yueyao ↔ char_qiao_weiyu_2134_01：cos 0.315 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_jiang_yueyao ↔ char_jiang_qinghuan_2203_01：cos 0.383 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_jiang_yueyao ↔ char_cen_youqing_2204_01：cos 0.233 → 不同身份**
+- **char_jiang_yueyao ↔ char_zhong_xiaorou_2233_01：cos 0.371 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_jiang_yueyao ↔ char_tan_youqing_2234_01：cos 0.371 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_jiang_yueyao ↔ char_tantai_lingsu_2303_01：cos 0.320 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_jiang_yueyao ↔ char_qiao_qinghuan_2304_01：cos 0.320 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_jiang_yueyao ↔ char_chu_muchen_0004_01：cos -0.078 → 不同身份**
+- **char_jiang_yueyao ↔ char_qiao_chaoyan_0004_01：cos -0.036 → 不同身份**
+- **char_jiang_yueyao ↔ char_xue_qinghuan_0034_01：cos -0.028 → 不同身份**
+- **char_jiang_yueyao ↔ char_tang_yuwei_0217_01：cos 0.279 → 不同身份**
+- **char_jiang_yueyao ↔ char_ouyang_chuxia_0250_01：cos 0.464 → ⚠️ 存疑，待人工复核**
+- **char_jiang_yueyao ↔ char_bai_zhiruo_0305_01：cos 0.342 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_jiang_yueyao ↔ char_pei_shanshan_0456_01：cos 0.379 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_jiang_yueyao ↔ char_xi_qingchuan_0618_01：cos 0.429 → ⚠️ 存疑，待人工复核**
+- **char_jiang_yueyao ↔ char_zhong_linger_0732_01：cos 0.413 → ⚠️ 存疑，待人工复核**
+- **char_jiang_yueyao ↔ char_hua_qingdai_1029_01：cos 0.366 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_jiang_yueyao ↔ char_tang_banxia_1156_01：cos 0.335 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_jiang_yueyao ↔ char_gu_weiyu_1321_01：cos 0.456 → ⚠️ 存疑，待人工复核**
+- **char_jiang_yueyao ↔ char_cheng_hongyu_1435_01：cos 0.380 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_jiang_yueyao ↔ char_hua_chuxia_1549_01：cos 0.371 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_jiang_yueyao ↔ char_pei_manshu_1701_01：cos 0.394 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_jiang_yueyao ↔ char_ye_nanqiao_1811_01：cos 0.412 → ⚠️ 存疑，待人工复核**
+- **char_jiang_yueyao ↔ char_murong_yuyan_1942_01：cos 0.278 → 不同身份**
+- **char_jiang_yueyao ↔ char_nangong_lingjun_2054_01：cos 0.274 → 不同身份**
+- **char_lin_qingwan ↔ char_liu_yinuo_1923_10：cos -0.019 → 不同身份**
+- **char_lin_qingwan ↔ char_luo_qingchuan_1805：cos 0.325 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lin_qingwan ↔ char_pei_yuhan_2300_01：cos 0.118 → 不同身份**
+- **char_lin_qingwan ↔ char_qing_luo：cos 0.245 → 不同身份**
+- **char_lin_qingwan ↔ char_ray_ling：cos 0.270 → 不同身份**
+- **char_lin_qingwan ↔ char_runcha：cos -0.027 → 不同身份**
+- **char_lin_qingwan ↔ char_shen_zhilan：cos 0.308 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lin_qingwan ↔ char_su_xiaotang：cos 0.152 → 不同身份**
+- **char_lin_qingwan ↔ char_tang_mengli_2200_01：cos 0.224 → 不同身份**
+- **char_lin_qingwan ↔ char_wen_xiaorou_2140_01：cos 0.175 → 不同身份**
+- **char_lin_qingwan ↔ char_ye_muchen_2100_01：cos 0.186 → 不同身份**
+- **char_lin_qingwan ↔ char_yin_xinyue_2330_01：cos 0.154 → 不同身份**
+- **char_lin_qingwan ↔ char_zhao_ruoxi：cos 0.507 → ⚠️ 存疑，待人工复核**
+- **char_lin_qingwan ↔ char_duo：cos 0.251 → 不同身份**
+- **char_lin_qingwan ↔ char_duo3_2：cos 0.082 → 不同身份**
+- **char_lin_qingwan ↔ char_cen_zhiwei_1936_01：cos 0.458 → ⚠️ 存疑，待人工复核**
+- **char_lin_qingwan ↔ char_jiang_ruoli_2007_01：cos 0.376 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lin_qingwan ↔ char_xiaog3：cos -0.008 → 不同身份**
+- **char_lin_qingwan ↔ char_xi_manshu_2045_01：cos 0.415 → ⚠️ 存疑，待人工复核**
+- **char_lin_qingwan ↔ char_huangfu_qingchuan_2104_01：cos 0.295 → 不同身份**
+- **char_lin_qingwan ↔ char_linghu_zhixia_2133_01：cos 0.411 → ⚠️ 存疑，待人工复核**
+- **char_lin_qingwan ↔ char_qiao_weiyu_2134_01：cos 0.393 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lin_qingwan ↔ char_jiang_qinghuan_2203_01：cos 0.462 → ⚠️ 存疑，待人工复核**
+- **char_lin_qingwan ↔ char_cen_youqing_2204_01：cos 0.310 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lin_qingwan ↔ char_zhong_xiaorou_2233_01：cos 0.348 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lin_qingwan ↔ char_tan_youqing_2234_01：cos 0.348 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lin_qingwan ↔ char_tantai_lingsu_2303_01：cos 0.524 → ⚠️ 存疑，待人工复核**
+- **char_lin_qingwan ↔ char_qiao_qinghuan_2304_01：cos 0.524 → ⚠️ 存疑，待人工复核**
+- **char_lin_qingwan ↔ char_chu_muchen_0004_01：cos -0.001 → 不同身份**
+- **char_lin_qingwan ↔ char_qiao_chaoyan_0004_01：cos -0.023 → 不同身份**
+- **char_lin_qingwan ↔ char_xue_qinghuan_0034_01：cos -0.014 → 不同身份**
+- **char_lin_qingwan ↔ char_tang_yuwei_0217_01：cos 0.466 → ⚠️ 存疑，待人工复核**
+- **char_lin_qingwan ↔ char_ouyang_chuxia_0250_01：cos 0.548 → ⚠️ 存疑，待人工复核**
+- **char_lin_qingwan ↔ char_bai_zhiruo_0305_01：cos 0.528 → ⚠️ 存疑，待人工复核**
+- **char_lin_qingwan ↔ char_pei_shanshan_0456_01：cos 0.559 → ⚠️ 存疑，待人工复核**
+- **char_lin_qingwan ↔ char_xi_qingchuan_0618_01：cos 0.514 → ⚠️ 存疑，待人工复核**
+- **char_lin_qingwan ↔ char_zhong_linger_0732_01：cos 0.515 → ⚠️ 存疑，待人工复核**
+- **char_lin_qingwan ↔ char_hua_qingdai_1029_01：cos 0.569 → ⚠️ 存疑，待人工复核**
+- **char_lin_qingwan ↔ char_tang_banxia_1156_01：cos 0.612 → 同一身份**
+- **char_lin_qingwan ↔ char_gu_weiyu_1321_01：cos 0.569 → ⚠️ 存疑，待人工复核**
+- **char_lin_qingwan ↔ char_cheng_hongyu_1435_01：cos 0.559 → ⚠️ 存疑，待人工复核**
+- **char_lin_qingwan ↔ char_hua_chuxia_1549_01：cos 0.574 → ⚠️ 存疑，待人工复核**
+- **char_lin_qingwan ↔ char_pei_manshu_1701_01：cos 0.519 → ⚠️ 存疑，待人工复核**
+- **char_lin_qingwan ↔ char_ye_nanqiao_1811_01：cos 0.528 → ⚠️ 存疑，待人工复核**
+- **char_lin_qingwan ↔ char_murong_yuyan_1942_01：cos 0.342 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_lin_qingwan ↔ char_nangong_lingjun_2054_01：cos 0.488 → ⚠️ 存疑，待人工复核**
+- **char_liu_yinuo_1923_10 ↔ char_luo_qingchuan_1805：cos -0.012 → 不同身份**
+- **char_liu_yinuo_1923_10 ↔ char_pei_yuhan_2300_01：cos -0.045 → 不同身份**
+- **char_liu_yinuo_1923_10 ↔ char_qing_luo：cos 0.046 → 不同身份**
+- **char_liu_yinuo_1923_10 ↔ char_ray_ling：cos -0.092 → 不同身份**
+- **char_liu_yinuo_1923_10 ↔ char_runcha：cos -0.060 → 不同身份**
+- **char_liu_yinuo_1923_10 ↔ char_shen_zhilan：cos -0.036 → 不同身份**
+- **char_liu_yinuo_1923_10 ↔ char_su_xiaotang：cos -0.064 → 不同身份**
+- **char_liu_yinuo_1923_10 ↔ char_tang_mengli_2200_01：cos -0.011 → 不同身份**
+- **char_liu_yinuo_1923_10 ↔ char_wen_xiaorou_2140_01：cos -0.038 → 不同身份**
+- **char_liu_yinuo_1923_10 ↔ char_ye_muchen_2100_01：cos -0.015 → 不同身份**
+- **char_liu_yinuo_1923_10 ↔ char_yin_xinyue_2330_01：cos -0.033 → 不同身份**
+- **char_liu_yinuo_1923_10 ↔ char_zhao_ruoxi：cos 0.027 → 不同身份**
+- **char_liu_yinuo_1923_10 ↔ char_duo：cos -0.056 → 不同身份**
+- **char_liu_yinuo_1923_10 ↔ char_duo3_2：cos 0.006 → 不同身份**
+- **char_liu_yinuo_1923_10 ↔ char_cen_zhiwei_1936_01：cos -0.034 → 不同身份**
+- **char_liu_yinuo_1923_10 ↔ char_jiang_ruoli_2007_01：cos -0.023 → 不同身份**
+- **char_liu_yinuo_1923_10 ↔ char_xiaog3：cos 0.001 → 不同身份**
+- **char_liu_yinuo_1923_10 ↔ char_xi_manshu_2045_01：cos -0.001 → 不同身份**
+- **char_liu_yinuo_1923_10 ↔ char_huangfu_qingchuan_2104_01：cos -0.033 → 不同身份**
+- **char_liu_yinuo_1923_10 ↔ char_linghu_zhixia_2133_01：cos -0.057 → 不同身份**
+- **char_liu_yinuo_1923_10 ↔ char_qiao_weiyu_2134_01：cos -0.025 → 不同身份**
+- **char_liu_yinuo_1923_10 ↔ char_jiang_qinghuan_2203_01：cos 0.022 → 不同身份**
+- **char_liu_yinuo_1923_10 ↔ char_cen_youqing_2204_01：cos 0.019 → 不同身份**
+- **char_liu_yinuo_1923_10 ↔ char_zhong_xiaorou_2233_01：cos -0.063 → 不同身份**
+- **char_liu_yinuo_1923_10 ↔ char_tan_youqing_2234_01：cos -0.063 → 不同身份**
+- **char_liu_yinuo_1923_10 ↔ char_tantai_lingsu_2303_01：cos -0.069 → 不同身份**
+- **char_liu_yinuo_1923_10 ↔ char_qiao_qinghuan_2304_01：cos -0.069 → 不同身份**
+- **char_liu_yinuo_1923_10 ↔ char_chu_muchen_0004_01：cos -0.004 → 不同身份**
+- **char_liu_yinuo_1923_10 ↔ char_qiao_chaoyan_0004_01：cos 0.010 → 不同身份**
+- **char_liu_yinuo_1923_10 ↔ char_xue_qinghuan_0034_01：cos 0.000 → 不同身份**
+- **char_liu_yinuo_1923_10 ↔ char_tang_yuwei_0217_01：cos -0.007 → 不同身份**
+- **char_liu_yinuo_1923_10 ↔ char_ouyang_chuxia_0250_01：cos 0.022 → 不同身份**
+- **char_liu_yinuo_1923_10 ↔ char_bai_zhiruo_0305_01：cos -0.032 → 不同身份**
+- **char_liu_yinuo_1923_10 ↔ char_pei_shanshan_0456_01：cos 0.020 → 不同身份**
+- **char_liu_yinuo_1923_10 ↔ char_xi_qingchuan_0618_01：cos -0.013 → 不同身份**
+- **char_liu_yinuo_1923_10 ↔ char_zhong_linger_0732_01：cos -0.054 → 不同身份**
+- **char_liu_yinuo_1923_10 ↔ char_hua_qingdai_1029_01：cos -0.023 → 不同身份**
+- **char_liu_yinuo_1923_10 ↔ char_tang_banxia_1156_01：cos 0.005 → 不同身份**
+- **char_liu_yinuo_1923_10 ↔ char_gu_weiyu_1321_01：cos -0.018 → 不同身份**
+- **char_liu_yinuo_1923_10 ↔ char_cheng_hongyu_1435_01：cos 0.011 → 不同身份**
+- **char_liu_yinuo_1923_10 ↔ char_hua_chuxia_1549_01：cos -0.041 → 不同身份**
+- **char_liu_yinuo_1923_10 ↔ char_pei_manshu_1701_01：cos 0.010 → 不同身份**
+- **char_liu_yinuo_1923_10 ↔ char_ye_nanqiao_1811_01：cos 0.038 → 不同身份**
+- **char_liu_yinuo_1923_10 ↔ char_murong_yuyan_1942_01：cos 0.042 → 不同身份**
+- **char_liu_yinuo_1923_10 ↔ char_nangong_lingjun_2054_01：cos -0.028 → 不同身份**
+- **char_luo_qingchuan_1805 ↔ char_pei_yuhan_2300_01：cos 0.588 → ⚠️ 存疑，待人工复核**
+- **char_luo_qingchuan_1805 ↔ char_qing_luo：cos 0.213 → 不同身份**
+- **char_luo_qingchuan_1805 ↔ char_ray_ling：cos 0.287 → 不同身份**
+- **char_luo_qingchuan_1805 ↔ char_runcha：cos -0.001 → 不同身份**
+- **char_luo_qingchuan_1805 ↔ char_shen_zhilan：cos 0.252 → 不同身份**
+- **char_luo_qingchuan_1805 ↔ char_su_xiaotang：cos 0.152 → 不同身份**
+- **char_luo_qingchuan_1805 ↔ char_tang_mengli_2200_01：cos 0.575 → ⚠️ 存疑，待人工复核**
+- **char_luo_qingchuan_1805 ↔ char_wen_xiaorou_2140_01：cos 0.608 → 同一身份**
+- **char_luo_qingchuan_1805 ↔ char_ye_muchen_2100_01：cos 0.625 → 同一身份**
+- **char_luo_qingchuan_1805 ↔ char_yin_xinyue_2330_01：cos 0.599 → ⚠️ 存疑，待人工复核**
+- **char_luo_qingchuan_1805 ↔ char_zhao_ruoxi：cos 0.237 → 不同身份**
+- **char_luo_qingchuan_1805 ↔ char_duo：cos 0.100 → 不同身份**
+- **char_luo_qingchuan_1805 ↔ char_duo3_2：cos 0.161 → 不同身份**
+- **char_luo_qingchuan_1805 ↔ char_cen_zhiwei_1936_01：cos 0.341 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_qingchuan_1805 ↔ char_jiang_ruoli_2007_01：cos 0.298 → 不同身份**
+- **char_luo_qingchuan_1805 ↔ char_xiaog3：cos 0.130 → 不同身份**
+- **char_luo_qingchuan_1805 ↔ char_xi_manshu_2045_01：cos 0.296 → 不同身份**
+- **char_luo_qingchuan_1805 ↔ char_huangfu_qingchuan_2104_01：cos 0.335 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_qingchuan_1805 ↔ char_linghu_zhixia_2133_01：cos 0.408 → ⚠️ 存疑，待人工复核**
+- **char_luo_qingchuan_1805 ↔ char_qiao_weiyu_2134_01：cos 0.244 → 不同身份**
+- **char_luo_qingchuan_1805 ↔ char_jiang_qinghuan_2203_01：cos 0.352 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_qingchuan_1805 ↔ char_cen_youqing_2204_01：cos 0.041 → 不同身份**
+- **char_luo_qingchuan_1805 ↔ char_zhong_xiaorou_2233_01：cos 0.323 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_qingchuan_1805 ↔ char_tan_youqing_2234_01：cos 0.323 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_qingchuan_1805 ↔ char_tantai_lingsu_2303_01：cos 0.399 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_qingchuan_1805 ↔ char_qiao_qinghuan_2304_01：cos 0.399 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_qingchuan_1805 ↔ char_chu_muchen_0004_01：cos 0.001 → 不同身份**
+- **char_luo_qingchuan_1805 ↔ char_qiao_chaoyan_0004_01：cos -0.056 → 不同身份**
+- **char_luo_qingchuan_1805 ↔ char_xue_qinghuan_0034_01：cos 0.003 → 不同身份**
+- **char_luo_qingchuan_1805 ↔ char_tang_yuwei_0217_01：cos 0.230 → 不同身份**
+- **char_luo_qingchuan_1805 ↔ char_ouyang_chuxia_0250_01：cos 0.275 → 不同身份**
+- **char_luo_qingchuan_1805 ↔ char_bai_zhiruo_0305_01：cos 0.405 → ⚠️ 存疑，待人工复核**
+- **char_luo_qingchuan_1805 ↔ char_pei_shanshan_0456_01：cos 0.417 → ⚠️ 存疑，待人工复核**
+- **char_luo_qingchuan_1805 ↔ char_xi_qingchuan_0618_01：cos 0.359 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_qingchuan_1805 ↔ char_zhong_linger_0732_01：cos 0.378 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_qingchuan_1805 ↔ char_hua_qingdai_1029_01：cos 0.354 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_qingchuan_1805 ↔ char_tang_banxia_1156_01：cos 0.390 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_qingchuan_1805 ↔ char_gu_weiyu_1321_01：cos 0.356 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_qingchuan_1805 ↔ char_cheng_hongyu_1435_01：cos 0.250 → 不同身份**
+- **char_luo_qingchuan_1805 ↔ char_hua_chuxia_1549_01：cos 0.217 → 不同身份**
+- **char_luo_qingchuan_1805 ↔ char_pei_manshu_1701_01：cos 0.368 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_qingchuan_1805 ↔ char_ye_nanqiao_1811_01：cos 0.306 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_qingchuan_1805 ↔ char_murong_yuyan_1942_01：cos 0.337 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_luo_qingchuan_1805 ↔ char_nangong_lingjun_2054_01：cos 0.320 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_pei_yuhan_2300_01 ↔ char_qing_luo：cos 0.258 → 不同身份**
+- **char_pei_yuhan_2300_01 ↔ char_ray_ling：cos 0.023 → 不同身份**
+- **char_pei_yuhan_2300_01 ↔ char_runcha：cos 0.006 → 不同身份**
+- **char_pei_yuhan_2300_01 ↔ char_shen_zhilan：cos 0.016 → 不同身份**
+- **char_pei_yuhan_2300_01 ↔ char_su_xiaotang：cos 0.019 → 不同身份**
+- **char_pei_yuhan_2300_01 ↔ char_tang_mengli_2200_01：cos 0.719 → 同一身份**
+- **char_pei_yuhan_2300_01 ↔ char_wen_xiaorou_2140_01：cos 0.746 → 同一身份**
+- **char_pei_yuhan_2300_01 ↔ char_ye_muchen_2100_01：cos 0.738 → 同一身份**
+- **char_pei_yuhan_2300_01 ↔ char_yin_xinyue_2330_01：cos 0.797 → 同一身份**
+- **char_pei_yuhan_2300_01 ↔ char_zhao_ruoxi：cos 0.099 → 不同身份**
+- **char_pei_yuhan_2300_01 ↔ char_duo：cos 0.105 → 不同身份**
+- **char_pei_yuhan_2300_01 ↔ char_duo3_2：cos 0.102 → 不同身份**
+- **char_pei_yuhan_2300_01 ↔ char_cen_zhiwei_1936_01：cos 0.135 → 不同身份**
+- **char_pei_yuhan_2300_01 ↔ char_jiang_ruoli_2007_01：cos 0.136 → 不同身份**
+- **char_pei_yuhan_2300_01 ↔ char_xiaog3：cos 0.358 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_pei_yuhan_2300_01 ↔ char_xi_manshu_2045_01：cos 0.185 → 不同身份**
+- **char_pei_yuhan_2300_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.149 → 不同身份**
+- **char_pei_yuhan_2300_01 ↔ char_linghu_zhixia_2133_01：cos 0.205 → 不同身份**
+- **char_pei_yuhan_2300_01 ↔ char_qiao_weiyu_2134_01：cos 0.047 → 不同身份**
+- **char_pei_yuhan_2300_01 ↔ char_jiang_qinghuan_2203_01：cos 0.269 → 不同身份**
+- **char_pei_yuhan_2300_01 ↔ char_cen_youqing_2204_01：cos -0.019 → 不同身份**
+- **char_pei_yuhan_2300_01 ↔ char_zhong_xiaorou_2233_01：cos 0.249 → 不同身份**
+- **char_pei_yuhan_2300_01 ↔ char_tan_youqing_2234_01：cos 0.249 → 不同身份**
+- **char_pei_yuhan_2300_01 ↔ char_tantai_lingsu_2303_01：cos 0.292 → 不同身份**
+- **char_pei_yuhan_2300_01 ↔ char_qiao_qinghuan_2304_01：cos 0.292 → 不同身份**
+- **char_pei_yuhan_2300_01 ↔ char_chu_muchen_0004_01：cos -0.035 → 不同身份**
+- **char_pei_yuhan_2300_01 ↔ char_qiao_chaoyan_0004_01：cos 0.004 → 不同身份**
+- **char_pei_yuhan_2300_01 ↔ char_xue_qinghuan_0034_01：cos -0.040 → 不同身份**
+- **char_pei_yuhan_2300_01 ↔ char_tang_yuwei_0217_01：cos 0.255 → 不同身份**
+- **char_pei_yuhan_2300_01 ↔ char_ouyang_chuxia_0250_01：cos 0.138 → 不同身份**
+- **char_pei_yuhan_2300_01 ↔ char_bai_zhiruo_0305_01：cos 0.304 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_pei_yuhan_2300_01 ↔ char_pei_shanshan_0456_01：cos 0.335 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_pei_yuhan_2300_01 ↔ char_xi_qingchuan_0618_01：cos 0.277 → 不同身份**
+- **char_pei_yuhan_2300_01 ↔ char_zhong_linger_0732_01：cos 0.142 → 不同身份**
+- **char_pei_yuhan_2300_01 ↔ char_hua_qingdai_1029_01：cos 0.137 → 不同身份**
+- **char_pei_yuhan_2300_01 ↔ char_tang_banxia_1156_01：cos 0.248 → 不同身份**
+- **char_pei_yuhan_2300_01 ↔ char_gu_weiyu_1321_01：cos 0.176 → 不同身份**
+- **char_pei_yuhan_2300_01 ↔ char_cheng_hongyu_1435_01：cos 0.157 → 不同身份**
+- **char_pei_yuhan_2300_01 ↔ char_hua_chuxia_1549_01：cos 0.071 → 不同身份**
+- **char_pei_yuhan_2300_01 ↔ char_pei_manshu_1701_01：cos 0.166 → 不同身份**
+- **char_pei_yuhan_2300_01 ↔ char_ye_nanqiao_1811_01：cos 0.115 → 不同身份**
+- **char_pei_yuhan_2300_01 ↔ char_murong_yuyan_1942_01：cos 0.252 → 不同身份**
+- **char_pei_yuhan_2300_01 ↔ char_nangong_lingjun_2054_01：cos 0.069 → 不同身份**
+- **char_qing_luo ↔ char_ray_ling：cos 0.034 → 不同身份**
+- **char_qing_luo ↔ char_runcha：cos 0.139 → 不同身份**
+- **char_qing_luo ↔ char_shen_zhilan：cos 0.095 → 不同身份**
+- **char_qing_luo ↔ char_su_xiaotang：cos 0.165 → 不同身份**
+- **char_qing_luo ↔ char_tang_mengli_2200_01：cos 0.244 → 不同身份**
+- **char_qing_luo ↔ char_wen_xiaorou_2140_01：cos 0.183 → 不同身份**
+- **char_qing_luo ↔ char_ye_muchen_2100_01：cos 0.234 → 不同身份**
+- **char_qing_luo ↔ char_yin_xinyue_2330_01：cos 0.233 → 不同身份**
+- **char_qing_luo ↔ char_zhao_ruoxi：cos 0.222 → 不同身份**
+- **char_qing_luo ↔ char_duo：cos 0.070 → 不同身份**
+- **char_qing_luo ↔ char_duo3_2：cos 0.157 → 不同身份**
+- **char_qing_luo ↔ char_cen_zhiwei_1936_01：cos 0.182 → 不同身份**
+- **char_qing_luo ↔ char_jiang_ruoli_2007_01：cos 0.237 → 不同身份**
+- **char_qing_luo ↔ char_xiaog3：cos 0.090 → 不同身份**
+- **char_qing_luo ↔ char_xi_manshu_2045_01：cos 0.243 → 不同身份**
+- **char_qing_luo ↔ char_huangfu_qingchuan_2104_01：cos 0.057 → 不同身份**
+- **char_qing_luo ↔ char_linghu_zhixia_2133_01：cos 0.131 → 不同身份**
+- **char_qing_luo ↔ char_qiao_weiyu_2134_01：cos 0.189 → 不同身份**
+- **char_qing_luo ↔ char_jiang_qinghuan_2203_01：cos 0.377 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qing_luo ↔ char_cen_youqing_2204_01：cos -0.004 → 不同身份**
+- **char_qing_luo ↔ char_zhong_xiaorou_2233_01：cos 0.288 → 不同身份**
+- **char_qing_luo ↔ char_tan_youqing_2234_01：cos 0.288 → 不同身份**
+- **char_qing_luo ↔ char_tantai_lingsu_2303_01：cos 0.296 → 不同身份**
+- **char_qing_luo ↔ char_qiao_qinghuan_2304_01：cos 0.296 → 不同身份**
+- **char_qing_luo ↔ char_chu_muchen_0004_01：cos 0.004 → 不同身份**
+- **char_qing_luo ↔ char_qiao_chaoyan_0004_01：cos 0.064 → 不同身份**
+- **char_qing_luo ↔ char_xue_qinghuan_0034_01：cos 0.021 → 不同身份**
+- **char_qing_luo ↔ char_tang_yuwei_0217_01：cos 0.402 → ⚠️ 存疑，待人工复核**
+- **char_qing_luo ↔ char_ouyang_chuxia_0250_01：cos 0.189 → 不同身份**
+- **char_qing_luo ↔ char_bai_zhiruo_0305_01：cos 0.242 → 不同身份**
+- **char_qing_luo ↔ char_pei_shanshan_0456_01：cos 0.376 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qing_luo ↔ char_xi_qingchuan_0618_01：cos 0.311 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qing_luo ↔ char_zhong_linger_0732_01：cos 0.193 → 不同身份**
+- **char_qing_luo ↔ char_hua_qingdai_1029_01：cos 0.307 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qing_luo ↔ char_tang_banxia_1156_01：cos 0.210 → 不同身份**
+- **char_qing_luo ↔ char_gu_weiyu_1321_01：cos 0.318 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qing_luo ↔ char_cheng_hongyu_1435_01：cos 0.261 → 不同身份**
+- **char_qing_luo ↔ char_hua_chuxia_1549_01：cos 0.151 → 不同身份**
+- **char_qing_luo ↔ char_pei_manshu_1701_01：cos 0.237 → 不同身份**
+- **char_qing_luo ↔ char_ye_nanqiao_1811_01：cos 0.254 → 不同身份**
+- **char_qing_luo ↔ char_murong_yuyan_1942_01：cos 0.375 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qing_luo ↔ char_nangong_lingjun_2054_01：cos 0.082 → 不同身份**
+- **char_ray_ling ↔ char_runcha：cos 0.015 → 不同身份**
+- **char_ray_ling ↔ char_shen_zhilan：cos 0.483 → ⚠️ 存疑，待人工复核**
+- **char_ray_ling ↔ char_su_xiaotang：cos 0.174 → 不同身份**
+- **char_ray_ling ↔ char_tang_mengli_2200_01：cos 0.093 → 不同身份**
+- **char_ray_ling ↔ char_wen_xiaorou_2140_01：cos 0.022 → 不同身份**
+- **char_ray_ling ↔ char_ye_muchen_2100_01：cos 0.028 → 不同身份**
+- **char_ray_ling ↔ char_yin_xinyue_2330_01：cos 0.043 → 不同身份**
+- **char_ray_ling ↔ char_zhao_ruoxi：cos 0.320 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ray_ling ↔ char_duo：cos 0.042 → 不同身份**
+- **char_ray_ling ↔ char_duo3_2：cos 0.122 → 不同身份**
+- **char_ray_ling ↔ char_cen_zhiwei_1936_01：cos 0.546 → ⚠️ 存疑，待人工复核**
+- **char_ray_ling ↔ char_jiang_ruoli_2007_01：cos 0.390 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ray_ling ↔ char_xiaog3：cos -0.080 → 不同身份**
+- **char_ray_ling ↔ char_xi_manshu_2045_01：cos 0.333 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ray_ling ↔ char_huangfu_qingchuan_2104_01：cos 0.505 → ⚠️ 存疑，待人工复核**
+- **char_ray_ling ↔ char_linghu_zhixia_2133_01：cos 0.479 → ⚠️ 存疑，待人工复核**
+- **char_ray_ling ↔ char_qiao_weiyu_2134_01：cos 0.433 → ⚠️ 存疑，待人工复核**
+- **char_ray_ling ↔ char_jiang_qinghuan_2203_01：cos 0.166 → 不同身份**
+- **char_ray_ling ↔ char_cen_youqing_2204_01：cos 0.222 → 不同身份**
+- **char_ray_ling ↔ char_zhong_xiaorou_2233_01：cos 0.344 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ray_ling ↔ char_tan_youqing_2234_01：cos 0.344 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ray_ling ↔ char_tantai_lingsu_2303_01：cos 0.308 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ray_ling ↔ char_qiao_qinghuan_2304_01：cos 0.308 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ray_ling ↔ char_chu_muchen_0004_01：cos -0.004 → 不同身份**
+- **char_ray_ling ↔ char_qiao_chaoyan_0004_01：cos -0.084 → 不同身份**
+- **char_ray_ling ↔ char_xue_qinghuan_0034_01：cos -0.033 → 不同身份**
+- **char_ray_ling ↔ char_tang_yuwei_0217_01：cos 0.255 → 不同身份**
+- **char_ray_ling ↔ char_ouyang_chuxia_0250_01：cos 0.229 → 不同身份**
+- **char_ray_ling ↔ char_bai_zhiruo_0305_01：cos 0.281 → 不同身份**
+- **char_ray_ling ↔ char_pei_shanshan_0456_01：cos 0.278 → 不同身份**
+- **char_ray_ling ↔ char_xi_qingchuan_0618_01：cos 0.277 → 不同身份**
+- **char_ray_ling ↔ char_zhong_linger_0732_01：cos 0.448 → ⚠️ 存疑，待人工复核**
+- **char_ray_ling ↔ char_hua_qingdai_1029_01：cos 0.326 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ray_ling ↔ char_tang_banxia_1156_01：cos 0.294 → 不同身份**
+- **char_ray_ling ↔ char_gu_weiyu_1321_01：cos 0.334 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ray_ling ↔ char_cheng_hongyu_1435_01：cos 0.199 → 不同身份**
+- **char_ray_ling ↔ char_hua_chuxia_1549_01：cos 0.261 → 不同身份**
+- **char_ray_ling ↔ char_pei_manshu_1701_01：cos 0.324 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ray_ling ↔ char_ye_nanqiao_1811_01：cos 0.190 → 不同身份**
+- **char_ray_ling ↔ char_murong_yuyan_1942_01：cos 0.126 → 不同身份**
+- **char_ray_ling ↔ char_nangong_lingjun_2054_01：cos 0.396 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_runcha ↔ char_shen_zhilan：cos 0.013 → 不同身份**
+- **char_runcha ↔ char_su_xiaotang：cos 0.167 → 不同身份**
+- **char_runcha ↔ char_tang_mengli_2200_01：cos 0.015 → 不同身份**
+- **char_runcha ↔ char_wen_xiaorou_2140_01：cos 0.023 → 不同身份**
+- **char_runcha ↔ char_ye_muchen_2100_01：cos 0.099 → 不同身份**
+- **char_runcha ↔ char_yin_xinyue_2330_01：cos 0.068 → 不同身份**
+- **char_runcha ↔ char_zhao_ruoxi：cos 0.025 → 不同身份**
+- **char_runcha ↔ char_duo：cos 0.194 → 不同身份**
+- **char_runcha ↔ char_duo3_2：cos 0.138 → 不同身份**
+- **char_runcha ↔ char_cen_zhiwei_1936_01：cos 0.018 → 不同身份**
+- **char_runcha ↔ char_jiang_ruoli_2007_01：cos 0.063 → 不同身份**
+- **char_runcha ↔ char_xiaog3：cos 0.214 → 不同身份**
+- **char_runcha ↔ char_xi_manshu_2045_01：cos 0.099 → 不同身份**
+- **char_runcha ↔ char_huangfu_qingchuan_2104_01：cos 0.018 → 不同身份**
+- **char_runcha ↔ char_linghu_zhixia_2133_01：cos 0.032 → 不同身份**
+- **char_runcha ↔ char_qiao_weiyu_2134_01：cos 0.105 → 不同身份**
+- **char_runcha ↔ char_jiang_qinghuan_2203_01：cos 0.017 → 不同身份**
+- **char_runcha ↔ char_cen_youqing_2204_01：cos -0.115 → 不同身份**
+- **char_runcha ↔ char_zhong_xiaorou_2233_01：cos 0.119 → 不同身份**
+- **char_runcha ↔ char_tan_youqing_2234_01：cos 0.119 → 不同身份**
+- **char_runcha ↔ char_tantai_lingsu_2303_01：cos 0.128 → 不同身份**
+- **char_runcha ↔ char_qiao_qinghuan_2304_01：cos 0.128 → 不同身份**
+- **char_runcha ↔ char_chu_muchen_0004_01：cos 0.008 → 不同身份**
+- **char_runcha ↔ char_qiao_chaoyan_0004_01：cos 0.033 → 不同身份**
+- **char_runcha ↔ char_xue_qinghuan_0034_01：cos 0.060 → 不同身份**
+- **char_runcha ↔ char_tang_yuwei_0217_01：cos -0.016 → 不同身份**
+- **char_runcha ↔ char_ouyang_chuxia_0250_01：cos 0.015 → 不同身份**
+- **char_runcha ↔ char_bai_zhiruo_0305_01：cos 0.013 → 不同身份**
+- **char_runcha ↔ char_pei_shanshan_0456_01：cos 0.075 → 不同身份**
+- **char_runcha ↔ char_xi_qingchuan_0618_01：cos 0.068 → 不同身份**
+- **char_runcha ↔ char_zhong_linger_0732_01：cos -0.013 → 不同身份**
+- **char_runcha ↔ char_hua_qingdai_1029_01：cos 0.071 → 不同身份**
+- **char_runcha ↔ char_tang_banxia_1156_01：cos 0.091 → 不同身份**
+- **char_runcha ↔ char_gu_weiyu_1321_01：cos 0.071 → 不同身份**
+- **char_runcha ↔ char_cheng_hongyu_1435_01：cos -0.063 → 不同身份**
+- **char_runcha ↔ char_hua_chuxia_1549_01：cos 0.087 → 不同身份**
+- **char_runcha ↔ char_pei_manshu_1701_01：cos 0.050 → 不同身份**
+- **char_runcha ↔ char_ye_nanqiao_1811_01：cos 0.074 → 不同身份**
+- **char_runcha ↔ char_murong_yuyan_1942_01：cos 0.168 → 不同身份**
+- **char_runcha ↔ char_nangong_lingjun_2054_01：cos -0.026 → 不同身份**
+- **char_shen_zhilan ↔ char_su_xiaotang：cos 0.230 → 不同身份**
+- **char_shen_zhilan ↔ char_tang_mengli_2200_01：cos 0.079 → 不同身份**
+- **char_shen_zhilan ↔ char_wen_xiaorou_2140_01：cos 0.060 → 不同身份**
+- **char_shen_zhilan ↔ char_ye_muchen_2100_01：cos 0.112 → 不同身份**
+- **char_shen_zhilan ↔ char_yin_xinyue_2330_01：cos 0.037 → 不同身份**
+- **char_shen_zhilan ↔ char_zhao_ruoxi：cos 0.486 → ⚠️ 存疑，待人工复核**
+- **char_shen_zhilan ↔ char_duo：cos 0.040 → 不同身份**
+- **char_shen_zhilan ↔ char_duo3_2：cos 0.236 → 不同身份**
+- **char_shen_zhilan ↔ char_cen_zhiwei_1936_01：cos 0.441 → ⚠️ 存疑，待人工复核**
+- **char_shen_zhilan ↔ char_jiang_ruoli_2007_01：cos 0.479 → ⚠️ 存疑，待人工复核**
+- **char_shen_zhilan ↔ char_xiaog3：cos -0.099 → 不同身份**
+- **char_shen_zhilan ↔ char_xi_manshu_2045_01：cos 0.351 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_zhilan ↔ char_huangfu_qingchuan_2104_01：cos 0.392 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_zhilan ↔ char_linghu_zhixia_2133_01：cos 0.404 → ⚠️ 存疑，待人工复核**
+- **char_shen_zhilan ↔ char_qiao_weiyu_2134_01：cos 0.470 → ⚠️ 存疑，待人工复核**
+- **char_shen_zhilan ↔ char_jiang_qinghuan_2203_01：cos 0.221 → 不同身份**
+- **char_shen_zhilan ↔ char_cen_youqing_2204_01：cos 0.247 → 不同身份**
+- **char_shen_zhilan ↔ char_zhong_xiaorou_2233_01：cos 0.359 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_zhilan ↔ char_tan_youqing_2234_01：cos 0.359 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_zhilan ↔ char_tantai_lingsu_2303_01：cos 0.342 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_zhilan ↔ char_qiao_qinghuan_2304_01：cos 0.342 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_zhilan ↔ char_chu_muchen_0004_01：cos 0.005 → 不同身份**
+- **char_shen_zhilan ↔ char_qiao_chaoyan_0004_01：cos -0.045 → 不同身份**
+- **char_shen_zhilan ↔ char_xue_qinghuan_0034_01：cos -0.015 → 不同身份**
+- **char_shen_zhilan ↔ char_tang_yuwei_0217_01：cos 0.283 → 不同身份**
+- **char_shen_zhilan ↔ char_ouyang_chuxia_0250_01：cos 0.323 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_zhilan ↔ char_bai_zhiruo_0305_01：cos 0.336 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_zhilan ↔ char_pei_shanshan_0456_01：cos 0.301 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_zhilan ↔ char_xi_qingchuan_0618_01：cos 0.260 → 不同身份**
+- **char_shen_zhilan ↔ char_zhong_linger_0732_01：cos 0.446 → ⚠️ 存疑，待人工复核**
+- **char_shen_zhilan ↔ char_hua_qingdai_1029_01：cos 0.308 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_zhilan ↔ char_tang_banxia_1156_01：cos 0.336 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_zhilan ↔ char_gu_weiyu_1321_01：cos 0.284 → 不同身份**
+- **char_shen_zhilan ↔ char_cheng_hongyu_1435_01：cos 0.256 → 不同身份**
+- **char_shen_zhilan ↔ char_hua_chuxia_1549_01：cos 0.385 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_zhilan ↔ char_pei_manshu_1701_01：cos 0.382 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_zhilan ↔ char_ye_nanqiao_1811_01：cos 0.326 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_shen_zhilan ↔ char_murong_yuyan_1942_01：cos 0.228 → 不同身份**
+- **char_shen_zhilan ↔ char_nangong_lingjun_2054_01：cos 0.469 → ⚠️ 存疑，待人工复核**
+- **char_su_xiaotang ↔ char_tang_mengli_2200_01：cos 0.029 → 不同身份**
+- **char_su_xiaotang ↔ char_wen_xiaorou_2140_01：cos -0.001 → 不同身份**
+- **char_su_xiaotang ↔ char_ye_muchen_2100_01：cos 0.014 → 不同身份**
+- **char_su_xiaotang ↔ char_yin_xinyue_2330_01：cos 0.016 → 不同身份**
+- **char_su_xiaotang ↔ char_zhao_ruoxi：cos 0.152 → 不同身份**
+- **char_su_xiaotang ↔ char_duo：cos 0.128 → 不同身份**
+- **char_su_xiaotang ↔ char_duo3_2：cos 0.125 → 不同身份**
+- **char_su_xiaotang ↔ char_cen_zhiwei_1936_01：cos 0.216 → 不同身份**
+- **char_su_xiaotang ↔ char_jiang_ruoli_2007_01：cos 0.248 → 不同身份**
+- **char_su_xiaotang ↔ char_xiaog3：cos 0.076 → 不同身份**
+- **char_su_xiaotang ↔ char_xi_manshu_2045_01：cos 0.064 → 不同身份**
+- **char_su_xiaotang ↔ char_huangfu_qingchuan_2104_01：cos 0.250 → 不同身份**
+- **char_su_xiaotang ↔ char_linghu_zhixia_2133_01：cos 0.191 → 不同身份**
+- **char_su_xiaotang ↔ char_qiao_weiyu_2134_01：cos 0.259 → 不同身份**
+- **char_su_xiaotang ↔ char_jiang_qinghuan_2203_01：cos 0.077 → 不同身份**
+- **char_su_xiaotang ↔ char_cen_youqing_2204_01：cos 0.033 → 不同身份**
+- **char_su_xiaotang ↔ char_zhong_xiaorou_2233_01：cos 0.233 → 不同身份**
+- **char_su_xiaotang ↔ char_tan_youqing_2234_01：cos 0.233 → 不同身份**
+- **char_su_xiaotang ↔ char_tantai_lingsu_2303_01：cos 0.234 → 不同身份**
+- **char_su_xiaotang ↔ char_qiao_qinghuan_2304_01：cos 0.234 → 不同身份**
+- **char_su_xiaotang ↔ char_chu_muchen_0004_01：cos -0.000 → 不同身份**
+- **char_su_xiaotang ↔ char_qiao_chaoyan_0004_01：cos -0.025 → 不同身份**
+- **char_su_xiaotang ↔ char_xue_qinghuan_0034_01：cos 0.010 → 不同身份**
+- **char_su_xiaotang ↔ char_tang_yuwei_0217_01：cos 0.110 → 不同身份**
+- **char_su_xiaotang ↔ char_ouyang_chuxia_0250_01：cos 0.163 → 不同身份**
+- **char_su_xiaotang ↔ char_bai_zhiruo_0305_01：cos 0.111 → 不同身份**
+- **char_su_xiaotang ↔ char_pei_shanshan_0456_01：cos 0.073 → 不同身份**
+- **char_su_xiaotang ↔ char_xi_qingchuan_0618_01：cos 0.149 → 不同身份**
+- **char_su_xiaotang ↔ char_zhong_linger_0732_01：cos 0.174 → 不同身份**
+- **char_su_xiaotang ↔ char_hua_qingdai_1029_01：cos 0.130 → 不同身份**
+- **char_su_xiaotang ↔ char_tang_banxia_1156_01：cos 0.141 → 不同身份**
+- **char_su_xiaotang ↔ char_gu_weiyu_1321_01：cos 0.213 → 不同身份**
+- **char_su_xiaotang ↔ char_cheng_hongyu_1435_01：cos 0.030 → 不同身份**
+- **char_su_xiaotang ↔ char_hua_chuxia_1549_01：cos 0.131 → 不同身份**
+- **char_su_xiaotang ↔ char_pei_manshu_1701_01：cos 0.321 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_su_xiaotang ↔ char_ye_nanqiao_1811_01：cos 0.154 → 不同身份**
+- **char_su_xiaotang ↔ char_murong_yuyan_1942_01：cos 0.106 → 不同身份**
+- **char_su_xiaotang ↔ char_nangong_lingjun_2054_01：cos 0.147 → 不同身份**
+- **char_tang_mengli_2200_01 ↔ char_wen_xiaorou_2140_01：cos 0.741 → 同一身份**
+- **char_tang_mengli_2200_01 ↔ char_ye_muchen_2100_01：cos 0.703 → 同一身份**
+- **char_tang_mengli_2200_01 ↔ char_yin_xinyue_2330_01：cos 0.766 → 同一身份**
+- **char_tang_mengli_2200_01 ↔ char_zhao_ruoxi：cos 0.178 → 不同身份**
+- **char_tang_mengli_2200_01 ↔ char_duo：cos 0.200 → 不同身份**
+- **char_tang_mengli_2200_01 ↔ char_duo3_2：cos 0.100 → 不同身份**
+- **char_tang_mengli_2200_01 ↔ char_cen_zhiwei_1936_01：cos 0.246 → 不同身份**
+- **char_tang_mengli_2200_01 ↔ char_jiang_ruoli_2007_01：cos 0.092 → 不同身份**
+- **char_tang_mengli_2200_01 ↔ char_xiaog3：cos 0.347 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tang_mengli_2200_01 ↔ char_xi_manshu_2045_01：cos 0.159 → 不同身份**
+- **char_tang_mengli_2200_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.173 → 不同身份**
+- **char_tang_mengli_2200_01 ↔ char_linghu_zhixia_2133_01：cos 0.183 → 不同身份**
+- **char_tang_mengli_2200_01 ↔ char_qiao_weiyu_2134_01：cos 0.078 → 不同身份**
+- **char_tang_mengli_2200_01 ↔ char_jiang_qinghuan_2203_01：cos 0.262 → 不同身份**
+- **char_tang_mengli_2200_01 ↔ char_cen_youqing_2204_01：cos -0.014 → 不同身份**
+- **char_tang_mengli_2200_01 ↔ char_zhong_xiaorou_2233_01：cos 0.227 → 不同身份**
+- **char_tang_mengli_2200_01 ↔ char_tan_youqing_2234_01：cos 0.227 → 不同身份**
+- **char_tang_mengli_2200_01 ↔ char_tantai_lingsu_2303_01：cos 0.312 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tang_mengli_2200_01 ↔ char_qiao_qinghuan_2304_01：cos 0.312 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tang_mengli_2200_01 ↔ char_chu_muchen_0004_01：cos -0.039 → 不同身份**
+- **char_tang_mengli_2200_01 ↔ char_qiao_chaoyan_0004_01：cos -0.028 → 不同身份**
+- **char_tang_mengli_2200_01 ↔ char_xue_qinghuan_0034_01：cos 0.034 → 不同身份**
+- **char_tang_mengli_2200_01 ↔ char_tang_yuwei_0217_01：cos 0.237 → 不同身份**
+- **char_tang_mengli_2200_01 ↔ char_ouyang_chuxia_0250_01：cos 0.159 → 不同身份**
+- **char_tang_mengli_2200_01 ↔ char_bai_zhiruo_0305_01：cos 0.401 → ⚠️ 存疑，待人工复核**
+- **char_tang_mengli_2200_01 ↔ char_pei_shanshan_0456_01：cos 0.299 → 不同身份**
+- **char_tang_mengli_2200_01 ↔ char_xi_qingchuan_0618_01：cos 0.344 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tang_mengli_2200_01 ↔ char_zhong_linger_0732_01：cos 0.192 → 不同身份**
+- **char_tang_mengli_2200_01 ↔ char_hua_qingdai_1029_01：cos 0.262 → 不同身份**
+- **char_tang_mengli_2200_01 ↔ char_tang_banxia_1156_01：cos 0.287 → 不同身份**
+- **char_tang_mengli_2200_01 ↔ char_gu_weiyu_1321_01：cos 0.253 → 不同身份**
+- **char_tang_mengli_2200_01 ↔ char_cheng_hongyu_1435_01：cos 0.172 → 不同身份**
+- **char_tang_mengli_2200_01 ↔ char_hua_chuxia_1549_01：cos 0.066 → 不同身份**
+- **char_tang_mengli_2200_01 ↔ char_pei_manshu_1701_01：cos 0.332 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tang_mengli_2200_01 ↔ char_ye_nanqiao_1811_01：cos 0.247 → 不同身份**
+- **char_tang_mengli_2200_01 ↔ char_murong_yuyan_1942_01：cos 0.227 → 不同身份**
+- **char_tang_mengli_2200_01 ↔ char_nangong_lingjun_2054_01：cos 0.174 → 不同身份**
+- **char_wen_xiaorou_2140_01 ↔ char_ye_muchen_2100_01：cos 0.741 → 同一身份**
+- **char_wen_xiaorou_2140_01 ↔ char_yin_xinyue_2330_01：cos 0.745 → 同一身份**
+- **char_wen_xiaorou_2140_01 ↔ char_zhao_ruoxi：cos 0.100 → 不同身份**
+- **char_wen_xiaorou_2140_01 ↔ char_duo：cos 0.081 → 不同身份**
+- **char_wen_xiaorou_2140_01 ↔ char_duo3_2：cos 0.131 → 不同身份**
+- **char_wen_xiaorou_2140_01 ↔ char_cen_zhiwei_1936_01：cos 0.142 → 不同身份**
+- **char_wen_xiaorou_2140_01 ↔ char_jiang_ruoli_2007_01：cos 0.132 → 不同身份**
+- **char_wen_xiaorou_2140_01 ↔ char_xiaog3：cos 0.312 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_xiaorou_2140_01 ↔ char_xi_manshu_2045_01：cos 0.174 → 不同身份**
+- **char_wen_xiaorou_2140_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.149 → 不同身份**
+- **char_wen_xiaorou_2140_01 ↔ char_linghu_zhixia_2133_01：cos 0.192 → 不同身份**
+- **char_wen_xiaorou_2140_01 ↔ char_qiao_weiyu_2134_01：cos 0.071 → 不同身份**
+- **char_wen_xiaorou_2140_01 ↔ char_jiang_qinghuan_2203_01：cos 0.260 → 不同身份**
+- **char_wen_xiaorou_2140_01 ↔ char_cen_youqing_2204_01：cos -0.021 → 不同身份**
+- **char_wen_xiaorou_2140_01 ↔ char_zhong_xiaorou_2233_01：cos 0.209 → 不同身份**
+- **char_wen_xiaorou_2140_01 ↔ char_tan_youqing_2234_01：cos 0.209 → 不同身份**
+- **char_wen_xiaorou_2140_01 ↔ char_tantai_lingsu_2303_01：cos 0.353 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_xiaorou_2140_01 ↔ char_qiao_qinghuan_2304_01：cos 0.353 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_xiaorou_2140_01 ↔ char_chu_muchen_0004_01：cos -0.017 → 不同身份**
+- **char_wen_xiaorou_2140_01 ↔ char_qiao_chaoyan_0004_01：cos -0.042 → 不同身份**
+- **char_wen_xiaorou_2140_01 ↔ char_xue_qinghuan_0034_01：cos -0.025 → 不同身份**
+- **char_wen_xiaorou_2140_01 ↔ char_tang_yuwei_0217_01：cos 0.230 → 不同身份**
+- **char_wen_xiaorou_2140_01 ↔ char_ouyang_chuxia_0250_01：cos 0.153 → 不同身份**
+- **char_wen_xiaorou_2140_01 ↔ char_bai_zhiruo_0305_01：cos 0.345 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_xiaorou_2140_01 ↔ char_pei_shanshan_0456_01：cos 0.263 → 不同身份**
+- **char_wen_xiaorou_2140_01 ↔ char_xi_qingchuan_0618_01：cos 0.295 → 不同身份**
+- **char_wen_xiaorou_2140_01 ↔ char_zhong_linger_0732_01：cos 0.224 → 不同身份**
+- **char_wen_xiaorou_2140_01 ↔ char_hua_qingdai_1029_01：cos 0.199 → 不同身份**
+- **char_wen_xiaorou_2140_01 ↔ char_tang_banxia_1156_01：cos 0.327 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_wen_xiaorou_2140_01 ↔ char_gu_weiyu_1321_01：cos 0.183 → 不同身份**
+- **char_wen_xiaorou_2140_01 ↔ char_cheng_hongyu_1435_01：cos 0.172 → 不同身份**
+- **char_wen_xiaorou_2140_01 ↔ char_hua_chuxia_1549_01：cos 0.086 → 不同身份**
+- **char_wen_xiaorou_2140_01 ↔ char_pei_manshu_1701_01：cos 0.204 → 不同身份**
+- **char_wen_xiaorou_2140_01 ↔ char_ye_nanqiao_1811_01：cos 0.178 → 不同身份**
+- **char_wen_xiaorou_2140_01 ↔ char_murong_yuyan_1942_01：cos 0.249 → 不同身份**
+- **char_wen_xiaorou_2140_01 ↔ char_nangong_lingjun_2054_01：cos 0.152 → 不同身份**
+- **char_ye_muchen_2100_01 ↔ char_yin_xinyue_2330_01：cos 0.770 → 同一身份**
+- **char_ye_muchen_2100_01 ↔ char_zhao_ruoxi：cos 0.177 → 不同身份**
+- **char_ye_muchen_2100_01 ↔ char_duo：cos 0.147 → 不同身份**
+- **char_ye_muchen_2100_01 ↔ char_duo3_2：cos 0.141 → 不同身份**
+- **char_ye_muchen_2100_01 ↔ char_cen_zhiwei_1936_01：cos 0.222 → 不同身份**
+- **char_ye_muchen_2100_01 ↔ char_jiang_ruoli_2007_01：cos 0.192 → 不同身份**
+- **char_ye_muchen_2100_01 ↔ char_xiaog3：cos 0.307 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ye_muchen_2100_01 ↔ char_xi_manshu_2045_01：cos 0.252 → 不同身份**
+- **char_ye_muchen_2100_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.211 → 不同身份**
+- **char_ye_muchen_2100_01 ↔ char_linghu_zhixia_2133_01：cos 0.233 → 不同身份**
+- **char_ye_muchen_2100_01 ↔ char_qiao_weiyu_2134_01：cos 0.137 → 不同身份**
+- **char_ye_muchen_2100_01 ↔ char_jiang_qinghuan_2203_01：cos 0.337 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ye_muchen_2100_01 ↔ char_cen_youqing_2204_01：cos -0.025 → 不同身份**
+- **char_ye_muchen_2100_01 ↔ char_zhong_xiaorou_2233_01：cos 0.296 → 不同身份**
+- **char_ye_muchen_2100_01 ↔ char_tan_youqing_2234_01：cos 0.296 → 不同身份**
+- **char_ye_muchen_2100_01 ↔ char_tantai_lingsu_2303_01：cos 0.361 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ye_muchen_2100_01 ↔ char_qiao_qinghuan_2304_01：cos 0.361 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ye_muchen_2100_01 ↔ char_chu_muchen_0004_01：cos -0.030 → 不同身份**
+- **char_ye_muchen_2100_01 ↔ char_qiao_chaoyan_0004_01：cos -0.030 → 不同身份**
+- **char_ye_muchen_2100_01 ↔ char_xue_qinghuan_0034_01：cos 0.000 → 不同身份**
+- **char_ye_muchen_2100_01 ↔ char_tang_yuwei_0217_01：cos 0.221 → 不同身份**
+- **char_ye_muchen_2100_01 ↔ char_ouyang_chuxia_0250_01：cos 0.151 → 不同身份**
+- **char_ye_muchen_2100_01 ↔ char_bai_zhiruo_0305_01：cos 0.347 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ye_muchen_2100_01 ↔ char_pei_shanshan_0456_01：cos 0.381 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ye_muchen_2100_01 ↔ char_xi_qingchuan_0618_01：cos 0.306 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ye_muchen_2100_01 ↔ char_zhong_linger_0732_01：cos 0.188 → 不同身份**
+- **char_ye_muchen_2100_01 ↔ char_hua_qingdai_1029_01：cos 0.256 → 不同身份**
+- **char_ye_muchen_2100_01 ↔ char_tang_banxia_1156_01：cos 0.344 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ye_muchen_2100_01 ↔ char_gu_weiyu_1321_01：cos 0.238 → 不同身份**
+- **char_ye_muchen_2100_01 ↔ char_cheng_hongyu_1435_01：cos 0.169 → 不同身份**
+- **char_ye_muchen_2100_01 ↔ char_hua_chuxia_1549_01：cos 0.114 → 不同身份**
+- **char_ye_muchen_2100_01 ↔ char_pei_manshu_1701_01：cos 0.231 → 不同身份**
+- **char_ye_muchen_2100_01 ↔ char_ye_nanqiao_1811_01：cos 0.261 → 不同身份**
+- **char_ye_muchen_2100_01 ↔ char_murong_yuyan_1942_01：cos 0.365 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_ye_muchen_2100_01 ↔ char_nangong_lingjun_2054_01：cos 0.166 → 不同身份**
+- **char_yin_xinyue_2330_01 ↔ char_zhao_ruoxi：cos 0.153 → 不同身份**
+- **char_yin_xinyue_2330_01 ↔ char_duo：cos 0.193 → 不同身份**
+- **char_yin_xinyue_2330_01 ↔ char_duo3_2：cos 0.164 → 不同身份**
+- **char_yin_xinyue_2330_01 ↔ char_cen_zhiwei_1936_01：cos 0.213 → 不同身份**
+- **char_yin_xinyue_2330_01 ↔ char_jiang_ruoli_2007_01：cos 0.113 → 不同身份**
+- **char_yin_xinyue_2330_01 ↔ char_xiaog3：cos 0.312 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yin_xinyue_2330_01 ↔ char_xi_manshu_2045_01：cos 0.144 → 不同身份**
+- **char_yin_xinyue_2330_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.178 → 不同身份**
+- **char_yin_xinyue_2330_01 ↔ char_linghu_zhixia_2133_01：cos 0.162 → 不同身份**
+- **char_yin_xinyue_2330_01 ↔ char_qiao_weiyu_2134_01：cos 0.054 → 不同身份**
+- **char_yin_xinyue_2330_01 ↔ char_jiang_qinghuan_2203_01：cos 0.341 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yin_xinyue_2330_01 ↔ char_cen_youqing_2204_01：cos 0.002 → 不同身份**
+- **char_yin_xinyue_2330_01 ↔ char_zhong_xiaorou_2233_01：cos 0.233 → 不同身份**
+- **char_yin_xinyue_2330_01 ↔ char_tan_youqing_2234_01：cos 0.233 → 不同身份**
+- **char_yin_xinyue_2330_01 ↔ char_tantai_lingsu_2303_01：cos 0.317 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yin_xinyue_2330_01 ↔ char_qiao_qinghuan_2304_01：cos 0.317 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yin_xinyue_2330_01 ↔ char_chu_muchen_0004_01：cos -0.010 → 不同身份**
+- **char_yin_xinyue_2330_01 ↔ char_qiao_chaoyan_0004_01：cos -0.012 → 不同身份**
+- **char_yin_xinyue_2330_01 ↔ char_xue_qinghuan_0034_01：cos 0.003 → 不同身份**
+- **char_yin_xinyue_2330_01 ↔ char_tang_yuwei_0217_01：cos 0.194 → 不同身份**
+- **char_yin_xinyue_2330_01 ↔ char_ouyang_chuxia_0250_01：cos 0.129 → 不同身份**
+- **char_yin_xinyue_2330_01 ↔ char_bai_zhiruo_0305_01：cos 0.320 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yin_xinyue_2330_01 ↔ char_pei_shanshan_0456_01：cos 0.343 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yin_xinyue_2330_01 ↔ char_xi_qingchuan_0618_01：cos 0.320 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yin_xinyue_2330_01 ↔ char_zhong_linger_0732_01：cos 0.165 → 不同身份**
+- **char_yin_xinyue_2330_01 ↔ char_hua_qingdai_1029_01：cos 0.200 → 不同身份**
+- **char_yin_xinyue_2330_01 ↔ char_tang_banxia_1156_01：cos 0.274 → 不同身份**
+- **char_yin_xinyue_2330_01 ↔ char_gu_weiyu_1321_01：cos 0.246 → 不同身份**
+- **char_yin_xinyue_2330_01 ↔ char_cheng_hongyu_1435_01：cos 0.177 → 不同身份**
+- **char_yin_xinyue_2330_01 ↔ char_hua_chuxia_1549_01：cos 0.082 → 不同身份**
+- **char_yin_xinyue_2330_01 ↔ char_pei_manshu_1701_01：cos 0.228 → 不同身份**
+- **char_yin_xinyue_2330_01 ↔ char_ye_nanqiao_1811_01：cos 0.192 → 不同身份**
+- **char_yin_xinyue_2330_01 ↔ char_murong_yuyan_1942_01：cos 0.318 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_yin_xinyue_2330_01 ↔ char_nangong_lingjun_2054_01：cos 0.115 → 不同身份**
+- **char_zhao_ruoxi ↔ char_duo：cos 0.143 → 不同身份**
+- **char_zhao_ruoxi ↔ char_duo3_2：cos 0.100 → 不同身份**
+- **char_zhao_ruoxi ↔ char_cen_zhiwei_1936_01：cos 0.514 → ⚠️ 存疑，待人工复核**
+- **char_zhao_ruoxi ↔ char_jiang_ruoli_2007_01：cos 0.452 → ⚠️ 存疑，待人工复核**
+- **char_zhao_ruoxi ↔ char_xiaog3：cos -0.039 → 不同身份**
+- **char_zhao_ruoxi ↔ char_xi_manshu_2045_01：cos 0.481 → ⚠️ 存疑，待人工复核**
+- **char_zhao_ruoxi ↔ char_huangfu_qingchuan_2104_01：cos 0.402 → ⚠️ 存疑，待人工复核**
+- **char_zhao_ruoxi ↔ char_linghu_zhixia_2133_01：cos 0.388 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_zhao_ruoxi ↔ char_qiao_weiyu_2134_01：cos 0.482 → ⚠️ 存疑，待人工复核**
+- **char_zhao_ruoxi ↔ char_jiang_qinghuan_2203_01：cos 0.384 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_zhao_ruoxi ↔ char_cen_youqing_2204_01：cos 0.286 → 不同身份**
+- **char_zhao_ruoxi ↔ char_zhong_xiaorou_2233_01：cos 0.494 → ⚠️ 存疑，待人工复核**
+- **char_zhao_ruoxi ↔ char_tan_youqing_2234_01：cos 0.494 → ⚠️ 存疑，待人工复核**
+- **char_zhao_ruoxi ↔ char_tantai_lingsu_2303_01：cos 0.372 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_zhao_ruoxi ↔ char_qiao_qinghuan_2304_01：cos 0.372 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_zhao_ruoxi ↔ char_chu_muchen_0004_01：cos -0.076 → 不同身份**
+- **char_zhao_ruoxi ↔ char_qiao_chaoyan_0004_01：cos -0.015 → 不同身份**
+- **char_zhao_ruoxi ↔ char_xue_qinghuan_0034_01：cos 0.018 → 不同身份**
+- **char_zhao_ruoxi ↔ char_tang_yuwei_0217_01：cos 0.378 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_zhao_ruoxi ↔ char_ouyang_chuxia_0250_01：cos 0.317 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_zhao_ruoxi ↔ char_bai_zhiruo_0305_01：cos 0.461 → ⚠️ 存疑，待人工复核**
+- **char_zhao_ruoxi ↔ char_pei_shanshan_0456_01：cos 0.434 → ⚠️ 存疑，待人工复核**
+- **char_zhao_ruoxi ↔ char_xi_qingchuan_0618_01：cos 0.403 → ⚠️ 存疑，待人工复核**
+- **char_zhao_ruoxi ↔ char_zhong_linger_0732_01：cos 0.390 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_zhao_ruoxi ↔ char_hua_qingdai_1029_01：cos 0.412 → ⚠️ 存疑，待人工复核**
+- **char_zhao_ruoxi ↔ char_tang_banxia_1156_01：cos 0.449 → ⚠️ 存疑，待人工复核**
+- **char_zhao_ruoxi ↔ char_gu_weiyu_1321_01：cos 0.467 → ⚠️ 存疑，待人工复核**
+- **char_zhao_ruoxi ↔ char_cheng_hongyu_1435_01：cos 0.421 → ⚠️ 存疑，待人工复核**
+- **char_zhao_ruoxi ↔ char_hua_chuxia_1549_01：cos 0.464 → ⚠️ 存疑，待人工复核**
+- **char_zhao_ruoxi ↔ char_pei_manshu_1701_01：cos 0.442 → ⚠️ 存疑，待人工复核**
+- **char_zhao_ruoxi ↔ char_ye_nanqiao_1811_01：cos 0.395 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_zhao_ruoxi ↔ char_murong_yuyan_1942_01：cos 0.313 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_zhao_ruoxi ↔ char_nangong_lingjun_2054_01：cos 0.354 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_duo ↔ char_duo3_2：cos 0.056 → 不同身份**
+- **char_duo ↔ char_cen_zhiwei_1936_01：cos 0.156 → 不同身份**
+- **char_duo ↔ char_jiang_ruoli_2007_01：cos 0.097 → 不同身份**
+- **char_duo ↔ char_xiaog3：cos 0.061 → 不同身份**
+- **char_duo ↔ char_xi_manshu_2045_01：cos 0.103 → 不同身份**
+- **char_duo ↔ char_huangfu_qingchuan_2104_01：cos 0.156 → 不同身份**
+- **char_duo ↔ char_linghu_zhixia_2133_01：cos 0.035 → 不同身份**
+- **char_duo ↔ char_qiao_weiyu_2134_01：cos 0.102 → 不同身份**
+- **char_duo ↔ char_jiang_qinghuan_2203_01：cos 0.206 → 不同身份**
+- **char_duo ↔ char_cen_youqing_2204_01：cos 0.116 → 不同身份**
+- **char_duo ↔ char_zhong_xiaorou_2233_01：cos 0.082 → 不同身份**
+- **char_duo ↔ char_tan_youqing_2234_01：cos 0.082 → 不同身份**
+- **char_duo ↔ char_tantai_lingsu_2303_01：cos 0.324 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_duo ↔ char_qiao_qinghuan_2304_01：cos 0.324 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_duo ↔ char_chu_muchen_0004_01：cos 0.002 → 不同身份**
+- **char_duo ↔ char_qiao_chaoyan_0004_01：cos -0.035 → 不同身份**
+- **char_duo ↔ char_xue_qinghuan_0034_01：cos 0.064 → 不同身份**
+- **char_duo ↔ char_tang_yuwei_0217_01：cos 0.138 → 不同身份**
+- **char_duo ↔ char_ouyang_chuxia_0250_01：cos 0.138 → 不同身份**
+- **char_duo ↔ char_bai_zhiruo_0305_01：cos 0.203 → 不同身份**
+- **char_duo ↔ char_pei_shanshan_0456_01：cos 0.187 → 不同身份**
+- **char_duo ↔ char_xi_qingchuan_0618_01：cos 0.194 → 不同身份**
+- **char_duo ↔ char_zhong_linger_0732_01：cos 0.153 → 不同身份**
+- **char_duo ↔ char_hua_qingdai_1029_01：cos 0.247 → 不同身份**
+- **char_duo ↔ char_tang_banxia_1156_01：cos 0.269 → 不同身份**
+- **char_duo ↔ char_gu_weiyu_1321_01：cos 0.255 → 不同身份**
+- **char_duo ↔ char_cheng_hongyu_1435_01：cos 0.112 → 不同身份**
+- **char_duo ↔ char_hua_chuxia_1549_01：cos 0.158 → 不同身份**
+- **char_duo ↔ char_pei_manshu_1701_01：cos 0.108 → 不同身份**
+- **char_duo ↔ char_ye_nanqiao_1811_01：cos 0.137 → 不同身份**
+- **char_duo ↔ char_murong_yuyan_1942_01：cos 0.180 → 不同身份**
+- **char_duo ↔ char_nangong_lingjun_2054_01：cos 0.117 → 不同身份**
+- **char_duo3_2 ↔ char_cen_zhiwei_1936_01：cos 0.084 → 不同身份**
+- **char_duo3_2 ↔ char_jiang_ruoli_2007_01：cos 0.179 → 不同身份**
+- **char_duo3_2 ↔ char_xiaog3：cos 0.061 → 不同身份**
+- **char_duo3_2 ↔ char_xi_manshu_2045_01：cos 0.134 → 不同身份**
+- **char_duo3_2 ↔ char_huangfu_qingchuan_2104_01：cos 0.108 → 不同身份**
+- **char_duo3_2 ↔ char_linghu_zhixia_2133_01：cos 0.045 → 不同身份**
+- **char_duo3_2 ↔ char_qiao_weiyu_2134_01：cos 0.116 → 不同身份**
+- **char_duo3_2 ↔ char_jiang_qinghuan_2203_01：cos 0.173 → 不同身份**
+- **char_duo3_2 ↔ char_cen_youqing_2204_01：cos 0.121 → 不同身份**
+- **char_duo3_2 ↔ char_zhong_xiaorou_2233_01：cos 0.228 → 不同身份**
+- **char_duo3_2 ↔ char_tan_youqing_2234_01：cos 0.228 → 不同身份**
+- **char_duo3_2 ↔ char_tantai_lingsu_2303_01：cos 0.148 → 不同身份**
+- **char_duo3_2 ↔ char_qiao_qinghuan_2304_01：cos 0.148 → 不同身份**
+- **char_duo3_2 ↔ char_chu_muchen_0004_01：cos 0.115 → 不同身份**
+- **char_duo3_2 ↔ char_qiao_chaoyan_0004_01：cos -0.096 → 不同身份**
+- **char_duo3_2 ↔ char_xue_qinghuan_0034_01：cos -0.003 → 不同身份**
+- **char_duo3_2 ↔ char_tang_yuwei_0217_01：cos 0.098 → 不同身份**
+- **char_duo3_2 ↔ char_ouyang_chuxia_0250_01：cos 0.181 → 不同身份**
+- **char_duo3_2 ↔ char_bai_zhiruo_0305_01：cos -0.008 → 不同身份**
+- **char_duo3_2 ↔ char_pei_shanshan_0456_01：cos 0.234 → 不同身份**
+- **char_duo3_2 ↔ char_xi_qingchuan_0618_01：cos 0.142 → 不同身份**
+- **char_duo3_2 ↔ char_zhong_linger_0732_01：cos 0.107 → 不同身份**
+- **char_duo3_2 ↔ char_hua_qingdai_1029_01：cos 0.124 → 不同身份**
+- **char_duo3_2 ↔ char_tang_banxia_1156_01：cos 0.159 → 不同身份**
+- **char_duo3_2 ↔ char_gu_weiyu_1321_01：cos 0.202 → 不同身份**
+- **char_duo3_2 ↔ char_cheng_hongyu_1435_01：cos -0.022 → 不同身份**
+- **char_duo3_2 ↔ char_hua_chuxia_1549_01：cos 0.071 → 不同身份**
+- **char_duo3_2 ↔ char_pei_manshu_1701_01：cos 0.177 → 不同身份**
+- **char_duo3_2 ↔ char_ye_nanqiao_1811_01：cos 0.161 → 不同身份**
+- **char_duo3_2 ↔ char_murong_yuyan_1942_01：cos 0.205 → 不同身份**
+- **char_duo3_2 ↔ char_nangong_lingjun_2054_01：cos 0.089 → 不同身份**
+- **char_cen_zhiwei_1936_01 ↔ char_jiang_ruoli_2007_01：cos 0.522 → ⚠️ 存疑，待人工复核**
+- **char_cen_zhiwei_1936_01 ↔ char_xiaog3：cos -0.087 → 不同身份**
+- **char_cen_zhiwei_1936_01 ↔ char_xi_manshu_2045_01：cos 0.467 → ⚠️ 存疑，待人工复核**
+- **char_cen_zhiwei_1936_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.603 → 同一身份**
+- **char_cen_zhiwei_1936_01 ↔ char_linghu_zhixia_2133_01：cos 0.646 → 同一身份**
+- **char_cen_zhiwei_1936_01 ↔ char_qiao_weiyu_2134_01：cos 0.542 → ⚠️ 存疑，待人工复核**
+- **char_cen_zhiwei_1936_01 ↔ char_jiang_qinghuan_2203_01：cos 0.340 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cen_zhiwei_1936_01 ↔ char_cen_youqing_2204_01：cos 0.285 → 不同身份**
+- **char_cen_zhiwei_1936_01 ↔ char_zhong_xiaorou_2233_01：cos 0.349 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cen_zhiwei_1936_01 ↔ char_tan_youqing_2234_01：cos 0.349 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cen_zhiwei_1936_01 ↔ char_tantai_lingsu_2303_01：cos 0.438 → ⚠️ 存疑，待人工复核**
+- **char_cen_zhiwei_1936_01 ↔ char_qiao_qinghuan_2304_01：cos 0.438 → ⚠️ 存疑，待人工复核**
+- **char_cen_zhiwei_1936_01 ↔ char_chu_muchen_0004_01：cos -0.006 → 不同身份**
+- **char_cen_zhiwei_1936_01 ↔ char_qiao_chaoyan_0004_01：cos -0.063 → 不同身份**
+- **char_cen_zhiwei_1936_01 ↔ char_xue_qinghuan_0034_01：cos -0.017 → 不同身份**
+- **char_cen_zhiwei_1936_01 ↔ char_tang_yuwei_0217_01：cos 0.269 → 不同身份**
+- **char_cen_zhiwei_1936_01 ↔ char_ouyang_chuxia_0250_01：cos 0.316 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cen_zhiwei_1936_01 ↔ char_bai_zhiruo_0305_01：cos 0.525 → ⚠️ 存疑，待人工复核**
+- **char_cen_zhiwei_1936_01 ↔ char_pei_shanshan_0456_01：cos 0.460 → ⚠️ 存疑，待人工复核**
+- **char_cen_zhiwei_1936_01 ↔ char_xi_qingchuan_0618_01：cos 0.383 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cen_zhiwei_1936_01 ↔ char_zhong_linger_0732_01：cos 0.466 → ⚠️ 存疑，待人工复核**
+- **char_cen_zhiwei_1936_01 ↔ char_hua_qingdai_1029_01：cos 0.542 → ⚠️ 存疑，待人工复核**
+- **char_cen_zhiwei_1936_01 ↔ char_tang_banxia_1156_01：cos 0.441 → ⚠️ 存疑，待人工复核**
+- **char_cen_zhiwei_1936_01 ↔ char_gu_weiyu_1321_01：cos 0.510 → ⚠️ 存疑，待人工复核**
+- **char_cen_zhiwei_1936_01 ↔ char_cheng_hongyu_1435_01：cos 0.405 → ⚠️ 存疑，待人工复核**
+- **char_cen_zhiwei_1936_01 ↔ char_hua_chuxia_1549_01：cos 0.426 → ⚠️ 存疑，待人工复核**
+- **char_cen_zhiwei_1936_01 ↔ char_pei_manshu_1701_01：cos 0.373 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cen_zhiwei_1936_01 ↔ char_ye_nanqiao_1811_01：cos 0.358 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cen_zhiwei_1936_01 ↔ char_murong_yuyan_1942_01：cos 0.304 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cen_zhiwei_1936_01 ↔ char_nangong_lingjun_2054_01：cos 0.459 → ⚠️ 存疑，待人工复核**
+- **char_jiang_ruoli_2007_01 ↔ char_xiaog3：cos -0.111 → 不同身份**
+- **char_jiang_ruoli_2007_01 ↔ char_xi_manshu_2045_01：cos 0.497 → ⚠️ 存疑，待人工复核**
+- **char_jiang_ruoli_2007_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.574 → ⚠️ 存疑，待人工复核**
+- **char_jiang_ruoli_2007_01 ↔ char_linghu_zhixia_2133_01：cos 0.592 → ⚠️ 存疑，待人工复核**
+- **char_jiang_ruoli_2007_01 ↔ char_qiao_weiyu_2134_01：cos 0.587 → ⚠️ 存疑，待人工复核**
+- **char_jiang_ruoli_2007_01 ↔ char_jiang_qinghuan_2203_01：cos 0.300 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_jiang_ruoli_2007_01 ↔ char_cen_youqing_2204_01：cos 0.249 → 不同身份**
+- **char_jiang_ruoli_2007_01 ↔ char_zhong_xiaorou_2233_01：cos 0.402 → ⚠️ 存疑，待人工复核**
+- **char_jiang_ruoli_2007_01 ↔ char_tan_youqing_2234_01：cos 0.402 → ⚠️ 存疑，待人工复核**
+- **char_jiang_ruoli_2007_01 ↔ char_tantai_lingsu_2303_01：cos 0.458 → ⚠️ 存疑，待人工复核**
+- **char_jiang_ruoli_2007_01 ↔ char_qiao_qinghuan_2304_01：cos 0.458 → ⚠️ 存疑，待人工复核**
+- **char_jiang_ruoli_2007_01 ↔ char_chu_muchen_0004_01：cos 0.017 → 不同身份**
+- **char_jiang_ruoli_2007_01 ↔ char_qiao_chaoyan_0004_01：cos -0.023 → 不同身份**
+- **char_jiang_ruoli_2007_01 ↔ char_xue_qinghuan_0034_01：cos -0.038 → 不同身份**
+- **char_jiang_ruoli_2007_01 ↔ char_tang_yuwei_0217_01：cos 0.259 → 不同身份**
+- **char_jiang_ruoli_2007_01 ↔ char_ouyang_chuxia_0250_01：cos 0.478 → ⚠️ 存疑，待人工复核**
+- **char_jiang_ruoli_2007_01 ↔ char_bai_zhiruo_0305_01：cos 0.461 → ⚠️ 存疑，待人工复核**
+- **char_jiang_ruoli_2007_01 ↔ char_pei_shanshan_0456_01：cos 0.388 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_jiang_ruoli_2007_01 ↔ char_xi_qingchuan_0618_01：cos 0.364 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_jiang_ruoli_2007_01 ↔ char_zhong_linger_0732_01：cos 0.527 → ⚠️ 存疑，待人工复核**
+- **char_jiang_ruoli_2007_01 ↔ char_hua_qingdai_1029_01：cos 0.468 → ⚠️ 存疑，待人工复核**
+- **char_jiang_ruoli_2007_01 ↔ char_tang_banxia_1156_01：cos 0.481 → ⚠️ 存疑，待人工复核**
+- **char_jiang_ruoli_2007_01 ↔ char_gu_weiyu_1321_01：cos 0.446 → ⚠️ 存疑，待人工复核**
+- **char_jiang_ruoli_2007_01 ↔ char_cheng_hongyu_1435_01：cos 0.346 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_jiang_ruoli_2007_01 ↔ char_hua_chuxia_1549_01：cos 0.408 → ⚠️ 存疑，待人工复核**
+- **char_jiang_ruoli_2007_01 ↔ char_pei_manshu_1701_01：cos 0.330 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_jiang_ruoli_2007_01 ↔ char_ye_nanqiao_1811_01：cos 0.376 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_jiang_ruoli_2007_01 ↔ char_murong_yuyan_1942_01：cos 0.247 → 不同身份**
+- **char_jiang_ruoli_2007_01 ↔ char_nangong_lingjun_2054_01：cos 0.385 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xiaog3 ↔ char_xi_manshu_2045_01：cos -0.068 → 不同身份**
+- **char_xiaog3 ↔ char_huangfu_qingchuan_2104_01：cos 0.002 → 不同身份**
+- **char_xiaog3 ↔ char_linghu_zhixia_2133_01：cos -0.038 → 不同身份**
+- **char_xiaog3 ↔ char_qiao_weiyu_2134_01：cos -0.024 → 不同身份**
+- **char_xiaog3 ↔ char_jiang_qinghuan_2203_01：cos -0.021 → 不同身份**
+- **char_xiaog3 ↔ char_cen_youqing_2204_01：cos -0.093 → 不同身份**
+- **char_xiaog3 ↔ char_zhong_xiaorou_2233_01：cos 0.018 → 不同身份**
+- **char_xiaog3 ↔ char_tan_youqing_2234_01：cos 0.018 → 不同身份**
+- **char_xiaog3 ↔ char_tantai_lingsu_2303_01：cos 0.017 → 不同身份**
+- **char_xiaog3 ↔ char_qiao_qinghuan_2304_01：cos 0.017 → 不同身份**
+- **char_xiaog3 ↔ char_chu_muchen_0004_01：cos -0.023 → 不同身份**
+- **char_xiaog3 ↔ char_qiao_chaoyan_0004_01：cos 0.065 → 不同身份**
+- **char_xiaog3 ↔ char_xue_qinghuan_0034_01：cos -0.054 → 不同身份**
+- **char_xiaog3 ↔ char_tang_yuwei_0217_01：cos -0.027 → 不同身份**
+- **char_xiaog3 ↔ char_ouyang_chuxia_0250_01：cos -0.063 → 不同身份**
+- **char_xiaog3 ↔ char_bai_zhiruo_0305_01：cos -0.006 → 不同身份**
+- **char_xiaog3 ↔ char_pei_shanshan_0456_01：cos -0.003 → 不同身份**
+- **char_xiaog3 ↔ char_xi_qingchuan_0618_01：cos 0.017 → 不同身份**
+- **char_xiaog3 ↔ char_zhong_linger_0732_01：cos -0.052 → 不同身份**
+- **char_xiaog3 ↔ char_hua_qingdai_1029_01：cos -0.071 → 不同身份**
+- **char_xiaog3 ↔ char_tang_banxia_1156_01：cos -0.003 → 不同身份**
+- **char_xiaog3 ↔ char_gu_weiyu_1321_01：cos -0.070 → 不同身份**
+- **char_xiaog3 ↔ char_cheng_hongyu_1435_01：cos -0.115 → 不同身份**
+- **char_xiaog3 ↔ char_hua_chuxia_1549_01：cos -0.077 → 不同身份**
+- **char_xiaog3 ↔ char_pei_manshu_1701_01：cos 0.098 → 不同身份**
+- **char_xiaog3 ↔ char_ye_nanqiao_1811_01：cos 0.019 → 不同身份**
+- **char_xiaog3 ↔ char_murong_yuyan_1942_01：cos 0.010 → 不同身份**
+- **char_xiaog3 ↔ char_nangong_lingjun_2054_01：cos -0.032 → 不同身份**
+- **char_xi_manshu_2045_01 ↔ char_huangfu_qingchuan_2104_01：cos 0.376 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xi_manshu_2045_01 ↔ char_linghu_zhixia_2133_01：cos 0.506 → ⚠️ 存疑，待人工复核**
+- **char_xi_manshu_2045_01 ↔ char_qiao_weiyu_2134_01：cos 0.456 → ⚠️ 存疑，待人工复核**
+- **char_xi_manshu_2045_01 ↔ char_jiang_qinghuan_2203_01：cos 0.479 → ⚠️ 存疑，待人工复核**
+- **char_xi_manshu_2045_01 ↔ char_cen_youqing_2204_01：cos 0.313 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xi_manshu_2045_01 ↔ char_zhong_xiaorou_2233_01：cos 0.494 → ⚠️ 存疑，待人工复核**
+- **char_xi_manshu_2045_01 ↔ char_tan_youqing_2234_01：cos 0.494 → ⚠️ 存疑，待人工复核**
+- **char_xi_manshu_2045_01 ↔ char_tantai_lingsu_2303_01：cos 0.431 → ⚠️ 存疑，待人工复核**
+- **char_xi_manshu_2045_01 ↔ char_qiao_qinghuan_2304_01：cos 0.431 → ⚠️ 存疑，待人工复核**
+- **char_xi_manshu_2045_01 ↔ char_chu_muchen_0004_01：cos -0.053 → 不同身份**
+- **char_xi_manshu_2045_01 ↔ char_qiao_chaoyan_0004_01：cos 0.001 → 不同身份**
+- **char_xi_manshu_2045_01 ↔ char_xue_qinghuan_0034_01：cos 0.035 → 不同身份**
+- **char_xi_manshu_2045_01 ↔ char_tang_yuwei_0217_01：cos 0.433 → ⚠️ 存疑，待人工复核**
+- **char_xi_manshu_2045_01 ↔ char_ouyang_chuxia_0250_01：cos 0.477 → ⚠️ 存疑，待人工复核**
+- **char_xi_manshu_2045_01 ↔ char_bai_zhiruo_0305_01：cos 0.482 → ⚠️ 存疑，待人工复核**
+- **char_xi_manshu_2045_01 ↔ char_pei_shanshan_0456_01：cos 0.505 → ⚠️ 存疑，待人工复核**
+- **char_xi_manshu_2045_01 ↔ char_xi_qingchuan_0618_01：cos 0.478 → ⚠️ 存疑，待人工复核**
+- **char_xi_manshu_2045_01 ↔ char_zhong_linger_0732_01：cos 0.380 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xi_manshu_2045_01 ↔ char_hua_qingdai_1029_01：cos 0.415 → ⚠️ 存疑，待人工复核**
+- **char_xi_manshu_2045_01 ↔ char_tang_banxia_1156_01：cos 0.454 → ⚠️ 存疑，待人工复核**
+- **char_xi_manshu_2045_01 ↔ char_gu_weiyu_1321_01：cos 0.457 → ⚠️ 存疑，待人工复核**
+- **char_xi_manshu_2045_01 ↔ char_cheng_hongyu_1435_01：cos 0.452 → ⚠️ 存疑，待人工复核**
+- **char_xi_manshu_2045_01 ↔ char_hua_chuxia_1549_01：cos 0.414 → ⚠️ 存疑，待人工复核**
+- **char_xi_manshu_2045_01 ↔ char_pei_manshu_1701_01：cos 0.360 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xi_manshu_2045_01 ↔ char_ye_nanqiao_1811_01：cos 0.362 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xi_manshu_2045_01 ↔ char_murong_yuyan_1942_01：cos 0.374 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xi_manshu_2045_01 ↔ char_nangong_lingjun_2054_01：cos 0.345 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_huangfu_qingchuan_2104_01 ↔ char_linghu_zhixia_2133_01：cos 0.769 → 同一身份**
+- **char_huangfu_qingchuan_2104_01 ↔ char_qiao_weiyu_2134_01：cos 0.485 → ⚠️ 存疑，待人工复核**
+- **char_huangfu_qingchuan_2104_01 ↔ char_jiang_qinghuan_2203_01：cos 0.256 → 不同身份**
+- **char_huangfu_qingchuan_2104_01 ↔ char_cen_youqing_2204_01：cos 0.218 → 不同身份**
+- **char_huangfu_qingchuan_2104_01 ↔ char_zhong_xiaorou_2233_01：cos 0.364 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_huangfu_qingchuan_2104_01 ↔ char_tan_youqing_2234_01：cos 0.364 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_huangfu_qingchuan_2104_01 ↔ char_tantai_lingsu_2303_01：cos 0.418 → ⚠️ 存疑，待人工复核**
+- **char_huangfu_qingchuan_2104_01 ↔ char_qiao_qinghuan_2304_01：cos 0.418 → ⚠️ 存疑，待人工复核**
+- **char_huangfu_qingchuan_2104_01 ↔ char_chu_muchen_0004_01：cos -0.053 → 不同身份**
+- **char_huangfu_qingchuan_2104_01 ↔ char_qiao_chaoyan_0004_01：cos -0.074 → 不同身份**
+- **char_huangfu_qingchuan_2104_01 ↔ char_xue_qinghuan_0034_01：cos 0.057 → 不同身份**
+- **char_huangfu_qingchuan_2104_01 ↔ char_tang_yuwei_0217_01：cos 0.191 → 不同身份**
+- **char_huangfu_qingchuan_2104_01 ↔ char_ouyang_chuxia_0250_01：cos 0.255 → 不同身份**
+- **char_huangfu_qingchuan_2104_01 ↔ char_bai_zhiruo_0305_01：cos 0.432 → ⚠️ 存疑，待人工复核**
+- **char_huangfu_qingchuan_2104_01 ↔ char_pei_shanshan_0456_01：cos 0.322 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_huangfu_qingchuan_2104_01 ↔ char_xi_qingchuan_0618_01：cos 0.272 → 不同身份**
+- **char_huangfu_qingchuan_2104_01 ↔ char_zhong_linger_0732_01：cos 0.421 → ⚠️ 存疑，待人工复核**
+- **char_huangfu_qingchuan_2104_01 ↔ char_hua_qingdai_1029_01：cos 0.351 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_huangfu_qingchuan_2104_01 ↔ char_tang_banxia_1156_01：cos 0.392 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_huangfu_qingchuan_2104_01 ↔ char_gu_weiyu_1321_01：cos 0.372 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_huangfu_qingchuan_2104_01 ↔ char_cheng_hongyu_1435_01：cos 0.155 → 不同身份**
+- **char_huangfu_qingchuan_2104_01 ↔ char_hua_chuxia_1549_01：cos 0.272 → 不同身份**
+- **char_huangfu_qingchuan_2104_01 ↔ char_pei_manshu_1701_01：cos 0.228 → 不同身份**
+- **char_huangfu_qingchuan_2104_01 ↔ char_ye_nanqiao_1811_01：cos 0.271 → 不同身份**
+- **char_huangfu_qingchuan_2104_01 ↔ char_murong_yuyan_1942_01：cos 0.181 → 不同身份**
+- **char_huangfu_qingchuan_2104_01 ↔ char_nangong_lingjun_2054_01：cos 0.323 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_linghu_zhixia_2133_01 ↔ char_qiao_weiyu_2134_01：cos 0.551 → ⚠️ 存疑，待人工复核**
+- **char_linghu_zhixia_2133_01 ↔ char_jiang_qinghuan_2203_01：cos 0.292 → 不同身份**
+- **char_linghu_zhixia_2133_01 ↔ char_cen_youqing_2204_01：cos 0.227 → 不同身份**
+- **char_linghu_zhixia_2133_01 ↔ char_zhong_xiaorou_2233_01：cos 0.382 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_linghu_zhixia_2133_01 ↔ char_tan_youqing_2234_01：cos 0.382 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_linghu_zhixia_2133_01 ↔ char_tantai_lingsu_2303_01：cos 0.451 → ⚠️ 存疑，待人工复核**
+- **char_linghu_zhixia_2133_01 ↔ char_qiao_qinghuan_2304_01：cos 0.451 → ⚠️ 存疑，待人工复核**
+- **char_linghu_zhixia_2133_01 ↔ char_chu_muchen_0004_01：cos -0.082 → 不同身份**
+- **char_linghu_zhixia_2133_01 ↔ char_qiao_chaoyan_0004_01：cos 0.011 → 不同身份**
+- **char_linghu_zhixia_2133_01 ↔ char_xue_qinghuan_0034_01：cos 0.002 → 不同身份**
+- **char_linghu_zhixia_2133_01 ↔ char_tang_yuwei_0217_01：cos 0.241 → 不同身份**
+- **char_linghu_zhixia_2133_01 ↔ char_ouyang_chuxia_0250_01：cos 0.340 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_linghu_zhixia_2133_01 ↔ char_bai_zhiruo_0305_01：cos 0.492 → ⚠️ 存疑，待人工复核**
+- **char_linghu_zhixia_2133_01 ↔ char_pei_shanshan_0456_01：cos 0.399 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_linghu_zhixia_2133_01 ↔ char_xi_qingchuan_0618_01：cos 0.334 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_linghu_zhixia_2133_01 ↔ char_zhong_linger_0732_01：cos 0.413 → ⚠️ 存疑，待人工复核**
+- **char_linghu_zhixia_2133_01 ↔ char_hua_qingdai_1029_01：cos 0.445 → ⚠️ 存疑，待人工复核**
+- **char_linghu_zhixia_2133_01 ↔ char_tang_banxia_1156_01：cos 0.398 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_linghu_zhixia_2133_01 ↔ char_gu_weiyu_1321_01：cos 0.351 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_linghu_zhixia_2133_01 ↔ char_cheng_hongyu_1435_01：cos 0.300 → 不同身份**
+- **char_linghu_zhixia_2133_01 ↔ char_hua_chuxia_1549_01：cos 0.396 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_linghu_zhixia_2133_01 ↔ char_pei_manshu_1701_01：cos 0.287 → 不同身份**
+- **char_linghu_zhixia_2133_01 ↔ char_ye_nanqiao_1811_01：cos 0.315 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_linghu_zhixia_2133_01 ↔ char_murong_yuyan_1942_01：cos 0.207 → 不同身份**
+- **char_linghu_zhixia_2133_01 ↔ char_nangong_lingjun_2054_01：cos 0.380 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qiao_weiyu_2134_01 ↔ char_jiang_qinghuan_2203_01：cos 0.297 → 不同身份**
+- **char_qiao_weiyu_2134_01 ↔ char_cen_youqing_2204_01：cos 0.265 → 不同身份**
+- **char_qiao_weiyu_2134_01 ↔ char_zhong_xiaorou_2233_01：cos 0.453 → ⚠️ 存疑，待人工复核**
+- **char_qiao_weiyu_2134_01 ↔ char_tan_youqing_2234_01：cos 0.453 → ⚠️ 存疑，待人工复核**
+- **char_qiao_weiyu_2134_01 ↔ char_tantai_lingsu_2303_01：cos 0.404 → ⚠️ 存疑，待人工复核**
+- **char_qiao_weiyu_2134_01 ↔ char_qiao_qinghuan_2304_01：cos 0.404 → ⚠️ 存疑，待人工复核**
+- **char_qiao_weiyu_2134_01 ↔ char_chu_muchen_0004_01：cos -0.017 → 不同身份**
+- **char_qiao_weiyu_2134_01 ↔ char_qiao_chaoyan_0004_01：cos 0.018 → 不同身份**
+- **char_qiao_weiyu_2134_01 ↔ char_xue_qinghuan_0034_01：cos 0.023 → 不同身份**
+- **char_qiao_weiyu_2134_01 ↔ char_tang_yuwei_0217_01：cos 0.333 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qiao_weiyu_2134_01 ↔ char_ouyang_chuxia_0250_01：cos 0.359 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qiao_weiyu_2134_01 ↔ char_bai_zhiruo_0305_01：cos 0.382 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qiao_weiyu_2134_01 ↔ char_pei_shanshan_0456_01：cos 0.364 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qiao_weiyu_2134_01 ↔ char_xi_qingchuan_0618_01：cos 0.319 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qiao_weiyu_2134_01 ↔ char_zhong_linger_0732_01：cos 0.452 → ⚠️ 存疑，待人工复核**
+- **char_qiao_weiyu_2134_01 ↔ char_hua_qingdai_1029_01：cos 0.473 → ⚠️ 存疑，待人工复核**
+- **char_qiao_weiyu_2134_01 ↔ char_tang_banxia_1156_01：cos 0.387 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qiao_weiyu_2134_01 ↔ char_gu_weiyu_1321_01：cos 0.417 → ⚠️ 存疑，待人工复核**
+- **char_qiao_weiyu_2134_01 ↔ char_cheng_hongyu_1435_01：cos 0.413 → ⚠️ 存疑，待人工复核**
+- **char_qiao_weiyu_2134_01 ↔ char_hua_chuxia_1549_01：cos 0.425 → ⚠️ 存疑，待人工复核**
+- **char_qiao_weiyu_2134_01 ↔ char_pei_manshu_1701_01：cos 0.337 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qiao_weiyu_2134_01 ↔ char_ye_nanqiao_1811_01：cos 0.369 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qiao_weiyu_2134_01 ↔ char_murong_yuyan_1942_01：cos 0.150 → 不同身份**
+- **char_qiao_weiyu_2134_01 ↔ char_nangong_lingjun_2054_01：cos 0.464 → ⚠️ 存疑，待人工复核**
+- **char_jiang_qinghuan_2203_01 ↔ char_cen_youqing_2204_01：cos 0.359 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_jiang_qinghuan_2203_01 ↔ char_zhong_xiaorou_2233_01：cos 0.450 → ⚠️ 存疑，待人工复核**
+- **char_jiang_qinghuan_2203_01 ↔ char_tan_youqing_2234_01：cos 0.450 → ⚠️ 存疑，待人工复核**
+- **char_jiang_qinghuan_2203_01 ↔ char_tantai_lingsu_2303_01：cos 0.555 → ⚠️ 存疑，待人工复核**
+- **char_jiang_qinghuan_2203_01 ↔ char_qiao_qinghuan_2304_01：cos 0.555 → ⚠️ 存疑，待人工复核**
+- **char_jiang_qinghuan_2203_01 ↔ char_chu_muchen_0004_01：cos -0.047 → 不同身份**
+- **char_jiang_qinghuan_2203_01 ↔ char_qiao_chaoyan_0004_01：cos -0.002 → 不同身份**
+- **char_jiang_qinghuan_2203_01 ↔ char_xue_qinghuan_0034_01：cos -0.003 → 不同身份**
+- **char_jiang_qinghuan_2203_01 ↔ char_tang_yuwei_0217_01：cos 0.398 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_jiang_qinghuan_2203_01 ↔ char_ouyang_chuxia_0250_01：cos 0.536 → ⚠️ 存疑，待人工复核**
+- **char_jiang_qinghuan_2203_01 ↔ char_bai_zhiruo_0305_01：cos 0.538 → ⚠️ 存疑，待人工复核**
+- **char_jiang_qinghuan_2203_01 ↔ char_pei_shanshan_0456_01：cos 0.734 → 同一身份**
+- **char_jiang_qinghuan_2203_01 ↔ char_xi_qingchuan_0618_01：cos 0.712 → 同一身份**
+- **char_jiang_qinghuan_2203_01 ↔ char_zhong_linger_0732_01：cos 0.403 → ⚠️ 存疑，待人工复核**
+- **char_jiang_qinghuan_2203_01 ↔ char_hua_qingdai_1029_01：cos 0.578 → ⚠️ 存疑，待人工复核**
+- **char_jiang_qinghuan_2203_01 ↔ char_tang_banxia_1156_01：cos 0.532 → ⚠️ 存疑，待人工复核**
+- **char_jiang_qinghuan_2203_01 ↔ char_gu_weiyu_1321_01：cos 0.552 → ⚠️ 存疑，待人工复核**
+- **char_jiang_qinghuan_2203_01 ↔ char_cheng_hongyu_1435_01：cos 0.525 → ⚠️ 存疑，待人工复核**
+- **char_jiang_qinghuan_2203_01 ↔ char_hua_chuxia_1549_01：cos 0.470 → ⚠️ 存疑，待人工复核**
+- **char_jiang_qinghuan_2203_01 ↔ char_pei_manshu_1701_01：cos 0.371 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_jiang_qinghuan_2203_01 ↔ char_ye_nanqiao_1811_01：cos 0.519 → ⚠️ 存疑，待人工复核**
+- **char_jiang_qinghuan_2203_01 ↔ char_murong_yuyan_1942_01：cos 0.598 → ⚠️ 存疑，待人工复核**
+- **char_jiang_qinghuan_2203_01 ↔ char_nangong_lingjun_2054_01：cos 0.332 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cen_youqing_2204_01 ↔ char_zhong_xiaorou_2233_01：cos 0.222 → 不同身份**
+- **char_cen_youqing_2204_01 ↔ char_tan_youqing_2234_01：cos 0.222 → 不同身份**
+- **char_cen_youqing_2204_01 ↔ char_tantai_lingsu_2303_01：cos 0.296 → 不同身份**
+- **char_cen_youqing_2204_01 ↔ char_qiao_qinghuan_2304_01：cos 0.296 → 不同身份**
+- **char_cen_youqing_2204_01 ↔ char_chu_muchen_0004_01：cos -0.034 → 不同身份**
+- **char_cen_youqing_2204_01 ↔ char_qiao_chaoyan_0004_01：cos -0.000 → 不同身份**
+- **char_cen_youqing_2204_01 ↔ char_xue_qinghuan_0034_01：cos -0.040 → 不同身份**
+- **char_cen_youqing_2204_01 ↔ char_tang_yuwei_0217_01：cos 0.211 → 不同身份**
+- **char_cen_youqing_2204_01 ↔ char_ouyang_chuxia_0250_01：cos 0.344 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cen_youqing_2204_01 ↔ char_bai_zhiruo_0305_01：cos 0.248 → 不同身份**
+- **char_cen_youqing_2204_01 ↔ char_pei_shanshan_0456_01：cos 0.318 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cen_youqing_2204_01 ↔ char_xi_qingchuan_0618_01：cos 0.292 → 不同身份**
+- **char_cen_youqing_2204_01 ↔ char_zhong_linger_0732_01：cos 0.249 → 不同身份**
+- **char_cen_youqing_2204_01 ↔ char_hua_qingdai_1029_01：cos 0.268 → 不同身份**
+- **char_cen_youqing_2204_01 ↔ char_tang_banxia_1156_01：cos 0.329 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cen_youqing_2204_01 ↔ char_gu_weiyu_1321_01：cos 0.302 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cen_youqing_2204_01 ↔ char_cheng_hongyu_1435_01：cos 0.254 → 不同身份**
+- **char_cen_youqing_2204_01 ↔ char_hua_chuxia_1549_01：cos 0.301 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cen_youqing_2204_01 ↔ char_pei_manshu_1701_01：cos 0.298 → 不同身份**
+- **char_cen_youqing_2204_01 ↔ char_ye_nanqiao_1811_01：cos 0.223 → 不同身份**
+- **char_cen_youqing_2204_01 ↔ char_murong_yuyan_1942_01：cos 0.156 → 不同身份**
+- **char_cen_youqing_2204_01 ↔ char_nangong_lingjun_2054_01：cos 0.276 → 不同身份**
+- **char_zhong_xiaorou_2233_01 ↔ char_tan_youqing_2234_01：cos 1.000 → 同一身份**
+- **char_zhong_xiaorou_2233_01 ↔ char_tantai_lingsu_2303_01：cos 0.412 → ⚠️ 存疑，待人工复核**
+- **char_zhong_xiaorou_2233_01 ↔ char_qiao_qinghuan_2304_01：cos 0.412 → ⚠️ 存疑，待人工复核**
+- **char_zhong_xiaorou_2233_01 ↔ char_chu_muchen_0004_01：cos -0.075 → 不同身份**
+- **char_zhong_xiaorou_2233_01 ↔ char_qiao_chaoyan_0004_01：cos -0.029 → 不同身份**
+- **char_zhong_xiaorou_2233_01 ↔ char_xue_qinghuan_0034_01：cos 0.015 → 不同身份**
+- **char_zhong_xiaorou_2233_01 ↔ char_tang_yuwei_0217_01：cos 0.436 → ⚠️ 存疑，待人工复核**
+- **char_zhong_xiaorou_2233_01 ↔ char_ouyang_chuxia_0250_01：cos 0.441 → ⚠️ 存疑，待人工复核**
+- **char_zhong_xiaorou_2233_01 ↔ char_bai_zhiruo_0305_01：cos 0.400 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_zhong_xiaorou_2233_01 ↔ char_pei_shanshan_0456_01：cos 0.488 → ⚠️ 存疑，待人工复核**
+- **char_zhong_xiaorou_2233_01 ↔ char_xi_qingchuan_0618_01：cos 0.453 → ⚠️ 存疑，待人工复核**
+- **char_zhong_xiaorou_2233_01 ↔ char_zhong_linger_0732_01：cos 0.406 → ⚠️ 存疑，待人工复核**
+- **char_zhong_xiaorou_2233_01 ↔ char_hua_qingdai_1029_01：cos 0.379 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_zhong_xiaorou_2233_01 ↔ char_tang_banxia_1156_01：cos 0.343 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_zhong_xiaorou_2233_01 ↔ char_gu_weiyu_1321_01：cos 0.435 → ⚠️ 存疑，待人工复核**
+- **char_zhong_xiaorou_2233_01 ↔ char_cheng_hongyu_1435_01：cos 0.399 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_zhong_xiaorou_2233_01 ↔ char_hua_chuxia_1549_01：cos 0.333 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_zhong_xiaorou_2233_01 ↔ char_pei_manshu_1701_01：cos 0.428 → ⚠️ 存疑，待人工复核**
+- **char_zhong_xiaorou_2233_01 ↔ char_ye_nanqiao_1811_01：cos 0.405 → ⚠️ 存疑，待人工复核**
+- **char_zhong_xiaorou_2233_01 ↔ char_murong_yuyan_1942_01：cos 0.317 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_zhong_xiaorou_2233_01 ↔ char_nangong_lingjun_2054_01：cos 0.309 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tan_youqing_2234_01 ↔ char_tantai_lingsu_2303_01：cos 0.412 → ⚠️ 存疑，待人工复核**
+- **char_tan_youqing_2234_01 ↔ char_qiao_qinghuan_2304_01：cos 0.412 → ⚠️ 存疑，待人工复核**
+- **char_tan_youqing_2234_01 ↔ char_chu_muchen_0004_01：cos -0.075 → 不同身份**
+- **char_tan_youqing_2234_01 ↔ char_qiao_chaoyan_0004_01：cos -0.029 → 不同身份**
+- **char_tan_youqing_2234_01 ↔ char_xue_qinghuan_0034_01：cos 0.015 → 不同身份**
+- **char_tan_youqing_2234_01 ↔ char_tang_yuwei_0217_01：cos 0.436 → ⚠️ 存疑，待人工复核**
+- **char_tan_youqing_2234_01 ↔ char_ouyang_chuxia_0250_01：cos 0.441 → ⚠️ 存疑，待人工复核**
+- **char_tan_youqing_2234_01 ↔ char_bai_zhiruo_0305_01：cos 0.400 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tan_youqing_2234_01 ↔ char_pei_shanshan_0456_01：cos 0.488 → ⚠️ 存疑，待人工复核**
+- **char_tan_youqing_2234_01 ↔ char_xi_qingchuan_0618_01：cos 0.453 → ⚠️ 存疑，待人工复核**
+- **char_tan_youqing_2234_01 ↔ char_zhong_linger_0732_01：cos 0.406 → ⚠️ 存疑，待人工复核**
+- **char_tan_youqing_2234_01 ↔ char_hua_qingdai_1029_01：cos 0.379 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tan_youqing_2234_01 ↔ char_tang_banxia_1156_01：cos 0.343 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tan_youqing_2234_01 ↔ char_gu_weiyu_1321_01：cos 0.435 → ⚠️ 存疑，待人工复核**
+- **char_tan_youqing_2234_01 ↔ char_cheng_hongyu_1435_01：cos 0.399 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tan_youqing_2234_01 ↔ char_hua_chuxia_1549_01：cos 0.333 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tan_youqing_2234_01 ↔ char_pei_manshu_1701_01：cos 0.428 → ⚠️ 存疑，待人工复核**
+- **char_tan_youqing_2234_01 ↔ char_ye_nanqiao_1811_01：cos 0.405 → ⚠️ 存疑，待人工复核**
+- **char_tan_youqing_2234_01 ↔ char_murong_yuyan_1942_01：cos 0.317 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tan_youqing_2234_01 ↔ char_nangong_lingjun_2054_01：cos 0.309 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tantai_lingsu_2303_01 ↔ char_qiao_qinghuan_2304_01：cos 1.000 → 同一身份**
+- **char_tantai_lingsu_2303_01 ↔ char_chu_muchen_0004_01：cos -0.026 → 不同身份**
+- **char_tantai_lingsu_2303_01 ↔ char_qiao_chaoyan_0004_01：cos -0.052 → 不同身份**
+- **char_tantai_lingsu_2303_01 ↔ char_xue_qinghuan_0034_01：cos -0.038 → 不同身份**
+- **char_tantai_lingsu_2303_01 ↔ char_tang_yuwei_0217_01：cos 0.349 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tantai_lingsu_2303_01 ↔ char_ouyang_chuxia_0250_01：cos 0.467 → ⚠️ 存疑，待人工复核**
+- **char_tantai_lingsu_2303_01 ↔ char_bai_zhiruo_0305_01：cos 0.635 → 同一身份**
+- **char_tantai_lingsu_2303_01 ↔ char_pei_shanshan_0456_01：cos 0.626 → 同一身份**
+- **char_tantai_lingsu_2303_01 ↔ char_xi_qingchuan_0618_01：cos 0.606 → 同一身份**
+- **char_tantai_lingsu_2303_01 ↔ char_zhong_linger_0732_01：cos 0.518 → ⚠️ 存疑，待人工复核**
+- **char_tantai_lingsu_2303_01 ↔ char_hua_qingdai_1029_01：cos 0.608 → 同一身份**
+- **char_tantai_lingsu_2303_01 ↔ char_tang_banxia_1156_01：cos 0.663 → 同一身份**
+- **char_tantai_lingsu_2303_01 ↔ char_gu_weiyu_1321_01：cos 0.572 → ⚠️ 存疑，待人工复核**
+- **char_tantai_lingsu_2303_01 ↔ char_cheng_hongyu_1435_01：cos 0.439 → ⚠️ 存疑，待人工复核**
+- **char_tantai_lingsu_2303_01 ↔ char_hua_chuxia_1549_01：cos 0.503 → ⚠️ 存疑，待人工复核**
+- **char_tantai_lingsu_2303_01 ↔ char_pei_manshu_1701_01：cos 0.413 → ⚠️ 存疑，待人工复核**
+- **char_tantai_lingsu_2303_01 ↔ char_ye_nanqiao_1811_01：cos 0.425 → ⚠️ 存疑，待人工复核**
+- **char_tantai_lingsu_2303_01 ↔ char_murong_yuyan_1942_01：cos 0.489 → ⚠️ 存疑，待人工复核**
+- **char_tantai_lingsu_2303_01 ↔ char_nangong_lingjun_2054_01：cos 0.383 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qiao_qinghuan_2304_01 ↔ char_chu_muchen_0004_01：cos -0.026 → 不同身份**
+- **char_qiao_qinghuan_2304_01 ↔ char_qiao_chaoyan_0004_01：cos -0.052 → 不同身份**
+- **char_qiao_qinghuan_2304_01 ↔ char_xue_qinghuan_0034_01：cos -0.038 → 不同身份**
+- **char_qiao_qinghuan_2304_01 ↔ char_tang_yuwei_0217_01：cos 0.349 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_qiao_qinghuan_2304_01 ↔ char_ouyang_chuxia_0250_01：cos 0.467 → ⚠️ 存疑，待人工复核**
+- **char_qiao_qinghuan_2304_01 ↔ char_bai_zhiruo_0305_01：cos 0.635 → 同一身份**
+- **char_qiao_qinghuan_2304_01 ↔ char_pei_shanshan_0456_01：cos 0.626 → 同一身份**
+- **char_qiao_qinghuan_2304_01 ↔ char_xi_qingchuan_0618_01：cos 0.606 → 同一身份**
+- **char_qiao_qinghuan_2304_01 ↔ char_zhong_linger_0732_01：cos 0.518 → ⚠️ 存疑，待人工复核**
+- **char_qiao_qinghuan_2304_01 ↔ char_hua_qingdai_1029_01：cos 0.608 → 同一身份**
+- **char_qiao_qinghuan_2304_01 ↔ char_tang_banxia_1156_01：cos 0.663 → 同一身份**
+- **char_qiao_qinghuan_2304_01 ↔ char_gu_weiyu_1321_01：cos 0.572 → ⚠️ 存疑，待人工复核**
+- **char_qiao_qinghuan_2304_01 ↔ char_cheng_hongyu_1435_01：cos 0.439 → ⚠️ 存疑，待人工复核**
+- **char_qiao_qinghuan_2304_01 ↔ char_hua_chuxia_1549_01：cos 0.503 → ⚠️ 存疑，待人工复核**
+- **char_qiao_qinghuan_2304_01 ↔ char_pei_manshu_1701_01：cos 0.413 → ⚠️ 存疑，待人工复核**
+- **char_qiao_qinghuan_2304_01 ↔ char_ye_nanqiao_1811_01：cos 0.425 → ⚠️ 存疑，待人工复核**
+- **char_qiao_qinghuan_2304_01 ↔ char_murong_yuyan_1942_01：cos 0.489 → ⚠️ 存疑，待人工复核**
+- **char_qiao_qinghuan_2304_01 ↔ char_nangong_lingjun_2054_01：cos 0.383 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_chu_muchen_0004_01 ↔ char_qiao_chaoyan_0004_01：cos 0.048 → 不同身份**
+- **char_chu_muchen_0004_01 ↔ char_xue_qinghuan_0034_01：cos -0.022 → 不同身份**
+- **char_chu_muchen_0004_01 ↔ char_tang_yuwei_0217_01：cos -0.051 → 不同身份**
+- **char_chu_muchen_0004_01 ↔ char_ouyang_chuxia_0250_01：cos -0.022 → 不同身份**
+- **char_chu_muchen_0004_01 ↔ char_bai_zhiruo_0305_01：cos -0.074 → 不同身份**
+- **char_chu_muchen_0004_01 ↔ char_pei_shanshan_0456_01：cos -0.019 → 不同身份**
+- **char_chu_muchen_0004_01 ↔ char_xi_qingchuan_0618_01：cos -0.035 → 不同身份**
+- **char_chu_muchen_0004_01 ↔ char_zhong_linger_0732_01：cos -0.012 → 不同身份**
+- **char_chu_muchen_0004_01 ↔ char_hua_qingdai_1029_01：cos 0.004 → 不同身份**
+- **char_chu_muchen_0004_01 ↔ char_tang_banxia_1156_01：cos -0.036 → 不同身份**
+- **char_chu_muchen_0004_01 ↔ char_gu_weiyu_1321_01：cos -0.063 → 不同身份**
+- **char_chu_muchen_0004_01 ↔ char_cheng_hongyu_1435_01：cos -0.050 → 不同身份**
+- **char_chu_muchen_0004_01 ↔ char_hua_chuxia_1549_01：cos -0.007 → 不同身份**
+- **char_chu_muchen_0004_01 ↔ char_pei_manshu_1701_01：cos 0.021 → 不同身份**
+- **char_chu_muchen_0004_01 ↔ char_ye_nanqiao_1811_01：cos -0.008 → 不同身份**
+- **char_chu_muchen_0004_01 ↔ char_murong_yuyan_1942_01：cos -0.051 → 不同身份**
+- **char_chu_muchen_0004_01 ↔ char_nangong_lingjun_2054_01：cos -0.020 → 不同身份**
+- **char_qiao_chaoyan_0004_01 ↔ char_xue_qinghuan_0034_01：cos 0.014 → 不同身份**
+- **char_qiao_chaoyan_0004_01 ↔ char_tang_yuwei_0217_01：cos -0.018 → 不同身份**
+- **char_qiao_chaoyan_0004_01 ↔ char_ouyang_chuxia_0250_01：cos -0.020 → 不同身份**
+- **char_qiao_chaoyan_0004_01 ↔ char_bai_zhiruo_0305_01：cos -0.036 → 不同身份**
+- **char_qiao_chaoyan_0004_01 ↔ char_pei_shanshan_0456_01：cos -0.016 → 不同身份**
+- **char_qiao_chaoyan_0004_01 ↔ char_xi_qingchuan_0618_01：cos 0.035 → 不同身份**
+- **char_qiao_chaoyan_0004_01 ↔ char_zhong_linger_0732_01：cos -0.067 → 不同身份**
+- **char_qiao_chaoyan_0004_01 ↔ char_hua_qingdai_1029_01：cos -0.004 → 不同身份**
+- **char_qiao_chaoyan_0004_01 ↔ char_tang_banxia_1156_01：cos -0.024 → 不同身份**
+- **char_qiao_chaoyan_0004_01 ↔ char_gu_weiyu_1321_01：cos -0.070 → 不同身份**
+- **char_qiao_chaoyan_0004_01 ↔ char_cheng_hongyu_1435_01：cos 0.031 → 不同身份**
+- **char_qiao_chaoyan_0004_01 ↔ char_hua_chuxia_1549_01：cos 0.047 → 不同身份**
+- **char_qiao_chaoyan_0004_01 ↔ char_pei_manshu_1701_01：cos -0.021 → 不同身份**
+- **char_qiao_chaoyan_0004_01 ↔ char_ye_nanqiao_1811_01：cos -0.022 → 不同身份**
+- **char_qiao_chaoyan_0004_01 ↔ char_murong_yuyan_1942_01：cos -0.027 → 不同身份**
+- **char_qiao_chaoyan_0004_01 ↔ char_nangong_lingjun_2054_01：cos -0.011 → 不同身份**
+- **char_xue_qinghuan_0034_01 ↔ char_tang_yuwei_0217_01：cos 0.015 → 不同身份**
+- **char_xue_qinghuan_0034_01 ↔ char_ouyang_chuxia_0250_01：cos -0.032 → 不同身份**
+- **char_xue_qinghuan_0034_01 ↔ char_bai_zhiruo_0305_01：cos -0.020 → 不同身份**
+- **char_xue_qinghuan_0034_01 ↔ char_pei_shanshan_0456_01：cos -0.045 → 不同身份**
+- **char_xue_qinghuan_0034_01 ↔ char_xi_qingchuan_0618_01：cos -0.041 → 不同身份**
+- **char_xue_qinghuan_0034_01 ↔ char_zhong_linger_0732_01：cos 0.012 → 不同身份**
+- **char_xue_qinghuan_0034_01 ↔ char_hua_qingdai_1029_01：cos -0.015 → 不同身份**
+- **char_xue_qinghuan_0034_01 ↔ char_tang_banxia_1156_01：cos -0.043 → 不同身份**
+- **char_xue_qinghuan_0034_01 ↔ char_gu_weiyu_1321_01：cos 0.023 → 不同身份**
+- **char_xue_qinghuan_0034_01 ↔ char_cheng_hongyu_1435_01：cos -0.033 → 不同身份**
+- **char_xue_qinghuan_0034_01 ↔ char_hua_chuxia_1549_01：cos -0.038 → 不同身份**
+- **char_xue_qinghuan_0034_01 ↔ char_pei_manshu_1701_01：cos -0.038 → 不同身份**
+- **char_xue_qinghuan_0034_01 ↔ char_ye_nanqiao_1811_01：cos -0.014 → 不同身份**
+- **char_xue_qinghuan_0034_01 ↔ char_murong_yuyan_1942_01：cos 0.043 → 不同身份**
+- **char_xue_qinghuan_0034_01 ↔ char_nangong_lingjun_2054_01：cos -0.000 → 不同身份**
+- **char_tang_yuwei_0217_01 ↔ char_ouyang_chuxia_0250_01：cos 0.371 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tang_yuwei_0217_01 ↔ char_bai_zhiruo_0305_01：cos 0.421 → ⚠️ 存疑，待人工复核**
+- **char_tang_yuwei_0217_01 ↔ char_pei_shanshan_0456_01：cos 0.425 → ⚠️ 存疑，待人工复核**
+- **char_tang_yuwei_0217_01 ↔ char_xi_qingchuan_0618_01：cos 0.384 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tang_yuwei_0217_01 ↔ char_zhong_linger_0732_01：cos 0.326 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tang_yuwei_0217_01 ↔ char_hua_qingdai_1029_01：cos 0.390 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tang_yuwei_0217_01 ↔ char_tang_banxia_1156_01：cos 0.394 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tang_yuwei_0217_01 ↔ char_gu_weiyu_1321_01：cos 0.481 → ⚠️ 存疑，待人工复核**
+- **char_tang_yuwei_0217_01 ↔ char_cheng_hongyu_1435_01：cos 0.402 → ⚠️ 存疑，待人工复核**
+- **char_tang_yuwei_0217_01 ↔ char_hua_chuxia_1549_01：cos 0.346 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tang_yuwei_0217_01 ↔ char_pei_manshu_1701_01：cos 0.295 → 不同身份**
+- **char_tang_yuwei_0217_01 ↔ char_ye_nanqiao_1811_01：cos 0.372 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tang_yuwei_0217_01 ↔ char_murong_yuyan_1942_01：cos 0.371 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_tang_yuwei_0217_01 ↔ char_nangong_lingjun_2054_01：cos 0.274 → 不同身份**
+- **char_ouyang_chuxia_0250_01 ↔ char_bai_zhiruo_0305_01：cos 0.500 → ⚠️ 存疑，待人工复核**
+- **char_ouyang_chuxia_0250_01 ↔ char_pei_shanshan_0456_01：cos 0.585 → ⚠️ 存疑，待人工复核**
+- **char_ouyang_chuxia_0250_01 ↔ char_xi_qingchuan_0618_01：cos 0.595 → ⚠️ 存疑，待人工复核**
+- **char_ouyang_chuxia_0250_01 ↔ char_zhong_linger_0732_01：cos 0.565 → ⚠️ 存疑，待人工复核**
+- **char_ouyang_chuxia_0250_01 ↔ char_hua_qingdai_1029_01：cos 0.548 → ⚠️ 存疑，待人工复核**
+- **char_ouyang_chuxia_0250_01 ↔ char_tang_banxia_1156_01：cos 0.541 → ⚠️ 存疑，待人工复核**
+- **char_ouyang_chuxia_0250_01 ↔ char_gu_weiyu_1321_01：cos 0.573 → ⚠️ 存疑，待人工复核**
+- **char_ouyang_chuxia_0250_01 ↔ char_cheng_hongyu_1435_01：cos 0.534 → ⚠️ 存疑，待人工复核**
+- **char_ouyang_chuxia_0250_01 ↔ char_hua_chuxia_1549_01：cos 0.528 → ⚠️ 存疑，待人工复核**
+- **char_ouyang_chuxia_0250_01 ↔ char_pei_manshu_1701_01：cos 0.470 → ⚠️ 存疑，待人工复核**
+- **char_ouyang_chuxia_0250_01 ↔ char_ye_nanqiao_1811_01：cos 0.594 → ⚠️ 存疑，待人工复核**
+- **char_ouyang_chuxia_0250_01 ↔ char_murong_yuyan_1942_01：cos 0.443 → ⚠️ 存疑，待人工复核**
+- **char_ouyang_chuxia_0250_01 ↔ char_nangong_lingjun_2054_01：cos 0.417 → ⚠️ 存疑，待人工复核**
+- **char_bai_zhiruo_0305_01 ↔ char_pei_shanshan_0456_01：cos 0.578 → ⚠️ 存疑，待人工复核**
+- **char_bai_zhiruo_0305_01 ↔ char_xi_qingchuan_0618_01：cos 0.561 → ⚠️ 存疑，待人工复核**
+- **char_bai_zhiruo_0305_01 ↔ char_zhong_linger_0732_01：cos 0.504 → ⚠️ 存疑，待人工复核**
+- **char_bai_zhiruo_0305_01 ↔ char_hua_qingdai_1029_01：cos 0.581 → ⚠️ 存疑，待人工复核**
+- **char_bai_zhiruo_0305_01 ↔ char_tang_banxia_1156_01：cos 0.592 → ⚠️ 存疑，待人工复核**
+- **char_bai_zhiruo_0305_01 ↔ char_gu_weiyu_1321_01：cos 0.566 → ⚠️ 存疑，待人工复核**
+- **char_bai_zhiruo_0305_01 ↔ char_cheng_hongyu_1435_01：cos 0.476 → ⚠️ 存疑，待人工复核**
+- **char_bai_zhiruo_0305_01 ↔ char_hua_chuxia_1549_01：cos 0.406 → ⚠️ 存疑，待人工复核**
+- **char_bai_zhiruo_0305_01 ↔ char_pei_manshu_1701_01：cos 0.355 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_bai_zhiruo_0305_01 ↔ char_ye_nanqiao_1811_01：cos 0.485 → ⚠️ 存疑，待人工复核**
+- **char_bai_zhiruo_0305_01 ↔ char_murong_yuyan_1942_01：cos 0.454 → ⚠️ 存疑，待人工复核**
+- **char_bai_zhiruo_0305_01 ↔ char_nangong_lingjun_2054_01：cos 0.426 → ⚠️ 存疑，待人工复核**
+- **char_pei_shanshan_0456_01 ↔ char_xi_qingchuan_0618_01：cos 0.697 → 同一身份**
+- **char_pei_shanshan_0456_01 ↔ char_zhong_linger_0732_01：cos 0.515 → ⚠️ 存疑，待人工复核**
+- **char_pei_shanshan_0456_01 ↔ char_hua_qingdai_1029_01：cos 0.647 → 同一身份**
+- **char_pei_shanshan_0456_01 ↔ char_tang_banxia_1156_01：cos 0.652 → 同一身份**
+- **char_pei_shanshan_0456_01 ↔ char_gu_weiyu_1321_01：cos 0.622 → 同一身份**
+- **char_pei_shanshan_0456_01 ↔ char_cheng_hongyu_1435_01：cos 0.547 → ⚠️ 存疑，待人工复核**
+- **char_pei_shanshan_0456_01 ↔ char_hua_chuxia_1549_01：cos 0.535 → ⚠️ 存疑，待人工复核**
+- **char_pei_shanshan_0456_01 ↔ char_pei_manshu_1701_01：cos 0.436 → ⚠️ 存疑，待人工复核**
+- **char_pei_shanshan_0456_01 ↔ char_ye_nanqiao_1811_01：cos 0.566 → ⚠️ 存疑，待人工复核**
+- **char_pei_shanshan_0456_01 ↔ char_murong_yuyan_1942_01：cos 0.616 → 同一身份**
+- **char_pei_shanshan_0456_01 ↔ char_nangong_lingjun_2054_01：cos 0.362 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_xi_qingchuan_0618_01 ↔ char_zhong_linger_0732_01：cos 0.454 → ⚠️ 存疑，待人工复核**
+- **char_xi_qingchuan_0618_01 ↔ char_hua_qingdai_1029_01：cos 0.619 → 同一身份**
+- **char_xi_qingchuan_0618_01 ↔ char_tang_banxia_1156_01：cos 0.603 → 同一身份**
+- **char_xi_qingchuan_0618_01 ↔ char_gu_weiyu_1321_01：cos 0.592 → ⚠️ 存疑，待人工复核**
+- **char_xi_qingchuan_0618_01 ↔ char_cheng_hongyu_1435_01：cos 0.544 → ⚠️ 存疑，待人工复核**
+- **char_xi_qingchuan_0618_01 ↔ char_hua_chuxia_1549_01：cos 0.531 → ⚠️ 存疑，待人工复核**
+- **char_xi_qingchuan_0618_01 ↔ char_pei_manshu_1701_01：cos 0.460 → ⚠️ 存疑，待人工复核**
+- **char_xi_qingchuan_0618_01 ↔ char_ye_nanqiao_1811_01：cos 0.516 → ⚠️ 存疑，待人工复核**
+- **char_xi_qingchuan_0618_01 ↔ char_murong_yuyan_1942_01：cos 0.558 → ⚠️ 存疑，待人工复核**
+- **char_xi_qingchuan_0618_01 ↔ char_nangong_lingjun_2054_01：cos 0.361 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_zhong_linger_0732_01 ↔ char_hua_qingdai_1029_01：cos 0.578 → ⚠️ 存疑，待人工复核**
+- **char_zhong_linger_0732_01 ↔ char_tang_banxia_1156_01：cos 0.457 → ⚠️ 存疑，待人工复核**
+- **char_zhong_linger_0732_01 ↔ char_gu_weiyu_1321_01：cos 0.547 → ⚠️ 存疑，待人工复核**
+- **char_zhong_linger_0732_01 ↔ char_cheng_hongyu_1435_01：cos 0.464 → ⚠️ 存疑，待人工复核**
+- **char_zhong_linger_0732_01 ↔ char_hua_chuxia_1549_01：cos 0.478 → ⚠️ 存疑，待人工复核**
+- **char_zhong_linger_0732_01 ↔ char_pei_manshu_1701_01：cos 0.431 → ⚠️ 存疑，待人工复核**
+- **char_zhong_linger_0732_01 ↔ char_ye_nanqiao_1811_01：cos 0.484 → ⚠️ 存疑，待人工复核**
+- **char_zhong_linger_0732_01 ↔ char_murong_yuyan_1942_01：cos 0.276 → 不同身份**
+- **char_zhong_linger_0732_01 ↔ char_nangong_lingjun_2054_01：cos 0.518 → ⚠️ 存疑，待人工复核**
+- **char_hua_qingdai_1029_01 ↔ char_tang_banxia_1156_01：cos 0.626 → 同一身份**
+- **char_hua_qingdai_1029_01 ↔ char_gu_weiyu_1321_01：cos 0.667 → 同一身份**
+- **char_hua_qingdai_1029_01 ↔ char_cheng_hongyu_1435_01：cos 0.562 → ⚠️ 存疑，待人工复核**
+- **char_hua_qingdai_1029_01 ↔ char_hua_chuxia_1549_01：cos 0.530 → ⚠️ 存疑，待人工复核**
+- **char_hua_qingdai_1029_01 ↔ char_pei_manshu_1701_01：cos 0.440 → ⚠️ 存疑，待人工复核**
+- **char_hua_qingdai_1029_01 ↔ char_ye_nanqiao_1811_01：cos 0.560 → ⚠️ 存疑，待人工复核**
+- **char_hua_qingdai_1029_01 ↔ char_murong_yuyan_1942_01：cos 0.521 → ⚠️ 存疑，待人工复核**
+- **char_hua_qingdai_1029_01 ↔ char_nangong_lingjun_2054_01：cos 0.433 → ⚠️ 存疑，待人工复核**
+- **char_tang_banxia_1156_01 ↔ char_gu_weiyu_1321_01：cos 0.617 → 同一身份**
+- **char_tang_banxia_1156_01 ↔ char_cheng_hongyu_1435_01：cos 0.453 → ⚠️ 存疑，待人工复核**
+- **char_tang_banxia_1156_01 ↔ char_hua_chuxia_1549_01：cos 0.555 → ⚠️ 存疑，待人工复核**
+- **char_tang_banxia_1156_01 ↔ char_pei_manshu_1701_01：cos 0.406 → ⚠️ 存疑，待人工复核**
+- **char_tang_banxia_1156_01 ↔ char_ye_nanqiao_1811_01：cos 0.522 → ⚠️ 存疑，待人工复核**
+- **char_tang_banxia_1156_01 ↔ char_murong_yuyan_1942_01：cos 0.572 → ⚠️ 存疑，待人工复核**
+- **char_tang_banxia_1156_01 ↔ char_nangong_lingjun_2054_01：cos 0.425 → ⚠️ 存疑，待人工复核**
+- **char_gu_weiyu_1321_01 ↔ char_cheng_hongyu_1435_01：cos 0.488 → ⚠️ 存疑，待人工复核**
+- **char_gu_weiyu_1321_01 ↔ char_hua_chuxia_1549_01：cos 0.485 → ⚠️ 存疑，待人工复核**
+- **char_gu_weiyu_1321_01 ↔ char_pei_manshu_1701_01：cos 0.429 → ⚠️ 存疑，待人工复核**
+- **char_gu_weiyu_1321_01 ↔ char_ye_nanqiao_1811_01：cos 0.504 → ⚠️ 存疑，待人工复核**
+- **char_gu_weiyu_1321_01 ↔ char_murong_yuyan_1942_01：cos 0.540 → ⚠️ 存疑，待人工复核**
+- **char_gu_weiyu_1321_01 ↔ char_nangong_lingjun_2054_01：cos 0.408 → ⚠️ 存疑，待人工复核**
+- **char_cheng_hongyu_1435_01 ↔ char_hua_chuxia_1549_01：cos 0.667 → 同一身份**
+- **char_cheng_hongyu_1435_01 ↔ char_pei_manshu_1701_01：cos 0.407 → ⚠️ 存疑，待人工复核**
+- **char_cheng_hongyu_1435_01 ↔ char_ye_nanqiao_1811_01：cos 0.565 → ⚠️ 存疑，待人工复核**
+- **char_cheng_hongyu_1435_01 ↔ char_murong_yuyan_1942_01：cos 0.377 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_cheng_hongyu_1435_01 ↔ char_nangong_lingjun_2054_01：cos 0.450 → ⚠️ 存疑，待人工复核**
+- **char_hua_chuxia_1549_01 ↔ char_pei_manshu_1701_01：cos 0.412 → ⚠️ 存疑，待人工复核**
+- **char_hua_chuxia_1549_01 ↔ char_ye_nanqiao_1811_01：cos 0.583 → ⚠️ 存疑，待人工复核**
+- **char_hua_chuxia_1549_01 ↔ char_murong_yuyan_1942_01：cos 0.401 → ⚠️ 存疑，待人工复核**
+- **char_hua_chuxia_1549_01 ↔ char_nangong_lingjun_2054_01：cos 0.531 → ⚠️ 存疑，待人工复核**
+- **char_pei_manshu_1701_01 ↔ char_ye_nanqiao_1811_01：cos 0.602 → 同一身份**
+- **char_pei_manshu_1701_01 ↔ char_murong_yuyan_1942_01：cos 0.337 → 不同身份**（接近 0.4 阈值，建议人工目检后再定）
+- **char_pei_manshu_1701_01 ↔ char_nangong_lingjun_2054_01：cos 0.516 → ⚠️ 存疑，待人工复核**
+- **char_ye_nanqiao_1811_01 ↔ char_murong_yuyan_1942_01：cos 0.465 → ⚠️ 存疑，待人工复核**
+- **char_ye_nanqiao_1811_01 ↔ char_nangong_lingjun_2054_01：cos 0.518 → ⚠️ 存疑，待人工复核**
+- **char_murong_yuyan_1942_01 ↔ char_nangong_lingjun_2054_01：cos 0.219 → 不同身份**
+- char_ayano 的 4 张 alts 互相 cos 0.60~0.77（同一身份家族）
+- char_jia 的 3 张 alts 互相 cos 0.68~0.79（同一身份家族）
+- char_jiang_yueyao 的 10 张 alts 互相 cos -0.06~0.74（含存疑项，见总表 ⚠）
+- char_lin_qingwan 的 9 张 alts 互相 cos 0.08~0.63（含存疑项，见总表 ⚠）
+- char_runcha 的 5 张 alts 互相 cos 0.48~0.71（含存疑项，见总表 ⚠）
+- char_duo3_2 的 3 张 alts 互相 cos 0.69~0.82（同一身份家族）
+- char_xiaog3 的 4 张 alts 互相 cos 0.45~0.78（含存疑项，见总表 ⚠）
+- ⚠️ char_anya_song/char9_anya_song_9view_matrix_9_16_173510_1.png vs 主脸 cos=0.151，低于 0.6 → 不同身份
+- ⚠️ char_ayano/front.png vs 主脸 cos=0.543，低于 0.6 → ⚠️ 存疑，待人工复核
+- ⚠️ char_ayano/smile.png vs 主脸 cos=0.535，低于 0.6 → ⚠️ 存疑，待人工复核
+- ⚠️ char_chen_xiawei/char5_chen_xiawei_base_3view_9_16_141012_1.png vs 主脸 cos=0.277，低于 0.6 → 不同身份
+- ⚠️ char_jiang_yueyao/char2_jiang_yueyao_solo_01_front_9_16_124521_1.png vs 主脸 cos=0.283，低于 0.6 → 不同身份
+- ⚠️ char_jiang_yueyao/char2_jiang_yueyao_solo_02_three_quarter_9_16_124558_1.png vs 主脸 cos=0.306，低于 0.6 → 不同身份
+- ⚠️ char_jiang_yueyao/char2_jiang_yueyao_solo_03_profile_side_9_16_124636_1.png vs 主脸 cos=0.167，低于 0.6 → 不同身份
+- ⚠️ char_jiang_yueyao/char2_jiang_yueyao_solo_04_back_9_16_124709_1.png vs 主脸 cos=0.006，低于 0.6 → 不同身份
+- ⚠️ char_jiang_yueyao/char2_jiang_yueyao_exp_01_gentle_joy_9_16_133152_1.png vs 主脸 cos=0.380，低于 0.6 → 不同身份
+- ⚠️ char_jiang_yueyao/char2_jiang_yueyao_exp_02_playful_wink_9_16_133226_1.png vs 主脸 cos=0.358，低于 0.6 → 不同身份
+- ⚠️ char_jiang_yueyao/char2_jiang_yueyao_exp_03_poetic_pensive_9_16_133258_1.png vs 主脸 cos=0.382，低于 0.6 → 不同身份
+- ⚠️ char_jiang_yueyao/char2_jiang_yueyao_exp_04_45deg_profile_9_16_133332_1.png vs 主脸 cos=0.413，低于 0.6 → ⚠️ 存疑，待人工复核
+- ⚠️ char_jiang_yueyao/char2_jiang_yueyao_9view_matrix_9_16_172132_1.png vs 主脸 cos=0.338，低于 0.6 → 不同身份
+- ⚠️ char_jiang_yueyao/char2_jiang_yueyao_base_body_6view_9_16_123314_1.png vs 主脸 cos=0.308，低于 0.6 → 不同身份
+- ⚠️ char_lin_qingwan/char1_lin_qingwan_solo_01_front_9_16_124223_1.png vs 主脸 cos=0.460，低于 0.6 → ⚠️ 存疑，待人工复核
+- ⚠️ char_lin_qingwan/char1_lin_qingwan_solo_02_three_quarter_9_16_124302_1.png vs 主脸 cos=0.461，低于 0.6 → ⚠️ 存疑，待人工复核
+- ⚠️ char_lin_qingwan/char1_lin_qingwan_solo_03_profile_side_9_16_124339_1.png vs 主脸 cos=0.317，低于 0.6 → 不同身份
+- ⚠️ char_lin_qingwan/char1_lin_qingwan_exp_01_smile_9_16_132941_1.png vs 主脸 cos=0.569，低于 0.6 → ⚠️ 存疑，待人工复核
+- ⚠️ char_lin_qingwan/char1_lin_qingwan_exp_02_stoic_9_16_133014_1.png vs 主脸 cos=0.487，低于 0.6 → ⚠️ 存疑，待人工复核
+- ⚠️ char_lin_qingwan/char1_lin_qingwan_exp_03_surprise_9_16_133046_1.png vs 主脸 cos=0.531，低于 0.6 → ⚠️ 存疑，待人工复核
+- ⚠️ char_lin_qingwan/char1_lin_qingwan_exp_04_melancholy_9_16_133119_1.png vs 主脸 cos=0.446，低于 0.6 → ⚠️ 存疑，待人工复核
+- ⚠️ char_lin_qingwan/char1_lin_qingwan_9view_matrix_9_16_172054_1.png vs 主脸 cos=0.247，低于 0.6 → 不同身份
+- ⚠️ char_lin_qingwan/char1_lin_qingwan_base_body_6view_9_16_123153_1.png vs 主脸 cos=0.369，低于 0.6 → 不同身份
+- ⚠️ char_qing_luo/char7_qing_luo_base_3view_9_16_172610_1.png vs 主脸 cos=0.111，低于 0.6 → 不同身份
+- ⚠️ char_ray_ling/char6_ray_ling_base_3view_9_16_172409_1.png vs 主脸 cos=0.394，低于 0.6 → 不同身份
+- ⚠️ char_runcha/left45.png vs 主脸 cos=0.478，低于 0.6 → ⚠️ 存疑，待人工复核
+- ⚠️ char_runcha/right45.png vs 主脸 cos=0.540，低于 0.6 → ⚠️ 存疑，待人工复核
+- ⚠️ char_runcha/half_body.png vs 主脸 cos=0.473，低于 0.6 → ⚠️ 存疑，待人工复核
+- ⚠️ char_shen_zhilan/char8_shen_zhilan_base_3view_9_16_172810_1.png vs 主脸 cos=0.352，低于 0.6 → 不同身份
+- ⚠️ char_su_xiaotang/char3_su_xiaotang_base_3view_9_16_140759_1.png vs 主脸 cos=0.258，低于 0.6 → 不同身份
+- ⚠️ char_zhao_ruoxi/char4_zhao_ruoxi_base_3view_9_16_140906_1.png vs 主脸 cos=0.513，低于 0.6 → ⚠️ 存疑，待人工复核
+- ⚠️ char_duo/left.png vs 主脸 cos=0.544，低于 0.6 → ⚠️ 存疑，待人工复核
+- ⚠️ char_xiaog3/char_xiaog3_3view_00001_.png vs 主脸 cos=0.384，低于 0.6 → 不同身份
+- ⚠️ char_xiaog3/char_xiaog3_scene_garden_00001_.png vs 主脸 cos=0.582，低于 0.6 → ⚠️ 存疑，待人工复核
 
-## 效果参照成品（换脸实拍）
+## 效果参照成品
 
-- `output/2026-10-12/hitomi_frontal_retest/duo3_2_final/知之者不如好之者，好之者不如乐之者.mp4` — Duo3_2（第三身份）
+- `output/2026-10-12/hitomi_char_assets/ayano (insta_ayano.fj)/views/front.png` — Ayano（insta_ayano.fj）
+- `output/2026-10-12/hitomi_char_assets/Jia (insta_jia_to_jia)/views/front.png` — Jia（insta_jia_to_jia）
+- `output/2026-10-12/hitomi_char_assets/るーんちゃ！ (insta_runchaliveeee)/views/front.png` — るーんちゃ（insta_runchaliveeee）
 - `output/2026-10-12/hitomi_frontal_retest/duo_final/做简简单单的自己，过平平淡淡的生活.mp4` — Duo（主用身份）
+- `output/2026-10-12/hitomi_frontal_retest/duo3_2_final/知之者不如好之者，好之者不如乐之者.mp4` — Duo3_2（第三身份）
 
 ## 来源
 
-- char_duo3_2 ← `input\ken4\face\gpt\duo3_2.jpg`
+- char_cheng_youqing_1438_01 ← `Google Flow 9 Standalone HD Views (9/9)`
+- char_fu_zhixia_1334_01 ← `D:\ai_projects\ComfyUI\output\2026-10-16\flow_images\char_fu_zhixia_1334_01_9view_matrix_9_16_133443_1.png`
+- char_gu_banxia_1103_01 ← `D:\ai_projects\ComfyUI\output\2026-10-16\flow_images\char_gu_banxia_1103_01_9view_matrix_9_16_110426_1.png`
+- char_huo_xinyue_1705_01 ← `Google Flow 9 Standalone HD Views (9/9)`
+- char_linghu_muchen_1736_01 ← `Google Flow 9 Standalone HD Views (9/9)`
+- char_lu_sitian_1405_01 ← `Google Flow 9 Standalone HD Views (8/9)`
+- char_lu_xuejian_1807_01 ← `Google Flow 9 Standalone HD Views (9/9)`
+- char_luo_tiange_1534_01 ← `Google Flow 9 Standalone HD Views (9/9)`
+- char_qiao_banxia_1204_01 ← `D:\ai_projects\ComfyUI\output\2026-10-16\flow_images\char_qiao_banxia_1204_01_9view_matrix_9_16_120504_1.png`
+- char_shangguan_weiyu_1014_01 ← `D:\ai_projects\ComfyUI\output\2026-10-16\flow_images\char_shangguan_weiyu_1014_01_9view_matrix_9_16_101444_1.png`
+- char_situ_muchen_1835_01 ← `Google Flow 9 Standalone HD Views (9/9)`
+- char_situ_yuwei_0934_01 ← `D:\ai_projects\ComfyUI\output\2026-10-16\flow_images\char_situ_yuwei_0934_01_9view_matrix_9_16_093444_1.png`
+- char_song_anran_1604_01 ← `Google Flow 9 Standalone HD Views (9/9)`
+- char_wen_lingsu_1635_01 ← `Google Flow 9 Standalone HD Views (9/9)`
+- char_xue_hongyu_1034_01 ← `D:\ai_projects\ComfyUI\output\2026-10-16\flow_images\char_xue_hongyu_1034_01_9view_matrix_9_16_103517_1.png`
+- char_xue_mengli_1234_01 ← `D:\ai_projects\ComfyUI\output\2026-10-16\flow_images\char_xue_mengli_1234_01_9view_matrix_9_16_123458_1.png`
+- char_xue_sitian_1508_01 ← `Google Flow 9 Standalone HD Views (9/9)`
+- char_yin_qingdai_1305_01 ← `D:\ai_projects\ComfyUI\output\2026-10-16\flow_images\char_yin_qingdai_1305_01_9view_matrix_9_16_130545_1.png`
+- char_yuchi_wanzhao_1134_01 ← `D:\ai_projects\ComfyUI\output\2026-10-16\flow_images\char_yuchi_wanzhao_1134_01_9view_matrix_9_16_113502_1.png`
+- char_yuchi_zhixia_0914_01 ← `D:\ai_projects\ComfyUI\output\2026-10-16\flow_images\char_yuchi_zhixia_0914_01_9view_matrix_9_16_091439_1.png`
+- char_cheng_yuwei_1103_01 ← `D:\ai_projects\ComfyUI\output\2026-10-15\flow_images\char_cheng_yuwei_1103_01_9view_matrix_9_16_110427_1.png`
+- char_chu_lingsu_1533_01 ← `D:\ai_projects\ComfyUI\output\2026-10-15\flow_images\char_chu_lingsu_1533_01_9view_matrix_9_16_153412_1.png`
+- char_fu_linger_1433_01 ← `D:\ai_projects\ComfyUI\output\2026-10-15\flow_images\char_fu_linger_1433_01_9view_matrix_9_16_143407_1.png`
+- char_fu_yuhan_1000_01 ← `D:\ai_projects\ComfyUI\output\2026-10-15\flow_images\char_fu_yuhan_1000_01_9view_matrix_9_16_100043_1.png`
+- char_gu_sitian_1003_01 ← `D:\ai_projects\ComfyUI\output\2026-10-15\flow_images\char_gu_sitian_1003_01_9view_matrix_9_16_100413_1.png`
+- char_liang_chuxia_1503_01 ← `D:\ai_projects\ComfyUI\output\2026-10-15\flow_images\char_liang_chuxia_1503_01_9view_matrix_9_16_150428_1.png`
+- char_liang_mengli_1203_01 ← `D:\ai_projects\ComfyUI\output\2026-10-15\flow_images\char_liang_mengli_1203_01_9view_matrix_9_16_120404_1.png`
+- char_shen_xiaorou_1233_01 ← `D:\ai_projects\ComfyUI\output\2026-10-15\flow_images\char_shen_xiaorou_1233_01_9view_matrix_9_16_123408_1.png`
+- char_shen_xinyue_1404_01 ← `D:\ai_projects\ComfyUI\output\2026-10-15\flow_images\char_shen_xinyue_1404_01_9view_matrix_9_16_140509_1.png`
+- char_tan_muchen_1133_01 ← `D:\ai_projects\ComfyUI\output\2026-10-15\flow_images\char_tan_muchen_1133_01_9view_matrix_9_16_113416_1.png`
+- char_xi_shanshan_1303_01 ← `D:\ai_projects\ComfyUI\output\2026-10-15\flow_images\char_xi_shanshan_1303_01_9view_matrix_9_16_130408_1.png`
+- char_xue_huaiyu_1034_01 ← `D:\ai_projects\ComfyUI\output\2026-10-15\flow_images\char_xue_huaiyu_1034_01_9view_matrix_9_16_103517_1.png`
+- char_yuchi_lingsu_1333_01 ← `D:\ai_projects\ComfyUI\output\2026-10-15\flow_images\char_yuchi_lingsu_1333_01_9view_matrix_9_16_133357_1.png`
+- char_bai_anran_0430_01 ← `D:\ai_projects\ComfyUI\output\2026-10-14\flow_images\char_bai_anran_0430_01_9view_matrix_9_16_043110_1.png`
+- char_bai_yuhan_0830_01 ← `D:\ai_projects\ComfyUI\output\2026-10-14\flow_images\char_bai_yuhan_0830_01_9view_matrix_9_16_083111_1.png`
+- char_cen_yuhan_1934_01 ← `D:\ai_projects\ComfyUI\output\2026-10-14\flow_images\char_cen_yuhan_1934_01_9view_matrix_9_16_193510_1.png`
+- char_chu_ruoli_0800_01 ← `D:\ai_projects\ComfyUI\output\2026-10-14\flow_images\char_chu_ruoli_0800_01_9view_matrix_9_16_080100_1.png`
+- char_fu_caiwei_1833_01 ← `D:\ai_projects\ComfyUI\output\2026-10-14\flow_images\char_fu_caiwei_1833_01_9view_matrix_9_16_183510_1.png`
+- char_fu_wanzhao_1100_01 ← `D:\ai_projects\ComfyUI\output\2026-10-14\flow_images\char_fu_wanzhao_1100_01_9view_matrix_9_16_110108_1.png`
+- char_gu_chaoyan_1904_01 ← `D:\ai_projects\ComfyUI\output\2026-10-14\flow_images\char_gu_chaoyan_1904_01_9view_matrix_9_16_190608_1.png`
+- char_huo_ruoxi_1200_01 ← `D:\ai_projects\ComfyUI\output\2026-10-14\flow_images\char_huo_ruoxi_1200_01_9view_matrix_9_16_120109_1.png`
+- char_jiang_zhiruo_0300_01 ← `D:\ai_projects\ComfyUI\output\2026-10-14\flow_images\char_jiang_zhiruo_0300_01_9view_matrix_9_16_030211_1.png`
+- char_liang_tiange_1303_01 ← `D:\ai_projects\ComfyUI\output\2026-10-14\flow_images\char_liang_tiange_1303_01_9view_matrix_9_16_130509_1.png`
+- char_liang_yuyan_1333_01 ← `D:\ai_projects\ComfyUI\output\2026-10-14\flow_images\char_liang_yuyan_1333_01_9view_matrix_9_16_133508_1.png`
+- char_linghu_chuxia_2204_01 ← `D:\ai_projects\ComfyUI\output\2026-10-14\flow_images\char_linghu_chuxia_2204_01_9view_matrix_9_16_220608_1.png`
+- char_lu_muchen_0530_01 ← `D:\ai_projects\ComfyUI\output\2026-10-14\flow_images\char_lu_muchen_0530_01_9view_matrix_9_16_053109_1.png`
+- char_murong_manshu_1704_01 ← `D:\ai_projects\ComfyUI\output\2026-10-14\flow_images\char_murong_manshu_1704_01_9view_matrix_9_16_170608_1.png`
+- char_murong_weiyu_0930_01 ← `D:\ai_projects\ComfyUI\output\2026-10-14\flow_images\char_murong_weiyu_0930_01_9view_matrix_9_16_093109_1.png`
+- char_murong_xingzhu_0200_01 ← `D:\ai_projects\ComfyUI\output\2026-10-14\flow_images\char_murong_xingzhu_0200_01_9view_matrix_9_16_020207_1.png`
+- char_ning_chuxia_0000_01 ← `D:\ai_projects\ComfyUI\output\2026-10-14\flow_images\char_ning_chuxia_0000_01_9view_matrix_9_16_000209_1.png`
+- char_ouyang_zhiwei_1233_01 ← `D:\ai_projects\ComfyUI\output\2026-10-14\flow_images\char_ouyang_zhiwei_1233_01_9view_matrix_9_16_123511_1.png`
+- char_qin_linger_1634_01 ← `D:\ai_projects\ComfyUI\output\2026-10-14\flow_images\char_qin_linger_1634_01_9view_matrix_9_16_163509_1.png`
+- char_qin_suqiu_0630_01 ← `D:\ai_projects\ComfyUI\output\2026-10-14\flow_images\char_qin_suqiu_0630_01_9view_matrix_9_16_063209_1.png`
+- char_qin_zhixia_1130_01 ← `D:\ai_projects\ComfyUI\output\2026-10-14\flow_images\char_qin_zhixia_1130_01_9view_matrix_9_16_113109_1.png`
+- char_ruan_lingjun_2034_01 ← `D:\ai_projects\ComfyUI\output\2026-10-14\flow_images\char_ruan_lingjun_2034_01_9view_matrix_9_16_203611_1.png`
+- char_ruan_tiange_1403_01 ← `D:\ai_projects\ComfyUI\output\2026-10-14\flow_images\char_ruan_tiange_1403_01_9view_matrix_9_16_140411_1.png`
+- char_shen_hongyu_1734_01 ← `D:\ai_projects\ComfyUI\output\2026-10-14\flow_images\char_shen_hongyu_1734_01_9view_matrix_9_16_173611_1.png`
+- char_situ_caiwei_0100_01 ← `D:\ai_projects\ComfyUI\output\2026-10-14\flow_images\char_situ_caiwei_0100_01_9view_matrix_9_16_010107_1.png`
+- char_situ_yuhan_0600_01 ← `D:\ai_projects\ComfyUI\output\2026-10-14\flow_images\char_situ_yuhan_0600_01_9view_matrix_9_16_060107_1.png`
+- char_song_wanzhao_1503_01 ← `D:\ai_projects\ComfyUI\output\2026-10-14\flow_images\char_song_wanzhao_1503_01_9view_matrix_9_16_150511_1.png`
+- char_tan_shanshan_0700_01 ← `D:\ai_projects\ComfyUI\output\2026-10-14\flow_images\char_tan_shanshan_0700_01_9view_matrix_9_16_070110_1.png`
+- char_tang_sitian_0900_01 ← `D:\ai_projects\ComfyUI\output\2026-10-14\flow_images\char_tang_sitian_0900_01_9view_matrix_9_16_090109_1.png`
+- char_tantai_weiyu_1433_01 ← `D:\ai_projects\ComfyUI\output\2026-10-14\flow_images\char_tantai_weiyu_1433_01_9view_matrix_9_16_143408_1.png`
+- char_tantai_xingzhu_0230_01 ← `D:\ai_projects\ComfyUI\output\2026-10-14\flow_images\char_tantai_xingzhu_0230_01_9view_matrix_9_16_023210_1.png`
+- char_tantai_yuwei_0730_01 ← `D:\ai_projects\ComfyUI\output\2026-10-14\flow_images\char_tantai_yuwei_0730_01_9view_matrix_9_16_073109_1.png`
+- char_wen_manshu_1030_01 ← `D:\ai_projects\ComfyUI\output\2026-10-14\flow_images\char_wen_manshu_1030_01_9view_matrix_9_16_103109_1.png`
+- char_xi_weiyu_2134_01 ← `D:\ai_projects\ComfyUI\output\2026-10-14\flow_images\char_xi_weiyu_2134_01_9view_matrix_9_16_213510_1.png`
+- char_xue_banxia_0330_01 ← `D:\ai_projects\ComfyUI\output\2026-10-14\flow_images\char_xue_banxia_0330_01_9view_matrix_9_16_033109_1.png`
+- char_ye_hongyu_0500_01 ← `D:\ai_projects\ComfyUI\output\2026-10-14\flow_images\char_ye_hongyu_0500_01_9view_matrix_9_16_050207_1.png`
+- char_ye_linger_2004_01 ← `D:\ai_projects\ComfyUI\output\2026-10-14\flow_images\char_ye_linger_2004_01_9view_matrix_9_16_200610_1.png`
+- char_ye_lingjun_0130_01 ← `D:\ai_projects\ComfyUI\output\2026-10-14\flow_images\char_ye_lingjun_0130_01_9view_matrix_9_16_013109_1.png`
+- char_ye_shanshan_0400_01 ← `D:\ai_projects\ComfyUI\output\2026-10-14\flow_images\char_ye_shanshan_0400_01_9view_matrix_9_16_040209_1.png`
+- char_ye_yuhan_1804_01 ← `D:\ai_projects\ComfyUI\output\2026-10-14\flow_images\char_ye_yuhan_1804_01_9view_matrix_9_16_180608_1.png`
+- char_yuchi_ruoli_1000_01 ← `D:\ai_projects\ComfyUI\output\2026-10-14\flow_images\char_yuchi_ruoli_1000_01_9view_matrix_9_16_100110_1.png`
+- char_yun_banxia_0030_01 ← `D:\ai_projects\ComfyUI\output\2026-10-14\flow_images\char_云_banxia_0030_01_9view_matrix_9_16_003149_1.png`
+- char_zhong_manshu_2104_01 ← `D:\ai_projects\ComfyUI\output\2026-10-14\flow_images\char_zhong_manshu_2104_01_9view_matrix_9_16_210511_1.png`
+- char_anya_song ← `D:\ai_projects\ComfyUI\output\2026-10-13\characters\anya_song\01_ootd\char9_anya_song_ootd_preppy_punk_9_16_173609_1.png`
+- char_ayano ← `d:\ai_projects\ComfyUI\output\2026-10-12\hitomi_char_assets\ayano (insta_ayano.fj)\base\base_face.jpg`
+- char_chen_xiawei ← `D:\ai_projects\ComfyUI\output\2026-10-13\characters\chen_xiawei\01_ootd\char5_chen_xiawei_ootd_french_retro_9_16_140938_1.png`
+- char_jia ← `d:\ai_projects\ComfyUI\output\2026-10-12\hitomi_char_assets\Jia (insta_jia_to_jia)\base\base_face.jpg`
+- char_jiang_yueyao ← `D:\ai_projects\ComfyUI\output\2026-10-13\characters\jiang_yueyao\02_standalone_angles\char2_jiang_yueyao_solo_05_closeup_face_9_16_124741_1.png`
+- char_lin_qingwan ← `D:\ai_projects\ComfyUI\output\2026-10-13\characters\lin_qingwan\02_standalone_angles\char1_lin_qingwan_solo_05_closeup_face_9_16_124448_1.png`
+- char_liu_yinuo_1923_10 ← `D:\ai_projects\ComfyUI\output\2026-10-13\flow_images\char_liu_yinuo_1923_10_base_3view_9_16_192625_1.png`
+- char_luo_qingchuan_1805 ← `D:\ai_projects\ComfyUI\output\2026-10-13\flow_images\char_luo_qingchuan_1805_9view_matrix_9_16_180708_1.png`
+- char_pei_yuhan_2300_01 ← `D:\ai_projects\ComfyUI\output\2026-10-13\flow_images\char_pei_yuhan_2300_01_9view_matrix_9_16_230108_1.png`
+- char_qing_luo ← `D:\ai_projects\ComfyUI\output\2026-10-13\characters\qing_luo\01_ootd\char7_qing_luo_ootd_guofeng_ink_9_16_172508_1.png`
+- char_ray_ling ← `D:\ai_projects\ComfyUI\output\2026-10-13\characters\ray_ling\01_ootd\char6_ray_ling_ootd_cyber_techwear_9_16_172221_1.png`
+- char_runcha ← `d:\ai_projects\ComfyUI\output\2026-10-12\hitomi_char_assets\るーんちゃ！ (insta_runchaliveeee)\base\base_face.jpg`
+- char_shen_zhilan ← `D:\ai_projects\ComfyUI\output\2026-10-13\characters\shen_zhilan\01_ootd\char8_shen_zhilan_ootd_executive_power_9_16_172708_1.png`
+- char_su_xiaotang ← `D:\ai_projects\ComfyUI\output\2026-10-13\characters\su_xiaotang\01_ootd\char3_su_xiaotang_ootd_streetwear_9_16_140721_1.png`
+- char_tang_mengli_2200_01 ← `D:\ai_projects\ComfyUI\output\2026-10-13\flow_images\char_tang_mengli_2200_01_9view_matrix_9_16_220209_1.png`
+- char_wen_xiaorou_2140_01 ← `D:\ai_projects\ComfyUI\output\2026-10-13\flow_images\char_wen_xiaorou_2140_01_9view_matrix_9_16_214209_1.png`
+- char_ye_muchen_2100_01 ← `D:\ai_projects\ComfyUI\output\2026-10-13\flow_images\char_ye_muchen_2100_01_9view_matrix_9_16_210110_1.png`
+- char_yin_xinyue_2330_01 ← `D:\ai_projects\ComfyUI\output\2026-10-13\flow_images\char_yin_xinyue_2330_01_9view_matrix_9_16_233111_1.png`
+- char_zhao_ruoxi ← `D:\ai_projects\ComfyUI\output\2026-10-13\characters\zhao_ruoxi\01_ootd\char4_zhao_ruoxi_ootd_quiet_luxury_9_16_140832_1.png`
 - char_duo ← `input\ken4\face\gpt\duo.png`
+- char_duo3_2 ← `input\ken4\face\gpt\duo3_2.jpg`
+- char_cen_zhiwei_1936_01 ← `Google Flow 9 Standalone HD Views (9/9)`
+- char_jiang_ruoli_2007_01 ← `Google Flow 9 Standalone HD Views (9/9)`
+- char_xiaog3 ← `output\2026-10-16\xiaog3_assets\char_xiaog3_scene_park_00001_.png`
+- char_xi_manshu_2045_01 ← `Google Flow 9 Standalone HD Views (9/9)`
+- char_huangfu_qingchuan_2104_01 ← `Google Flow 9 Standalone HD Views (9/9)`
+- char_linghu_zhixia_2133_01 ← `Google Flow 9 Standalone HD Views (9/9)`
+- char_qiao_weiyu_2134_01 ← `Google Flow 9 Standalone HD Views (9/9)`
+- char_jiang_qinghuan_2203_01 ← `Google Flow 9 Standalone HD Views (9/9)`
+- char_cen_youqing_2204_01 ← `Google Flow 9 Standalone HD Views (9/9)`
+- char_zhong_xiaorou_2233_01 ← `Google Flow 9 Standalone HD Views (8/9)`
+- char_tan_youqing_2234_01 ← `Google Flow 9 Standalone HD Views (9/9)`
+- char_tantai_lingsu_2303_01 ← `Google Flow 9 Standalone HD Views (9/9)`
+- char_qiao_qinghuan_2304_01 ← `Google Flow 9 Standalone HD Views (9/9)`
+- char_chu_muchen_0004_01 ← `Google Flow 9 Standalone HD Views (9/9)`
+- char_qiao_chaoyan_0004_01 ← `Google Flow 9 Standalone HD Views (9/9)`
+- char_xue_qinghuan_0034_01 ← `Google Flow 9 Standalone HD Views (9/9)`
+- char_tang_yuwei_0217_01 ← `Google Flow 9 Standalone HD Views (9/9)`
+- char_ouyang_chuxia_0250_01 ← `Google Flow 9 Standalone HD Views (9/9)`
+- char_bai_zhiruo_0305_01 ← `Google Flow 9 Standalone HD Views (9/9)`
+- char_pei_shanshan_0456_01 ← `Google Flow 9 Standalone HD Views (9/9)`
+- char_xi_qingchuan_0618_01 ← `Google Flow 9 Standalone HD Views (9/9)`
+- char_zhong_linger_0732_01 ← `Google Flow 9 Standalone HD Views (9/9)`
+- char_hua_qingdai_1029_01 ← `Google Flow 9 Standalone HD Views (9/9)`
+- char_tang_banxia_1156_01 ← `Google Flow 9 Standalone HD Views (7/9)`
+- char_gu_weiyu_1321_01 ← `Google Flow 9 Standalone HD Views (9/9)`
+- char_cheng_hongyu_1435_01 ← `Google Flow 9 Standalone HD Views (9/9)`
+- char_hua_chuxia_1549_01 ← `Google Flow 9 Standalone HD Views (9/9)`
+- char_pei_manshu_1701_01 ← `Google Flow 9 Standalone HD Views (9/9)`
+- char_ye_nanqiao_1811_01 ← `Google Flow 9 Standalone HD Views (9/9)`
+- char_murong_yuyan_1942_01 ← `Google Flow 9 Standalone HD Views (9/9)`
+- char_nangong_lingjun_2054_01 ← `Google Flow 9 Standalone HD Views (9/9)`

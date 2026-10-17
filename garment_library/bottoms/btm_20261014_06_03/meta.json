@@ -1,0 +1,24 @@
+{
+  "garment_id": "btm_20261014_06_03",
+  "category": "bottoms",
+  "label": "法式复古浪漫烟粉高支精纺美利奴羊毛优雅斜裁微喇鱼尾半身裙",
+  "mean_hex": "#9f6560",
+  "mask_area_px": 398196,
+  "crop_bbox": [
+    0,
+    0,
+    768,
+    1376
+  ],
+  "size": [
+    768,
+    1376
+  ],
+  "method": "google_flow+rembg_cpu",
+  "source_image": "D:\\ai_projects\\ComfyUI\\output\\2026-10-14\\flow_images\\wardrobe_item_btm_20261014_06_03_9_16_031710_1.png",
+  "source_url": "",
+  "added_date": "2026-10-14",
+  "dir": "bottoms\\btm_20261014_06_03",
+  "thumb": "bottoms/btm_20261014_06_03/thumb.png",
+  "note": "每小时自动化资产 · French Romantic Vintage dusty blush rose fine high-twist worsted Merino wool bias-cut fluid fluted fishtail midi skirt (architectural square neckline, delicate micro-pleats, puff sleeves, mother-of-pearl buttons)"
+}

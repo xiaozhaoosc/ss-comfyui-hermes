@@ -1,0 +1,24 @@
+{
+  "garment_id": "top_20261014_13_21",
+  "category": "tops",
+  "label": "赛博机能科技绯红微光泽重磅缎面高领插肩宽松落褶针织衫",
+  "mean_hex": "#651720",
+  "mask_area_px": 518351,
+  "crop_bbox": [
+    0,
+    0,
+    768,
+    1376
+  ],
+  "size": [
+    768,
+    1376
+  ],
+  "method": "google_flow+rembg_cpu",
+  "source_image": "D:\\ai_projects\\ComfyUI\\output\\2026-10-14\\flow_images\\wardrobe_item_top_20261014_13_21_9_16_211911_1.png",
+  "source_url": "",
+  "added_date": "2026-10-14",
+  "dir": "tops\\top_20261014_13_21",
+  "thumb": "tops/top_20261014_13_21/thumb.png",
+  "note": "每小时自动化资产 · Cyberpunk Techwear deep crimson red luminous heavyweight silk-satin relaxed mock-neck sweater with architectural ribbing (3M reflective trims, modular utility pockets, waterproof ripstop, industrial matte buckles)"
+}

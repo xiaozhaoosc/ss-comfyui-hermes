@@ -1,0 +1,24 @@
+{
+  "garment_id": "full_20261017_02_06",
+  "category": "full",
+  "label": "法式复古浪漫钛金灰复古粗花呢编织改良斜襟盘扣织金旗袍长礼服",
+  "mean_hex": "#5c5c59",
+  "mask_area_px": 314560,
+  "crop_bbox": [
+    0,
+    0,
+    768,
+    1376
+  ],
+  "size": [
+    768,
+    1376
+  ],
+  "method": "google_flow+rembg_cpu",
+  "source_image": "d:\\ai_projects\\ComfyUI\\output\\2026-10-17\\flow_images\\wardrobe_item_full_20261017_02_06_9_16_063041_1.png",
+  "source_url": "",
+  "added_date": "2026-10-17",
+  "dir": "full\\full_20261017_02_06",
+  "thumb": "full/full_20261017_02_06/thumb.png",
+  "note": "每小时自动化资产 · French Romantic Vintage gunmetal titanium gray heritage textured tweed bouclé modern oriental qipao gown with side slit and delicate frog closures (architectural square neckline, delicate micro-pleats, puff sleeves, mother-of-pearl buttons)"
+}

@@ -1,0 +1,24 @@
+{
+  "garment_id": "full_20261016_02_10",
+  "category": "full",
+  "label": "暗黑先锋高定午夜黑哑光机能防撕裂尼龙不规则解构斜肩落褶晚礼服",
+  "mean_hex": "#1c1c1e",
+  "mask_area_px": 388885,
+  "crop_bbox": [
+    0,
+    0,
+    768,
+    1376
+  ],
+  "size": [
+    768,
+    1376
+  ],
+  "method": "google_flow+rembg_cpu",
+  "source_image": "D:\\ai_projects\\ComfyUI\\output\\2026-10-16\\flow_images\\wardrobe_item_full_20261016_02_10_9_16_104722_1.png",
+  "source_url": "",
+  "added_date": "2026-10-16",
+  "dir": "full\\full_20261016_02_10",
+  "thumb": "full/full_20261016_02_10/thumb.png",
+  "note": "每小时自动化资产 · Dark Avant-Garde Haute Couture midnight black matte technical ripstop nylon avant-garde one-shoulder architectural draped maxi gown (architectural drape, corset boning, sculpted asymmetrical hem, deep luxurious shadows)"
+}

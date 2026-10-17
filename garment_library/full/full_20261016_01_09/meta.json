@@ -1,0 +1,24 @@
+{
+  "garment_id": "full_20261016_01_09",
+  "category": "full",
+  "label": "新中式风韵钛金灰改良织金香云纱极简Polo领锋利百褶运动连身裙",
+  "mean_hex": "#59534a",
+  "mask_area_px": 352752,
+  "crop_bbox": [
+    0,
+    0,
+    768,
+    1376
+  ],
+  "size": [
+    768,
+    1376
+  ],
+  "method": "google_flow+rembg_cpu",
+  "source_image": "D:\\ai_projects\\ComfyUI\\output\\2026-10-16\\flow_images\\wardrobe_item_full_20261016_01_09_9_16_092627_1.png",
+  "source_url": "",
+  "added_date": "2026-10-16",
+  "dir": "full\\full_20261016_01_09",
+  "thumb": "full/full_20261016_01_09/thumb.png",
+  "note": "每小时自动化资产 · Neo-Chinese Elegance gunmetal titanium gray modern metallic gold phoenix jacquard brocade minimalist polo collar sleeveless dress with sharp knife-pleated skirt (mandarin collar, jade frog buttons, tone-on-tone embroidery, classical oriental aesthetics)"
+}

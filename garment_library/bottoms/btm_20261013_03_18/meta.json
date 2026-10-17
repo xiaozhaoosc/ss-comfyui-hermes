@@ -1,0 +1,24 @@
+{
+  "garment_id": "btm_20261013_03_18",
+  "category": "bottoms",
+  "label": "朋克苏格兰红黑格纹刀褶双皮带百褶裙",
+  "mean_hex": "#45191b",
+  "mask_area_px": 392787,
+  "crop_bbox": [
+    0,
+    0,
+    768,
+    1376
+  ],
+  "size": [
+    768,
+    1376
+  ],
+  "method": "google_flow+rembg_cpu",
+  "source_image": "D:\\ai_projects\\ComfyUI\\output\\2026-10-13\\flow_images\\wardrobe_item_btm_20261013_03_18_9_16_183424_1.png",
+  "source_url": "",
+  "added_date": "2026-10-13",
+  "dir": "bottoms\\btm_20261013_03_18",
+  "thumb": "bottoms/btm_20261013_03_18/thumb.png",
+  "note": "每小时自动化资产 · Punk tartan pleated mini skirt with dual black leather buckle straps and silver eyelets"
+}

@@ -1,0 +1,24 @@
+{
+  "garment_id": "top_20261015_01_10",
+  "category": "tops",
+  "label": "意式手工裁缝烟粉哑光细腻小羊皮斜襟系带飘带真丝上衣",
+  "mean_hex": "#9e7066",
+  "mask_area_px": 451830,
+  "crop_bbox": [
+    0,
+    0,
+    768,
+    1376
+  ],
+  "size": [
+    768,
+    1376
+  ],
+  "method": "google_flow+rembg_cpu",
+  "source_image": "D:\\ai_projects\\ComfyUI\\output\\2026-10-15\\flow_images\\wardrobe_item_top_20261015_01_10_9_16_102442_1.png",
+  "source_url": "",
+  "added_date": "2026-10-15",
+  "dir": "tops\\top_20261015_01_10",
+  "thumb": "tops/top_20261015_01_10/thumb.png",
+  "note": "每小时自动化资产 · Italian Bespoke Tailoring dusty blush rose buttery soft matte nappa lambskin cross-over wrap blouse with flowing silk sash ties (sharp lapels, impeccable Italian shoulder structure, fluid drape, artisanal hand-stitched pick seams)"
+}

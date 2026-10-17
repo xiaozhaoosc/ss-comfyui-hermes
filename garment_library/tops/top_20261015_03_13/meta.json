@@ -1,0 +1,24 @@
+{
+  "garment_id": "top_20261015_03_13",
+  "category": "tops",
+  "label": "千禧轻朋克绯红哑光机能防撕裂尼龙多口袋工装机能短夹克",
+  "mean_hex": "#671d24",
+  "mask_area_px": 365936,
+  "crop_bbox": [
+    0,
+    0,
+    768,
+    1376
+  ],
+  "size": [
+    768,
+    1376
+  ],
+  "method": "google_flow+rembg_cpu",
+  "source_image": "D:\\ai_projects\\ComfyUI\\output\\2026-10-15\\flow_images\\wardrobe_item_top_20261015_03_13_9_16_131802_1.png",
+  "source_url": "",
+  "added_date": "2026-10-15",
+  "dir": "tops\\top_20261015_03_13",
+  "thumb": "tops/top_20261015_03_13/thumb.png",
+  "note": "每小时自动化资产 · Y2K Preppy Punk deep crimson red matte technical ripstop nylon cropped tactical utility jacket with modular zip pockets (knife pleats, leather buckle straps, silver eyelets, rebellious streetwear aesthetic)"
+}

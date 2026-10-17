@@ -1,0 +1,24 @@
+{
+  "garment_id": "top_20261013_09_18",
+  "category": "tops",
+  "label": "极简燕麦色纯羊绒宽松高领针织衫",
+  "mean_hex": "#b2a593",
+  "mask_area_px": 505173,
+  "crop_bbox": [
+    0,
+    0,
+    768,
+    1376
+  ],
+  "size": [
+    768,
+    1376
+  ],
+  "method": "google_flow+rembg_cpu",
+  "source_image": "D:\\ai_projects\\ComfyUI\\output\\2026-10-13\\flow_images\\wardrobe_item_top_20261013_09_18_9_16_183555_1.png",
+  "source_url": "",
+  "added_date": "2026-10-13",
+  "dir": "tops\\top_20261013_09_18",
+  "thumb": "tops/top_20261013_09_18/thumb.png",
+  "note": "每小时自动化资产 · Minimalist oatmeal pure cashmere relaxed turtleneck knit sweater with ribbed cuffs"
+}

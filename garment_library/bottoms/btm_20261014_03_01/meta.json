@@ -1,0 +1,24 @@
+{
+  "garment_id": "btm_20261014_03_01",
+  "category": "bottoms",
+  "label": "新中式风韵干邑棕微光泽重磅缎面不对称重叠交错垂褶裹身裙",
+  "mean_hex": "#7b4524",
+  "mask_area_px": 502723,
+  "crop_bbox": [
+    0,
+    0,
+    768,
+    1376
+  ],
+  "size": [
+    768,
+    1376
+  ],
+  "method": "google_flow+rembg_cpu",
+  "source_image": "D:\\ai_projects\\ComfyUI\\output\\2026-10-14\\flow_images\\wardrobe_item_btm_20261014_03_01_9_16_014708_1.png",
+  "source_url": "",
+  "added_date": "2026-10-14",
+  "dir": "bottoms\\btm_20261014_03_01",
+  "thumb": "bottoms/btm_20261014_03_01/thumb.png",
+  "note": "每小时自动化资产 · Neo-Chinese Elegance cognac camel brown luminous heavyweight silk-satin architectural asymmetric draped overlapping wrap skirt (mandarin collar, jade frog buttons, tone-on-tone embroidery, classical oriental aesthetics)"
+}

@@ -1,0 +1,24 @@
+{
+  "garment_id": "full_20261016_08_19",
+  "category": "full",
+  "label": "法式复古浪漫冷月银改良织金香云纱双排扣及踝手工羊绒系带大衣",
+  "mean_hex": "#8a877f",
+  "mask_area_px": 530853,
+  "crop_bbox": [
+    0,
+    0,
+    768,
+    1376
+  ],
+  "size": [
+    768,
+    1376
+  ],
+  "method": "google_flow+rembg_cpu",
+  "source_image": "D:\\ai_projects\\ComfyUI\\output\\2026-10-16\\flow_images\\wardrobe_item_full_20261016_08_19_9_16_194709_1.png",
+  "source_url": "",
+  "added_date": "2026-10-16",
+  "dir": "full\\full_20261016_08_19",
+  "thumb": "full/full_20261016_08_19/thumb.png",
+  "note": "每小时自动化资产 · French Romantic Vintage luminous moonlit silver modern metallic gold phoenix jacquard brocade floor-length double-breasted cashmere coat with self-tie sash belt (architectural square neckline, delicate micro-pleats, puff sleeves, mother-of-pearl buttons)"
+}

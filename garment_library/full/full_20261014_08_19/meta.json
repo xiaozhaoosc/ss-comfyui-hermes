@@ -1,0 +1,24 @@
+{
+  "garment_id": "full_20261014_08_19",
+  "category": "full",
+  "label": "新中式风韵钛金灰哑光细腻小羊皮改良斜襟盘扣织金旗袍长礼服",
+  "mean_hex": "#5c5a56",
+  "mask_area_px": 285900,
+  "crop_bbox": [
+    0,
+    0,
+    768,
+    1376
+  ],
+  "size": [
+    768,
+    1376
+  ],
+  "method": "google_flow+rembg_cpu",
+  "source_image": "D:\\ai_projects\\ComfyUI\\output\\2026-10-14\\flow_images\\wardrobe_item_full_20261014_08_19_9_16_191809_1.png",
+  "source_url": "",
+  "added_date": "2026-10-14",
+  "dir": "full\\full_20261014_08_19",
+  "thumb": "full/full_20261014_08_19/thumb.png",
+  "note": "每小时自动化资产 · Neo-Chinese Elegance gunmetal titanium gray buttery soft matte nappa lambskin modern oriental qipao gown with side slit and delicate frog closures (mandarin collar, jade frog buttons, tone-on-tone embroidery, classical oriental aesthetics)"
+}

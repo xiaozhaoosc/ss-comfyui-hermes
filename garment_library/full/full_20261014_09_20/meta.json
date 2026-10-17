@@ -1,0 +1,24 @@
+{
+  "garment_id": "full_20261014_09_20",
+  "category": "full",
+  "label": "法式复古浪漫烟粉重磅真丝乔其纱法式方领碎花真丝茶歇裙",
+  "mean_hex": "#a56f67",
+  "mask_area_px": 429665,
+  "crop_bbox": [
+    0,
+    0,
+    768,
+    1376
+  ],
+  "size": [
+    768,
+    1376
+  ],
+  "method": "google_flow+rembg_cpu",
+  "source_image": "D:\\ai_projects\\ComfyUI\\output\\2026-10-14\\flow_images\\wardrobe_item_full_20261014_09_20_9_16_204808_1.png",
+  "source_url": "",
+  "added_date": "2026-10-14",
+  "dir": "full\\full_20261014_09_20",
+  "thumb": "full/full_20261014_09_20/thumb.png",
+  "note": "每小时自动化资产 · French Romantic Vintage dusty blush rose heavyweight mulberry silk georgette vintage square-neck silk crepe tea midi dress with mother-of-pearl buttons (architectural square neckline, delicate micro-pleats, puff sleeves, mother-of-pearl buttons)"
+}

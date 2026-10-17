@@ -1,0 +1,24 @@
+{
+  "garment_id": "top_20261017_01_03",
+  "category": "tops",
+  "label": "赛博机能科技烟粉改良织金香云纱高领插肩宽松落褶针织衫",
+  "mean_hex": "#977163",
+  "mask_area_px": 463880,
+  "crop_bbox": [
+    0,
+    0,
+    768,
+    1376
+  ],
+  "size": [
+    768,
+    1376
+  ],
+  "method": "google_flow+rembg_cpu",
+  "source_image": "d:\\ai_projects\\ComfyUI\\output\\2026-10-17\\flow_images\\wardrobe_item_top_20261017_01_03_9_16_033231_1.png",
+  "source_url": "",
+  "added_date": "2026-10-17",
+  "dir": "tops\\top_20261017_01_03",
+  "thumb": "tops/top_20261017_01_03/thumb.png",
+  "note": "每小时自动化资产 · Cyberpunk Techwear dusty blush rose modern metallic gold phoenix jacquard brocade relaxed mock-neck sweater with architectural ribbing (3M reflective trims, modular utility pockets, waterproof ripstop, industrial matte buckles)"
+}

@@ -1,0 +1,24 @@
+{
+  "garment_id": "top_20261017_05_19",
+  "category": "tops",
+  "label": "老钱极简静奢霁蓝改良织金香云纱不对称露肩修身打底上衣",
+  "mean_hex": "#4f627c",
+  "mask_area_px": 343505,
+  "crop_bbox": [
+    0,
+    0,
+    768,
+    1376
+  ],
+  "size": [
+    768,
+    1376
+  ],
+  "method": "google_flow+rembg_cpu",
+  "source_image": "D:\\ai_projects\\ComfyUI\\output\\2026-10-17\\flow_images\\wardrobe_item_top_20261017_05_19_9_16_195525_1.png",
+  "source_url": "",
+  "added_date": "2026-10-17",
+  "dir": "tops\\top_20261017_05_19",
+  "thumb": "tops/top_20261017_05_19/thumb.png",
+  "note": "每小时自动化资产 · Quiet Luxury poetic cobalt azure blue modern metallic gold phoenix jacquard brocade asymmetric one-shoulder sculpted compression knit top (clean tailored silhouette, understated elegance, supreme fabric drape, minimalist luxury)"
+}

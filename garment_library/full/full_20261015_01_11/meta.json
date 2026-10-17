@@ -1,0 +1,24 @@
+{
+  "garment_id": "full_20261015_01_11",
+  "category": "full",
+  "label": "新中式风韵霁蓝水洗天丝亚麻混纺鱼骨塑形高开叉丝绒长礼服",
+  "mean_hex": "#2d5591",
+  "mask_area_px": 293673,
+  "crop_bbox": [
+    0,
+    0,
+    768,
+    1376
+  ],
+  "size": [
+    768,
+    1376
+  ],
+  "method": "google_flow+rembg_cpu",
+  "source_image": "D:\\ai_projects\\ComfyUI\\output\\2026-10-15\\flow_images\\wardrobe_item_full_20261015_01_11_9_16_111753_1.png",
+  "source_url": "",
+  "added_date": "2026-10-15",
+  "dir": "full\\full_20261015_01_11",
+  "thumb": "full/full_20261015_01_11/thumb.png",
+  "note": "每小时自动化资产 · Neo-Chinese Elegance poetic cobalt azure blue washed breathable Tencel-linen blend corset-boned strapless evening gown with daring side slit (mandarin collar, jade frog buttons, tone-on-tone embroidery, classical oriental aesthetics)"
+}

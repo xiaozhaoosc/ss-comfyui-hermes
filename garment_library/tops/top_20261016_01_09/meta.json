@@ -1,0 +1,24 @@
+{
+  "garment_id": "top_20261016_01_09",
+  "category": "tops",
+  "label": "千禧轻朋克钛金灰建筑感高定丝绒高领插肩宽松落褶针织衫",
+  "mean_hex": "#434343",
+  "mask_area_px": 531261,
+  "crop_bbox": [
+    0,
+    0,
+    768,
+    1376
+  ],
+  "size": [
+    768,
+    1376
+  ],
+  "method": "google_flow+rembg_cpu",
+  "source_image": "D:\\ai_projects\\ComfyUI\\output\\2026-10-16\\flow_images\\wardrobe_item_top_20261016_01_09_9_16_094704_1.png",
+  "source_url": "",
+  "added_date": "2026-10-16",
+  "dir": "tops\\top_20261016_01_09",
+  "thumb": "tops/top_20261016_01_09/thumb.png",
+  "note": "每小时自动化资产 · Y2K Preppy Punk gunmetal titanium gray plush architectural silk velvet relaxed mock-neck sweater with architectural ribbing (knife pleats, leather buckle straps, silver eyelets, rebellious streetwear aesthetic)"
+}

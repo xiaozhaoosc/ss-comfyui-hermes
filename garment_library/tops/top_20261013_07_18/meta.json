@@ -1,0 +1,24 @@
+{
+  "garment_id": "top_20261013_07_18",
+  "category": "tops",
+  "label": "新中式黛绿半透真丝刺绣立领衫",
+  "mean_hex": "#b6c2b2",
+  "mask_area_px": 411160,
+  "crop_bbox": [
+    0,
+    0,
+    768,
+    1376
+  ],
+  "size": [
+    768,
+    1376
+  ],
+  "method": "google_flow+rembg_cpu",
+  "source_image": "D:\\ai_projects\\ComfyUI\\output\\2026-10-13\\flow_images\\wardrobe_item_top_20261013_07_18_9_16_183353_1.png",
+  "source_url": "",
+  "added_date": "2026-10-13",
+  "dir": "tops\\top_20261013_07_18",
+  "thumb": "tops/top_20261013_07_18/thumb.png",
+  "note": "每小时自动化资产 · Neo-Chinese celadon silk organza blouse with mandarin collar and delicate bamboo embroidery"
+}

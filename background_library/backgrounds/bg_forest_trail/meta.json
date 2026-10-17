@@ -1,0 +1,31 @@
+{
+ "bg_id": "bg_forest_trail",
+ "slug": "forest_trail",
+ "name_cn": "森林小径",
+ "category": "suggested",
+ "scene_type": "outdoor",
+ "person_space": "center",
+ "light_dir": "backlight",
+ "ground_y": 0.7304,
+ "ground_y_manifest": 0.7,
+ "file": "backgrounds/bg_forest_trail/main.png",
+ "thumb": "backgrounds/bg_forest_trail/thumb.png",
+ "alts": [],
+ "width": 768,
+ "height": 1376,
+ "aspect": 0.5581,
+ "prompt_note": "a quiet forest trail with sunlight patches breaking through the canopy, fallen leaves on the path and tall trees on both",
+ "source": "google_flow",
+ "flow_project_url": "mixed",
+ "flow_task_name": "bg_forest_trail",
+ "phash": 14978607393325223030,
+ "quality": {
+  "lap_var": 3292.9,
+  "mean_luma": 96.7,
+  "std": 60.9,
+  "black_ratio": 0.0185,
+  "person_ratio": null,
+  "dup_of": null
+ },
+ "added_date": "2026-10-17"
+}

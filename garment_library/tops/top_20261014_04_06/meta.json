@@ -1,0 +1,24 @@
+{
+  "garment_id": "top_20261014_04_06",
+  "category": "tops",
+  "label": "法式复古浪漫钛金灰改良织金香云纱不对称露肩修身打底上衣",
+  "mean_hex": "#59544c",
+  "mask_area_px": 492050,
+  "crop_bbox": [
+    0,
+    0,
+    768,
+    1376
+  ],
+  "size": [
+    768,
+    1376
+  ],
+  "method": "google_flow+rembg_cpu",
+  "source_image": "D:\\ai_projects\\ComfyUI\\output\\2026-10-14\\flow_images\\wardrobe_item_top_20261014_04_06_9_16_064607_1.png",
+  "source_url": "",
+  "added_date": "2026-10-14",
+  "dir": "tops\\top_20261014_04_06",
+  "thumb": "tops/top_20261014_04_06/thumb.png",
+  "note": "每小时自动化资产 · French Romantic Vintage gunmetal titanium gray modern metallic gold phoenix jacquard brocade asymmetric one-shoulder sculpted compression knit top (architectural square neckline, delicate micro-pleats, puff sleeves, mother-of-pearl buttons)"
+}

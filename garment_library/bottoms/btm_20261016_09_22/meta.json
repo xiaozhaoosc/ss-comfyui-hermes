@@ -1,0 +1,24 @@
+{
+  "garment_id": "btm_20261016_09_22",
+  "category": "bottoms",
+  "label": "意式手工裁缝霁蓝双面纯手工羊绒战术多口袋快拆束脚工装裤",
+  "mean_hex": "#5d5147",
+  "mask_area_px": 321610,
+  "crop_bbox": [
+    0,
+    0,
+    1376,
+    768
+  ],
+  "size": [
+    1376,
+    768
+  ],
+  "method": "google_flow+rembg_cpu",
+  "source_image": "D:\\ai_projects\\ComfyUI\\output\\2026-10-16\\flow_images\\wardrobe_item_btm_20261016_09_22_9_16_221803_1.png",
+  "source_url": "",
+  "added_date": "2026-10-16",
+  "dir": "bottoms\\btm_20261016_09_22",
+  "thumb": "bottoms/btm_20261016_09_22/thumb.png",
+  "note": "每小时自动化资产 · Italian Bespoke Tailoring poetic cobalt azure blue double-faced hand-stitched pure cashmere tactical modular cargo joggers with snap buckle cuffs (sharp lapels, impeccable Italian shoulder structure, fluid drape, artisanal hand-stitched pick seams)"
+}

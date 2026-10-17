@@ -1,0 +1,37 @@
+{
+ "bg_id": "bg_cafe_window_morning",
+ "slug": "cafe_window_morning",
+ "name_cn": "咖啡馆 · 上午",
+ "category": "suggested",
+ "scene_type": "indoor",
+ "person_space": "center",
+ "light_dir": "left-window",
+ "ground_y": 0.4295,
+ "ground_y_manifest": 0.75,
+ "file": "backgrounds/bg_cafe_window_morning/main.png",
+ "thumb": "backgrounds/bg_cafe_window_morning/thumb.png",
+ "alts": [
+  {
+   "file": "backgrounds/bg_cafe_window_morning/alts/01.png",
+   "src": "output/2026-10-17/flow_images\\bg_cafe_window_morning_225230_1.png",
+   "lap_var": 421.7
+  }
+ ],
+ "width": 768,
+ "height": 1376,
+ "aspect": 0.5581,
+ "prompt_note": "a cozy cafe with wooden tables and chairs arranged to the sides, a large window casting warm morning light patches on th",
+ "source": "google_flow",
+ "flow_project_url": "mixed",
+ "flow_task_name": "bg_cafe_window_morning",
+ "phash": 11059830813783732608,
+ "quality": {
+  "lap_var": 421.7,
+  "mean_luma": 127.5,
+  "std": 52.7,
+  "black_ratio": 0.0021,
+  "person_ratio": null,
+  "dup_of": null
+ },
+ "added_date": "2026-10-17"
+}

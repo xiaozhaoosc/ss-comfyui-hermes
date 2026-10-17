@@ -1,0 +1,39 @@
+{
+  "name": "top",
+  "source_image": "sources\\7686812393779123898_03_b289cc2055e47ec3.webp",
+  "box": [
+    300,
+    660,
+    845,
+    1080
+  ],
+  "crop_bbox": [
+    717,
+    544,
+    805,
+    850
+  ],
+  "mask_area_px": 3255,
+  "image_size": [
+    1080,
+    1080
+  ],
+  "mean_rgb": [
+    38,
+    31,
+    31
+  ],
+  "mean_hex": "#261f1f",
+  "method": "sam2_points_neg",
+  "device": "cpu",
+  "note": "黑色丝质吊带连衣裙上身段（酒杯遮挡区挖透明洞，左肩带被连带）；来源抖音图文笔记图3，图4为同款裙未重复入库",
+  "garment_id": "top_20261013_02",
+  "category": "tops",
+  "label": "7686812393779123898_03",
+  "source_url": "https://www.douyin.com/note/7686812393779123898",
+  "added_date": "2026-10-13",
+  "size": [
+    519,
+    556
+  ]
+}

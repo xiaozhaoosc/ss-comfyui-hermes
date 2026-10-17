@@ -1,0 +1,24 @@
+{
+  "garment_id": "top_20261017_04_16",
+  "category": "tops",
+  "label": "新中式风韵钛金灰哑光细腻小羊皮双排扣廓形精裁短西装",
+  "mean_hex": "#5d5a56",
+  "mask_area_px": 380113,
+  "crop_bbox": [
+    0,
+    0,
+    768,
+    1376
+  ],
+  "size": [
+    768,
+    1376
+  ],
+  "method": "google_flow+rembg_cpu",
+  "source_image": "D:\\ai_projects\\ComfyUI\\output\\2026-10-17\\flow_images\\wardrobe_item_top_20261017_04_16_9_16_160310_1.png",
+  "source_url": "",
+  "added_date": "2026-10-17",
+  "dir": "tops\\top_20261017_04_16",
+  "thumb": "tops/top_20261017_04_16/thumb.png",
+  "note": "每小时自动化资产 · Neo-Chinese Elegance gunmetal titanium gray buttery soft matte nappa lambskin cropped tailored double-breasted structured blazer (mandarin collar, jade frog buttons, tone-on-tone embroidery, classical oriental aesthetics)"
+}

@@ -1,0 +1,24 @@
+{
+  "garment_id": "btm_20261016_02_11",
+  "category": "bottoms",
+  "label": "法式复古浪漫干邑棕高支精纺美利奴羊毛不对称重叠交错垂褶裹身裙",
+  "mean_hex": "#6a4227",
+  "mask_area_px": 436389,
+  "crop_bbox": [
+    0,
+    0,
+    768,
+    1376
+  ],
+  "size": [
+    768,
+    1376
+  ],
+  "method": "google_flow+rembg_cpu",
+  "source_image": "D:\\ai_projects\\ComfyUI\\output\\2026-10-16\\flow_images\\wardrobe_item_btm_20261016_02_11_9_16_114712_1.png",
+  "source_url": "",
+  "added_date": "2026-10-16",
+  "dir": "bottoms\\btm_20261016_02_11",
+  "thumb": "bottoms/btm_20261016_02_11/thumb.png",
+  "note": "每小时自动化资产 · French Romantic Vintage cognac camel brown fine high-twist worsted Merino wool architectural asymmetric draped overlapping wrap skirt (architectural square neckline, delicate micro-pleats, puff sleeves, mother-of-pearl buttons)"
+}

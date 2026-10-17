@@ -1,0 +1,24 @@
+{
+  "garment_id": "btm_20261015_01_10",
+  "category": "bottoms",
+  "label": "暗黑先锋高定霁蓝建筑感高定丝绒战术多口袋快拆束脚工装裤",
+  "mean_hex": "#082856",
+  "mask_area_px": 422208,
+  "crop_bbox": [
+    0,
+    0,
+    768,
+    1376
+  ],
+  "size": [
+    768,
+    1376
+  ],
+  "method": "google_flow+rembg_cpu",
+  "source_image": "D:\\ai_projects\\ComfyUI\\output\\2026-10-15\\flow_images\\wardrobe_item_btm_20261015_01_10_9_16_105043_1.png",
+  "source_url": "",
+  "added_date": "2026-10-15",
+  "dir": "bottoms\\btm_20261015_01_10",
+  "thumb": "bottoms/btm_20261015_01_10/thumb.png",
+  "note": "每小时自动化资产 · Dark Avant-Garde Haute Couture poetic cobalt azure blue plush architectural silk velvet tactical modular cargo joggers with snap buckle cuffs (architectural drape, corset boning, sculpted asymmetrical hem, deep luxurious shadows)"
+}

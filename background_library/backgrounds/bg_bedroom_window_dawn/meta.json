@@ -1,0 +1,31 @@
+{
+ "bg_id": "bg_bedroom_window_dawn",
+ "slug": "bedroom_window_dawn",
+ "name_cn": "卧室落地窗 · 清晨",
+ "category": "suggested",
+ "scene_type": "indoor",
+ "person_space": "center",
+ "light_dir": "cool-window",
+ "ground_y": 0.4353,
+ "ground_y_manifest": 0.76,
+ "file": "backgrounds/bg_bedroom_window_dawn/main.png",
+ "thumb": "backgrounds/bg_bedroom_window_dawn/thumb.png",
+ "alts": [],
+ "width": 768,
+ "height": 1376,
+ "aspect": 0.5581,
+ "prompt_note": "a serene bedroom corner with a floor-to-ceiling window, a corner of an unmade bed at the left edge and a pale wood floor",
+ "source": "google_flow",
+ "flow_project_url": "mixed",
+ "flow_task_name": "bg_bedroom_window_dawn",
+ "phash": 9362244217431982571,
+ "quality": {
+  "lap_var": 163.1,
+  "mean_luma": 148.3,
+  "std": 43.8,
+  "black_ratio": 0.0003,
+  "person_ratio": null,
+  "dup_of": null
+ },
+ "added_date": "2026-10-17"
+}

@@ -1,0 +1,31 @@
+{
+ "bg_id": "bg_gradient_seamless_paper",
+ "slug": "gradient_seamless_paper",
+ "name_cn": "渐变无缝纸",
+ "category": "suggested",
+ "scene_type": "studio",
+ "person_space": "center",
+ "light_dir": "soft-even",
+ "ground_y": 0.9455,
+ "ground_y_manifest": 0.7,
+ "file": "backgrounds/bg_gradient_seamless_paper/main.png",
+ "thumb": "backgrounds/bg_gradient_seamless_paper/thumb.png",
+ "alts": [],
+ "width": 768,
+ "height": 1376,
+ "aspect": 0.5581,
+ "prompt_note": "a seamless studio paper backdrop with a smooth gradient from warm off-white at the top to light grey at the bottom",
+ "source": "google_flow",
+ "flow_project_url": "mixed",
+ "flow_task_name": "bg_gradient_seamless_paper",
+ "phash": 13901051935026382317,
+ "quality": {
+  "lap_var": 25.3,
+  "mean_luma": 217.2,
+  "std": 10.5,
+  "black_ratio": 0.0,
+  "person_ratio": null,
+  "dup_of": null
+ },
+ "added_date": "2026-10-17"
+}

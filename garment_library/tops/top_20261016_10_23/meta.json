@@ -1,0 +1,24 @@
+{
+  "garment_id": "top_20261016_10_23",
+  "category": "tops",
+  "label": "暗黑先锋高定象牙白高支精纺美利奴羊毛高领插肩宽松落褶针织衫",
+  "mean_hex": "#4c3929",
+  "mask_area_px": 626826,
+  "crop_bbox": [
+    0,
+    0,
+    768,
+    1376
+  ],
+  "size": [
+    768,
+    1376
+  ],
+  "method": "google_flow+rembg_cpu",
+  "source_image": "D:\\ai_projects\\ComfyUI\\output\\2026-10-16\\flow_images\\wardrobe_item_top_20261016_10_23_9_16_231725_1.png",
+  "source_url": "",
+  "added_date": "2026-10-16",
+  "dir": "tops\\top_20261016_10_23",
+  "thumb": "tops/top_20261016_10_23/thumb.png",
+  "note": "每小时自动化资产 · Dark Avant-Garde Haute Couture pure ivory white fine high-twist worsted Merino wool relaxed mock-neck sweater with architectural ribbing (architectural drape, corset boning, sculpted asymmetrical hem, deep luxurious shadows)"
+}

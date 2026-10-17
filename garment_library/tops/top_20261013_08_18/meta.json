@@ -1,0 +1,24 @@
+{
+  "garment_id": "top_20261013_08_18",
+  "category": "tops",
+  "label": "法式复古方领微褶泡泡袖白衬衫",
+  "mean_hex": "#c9c2b4",
+  "mask_area_px": 455190,
+  "crop_bbox": [
+    0,
+    0,
+    768,
+    1376
+  ],
+  "size": [
+    768,
+    1376
+  ],
+  "method": "google_flow+rembg_cpu",
+  "source_image": "D:\\ai_projects\\ComfyUI\\output\\2026-10-13\\flow_images\\wardrobe_item_top_20261013_08_18_9_16_183525_1.png",
+  "source_url": "",
+  "added_date": "2026-10-13",
+  "dir": "tops\\top_20261013_08_18",
+  "thumb": "tops/top_20261013_08_18/thumb.png",
+  "note": "每小时自动化资产 · French vintage ivory linen-silk square-neck blouse with subtle puff sleeves and shell buttons"
+}

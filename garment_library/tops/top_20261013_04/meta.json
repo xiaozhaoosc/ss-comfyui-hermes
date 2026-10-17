@@ -1,0 +1,24 @@
+{
+  "garment_id": "top_20261013_04",
+  "category": "tops",
+  "label": "Y2K机能反光多口袋工装短夹克",
+  "mean_hex": "#646566",
+  "mask_area_px": 356036,
+  "crop_bbox": [
+    0,
+    0,
+    768,
+    1376
+  ],
+  "size": [
+    768,
+    1376
+  ],
+  "method": "google_flow+rembg_cpu",
+  "source_image": "D:\\ai_projects\\ComfyUI\\output\\2026-10-13\\wardrobe\\standalone_items\\wardrobe_item_05_y2k_cropped_tech_jacket_9_16_173109_1.png",
+  "source_url": "",
+  "added_date": "2026-10-13",
+  "dir": "tops\\top_20261013_04",
+  "thumb": "tops/top_20261013_04/thumb.png",
+  "note": "Google Flow 0-credit 商业白底单品 · 哑光炭银反光条战术飞行员夹克"
+}

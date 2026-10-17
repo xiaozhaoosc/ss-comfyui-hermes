@@ -1,0 +1,24 @@
+{
+  "garment_id": "full_20261013_02",
+  "category": "full",
+  "label": "新中式改良织金织锦马面裙套装",
+  "mean_hex": "#644f31",
+  "mask_area_px": 461069,
+  "crop_bbox": [
+    0,
+    0,
+    768,
+    1376
+  ],
+  "size": [
+    768,
+    1376
+  ],
+  "method": "google_flow+rembg_cpu",
+  "source_image": "D:\\ai_projects\\ComfyUI\\output\\2026-10-13\\wardrobe\\standalone_items\\wardrobe_item_03_mamianqun_gold_9_16_172908_1.png",
+  "source_url": "",
+  "added_date": "2026-10-13",
+  "dir": "full\\full_20261013_02",
+  "thumb": "full/full_20261013_02/thumb.png",
+  "note": "Google Flow 0-credit 商业白底单品 · 金线提花云锦马面裙配黑色立领真丝短袄"
+}

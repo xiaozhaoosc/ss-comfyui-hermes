@@ -1,0 +1,24 @@
+{
+  "garment_id": "full_20261015_03_14",
+  "category": "full",
+  "label": "意式手工裁缝象牙白高支精纺美利奴羊毛鱼骨塑形高开叉丝绒长礼服",
+  "mean_hex": "#cfc9b9",
+  "mask_area_px": 315110,
+  "crop_bbox": [
+    0,
+    0,
+    768,
+    1376
+  ],
+  "size": [
+    768,
+    1376
+  ],
+  "method": "google_flow+rembg_cpu",
+  "source_image": "D:\\ai_projects\\ComfyUI\\output\\2026-10-15\\flow_images\\wardrobe_item_full_20261015_03_14_9_16_141802_1.png",
+  "source_url": "",
+  "added_date": "2026-10-15",
+  "dir": "full\\full_20261015_03_14",
+  "thumb": "full/full_20261015_03_14/thumb.png",
+  "note": "每小时自动化资产 · Italian Bespoke Tailoring pure ivory white fine high-twist worsted Merino wool corset-boned strapless evening gown with daring side slit (sharp lapels, impeccable Italian shoulder structure, fluid drape, artisanal hand-stitched pick seams)"
+}

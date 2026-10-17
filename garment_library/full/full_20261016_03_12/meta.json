@@ -1,0 +1,24 @@
+{
+  "garment_id": "full_20261016_03_12",
+  "category": "full",
+  "label": "仙侠水墨诗意绯红高支精纺美利奴羊毛双排扣及踝手工羊绒系带大衣",
+  "mean_hex": "#6b1d27",
+  "mask_area_px": 384358,
+  "crop_bbox": [
+    0,
+    0,
+    768,
+    1376
+  ],
+  "size": [
+    768,
+    1376
+  ],
+  "method": "google_flow+rembg_cpu",
+  "source_image": "D:\\ai_projects\\ComfyUI\\output\\2026-10-16\\flow_images\\wardrobe_item_full_20261016_03_12_9_16_121838_1.png",
+  "source_url": "",
+  "added_date": "2026-10-16",
+  "dir": "full\\full_20261016_03_12",
+  "thumb": "full/full_20261016_03_12/thumb.png",
+  "note": "每小时自动化资产 · Ethereal Xianxia Flow deep crimson red fine high-twist worsted Merino wool floor-length double-breasted cashmere coat with self-tie sash belt (translucent layered organza, misty gradients, delicate flowing ribbons, poetic drapery)"
+}

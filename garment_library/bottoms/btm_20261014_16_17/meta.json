@@ -1,0 +1,24 @@
+{
+  "garment_id": "btm_20261014_16_17",
+  "category": "bottoms",
+  "label": "赛博机能科技烟粉复古粗花呢编织优雅斜裁微喇鱼尾半身裙",
+  "mean_hex": "#9d6b64",
+  "mask_area_px": 363704,
+  "crop_bbox": [
+    0,
+    0,
+    768,
+    1376
+  ],
+  "size": [
+    768,
+    1376
+  ],
+  "method": "google_flow+rembg_cpu",
+  "source_image": "D:\\ai_projects\\ComfyUI\\output\\2026-10-14\\flow_images\\wardrobe_item_btm_20261014_16_17_9_16_171811_1.png",
+  "source_url": "",
+  "added_date": "2026-10-14",
+  "dir": "bottoms\\btm_20261014_16_17",
+  "thumb": "bottoms/btm_20261014_16_17/thumb.png",
+  "note": "每小时自动化资产 · Cyberpunk Techwear dusty blush rose heritage textured tweed bouclé bias-cut fluid fluted fishtail midi skirt (3M reflective trims, modular utility pockets, waterproof ripstop, industrial matte buckles)"
+}

@@ -1,0 +1,24 @@
+{
+  "garment_id": "full_20261016_10_22",
+  "category": "full",
+  "label": "暗黑先锋高定钛金灰建筑感高定丝绒双排扣及踝手工羊绒系带大衣",
+  "mean_hex": "#424242",
+  "mask_area_px": 135122,
+  "crop_bbox": [
+    0,
+    0,
+    1376,
+    768
+  ],
+  "size": [
+    1376,
+    768
+  ],
+  "method": "google_flow+rembg_cpu",
+  "source_image": "D:\\ai_projects\\ComfyUI\\output\\2026-10-16\\flow_images\\wardrobe_item_full_20261016_10_22_9_16_224803_1.png",
+  "source_url": "",
+  "added_date": "2026-10-16",
+  "dir": "full\\full_20261016_10_22",
+  "thumb": "full/full_20261016_10_22/thumb.png",
+  "note": "每小时自动化资产 · Dark Avant-Garde Haute Couture gunmetal titanium gray plush architectural silk velvet floor-length double-breasted cashmere coat with self-tie sash belt (architectural drape, corset boning, sculpted asymmetrical hem, deep luxurious shadows)"
+}

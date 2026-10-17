@@ -1,0 +1,24 @@
+{
+  "garment_id": "top_20261016_04_14",
+  "category": "tops",
+  "label": "新中式风韵象牙白复古粗花呢编织方领微褶泡泡袖衬衫",
+  "mean_hex": "#d5d0c2",
+  "mask_area_px": 480192,
+  "crop_bbox": [
+    0,
+    0,
+    768,
+    1376
+  ],
+  "size": [
+    768,
+    1376
+  ],
+  "method": "google_flow+rembg_cpu",
+  "source_image": "D:\\ai_projects\\ComfyUI\\output\\2026-10-16\\flow_images\\wardrobe_item_top_20261016_04_14_9_16_141704_1.png",
+  "source_url": "",
+  "added_date": "2026-10-16",
+  "dir": "tops\\top_20261016_04_14",
+  "thumb": "tops/top_20261016_04_14/thumb.png",
+  "note": "每小时自动化资产 · Neo-Chinese Elegance pure ivory white heritage textured tweed bouclé square-neck blouse with delicate micro-pleated puff sleeves (mandarin collar, jade frog buttons, tone-on-tone embroidery, classical oriental aesthetics)"
+}

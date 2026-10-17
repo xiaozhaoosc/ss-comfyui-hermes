@@ -1,0 +1,24 @@
+{
+  "garment_id": "top_20261016_05_15",
+  "category": "tops",
+  "label": "法式复古浪漫烟粉哑光细腻小羊皮斜襟系带飘带真丝上衣",
+  "mean_hex": "#af7e73",
+  "mask_area_px": 486262,
+  "crop_bbox": [
+    0,
+    0,
+    768,
+    1376
+  ],
+  "size": [
+    768,
+    1376
+  ],
+  "method": "google_flow+rembg_cpu",
+  "source_image": "D:\\ai_projects\\ComfyUI\\output\\2026-10-16\\flow_images\\wardrobe_item_top_20261016_05_15_9_16_154745_1.png",
+  "source_url": "",
+  "added_date": "2026-10-16",
+  "dir": "tops\\top_20261016_05_15",
+  "thumb": "tops/top_20261016_05_15/thumb.png",
+  "note": "每小时自动化资产 · French Romantic Vintage dusty blush rose buttery soft matte nappa lambskin cross-over wrap blouse with flowing silk sash ties (architectural square neckline, delicate micro-pleats, puff sleeves, mother-of-pearl buttons)"
+}

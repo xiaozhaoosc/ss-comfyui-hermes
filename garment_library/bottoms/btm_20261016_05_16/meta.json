@@ -1,0 +1,24 @@
+{
+  "garment_id": "btm_20261016_05_16",
+  "category": "bottoms",
+  "label": "法式复古浪漫霁蓝微光泽重磅缎面双皮带扣金属孔眼百褶短裙",
+  "mean_hex": "#0c4484",
+  "mask_area_px": 452293,
+  "crop_bbox": [
+    0,
+    0,
+    768,
+    1376
+  ],
+  "size": [
+    768,
+    1376
+  ],
+  "method": "google_flow+rembg_cpu",
+  "source_image": "D:\\ai_projects\\ComfyUI\\output\\2026-10-16\\flow_images\\wardrobe_item_btm_20261016_05_16_9_16_161730_1.png",
+  "source_url": "",
+  "added_date": "2026-10-16",
+  "dir": "bottoms\\btm_20261016_05_16",
+  "thumb": "bottoms/btm_20261016_05_16/thumb.png",
+  "note": "每小时自动化资产 · French Romantic Vintage poetic cobalt azure blue luminous heavyweight silk-satin pleated mini skirt with dual leather buckle belts and silver eyelets (architectural square neckline, delicate micro-pleats, puff sleeves, mother-of-pearl buttons)"
+}
