@@ -1025,16 +1025,34 @@ def linear_input_act(linear, x, input_act, act_weight=None, act_eps=0.0,
             return _residual_out(torch.nn.functional.linear(
                 _eager_input_act(x, input_act, act_weight, act_eps), weight, bias))
         qdata, scale = TensorWiseINT8Layout.get_plain_tensors(weight)
-        return quant_ops.ck.int8_linear(
-            x, qdata, scale, bias, x.dtype,
-            convrot=getattr(weight._params, "convrot", False),
-            convrot_groupsize=getattr(weight._params, "convrot_groupsize", 256),
-            input_act=input_act,
-            input_act_weight=act_weight,
-            input_act_eps=act_eps,
-            residual=residual,
-            residual_scale=residual_scale,
-        )
+        try:
+            return quant_ops.ck.int8_linear(
+                x, qdata, scale, bias, x.dtype,
+                convrot=getattr(weight._params, "convrot", False),
+                convrot_groupsize=getattr(weight._params, "convrot_groupsize", 256),
+                input_act=input_act,
+                input_act_weight=act_weight,
+                input_act_eps=act_eps,
+                residual=residual,
+                residual_scale=residual_scale,
+            )
+        except (TypeError, ValueError):
+            try:
+                out = quant_ops.ck.int8_linear(
+                    x, qdata, scale, bias, x.dtype,
+                    convrot=getattr(weight._params, "convrot", False),
+                    convrot_groupsize=getattr(weight._params, "convrot_groupsize", 256),
+                    input_act=input_act,
+                )
+            except (TypeError, ValueError):
+                x_act = _eager_input_act(x, input_act, act_weight, act_eps)
+                out = quant_ops.ck.int8_linear(
+                    x_act, qdata, scale, bias, x.dtype,
+                    convrot=getattr(weight._params, "convrot", False),
+                    convrot_groupsize=getattr(weight._params, "convrot_groupsize", 256),
+                    input_act=None,
+                )
+            return _residual_out(out)
     finally:
         uncast_bias_weight(linear, weight, bias, offload_stream)
 
