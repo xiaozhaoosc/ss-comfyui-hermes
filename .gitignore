@@ -70,3 +70,4 @@ tools/asset_manager/browser_profiles/
 /.trae-html-share-packages/
 *.err
 *.db
+tools/.obsidian_sync_state.json
