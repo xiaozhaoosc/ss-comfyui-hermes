@@ -116,6 +116,37 @@ def _start_chrome(options):
         os.environ.update(saved)
 
 
+def _reset_debug_tabs(port):
+    """把调试 Chrome 里的重页面关掉，换一个空白页。
+
+    微信后台页面会把渲染进程拖到无响应（CDP Page.navigate 都超时），
+    chromedriver 建会话时会因此干等 30s~120s+ 甚至 read timeout。
+    这些是发布专用浏览器，标签页可随时重建，登录态在 profile 里不受影响。
+    先开空白页再关旧页，避免关掉最后一个标签页把 Chrome 一起带走。
+    """
+    import json as _json
+    import urllib.request
+
+    opener = urllib.request.build_opener(urllib.request.ProxyHandler({}))
+    base = f"http://127.0.0.1:{port}"
+    try:
+        opener.open(base + "/json/new?about:blank", timeout=5).read()
+    except Exception:
+        return
+    try:
+        pages = [t for t in _json.loads(opener.open(base + "/json/list", timeout=8).read().decode("utf-8"))
+                 if t.get("type") == "page"]
+    except Exception:
+        return
+    for t in pages:
+        if "about:blank" in (t.get("url") or ""):
+            continue
+        try:
+            opener.open(f"{base}/json/close/{t['id']}", timeout=5).read()
+        except Exception:
+            pass
+
+
 def build_driver(platform, initial_url=None):
     """连接到用户物理桌面上常驻或新弹出的真实 Chrome 实例（穿透 Windows 会话沙箱）。"""
     profile_dir = PROFILE_ROOT / platform
@@ -126,8 +157,13 @@ def build_driver(platform, initial_url=None):
     if not _is_port_listening(port):
         _cleanup_stale_profile_locks(profile_dir)
         _launch_desktop_chrome(platform, profile_dir, port, initial_url=initial_url)
+    else:
+        _reset_debug_tabs(port)
 
     options = webdriver.ChromeOptions()
+    # 微信编辑器是重页面，normal 策略会等所有子资源加载完（实测 >60s）；
+    # eager 在 DOMContentLoaded 即返回，后续流程本来就有显式等待与 sleep。
+    options.page_load_strategy = "eager"
     if _is_port_listening(port):
         options.add_experimental_option("debuggerAddress", f"127.0.0.1:{port}")
         driver = _start_chrome(options)
@@ -139,7 +175,41 @@ def build_driver(platform, initial_url=None):
         driver = _start_chrome(options)
 
     driver.implicitly_wait(3)
+    # 不设超时时，僵尸标签页会让 chromedriver 建会话无限挂起（实测 >120s 无任何报错），
+    # 加了超时至少能抛出异常让上层走降级逻辑。
+    driver.set_page_load_timeout(60)
+    driver.set_script_timeout(60)
+    # 标记这是"附加到常驻 Chrome"的会话：收尾时只能断会话，不能 quit（见 release_driver）
+    driver.keep_alive = True
     return driver
+
+
+def release_driver(driver, log=None):
+    """释放 driver 但保留被附加的 Chrome。
+
+    ★ 关键：用 debuggerAddress 附加到常驻 Chrome 时，`driver.quit()` 会把**整个 Chrome 一起关掉**。
+    实测后果是每发布一次、9527/9528 就消失一次；下一单只能重新拉浏览器，
+    而 schtasks 被安全策略拦截时只能回退到当前会话启动，之后 chromedriver 附加要 35s~180s+、
+    经常 120s 读超时，表现为"环境莫名不稳定"。这里只断会话 + 停 chromedriver，Chrome 与登录态常驻。
+    """
+    if not getattr(driver, "keep_alive", False):
+        try:
+            driver.quit()
+        except Exception:
+            pass
+        return
+    try:
+        driver.command_executor.close()
+    except Exception:
+        pass
+    try:
+        service = getattr(driver, "service", None)
+        if service is not None:
+            service.stop()
+    except Exception:
+        pass
+    if log:
+        log("已释放自动化会话（保留常驻 Chrome 与登录态）。")
 
 
 def wait_for(driver, locator, timeout, what):
@@ -225,10 +295,7 @@ def run_publish_flow(platform, upload_url, video_path, title, tags, log, fill_fo
         return result
     finally:
         if result != "need_login":
-            try:
-                driver.quit()
-            except WebDriverException:
-                pass
+            release_driver(driver, log)
 
 
 def _find_action_button(driver, xpaths, mode="publish"):
@@ -250,22 +317,37 @@ def _find_action_button(driver, xpaths, mode="publish"):
 
 
 def check_success_indicator(driver, publish_mode):
-    """检测页面中是否出现保存/发布成功的 Toast 或提示消息。"""
-    success_keywords = ("保存成功", "草稿保存成功", "已保存", "保存草稿成功") if publish_mode == "draft" else ("发表成功", "发布成功", "上传成功")
-    toast_xpaths = [
-        '//*[contains(@class,"toast") or contains(@class,"message") or contains(@class,"tips") or contains(@class,"weui-desktop-toast") or contains(@class,"notification")]',
-        '//div[contains(@role,"alert") or contains(@role,"status")]',
-    ]
-    for xpath in toast_xpaths:
-        for el in driver.find_elements(By.XPATH, xpath):
-            try:
-                if el.is_displayed():
-                    text = (el.text or "").strip()
-                    if any(k in text for k in success_keywords):
-                        return True
-            except WebDriverException:
-                continue
-    return False
+    """检测页面中是否出现保存/发布成功的提示。
+
+    注意：这里只是"锦上添花"的信号，不能让它拖垮整个任务——
+    原实现用 `//*[contains(@class,"toast") or ...]` 做全文档 XPath 扫描，
+    在微信编辑器这种超大 DOM 上单次要几十秒，累积能把任务拖到 chromedriver 读超时；
+    而且调用点没有异常保护，超时直接把整个发布打成 failed。
+    现在改成原生选择器扫描并整体吞异常。
+    """
+    keywords = ("保存成功", "草稿保存成功", "已保存", "保存草稿成功") if publish_mode == "draft" else ("发表成功", "发布成功", "上传成功")
+    try:
+        return bool(driver.execute_script("""
+            var kws = arguments[0];
+            var sels = ['.weui-desktop-toast', '.weui-desktop-tips', '.weui-desktop-msg',
+                        '.weui-desktop-notification', '#js_save_status', '.edit-actions__status',
+                        '[class*="save-status"]', '[class*="saved-time"]',
+                        '[class*="toast"]', '[class*="notice"]',
+                        '[role="alert"]', '[role="status"]'];
+            for (var i = 0; i < sels.length; i++) {
+                var nodes = document.querySelectorAll(sels[i]);
+                for (var j = 0; j < nodes.length; j++) {
+                    var t = nodes[j].innerText || '';
+                    if (!t) continue;
+                    for (var k = 0; k < kws.length; k++) {
+                        if (t.indexOf(kws[k]) >= 0) return true;
+                    }
+                }
+            }
+            return false;
+        """, list(keywords)))
+    except Exception:
+        return False
 
 
 def _auto_confirm(driver, upload_url, confirm_xpaths, publish_mode, log):

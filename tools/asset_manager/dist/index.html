@@ -1,0 +1,1741 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIGC Local Asset Hub · 本地资产管理系统</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f9ff',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+            },
+            dark: {
+              900: '#090d16',
+              800: '#0f172a',
+              700: '#1e293b',
+              600: '#334155',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Vue 3 -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #0f172a; }
+    ::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #475569; }
+
+    /* Transparency Checkered Grid */
+    .bg-checker {
+      background-image: linear-gradient(45deg, #1e293b 25%, transparent 25%),
+                        linear-gradient(-45deg, #1e293b 25%, transparent 25%),
+                        linear-gradient(45deg, transparent 75%, #1e293b 75%),
+                        linear-gradient(-45deg, transparent 75%, #1e293b 75%);
+      background-size: 16px 16px;
+      background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+      background-color: #0f172a;
+    }
+    .line-clamp-2 {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body class="bg-dark-900 text-slate-100 min-h-screen font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+  <div id="app" class="flex flex-col min-h-screen">
+
+    <!-- Top Navigation Bar -->
+    <header class="sticky top-0 z-40 bg-dark-800/90 backdrop-blur border-b border-dark-700/80 px-6 py-3.5 flex items-center justify-between">
+      <div class="flex items-center space-x-6">
+        <div class="flex items-center space-x-3">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-600 to-indigo-500 flex items-center justify-center shadow-lg shadow-brand-500/20">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+          </div>
+          <div>
+            <span class="font-bold text-lg tracking-wide text-white">AIGC Local Asset Hub</span>
+            <span class="ml-2 text-xs text-brand-500 bg-brand-500/10 border border-brand-500/20 px-2 py-0.5 rounded-full font-mono">v1.0 Local</span>
+          </div>
+        </div>
+
+        <!-- Navigation Tabs -->
+        <nav class="flex items-center space-x-1 bg-dark-900/60 p-1 rounded-xl border border-dark-700/60">
+          <button @click="currentTab = 'characters'" :class="currentTab === 'characters' ? 'bg-dark-700 text-white shadow-sm' : 'text-slate-400 hover:text-slate-200'" class="px-4 py-1.5 rounded-lg text-sm font-medium transition flex items-center space-x-2">
+            <span>🎭 角色库</span>
+            <span class="text-xs bg-dark-800 px-1.5 py-0.5 rounded-full text-slate-300 font-mono">{{ stats.character_count }}</span>
+          </button>
+          <button @click="currentTab = 'garments'" :class="currentTab === 'garments' ? 'bg-dark-700 text-white shadow-sm' : 'text-slate-400 hover:text-slate-200'" class="px-4 py-1.5 rounded-lg text-sm font-medium transition flex items-center space-x-2">
+            <span>👗 服装库</span>
+            <span class="text-xs bg-dark-800 px-1.5 py-0.5 rounded-full text-slate-300 font-mono">{{ stats.garment_count }}</span>
+          </button>
+          <button @click="currentTab = 'lookbook'" :class="currentTab === 'lookbook' ? 'bg-dark-700 text-white shadow-sm' : 'text-slate-400 hover:text-slate-200'" class="px-4 py-1.5 rounded-lg text-sm font-medium transition flex items-center space-x-2">
+            <span>🧥 搭配矩阵</span>
+            <span class="text-xs bg-emerald-500/10 text-emerald-400 px-1.5 py-0.5 rounded-full font-mono">Lookbook</span>
+          </button>
+          <button @click="currentTab = 'imported'" :class="currentTab === 'imported' ? 'bg-dark-700 text-white shadow-sm' : 'text-slate-400 hover:text-slate-200'" class="px-4 py-1.5 rounded-lg text-sm font-medium transition flex items-center space-x-2">
+            <span>📥 已导入</span>
+          </button>
+          <button @click="currentTab = 'generated'" :class="currentTab === 'generated' ? 'bg-dark-700 text-white shadow-sm' : 'text-slate-400 hover:text-slate-200'" class="px-4 py-1.5 rounded-lg text-sm font-medium transition flex items-center space-x-2">
+            <span>📤 已生成</span>
+          </button>
+          <button @click="currentTab = 'settings'" :class="currentTab === 'settings' ? 'bg-dark-700 text-white shadow-sm' : 'text-slate-400 hover:text-slate-200'" class="px-3.5 py-1.5 rounded-lg text-sm font-medium transition flex items-center space-x-1.5">
+            <span>⚙️ 工作流直投设置</span>
+          </button>
+        </nav>
+      </div>
+
+      <!-- Search & Sync Toolbar -->
+      <div class="flex items-center space-x-3">
+        <div class="relative w-64">
+          <input
+            v-model="searchQuery"
+            @input="onSearchInput"
+            type="text"
+            placeholder="全文即时检索 (名称/备注/来源)..."
+            class="w-full bg-dark-900 border border-dark-600/80 rounded-lg px-3.5 py-1.5 text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition"
+          />
+          <button v-if="searchQuery" @click="searchQuery = ''; triggerFetch()" class="absolute right-2.5 top-2 text-slate-400 hover:text-slate-200 text-xs">✕</button>
+        </div>
+
+        <button
+          @click="syncLibraries"
+          :disabled="isSyncing"
+          class="flex items-center space-x-1.5 bg-dark-700 hover:bg-dark-600 border border-dark-600 text-slate-200 px-3 py-1.5 rounded-lg text-sm font-medium transition disabled:opacity-50"
+          title="重新扫描本地 character_library 与 garment_library 目录"
+        >
+          <svg :class="{'animate-spin': isSyncing}" class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+          <span>{{ isSyncing ? '同步中...' : '重扫库' }}</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-1 p-6 max-w-7xl w-full mx-auto">
+
+      <!-- ================================================================= -->
+      <!-- TAB 1: 角色库 (Characters) -->
+      <!-- ================================================================= -->
+      <section v-if="currentTab === 'characters'" class="space-y-6">
+        <!-- Filter Toolbar -->
+        <div class="flex items-center justify-between bg-dark-800 border border-dark-700/80 p-3.5 rounded-xl">
+          <div class="flex items-center space-x-4">
+            <span class="text-xs text-slate-400 font-semibold tracking-wider uppercase">置信度过滤:</span>
+            <div class="flex items-center space-x-2">
+              <input type="range" min="0.5" max="0.9" step="0.05" v-model.number="minDetScore" @change="fetchCharacters" class="w-28 accent-brand-500 cursor-pointer">
+              <span class="text-xs font-mono text-brand-500 bg-brand-500/10 px-2 py-0.5 rounded">≥ {{ minDetScore }}</span>
+            </div>
+          </div>
+          <div class="text-xs text-slate-400">
+            共 <span class="font-mono text-slate-200 font-semibold">{{ characters.length }}</span> 位角色资产（RetinaFace + InsightFace w600k 512维身份锁脸）
+          </div>
+        </div>
+
+        <!-- Character Cards Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+          <div
+            v-for="char in characters"
+            :key="char.char_id"
+            class="bg-dark-800 border border-dark-700/80 hover:border-brand-500/50 rounded-xl overflow-hidden flex flex-col group transition duration-200 hover:shadow-xl hover:shadow-black/40"
+          >
+            <!-- Card Image Box -->
+            <div class="relative aspect-square bg-dark-900 overflow-hidden cursor-pointer" @click="openCharacterModal(char)">
+              <img
+                :src="char.thumb_url"
+                :alt="char.name"
+                @error="e => e.target.src = char.face_url"
+                class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-300"
+                loading="lazy"
+              />
+              <div class="absolute top-2.5 left-2.5 bg-dark-900/80 backdrop-blur border border-dark-600/60 px-2 py-0.5 rounded text-[11px] font-mono text-slate-300">
+                Det: {{ char.det_score.toFixed(3) }}
+              </div>
+              <div v-if="char.alts && char.alts.length" class="absolute top-2.5 right-2.5 bg-brand-600/90 text-white px-2 py-0.5 rounded text-[11px] font-medium backdrop-blur shadow">
+                {{ char.alts.length }} 视角
+              </div>
+              <!-- Hover Overlay -->
+              <div class="absolute inset-0 bg-brand-600/10 opacity-0 group-hover:opacity-100 transition flex items-center justify-center pointer-events-none">
+                <span class="bg-dark-900/90 text-white text-xs px-3 py-1.5 rounded-lg border border-brand-500/40 shadow-lg">点击探查视角与相似度</span>
+              </div>
+            </div>
+
+            <!-- Card Info Box -->
+            <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+              <div>
+                <div class="flex items-center justify-between">
+                  <h3 class="font-bold text-white text-base truncate" :title="char.name">{{ char.name }}</h3>
+                </div>
+                <div class="text-xs text-slate-400 font-mono mt-0.5">{{ char.char_id }}</div>
+                <p v-if="char.note" class="text-xs text-slate-400 mt-2 line-clamp-2" :title="char.note">
+                  {{ char.note }}
+                </p>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="space-y-1.5 pt-2 border-t border-dark-700/60">
+                <div class="grid grid-cols-2 gap-1.5">
+                  <button
+                    @click="copyPath(char.face, '已复制相对路径: ' + char.face)"
+                    class="bg-dark-700 hover:bg-brand-600 hover:text-white text-slate-300 border border-dark-600 py-1.5 rounded-lg text-xs font-medium transition flex items-center justify-center space-x-1"
+                    title="复制相对路径 (faces/...)"
+                  >
+                    <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
+                    <span>相对路径</span>
+                  </button>
+                  <button
+                    @click="copyPath(char.abs_face_path || ('D:\\\\ai_projects\\\\ComfyUI\\\\character_library\\\\' + char.face.replace(/\\//g, '\\\\')), '已复制绝对物理路径 (ReActor直引)')"
+                    class="bg-dark-700 hover:bg-emerald-600 hover:text-white text-emerald-400 border border-dark-600 py-1.5 rounded-lg text-xs font-medium transition flex items-center justify-center space-x-1"
+                    title="复制完整绝对路径 (D:\ai_projects\ComfyUI\...)"
+                  >
+                    <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
+                    <span>绝对路径</span>
+                  </button>
+                </div>
+                <button
+                  @click="openCharacterModal(char)"
+                  class="w-full bg-dark-900/60 hover:bg-dark-700 text-slate-400 hover:text-slate-200 py-1 rounded text-xs transition flex items-center justify-center space-x-1"
+                >
+                  <span>🔍 多视角图集与身份矩阵</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================================================= -->
+      <!-- TAB 2: 服装库 (Garments) -->
+      <!-- ================================================================= -->
+      <section v-if="currentTab === 'garments'" class="space-y-6">
+        <!-- Multi-dimensional Toolbar -->
+        <div class="bg-dark-800 border border-dark-700/80 p-4 rounded-xl space-y-4">
+          <!-- Category Tabs -->
+          <div class="flex items-center justify-between flex-wrap gap-3">
+            <div class="flex items-center space-x-1 bg-dark-900/80 p-1 rounded-lg border border-dark-700">
+              <button
+                v-for="cat in [
+                  {id: 'all', label: '全部'},
+                  {id: 'tops', label: '上装 (tops)'},
+                  {id: 'bottoms', label: '下装 (bottoms)'},
+                  {id: 'full', label: '整套/连体 (full)'}
+                ]"
+                :key="cat.id"
+                @click="selectedCategory = cat.id; fetchGarments()"
+                :class="selectedCategory === cat.id ? 'bg-dark-700 text-white' : 'text-slate-400 hover:text-slate-200'"
+                class="px-3 py-1 rounded text-xs font-medium transition"
+              >
+                {{ cat.label }}
+              </button>
+            </div>
+
+            <!-- Preview Mode Toggle (Transparent vs White) -->
+            <div class="flex items-center space-x-2 text-xs text-slate-300">
+              <span>展示底色:</span>
+              <button
+                @click="garmentPreviewMode = 'transparent'"
+                :class="garmentPreviewMode === 'transparent' ? 'bg-brand-600 text-white' : 'bg-dark-700 text-slate-400'"
+                class="px-2.5 py-1 rounded font-medium transition"
+              >
+                透明底 (RGBA)
+              </button>
+              <button
+                @click="garmentPreviewMode = 'white'"
+                :class="garmentPreviewMode === 'white' ? 'bg-slate-200 text-slate-900' : 'bg-dark-700 text-slate-400'"
+                class="px-2.5 py-1 rounded font-medium transition"
+              >
+                白底展示 (RGB)
+              </button>
+            </div>
+          </div>
+
+          <!-- Color Palette Picker Filter -->
+          <div class="pt-3 border-t border-dark-700/70 flex items-center justify-between flex-wrap gap-3">
+            <div class="flex items-center space-x-2">
+              <span class="text-xs text-slate-400 font-semibold tracking-wider uppercase">主色色卡过滤:</span>
+              <div class="flex items-center space-x-1.5 flex-wrap">
+                <button
+                  v-for="color in colorPalette"
+                  :key="color.hex"
+                  @click="toggleColorFilter(color.hex)"
+                  :style="{ backgroundColor: color.hex }"
+                  :class="selectedColorHex === color.hex ? 'ring-2 ring-white scale-110 shadow-lg' : 'opacity-80 hover:opacity-100'"
+                  class="w-6 h-6 rounded-full border border-dark-600 transition-transform relative"
+                  :title="`${color.hex} (${color.count}件)`"
+                ></button>
+              </div>
+              <button
+                v-if="selectedColorHex"
+                @click="selectedColorHex = ''; fetchGarments()"
+                class="text-xs text-brand-400 hover:text-brand-300 ml-2"
+              >
+                清除色彩过滤
+              </button>
+            </div>
+
+            <div v-if="selectedColorHex" class="flex items-center space-x-2 text-xs text-slate-400">
+              <span>色彩容差:</span>
+              <input type="range" min="0.05" max="0.4" step="0.05" v-model.number="colorTolerance" @change="fetchGarments" class="w-24 accent-brand-500">
+              <span class="font-mono text-slate-200">{{ colorTolerance }}</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Garments Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+          <div
+            v-for="g in garments"
+            :key="g.garment_id"
+            class="bg-dark-800 border border-dark-700/80 hover:border-brand-500/50 rounded-xl overflow-hidden flex flex-col group transition duration-200 hover:shadow-xl hover:shadow-black/40"
+          >
+            <!-- Card Image Box -->
+            <div
+              :class="garmentPreviewMode === 'transparent' ? 'bg-checker' : 'bg-white'"
+              class="relative aspect-[3/4] overflow-hidden flex items-center justify-center p-3"
+            >
+              <img
+                :src="garmentPreviewMode === 'transparent' ? g.transparent_url : g.white_url"
+                :alt="g.garment_id"
+                class="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300 drop-shadow-md"
+                loading="lazy"
+              />
+
+              <!-- Category Badge -->
+              <div class="absolute top-2.5 left-2.5 bg-dark-900/80 backdrop-blur border border-dark-600/60 px-2 py-0.5 rounded text-[11px] font-mono text-slate-300">
+                {{ g.category.toUpperCase() }}
+              </div>
+
+              <!-- Color Dot Badge -->
+              <div class="absolute top-2.5 right-2.5 bg-dark-900/80 backdrop-blur border border-dark-600/60 px-2 py-0.5 rounded text-[11px] font-mono text-slate-300 flex items-center space-x-1">
+                <span class="w-2.5 h-2.5 rounded-full inline-block" :style="{ backgroundColor: g.mean_hex }"></span>
+                <span>{{ g.mean_hex }}</span>
+              </div>
+            </div>
+
+            <!-- Card Info Box -->
+            <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+              <div>
+                <div class="flex items-center justify-between">
+                  <h3 class="font-bold text-white text-sm font-mono truncate" :title="g.garment_id">{{ g.garment_id }}</h3>
+                  <span class="text-[10px] bg-dark-700 text-slate-300 px-1.5 py-0.5 rounded font-mono">{{ g.method }}</span>
+                </div>
+                <div class="text-xs text-slate-400 mt-1 flex items-center space-x-2">
+                  <span>{{ g.size[0] }}×{{ g.size[1] }}</span>
+                  <span>·</span>
+                  <span>面积 {{ g.mask_area_px.toLocaleString() }}px</span>
+                </div>
+                <p v-if="g.note" class="text-xs text-slate-400 mt-2 line-clamp-2" :title="g.note">
+                  {{ g.note }}
+                </p>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="space-y-1.5 pt-2 border-t border-dark-700/60">
+                <div class="grid grid-cols-2 gap-1.5">
+                  <button
+                    @click="copyPath(g.transparent_path, '已复制透明底相对路径: ' + g.transparent_path)"
+                    class="bg-dark-700 hover:bg-emerald-600 hover:text-white text-slate-200 border border-dark-600 py-1.5 rounded-lg text-xs font-medium transition flex items-center justify-center space-x-1"
+                    title="复制相对路径 (tops/...)"
+                  >
+                    <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
+                    <span>相对路径</span>
+                  </button>
+                  <button
+                    @click="copyPath(g.abs_transparent_path || ('D:\\\\ai_projects\\\\ComfyUI\\\\garment_library\\\\' + g.transparent_path.replace(/\\//g, '\\\\')), '已复制绝对物理路径 (VTON直引)')"
+                    class="bg-dark-700 hover:bg-brand-600 hover:text-white text-brand-300 border border-dark-600 py-1.5 rounded-lg text-xs font-medium transition flex items-center justify-center space-x-1"
+                    title="复制完整绝对路径 (D:\ai_projects\ComfyUI\...)"
+                  >
+                    <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
+                    <span>绝对路径</span>
+                  </button>
+                </div>
+                <button
+                  @click="copyPath(g.abs_white_path || ('D:\\\\ai_projects\\\\ComfyUI\\\\garment_library\\\\' + g.white_path.replace(/\\//g, '\\\\')), '已复制白底原图绝对路径')"
+                  class="w-full bg-dark-900/60 hover:bg-dark-700 text-slate-400 hover:text-slate-200 py-1 rounded text-xs transition"
+                >
+                  复制白底预览绝对路径
+                </button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================================================= -->
+      <!-- TAB 3: 搭配矩阵 (Lookbook / Combos) -->
+      <!-- ================================================================= -->
+      <section v-if="currentTab === 'lookbook'" class="space-y-6">
+        <div class="bg-dark-800 border border-dark-700/80 p-6 rounded-xl flex items-center justify-between">
+          <div>
+            <h2 class="text-lg font-bold text-white flex items-center space-x-2">
+              <span>🧥 角色与服装搭配实测矩阵 (Lookbook)</span>
+              <span class="text-xs bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 py-0.5 rounded-full">Stage 3 预架构已就绪</span>
+            </h2>
+            <p class="text-sm text-slate-400 mt-1">
+              通过将角色人脸与服装单品绑定，记录搭配出片效果、成片视频、工作流 Prompt 预设。
+            </p>
+          </div>
+        </div>
+
+        <!-- Combo Dynamic Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            v-for="combo in combos"
+            :key="combo.combo_id"
+            class="bg-dark-800 border border-dark-700/80 hover:border-emerald-500/50 rounded-xl p-4 space-y-3.5 transition duration-200 hover:shadow-xl hover:shadow-black/40 flex flex-col justify-between"
+          >
+            <div>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+                  <span class="font-bold text-white text-sm truncate" :title="combo.name">{{ combo.name }}</span>
+                </div>
+                <span class="text-[10px] bg-dark-900 border border-dark-700 text-slate-400 px-2 py-0.5 rounded font-mono">{{ combo.added_date }}</span>
+              </div>
+
+              <!-- Side-by-side Character and Garment Pair -->
+              <div class="grid grid-cols-2 gap-2.5 bg-dark-900/90 p-2.5 rounded-lg border border-dark-700/60 mt-3">
+                <div class="text-center space-y-1">
+                  <div class="text-[11px] text-slate-400 truncate" :title="combo.char_name">角色: {{ combo.char_name }}</div>
+                  <div class="aspect-square rounded-lg overflow-hidden border border-dark-700 bg-dark-800">
+                    <img :src="combo.char_thumb_url" class="w-full h-full object-cover">
+                  </div>
+                  <div class="text-[10px] text-slate-500 font-mono truncate">{{ combo.char_id }}</div>
+                </div>
+                <div class="text-center space-y-1">
+                  <div class="text-[11px] text-slate-400 truncate" :title="combo.garment_label">服装: {{ combo.garment_label }}</div>
+                  <div class="aspect-square rounded-lg overflow-hidden border border-dark-700 bg-checker flex items-center justify-center">
+                    <img :src="combo.garment_thumb_url" class="max-w-full max-h-full object-contain">
+                  </div>
+                  <div class="text-[10px] text-slate-500 font-mono truncate">{{ combo.garment_id }}</div>
+                </div>
+              </div>
+
+              <!-- Note and Tags -->
+              <p v-if="combo.note" class="text-xs text-slate-400 mt-2.5 line-clamp-2" :title="combo.note">
+                {{ combo.note }}
+              </p>
+              <div v-if="combo.tags && combo.tags.length" class="flex flex-wrap gap-1 mt-2">
+                <span v-for="t in combo.tags" :key="t" class="text-[10px] bg-dark-700/60 text-slate-300 px-1.5 py-0.5 rounded border border-dark-600/50">
+                  #{{ t }}
+                </span>
+              </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="space-y-1.5 pt-2 border-t border-dark-700/60">
+              <button
+                @click="copyPath(combo.prompt_preset, '已复制联合出片 Prompt 预设')"
+                class="w-full bg-dark-700 hover:bg-emerald-600 hover:text-white text-slate-200 border border-dark-600 py-1.5 rounded-lg text-xs font-medium transition flex items-center justify-center space-x-1.5"
+              >
+                <span>📋 复制联合 Prompt 预设</span>
+              </button>
+              <div class="grid grid-cols-2 gap-1.5">
+                <button
+                  @click="copyPath(combo.char_face_path, '已复制角色主脸路径')"
+                  class="bg-dark-900/60 hover:bg-dark-700 text-slate-300 py-1 rounded text-[11px] transition truncate"
+                >
+                  拷脸路径
+                </button>
+                <button
+                  @click="copyPath(combo.garment_transparent_path, '已复制试衣服装路径')"
+                  class="bg-dark-900/60 hover:bg-dark-700 text-slate-300 py-1 rounded text-[11px] transition truncate"
+                >
+                  拷服装路径
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================================================= -->
+      <!-- TAB 4: 已导入 (ComfyUI input) -->
+      <!-- ================================================================= -->
+      <section v-if="currentTab === 'imported'" class="space-y-6">
+        <!-- Toolbar -->
+        <div class="bg-dark-800 border border-dark-700/80 p-4 rounded-xl flex items-center justify-between flex-wrap gap-3">
+          <div>
+            <h2 class="text-lg font-bold text-white flex items-center space-x-2">
+              <span>📥 ComfyUI 已导入</span>
+              <span class="text-xs bg-brand-500/10 text-brand-400 border border-brand-500/20 px-2 py-0.5 rounded-full font-mono">input</span>
+            </h2>
+            <p class="text-xs text-slate-400 mt-1">浏览 ComfyUI input 目录中的图片与视频素材，共 <span class="font-mono text-slate-200 font-semibold">{{ importedTotal }}</span> 个文件。</p>
+          </div>
+          <!-- Media Type Toggle -->
+          <div class="flex items-center space-x-2 text-xs text-slate-300">
+            <span>类型:</span>
+            <button @click="importedMedia = 'all'; fetchImportedFiles()" :class="importedMedia === 'all' ? 'bg-brand-600 text-white' : 'bg-dark-700 text-slate-400 hover:text-slate-200'" class="px-2.5 py-1 rounded font-medium transition">全部</button>
+            <button @click="importedMedia = 'image'; fetchImportedFiles()" :class="importedMedia === 'image' ? 'bg-brand-600 text-white' : 'bg-dark-700 text-slate-400 hover:text-slate-200'" class="px-2.5 py-1 rounded font-medium transition">图片</button>
+            <button @click="importedMedia = 'video'; fetchImportedFiles()" :class="importedMedia === 'video' ? 'bg-brand-600 text-white' : 'bg-dark-700 text-slate-400 hover:text-slate-200'" class="px-2.5 py-1 rounded font-medium transition">视频</button>
+            <button @click="fetchImportedFiles(1, false, true)" :disabled="importedLoading" title="强制重新扫描 input 目录" class="px-2.5 py-1 rounded font-medium transition bg-dark-700 text-slate-400 hover:text-slate-200 disabled:opacity-50">⟳ 刷新</button>
+          </div>
+        </div>
+
+        <!-- Loading / Error / Empty States -->
+        <div v-if="importedLoading && !importedFiles.length" class="bg-dark-800 border border-dark-700/80 rounded-xl py-16 text-center text-sm text-slate-400">加载中...</div>
+        <div v-else-if="importedError && !importedFiles.length" class="bg-dark-800 border border-dark-700/80 rounded-xl py-16 text-center text-sm text-slate-400">
+          加载失败：无法访问资产服务 (127.0.0.1:8090)，请确认 asset_manager 后端已启动。
+        </div>
+        <div v-else-if="!importedFiles.length" class="bg-dark-800 border border-dark-700/80 rounded-xl py-16 text-center text-sm text-slate-400">目录中暂无媒体文件。</div>
+
+        <!-- Imported Files Grid -->
+        <div v-else class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+          <div
+            v-for="f in importedFiles"
+            :key="f.rel_path"
+            class="bg-dark-800 border border-dark-700/80 hover:border-brand-500/50 rounded-xl overflow-hidden group transition duration-200 hover:shadow-xl hover:shadow-black/40 cursor-pointer"
+            @click="openPreview(f)"
+          >
+            <div class="relative aspect-square bg-dark-900 overflow-hidden flex items-center justify-center">
+              <img v-if="f.media === 'image'" :src="f.preview_url" :alt="f.name" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+              <video v-else v-lazy-video :data-src="f.preview_url" preload="metadata" muted class="w-full h-full object-cover"></video>
+              <div v-if="f.media === 'video'" class="absolute top-2 right-2 bg-dark-900/80 backdrop-blur border border-dark-600/60 px-1.5 py-0.5 rounded text-[10px] text-slate-300">视频</div>
+            </div>
+            <div class="p-2.5">
+              <h3 class="text-xs font-medium text-white truncate" :title="f.name">{{ f.name }}</h3>
+              <div class="text-[11px] text-slate-400 mt-1 flex items-center justify-between font-mono">
+                <span>{{ formatSize(f.size) }}</span>
+                <span>{{ formatDate(f.mtime) }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Load More -->
+        <div v-if="importedFiles.length && importedFiles.length < importedTotal" class="flex justify-center">
+          <button
+            @click="fetchImportedFiles(importedPage + 1, true)"
+            :disabled="importedLoading"
+            class="bg-dark-700 hover:bg-dark-600 disabled:opacity-50 text-slate-200 border border-dark-600 px-5 py-2 rounded-lg text-sm font-medium transition"
+          >
+            加载更多 ({{ importedFiles.length }}/{{ importedTotal }})
+          </button>
+        </div>
+      </section>
+
+      <!-- ================================================================= -->
+      <!-- TAB 5: 已生成 (ComfyUI output) -->
+      <!-- ================================================================= -->
+      <section v-if="currentTab === 'generated'" class="space-y-6">
+        <!-- Toolbar -->
+        <div class="bg-dark-800 border border-dark-700/80 p-4 rounded-xl flex items-center justify-between flex-wrap gap-3">
+          <div>
+            <h2 class="text-lg font-bold text-white flex items-center space-x-2">
+              <span>📤 ComfyUI 已生成</span>
+              <span class="text-xs bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 py-0.5 rounded-full font-mono">output</span>
+            </h2>
+            <p class="text-xs text-slate-400 mt-1">出片与成片浏览，共 <span class="font-mono text-slate-200 font-semibold">{{ generatedTotal }}</span> 个文件；视频可直接多平台发布。</p>
+          </div>
+          <div class="flex items-center space-x-2 flex-wrap">
+            <!-- Date / Project Filters -->
+            <select v-model="generatedDate" @change="generatedProject = 'all'; fetchGeneratedFiles()" class="bg-dark-900 border border-dark-600 rounded-lg px-2.5 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-brand-500 transition">
+              <option value="all">全部日期</option>
+              <option v-for="d in comfyTree" :key="d.date" :value="d.date">{{ d.date }}</option>
+            </select>
+            <select v-model="generatedProject" @change="fetchGeneratedFiles()" class="bg-dark-900 border border-dark-600 rounded-lg px-2.5 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-brand-500 transition">
+              <option value="all">全部项目</option>
+              <option v-for="p in generatedProjects" :key="p" :value="p">{{ p }}</option>
+            </select>
+            <!-- Media Type Toggle -->
+            <div class="flex items-center space-x-2 text-xs text-slate-300">
+              <button @click="generatedMedia = 'all'; fetchGeneratedFiles()" :class="generatedMedia === 'all' ? 'bg-brand-600 text-white' : 'bg-dark-700 text-slate-400 hover:text-slate-200'" class="px-2.5 py-1 rounded font-medium transition">全部</button>
+              <button @click="generatedMedia = 'image'; fetchGeneratedFiles()" :class="generatedMedia === 'image' ? 'bg-brand-600 text-white' : 'bg-dark-700 text-slate-400 hover:text-slate-200'" class="px-2.5 py-1 rounded font-medium transition">图片</button>
+              <button @click="generatedMedia = 'video'; fetchGeneratedFiles()" :class="generatedMedia === 'video' ? 'bg-brand-600 text-white' : 'bg-dark-700 text-slate-400 hover:text-slate-200'" class="px-2.5 py-1 rounded font-medium transition">视频</button>
+              <button @click="fetchGeneratedFiles(1, false, true)" :disabled="generatedLoading" title="强制重新扫描 output 目录" class="px-2.5 py-1 rounded font-medium transition bg-dark-700 text-slate-400 hover:text-slate-200 disabled:opacity-50">⟳ 刷新</button>
+            </div>
+            <!-- Publish Jobs -->
+            <button
+              @click="openPublishJobs"
+              class="bg-dark-700 hover:bg-dark-600 border border-dark-600 text-slate-200 px-3 py-1.5 rounded-lg text-xs font-medium transition"
+            >
+              📋 发布任务
+            </button>
+          </div>
+        </div>
+
+        <!-- Loading / Error / Empty States -->
+        <div v-if="generatedLoading && !generatedFiles.length" class="bg-dark-800 border border-dark-700/80 rounded-xl py-16 text-center text-sm text-slate-400">加载中...</div>
+        <div v-else-if="generatedError && !generatedFiles.length" class="bg-dark-800 border border-dark-700/80 rounded-xl py-16 text-center text-sm text-slate-400">
+          加载失败：无法访问资产服务 (127.0.0.1:8090)，请确认 asset_manager 后端已启动。
+        </div>
+        <div v-else-if="!generatedFiles.length" class="bg-dark-800 border border-dark-700/80 rounded-xl py-16 text-center text-sm text-slate-400">所选筛选条件下暂无媒体文件。</div>
+
+        <!-- Floating Multi-select Action Bar -->
+        <div v-if="selectedGenerated.length > 0" class="sticky top-2 z-30 bg-brand-900/95 backdrop-blur-md border border-brand-500/60 p-3 rounded-xl flex items-center justify-between shadow-2xl">
+          <div class="flex items-center space-x-3 text-xs text-white">
+            <span class="font-bold">已勾选 {{ selectedGenerated.length }} 张图片</span>
+            <span class="text-slate-300 text-[11px] hidden sm:inline">可直接组合为单篇公众号文章或贴图发布</span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <button @click="publishSelectedGroup" class="bg-brand-600 hover:bg-brand-500 text-white px-3.5 py-1.5 rounded-lg text-xs font-bold transition shadow-lg">
+              🚀 组合发布为一篇文章 ({{ selectedGenerated.length }})
+            </button>
+            <button @click="selectedGenerated = []" class="bg-dark-800 hover:bg-dark-700 text-slate-300 px-2.5 py-1.5 rounded-lg text-xs transition">
+              清空
+            </button>
+          </div>
+        </div>
+
+        <!-- Generated Files Grid -->
+        <div v-if="generatedFiles.length" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+          <div
+            v-for="f in generatedFiles"
+            :key="f.rel_path"
+            :class="isGeneratedSelected(f) ? 'border-brand-500 ring-1 ring-brand-500' : 'border-dark-700/80 hover:border-brand-500/50'"
+            class="bg-dark-800 border rounded-xl overflow-hidden group transition duration-200 hover:shadow-xl hover:shadow-black/40 cursor-pointer relative"
+            @click="openPreview(f)"
+          >
+            <div class="relative aspect-square bg-dark-900 overflow-hidden flex items-center justify-center">
+              <img v-if="f.media === 'image'" :src="f.preview_url" :alt="f.name" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+              <video v-else v-lazy-video :data-src="f.preview_url" preload="metadata" muted class="w-full h-full object-cover"></video>
+              <div v-if="f.media === 'video'" class="absolute top-2 right-2 bg-dark-900/80 backdrop-blur border border-dark-600/60 px-1.5 py-0.5 rounded text-[10px] text-slate-300">视频</div>
+              <!-- Checkbox for multi-select (images) -->
+              <div v-if="f.media === 'image'" class="absolute top-2 left-2 z-10" @click.stop>
+                <input
+                  type="checkbox"
+                  :checked="isGeneratedSelected(f)"
+                  @change="toggleSelectGenerated(f)"
+                  class="w-4 h-4 rounded accent-brand-500 cursor-pointer bg-dark-900/80 border-slate-600"
+                >
+              </div>
+            </div>
+            <div class="p-2.5 space-y-2">
+              <h3 class="text-xs font-medium text-white truncate" :title="f.name">{{ f.name }}</h3>
+              <div class="text-[11px] text-slate-400 flex items-center justify-between font-mono">
+                <span>{{ formatSize(f.size) }}</span>
+                <span>{{ formatDate(f.mtime) }}</span>
+              </div>
+              <button
+                @click.stop="openPublishDialog(f)"
+                class="w-full bg-dark-900/60 hover:bg-brand-600 hover:text-white text-brand-300 border border-dark-600/60 py-1 rounded text-[11px] font-medium transition"
+              >
+                🚀 发布
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Load More -->
+        <div v-if="generatedFiles.length && generatedFiles.length < generatedTotal" class="flex justify-center">
+          <button
+            @click="fetchGeneratedFiles(generatedPage + 1, true)"
+            :disabled="generatedLoading"
+            class="bg-dark-700 hover:bg-dark-600 disabled:opacity-50 text-slate-200 border border-dark-600 px-5 py-2 rounded-lg text-sm font-medium transition"
+          >
+            加载更多 ({{ generatedFiles.length }}/{{ generatedTotal }})
+          </button>
+        </div>
+      </section>
+
+      <!-- ================================================================= -->
+      <!-- TAB 6: 设置与 ComfyUI API 直投 (Settings) -->
+      <!-- ================================================================= -->
+      <section v-if="currentTab === 'settings'" class="max-w-3xl mx-auto space-y-6">
+        <div class="bg-dark-800 border border-dark-700/80 p-6 rounded-xl space-y-6">
+          <div>
+            <h2 class="text-lg font-bold text-white">⚙️ 系统设置与工作流扩展模式</h2>
+            <p class="text-xs text-slate-400 mt-1">控制 ComfyUI 8188 联动功能与直投开关（按需开启，保持系统轻量）。</p>
+          </div>
+
+          <!-- Feature Toggles -->
+          <div class="space-y-4 pt-4 border-t border-dark-700/60">
+            <div class="flex items-center justify-between p-4 bg-dark-900/60 rounded-xl border border-dark-700/60">
+              <div>
+                <div class="text-sm font-semibold text-white">1. 常用工作流一键直投 (Run with Asset)</div>
+                <div class="text-xs text-slate-400 mt-0.5">在资产卡片直接组装 Prompt API 向 ComfyUI 8188 提交试穿/换脸出片任务。</div>
+              </div>
+              <label class="relative inline-flex items-center cursor-pointer">
+                <input type="checkbox" v-model="settings.enableDirectDispatch" class="sr-only peer">
+                <div class="w-11 h-6 bg-dark-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-brand-600"></div>
+              </label>
+            </div>
+
+            <div class="flex items-center justify-between p-4 bg-dark-900/60 rounded-xl border border-dark-700/60">
+              <div>
+                <div class="text-sm font-semibold text-white">2. 无头出片控制台 (Headless ComfyUI Launcher)</div>
+                <div class="text-xs text-slate-400 mt-0.5">在 Web 端内置常用生成面板，无需切换至 ComfyUI 连线画布即可直接出片。</div>
+              </div>
+              <label class="relative inline-flex items-center cursor-pointer">
+                <input type="checkbox" v-model="settings.enableHeadlessLauncher" class="sr-only peer">
+                <div class="w-11 h-6 bg-dark-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-brand-600"></div>
+              </label>
+            </div>
+          </div>
+
+          <!-- ComfyUI Service Address -->
+          <div class="space-y-2 pt-4 border-t border-dark-700/60">
+            <label class="text-xs font-semibold text-slate-300 uppercase tracking-wider">ComfyUI 服务端地址:</label>
+            <div class="flex items-center space-x-3">
+              <input type="text" v-model="settings.comfyUrl" class="flex-1 bg-dark-900 border border-dark-600 rounded-lg px-3.5 py-2 text-sm font-mono text-slate-200">
+              <button @click="testComfyConnection" class="bg-dark-700 hover:bg-dark-600 text-slate-200 px-4 py-2 rounded-lg text-xs font-medium transition">
+                测试连通性
+              </button>
+            </div>
+            <p class="text-[11px] text-slate-500">默认端口 8188。用于委托执行 SAM2 服装抠图及下发渲染任务。</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ================================================================= -->
+    <!-- MODAL: 角色多视角画廊与身份余弦相似度探查器 -->
+    <!-- ================================================================= -->
+    <div v-if="activeChar" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" @click.self="activeChar = null">
+      <div class="bg-dark-800 border border-dark-700 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden flex flex-col shadow-2xl">
+        <!-- Modal Header -->
+        <div class="p-4 border-b border-dark-700 flex items-center justify-between bg-dark-900/60">
+          <div>
+            <h3 class="text-lg font-bold text-white flex items-center space-x-2">
+              <span>{{ activeChar.name }}</span>
+              <span class="text-xs font-mono text-slate-400">({{ activeChar.char_id }})</span>
+            </h3>
+            <p class="text-xs text-slate-400">人脸特征维度: 512维 · 归一化向量 · 检测分: {{ activeChar.det_score.toFixed(3) }}</p>
+          </div>
+          <button @click="activeChar = null" class="text-slate-400 hover:text-white p-1 text-lg">✕</button>
+        </div>
+
+        <!-- Modal Body (Two Columns) -->
+        <div class="flex-1 overflow-y-auto p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Left: Multi-view Gallery -->
+          <div class="space-y-4">
+            <h4 class="text-xs font-bold text-slate-300 uppercase tracking-wider flex items-center justify-between">
+              <span>多视角高清图集 (Views)</span>
+              <span class="text-[11px] text-brand-400 font-normal">点击切换主预览</span>
+            </h4>
+
+            <div class="aspect-square bg-dark-900 rounded-xl overflow-hidden border border-dark-700 flex items-center justify-center">
+              <img :src="currentModalViewUrl" class="w-full h-full object-cover object-top" />
+            </div>
+
+            <!-- View Thumbnails Switcher -->
+            <div class="flex items-center space-x-2 overflow-x-auto pb-2">
+              <!-- Main Face -->
+              <button
+                @click="currentModalViewUrl = activeChar.thumb_url; currentModalViewNote = '主参考脸 (face.png)'"
+                :class="currentModalViewUrl === activeChar.thumb_url ? 'ring-2 ring-brand-500' : 'opacity-70'"
+                class="w-16 h-16 rounded-lg overflow-hidden border border-dark-600 flex-shrink-0 relative group"
+              >
+                <img :src="activeChar.thumb_url" class="w-full h-full object-cover">
+                <span class="absolute bottom-0 inset-x-0 bg-dark-900/90 text-[10px] text-center text-slate-300">主脸</span>
+              </button>
+
+              <!-- Alts Views -->
+              <button
+                v-for="alt in activeChar.alts"
+                :key="alt.file"
+                @click="currentModalViewUrl = '/static/characters/' + alt.file; currentModalViewNote = alt.note || alt.file"
+                :class="currentModalViewUrl.includes(alt.file) ? 'ring-2 ring-brand-500' : 'opacity-70'"
+                class="w-16 h-16 rounded-lg overflow-hidden border border-dark-600 flex-shrink-0 relative group"
+              >
+                <img :src="'/static/characters/' + alt.file" class="w-full h-full object-cover">
+                <span
+                  :class="alt.cos_to_main >= 0.6 ? 'bg-emerald-600/90' : 'bg-amber-600/90'"
+                  class="absolute bottom-0 inset-x-0 text-[9px] text-center text-white"
+                >
+                  {{ alt.cos_to_main ? alt.cos_to_main.toFixed(2) : 'view' }}
+                </span>
+              </button>
+            </div>
+            <p class="text-xs text-slate-400 bg-dark-900/50 p-2.5 rounded-lg border border-dark-700/50">
+              📌 {{ currentModalViewNote }}
+            </p>
+          </div>
+
+          <!-- Right: Similarity Matrix & Identity Cluster -->
+          <div class="space-y-4">
+            <h4 class="text-xs font-bold text-slate-300 uppercase tracking-wider">
+              全库身份余弦矩阵对比 (Cosine Similarity)
+            </h4>
+            <p class="text-xs text-slate-400">
+              阈值标准：<span class="text-emerald-400 font-semibold">≥0.6 同身份</span>，<span class="text-amber-400 font-semibold">0.4~0.6 疑似待复核</span>，<span class="text-slate-500 font-semibold">&lt;0.4 不同身份</span>
+            </p>
+
+            <!-- Similarity Search List -->
+            <div class="space-y-2 max-h-72 overflow-y-auto pr-1">
+              <div
+                v-for="item in similarityList"
+                :key="item.char_id"
+                class="p-2.5 bg-dark-900/80 rounded-lg border border-dark-700/60 flex items-center justify-between"
+              >
+                <div class="flex items-center space-x-2.5">
+                  <img :src="item.thumb_url" class="w-10 h-10 rounded object-cover border border-dark-700">
+                  <div>
+                    <div class="text-sm font-semibold text-white">{{ item.name }}</div>
+                    <div class="text-xs text-slate-400 font-mono">{{ item.char_id }}</div>
+                  </div>
+                </div>
+                <div class="text-right">
+                  <div
+                    :class="item.is_same_identity ? 'text-emerald-400' : item.is_suspicious ? 'text-amber-400' : 'text-slate-400'"
+                    class="font-mono font-bold text-sm"
+                  >
+                    cos {{ item.similarity.toFixed(4) }}
+                  </div>
+                  <span
+                    :class="item.is_same_identity ? 'bg-emerald-500/10 text-emerald-400' : item.is_suspicious ? 'bg-amber-500/10 text-amber-400' : 'bg-dark-700 text-slate-400'"
+                    class="text-[10px] px-1.5 py-0.5 rounded font-medium"
+                  >
+                    {{ item.is_same_identity ? '同身份' : item.is_suspicious ? '存疑待查' : '不同人' }}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="p-4 border-t border-dark-700 bg-dark-900/60 flex items-center justify-between">
+          <div class="flex items-center space-x-2">
+            <button
+              @click="copyPath(activeChar.face, '已复制主脸相对路径: ' + activeChar.face)"
+              class="bg-dark-700 hover:bg-brand-600 text-slate-200 border border-dark-600 px-3.5 py-1.5 rounded-lg text-xs font-medium transition"
+            >
+              复制相对路径
+            </button>
+            <button
+              @click="copyPath(activeChar.abs_face_path || ('D:\\\\ai_projects\\\\ComfyUI\\\\character_library\\\\' + activeChar.face.replace(/\\//g, '\\\\')), '已复制绝对物理路径 (ReActor直引)')"
+              class="bg-emerald-600 hover:bg-emerald-500 text-white px-3.5 py-1.5 rounded-lg text-xs font-medium transition"
+            >
+              复制绝对路径 (ReActor直引)
+            </button>
+          </div>
+          <button @click="activeChar = null" class="bg-dark-700 hover:bg-dark-600 text-slate-300 px-4 py-1.5 rounded-lg text-xs font-medium transition">
+            关闭
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================================================================= -->
+    <!-- MODAL: 资产预览 (图片原图 / 视频播放) -->
+    <!-- ================================================================= -->
+    <div v-if="previewFile" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" @click.self="previewFile = null">
+      <div class="bg-dark-800 border border-dark-700 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden flex flex-col shadow-2xl">
+        <!-- Modal Header -->
+        <div class="p-4 border-b border-dark-700 flex items-center justify-between bg-dark-900/60">
+          <div class="min-w-0">
+            <h3 class="text-lg font-bold text-white truncate" :title="previewFile.name">{{ previewFile.name }}</h3>
+            <p class="text-xs text-slate-400 font-mono">{{ formatSize(previewFile.size) }} · {{ formatDate(previewFile.mtime) }}</p>
+          </div>
+          <button @click="previewFile = null" class="text-slate-400 hover:text-white p-1 text-lg shrink-0">✕</button>
+        </div>
+        <!-- Modal Body -->
+        <div class="flex-1 overflow-y-auto p-4 flex items-center justify-center bg-dark-900/60">
+          <img v-if="previewFile.media === 'image'" :src="previewFile.preview_url" class="max-w-full max-h-[65vh] object-contain">
+          <video v-else :src="previewFile.preview_url" controls autoplay class="max-w-full max-h-[65vh]"></video>
+        </div>
+        <!-- Modal Footer -->
+        <div class="p-4 border-t border-dark-700 bg-dark-900/60 flex items-center justify-between gap-3">
+          <span class="text-xs text-slate-400 font-mono truncate" :title="previewFile.rel_path">{{ previewFile.rel_path }}</span>
+          <button @click="copyPath(previewFile.rel_path, '已复制相对路径: ' + previewFile.rel_path)" class="bg-dark-700 hover:bg-brand-600 hover:text-white text-slate-200 border border-dark-600 px-3.5 py-1.5 rounded-lg text-xs font-medium transition shrink-0">
+            复制路径
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================================================================= -->
+    <!-- MODAL: 视频发布对话框 -->
+    <!-- ================================================================= -->
+    <div v-if="publishFile" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" @click.self="publishFile = null">
+      <div class="bg-dark-800 border border-dark-700 rounded-2xl max-w-xl w-full max-h-[90vh] overflow-hidden flex flex-col shadow-2xl">
+        <!-- Modal Header -->
+        <div class="p-4 border-b border-dark-700 flex items-center justify-between bg-dark-900/60">
+          <div class="min-w-0">
+            <h3 class="text-lg font-bold text-white">🚀 {{ publishFile.media === 'video' ? '发布视频' : '发布图片到公众号' }}</h3>
+            <p class="text-xs text-slate-400 font-mono truncate" :title="publishFile.name">{{ publishFile.name }}</p>
+          </div>
+          <button @click="publishFile = null" class="text-slate-400 hover:text-white p-1 text-lg shrink-0">✕</button>
+        </div>
+        <!-- Modal Body -->
+        <div class="flex-1 overflow-y-auto p-5 space-y-4">
+
+          <!-- 多图组合专区 (仅图片资产展示) -->
+          <div v-if="publishFile.media === 'image'" class="space-y-3 bg-dark-900/70 p-3.5 rounded-xl border border-dark-700">
+            <div class="flex items-center justify-between">
+              <label class="text-xs font-bold text-slate-200 flex items-center space-x-1.5">
+                <span>📸 已选组合图片</span>
+                <span class="bg-brand-500/20 text-brand-300 text-[11px] px-2 py-0.5 rounded font-semibold">{{ publishImageFiles.length }} 张</span>
+              </label>
+              <span class="text-[11px] text-slate-400">将作为单篇公众号文章/贴图整体发布</span>
+            </div>
+
+            <!-- 已选图片横向列表 -->
+            <div class="flex items-center space-x-2 overflow-x-auto pb-1.5">
+              <div v-for="(img, idx) in publishImageFiles" :key="img.rel_path" class="relative group shrink-0 w-16 h-16 rounded-lg overflow-hidden border border-dark-600 bg-dark-950">
+                <img :src="img.preview_url || ('/api/comfy-assets/output/file?rel_path=' + img.rel_path)" class="w-full h-full object-cover">
+                <span class="absolute bottom-0 left-0 right-0 bg-dark-900/80 text-[10px] text-center text-slate-300 font-mono">{{ idx + 1 }}</span>
+                <button @click="removePublishImage(idx)" title="移出组合" class="absolute top-0.5 right-0.5 bg-red-600/90 hover:bg-red-500 text-white w-4 h-4 rounded-full flex items-center justify-center text-[10px] opacity-0 group-hover:opacity-100 transition shadow">✕</button>
+              </div>
+            </div>
+
+            <!-- 同目录快速添加图片列表 -->
+            <div v-if="publishSiblings.length > 0" class="pt-2 border-t border-dark-800">
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="text-[11px] font-medium text-slate-400">同项目/同批次候补图片 (点击加入/移出):</span>
+              </div>
+              <div class="flex items-center space-x-2 overflow-x-auto pb-1">
+                <button
+                  v-for="s in publishSiblings"
+                  :key="s.rel_path"
+                  @click="togglePublishImage(s)"
+                  :class="isPublishImageSelected(s) ? 'ring-2 ring-brand-500 opacity-100' : 'opacity-50 hover:opacity-80'"
+                  class="relative shrink-0 w-12 h-12 rounded-lg overflow-hidden border border-dark-700 bg-dark-950 transition"
+                  :title="s.name"
+                >
+                  <img :src="s.preview_url" class="w-full h-full object-cover">
+                  <div v-if="isPublishImageSelected(s)" class="absolute inset-0 bg-brand-500/30 flex items-center justify-center">
+                    <span class="text-white text-xs font-bold">✓</span>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 标题 -->
+          <div class="space-y-1.5">
+            <div class="flex items-center justify-between">
+              <label class="text-xs font-semibold text-slate-300">标题 <span class="text-red-400">*</span></label>
+              <span class="text-[11px] text-slate-500 font-normal">按提示词与元数据自动生成</span>
+            </div>
+            <textarea v-model="publishTitle" rows="2" placeholder="请输入标题" class="w-full bg-dark-900 border border-dark-600 rounded-lg px-3 py-2 text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-brand-500 transition resize-none"></textarea>
+          </div>
+
+          <!-- 正文内容 / 描述 -->
+          <div class="space-y-1.5">
+            <div class="flex items-center justify-between">
+              <label class="text-xs font-semibold text-slate-300">正文内容 / 图文描述</label>
+              <span class="text-[11px] text-slate-500 font-normal">将自动填入文章正文或贴图描述</span>
+            </div>
+            <textarea v-model="publishContent" rows="3" placeholder="填写正文内容或灵感描述..." class="w-full bg-dark-900 border border-dark-600 rounded-lg px-3 py-2 text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-brand-500 transition resize-none"></textarea>
+          </div>
+
+          <!-- 标签 -->
+          <div class="space-y-1.5">
+            <div class="flex items-center justify-between">
+              <label class="text-xs font-semibold text-slate-300">话题标签</label>
+              <span class="text-[11px] text-slate-500 font-normal">逗号分隔，自动生成</span>
+            </div>
+            <input v-model="publishTags" type="text" placeholder="例如: 时尚,穿搭,AI视觉" class="w-full bg-dark-900 border border-dark-600 rounded-lg px-3 py-2 text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-brand-500 transition">
+          </div>
+
+          <!-- 发布方式 (对视频和图片均支持) -->
+          <div class="space-y-1.5">
+            <label class="text-xs font-semibold text-slate-300">发布方式</label>
+            <div class="flex items-center space-x-2 text-xs">
+              <button @click="publishMode = 'draft'" :class="publishMode === 'draft' ? 'bg-brand-600 text-white' : 'bg-dark-700 text-slate-400 hover:text-slate-200'" class="px-3 py-1 rounded font-medium transition">📁 存草稿 (推荐)</button>
+              <button @click="publishMode = 'publish'" :class="publishMode === 'publish' ? 'bg-brand-600 text-white' : 'bg-dark-700 text-slate-400 hover:text-slate-200'" class="px-3 py-1 rounded font-medium transition">🚀 自动发布</button>
+              <button @click="publishMode = 'manual'" :class="publishMode === 'manual' ? 'bg-brand-600 text-white' : 'bg-dark-700 text-slate-400 hover:text-slate-200'" class="px-3 py-1 rounded font-medium transition">✍️ 仅填表人工确认</button>
+            </div>
+            <p class="text-[11px] text-slate-500">
+              <span v-if="publishMode === 'draft'">存草稿：全自动上传资产、填充标题/内容/标签，点击保存并验证进入草稿箱后自动退出。</span>
+              <span v-else-if="publishMode === 'publish'">自动发布：完成表单填充后尝试自动确认并发表；失败时降级为保留窗口供人工复核。</span>
+              <span v-else>仅填表人工确认：自动化填入素材与表单信息后，保留浏览器窗口供您随时预览修改。</span>
+            </p>
+          </div>
+
+          <!-- 发布平台 / 形式 -->
+          <div class="space-y-1.5">
+            <label class="text-xs font-semibold text-slate-300">发布平台 / 形式 <span class="text-slate-500 font-normal">(已选 {{ publishSelected.length }} 项)</span></label>
+            <div class="p-3 bg-dark-900/60 rounded-lg border border-dark-700/60 space-y-3">
+              <!-- Image assets: WeChat MP only (单选：贴图 或 文章) -->
+              <template v-if="publishFile.media === 'image'">
+                <div class="flex flex-wrap gap-x-4 gap-y-2">
+                  <label v-for="p in mpImagePlatforms" :key="p.id" class="flex items-center space-x-1.5 text-xs text-slate-200 cursor-pointer">
+                    <input type="radio" :value="p.id" :checked="publishSelected.includes(p.id)" @change="publishSelected = [p.id]" name="mp_image_type" class="accent-brand-500 cursor-pointer">
+                    <span class="font-medium">{{ p.label }}</span>
+                  </label>
+                </div>
+                <p class="text-[11px] text-slate-500">公众号自动化：支持多图合并单篇排版、封面自动识别及草稿箱全自动归档。</p>
+              </template>
+              <!-- Video assets: domestic + overseas -->
+              <template v-else>
+                <div class="flex flex-wrap gap-x-4 gap-y-2">
+                  <label v-for="p in cnPlatforms" :key="p.id" class="flex items-center space-x-1.5 text-xs text-slate-200 cursor-pointer">
+                    <input type="checkbox" :value="p.id" v-model="publishSelected" class="accent-brand-500 cursor-pointer">
+                    <span>{{ p.label }}</span>
+                  </label>
+                </div>
+                <!-- Overseas Platforms + Upload-Post Key -->
+                <div class="pt-3 border-t border-dark-700/60 space-y-2.5">
+                  <div class="flex flex-wrap gap-x-4 gap-y-2">
+                    <label v-for="p in globalPlatforms" :key="p.id" class="flex items-center space-x-1.5 text-xs text-slate-200 cursor-pointer">
+                      <input type="checkbox" :value="p.id" v-model="publishSelected" class="accent-brand-500 cursor-pointer">
+                      <span>{{ p.label }}</span>
+                    </label>
+                  </div>
+                  <div class="flex items-center space-x-2">
+                    <input v-model="publishApiKey" type="password" placeholder="Upload-Post API Key (勾选海外平台必填)" class="flex-1 bg-dark-900 border border-dark-600 rounded-lg px-2.5 py-1.5 text-xs font-mono text-slate-200 placeholder-slate-500 focus:outline-none focus:border-brand-500 transition">
+                    <button @click="savePublishConfig" class="bg-dark-700 hover:bg-dark-600 text-slate-200 border border-dark-600 px-3 py-1.5 rounded-lg text-xs font-medium transition shrink-0">保存</button>
+                  </div>
+                  <p class="text-[11px] text-slate-500">海外平台经 Upload-Post API 发布，Key 保存至本地 publish_config.json。</p>
+                </div>
+              </template>
+              <!-- 快捷扫码登录入口 -->
+              <div class="pt-2.5 border-t border-dark-700/60 flex items-center justify-between text-[11px] text-slate-400">
+                <span>首次发布或需要更新登录态？</span>
+                <div class="flex items-center space-x-1.5">
+                  <button @click="openPlatformLogin('wechat_mp')" class="text-brand-400 hover:text-brand-300 underline font-medium">🔑 扫码登录公众号</button>
+                  <span v-if="publishFile.media === 'video'">·</span>
+                  <button v-if="publishFile.media === 'video'" @click="openPlatformLogin('shipinhao')" class="text-brand-400 hover:text-brand-300 underline font-medium">🔑 扫码登录视频号</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal Footer -->
+        <div class="p-4 border-t border-dark-700 bg-dark-900/60 flex items-center justify-end space-x-2">
+          <button @click="publishFile = null" class="bg-dark-700 hover:bg-dark-600 text-slate-300 px-4 py-1.5 rounded-lg text-xs font-medium transition">取消</button>
+          <button @click="submitPublish" :disabled="publishSubmitting" class="bg-brand-600 hover:bg-brand-500 disabled:opacity-50 text-white px-4 py-1.5 rounded-lg text-xs font-medium transition">
+            {{ publishSubmitting ? '提交中...' : (publishMode === 'draft' ? '确认保存到草稿箱' : '确认发布') }}
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================================================================= -->
+    <!-- MODAL: 发布任务列表 -->
+    <!-- ================================================================= -->
+    <div v-if="publishJobsModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" @click.self="closePublishJobs">
+      <div class="bg-dark-800 border border-dark-700 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-hidden flex flex-col shadow-2xl">
+        <!-- Modal Header -->
+        <div class="p-4 border-b border-dark-700 flex items-center justify-between bg-dark-900/60">
+          <div>
+            <h3 class="text-lg font-bold text-white">📋 发布任务</h3>
+            <p class="text-xs text-slate-400">每 3 秒自动刷新 · 共 {{ publishJobs.length }} 个任务</p>
+          </div>
+          <div class="flex items-center space-x-1.5">
+            <span class="text-[11px] text-slate-400 hidden sm:inline">手动扫码：</span>
+            <button @click="openPlatformLogin('wechat_mp')" class="bg-dark-700 hover:bg-dark-600 text-slate-200 border border-dark-600 px-2 py-1 rounded text-xs transition">公众号</button>
+            <button @click="openPlatformLogin('shipinhao')" class="bg-dark-700 hover:bg-dark-600 text-slate-200 border border-dark-600 px-2 py-1 rounded text-xs transition">视频号</button>
+            <button @click="openPlatformLogin('douyin')" class="bg-dark-700 hover:bg-dark-600 text-slate-200 border border-dark-600 px-2 py-1 rounded text-xs transition">抖音</button>
+            <button @click="closePublishJobs" class="text-slate-400 hover:text-white p-1 text-lg ml-2">✕</button>
+          </div>
+        </div>
+        <!-- Modal Body -->
+        <div class="flex-1 overflow-y-auto p-4 space-y-2">
+          <div v-if="!publishJobs.length" class="py-12 text-center text-sm text-slate-400">暂无发布任务，可在「已生成」中选择视频发起发布。</div>
+          <div v-for="job in publishJobs" :key="job.job_id" class="bg-dark-900/80 rounded-lg border border-dark-700/60 overflow-hidden">
+            <button @click="toggleJobLogs(job)" class="w-full p-3 flex items-center justify-between gap-3 text-left hover:bg-dark-700/40 transition">
+              <div class="flex items-center space-x-2.5 min-w-0">
+                <span class="text-xs font-medium text-slate-200 bg-dark-700 border border-dark-600 px-2 py-0.5 rounded shrink-0">{{ platformLabel(job.platform) }}</span>
+                <span :class="publishStatusClass(job.status)" class="text-[11px] px-2 py-0.5 rounded border font-medium shrink-0">{{ publishStatusLabel[job.status] || job.status }}</span>
+                <span class="text-xs text-slate-400 truncate" :title="job.title">{{ job.title }}</span>
+              </div>
+              <div class="flex items-center space-x-2 shrink-0">
+                <span class="text-[11px] text-slate-500 font-mono">{{ job.updated_at }}</span>
+                <span class="text-[10px] text-slate-500">{{ expandedJobId === job.job_id ? '▲' : '▼' }}</span>
+              </div>
+            </button>
+            <div v-if="expandedJobId === job.job_id" class="px-3 pb-3 space-y-2">
+              <div v-if="job.status === 'need_login'" class="text-xs text-amber-300 bg-amber-500/15 border border-amber-500/40 rounded-lg p-2.5 flex items-center justify-between">
+                <span>⚠ 该平台尚未完成登录（或登录态已失效）</span>
+                <button @click="openPlatformLogin(job.platform)" class="bg-amber-500 hover:bg-amber-400 text-black px-3 py-1 rounded font-bold transition text-xs shrink-0 shadow">
+                  🔑 立即打开浏览器扫码
+                </button>
+              </div>
+              <pre class="text-[11px] font-mono text-slate-300 bg-dark-900 border border-dark-700 rounded-lg p-3 max-h-48 overflow-y-auto whitespace-pre-wrap">{{ expandedJobLogs }}</pre>
+            </div>
+          </div>
+        </div>
+        <!-- Modal Footer -->
+        <div class="p-4 border-t border-dark-700 bg-dark-900/60 flex justify-end">
+          <button @click="closePublishJobs" class="bg-dark-700 hover:bg-dark-600 text-slate-300 px-4 py-1.5 rounded-lg text-xs font-medium transition">关闭</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ================================================================= -->
+    <!-- Toast Notification Overlay -->
+    <!-- ================================================================= -->
+    <transition enter-active-class="transform ease-out duration-300 transition" enter-from-class="translate-y-2 opacity-0" enter-to-class="translate-y-0 opacity-100" leave-active-class="transition ease-in duration-100" leave-from-class="opacity-100" leave-to-class="opacity-0">
+      <div v-if="toast.show" class="fixed bottom-6 right-6 z-50 bg-emerald-600 text-white px-4 py-3 rounded-xl shadow-2xl flex items-center space-x-2 border border-emerald-400/30">
+        <svg class="w-5 h-5 text-white flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+        <span class="text-xs font-medium">{{ toast.message }}</span>
+      </div>
+    </transition>
+
+  </div>
+
+  <script>
+    const { createApp, ref, computed, watch, onMounted } = Vue;
+
+    // 视频卡片懒加载：进入视口附近才真正请求视频元数据，避免一页 60 个 <video> 同时拉流导致打开慢
+    const lazyVideo = {
+      mounted(el) {
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach((en) => {
+            if (en.isIntersecting) { el.src = el.dataset.src; io.unobserve(el); }
+          });
+        }, { rootMargin: '300px' });
+        io.observe(el);
+        el._lazyIO = io;
+      },
+      unmounted(el) { if (el._lazyIO) { el._lazyIO.disconnect(); el._lazyIO = null; } }
+    };
+
+    createApp({
+      setup() {
+        const currentTab = ref('characters');
+        const searchQuery = ref('');
+        const isSyncing = ref(false);
+
+        // Stats
+        const stats = ref({ character_count: 0, garment_count: 0, combo_count: 0 });
+
+        // Characters State
+        const characters = ref([]);
+        const minDetScore = ref(0.75);
+        const activeChar = ref(null);
+        const currentModalViewUrl = ref('');
+        const currentModalViewNote = ref('');
+        const similarityList = ref([]);
+
+        // Garments State
+        const garments = ref([]);
+        const selectedCategory = ref('all');
+        const selectedColorHex = ref('');
+        const colorTolerance = ref(0.25);
+        const colorPalette = ref([]);
+        const garmentPreviewMode = ref('transparent'); // 'transparent' or 'white'
+
+        // Combos State (Lookbook)
+        const combos = ref([]);
+
+        // ComfyUI Assets State (Imported / Generated)
+        const COMFY_API = window.location.origin;
+        const importedFiles = ref([]);
+        const importedTotal = ref(0);
+        const importedPage = ref(1);
+        const importedMedia = ref('all');
+        const importedLoading = ref(false);
+        const importedError = ref(false);
+        const generatedFiles = ref([]);
+        const generatedTotal = ref(0);
+        const generatedPage = ref(1);
+        const generatedMedia = ref('all');
+        const generatedDate = ref('all');
+        const generatedProject = ref('all');
+        const generatedLoading = ref(false);
+        const generatedError = ref(false);
+        const comfyTree = ref([]);
+        const generatedProjects = computed(() => {
+          const entry = comfyTree.value.find(d => d.date === generatedDate.value);
+          return entry ? entry.projects : [];
+        });
+        const previewFile = ref(null);
+
+        // Publish State
+        const cnPlatforms = [
+          { id: 'douyin', label: '抖音' },
+          { id: 'kuaishou', label: '快手' },
+          { id: 'shipinhao', label: '视频号' },
+          { id: 'wechat_mp', label: '公众号 (实验性)' }
+        ];
+        const globalPlatforms = [
+          { id: 'youtube', label: 'YouTube' },
+          { id: 'instagram', label: 'Instagram' },
+          { id: 'x', label: 'X' }
+        ];
+        const mpImagePlatforms = [
+          { id: 'wechat_mp_images', label: '公众号 贴图 (图片消息)' },
+          { id: 'wechat_mp_article', label: '公众号 文章 (图片模式)' }
+        ];
+        const platformLabel = (id) => {
+          const p = [...cnPlatforms, ...globalPlatforms, ...mpImagePlatforms].find(p => p.id === id);
+          return p ? p.label : id;
+        };
+        const publishStatusLabel = { pending: '排队中', running: '发布中', success: '成功', failed: '失败', need_login: '需登录' };
+        const publishStatusClass = (status) => ({
+          running: 'bg-brand-500/10 text-brand-400 border-brand-500/30',
+          success: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/30',
+          failed: 'bg-red-500/10 text-red-400 border-red-500/30',
+          need_login: 'bg-amber-500/10 text-amber-400 border-amber-500/30'
+        }[status] || 'bg-dark-700 text-slate-400 border-dark-600');
+        const publishFile = ref(null);
+        const publishTitle = ref('');
+        const publishTags = ref('');
+        const publishContent = ref('');
+        const publishImageFiles = ref([]);
+        const publishSiblings = ref([]);
+        const selectedGenerated = ref([]);
+        const publishSelected = ref([]);
+        const publishMode = ref('draft');
+        const publishApiKey = ref('');
+        const publishConfigUser = ref('');
+        const publishSubmitting = ref(false);
+        const publishJobsModal = ref(false);
+        const publishJobs = ref([]);
+        const expandedJobId = ref(null);
+        const expandedJobLogs = ref('');
+        let publishPollTimer = null;
+
+        // Settings State
+        const settings = ref({
+          enableDirectDispatch: false,
+          enableHeadlessLauncher: false,
+          comfyUrl: window.location.protocol + '//' + window.location.hostname + ':8188'
+        });
+
+        // Toast
+        const toast = ref({ show: false, message: '' });
+        const showToast = (msg) => {
+          toast.value.message = msg;
+          toast.value.show = true;
+          setTimeout(() => { toast.value.show = false; }, 2400);
+        };
+
+        const copyPath = async (text, successMsg = '已复制到剪贴板') => {
+          try {
+            await navigator.clipboard.writeText(text);
+            showToast(successMsg);
+          } catch (e) {
+            // Fallback
+            const el = document.createElement('textarea');
+            el.value = text;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+            showToast(successMsg);
+          }
+        };
+
+        // API Fetchers
+        const fetchStats = async () => {
+          try {
+            const res = await fetch('/api/system/stats');
+            if (res.ok) stats.value = await res.json();
+          } catch (e) { console.error(e); }
+        };
+
+        const fetchCharacters = async () => {
+          try {
+            const params = new URLSearchParams();
+            if (searchQuery.value) params.append('q', searchQuery.value);
+            if (minDetScore.value) params.append('min_det_score', minDetScore.value);
+            const res = await fetch(`/api/characters?${params.toString()}`);
+            if (res.ok) characters.value = await res.json();
+          } catch (e) { console.error(e); }
+        };
+
+        const fetchGarments = async () => {
+          try {
+            const params = new URLSearchParams();
+            if (selectedCategory.value !== 'all') params.append('category', selectedCategory.value);
+            if (selectedColorHex.value) {
+              params.append('color_hex', selectedColorHex.value);
+              params.append('color_tolerance', colorTolerance.value);
+            }
+            if (searchQuery.value) params.append('q', searchQuery.value);
+            const res = await fetch(`/api/garments?${params.toString()}`);
+            if (res.ok) garments.value = await res.json();
+          } catch (e) { console.error(e); }
+        };
+
+        const fetchColorPalette = async () => {
+          try {
+            const res = await fetch('/api/garments/colors/palette');
+            if (res.ok) colorPalette.value = await res.json();
+          } catch (e) { console.error(e); }
+        };
+
+        const toggleColorFilter = (hex) => {
+          if (selectedColorHex.value === hex) {
+            selectedColorHex.value = '';
+          } else {
+            selectedColorHex.value = hex;
+          }
+          fetchGarments();
+        };
+
+        const openCharacterModal = async (char) => {
+          activeChar.value = char;
+          currentModalViewUrl.value = char.thumb_url;
+          currentModalViewNote.value = '主参考脸 (face.png)';
+          similarityList.value = [];
+
+          // Perform similarity search
+          try {
+            const res = await fetch('/api/characters/similarity_search', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ char_id: char.char_id, top_k: 10 })
+            });
+            if (res.ok) similarityList.value = await res.json();
+          } catch (e) { console.error(e); }
+        };
+
+        let searchTimeout = null;
+        const onSearchInput = () => {
+          clearTimeout(searchTimeout);
+          searchTimeout = setTimeout(() => { triggerFetch(); }, 300);
+        };
+
+        const triggerFetch = () => {
+          fetchCharacters();
+          fetchGarments();
+        };
+
+        const fetchCombos = async () => {
+          try {
+            const res = await fetch('/api/combos');
+            if (res.ok) combos.value = await res.json();
+          } catch (e) { console.error(e); }
+        };
+
+        // ---- ComfyUI 已导入 / 已生成 ----
+        const formatSize = (size) => {
+          if (size >= 1024 * 1024 * 1024) return (size / 1024 / 1024 / 1024).toFixed(2) + ' GB';
+          if (size >= 1024 * 1024) return (size / 1024 / 1024).toFixed(1) + ' MB';
+          return Math.round(size / 1024) + ' KB';
+        };
+
+        const formatDate = (mtime) => (mtime || '').slice(0, 10);
+
+        const fetchComfyTree = async () => {
+          try {
+            const res = await fetch(COMFY_API + '/api/comfy-assets/output/tree');
+            if (res.ok) comfyTree.value = await res.json();
+          } catch (e) { console.error(e); }
+        };
+
+        const fetchImportedFiles = async (page = 1, append = false, refresh = false) => {
+          importedLoading.value = true;
+          try {
+            const params = new URLSearchParams({ page, page_size: 60 });
+            if (importedMedia.value !== 'all') params.append('media', importedMedia.value);
+            if (refresh) params.append('refresh', 'true');
+            const res = await fetch(`${COMFY_API}/api/comfy-assets/input/files?${params.toString()}`);
+            if (!res.ok) throw new Error('HTTP ' + res.status);
+            const data = await res.json();
+            importedFiles.value = append ? importedFiles.value.concat(data.items) : data.items;
+            importedTotal.value = data.total;
+            importedPage.value = data.page;
+            importedError.value = false;
+          } catch (e) {
+            if (!append) { importedFiles.value = []; importedTotal.value = 0; }
+            importedError.value = true;
+            showToast('导入资产加载失败: ' + e.message);
+          } finally { importedLoading.value = false; }
+        };
+
+        const fetchGeneratedFiles = async (page = 1, append = false, refresh = false) => {
+          generatedLoading.value = true;
+          try {
+            const params = new URLSearchParams({ page, page_size: 60 });
+            if (generatedMedia.value !== 'all') params.append('media', generatedMedia.value);
+            if (generatedDate.value !== 'all') params.append('date', generatedDate.value);
+            if (generatedProject.value !== 'all') params.append('project', generatedProject.value);
+            if (refresh) params.append('refresh', 'true');
+            const res = await fetch(`${COMFY_API}/api/comfy-assets/output/files?${params.toString()}`);
+            if (!res.ok) throw new Error('HTTP ' + res.status);
+            const data = await res.json();
+            generatedFiles.value = append ? generatedFiles.value.concat(data.items) : data.items;
+            generatedTotal.value = data.total;
+            generatedPage.value = data.page;
+            generatedError.value = false;
+          } catch (e) {
+            if (!append) { generatedFiles.value = []; generatedTotal.value = 0; }
+            generatedError.value = true;
+            showToast('生成资产加载失败: ' + e.message);
+          } finally { generatedLoading.value = false; }
+        };
+
+        const openPreview = (file) => { previewFile.value = file; };
+
+        // ---- 视频发布 ----
+        const fetchPublishConfig = async () => {
+          try {
+            const res = await fetch(COMFY_API + '/api/publish/config');
+            if (!res.ok) return;
+            const cfg = await res.json();
+            publishApiKey.value = cfg.upload_post_api_key || '';
+            publishConfigUser.value = cfg.upload_post_user || '';
+          } catch (e) { console.error(e); }
+        };
+
+        const savePublishConfig = async () => {
+          try {
+            const res = await fetch(COMFY_API + '/api/publish/config', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ upload_post_api_key: publishApiKey.value.trim(), upload_post_user: publishConfigUser.value })
+            });
+            if (!res.ok) throw new Error('HTTP ' + res.status);
+            showToast('Upload-Post 配置已保存');
+          } catch (e) { showToast('配置保存失败: ' + e.message); }
+        };
+
+        const isGeneratedSelected = (file) => {
+          return selectedGenerated.value.some(f => f.rel_path === file.rel_path);
+        };
+
+        const toggleSelectGenerated = (file) => {
+          const idx = selectedGenerated.value.findIndex(f => f.rel_path === file.rel_path);
+          if (idx >= 0) {
+            selectedGenerated.value.splice(idx, 1);
+          } else {
+            selectedGenerated.value.push(file);
+          }
+        };
+
+        const isPublishImageSelected = (file) => {
+          return publishImageFiles.value.some(f => f.rel_path === file.rel_path);
+        };
+
+        const togglePublishImage = (sibling) => {
+          const idx = publishImageFiles.value.findIndex(f => f.rel_path === sibling.rel_path);
+          if (idx >= 0) {
+            if (publishImageFiles.value.length <= 1) {
+              showToast('组合中至少保留一张图片');
+              return;
+            }
+            publishImageFiles.value.splice(idx, 1);
+          } else {
+            publishImageFiles.value.push(sibling);
+          }
+        };
+
+        const removePublishImage = (index) => {
+          if (publishImageFiles.value.length <= 1) {
+            showToast('组合中至少保留一张图片');
+            return;
+          }
+          publishImageFiles.value.splice(index, 1);
+        };
+
+        const publishSelectedGroup = () => {
+          if (!selectedGenerated.value.length) return;
+          const primary = selectedGenerated.value[0];
+          openPublishDialog(primary, selectedGenerated.value);
+        };
+
+        const openPublishDialog = async (file, extraFiles = []) => {
+          publishFile.value = file;
+          publishTitle.value = '';
+          publishTags.value = '';
+          publishContent.value = '';
+          publishSiblings.value = [];
+          publishMode.value = 'draft';
+          fetchPublishConfig();
+
+          if (file.media === 'image') {
+            publishSelected.value = ['wechat_mp_article'];
+            if (extraFiles && extraFiles.length) {
+              const others = extraFiles.filter(f => f.rel_path !== file.rel_path);
+              publishImageFiles.value = [file, ...others];
+            } else {
+              publishImageFiles.value = [file];
+            }
+          } else {
+            publishImageFiles.value = [file];
+            publishSelected.value = ['shipinhao'];
+          }
+
+          // 标题、内容与标签自动生成（后端按Prompt及艺术风格智能生成，可修改）
+          try {
+            const res = await fetch(COMFY_API + '/api/publish/suggest?file_rel_path=' + encodeURIComponent(file.rel_path));
+            if (res.ok) {
+              const sug = await res.json();
+              publishTitle.value = sug.title || '';
+              publishContent.value = sug.content || '';
+              publishTags.value = (sug.tags || []).join(',');
+              publishSiblings.value = sug.siblings || [];
+            }
+          } catch (e) { console.error(e); }
+        };
+
+        const submitPublish = async () => {
+          if (publishSubmitting.value) return;
+          if (!publishFile.value) return;
+          const title = publishTitle.value.trim();
+          if (!title) { showToast('请填写标题'); return; }
+          if (!publishSelected.value.length) { showToast('请至少选择一个发布平台或形式'); return; }
+          const isImage = publishFile.value.media === 'image';
+
+          const fileRelPaths = isImage && publishImageFiles.value.length
+            ? publishImageFiles.value.map(f => f.rel_path)
+            : [publishFile.value.rel_path];
+
+          const tags = publishTags.value.split(/[,，]/).map(t => t.trim()).filter(Boolean);
+          const content = publishContent.value.trim();
+
+          const requests = [];
+          if (isImage) {
+            if (publishSelected.value.includes('wechat_mp_images')) {
+              requests.push({
+                file_rel_path: fileRelPaths[0],
+                file_rel_paths: fileRelPaths,
+                platforms: ['wechat_mp'],
+                media_type: 'images',
+                publish_mode: publishMode.value,
+                title,
+                content,
+                tags
+              });
+            }
+            if (publishSelected.value.includes('wechat_mp_article')) {
+              requests.push({
+                file_rel_path: fileRelPaths[0],
+                file_rel_paths: fileRelPaths,
+                platforms: ['wechat_mp'],
+                media_type: 'article',
+                publish_mode: publishMode.value,
+                title,
+                content,
+                tags
+              });
+            }
+          } else {
+            const platforms = Array.from(new Set(publishSelected.value.map(id => id.startsWith('wechat_mp_') ? 'wechat_mp' : id)));
+            const body = {
+              file_rel_path: fileRelPaths[0],
+              file_rel_paths: fileRelPaths,
+              platforms,
+              media_type: 'video',
+              publish_mode: publishMode.value,
+              title,
+              content,
+              tags
+            };
+            if (publishSelected.value.some(id => globalPlatforms.some(p => p.id === id))) {
+              if (!publishApiKey.value.trim()) { showToast('海外平台需要先填写 Upload-Post API Key'); return; }
+              body.upload_post_key = publishApiKey.value.trim();
+            }
+            requests.push(body);
+          }
+
+          if (!requests.length) { showToast('请勾选公众号发布形式 (贴图或文章)'); return; }
+
+          publishSubmitting.value = true;
+          let totalJobs = 0;
+          try {
+            for (const req of requests) {
+              const res = await fetch(COMFY_API + '/api/publish/jobs', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(req)
+              });
+              if (!res.ok) {
+                const err = await res.json().catch(() => ({}));
+                throw new Error(err.detail || ('HTTP ' + res.status));
+              }
+              const data = await res.json();
+              totalJobs += (data.jobs || []).length;
+            }
+            showToast(`已创建 ${totalJobs} 个发布任务`);
+            publishFile.value = null;
+            selectedGenerated.value = [];
+            openPublishJobs();
+          } catch (e) {
+            showToast('发布请求失败: ' + e.message);
+          } finally { publishSubmitting.value = false; }
+        };
+
+        const fetchPublishJobs = async () => {
+          try {
+            const res = await fetch(COMFY_API + '/api/publish/jobs');
+            if (res.ok) publishJobs.value = await res.json();
+          } catch (e) { console.error(e); }
+        };
+
+        const openPublishJobs = () => {
+          publishJobsModal.value = true;
+          fetchPublishJobs();
+          publishPollTimer = setInterval(fetchPublishJobs, 3000);
+        };
+
+        const closePublishJobs = () => {
+          publishJobsModal.value = false;
+          clearInterval(publishPollTimer);
+          publishPollTimer = null;
+          expandedJobId.value = null;
+          expandedJobLogs.value = '';
+        };
+
+        const toggleJobLogs = async (job) => {
+          if (expandedJobId.value === job.job_id) {
+            expandedJobId.value = null;
+            expandedJobLogs.value = '';
+            return;
+          }
+          expandedJobId.value = job.job_id;
+          expandedJobLogs.value = '加载中...';
+          try {
+            const res = await fetch(`${COMFY_API}/api/publish/jobs/${job.job_id}`);
+            if (!res.ok) throw new Error('HTTP ' + res.status);
+            const data = await res.json();
+            expandedJobLogs.value = (data.logs || []).join('\n') || '暂无日志';
+          } catch (e) {
+            expandedJobLogs.value = '日志加载失败: ' + e.message;
+          }
+        };
+
+        const openPlatformLogin = async (platform) => {
+          showToast(`正在启动 ${platformLabel(platform)} 浏览器窗口，请稍候...`);
+          try {
+            const res = await fetch(COMFY_API + '/api/publish/browser/open', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ platform })
+            });
+            if (res.ok) {
+              showToast(`已成功打开 ${platformLabel(platform)} 登录窗口，请在 Chrome 中扫码！`);
+            } else {
+              const err = await res.json().catch(() => ({}));
+              showToast('打开浏览器失败: ' + (err.detail || res.status));
+            }
+          } catch (e) {
+            showToast('请求异常: ' + e.message);
+          }
+        };
+
+        const syncLibraries = async () => {
+          isSyncing.value = true;
+          try {
+            const res = await fetch('/api/system/sync', { method: 'POST' });
+            if (res.ok) {
+              showToast('本地库全量重扫同步完成！');
+              fetchStats();
+              fetchCharacters();
+              fetchGarments();
+              fetchColorPalette();
+              fetchCombos();
+            }
+          } catch (e) { showToast('同步失败'); }
+          finally { isSyncing.value = false; }
+        };
+
+        const testComfyConnection = async () => {
+          try {
+            const res = await fetch(settings.value.comfyUrl + '/system_stats');
+            if (res.ok) showToast('ComfyUI 8188 连接正常！');
+            else showToast('ComfyUI 响应异常');
+          } catch (e) { showToast('无法连接 ComfyUI (请确认 ComfyUI 是否已启动)'); }
+        };
+
+        watch(currentTab, (tab) => {
+          if (tab === 'imported') fetchImportedFiles();
+          if (tab === 'generated') { fetchComfyTree(); fetchGeneratedFiles(); }
+        });
+
+        onMounted(() => {
+          fetchStats();
+          fetchCharacters();
+          fetchGarments();
+          fetchColorPalette();
+          fetchCombos();
+        });
+
+        return {
+          currentTab,
+          searchQuery,
+          isSyncing,
+          stats,
+          characters,
+          minDetScore,
+          activeChar,
+          currentModalViewUrl,
+          currentModalViewNote,
+          similarityList,
+          garments,
+          selectedCategory,
+          selectedColorHex,
+          colorTolerance,
+          colorPalette,
+          garmentPreviewMode,
+          combos,
+          fetchCombos,
+          settings,
+          toast,
+          copyPath,
+          openCharacterModal,
+          toggleColorFilter,
+          onSearchInput,
+          triggerFetch,
+          syncLibraries,
+          testComfyConnection,
+          fetchCharacters,
+          fetchGarments,
+          importedFiles,
+          importedTotal,
+          importedPage,
+          importedMedia,
+          importedLoading,
+          importedError,
+          fetchImportedFiles,
+          generatedFiles,
+          generatedTotal,
+          generatedPage,
+          generatedMedia,
+          generatedDate,
+          generatedProject,
+          generatedLoading,
+          generatedError,
+          comfyTree,
+          generatedProjects,
+          fetchGeneratedFiles,
+          previewFile,
+          openPreview,
+          formatSize,
+          formatDate,
+          cnPlatforms,
+          globalPlatforms,
+          mpImagePlatforms,
+          platformLabel,
+          publishStatusLabel,
+          publishStatusClass,
+          publishFile,
+          publishTitle,
+          publishTags,
+          publishContent,
+          publishImageFiles,
+          publishSiblings,
+          selectedGenerated,
+          isGeneratedSelected,
+          toggleSelectGenerated,
+          isPublishImageSelected,
+          togglePublishImage,
+          removePublishImage,
+          publishSelectedGroup,
+          publishSelected,
+          publishMode,
+          publishApiKey,
+          publishSubmitting,
+          savePublishConfig,
+          openPublishDialog,
+          submitPublish,
+          publishJobsModal,
+          publishJobs,
+          expandedJobId,
+          expandedJobLogs,
+          openPublishJobs,
+          closePublishJobs,
+          toggleJobLogs,
+          openPlatformLogin
+        };
+      }
+    }).directive('lazy-video', lazyVideo).mount('#app');
+  </script>
+</body>
+</html>
