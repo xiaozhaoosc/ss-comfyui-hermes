@@ -1,0 +1,99 @@
+{
+  "_comment": "小G3 角色资产 · Qwen-Image-2.1 (GGUF UC) 参考图锁脸生成。基于已验证模板 workflows/v5/qwen_image_2_1_keyframe_api.json：参考图走 TextEncodeQwenImageEditPlus 视觉塔锁脸，FluxKontextMultiReferenceLatentMethod 注入参考潜变量。阶段1=三视图，阶段2=铺场景（改 prompt 即可）。提交: POST /prompt",
+  "1": {
+    "inputs": { "unet_name": "qwen-image-2.1-UC-Q4_K_M.gguf" },
+    "class_type": "UnetLoaderGGUF",
+    "_meta": { "title": "1. Qwen-Image-2.1 扩散模型 (DiT GGUF)" }
+  },
+  "2": {
+    "inputs": { "clip_name": "qwen3vl_8b_int8_convrot.safetensors", "type": "qwen_image" },
+    "class_type": "CLIPLoader",
+    "_meta": { "title": "2. 文本编码器 (官方 int8, 编辑需视觉塔故不能用 GGUF)" }
+  },
+  "3": {
+    "inputs": { "vae_name": "qwen_image_2.1_vae_bf16.safetensors" },
+    "class_type": "VAELoader",
+    "_meta": { "title": "3. 图像编解码器 (VAE)" }
+  },
+  "4": {
+    "inputs": { "image": "xiaog3_charsheet/07_portrait_face.png" },
+    "class_type": "LoadImage",
+    "_meta": { "title": "4. 小G3 身份参考脸" }
+  },
+  "5": {
+    "inputs": { "image": ["4", 0] },
+    "class_type": "FluxKontextImageScale",
+    "_meta": { "title": "5. 归一到 Kontext 优选分辨率" }
+  },
+  "6": {
+    "inputs": { "pixels": ["5", 0], "vae": ["3", 0] },
+    "class_type": "VAEEncode",
+    "_meta": { "title": "6. 参考图编码为初始潜变量 (输出比例跟随参考图)" }
+  },
+  "7": {
+    "inputs": {
+      "prompt": "角色三视图设定图：同一位东亚年轻女性（严格保持参考图中的同一人：五官骨相、脸型、发型发色、身材体型完全一致），正面、正侧面、正背面三个视角并排站立，全身入镜，中性放松站姿，双臂自然下垂，浅灰素色摄影棚背景，柔和均匀影棚光，写实摄影质感，8K高清细节。角色特征：约二十出头，圆润幼态脸带婴儿肥、下巴短而柔和，偏大圆杏眼配明显双眼皮与卧蚕，鼻梁低矮、鼻头圆润，上唇薄下唇饱满、嘴角自然上扬，右脸颊鼻翼旁有一颗小痣，乌黑长直发带空气碎刘海、长度过胸垂腰，身材娇小骨架纤细、胸丰腰细臀圆呈沙漏曲线、四肢匀称，肤色白皙偏暖调。",
+      "clip": ["2", 0],
+      "vae": ["3", 0],
+      "image1": ["5", 0]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": { "title": "7. 三视图描述 + 人物参考 (锁脸)" }
+  },
+  "8": {
+    "inputs": {
+      "prompt": "face swap, different face, changed facial features, inconsistent identity, deformed hands, extra fingers, missing fingers, mutated limbs, bad anatomy, wrong body shape, blurry, low quality, jpeg artifacts, watermark, text, signature, anime, illustration, 3d render, plastic skin, over-smoothed skin",
+      "clip": ["2", 0],
+      "vae": ["3", 0],
+      "image1": ["5", 0]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": { "title": "8. 负向提示词" }
+  },
+  "9": {
+    "inputs": { "reference_latents_method": "index_timestep_zero", "conditioning": ["7", 0] },
+    "class_type": "FluxKontextMultiReferenceLatentMethod",
+    "_meta": { "title": "9. 正向参考潜变量注入方式" }
+  },
+  "10": {
+    "inputs": { "reference_latents_method": "index_timestep_zero", "conditioning": ["8", 0] },
+    "class_type": "FluxKontextMultiReferenceLatentMethod",
+    "_meta": { "title": "10. 负向参考潜变量注入方式" }
+  },
+  "11": {
+    "inputs": { "shift": 3.1, "model": ["1", 0] },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": { "title": "11. 采样位移对齐官方模板 (shift 3.1)" }
+  },
+  "12": {
+    "inputs": { "strength": 1.0, "model": ["11", 0] },
+    "class_type": "CFGNorm",
+    "_meta": { "title": "12. CFG 归一化" }
+  },
+  "13": {
+    "inputs": {
+      "seed": 20261016,
+      "steps": 40,
+      "cfg": 3.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0,
+      "model": ["12", 0],
+      "positive": ["9", 0],
+      "negative": ["10", 0],
+      "latent_image": ["6", 0]
+    },
+    "class_type": "KSampler",
+    "_meta": { "title": "13. KSampler (40步 / CFG 3.0)" }
+  },
+  "14": {
+    "inputs": { "samples": ["13", 0], "vae": ["3", 0] },
+    "class_type": "VAEDecode",
+    "_meta": { "title": "14. VAE 解码为图像" }
+  },
+  "15": {
+    "inputs": { "filename_prefix": "2026-10-16/xiaog3_assets/char_xiaog3_3view", "images": ["14", 0] },
+    "class_type": "SaveImage",
+    "_meta": { "title": "15. 保存三视图锁脸图" }
+  }
+}

@@ -47,6 +47,8 @@ from pathlib import Path
 
 # 本机 8188 会被系统代理劫持（os.environ 里的 http_proxy），本地请求一律绕开
 urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler({})))
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
 
 # ===== 配置 =====
 COMFYUI_URL = "http://127.0.0.1:8188"
@@ -472,7 +474,8 @@ def process_and_rename(input_dir, output_dir, quotes, category=None,
     random.shuffle(available)
 
     success = fail = 0
-    used_names = set()
+    # 预置已有文件，否则随机抽到同名语录会静默覆盖上一批的成果
+    used_names = {f.name for f in output_dir.glob("*.mp4")}
     orig_list = sorted(original_videos.values()) if original_videos else []
 
     # 创建临时目录用于中文路径兼容

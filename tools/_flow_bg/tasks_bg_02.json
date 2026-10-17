@@ -1,0 +1,56 @@
+[
+ {
+  "name": "bg_rooftop_dusk_city",
+  "prompt": "A completely empty concrete rooftop terrace at dusk with a distant city skyline at 55 percent height, a simple metal railing on the far edge and a blank parapet wall, vertical 9:16 composition with a clear open floor area in the center for one standing person, rooftop floor line at 72 percent height, warm dusk side light with a soft gradient sky, a soft ambient occlusion gradient on the floor where a person would stand, no antennas, no AC units, no people, no people, no animals, no mannequins, no silhouettes, no text, no letters, no signage, no logos, no watermark, no captions, no UI overlay, photorealistic photography, 35mm lens, f/4, deep depth of field, natural color grade, subtle film grain, ultra detailed",
+  "aspect": "9:16",
+  "character": ""
+ },
+ {
+  "name": "bg_cafe_window_morning",
+  "prompt": "A completely empty cozy cafe with wooden tables and chairs arranged to the sides, a large window casting warm morning light patches on the wooden floor, vertical 9:16 composition with a clear open floor area in the center for one standing person, floor line at 75 percent height, soft directional morning light from the left window, a soft ambient occlusion gradient on the floor where a person would stand, blank walls, no menu boards, no people, no people, no animals, no mannequins, no silhouettes, no text, no letters, no signage, no logos, no watermark, no captions, no UI overlay, photorealistic photography, 35mm lens, f/4, deep depth of field, natural color grade, subtle film grain, ultra detailed",
+  "aspect": "9:16",
+  "character": ""
+ },
+ {
+  "name": "bg_subway_platform",
+  "prompt": "A completely empty modern subway platform with clean tiles, a strip of ceiling lights and the tunnel opening far in the background, vertical 9:16 composition with a clear open floor area in the center for one standing person, platform floor line at 70 percent height, cool even overhead light, a soft ambient occlusion gradient on the floor where a person would stand, no trains, no signage, no advertisement posters, no people, no people, no animals, no mannequins, no silhouettes, no text, no letters, no signage, no logos, no watermark, no captions, no UI overlay, photorealistic photography, 35mm lens, f/4, deep depth of field, natural color grade, subtle film grain, ultra detailed",
+  "aspect": "9:16",
+  "character": ""
+ },
+ {
+  "name": "bg_library_aisle",
+  "prompt": "A completely empty library aisle between tall wooden bookshelves with warm light pools on the wooden floor and a deep perspective down the aisle, vertical 9:16 composition with a clear open floor area in the center for one standing person, floor line at 80 percent height, warm ambient light with soft shafts from the side, a soft ambient occlusion gradient on the floor where a person would stand, bookshelves slightly out of focus, no readable titles, no text on spines, no people, no people, no animals, no mannequins, no silhouettes, no text, no letters, no signage, no logos, no watermark, no captions, no UI overlay, photorealistic photography, 35mm lens, f/4, deep depth of field, natural color grade, subtle film grain, ultra detailed",
+  "aspect": "9:16",
+  "character": ""
+ },
+ {
+  "name": "bg_art_gallery_white",
+  "prompt": "A completely empty minimalist white cube art gallery with a polished concrete floor, blank white walls and empty picture frames, vertical 9:16 composition with a clear open floor area in the center for one standing person, floor line at 78 percent height, soft diffused gallery lighting, a soft ambient occlusion gradient on the floor where a person would stand, blank walls, no posters, no people, no people, no animals, no mannequins, no silhouettes, no text, no letters, no signage, no logos, no watermark, no captions, no UI overlay, photorealistic photography, 35mm lens, f/4, deep depth of field, natural color grade, subtle film grain, ultra detailed",
+  "aspect": "9:16",
+  "character": ""
+ },
+ {
+  "name": "bg_rainy_neon_alley",
+  "prompt": "A completely empty narrow rainy city alley at night with wet reflective pavement and a soft colorful neon glow blurred in the far background, vertical 9:16 composition with a clear open floor area in the center for one standing person, wet pavement at the lower 30 percent of the frame, saturated colorful side glow from distant neon lights, a soft ambient occlusion gradient on the floor where a person would stand, no readable signs, no letters, no posters, no umbrellas, no people, no people, no animals, no mannequins, no silhouettes, no text, no letters, no signage, no logos, no watermark, no captions, no UI overlay, photorealistic photography, 35mm lens, f/4, deep depth of field, natural color grade, subtle film grain, ultra detailed",
+  "aspect": "9:16",
+  "character": ""
+ },
+ {
+  "name": "bg_forest_trail",
+  "prompt": "A completely empty quiet forest trail with sunlight patches breaking through the canopy, fallen leaves on the path and tall trees on both sides, vertical 9:16 composition with a clear open floor area in the center for one standing person, trail surface at the lower 30 percent of the frame, soft backlit sun shafts through the trees, a soft ambient occlusion gradient on the floor where a person would stand, no people, no animals, no people, no animals, no mannequins, no silhouettes, no text, no letters, no signage, no logos, no watermark, no captions, no UI overlay, photorealistic photography, 35mm lens, f/4, deep depth of field, natural color grade, subtle film grain, ultra detailed",
+  "aspect": "9:16",
+  "character": ""
+ },
+ {
+  "name": "bg_desert_road",
+  "prompt": "A completely empty straight desert highway with a vanishing point in the center, low sand dunes on both sides and a clear sky, vertical 9:16 composition with a clear open floor area in the center for one standing person, road surface at the lower 35 percent of the frame, hard warm sunlight from the front-left, a soft ambient occlusion gradient on the floor where a person would stand, no cars, no road text markings, no signposts, no people, no animals, no mannequins, no silhouettes, no text, no letters, no signage, no logos, no watermark, no captions, no UI overlay, photorealistic photography, 35mm lens, f/4, deep depth of field, natural color grade, subtle film grain, ultra detailed",
+  "aspect": "9:16",
+  "character": ""
+ },
+ {
+  "name": "bg_gradient_seamless_paper",
+  "prompt": "A completely empty seamless studio paper backdrop with a smooth gradient from warm off-white at the top to light grey at the bottom, vertical 9:16 composition with a clear open floor area in the center for one standing person, floor transition at 70 percent height, soft even diffused studio light, a soft ambient occlusion gradient on the floor where a person would stand, no texture noise, no props, no shadows except a soft central gradient, no people, no animals, no mannequins, no silhouettes, no text, no letters, no signage, no logos, no watermark, no captions, no UI overlay, photorealistic photography, 35mm lens, f/4, deep depth of field, natural color grade, subtle film grain, ultra detailed",
+  "aspect": "9:16",
+  "character": ""
+ }
+]

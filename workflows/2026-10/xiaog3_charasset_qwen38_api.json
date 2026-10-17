@@ -1,0 +1,82 @@
+{
+  "_comment": "小G3 角色资产 · Qwen3.8-27B(去护栏 Heretic) 看图提词。输入=input/xiaog3_charsheet/ 的全身正面+正脸特写切片；输出=身份锚点+三视图提示词文本(SaveText)。提交: POST /prompt",
+  "1": {
+    "class_type": "LoadImage",
+    "inputs": { "image": "xiaog3_charsheet/01_front.png" },
+    "_meta": { "title": "📷 小G3 全身正面 (01_front)" }
+  },
+  "2": {
+    "class_type": "LoadImage",
+    "inputs": { "image": "xiaog3_charsheet/07_portrait_face.png" },
+    "_meta": { "title": "📷 小G3 正脸特写 (07_portrait_face)" }
+  },
+  "3": {
+    "class_type": "ImageBatch",
+    "inputs": { "image1": ["1", 0], "image2": ["2", 0] },
+    "_meta": { "title": "🧩 合批 2 张参考图" }
+  },
+  "4": {
+    "class_type": "LlamaCPPModelLoader",
+    "inputs": {
+      "model_name": "RVN-Qwen3.8-27B-Heretic-GSQ-RCO-IQ3_S-mtp.gguf",
+      "chat_format": "vision-qwen3vl",
+      "mmproj_model_name": "mmproj-Qwen3.8-27B-BF16.gguf"
+    },
+    "_meta": { "title": "🧠 Qwen3.8-27B 视觉大模型 (去护栏)" }
+  },
+  "5": {
+    "class_type": "LlamaCPPOptions",
+    "inputs": {
+      "n_gpu_layers": 20,
+      "n_ctx": 8192,
+      "n_threads": -1,
+      "n_threads_batch": -1,
+      "n_batch": 2048,
+      "n_ubatch": 512,
+      "main_gpu": 0,
+      "offload_kqv": true,
+      "numa": false,
+      "use_mmap": true,
+      "use_mlock": false,
+      "use_direct_io": false,
+      "verbose": false,
+      "vision_use_gpu": true,
+      "vision_image_min_tokens": -1,
+      "vision_image_max_tokens": 1280,
+      "vision_enable_thinking": false,
+      "vision_force_reasoning": false,
+      "vision_add_vision_id": true
+    },
+    "_meta": { "title": "⚙️ 加载参数 (20 层上卡，其余 CPU)" }
+  },
+  "6": {
+    "class_type": "LlamaCPPEngine",
+    "inputs": {
+      "model": ["4", 0],
+      "images": ["3", 0],
+      "options": ["5", 0],
+      "system_prompt": "你是顶级角色设定师 + AI 绘图提示词工程师。你会看参考图，为一套「角色资产库」提炼一个可长期复用、跨底模一致的角色。必须严格照抄你看到的真人特征，不得美化、不得改变脸型骨相、五官比例、发型发色、身材体型与肤色。输出只用中文小标题 + 英文提示词，不要寒暄、不要解释、不要思考过程。",
+      "prompt": "这是一位真实人物的全身正面照与正脸特写（同一人）。请把它固化成一条「角色资产」记录，按以下 6 节输出：\n\n【1 身份锚点】一行英文 tag 串，固定勿改，必须完整保留：脸型骨相、眼型/眼距、鼻梁鼻头、唇形、眉形、是否有痣/特征点、发型+发色+长度、身材体型(身高感/骨架/胸腰臀比例/腿型)、肤色、年龄感。格式示例：1girl, solo, East Asian young woman, <年龄感>, <脸型/五官特征>, <发型发色>, <身材体型>, <肤色与特征点>\n\n【2 正向 · 自然语言】(中文长句，给 Z-Image Turbo / FLUX.1 Dev) 用于三视图立绘：正面+侧面+背面，素色背景，全身，中性站姿，写实摄影质感，保留上述身份锚点。\n\n【3 正向 · SDXL tag】(英文 tag 串，给 SDXL RealVisXL) 与第 2 节同义。\n\n【4 负面】(英文 tag 串) 针对本角色最易跑偏的点：换脸、五官漂移、身材走样、多余肢体、手部畸变等。\n\n【5 气质关键词】中文 3 个词。\n\n【6 建议】建议底模(Z-Image Turbo / FLUX.1 Dev / SDXL 三选一或二) 与比例(默认 2:3)。",
+      "memory_cleanup": "close",
+      "max_tokens": 1600,
+      "temperature": 0.6,
+      "top_p": 0.9,
+      "top_k": 40,
+      "min_p": 0.05,
+      "repeat_penalty": 1.1,
+      "present_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "seed": 20261016
+    },
+    "_meta": { "title": "🤖 Qwen3.8 看图 → 角色资产提示词" }
+  },
+  "7": {
+    "class_type": "SaveText",
+    "inputs": {
+      "text": ["6", 0],
+      "filename_prefix": "2026-10-16/xiaog3_charasset/char_xiaog3_qwen38",
+      "format": "txt"
+    },
+    "_meta": { "title": "💾 保存角色资产文本" }
+  }
+}

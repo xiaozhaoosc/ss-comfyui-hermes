@@ -37,10 +37,10 @@ FLUX_NEG = P.FLUX_NEG  # abliterated base: explicit clothing/safety negative
 
 
 def build(unet, pos, w, h, steps, seed, prefix, guidance=3.5,
-          lora=None, lora_strength=0.8, use_gguf=True):
+          lora=None, lora_strength=0.8, use_gguf=True, anchor=None):
     loader = "UnetLoaderGGUF" if use_gguf else "UNETLoader"
     key = "unet_name"
-    pos = P.FLUX_ANCHOR + pos
+    pos = (anchor or P.FLUX_ANCHOR) + pos
     node1 = ({key: unet} if use_gguf
              else {key: unet, "weight_dtype": "default"})
     g = {
@@ -122,7 +122,8 @@ def main():
         seed = sbase + i
         prefix = comfy_prefix(outdir, "pc_%s_%s" % (sub, sc["id"]))
         graph = build(unf, sc["flux"], w, h, steps, seed, prefix,
-                      guidance=guidance, lora=lora, use_gguf=use_gguf)
+                      guidance=guidance, lora=lora, use_gguf=use_gguf,
+                      anchor=sc.get("anchor"))
         ok, pid = submit(graph)
         print("[submit] %s seed=%s -> %s %s" % (sc["id"], seed, ok, pid), flush=True)
         if not ok:

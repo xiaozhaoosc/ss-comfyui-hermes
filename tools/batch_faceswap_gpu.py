@@ -49,7 +49,7 @@ def imwrite_unicode(path, img):
 
 
 def check_gpu():
-    """启动前检测 onnxruntime 是否支持 CUDA"""
+    """启动前检测 CUDA EP 是否真的绑定：可用 providers ≠ 实际绑定"""
     import onnxruntime
     providers = onnxruntime.get_available_providers()
     print(f"onnxruntime 版本: {onnxruntime.__version__}")
@@ -59,7 +59,21 @@ def check_gpu():
         print("   请卸载 CPU 版: pip uninstall onnxruntime")
         print("   保留 GPU 版: onnxruntime-gpu")
         sys.exit(1)
-    print("✅ GPU (CUDAExecutionProvider) 可用\n")
+
+    # 缺 cuDNN 时 ORT 不会报错，只会静默回落到 CPU，所以必须建真会话查 get_providers()
+    try:
+        session = onnxruntime.InferenceSession(MODEL_PATH, providers=["CUDAExecutionProvider"])
+    except Exception as e:
+        print(f"\n❌ CUDA 会话创建失败: {e}")
+        print(r"   把 C:\Users\kenzhao\cudnn9\bin 加到 PATH 最前面再重试")
+        sys.exit(1)
+    actual = session.get_providers()
+    print(f"实际绑定: {actual}")
+    if not actual or actual[0] != 'CUDAExecutionProvider':
+        print("\n❌ 实际回落到 CPU，拒绝运行（会慢 10 倍以上）")
+        print(r"   把 C:\Users\kenzhao\cudnn9\bin 加到 PATH 最前面再重试")
+        sys.exit(1)
+    print("✅ GPU (CUDAExecutionProvider) 已实际绑定\n")
 
 
 def get_video_duration(video_path):

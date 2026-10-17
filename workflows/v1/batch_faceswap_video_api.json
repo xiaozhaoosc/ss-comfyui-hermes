@@ -54,7 +54,7 @@
           "1",
           2
         ],
-        "frame_rate": 60,
+        "frame_rate": 24,
         "loop_count": 0,
         "filename_prefix": "OUTPUT_PREFIX_PLACEHOLDER",
         "format": "video/h264-mp4",

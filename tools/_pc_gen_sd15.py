@@ -2,7 +2,7 @@
 """Generate the prompt set with an SD1.5 checkpoint (majicmixRealistic / Counterfeit / AOM3).
 
 Usage:
-  python tools/_pc_gen_sd15.py <ckpt_name> <out_subdir> [--scenes s01,s02] [--steps 28]
+  python tools/_pc_gen_sd15.py <ckpt_name> <out_subdir> [--scenes s01,s02] [--steps 28] [--wh 736x1088]
 """
 import os, sys, json, time
 
@@ -63,17 +63,22 @@ def main():
     only = None
     steps_override = None
     outdir_arg = None
+    wh_override = None
     for i, a in enumerate(sys.argv):
         if a == "--scenes" and i + 1 < len(sys.argv):
             only = set(sys.argv[i + 1].split(","))
         if a == "--steps" and i + 1 < len(sys.argv):
             steps_override = int(sys.argv[i + 1])
+        if a == "--wh" and i + 1 < len(sys.argv):
+            wh_override = [int(x) for x in sys.argv[i + 1].split("x")]
         if a == "--outdir" and i + 1 < len(sys.argv):
             outdir_arg = sys.argv[i + 1]
 
     steps, cfg, sampler, sched, w, h, sbase, lora = CONFIG[ckpt]
     if steps_override:
         steps = steps_override
+    if wh_override:
+        w, h = wh_override
 
     outdir = outdir_arg or os.path.join(OUT_ROOT, sub)
     os.makedirs(outdir, exist_ok=True)

@@ -1,0 +1,14 @@
+[
+ {
+  "name": "bg_bedroom_window_dawn",
+  "prompt": "A completely empty serene bedroom corner with a floor-to-ceiling window, a corner of an unmade bed at the left edge and a pale wood floor, vertical 9:16 composition with a clear open floor area in the center for one standing person, floor line at 76 percent height, cool soft dawn light through the window, a soft ambient occlusion gradient on the floor where a person would stand, no mirror reflections, no people, no people, no animals, no mannequins, no silhouettes, no text, no letters, no signage, no logos, no watermark, no captions, no UI overlay, photorealistic photography, 35mm lens, f/4, deep depth of field, natural color grade, subtle film grain, ultra detailed",
+  "aspect": "9:16",
+  "character": ""
+ },
+ {
+  "name": "bg_empty_warehouse_light",
+  "prompt": "A completely empty industrial warehouse with tall windows casting visible light shafts, a polished concrete floor and steel columns at the sides, vertical 9:16 composition with a clear open floor area in the center for one standing person, floor line at 74 percent height, dramatic top light shafts with a soft dust glow, a soft ambient occlusion gradient on the floor where a person would stand, no crates, no people, no people, no animals, no mannequins, no silhouettes, no text, no letters, no signage, no logos, no watermark, no captions, no UI overlay, photorealistic photography, 35mm lens, f/4, deep depth of field, natural color grade, subtle film grain, ultra detailed",
+  "aspect": "9:16",
+  "character": ""
+ }
+]

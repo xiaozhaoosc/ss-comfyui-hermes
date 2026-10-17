@@ -1,0 +1,138 @@
+[
+  {
+    "combo_id": "combo_lin_qingwan_mamianqun",
+    "name": "林清婉 × 新中式织金马面裙套装",
+    "char_id": "char_lin_qingwan",
+    "garment_id": "full_20261013_02",
+    "preview_image": "output/2026-10-13/characters/lin_qingwan/02_standalone_angles/char1_lin_qingwan_solo_01_front_9_16_124223_1.png",
+    "preview_video": "",
+    "prompt_preset": "Lin Qingwan wearing gold-threaded jacquard horse-face pleated skirt, standing gracefully in Chinese garden courtyard",
+    "note": "新中式温婉角色与织金马面裙绝配搭配，端庄典雅，高契合度。",
+    "tags": [
+      "新中式",
+      "马面裙",
+      "温婉",
+      "国风"
+    ],
+    "added_date": "2026-10-13"
+  },
+  {
+    "combo_id": "combo_jiang_yueyao_tailored_suit",
+    "name": "姜月瑶 × 现代干练极简炭灰西装",
+    "char_id": "char_jiang_yueyao",
+    "garment_id": "full_20261013_01",
+    "preview_image": "output/2026-10-13/characters/jiang_yueyao/02_standalone_angles/char2_jiang_yueyao_solo_01_front_9_16_124521_1.png",
+    "preview_video": "",
+    "prompt_preset": "Jiang Yueyao wearing tailored charcoal wool blazer suit, modern city streets background, chic fashion lookbook",
+    "note": "灵动甜美角色反差穿搭炭灰西装，兼具干练与俏皮感。",
+    "tags": [
+      "都市",
+      "西装",
+      "干练",
+      "混搭"
+    ],
+    "added_date": "2026-10-13"
+  },
+  {
+    "combo_id": "combo_ray_ling_tech_jacket",
+    "name": "雷凌 × Y2K机能反光短夹克",
+    "char_id": "char_ray_ling",
+    "garment_id": "top_20261013_04",
+    "preview_image": "output/2026-10-13/characters/ray_ling/01_ootd/char6_ray_ling_ootd_cyber_techwear_9_16_172221_1.png",
+    "preview_video": "",
+    "prompt_preset": "Ray Ling wearing Y2K cropped reflective technical jacket and tactical cargo pants, neon cityscape",
+    "note": "银发赛博御姐与未来机能短夹克完美绑定，战术机能风格强烈。",
+    "tags": [
+      "赛博机能",
+      "银发御姐",
+      "反光夹克",
+      "Y2K"
+    ],
+    "added_date": "2026-10-13"
+  },
+  {
+    "combo_id": "combo_qing_luo_silk_blouse",
+    "name": "青洛 × 新中式黛绿真丝刺绣立领衫",
+    "char_id": "char_qing_luo",
+    "garment_id": "top_20261013_03",
+    "preview_image": "output/2026-10-13/characters/qing_luo/01_ootd/char7_qing_luo_ootd_guofeng_ink_9_16_172508_1.png",
+    "preview_video": "",
+    "prompt_preset": "Qing Luo wearing celadon silk organza blouse with mandarin collar, misty bamboo grove background",
+    "note": "水墨青花仙侠角色穿搭黛绿真丝轻纱，清幽出尘，诗情画意。",
+    "tags": [
+      "仙侠",
+      "真丝立领衫",
+      "青花水墨",
+      "国风"
+    ],
+    "added_date": "2026-10-13"
+  },
+  {
+    "combo_id": "combo_shen_zhilan_cashmere_coat",
+    "name": "沈知澜 × 经典驼色双面羊绒长大衣",
+    "char_id": "char_shen_zhilan",
+    "garment_id": "full_20261013_03",
+    "preview_image": "output/2026-10-13/characters/shen_zhilan/01_ootd/char8_shen_zhilan_ootd_executive_power_9_16_172708_1.png",
+    "preview_video": "",
+    "prompt_preset": "Shen Zhilan wearing luxury camel double-faced cashmere trench coat, executive boardroom backdrop",
+    "note": "律政投行大女主搭配双面羊绒长大衣，气场全开，老钱静奢标杆。",
+    "tags": [
+      "老钱风",
+      "羊绒大衣",
+      "大女主",
+      "静奢"
+    ],
+    "added_date": "2026-10-13"
+  },
+  {
+    "combo_id": "combo_anya_punk_skirt_jacket",
+    "name": "安雅 × 朋克苏格兰红黑格子百褶裙+皮夹克",
+    "char_id": "char_anya_song",
+    "garment_id": "btm_20261013_02",
+    "preview_image": "output/2026-10-13/characters/anya_song/01_ootd/char9_anya_song_ootd_preppy_punk_9_16_173609_1.png",
+    "preview_video": "",
+    "prompt_preset": "Anya Song wearing red tartan pleated mini skirt and cropped leather biker jacket, cyber preppy look",
+    "note": "千禧轻朋克少女与苏格兰格纹百褶裙、皮夹克天然合体，元气炸裂。",
+    "tags": [
+      "轻朋克",
+      "格纹短裙",
+      "皮夹克",
+      "千禧学院"
+    ],
+    "added_date": "2026-10-13"
+  },
+  {
+    "combo_id": "combo_zhao_ruoxi_tennis_luxury",
+    "name": "赵若溪 × 网球老钱风极简百褶裙运动套装",
+    "char_id": "char_zhao_ruoxi",
+    "garment_id": "full_20261013_06",
+    "preview_image": "output/2026-10-13/characters/zhao_ruoxi/01_ootd/char4_zhao_ruoxi_ootd_quiet_luxury_9_16_140832_1.png",
+    "preview_video": "",
+    "prompt_preset": "Zhao Ruoxi wearing ivory tennis polo and knife-pleated skirt, private country club court",
+    "note": "老钱静奢名媛与网球老钱运动套装，松弛感与精英格调兼备。",
+    "tags": [
+      "静奢",
+      "网球风",
+      "百褶裙",
+      "名媛"
+    ],
+    "added_date": "2026-10-13"
+  },
+  {
+    "combo_id": "combo_chen_xiawei_french_dress",
+    "name": "陈夏微 × 法式复古小碎花方领茶歇裙",
+    "char_id": "char_chen_xiawei",
+    "garment_id": "full_20261013_04",
+    "preview_image": "output/2026-10-13/characters/chen_xiawei/01_ootd/char5_chen_xiawei_ootd_french_retro_9_16_140938_1.png",
+    "preview_video": "",
+    "prompt_preset": "Chen Xiawei wearing French romantic floral print silk tea dress, sunny Paris cafe balcony",
+    "note": "法式复古女孩与碎花茶歇裙，浪漫唯美，微风吹拂柔美氛围。",
+    "tags": [
+      "法式复古",
+      "茶歇裙",
+      "碎花",
+      "浪漫"
+    ],
+    "added_date": "2026-10-13"
+  }
+]

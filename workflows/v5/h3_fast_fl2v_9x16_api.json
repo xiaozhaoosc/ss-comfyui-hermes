@@ -52,29 +52,11 @@
       "title": "Chunk FFN (低显存分块前馈)"
     }
   },
-  "6": {
-    "class_type": "H3SLAAttention",
-    "inputs": {
-      "model": [
-        "5",
-        0
-      ],
-      "sparsity_ratio": 0.9,
-      "block_size": "64",
-      "min_seq_len": 8192,
-      "dense_last_steps": 0,
-      "protect_audio": true,
-      "enabled": true
-    },
-    "_meta": {
-      "title": "H3 SLA Attention 0.9/64"
-    }
-  },
   "7": {
     "class_type": "MiniMaxH3SigmaShift",
     "inputs": {
       "model": [
-        "6",
+        "5",
         0
       ],
       "shift_video": 12.0,

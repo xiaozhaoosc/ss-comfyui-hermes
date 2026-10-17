@@ -1,0 +1,56 @@
+[
+ {
+  "name": "bg_living_room_afternoon",
+  "prompt": "A completely empty modern minimalist living room with light oak flooring, a low linen sofa pushed to the left edge, sheer white curtains diffusing the light, a blank plaster wall on the right, vertical 9:16 composition with a clear open floor area in the center for one standing person, floor line at the lower third of the frame, soft directional daylight from the front-left window, a soft ambient occlusion gradient on the floor where a person would stand, blank walls, no posters, no people, no animals, no mannequins, no silhouettes, no text, no letters, no signage, no logos, no watermark, no captions, no UI overlay, photorealistic photography, 35mm lens, f/4, deep depth of field, natural color grade, subtle film grain, ultra detailed",
+  "aspect": "9:16",
+  "character": ""
+ },
+ {
+  "name": "bg_street_sidewalk_noon",
+  "prompt": "A completely empty clean city sidewalk with a blurred storefront row in the background and a zebra crossing visible far in the distance, vertical 9:16 composition with a clear open floor area in the center for one standing person, sidewalk surface occupying the lower third of the frame, bright soft overhead daylight at noon with gentle short shadows, a soft ambient occlusion gradient on the floor where a person would stand, blank walls, no posters, no parked cars near the center, no pedestrians, no people, no animals, no mannequins, no silhouettes, no text, no letters, no signage, no logos, no watermark, no captions, no UI overlay, photorealistic photography, 35mm lens, f/4, deep depth of field, natural color grade, subtle film grain, ultra detailed",
+  "aspect": "9:16",
+  "character": ""
+ },
+ {
+  "name": "bg_park_path_spring",
+  "prompt": "A completely empty tree-lined park path with fresh spring green leaves, a single wooden bench on the right side and open grass beside the path, vertical 9:16 composition with a clear open floor area in the center for one standing person, path surface at the lower third of the frame, soft backlit daylight filtering through the leaves, a soft ambient occlusion gradient on the floor where a person would stand, no people, no animals, no people, no animals, no mannequins, no silhouettes, no text, no letters, no signage, no logos, no watermark, no captions, no UI overlay, photorealistic photography, 35mm lens, f/4, deep depth of field, natural color grade, subtle film grain, ultra detailed",
+  "aspect": "9:16",
+  "character": ""
+ },
+ {
+  "name": "bg_seaside_sunset",
+  "prompt": "A completely empty sandy beach at sunset with a calm sea horizon at 58 percent height and gentle waves far away, vertical 9:16 composition with a clear open floor area in the center for one standing person, sand surface occupying the lower quarter of the frame, warm golden sunset backlight from the horizon, a soft ambient occlusion gradient on the floor where a person would stand, no footprints in the center, no umbrellas, no mirror reflections, no human reflections, no people, no animals, no mannequins, no silhouettes, no text, no letters, no signage, no logos, no watermark, no captions, no UI overlay, photorealistic photography, 35mm lens, f/4, deep depth of field, natural color grade, subtle film grain, ultra detailed",
+  "aspect": "9:16",
+  "character": ""
+ },
+ {
+  "name": "bg_studio_cyc_grey",
+  "prompt": "A completely empty professional photo studio with a seamless light grey cyc wall curving smoothly into the floor, vertical 9:16 composition with a clear open floor area in the center for one standing person, floor line at 70 percent height, soft even top-front studio lighting, a soft ambient occlusion gradient on the floor where a person would stand, no equipment, no light stands, no props, no people, no animals, no mannequins, no silhouettes, no text, no letters, no signage, no logos, no watermark, no captions, no UI overlay, photorealistic photography, 35mm lens, f/4, deep depth of field, natural color grade, subtle film grain, ultra detailed",
+  "aspect": "9:16",
+  "character": ""
+ },
+ {
+  "name": "bg_starry_night_field",
+  "prompt": "A completely empty vast open field under a clear starry night sky with the Milky Way, a distant low mountain ridge and dry grass in the foreground, vertical 9:16 composition with a clear open floor area in the center for one standing person, horizon line at 75 percent height, subtle cool moonlight rim on the grass, a soft ambient occlusion gradient on the floor where a person would stand, no light pollution, no moon flare, no tents, no campfire, no human silhouettes, no people, no animals, no mannequins, no silhouettes, no text, no letters, no signage, no logos, no watermark, no captions, no UI overlay, photorealistic photography, 35mm lens, f/4, deep depth of field, natural color grade, subtle film grain, ultra detailed",
+  "aspect": "9:16",
+  "character": ""
+ },
+ {
+  "name": "bg_black_velvet_stage",
+  "prompt": "A completely empty pure black velvet curtain backdrop filling the whole background with a dark matte floor showing a very subtle sheen, vertical 9:16 composition with a clear open floor area in the center for one standing person, floor line at 80 percent height, a single soft rim light from the upper left, dramatic low-key look, a soft ambient occlusion gradient on the floor where a person would stand, no human reflections, no visible pattern noise in the velvet, no people, no animals, no mannequins, no silhouettes, no text, no letters, no signage, no logos, no watermark, no captions, no UI overlay, photorealistic photography, 35mm lens, f/4, deep depth of field, natural color grade, subtle film grain, ultra detailed",
+  "aspect": "9:16",
+  "character": ""
+ },
+ {
+  "name": "bg_theater_stage_lit",
+  "prompt": "A completely empty wooden theater stage with warm spotlights focused on the center area, a dark auditorium in the background and blank side wings, vertical 9:16 composition with a clear open floor area in the center for one standing person, stage floor line at 65 percent height, hard warm top spotlight on the center with soft falloff, a soft ambient occlusion gradient on the floor where a person would stand, blank walls, no posters, no audience, no chairs, no signage, no people, no animals, no mannequins, no silhouettes, no text, no letters, no signage, no logos, no watermark, no captions, no UI overlay, photorealistic photography, 35mm lens, f/4, deep depth of field, natural color grade, subtle film grain, ultra detailed",
+  "aspect": "9:16",
+  "character": ""
+ },
+ {
+  "name": "bg_dance_studio_mirrorless",
+  "prompt": "A completely empty bright dance studio with light wood flooring, a wooden ballet barre along the back wall, tall windows with daylight and blank walls, vertical 9:16 composition with a clear open floor area in the center for one standing person, floor line at 78 percent height, soft directional daylight from the front-left windows, a soft ambient occlusion gradient on the floor where a person would stand, no mirrors, no mirror reflections, no human reflections, no posters, no people, no animals, no mannequins, no silhouettes, no text, no letters, no signage, no logos, no watermark, no captions, no UI overlay, photorealistic photography, 35mm lens, f/4, deep depth of field, natural color grade, subtle film grain, ultra detailed",
+  "aspect": "9:16",
+  "character": ""
+ }
+]

@@ -20,6 +20,7 @@ FaceAnalysis.get() 高层封装不使用——见 tools/h3_rope_common.py E 区�
 INDEX.md 人读清单、index.html 可视化目录、faces/<char_id>/ 每角色目录。
 """
 import argparse
+import itertools
 import json
 import shutil
 import time
@@ -42,6 +43,15 @@ def _insightface_dir():
     raise FileNotFoundError("buffalo_l 模型不完整（需要 %s + %s）" % (DET_MODEL, REC_MODEL))
 
 
+def _imread(img_path):
+    """读图，兼容非 ASCII 路径（cv2.imread 对中文/日文路径返回 None）。"""
+    import cv2
+    img = cv2.imread(str(img_path))
+    if img is None:
+        img = cv2.imdecode(np.fromfile(str(img_path), dtype=np.uint8), cv2.IMREAD_COLOR)
+    return img
+
+
 def detect_and_embed(img_path):
     """RetinaFace 取最大脸（bbox+5点+置信度），w600k_r50 算 512 维身份向量"""
     import cv2
@@ -52,7 +62,7 @@ def detect_and_embed(img_path):
     rec = get_model(str(md / REC_MODEL), providers=["CPUExecutionProvider"])
     rec.prepare(ctx_id=-1)
 
-    img = cv2.imread(str(img_path))
+    img = _imread(img_path)
     if img is None:
         raise RuntimeError("读图失败: %s" % img_path)
     bboxes, kpss = det.detect(img, input_size=(640, 640), max_num=0)
@@ -73,21 +83,40 @@ def detect_and_embed(img_path):
 
 
 def make_thumb(img_path, bbox, dst, size=320):
-    """按 bbox 裁脸（外扩 35%）生成缩略图"""
+    """按 bbox 居中扩展裁切正方形人脸缩略图（含发型与肩颈），避免黑边与偏位"""
     import cv2
-    img = cv2.imread(str(img_path))
+    img = _imread(img_path)
     h, w = img.shape[:2]
     x1, y1, x2, y2 = bbox
     cx, cy = (x1 + x2) / 2, (y1 + y2) / 2
-    bw, bh = (x2 - x1) * 1.35, (y2 - y1) * 1.35
-    x1, y1 = max(0, int(cx - bw / 2)), max(0, int(cy - bh / 2))
-    x2, y2 = min(w, int(cx + bw / 2)), min(h, int(cy + bh / 2))
-    crop = img[y1:y2, x1:x2]
-    side = max(crop.shape[:2])
-    square = np.zeros((side, side, 3), dtype=np.uint8)
-    square[:crop.shape[0], :crop.shape[1]] = crop
-    square = cv2.resize(square, (size, size))
-    cv2.imwrite(str(dst), square)
+    face_h = y2 - y1
+    face_w = x2 - x1
+    # 取脸部高度与宽度的 1.8 倍作为正方形边长，向上微调 5% 留出头顶发型空间
+    side = max(int(face_h * 1.8), int(face_w * 1.8))
+    cy_adj = cy - face_h * 0.05
+    x1_sq = int(cx - side / 2)
+    y1_sq = int(cy_adj - side / 2)
+    x2_sq = x1_sq + side
+    y2_sq = y1_sq + side
+
+    # 限制在图像边界内滑动，避免边缘拉伸伪影
+    if x1_sq < 0:
+        x1_sq = 0
+    elif x1_sq + side > w:
+        x1_sq = max(0, w - side)
+    x2_sq = min(w, x1_sq + side)
+
+    if y1_sq < 0:
+        y1_sq = 0
+    elif y1_sq + side > h:
+        y1_sq = max(0, h - side)
+    y2_sq = min(h, y1_sq + side)
+
+    crop = img[y1_sq:y2_sq, x1_sq:x2_sq]
+    thumb = cv2.resize(crop, (size, size), interpolation=cv2.INTER_LANCZOS4)
+    cv2.imwrite(str(dst), thumb)
+
+
 
 
 def cos(a, b):
@@ -102,6 +131,169 @@ def load_index():
 def save_index(items):
     (LIB / "index.json").write_text(
         json.dumps(items, ensure_ascii=False, indent=1), encoding="utf-8")
+    build_html(items)
+    build_index_md(items)
+
+
+HTML_TEMPLATE = """<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>角色库目录 character_library</title>
+<style>
+  body { font-family: "Microsoft YaHei", sans-serif; background: #f5f6f8; color: #222; margin: 24px; }
+  h1 { font-size: 20px; }
+  .tip { color: #666; font-size: 13px; margin-bottom: 16px; }
+  .grid { display: flex; flex-wrap: wrap; gap: 16px; }
+  .card { background: #fff; border: 1px solid #e2e4e8; border-radius: 8px; padding: 12px; width: 300px; }
+  .card img.thumb { width: 160px; height: 160px; object-fit: cover; border-radius: 6px; display: block; margin: 0 auto 8px; }
+  .card .name { font-weight: bold; font-size: 15px; }
+  .card .cid { color: #888; font-size: 12px; margin-bottom: 6px; }
+  .card .row { font-size: 12px; color: #444; margin: 3px 0; word-break: break-all; }
+  .card .path { font-family: Consolas, monospace; background: #f0f1f3; padding: 1px 5px; border-radius: 3px; }
+  .alts { display: flex; gap: 6px; margin-top: 6px; flex-wrap: wrap; }
+  .alts img { width: 52px; height: 52px; object-fit: cover; border-radius: 4px; }
+  .warn { color: #b45309; }
+  .ok { color: #15803d; }
+</style>
+</head>
+<body>
+<h1>角色库目录（character_library）</h1>
+<div class="tip">换脸工作流取脸：引用卡片内的 <b>face 路径</b>（原图直拷，勿用缩略图）｜身份疑问跑 <b>python tools/char_lib_add.py --matrix</b>｜入库：见 README.md</div>
+<div class="grid" id="grid"></div>
+<script>
+const chars = __DATA__;
+const grid = document.getElementById("grid");
+for (const c of chars) {
+  const alts = c.alts.map(a =>
+    `<div><img src="${a.file}"><div class="row ${a.cos < 0.6 ? 'warn' : 'ok'}">cos ${a.cos}${a.cos < 0.6 ? ' ⚠存疑' : ''}</div></div>`).join("");
+  grid.insertAdjacentHTML("beforeend", `
+    <div class="card">
+      <img class="thumb" src="${c.thumb}">
+      <div class="name">${c.name}</div>
+      <div class="cid">${c.cid}｜det ${c.det}</div>
+      <div class="row">face：<span class="path">${c.face}</span></div>
+      <div class="row">${c.note}</div>
+      <div class="alts">${alts}</div>
+    </div>`);
+}
+</script>
+</body>
+</html>
+"""
+
+
+def build_html(items):
+    """从 index.json 重生成可视化目录（双击即用；cos<0.6 的 alt 标存疑）。
+    由 save_index 自动调用，入库即刷新，不会静默过期。"""
+    chars = []
+    for e in items:
+        alts = []
+        for a in e.get("alts", []):
+            thumb = (LIB / e["face"]).parent / "alts" / (Path(a["file"]).stem + "_thumb.png")
+            alts.append({"file": str(thumb.relative_to(LIB)).replace("\\", "/")
+                         if thumb.exists() else a["file"],
+                         "cos": a["cos_to_main"]})
+        chars.append({"cid": e["char_id"], "name": e["name"], "det": e["det_score"],
+                      "face": e["face"], "thumb": e["thumb"], "note": e.get("note", ""),
+                      "alts": alts})
+    data = json.dumps(chars, ensure_ascii=False).replace("</", "<\\/")
+    (LIB / "index.html").write_text(HTML_TEMPLATE.replace("__DATA__", data), encoding="utf-8")
+
+
+def _load_vecs(items):
+    """载入主脸 + alts 的全部向量，key = (char_id, 显示名)。"""
+    vecs = {}
+    for e in items:
+        cid = e["char_id"]
+        emb_path = LIB / e.get("embedding", "")
+        if emb_path.exists():
+            try:
+                vecs[(cid, "main")] = np.load(emb_path)
+            except Exception:
+                pass
+        for al in e.get("alts", []):
+            emb = (LIB / e["face"]).parent / "alts" / (Path(al["file"]).stem + "_emb.npy")
+            if emb.exists():
+                try:
+                    vecs[(cid, Path(al["file"]).name)] = np.load(emb)
+                except Exception:
+                    pass
+    return vecs
+
+
+def _identity_verdict(c):
+    if c >= 0.6:
+        return "同一身份"
+    if c >= 0.4:
+        return "⚠️ 存疑，待人工复核"
+    return "不同身份"
+
+
+def build_index_md(items):
+    """从 index.json + 向量实测重生成人读清单（由 save_index 自动调用）。
+    身份结论按经验阈值判：cos≥0.6 同身份；0.4~0.6 存疑；<0.4 不同身份。"""
+    vecs = _load_vecs(items)
+    mains = [(e["char_id"], e["name"]) for e in items if (e["char_id"], "main") in vecs]
+
+    lines = [
+        "# 角色库清单（INDEX.md）",
+        "",
+        "> 本文件由 `tools/char_lib_add.py` 入库时自动生成，勿手改；人工结论写进角色的 note/alt-note（会带出）。",
+        "> 机器可读版本：`index.json`｜可视化：`index.html`｜身份矩阵：`identity_matrix.json`",
+        "> 入库工具：`python tools/char_lib_add.py --face <图> --char-id <id> --name <名> [--alt ...]`",
+        "",
+        "## 角色总表",
+        "",
+        "| char_id | 显示名 | 主脸文件 | 检测分 | 备选角度（cos→主脸） | 入库日期 |",
+        "|---|---|---|---|---|---|",
+    ]
+    for e in items:
+        alts = "、".join(
+            "%s(%.2f)%s" % (Path(a["file"]).name, a["cos_to_main"],
+                            "⚠" if a["cos_to_main"] < 0.6 else "")
+            for a in e.get("alts", [])) or "—"
+        lines.append("| %s | %s | `%s` | %.3f | %s | %s |" % (
+            e["char_id"], e["name"], e["face"], e["det_score"], alts, e["added_date"]))
+        if e.get("note"):
+            lines.append("| ↳ 备注 | %s | | | | |" % e["note"])
+
+    lines += ["", "## 身份矩阵结论（w600k_r50 两两 cos，自动判定）", ""]
+    for (ca, _), (cb, _) in itertools.combinations(mains, 2):
+        c = cos(vecs[(ca, "main")], vecs[(cb, "main")])
+        note = "（接近 0.4 阈值，建议人工目检后再定）" if 0.3 <= c < 0.4 else ""
+        lines.append("- **%s ↔ %s：cos %.3f → %s**%s" % (
+            ca, cb, c, _identity_verdict(c), note))
+    for e in items:
+        cid = e["char_id"]
+        alt_keys = [(cid, Path(a["file"]).name) for a in e.get("alts", [])
+                    if (cid, Path(a["file"]).name) in vecs]
+        if len(alt_keys) >= 2:
+            pair = [cos(vecs[a], vecs[b])
+                    for a, b in itertools.combinations(alt_keys, 2)]
+            lines.append("- %s 的 %d 张 alts 互相 cos %.2f~%.2f（%s）" % (
+                cid, len(alt_keys), min(pair), max(pair),
+                "同一身份家族" if min(pair) >= 0.6 else "含存疑项，见总表 ⚠"))
+    for (cid, name), v in vecs.items():
+        if name == "main":
+            continue
+        if (cid, "main") in vecs:
+            c = cos(v, vecs[(cid, "main")])
+            if c < 0.6:
+                lines.append("- ⚠️ %s/%s vs 主脸 cos=%.3f，低于 0.6 → %s" % (
+                    cid, name, c, _identity_verdict(c)))
+
+    lines += ["", "## 效果参照成品", ""]
+    for e in items:
+        for ref in e.get("ref_outputs", []):
+            lines.append("- `%s` — %s" % (ref, e["name"]))
+
+    lines += ["", "## 来源", ""]
+    for e in items:
+        lines.append("- %s ← `%s`" % (e["char_id"], e["source"]))
+    lines.append("")
+
+    (LIB / "INDEX.md").write_text("\n".join(lines), encoding="utf-8")
 
 
 def add_character(a):

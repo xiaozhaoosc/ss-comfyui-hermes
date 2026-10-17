@@ -19,10 +19,19 @@
 
 import base64
 import json
+import os
 import time
 
 import requests
 import websocket
+
+
+# 头部 Add media 菜单里的 Upload 菜单项（文本形如 'upload\nUpload'，取末行精确匹配）
+JS_UPLOAD_ITEM = (
+    "[...document.querySelectorAll('.cdk-overlay-pane button')]"
+    ".find(b => { const l=(b.innerText||'').trim().split('\\n');"
+    " return l[l.length-1].trim() === 'Upload'; }) || null"
+)
 
 
 def resolve_base(port=9222):
@@ -52,13 +61,18 @@ class Page:
         self.ws_url = ws_url
         self.ws = websocket.create_connection(ws_url, timeout=timeout, suppress_origin=True)
         self._id = 0
+        self._events = []
+        self.session_id = None  # 走浏览器级连接时填 Target.attachToTarget 的 sessionId
 
     def call(self, method, params=None, timeout=30):
-        """发一条 CDP 命令并等待同 id 响应（跳过事件消息）。"""
+        """发一条 CDP 命令并等待同 id 响应（事件消息缓存到 self._events）。"""
         self._id += 1
         mid = self._id
         self.ws.settimeout(timeout)
-        self.ws.send(json.dumps({"id": mid, "method": method, "params": params or {}}))
+        msg = {"id": mid, "method": method, "params": params or {}}
+        if self.session_id:
+            msg["sessionId"] = self.session_id
+        self.ws.send(json.dumps(msg))
         deadline = time.time() + timeout + 2
         while time.time() < deadline:
             msg = json.loads(self.ws.recv())
@@ -66,6 +80,8 @@ class Page:
                 if "error" in msg:
                     raise RuntimeError(f"{method} -> {msg['error']}")
                 return msg.get("result", {})
+            if msg.get("method"):
+                self._events.append(msg)
         raise TimeoutError(f"{method} 无响应")
 
     def eval(self, expr, await_promise=False, timeout=30):
@@ -137,6 +153,97 @@ class Page:
         self.call("Input.dispatchKeyEvent", dict(params, type="rawKeyDown"), timeout=15)
         self.call("Input.dispatchKeyEvent", dict(params, type="keyUp"), timeout=15)
 
+    def poll_event(self, method, timeout=6):
+        """取一条指定 CDP 事件（先查缓存，再阻塞等待），超时返回 None。"""
+        for i, msg in enumerate(self._events):
+            if msg.get("method") == method:
+                self._events.pop(i)
+                return msg.get("params") or {}
+        self.ws.settimeout(timeout)
+        deadline = time.time() + timeout
+        while time.time() < deadline:
+            try:
+                msg = json.loads(self.ws.recv())
+            except Exception:
+                return None
+            if msg.get("method") == method:
+                return msg.get("params") or {}
+            if msg.get("method"):
+                self._events.append(msg)
+        return None
+
+    def _file_input_node(self):
+        """返回页面里第一个 input[type=file] 的 nodeId，没有则 None。"""
+        root = self.call("DOM.getDocument", {"depth": 1, "pierce": True}, timeout=15)["root"]["nodeId"]
+        node = self.call("DOM.querySelector",
+                         {"nodeId": root, "selector": "input[type='file']"}, timeout=15)
+        return node.get("nodeId") or None
+
+    def _set_input_files(self, path, node_id=None, backend_id=None):
+        params = {"files": [os.path.abspath(path)]}
+        if node_id:
+            params["nodeId"] = node_id
+        else:
+            params["backendNodeId"] = backend_id
+        self.call("DOM.setFileInputFiles", params, timeout=30)
+
+    def _open_add_media_upload(self):
+        """打开头部 Add media 菜单并点 Upload；成功返回 True。"""
+        for _ in range(4):
+            self.click_selector("document.querySelector(\"button[aria-label='Add media menu']\")")
+            time.sleep(2.5)
+            if self.eval("document.querySelectorAll('.cdk-overlay-pane button').length"):
+                if self.click_selector(JS_UPLOAD_ITEM):
+                    time.sleep(1.0)
+                    return True
+        return False
+
+    def upload_file(self, image_path, wait_s=12):
+        """把本地图片注入 Flow「上传」通道（路线 A 的关键能力）。
+
+        优先：直接找静态 input[type='file'] → DOM.setFileInputFiles(nodeId)。
+        兜底：拦截系统文件框（Page.setInterceptFileChooserDialog）→ 打开头部
+              Add media 菜单点 Upload → 从 Page.fileChooserOpened 事件取
+              backendNodeId 注入（Flow 用原生 OS 文件框，无静态 input）。
+        注入成功后 Flow 会把文件加入项目媒体库（网格出现上传中的缩略图）。
+        两路都失败抛 RuntimeError，供上层降级到路线 B。
+        """
+        image_path = os.path.abspath(image_path)
+        if not os.path.exists(image_path):
+            raise FileNotFoundError(image_path)
+
+        nid = self._file_input_node()
+        if nid:
+            try:
+                self._set_input_files(image_path, node_id=nid)
+                return True
+            except Exception:
+                pass
+
+        try:
+            self.call("Page.enable", timeout=10)
+            self.call("Page.setInterceptFileChooserDialog", {"enabled": True}, timeout=10)
+        except Exception:
+            pass
+        try:
+            if self._open_add_media_upload():
+                ev = self.poll_event("Page.fileChooserOpened", timeout=wait_s)
+                backend_id = (ev or {}).get("backendNodeId")
+                if backend_id:
+                    self._set_input_files(image_path, backend_id=backend_id)
+                    return True
+                nid = self._file_input_node()
+                if nid:
+                    self._set_input_files(image_path, node_id=nid)
+                    return True
+        finally:
+            # 必须关掉文件框拦截，否则残留会卡死渲染进程主线程（Runtime 不再响应）
+            try:
+                self.call("Page.setInterceptFileChooserDialog", {"enabled": False}, timeout=10)
+            except Exception:
+                pass
+        raise RuntimeError("Flow 上传失败：未找到 file input，且 Upload 菜单未产生可注入的输入框")
+
     def close(self):
         try:
             self.ws.close()
@@ -174,4 +281,29 @@ def attach_flow_page(base, navigate_url=None, timeout=20):
     pg = Page(p["webSocketDebuggerUrl"], timeout=timeout)
     time.sleep(6)
     pg.__dict__["url"] = pg.eval("location.href")
+    return pg
+
+
+def attach_flow_via_browser(base, navigate_url=None, timeout=20):
+    """开一个干净的新标签页接管 Flow（复用旧标签页时渲染进程常卡死：Runtime 不响应）。
+
+    用浏览器级 CDP + Target.attachToTarget(flatten) 的 sessionId 会话，实测比页面级
+    webSocketDebuggerUrl 稳定。开新页前先关掉已有的 flow.google.com 标签，避免堆积。
+    """
+    for p in list_pages(base):
+        if "flow.google.com" in (p.get("url") or ""):
+            try:
+                requests.get(base + "/json/close/" + p["id"], timeout=5)
+            except Exception:
+                pass
+    ver = requests.get(base + "/json/version", timeout=6).json()
+    url = navigate_url or "https://flow.google.com/"
+    try:
+        t = requests.put(base + "/json/new?" + url, timeout=10).json()
+    except Exception:
+        t = requests.get(base + "/json/new?" + url, timeout=10).json()
+    pg = Page(ver["webSocketDebuggerUrl"], timeout=timeout)
+    pg.session_id = pg.call("Target.attachToTarget",
+                            {"targetId": t["id"], "flatten": True}, timeout=15)["sessionId"]
+    pg.navigate(url, settle_ms=8000)  # /json/new 的 url 参数偶发不生效，显式导航确保到位
     return pg

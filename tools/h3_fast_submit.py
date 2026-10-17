@@ -41,7 +41,7 @@ DEFAULT_WORKFLOW = os.path.join(ROOT, "workflows", "v5", "h3_fast_i2v_9x16_api.j
 DEFAULT_FL2V_WORKFLOW = os.path.join(ROOT, "workflows", "v5", "h3_fast_fl2v_9x16_api.json")
 FFMPEG_ABS = r"C:\Users\kenzhao\scoop\apps\ffmpeg\8.1.1\bin\ffmpeg.exe"
 
-SLA_NODES = ["H3SLAAttention", "MiniMaxChunkFeedForward", "MiniMaxH3SigmaShift",
+SLA_NODES = ["MiniMaxChunkFeedForward", "MiniMaxH3SigmaShift",
              "MiniMaxH3ImageToVideo"]
 SLA_PKGS = ["comfy-kitchen", "triton-windows"]
 FP16_VIDEO_VAE = "minimax_h3_video_vae_fp16"

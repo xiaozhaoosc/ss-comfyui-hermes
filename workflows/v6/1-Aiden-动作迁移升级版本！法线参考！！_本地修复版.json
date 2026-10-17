@@ -1,0 +1,6354 @@
+{
+ "id": "a7c6f97d-589d-4c72-9cfb-4641a6a6cff7",
+ "revision": 0,
+ "last_node_id": 164,
+ "last_link_id": 245,
+ "nodes": [
+  {
+   "id": 2,
+   "type": "VAELoader",
+   "pos": [
+    1510,
+    3650
+   ],
+   "size": [
+    490,
+    80
+   ],
+   "flags": {},
+   "order": 0,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "VAE",
+     "type": "VAE",
+     "links": [
+      13,
+      23,
+      51,
+      176,
+      221,
+      232
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.30.1",
+    "Node name for S&R": "VAELoader",
+    "ue_properties": {
+     "widget_ue_connectable": {
+      "vae_name": true
+     },
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    "minimax_h3_video_vae_int8_convrot.safetensors"
+   ],
+   "widgets_values_named": {
+    "vae_name": "minimax_h3\\minimax_h3_video_vae_int8_convrot.safetensors"
+   }
+  },
+  {
+   "id": 3,
+   "type": "CLIPLoader",
+   "pos": [
+    1510,
+    3470
+   ],
+   "size": [
+    490,
+    120
+   ],
+   "flags": {},
+   "order": 1,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "CLIP",
+     "type": "CLIP",
+     "links": [
+      12,
+      220
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.30.1",
+    "Node name for S&R": "CLIPLoader",
+    "ue_properties": {
+     "widget_ue_connectable": {
+      "clip_name": true,
+      "type": true,
+      "device": true
+     },
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    "qwen3vl_32b_minimax_h3_int8_convrot.safetensors",
+    "minimax",
+    "default"
+   ],
+   "widgets_values_named": {
+    "clip_name": "minimax_h3\\qwen3vl_32b_minimax_h3_int8_convrot.safetensors",
+    "type": "minimax",
+    "device": "default"
+   }
+  },
+  {
+   "id": 4,
+   "type": "VAELoader",
+   "pos": [
+    1510,
+    3800
+   ],
+   "size": [
+    490,
+    70
+   ],
+   "flags": {},
+   "order": 2,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "VAE",
+     "type": "VAE",
+     "links": [
+      14,
+      187,
+      222
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.30.1",
+    "Node name for S&R": "VAELoader",
+    "ue_properties": {
+     "widget_ue_connectable": {
+      "vae_name": true
+     },
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    "minimax_h3_audio_vae_fp32.safetensors"
+   ],
+   "widgets_values_named": {
+    "vae_name": "minimax_h3\\minimax_h3_audio_vae_fp32.safetensors"
+   }
+  },
+  {
+   "id": 5,
+   "type": "UNETLoader",
+   "pos": [
+    1510,
+    3310
+   ],
+   "size": [
+    490,
+    100
+   ],
+   "flags": {},
+   "order": 3,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "MODEL",
+     "type": "MODEL",
+     "links": [
+      5
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.30.1",
+    "Node name for S&R": "UNETLoader",
+    "ue_properties": {
+     "widget_ue_connectable": {
+      "unet_name": true,
+      "weight_dtype": true
+     },
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    "minimax_h3_ref2va_pruned_int8_convrot.safetensors",
+    "default"
+   ],
+   "widgets_values_named": {
+    "unet_name": "minimax_h3\\minimax_h3_ref2va_int8_convrot.safetensors",
+    "weight_dtype": "default"
+   }
+  },
+  {
+   "id": 6,
+   "type": "LoraLoaderModelOnly",
+   "pos": [
+    2350,
+    3470
+   ],
+   "size": [
+    210,
+    90
+   ],
+   "flags": {},
+   "order": 42,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "model",
+     "type": "MODEL",
+     "link": 4
+    }
+   ],
+   "outputs": [
+    {
+     "name": "MODEL",
+     "type": "MODEL",
+     "links": [
+      16
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.30.0",
+    "Node name for S&R": "LoraLoaderModelOnly",
+    "ue_properties": {
+     "widget_ue_connectable": {
+      "lora_name": true,
+      "strength_model": true
+     },
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    "Motion_Repair_V2.safetensors",
+    0.3
+   ],
+   "widgets_values_named": {
+    "lora_name": "minimaxh3-other\\Motion_Repair_V2.safetensors",
+    "strength_model": 0.3
+   }
+  },
+  {
+   "id": 7,
+   "type": "MiniMaxH3SigmaShift",
+   "pos": [
+    2030,
+    3310
+   ],
+   "size": [
+    270,
+    90
+   ],
+   "flags": {},
+   "order": 27,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "model",
+     "type": "MODEL",
+     "link": 5
+    }
+   ],
+   "outputs": [
+    {
+     "name": "MODEL",
+     "type": "MODEL",
+     "links": [
+      6
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.30.0",
+    "Node name for S&R": "MiniMaxH3SigmaShift",
+    "ue_properties": {
+     "widget_ue_connectable": {
+      "shift_video": true,
+      "shift_audio": true
+     },
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    12,
+    3
+   ],
+   "widgets_values_named": {
+    "shift_video": 12,
+    "shift_audio": 3
+   }
+  },
+  {
+   "id": 8,
+   "type": "ModelAttentionBackend",
+   "pos": [
+    2350,
+    3310
+   ],
+   "size": [
+    210,
+    60
+   ],
+   "flags": {},
+   "order": 32,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "model",
+     "type": "MODEL",
+     "link": 6
+    }
+   ],
+   "outputs": [
+    {
+     "name": "model",
+     "type": "MODEL",
+     "links": [
+      7
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.33.0",
+    "Node name for S&R": "ModelAttentionBackend",
+    "ue_properties": {
+     "widget_ue_connectable": {
+      "attention": true
+     },
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    "comfy kitchen attention"
+   ],
+   "widgets_values_named": {
+    "attention": "comfy kitchen attention"
+   }
+  },
+  {
+   "id": 9,
+   "type": "LoraLoaderModelOnly",
+   "pos": [
+    2030,
+    3470
+   ],
+   "size": [
+    270,
+    90
+   ],
+   "flags": {},
+   "order": 37,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "model",
+     "type": "MODEL",
+     "link": 7
+    }
+   ],
+   "outputs": [
+    {
+     "name": "MODEL",
+     "type": "MODEL",
+     "links": [
+      4
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.30.0",
+    "Node name for S&R": "LoraLoaderModelOnly",
+    "ue_properties": {
+     "widget_ue_connectable": {
+      "lora_name": true,
+      "strength_model": true
+     },
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    "minimax_h3_DMAD_4step_full_lora_avg_rank_39_bf16.safetensors",
+    1
+   ],
+   "widgets_values_named": {
+    "lora_name": "minimaxh3_turbo\\minimax_h3_DMAD_4step_full_lora_avg_rank_39_bf16.safetensors",
+    "strength_model": 1
+   }
+  },
+  {
+   "id": 11,
+   "type": "BlockSparseAttention",
+   "pos": [
+    3160,
+    3320
+   ],
+   "size": [
+    280,
+    350
+   ],
+   "flags": {},
+   "order": 55,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "model",
+     "type": "MODEL",
+     "link": 174
+    }
+   ],
+   "outputs": [
+    {
+     "name": "model",
+     "type": "MODEL",
+     "links": [
+      19,
+      32
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.36.0",
+    "Node name for S&R": "BlockSparseAttention",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {},
+     "version": "7.8"
+    }
+   },
+   "widgets_values": [
+    "sol-attn",
+    1.1,
+    0.2,
+    1,
+    "",
+    12288,
+    256,
+    "exact_kv_and_rows",
+    false
+   ],
+   "widgets_values_named": {
+    "selection": "sol-attn",
+    "selection.tau": 1.1,
+    "start_percent": 0.2,
+    "end_percent": 1,
+    "dense_blocks": "",
+    "min_tokens": 12288,
+    "extra_tokens": 256,
+    "sink_conditioning": "exact_kv_and_rows",
+    "verbose": false
+   }
+  },
+  {
+   "id": 12,
+   "type": "MiniMaxH3ReferenceToVideo",
+   "pos": [
+    2090,
+    3650
+   ],
+   "size": [
+    340,
+    540
+   ],
+   "flags": {},
+   "order": 54,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "clip",
+     "type": "CLIP",
+     "link": 12
+    },
+    {
+     "name": "vae",
+     "shape": 7,
+     "type": "VAE",
+     "link": 13
+    },
+    {
+     "name": "audio_vae",
+     "shape": 7,
+     "type": "VAE",
+     "link": 14
+    },
+    {
+     "label": "ref_image_0",
+     "name": "ref_images.ref_image_0",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": 36
+    },
+    {
+     "name": "ref_images.ref_image_1",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": null
+    },
+    {
+     "name": "ref_images.ref_image_2",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": null
+    },
+    {
+     "label": "ref_video_0",
+     "name": "ref_videos.ref_video_0",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": 235
+    },
+    {
+     "name": "ref_videos.ref_video_1",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": null
+    },
+    {
+     "label": "ref_video_audio_0",
+     "name": "ref_video_audios.ref_video_audio_0",
+     "shape": 7,
+     "type": "AUDIO",
+     "link": null
+    },
+    {
+     "label": "ref_audio_0",
+     "name": "ref_audios.ref_audio_0",
+     "shape": 7,
+     "type": "AUDIO",
+     "link": null
+    },
+    {
+     "name": "ref_audios.ref_audio_1",
+     "shape": 7,
+     "type": "AUDIO",
+     "link": null
+    },
+    {
+     "name": "ref_audios.ref_audio_2",
+     "shape": 7,
+     "type": "AUDIO",
+     "link": null
+    },
+    {
+     "name": "prompt",
+     "type": "STRING",
+     "widget": {
+      "name": "prompt"
+     },
+     "link": 238
+    },
+    {
+     "name": "width",
+     "type": "INT",
+     "widget": {
+      "name": "width"
+     },
+     "link": 54
+    },
+    {
+     "name": "height",
+     "type": "INT",
+     "widget": {
+      "name": "height"
+     },
+     "link": 55
+    },
+    {
+     "name": "length",
+     "type": "INT",
+     "widget": {
+      "name": "length"
+     },
+     "link": 58
+    },
+    {
+     "name": "ref_video_audios.ref_video_audio_1",
+     "shape": 7,
+     "type": "AUDIO",
+     "link": null
+    },
+    {
+     "name": "ref_video_audios.ref_video_audio_2",
+     "shape": 7,
+     "type": "AUDIO",
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "name": "positive",
+     "type": "CONDITIONING",
+     "links": [
+      20,
+      21
+     ]
+    },
+    {
+     "name": "LATENT",
+     "type": "LATENT",
+     "links": [
+      189
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.39.0",
+    "Node name for S&R": "MiniMaxH3ReferenceToVideo",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {},
+     "version": "7.8"
+    }
+   },
+   "widgets_values": [
+    "<Video 1> 是本次片段的深度动作参考。以它的原始时间顺序和节奏为准，复刻身体、头部、手臂、手掌及手指的运动；完整保留动作幅度很小的阶段和停顿，不省略、压缩、加速或提前进入后续动作。动作的发生时刻与持续时间由参考视频决定，不另编舞。 严格按参考视频每一帧的先后顺序，在对应的时间复现其姿态和连续变化；即使相邻帧动作很小或姿态基本不变，也完整保留这一阶段的持续时间，不跳帧概括动作、不提前执行后面的动作、不重新排列动作、不自行增加动作或加快节奏。\n\n<Video 1>仅控制身体动作、头部姿态和动作节奏，不复制其中的可视化标记作为面部外观。\n\n参考视频只用于身体动作、头部姿态和动作节奏控制，不是最终画面内容。输出保持<Picture 1>的正常彩色写实外观，不出现灰色深度、点线、网格、字幕或新增镜头。",
+    1344,
+    768,
+    124,
+    "match"
+   ],
+   "widgets_values_named": {
+    "prompt": "<Video 1> 是本次片段的深度动作参考。以它的原始时间顺序和节奏为准，复刻身体、头部、手臂、手掌及手指的运动；完整保留动作幅度很小的阶段和停顿，不省略、压缩、加速或提前进入后续动作。动作的发生时刻与持续时间由参考视频决定，不另编舞。 严格按参考视频每一帧的先后顺序，在对应的时间复现其姿态和连续变化；即使相邻帧动作很小或姿态基本不变，也完整保留这一阶段的持续时间，不跳帧概括动作、不提前执行后面的动作、不重新排列动作、不自行增加动作或加快节奏。\n\n<Video 1>仅控制身体动作、头部姿态和动作节奏，不复制其中的可视化标记作为面部外观。\n\n参考视频只用于身体动作、头部姿态和动作节奏控制，不是最终画面内容。输出保持<Picture 1>的正常彩色写实外观，不出现灰色深度、点线、网格、字幕或新增镜头。",
+    "width": 1344,
+    "height": 768,
+    "length": 124,
+    "ref_image_size": "match"
+   }
+  },
+  {
+   "id": 13,
+   "type": "ModelPreviewOverrideKJ",
+   "pos": [
+    2590,
+    3310
+   ],
+   "size": [
+    550,
+    890
+   ],
+   "flags": {},
+   "order": 45,
+   "mode": 0,
+   "inputs": [
+    {
+     "label": "model",
+     "name": "model",
+     "type": "MODEL",
+     "link": 16
+    },
+    {
+     "label": "vae",
+     "name": "vae",
+     "shape": 7,
+     "type": "VAE",
+     "link": null
+    },
+    {
+     "name": "audio_vae",
+     "shape": 7,
+     "type": "VAE",
+     "link": null
+    },
+    {
+     "label": "max_resolution",
+     "name": "max_resolution",
+     "type": "INT",
+     "widget": {
+      "name": "max_resolution"
+     },
+     "link": null
+    },
+    {
+     "label": "jpeg_quality",
+     "name": "jpeg_quality",
+     "type": "INT",
+     "widget": {
+      "name": "jpeg_quality"
+     },
+     "link": null
+    },
+    {
+     "label": "suppress_default_preview",
+     "name": "suppress_default_preview",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "suppress_default_preview"
+     },
+     "link": null
+    },
+    {
+     "label": "preview_frames",
+     "name": "preview_frames",
+     "type": "INT",
+     "widget": {
+      "name": "preview_frames"
+     },
+     "link": 59
+    },
+    {
+     "label": "preview_fps",
+     "name": "preview_fps",
+     "type": "INT",
+     "widget": {
+      "name": "preview_fps"
+     },
+     "link": null
+    },
+    {
+     "label": "tiny_vae",
+     "name": "tiny_vae",
+     "shape": 7,
+     "type": "COMBO",
+     "widget": {
+      "name": "tiny_vae"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "label": "MODEL",
+     "name": "MODEL",
+     "type": "MODEL",
+     "links": [
+      173
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfyui-kjnodes",
+    "ver": "57105374f47d0fbb49c9c3926fb981702e0a4b5c",
+    "Node name for S&R": "ModelPreviewOverrideKJ",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {},
+     "version": "7.5.2"
+    },
+    "widget_ue_connectable": {
+     "preview_frames": true
+    }
+   },
+   "widgets_values": [
+    1024,
+    80,
+    true,
+    1,
+    12,
+    "taeh3.safetensors",
+    ""
+   ],
+   "widgets_values_named": {
+    "max_resolution": 1024,
+    "jpeg_quality": 80,
+    "suppress_default_preview": true,
+    "preview_frames": 1,
+    "preview_fps": 12,
+    "tiny_vae": "taeh3.safetensors",
+    "preview": ""
+   },
+   "color": "#203E11FF",
+   "bgcolor": "#305D1AFF"
+  },
+  {
+   "id": 15,
+   "type": "SelfLiftAvatarH3TST",
+   "pos": [
+    3460,
+    3320
+   ],
+   "size": [
+    280,
+    90
+   ],
+   "flags": {},
+   "order": 58,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "model",
+     "type": "MODEL",
+     "link": 19
+    }
+   ],
+   "outputs": [
+    {
+     "name": "MODEL",
+     "type": "MODEL",
+     "links": [
+      18,
+      226,
+      231
+     ]
+    }
+   ],
+   "properties": {
+    "aux_id": "slmonker/selflift-Avatar",
+    "ver": "dc8e545601e3460bde6260c806c6893ce04597c5",
+    "Node name for S&R": "SelfLiftAvatarH3TST",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {},
+     "version": "7.8"
+    }
+   },
+   "widgets_values": [
+    0.2,
+    false
+   ],
+   "widgets_values_named": {
+    "tau": 0.2,
+    "log_diagnostics": false
+   }
+  },
+  {
+   "id": 20,
+   "type": "SelfLiftAvatarH3Sampler",
+   "pos": [
+    3760,
+    3320
+   ],
+   "size": [
+    430,
+    880
+   ],
+   "flags": {},
+   "order": 62,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "low_res_model",
+     "type": "MODEL",
+     "link": 18
+    },
+    {
+     "name": "high_res_model",
+     "shape": 7,
+     "type": "MODEL",
+     "link": null
+    },
+    {
+     "name": "positive",
+     "type": "CONDITIONING",
+     "link": 20
+    },
+    {
+     "name": "negative",
+     "type": "CONDITIONING",
+     "link": 22
+    },
+    {
+     "name": "vae",
+     "type": "VAE",
+     "link": 23
+    },
+    {
+     "name": "latent_image",
+     "type": "LATENT",
+     "link": 190
+    },
+    {
+     "name": "sampler",
+     "type": "SAMPLER",
+     "link": 30
+    },
+    {
+     "name": "sigmas",
+     "type": "SIGMAS",
+     "link": 34
+    }
+   ],
+   "outputs": [
+    {
+     "name": "LATENT",
+     "type": "LATENT",
+     "links": [
+      48,
+      227,
+      234
+     ]
+    }
+   ],
+   "properties": {
+    "aux_id": "slmonker/selflift-Avatar",
+    "ver": "dc8e545601e3460bde6260c806c6893ce04597c5",
+    "Node name for S&R": "SelfLiftAvatarH3Sampler",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {},
+     "version": "7.8"
+    }
+   },
+   "widgets_values": [
+    210,
+    "fixed",
+    1,
+    6,
+    0.5,
+    0,
+    0.5,
+    1,
+    "h3_upscaler_lms_v0.1_fp32.safetensors",
+    false,
+    "auto",
+    2,
+    "auto",
+    ""
+   ],
+   "widgets_values_named": {
+    "seed": 210,
+    "control_after_generate": "fixed",
+    "cfg": 1,
+    "transition_step": 6,
+    "lowres_scale": 0.5,
+    "rho": 0,
+    "w_min": 0.5,
+    "w_max": 1,
+    "upscaler_model": "h3_upscaler_lms_v0.1_fp32.safetensors",
+    "highres_tiling": false,
+    "tiling_mode": "auto",
+    "tiling_tiles": 2,
+    "tiling_axis": "auto",
+    "selflift_tiling_plan": ""
+   }
+  },
+  {
+   "id": 21,
+   "type": "ConditioningZeroOut",
+   "pos": [
+    3470,
+    3480
+   ],
+   "size": [
+    140,
+    30
+   ],
+   "flags": {},
+   "order": 56,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "conditioning",
+     "type": "CONDITIONING",
+     "link": 21
+    }
+   ],
+   "outputs": [
+    {
+     "name": "CONDITIONING",
+     "type": "CONDITIONING",
+     "links": [
+      22
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.39.0",
+    "Node name for S&R": "ConditioningZeroOut",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {},
+     "version": "7.8"
+    }
+   }
+  },
+  {
+   "id": 26,
+   "type": "KSamplerSelect",
+   "pos": [
+    3470,
+    3590
+   ],
+   "size": [
+    210,
+    60
+   ],
+   "flags": {},
+   "order": 4,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "SAMPLER",
+     "type": "SAMPLER",
+     "links": [
+      30
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.39.0",
+    "Node name for S&R": "KSamplerSelect",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {},
+     "version": "7.8"
+    }
+   },
+   "widgets_values": [
+    "euler"
+   ],
+   "widgets_values_named": {
+    "sampler_name": "euler"
+   }
+  },
+  {
+   "id": 27,
+   "type": "BasicScheduler",
+   "pos": [
+    3170,
+    3740
+   ],
+   "size": [
+    240,
+    110
+   ],
+   "flags": {},
+   "order": 59,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "model",
+     "type": "MODEL",
+     "link": 32
+    }
+   ],
+   "outputs": [
+    {
+     "name": "SIGMAS",
+     "type": "SIGMAS",
+     "links": [
+      33
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.39.0",
+    "Node name for S&R": "BasicScheduler",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {},
+     "version": "7.8"
+    }
+   },
+   "widgets_values": [
+    "simple",
+    8,
+    1
+   ],
+   "widgets_values_named": {
+    "scheduler": "simple",
+    "steps": 8,
+    "denoise": 1
+   }
+  },
+  {
+   "id": 28,
+   "type": "H3SigmaRefiner",
+   "pos": [
+    3460,
+    3740
+   ],
+   "size": [
+    220,
+    130
+   ],
+   "flags": {},
+   "order": 61,
+   "mode": 0,
+   "inputs": [
+    {
+     "label": "sigmas",
+     "name": "sigmas",
+     "type": "SIGMAS",
+     "link": 33
+    },
+    {
+     "label": "extra_steps",
+     "name": "extra_steps",
+     "type": "INT",
+     "widget": {
+      "name": "extra_steps"
+     },
+     "link": null
+    },
+    {
+     "label": "start_at_sigma",
+     "name": "start_at_sigma",
+     "type": "FLOAT",
+     "widget": {
+      "name": "start_at_sigma"
+     },
+     "link": null
+    },
+    {
+     "label": "end_at_sigma",
+     "name": "end_at_sigma",
+     "type": "FLOAT",
+     "widget": {
+      "name": "end_at_sigma"
+     },
+     "link": null
+    },
+    {
+     "label": "spacing",
+     "name": "spacing",
+     "type": "COMBO",
+     "widget": {
+      "name": "spacing"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "label": "sigmas",
+     "name": "sigmas",
+     "type": "SIGMAS",
+     "links": [
+      34
+     ]
+    }
+   ],
+   "properties": {
+    "aux_id": "yichengup/ComfyUI-YCNodes-MiniMax-H3",
+    "ver": "146207295c1d2bd6b64a6552484cb6ed8be1c9ef",
+    "Node name for S&R": "H3SigmaRefiner",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {},
+     "version": "7.5.2"
+    },
+    "widget_ue_connectable": {}
+   },
+   "widgets_values": [
+    1,
+    0.7,
+    0,
+    "cosine"
+   ],
+   "widgets_values_named": {
+    "extra_steps": 1,
+    "start_at_sigma": 0.7,
+    "end_at_sigma": 0,
+    "spacing": "cosine"
+   }
+  },
+  {
+   "id": 29,
+   "type": "LoadImage",
+   "pos": [
+    1520,
+    4870
+   ],
+   "size": [
+    420,
+    410
+   ],
+   "flags": {},
+   "order": 5,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      150
+     ]
+    },
+    {
+     "name": "MASK",
+     "type": "MASK",
+     "links": null
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.39.0",
+    "Node name for S&R": "LoadImage",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {},
+     "version": "7.8"
+    },
+    "guhaiImageValue": "ChatGPT 图像 2026年9月29日 05_32_04.png"
+   },
+   "widgets_values": [
+    "ig_target_character.jpeg",
+    "image"
+   ],
+   "widgets_values_named": {
+    "image": "ChatGPT 图像 2026年9月29日 05_32_04.png",
+    "upload": "image"
+   },
+   "color": "#203E11FF",
+   "bgcolor": "#305D1AFF"
+  },
+  {
+   "id": 30,
+   "type": "LayerUtility: ImageScaleByAspectRatio V2",
+   "pos": [
+    1960,
+    4870
+   ],
+   "size": [
+    280,
+    330
+   ],
+   "flags": {},
+   "order": 28,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "image",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": 150
+    },
+    {
+     "name": "mask",
+     "shape": 7,
+     "type": "MASK",
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "name": "image",
+     "type": "IMAGE",
+     "links": [
+      36,
+      219
+     ]
+    },
+    {
+     "name": "mask",
+     "type": "MASK",
+     "links": null
+    },
+    {
+     "name": "original_size",
+     "type": "BOX",
+     "links": null
+    },
+    {
+     "name": "width",
+     "type": "INT",
+     "links": null
+    },
+    {
+     "name": "height",
+     "type": "INT",
+     "links": null
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfyui_layerstyle",
+    "ver": "a3459a7638c4c2839878089c105c73af0eb2edd2",
+    "Node name for S&R": "LayerUtility: ImageScaleByAspectRatio V2",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {},
+     "version": "7.8"
+    }
+   },
+   "widgets_values": [
+    "original",
+    1,
+    1,
+    "crop",
+    "lanczos",
+    "32",
+    "longest",
+    1536,
+    "#000000"
+   ],
+   "widgets_values_named": {
+    "aspect_ratio": "original",
+    "proportional_width": 1,
+    "proportional_height": 1,
+    "fit": "crop",
+    "method": "lanczos",
+    "round_to_multiple": "32",
+    "scale_to_side": "longest",
+    "scale_to_length": 1536,
+    "background_color": "#000000"
+   },
+   "color": "rgba(38, 73, 116, 0.7)"
+  },
+  {
+   "id": 31,
+   "type": "VHS_LoadVideo",
+   "pos": [
+    -210,
+    4720
+   ],
+   "size": [
+    680,
+    695.5
+   ],
+   "flags": {},
+   "order": 6,
+   "mode": 0,
+   "inputs": [
+    {
+     "label": "批次管理",
+     "name": "meta_batch",
+     "shape": 7,
+     "type": "VHS_BatchManager",
+     "link": null
+    },
+    {
+     "name": "vae",
+     "shape": 7,
+     "type": "VAE",
+     "link": null
+    },
+    {
+     "label": "视频",
+     "name": "video",
+     "type": "COMBO",
+     "widget": {
+      "name": "video"
+     },
+     "link": null
+    },
+    {
+     "label": "强制帧率",
+     "name": "force_rate",
+     "type": "FLOAT",
+     "widget": {
+      "name": "force_rate"
+     },
+     "link": null
+    },
+    {
+     "label": "自定义宽度",
+     "name": "custom_width",
+     "type": "INT",
+     "widget": {
+      "name": "custom_width"
+     },
+     "link": null
+    },
+    {
+     "label": "自定义高度",
+     "name": "custom_height",
+     "type": "INT",
+     "widget": {
+      "name": "custom_height"
+     },
+     "link": null
+    },
+    {
+     "label": "帧数读取上限",
+     "name": "frame_load_cap",
+     "type": "INT",
+     "widget": {
+      "name": "frame_load_cap"
+     },
+     "link": null
+    },
+    {
+     "label": "跳过前X帧",
+     "name": "skip_first_frames",
+     "type": "INT",
+     "widget": {
+      "name": "skip_first_frames"
+     },
+     "link": null
+    },
+    {
+     "label": "间隔",
+     "name": "select_every_nth",
+     "type": "INT",
+     "widget": {
+      "name": "select_every_nth"
+     },
+     "link": null
+    },
+    {
+     "label": "格式",
+     "name": "format",
+     "shape": 7,
+     "type": "COMBO",
+     "widget": {
+      "name": "format"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "label": "图像",
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": []
+    },
+    {
+     "label": "帧计数",
+     "name": "frame_count",
+     "type": "INT",
+     "links": null
+    },
+    {
+     "label": "音频",
+     "name": "audio",
+     "type": "AUDIO",
+     "links": []
+    },
+    {
+     "label": "视频信息",
+     "name": "video_info",
+     "type": "VHS_VIDEOINFO",
+     "links": null
+    }
+   ],
+   "title": "加载视频",
+   "properties": {
+    "cnr_id": "comfyui-videohelpersuite",
+    "ver": "4d907bee61e92c2e65af3bd6383a4e4d356126d1",
+    "Node name for S&R": "VHS_LoadVideo",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {},
+     "version": "7.8"
+    }
+   },
+   "widgets_values": {
+    "video": "白模1.mp4",
+    "force_rate": 24,
+    "custom_width": 0,
+    "custom_height": 0,
+    "frame_load_cap": 0,
+    "skip_first_frames": 0,
+    "select_every_nth": 1,
+    "format": "AnimateDiff",
+    "choose video to upload": "image",
+    "videopreview": {
+     "hidden": false,
+     "paused": false,
+     "params": {
+      "filename": "模来AIGC-我去真好。 别误会，这是昨天作品一位大佬在评论区的留言。能得到他的认可非常的激动与开心，也非常感谢大.mp4",
+      "type": "input",
+      "format": "video/mp4",
+      "force_rate": 24,
+      "custom_width": 0,
+      "custom_height": 0,
+      "frame_load_cap": 0,
+      "skip_first_frames": 0,
+      "select_every_nth": 1
+     }
+    }
+   },
+   "widgets_values_named": {
+    "video": "模来AIGC-我去真好。 别误会，这是昨天作品一位大佬在评论区的留言。能得到他的认可非常的激动与开心，也非常感谢大.mp4",
+    "force_rate": 24,
+    "custom_width": 0,
+    "custom_height": 0,
+    "frame_load_cap": 0,
+    "skip_first_frames": 0,
+    "select_every_nth": 1,
+    "format": "AnimateDiff",
+    "choose video to upload": "image",
+    "videopreview": {
+     "hidden": false,
+     "paused": false,
+     "params": {
+      "filename": "模来AIGC-我去真好。 别误会，这是昨天作品一位大佬在评论区的留言。能得到他的认可非常的激动与开心，也非常感谢大.mp4",
+      "type": "input",
+      "format": "video/mp4",
+      "force_rate": 24,
+      "custom_width": 0,
+      "custom_height": 0,
+      "frame_load_cap": 0,
+      "skip_first_frames": 0,
+      "select_every_nth": 1
+     }
+    }
+   }
+  },
+  {
+   "id": 32,
+   "type": "LayerUtility: ImageScaleByAspectRatio V2",
+   "pos": [
+    2640,
+    4330
+   ],
+   "size": [
+    220,
+    330
+   ],
+   "flags": {},
+   "order": 38,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "image",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": 196
+    },
+    {
+     "name": "mask",
+     "shape": 7,
+     "type": "MASK",
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "name": "image",
+     "type": "IMAGE",
+     "links": [
+      138
+     ]
+    },
+    {
+     "name": "mask",
+     "type": "MASK",
+     "links": []
+    },
+    {
+     "name": "original_size",
+     "type": "BOX",
+     "links": []
+    },
+    {
+     "name": "width",
+     "type": "INT",
+     "links": []
+    },
+    {
+     "name": "height",
+     "type": "INT",
+     "links": []
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfyui_layerstyle",
+    "ver": "a3459a7638c4c2839878089c105c73af0eb2edd2",
+    "Node name for S&R": "LayerUtility: ImageScaleByAspectRatio V2",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {},
+     "version": "7.8"
+    }
+   },
+   "widgets_values": [
+    "original",
+    1,
+    1,
+    "crop",
+    "lanczos",
+    "32",
+    "longest",
+    736,
+    "#000000"
+   ],
+   "widgets_values_named": {
+    "aspect_ratio": "original",
+    "proportional_width": 1,
+    "proportional_height": 1,
+    "fit": "crop",
+    "method": "lanczos",
+    "round_to_multiple": "32",
+    "scale_to_side": "longest",
+    "scale_to_length": 736,
+    "background_color": "#000000"
+   },
+   "color": "rgba(38, 73, 116, 0.7)"
+  },
+  {
+   "id": 36,
+   "type": "VAEDecode",
+   "pos": [
+    4220,
+    3320
+   ],
+   "size": [
+    230,
+    50
+   ],
+   "flags": {
+    "collapsed": false
+   },
+   "order": 63,
+   "mode": 0,
+   "inputs": [
+    {
+     "label": "Latent",
+     "name": "samples",
+     "type": "LATENT",
+     "link": 48
+    },
+    {
+     "label": "VAE",
+     "name": "vae",
+     "type": "VAE",
+     "link": 51
+    }
+   ],
+   "outputs": [
+    {
+     "label": "图像",
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      148,
+      159
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.33.0",
+    "Node name for S&R": "VAEDecode",
+    "ue_properties": {
+     "version": "7.8",
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {}
+    },
+    "ttNbgOverride": {
+     "bgcolor": "#335",
+     "groupcolor": "#88A",
+     "color": "#223"
+    }
+   }
+  },
+  {
+   "id": 39,
+   "type": "ResolutionSelector",
+   "pos": [
+    1510,
+    4340
+   ],
+   "size": [
+    440,
+    150
+   ],
+   "flags": {},
+   "order": 7,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "width",
+     "type": "INT",
+     "links": [
+      54,
+      217
+     ]
+    },
+    {
+     "name": "height",
+     "type": "INT",
+     "links": [
+      55,
+      218
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.39.0",
+    "Node name for S&R": "ResolutionSelector",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {},
+     "version": "7.8"
+    }
+   },
+   "widgets_values": [
+    "9:16 (Portrait Widescreen)",
+    0.5,
+    32
+   ],
+   "widgets_values_named": {
+    "aspect_ratio": "9:16 (Portrait Widescreen)",
+    "megapixels": 0.5,
+    "multiple": 32
+   },
+   "color": "#203E11FF",
+   "bgcolor": "#305D1AFF"
+  },
+  {
+   "id": 40,
+   "type": "MarkdownNote",
+   "pos": [
+    1070,
+    3820
+   ],
+   "size": [
+    410,
+    880
+   ],
+   "flags": {
+    "disabled": false
+   },
+   "order": 8,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [],
+   "title": "Note: Size Settings Reference",
+   "properties": {
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    "| megapixels | Aspect | Output (multiple=32) |\n|---|---|---|\n| 0.2 | 16:9 | 608 x 352 |\n| 0.3 | 16:9 | 736 x 416 |\n| 0.4 | 16:9 | 864 x 480 |\n| 0.5 | 16:9 | 960 x 544 |\n| 0.6 | 16:9 | 1056 x 608 |\n| 0.7 | 16:9 | 1152 x 640 |\n| 0.8 | 16:9 | 1216 x 672 |\n| 0.9 | 16:9 | 1280 x 736 |\n| 0.98 | 16:9 | 1344 x 768 |\n| 1.0 | 16:9 | 1376 x 768 |\n| 1.2 | 16:9 | 1504 x 832 |\n| 1.5 | 16:9 | 1664 x 928 |\n| 1.8 | 16:9 | 1824 x 1024 |\n| 2.0 | 16:9 | 1920 x 1088 |\n"
+   ],
+   "widgets_values_named": {
+    "text": "| megapixels | Aspect | Output (multiple=32) |\n|---|---|---|\n| 0.2 | 16:9 | 608 x 352 |\n| 0.3 | 16:9 | 736 x 416 |\n| 0.4 | 16:9 | 864 x 480 |\n| 0.5 | 16:9 | 960 x 544 |\n| 0.6 | 16:9 | 1056 x 608 |\n| 0.7 | 16:9 | 1152 x 640 |\n| 0.8 | 16:9 | 1216 x 672 |\n| 0.9 | 16:9 | 1280 x 736 |\n| 0.98 | 16:9 | 1344 x 768 |\n| 1.0 | 16:9 | 1376 x 768 |\n| 1.2 | 16:9 | 1504 x 832 |\n| 1.5 | 16:9 | 1664 x 928 |\n| 1.8 | 16:9 | 1824 x 1024 |\n| 2.0 | 16:9 | 1920 x 1088 |\n"
+   },
+   "color": "#203E11FF",
+   "bgcolor": "#305D1AFF"
+  },
+  {
+   "id": 41,
+   "type": "PrimitiveFloat",
+   "pos": [
+    1510,
+    4540
+   ],
+   "size": [
+    430,
+    80
+   ],
+   "flags": {},
+   "order": 9,
+   "mode": 0,
+   "inputs": [
+    {
+     "label": "value",
+     "name": "value",
+     "type": "FLOAT",
+     "widget": {
+      "name": "value"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "label": "FLOAT",
+     "name": "FLOAT",
+     "type": "FLOAT",
+     "links": [
+      57
+     ]
+    }
+   ],
+   "title": "Float (Duration)",
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.33.0",
+    "Node name for S&R": "PrimitiveFloat",
+    "ue_properties": {
+     "version": "7.8",
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    5
+   ],
+   "widgets_values_named": {
+    "value": 5
+   },
+   "color": "#203E11FF",
+   "bgcolor": "#305D1AFF"
+  },
+  {
+   "id": 42,
+   "type": "ComfyMathExpression",
+   "pos": [
+    2010,
+    4360
+   ],
+   "size": [
+    240,
+    130
+   ],
+   "flags": {
+    "collapsed": true
+   },
+   "order": 29,
+   "mode": 0,
+   "inputs": [
+    {
+     "label": "values.a",
+     "name": "values.a",
+     "type": "FLOAT,INT,BOOLEAN",
+     "link": 57
+    },
+    {
+     "name": "values.b",
+     "shape": 7,
+     "type": "FLOAT,INT,BOOLEAN",
+     "link": null
+    },
+    {
+     "label": "expression",
+     "name": "expression",
+     "type": "STRING",
+     "widget": {
+      "name": "expression"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "label": "FLOAT",
+     "name": "FLOAT",
+     "type": "FLOAT",
+     "links": []
+    },
+    {
+     "label": "INT",
+     "name": "INT",
+     "type": "INT",
+     "links": [
+      58,
+      59,
+      67,
+      163,
+      225
+     ]
+    },
+    {
+     "label": "BOOL",
+     "name": "BOOL",
+     "type": "BOOLEAN",
+     "links": []
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.33.0",
+    "Node name for S&R": "ComfyMathExpression",
+    "ue_properties": {
+     "version": "7.8",
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {}
+    },
+    "ttNbgOverride": {
+     "bgcolor": "#335",
+     "groupcolor": "#88A",
+     "color": "#223"
+    }
+   },
+   "widgets_values": [
+    "max(5, round(a * 24)) + (5 - (max(5, round(a * 24)) % 17)) % 17"
+   ],
+   "widgets_values_named": {
+    "expression": "max(5, round(a * 24)) + (5 - (max(5, round(a * 24)) % 17)) % 17"
+   }
+  },
+  {
+   "id": 49,
+   "type": "TrimAudioDuration",
+   "pos": [
+    1980,
+    4540
+   ],
+   "size": [
+    220,
+    90
+   ],
+   "flags": {
+    "collapsed": false
+   },
+   "order": 39,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "audio",
+     "type": "AUDIO",
+     "link": 165
+    },
+    {
+     "name": "duration",
+     "type": "FLOAT",
+     "widget": {
+      "name": "duration"
+     },
+     "link": 68
+    }
+   ],
+   "outputs": [
+    {
+     "name": "AUDIO",
+     "type": "AUDIO",
+     "links": [
+      181,
+      182,
+      188
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.39.0",
+    "Node name for S&R": "TrimAudioDuration",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {},
+     "version": "7.8"
+    }
+   },
+   "widgets_values": [
+    0,
+    60
+   ],
+   "widgets_values_named": {
+    "start_index": 0,
+    "duration": 60
+   }
+  },
+  {
+   "id": 50,
+   "type": "ComfyMathExpression",
+   "pos": [
+    2000,
+    4440
+   ],
+   "size": [
+    230,
+    130
+   ],
+   "flags": {
+    "collapsed": true
+   },
+   "order": 33,
+   "mode": 0,
+   "inputs": [
+    {
+     "label": "values.a",
+     "name": "values.a",
+     "type": "FLOAT,INT,BOOLEAN",
+     "link": 67
+    },
+    {
+     "name": "values.b",
+     "shape": 7,
+     "type": "FLOAT,INT,BOOLEAN",
+     "link": null
+    },
+    {
+     "label": "expression",
+     "name": "expression",
+     "type": "STRING",
+     "widget": {
+      "name": "expression"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "label": "FLOAT",
+     "name": "FLOAT",
+     "type": "FLOAT",
+     "links": [
+      68
+     ]
+    },
+    {
+     "label": "INT",
+     "name": "INT",
+     "type": "INT",
+     "links": []
+    },
+    {
+     "label": "BOOL",
+     "name": "BOOL",
+     "type": "BOOLEAN",
+     "links": []
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.33.0",
+    "Node name for S&R": "ComfyMathExpression",
+    "ue_properties": {
+     "version": "7.8",
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {}
+    },
+    "ttNbgOverride": {
+     "bgcolor": "#335",
+     "groupcolor": "#88A",
+     "color": "#223"
+    }
+   },
+   "widgets_values": [
+    "a/24"
+   ],
+   "widgets_values_named": {
+    "expression": "a/24"
+   }
+  },
+  {
+   "id": 55,
+   "type": "LayerUtility: PurgeVRAM V2",
+   "pos": [
+    3420,
+    4800
+   ],
+   "size": [
+    270,
+    90
+   ],
+   "flags": {},
+   "order": 50,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "anything",
+     "type": "*",
+     "link": 106
+    }
+   ],
+   "outputs": [
+    {
+     "name": "any",
+     "type": "*",
+     "links": [
+      124
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfyui_layerstyle",
+    "ver": "a3459a7638c4c2839878089c105c73af0eb2edd2",
+    "Node name for S&R": "LayerUtility: PurgeVRAM V2",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {},
+     "version": "7.8"
+    }
+   },
+   "widgets_values": [
+    true,
+    true
+   ],
+   "widgets_values_named": {
+    "purge_cache": true,
+    "purge_models": true
+   },
+   "color": "rgba(38, 73, 116, 0.7)"
+  },
+  {
+   "id": 67,
+   "type": "MoGeRender",
+   "pos": [
+    3430,
+    4630
+   ],
+   "size": [
+    270,
+    110
+   ],
+   "flags": {
+    "disabled": false
+   },
+   "order": 49,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "moge_geometry",
+     "type": "MOGE_GEOMETRY",
+     "link": 96
+    }
+   ],
+   "outputs": [
+    {
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      106
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.21.1",
+    "Node name for S&R": "MoGeRender",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    },
+    "enableTabs": false,
+    "tabWidth": 65,
+    "tabXOffset": 10,
+    "hasSecondTab": false,
+    "secondTabText": "Send Back",
+    "secondTabOffset": 80,
+    "secondTabWidth": 65
+   },
+   "widgets_values": [
+    "normal_opengl"
+   ],
+   "widgets_values_named": {
+    "output": "normal_opengl"
+   }
+  },
+  {
+   "id": 68,
+   "type": "MoGeInference",
+   "pos": [
+    3170,
+    4630
+   ],
+   "size": [
+    230,
+    270
+   ],
+   "flags": {
+    "disabled": false
+   },
+   "order": 46,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "moge_model",
+     "type": "MOGE_MODEL",
+     "link": 97
+    },
+    {
+     "name": "image",
+     "type": "IMAGE",
+     "link": 140
+    }
+   ],
+   "outputs": [
+    {
+     "name": "moge_geometry",
+     "type": "MOGE_GEOMETRY",
+     "links": [
+      96
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.21.1",
+    "Node name for S&R": "MoGeInference",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    },
+    "enableTabs": false,
+    "tabWidth": 65,
+    "tabXOffset": 10,
+    "hasSecondTab": false,
+    "secondTabText": "Send Back",
+    "secondTabOffset": 80,
+    "secondTabWidth": 65
+   },
+   "widgets_values": [
+    9,
+    0,
+    4,
+    true,
+    true,
+    3
+   ],
+   "widgets_values_named": {
+    "resolution_level": 9,
+    "fov_x_degrees": 0,
+    "batch_size": 4,
+    "force_projection": true,
+    "apply_mask": true,
+    "refine_steps": 3
+   },
+   "color": "#203E11FF",
+   "bgcolor": "#305D1AFF"
+  },
+  {
+   "id": 70,
+   "type": "LoadMoGeModel",
+   "pos": [
+    2680,
+    4790
+   ],
+   "size": [
+    470,
+    140
+   ],
+   "flags": {
+    "disabled": false
+   },
+   "order": 10,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "MOGE_MODEL",
+     "type": "MOGE_MODEL",
+     "links": [
+      97
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.21.1",
+    "Node name for S&R": "LoadMoGeModel",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    },
+    "enableTabs": false,
+    "tabWidth": 65,
+    "tabXOffset": 10,
+    "hasSecondTab": false,
+    "secondTabText": "Send Back",
+    "secondTabOffset": 80,
+    "secondTabWidth": 65,
+    "models": [
+     {
+      "name": "moge_2_vitl_normal_fp16.safetensors",
+      "url": "https://huggingface.co/Comfy-Org/MoGe/resolve/main/geometry_estimation/moge_2_vitl_normal_fp16.safetensors",
+      "directory": "geometry_estimation"
+     }
+    ]
+   },
+   "widgets_values": [
+    "moge_3_vitg_fp16.safetensors"
+   ],
+   "widgets_values_named": {
+    "model_name": "moge_3_vitg_fp16.safetensors"
+   },
+   "color": "#203E11FF",
+   "bgcolor": "#305D1AFF"
+  },
+  {
+   "id": 88,
+   "type": "MarkdownNote",
+   "pos": [
+    1500,
+    2730
+   ],
+   "size": [
+    600,
+    470
+   ],
+   "flags": {},
+   "order": 12,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [],
+   "title": "资料",
+   "properties": {
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    "# ****B站****：[Aiden_0](https://space.bilibili.com/339978043?spm_id_from=333.1007.0.0)\n# ****YOUTUBE****:[Aiden_0](https://www.youtube.com/channel/UCTU0bGEl07Mem_jYugx4qWA)\n# ****常用模型下载****：\n# [COMFYUI免费资料分享](https://pan.quark.cn/s/ba992dddc7c2)\n\n\n\n\n\n\n"
+   ],
+   "widgets_values_named": {
+    "text": "# ****B站****：[Aiden_0](https://space.bilibili.com/339978043?spm_id_from=333.1007.0.0)\n# ****YOUTUBE****:[Aiden_0](https://www.youtube.com/channel/UCTU0bGEl07Mem_jYugx4qWA)\n# ****常用模型下载****：\n# [COMFYUI免费资料分享](https://pan.quark.cn/s/ba992dddc7c2)\n\n\n\n\n\n\n"
+   },
+   "color": "#702222FF",
+   "bgcolor": "#8F2B2BFF"
+  },
+  {
+   "id": 91,
+   "type": "easy positive",
+   "pos": [
+    1520,
+    3920
+   ],
+   "size": [
+    480,
+    130
+   ],
+   "flags": {},
+   "order": 14,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "label": "正面提示词",
+     "name": "positive",
+     "type": "STRING",
+     "links": []
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfyui-easy-use",
+    "ver": "67afdc8204683e32549e63b7b02dc006d20441fa",
+    "Node name for S&R": "easy positive",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {},
+     "version": "7.8"
+    }
+   },
+   "widgets_values": [
+    "subject_definitions:\n<Subject 1> is the single target person in <Picture 1>. Preserve the reference identity, age, facial structure, hairstyle, hair length and silhouette, physique, clothing construction, accessories and footwear. Multiple views on the sheet describe the same individual. The picture defines appearance only, not the opening pose, expression or action timing.\n<Subject 2> is the pair of handguns visible in the X white-model reference <Video 1>. Preserve each source gun's rigid shape, barrel and slide proportions, grip, metallic surfaces, corresponding hand, hand-relative orientation and source-visible flash events. Track actual visibility and contact rather than requiring an unsupported permanent fist grip.\n<Subject 3> is the complete source performance in <Video 1>, including torso and pelvis motion, head direction, shoulders, elbows, wrists, palms, fingers, supporting legs, lifted legs, foot paths, balance, small holds and gun coordination. Transfer this performance without the white model's identity, anatomy-specific proportions, materials, seams or costume.\n<Video 1> is the original vertical X white-model video, not the AnimateDiff result. Its verified visual stream is 720×1280, constant 24 fps, 419 frames, with zero-based source frames F0 through F418. Frame Fn begins at t=n/24 seconds. The visual interval ends at 17.458333 seconds. F415 is the last visible character frame; F416–F418 are black tail frames.\n<Audio 1> is the original synchronized soundtrack of <Video 1>, reused at its existing start point and speed. Its approximately 17.504-second audio tail does not redefine the 17.458333-second visual motion interval.\n\nsummary:\n[reference generation + audio reuse] Generate <Subject 1> performing <Subject 3> with <Subject 2>, using the original <Video 1> as the sole action and timing master. Match the verified source-frame anchors below and preserve every intervening source transition. Maintain target appearance from <Picture 1>, source 9:16 composition and source-relative framing changes. Do not use the mismatched AnimateDiff result as choreography, timing, camera or ending guidance.\n\nretention_analysis:\n<Subject 1> (all visible performance frames): fully_preserved - preserve identity, body proportions, hair, wardrobe and accessories while posture and acting follow the source performance.\n<Subject 2> (at corresponding source visibility): fully_preserved - preserve both guns, hand ownership, rigid geometry, contact changes, relative rotations and observed flash events.\n<Subject 3> (F0–F415): attribute_transfer - transfer the source's complete movement and coordination onto the target anatomy, retaining action order and timing.\n<Video 1> (visual timeline and camera): fully_preserved - retain its 419-frame visual sequence, frame times, screen orientation, framing changes and terminal black frames within this defined role.\n<Audio 1>: fully_copy - preserve the source audio's sample timing, rhythm, pitch and content without regenerated speech or added effects.\n\ndetailed_description:\nCreate a realistic target-character performance in a simple neutral-grey studio with subtle floor contact shadows. Use the source's vertical 9:16 frame, viewing direction and changes of subject scale. Motion blur follows source movement; target skin, hair, garment materials and footwear remain consistent.\n\n[Shot 1] Begin immediately in source F0's state. Hands are near the waist, elbows bent and the body near front-facing. Do not begin from the identity sheet's standing pose, add an introduction or start with a later raised-gun pose. Follow the reference's own camera sequence without adding a new cinematic shot plan.\n\nTIME AND ANCHOR RULES:\nUse source time t as target time t, with no global offset, local time stretching, rhythm reinterpretation or event reordering. At 24 fps, target Fn corresponds to source Fn. If the output uses another frame rate, evaluate the source at the same actual time rather than matching frame numbers or rescaling the entire dance.\n\nThe anchors below are observed snapshots from exact source frames. They are not instructions to start an action at that time, not isolated keyframes to interpolate freely between, and not minimum-time deadlines. At each listed time the target must already occupy the corresponding source posture and current movement state. The onset, path, pauses and completion between anchors remain governed by the intervening source frames.\n\nLeft and right screen directions below refer to the displayed source frame at that anchor, not permanent anatomical hand labels. Maintain each gun's actual anatomical hand ownership through turns. Where the source crop hides a foot or weapon, retain the source crop and natural occlusion; do not invent a supporting-foot change or widen the camera just to show it.\n\nSOURCE-FRAME ANCHORS IN PLAYBACK ORDER:\n\nA01 — F0 / 00:00.000:\nNear-front body, arms bent with both hands gathered at waist level, legs separated in the source stance. Match the source head tilt and actual hand/object visibility. This is the opening state, not a posed identity-image introduction.\n\nA02 — F12 / 00:00.500:\nBoth elbows are lifted outward and the palms are raised near head height in the source open-hand gesture. The head is tilted, torso and shoulders follow the visible sway. Match the observed empty-palm visibility instead of forcing two guns into a frame where they are not shown.\n\nA03 — F24 / 00:01.000:\nHands return toward the waist with elbows spread, and the stance widens. Preserve finger and wrist orientation and the actual visibility around the hands and belt. Do not already jump into the later overhead or rear-leg pose.\n\nA04 — F36 / 00:01.500:\nThe knees are bending into the low wide stance, arms and visible guns moving downward beside the trunk. This is a moving descent, with visible source blur, not a frozen upright gun-display pose. Guns follow their observed directions.\n\nA05 — F48 / 00:02.000:\nThe body is low in a broad bent-knee stance. Both elbows bend and both guns stand beside the face, with the source head tilt. Match the depth of the squat, shoulder relationship and gun-to-palm angles; do not raise one entire arm straight overhead.\n\nA06 — F72 / 00:03.000:\nThe source is near front-facing with bent knees and both gun-bearing elbows still flexed, guns near the face/upper chest during the transition. Keep this stage distinct from the later single-arm overhead extension. Do not substitute a back-kick or single-leg catch.\n\nA07 — F84 / 00:03.500:\nThe source is side-facing toward screen-right. One gun-bearing arm extends horizontally toward screen-right while the other folds across the chest toward screen-left. The body leans and the legs follow the source crossing support. Visible muzzle flashes belong to the corresponding barrels and directions. This is the lateral dual-gun phrase.\n\nA08 — F96 / 00:04.000:\nThe torso has returned toward a front three-quarter view with flexed knees and a lateral lean. The screen-right gun is bent up near the head; the screen-left elbow is out and its gun-hand travels lower. Retain this asymmetry and current foot placement rather than replacing it with a new knee-lift or overhead hold.\n\nA09 — F120 / 00:05.000:\nFollow the source arm sweep: one gun-hand rises in front of or near the head while the other reaches downward, with the torso and knees participating. This frame is transitional and motion-blurred. Preserve the sweep trajectory; do not turn it into an invented held pose.\n\nA10 — F144 / 00:06.000:\nThe source arms continue their crossing/head-level sweep with the trunk leaning through the reversal and the legs maintaining the visible wide support. Match both hands' current positions and directions from F144. Keep the intermediate transition rather than skipping directly to the next open-arm state.\n\nA11 — F168 / 00:07.000:\nThe source faces toward screen-left. One arm reaches diagonally toward upper-left while the other is bent back with its gun lower. A bent-leg step lifts a foot in the source pattern. Preserve the side-facing torso, knee bend and forward/crossing leg travel. This is not the later rear-leg-to-ankle pose.\n\nA12 — F192 / 00:08.000:\nContinue the side-facing diagonal reach toward upper-left; the opposite arm opens toward the right edge in the source crop. The bent-leg stepping phrase continues with its existing support and weight transfer. Do not reset the torso square to the camera or replace this with generic arm waving.\n\nA13 — F216 / 00:09.000:\nThe torso leans toward screen-left while the screen-right gun-bearing arm reaches high diagonally. The opposite arm travels low. Reproduce the visible flash at the raised source barrel. Preserve this long body diagonal and the source stance instead of performing the ankle-catch phrase.\n\nA14 — F240 / 00:10.000:\nThe source changes to the opposite high-low arm relationship: the screen-left gun-bearing arm is raised near/above the head, the screen-right gun-hand is low near the hip. Knees stay flexed in the source lateral weight shift. Keep the arm reversal in this original order.\n\nA15 — F264 / 00:11.000:\nThe source is already balancing on one leg. The other leg is bent and lifted behind/alongside the body, with the foot visible toward screen-left near waist level. The hand nearest that ankle reaches to or contacts the ankle region while retaining its source pistol relationship; the other gun is near the screen-right side of the face. Match the strong torso lean and one-leg support. This distinctive rear-leg/ankle pose belongs here, not at 17 seconds.\n\nA16 — F288 / 00:12.000:\nThe rear-leg/ankle pose is still present with its continued source lean and head direction. Preserve its actual persistence and small changes. Do not compress this stage into one frame, omit it, or immediately lower the foot just because another anchor follows.\n\nA17 — F312 / 00:13.000:\nThe rear-leg phrase has transitioned into the source's side-facing raised-forward-knee step. The arms/guns are drawn toward the rear-hip/back region in the source view. Match the source trunk turn, bent support and lifted leg. This differs from the rear-foot catch and must not be replaced by a head-level double-gun pose.\n\nA18 — F336 / 00:14.000:\nThe source is returning toward front-facing with elbows bent outward and the guns raised around shoulder/head level. Legs and torso are transitioning through the visible step into the next broad stance. Preserve the current weight transfer rather than adding a static reset.\n\nA19 — F360 / 00:15.000:\nBoth arms cross horizontally in front of the torso, with guns pointing toward opposite screen directions and visible flashes at the corresponding source barrels. Legs are separated and knees flexed. Match the upper and lower arm crossing order and both independent gun directions. Do not substitute a single diagonal shot.\n\nA20 — F384 / 00:16.000:\nThe arms reopen laterally while the torso leans and the legs maintain the source wide support. Preserve the visible arm travel and the source edge crop. This is the late reopening after the crossed-gun phrase, not a repetition of the opening empty palms.\n\nA21 — F408 / 00:17.000:\nThe target must already be in the final source phrase: near-front wide stance, one gun-bearing forearm raised by the screen-right side of the head, the other gun-arm drawn horizontally across the upper chest. Both legs are down in the source support. No rear-leg/ankle-catch pose belongs here.\n\nA22 — F415 / 00:17.291667:\nThis is the last visible character frame. Match its low wide stance, head-facing direction, gun near the head and other gun-arm across the chest. Preserve the small differences from F408 rather than freezing F408 for the remainder. Do not append a new finale, lifted leg, salute, turn or settled display pose.\n\nA23 — F416 / 00:17.333333, through F418 / 00:17.416667:\nThe source is black in these terminal frames. Preserve this existing short black ending; it is not a window for more choreography. The final frame's display interval ends at 17.458333 seconds. Any original audio tail extending to approximately 17.504 seconds remains an audio tail only and must not stretch the visual action.\n\nCONTINUOUS MOTION BETWEEN ANCHORS:\nUse every intervening source pose and motion state. Do not choose a few recognizable gun-dance gestures and perform them in a new order. The rear-leg catch, forward knee lift, opposite high-low arms, crossed-gun phrase and final raised-forearm state remain distinct events in their source positions.\n\nPreserve how head, shoulder girdle, pelvis, knees and hands act together. Source holds keep their full duration; moving intervals keep their actual speed and acceleration. A supporting foot does not glide merely because the source model has bare feet while the target wears different shoes. Adapt target footwear contact, ankle compensation and garment clearance without changing the source support sequence or timing.\n\nGUN AND HAND MOTION:\nTrack each gun as a rigid object whose orientation relative to its palm follows the reference. Preserve wrist orientation, barrel direction, grip direction and visible contact changes separately from arm travel. During source-supported flips or regrips, reproduce the intermediate states instead of locking a fixed weapon to the moving fist. During stable holds, preserve the stable source hold. Do not invent finger spins, airborne releases or full revolutions absent from the frames.\n\nSource visibility governs the opening, occlusions and reappearances. Preserve two identifiable weapons whenever both are visible, keeping their corresponding hands and shapes. Flash timing, duration and barrel direction follow the original video, not a guessed musical beat. Flash light briefly touches target fingers and cloth, then disappears. No additional firing event, target, explosion, combat or reload is introduced.\n\nAPPEARANCE AND PRESENTATION:\nAll target hair length, haircut, clothing shape, accessories and footwear come from <Picture 1>, not the source silhouette. Transfer head and body kinematics; regenerate target-specific hair and garment responses from those movements. Do not copy the white model's bald head, seams, proportions, test surfaces or attached costume geometry.\n\nKeep the reference framing at corresponding times. Where the source is tighter, retain that relationship; where it reveals whole-body steps, show the corresponding feet and support. Do not replace the vertical sequence with a new horizontal wide shot or invent camera cuts, orbits or hero poses.\n\nUse restrained neutral studio light, natural target skin and clear wardrobe materials. Facial demeanor remains compatible with the source head action without inventing speech or human articulation unsupported by the white model. Keep identity stable through blur and turns; do not stabilize the face independently while allowing the torso to lag.\n\noverall_soundscape:\nReuse all existing sound layers in <Audio 1> without regeneration, additional gunshots, new dialogue or new movement effects. Maintain their original sample position relative to the source visual timeline.\n\nnon_diegetic_music:\nKeep any original music within <Audio 1> at its existing tempo, level, progression and sample timing. Add no replacement score."
+   ],
+   "widgets_values_named": {
+    "positive": "subject_definitions:\n<Subject 1> is the single target person in <Picture 1>. Preserve the reference identity, age, facial structure, hairstyle, hair length and silhouette, physique, clothing construction, accessories and footwear. Multiple views on the sheet describe the same individual. The picture defines appearance only, not the opening pose, expression or action timing.\n<Subject 2> is the pair of handguns visible in the X white-model reference <Video 1>. Preserve each source gun's rigid shape, barrel and slide proportions, grip, metallic surfaces, corresponding hand, hand-relative orientation and source-visible flash events. Track actual visibility and contact rather than requiring an unsupported permanent fist grip.\n<Subject 3> is the complete source performance in <Video 1>, including torso and pelvis motion, head direction, shoulders, elbows, wrists, palms, fingers, supporting legs, lifted legs, foot paths, balance, small holds and gun coordination. Transfer this performance without the white model's identity, anatomy-specific proportions, materials, seams or costume.\n<Video 1> is the original vertical X white-model video, not the AnimateDiff result. Its verified visual stream is 720×1280, constant 24 fps, 419 frames, with zero-based source frames F0 through F418. Frame Fn begins at t=n/24 seconds. The visual interval ends at 17.458333 seconds. F415 is the last visible character frame; F416–F418 are black tail frames.\n<Audio 1> is the original synchronized soundtrack of <Video 1>, reused at its existing start point and speed. Its approximately 17.504-second audio tail does not redefine the 17.458333-second visual motion interval.\n\nsummary:\n[reference generation + audio reuse] Generate <Subject 1> performing <Subject 3> with <Subject 2>, using the original <Video 1> as the sole action and timing master. Match the verified source-frame anchors below and preserve every intervening source transition. Maintain target appearance from <Picture 1>, source 9:16 composition and source-relative framing changes. Do not use the mismatched AnimateDiff result as choreography, timing, camera or ending guidance.\n\nretention_analysis:\n<Subject 1> (all visible performance frames): fully_preserved - preserve identity, body proportions, hair, wardrobe and accessories while posture and acting follow the source performance.\n<Subject 2> (at corresponding source visibility): fully_preserved - preserve both guns, hand ownership, rigid geometry, contact changes, relative rotations and observed flash events.\n<Subject 3> (F0–F415): attribute_transfer - transfer the source's complete movement and coordination onto the target anatomy, retaining action order and timing.\n<Video 1> (visual timeline and camera): fully_preserved - retain its 419-frame visual sequence, frame times, screen orientation, framing changes and terminal black frames within this defined role.\n<Audio 1>: fully_copy - preserve the source audio's sample timing, rhythm, pitch and content without regenerated speech or added effects.\n\ndetailed_description:\nCreate a realistic target-character performance in a simple neutral-grey studio with subtle floor contact shadows. Use the source's vertical 9:16 frame, viewing direction and changes of subject scale. Motion blur follows source movement; target skin, hair, garment materials and footwear remain consistent.\n\n[Shot 1] Begin immediately in source F0's state. Hands are near the waist, elbows bent and the body near front-facing. Do not begin from the identity sheet's standing pose, add an introduction or start with a later raised-gun pose. Follow the reference's own camera sequence without adding a new cinematic shot plan.\n\nTIME AND ANCHOR RULES:\nUse source time t as target time t, with no global offset, local time stretching, rhythm reinterpretation or event reordering. At 24 fps, target Fn corresponds to source Fn. If the output uses another frame rate, evaluate the source at the same actual time rather than matching frame numbers or rescaling the entire dance.\n\nThe anchors below are observed snapshots from exact source frames. They are not instructions to start an action at that time, not isolated keyframes to interpolate freely between, and not minimum-time deadlines. At each listed time the target must already occupy the corresponding source posture and current movement state. The onset, path, pauses and completion between anchors remain governed by the intervening source frames.\n\nLeft and right screen directions below refer to the displayed source frame at that anchor, not permanent anatomical hand labels. Maintain each gun's actual anatomical hand ownership through turns. Where the source crop hides a foot or weapon, retain the source crop and natural occlusion; do not invent a supporting-foot change or widen the camera just to show it.\n\nSOURCE-FRAME ANCHORS IN PLAYBACK ORDER:\n\nA01 — F0 / 00:00.000:\nNear-front body, arms bent with both hands gathered at waist level, legs separated in the source stance. Match the source head tilt and actual hand/object visibility. This is the opening state, not a posed identity-image introduction.\n\nA02 — F12 / 00:00.500:\nBoth elbows are lifted outward and the palms are raised near head height in the source open-hand gesture. The head is tilted, torso and shoulders follow the visible sway. Match the observed empty-palm visibility instead of forcing two guns into a frame where they are not shown.\n\nA03 — F24 / 00:01.000:\nHands return toward the waist with elbows spread, and the stance widens. Preserve finger and wrist orientation and the actual visibility around the hands and belt. Do not already jump into the later overhead or rear-leg pose.\n\nA04 — F36 / 00:01.500:\nThe knees are bending into the low wide stance, arms and visible guns moving downward beside the trunk. This is a moving descent, with visible source blur, not a frozen upright gun-display pose. Guns follow their observed directions.\n\nA05 — F48 / 00:02.000:\nThe body is low in a broad bent-knee stance. Both elbows bend and both guns stand beside the face, with the source head tilt. Match the depth of the squat, shoulder relationship and gun-to-palm angles; do not raise one entire arm straight overhead.\n\nA06 — F72 / 00:03.000:\nThe source is near front-facing with bent knees and both gun-bearing elbows still flexed, guns near the face/upper chest during the transition. Keep this stage distinct from the later single-arm overhead extension. Do not substitute a back-kick or single-leg catch.\n\nA07 — F84 / 00:03.500:\nThe source is side-facing toward screen-right. One gun-bearing arm extends horizontally toward screen-right while the other folds across the chest toward screen-left. The body leans and the legs follow the source crossing support. Visible muzzle flashes belong to the corresponding barrels and directions. This is the lateral dual-gun phrase.\n\nA08 — F96 / 00:04.000:\nThe torso has returned toward a front three-quarter view with flexed knees and a lateral lean. The screen-right gun is bent up near the head; the screen-left elbow is out and its gun-hand travels lower. Retain this asymmetry and current foot placement rather than replacing it with a new knee-lift or overhead hold.\n\nA09 — F120 / 00:05.000:\nFollow the source arm sweep: one gun-hand rises in front of or near the head while the other reaches downward, with the torso and knees participating. This frame is transitional and motion-blurred. Preserve the sweep trajectory; do not turn it into an invented held pose.\n\nA10 — F144 / 00:06.000:\nThe source arms continue their crossing/head-level sweep with the trunk leaning through the reversal and the legs maintaining the visible wide support. Match both hands' current positions and directions from F144. Keep the intermediate transition rather than skipping directly to the next open-arm state.\n\nA11 — F168 / 00:07.000:\nThe source faces toward screen-left. One arm reaches diagonally toward upper-left while the other is bent back with its gun lower. A bent-leg step lifts a foot in the source pattern. Preserve the side-facing torso, knee bend and forward/crossing leg travel. This is not the later rear-leg-to-ankle pose.\n\nA12 — F192 / 00:08.000:\nContinue the side-facing diagonal reach toward upper-left; the opposite arm opens toward the right edge in the source crop. The bent-leg stepping phrase continues with its existing support and weight transfer. Do not reset the torso square to the camera or replace this with generic arm waving.\n\nA13 — F216 / 00:09.000:\nThe torso leans toward screen-left while the screen-right gun-bearing arm reaches high diagonally. The opposite arm travels low. Reproduce the visible flash at the raised source barrel. Preserve this long body diagonal and the source stance instead of performing the ankle-catch phrase.\n\nA14 — F240 / 00:10.000:\nThe source changes to the opposite high-low arm relationship: the screen-left gun-bearing arm is raised near/above the head, the screen-right gun-hand is low near the hip. Knees stay flexed in the source lateral weight shift. Keep the arm reversal in this original order.\n\nA15 — F264 / 00:11.000:\nThe source is already balancing on one leg. The other leg is bent and lifted behind/alongside the body, with the foot visible toward screen-left near waist level. The hand nearest that ankle reaches to or contacts the ankle region while retaining its source pistol relationship; the other gun is near the screen-right side of the face. Match the strong torso lean and one-leg support. This distinctive rear-leg/ankle pose belongs here, not at 17 seconds.\n\nA16 — F288 / 00:12.000:\nThe rear-leg/ankle pose is still present with its continued source lean and head direction. Preserve its actual persistence and small changes. Do not compress this stage into one frame, omit it, or immediately lower the foot just because another anchor follows.\n\nA17 — F312 / 00:13.000:\nThe rear-leg phrase has transitioned into the source's side-facing raised-forward-knee step. The arms/guns are drawn toward the rear-hip/back region in the source view. Match the source trunk turn, bent support and lifted leg. This differs from the rear-foot catch and must not be replaced by a head-level double-gun pose.\n\nA18 — F336 / 00:14.000:\nThe source is returning toward front-facing with elbows bent outward and the guns raised around shoulder/head level. Legs and torso are transitioning through the visible step into the next broad stance. Preserve the current weight transfer rather than adding a static reset.\n\nA19 — F360 / 00:15.000:\nBoth arms cross horizontally in front of the torso, with guns pointing toward opposite screen directions and visible flashes at the corresponding source barrels. Legs are separated and knees flexed. Match the upper and lower arm crossing order and both independent gun directions. Do not substitute a single diagonal shot.\n\nA20 — F384 / 00:16.000:\nThe arms reopen laterally while the torso leans and the legs maintain the source wide support. Preserve the visible arm travel and the source edge crop. This is the late reopening after the crossed-gun phrase, not a repetition of the opening empty palms.\n\nA21 — F408 / 00:17.000:\nThe target must already be in the final source phrase: near-front wide stance, one gun-bearing forearm raised by the screen-right side of the head, the other gun-arm drawn horizontally across the upper chest. Both legs are down in the source support. No rear-leg/ankle-catch pose belongs here.\n\nA22 — F415 / 00:17.291667:\nThis is the last visible character frame. Match its low wide stance, head-facing direction, gun near the head and other gun-arm across the chest. Preserve the small differences from F408 rather than freezing F408 for the remainder. Do not append a new finale, lifted leg, salute, turn or settled display pose.\n\nA23 — F416 / 00:17.333333, through F418 / 00:17.416667:\nThe source is black in these terminal frames. Preserve this existing short black ending; it is not a window for more choreography. The final frame's display interval ends at 17.458333 seconds. Any original audio tail extending to approximately 17.504 seconds remains an audio tail only and must not stretch the visual action.\n\nCONTINUOUS MOTION BETWEEN ANCHORS:\nUse every intervening source pose and motion state. Do not choose a few recognizable gun-dance gestures and perform them in a new order. The rear-leg catch, forward knee lift, opposite high-low arms, crossed-gun phrase and final raised-forearm state remain distinct events in their source positions.\n\nPreserve how head, shoulder girdle, pelvis, knees and hands act together. Source holds keep their full duration; moving intervals keep their actual speed and acceleration. A supporting foot does not glide merely because the source model has bare feet while the target wears different shoes. Adapt target footwear contact, ankle compensation and garment clearance without changing the source support sequence or timing.\n\nGUN AND HAND MOTION:\nTrack each gun as a rigid object whose orientation relative to its palm follows the reference. Preserve wrist orientation, barrel direction, grip direction and visible contact changes separately from arm travel. During source-supported flips or regrips, reproduce the intermediate states instead of locking a fixed weapon to the moving fist. During stable holds, preserve the stable source hold. Do not invent finger spins, airborne releases or full revolutions absent from the frames.\n\nSource visibility governs the opening, occlusions and reappearances. Preserve two identifiable weapons whenever both are visible, keeping their corresponding hands and shapes. Flash timing, duration and barrel direction follow the original video, not a guessed musical beat. Flash light briefly touches target fingers and cloth, then disappears. No additional firing event, target, explosion, combat or reload is introduced.\n\nAPPEARANCE AND PRESENTATION:\nAll target hair length, haircut, clothing shape, accessories and footwear come from <Picture 1>, not the source silhouette. Transfer head and body kinematics; regenerate target-specific hair and garment responses from those movements. Do not copy the white model's bald head, seams, proportions, test surfaces or attached costume geometry.\n\nKeep the reference framing at corresponding times. Where the source is tighter, retain that relationship; where it reveals whole-body steps, show the corresponding feet and support. Do not replace the vertical sequence with a new horizontal wide shot or invent camera cuts, orbits or hero poses.\n\nUse restrained neutral studio light, natural target skin and clear wardrobe materials. Facial demeanor remains compatible with the source head action without inventing speech or human articulation unsupported by the white model. Keep identity stable through blur and turns; do not stabilize the face independently while allowing the torso to lag.\n\noverall_soundscape:\nReuse all existing sound layers in <Audio 1> without regeneration, additional gunshots, new dialogue or new movement effects. Maintain their original sample position relative to the source visual timeline.\n\nnon_diegetic_music:\nKeep any original music within <Audio 1> at its existing tempo, level, progression and sample timing. Add no replacement score."
+   },
+   "color": "#232",
+   "bgcolor": "#353"
+  },
+  {
+   "id": 92,
+   "type": "LayerUtility: ImageBlend V2",
+   "pos": [
+    3450,
+    4330
+   ],
+   "size": [
+    270,
+    150
+   ],
+   "flags": {},
+   "order": 51,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "background_image",
+     "type": "IMAGE",
+     "link": 171
+    },
+    {
+     "name": "layer_image",
+     "type": "IMAGE",
+     "link": 124
+    },
+    {
+     "name": "layer_mask",
+     "shape": 7,
+     "type": "MASK",
+     "link": 141
+    }
+   ],
+   "outputs": [
+    {
+     "name": "image",
+     "type": "IMAGE",
+     "links": [
+      154,
+      175,
+      235
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfyui_layerstyle",
+    "ver": "51977b27869af9369e3d11a75d6fe8eb706f9821",
+    "Node name for S&R": "LayerUtility: ImageBlend V2",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {},
+     "version": "7.8"
+    }
+   },
+   "widgets_values": [
+    false,
+    "normal",
+    100
+   ],
+   "widgets_values_named": {
+    "invert_mask": false,
+    "blend_mode": "normal",
+    "opacity": 100
+   },
+   "color": "rgba(38, 73, 116, 0.7)"
+  },
+  {
+   "id": 94,
+   "type": "LoadImage",
+   "pos": [
+    1070,
+    4780
+   ],
+   "size": [
+    420,
+    520
+   ],
+   "flags": {},
+   "order": 15,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": []
+    },
+    {
+     "name": "MASK",
+     "type": "MASK",
+     "links": []
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.39.0",
+    "Node name for S&R": "LoadImage",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {},
+     "version": "7.8"
+    },
+    "guhaiImageValue": "ChatGPT 图像 2026年9月29日 05_18_58.png"
+   },
+   "widgets_values": [
+    "ig_target_character.jpeg",
+    "image"
+   ],
+   "widgets_values_named": {
+    "image": "ChatGPT 图像 2026年9月29日 05_18_58.png",
+    "upload": "image"
+   },
+   "color": "#203E11FF",
+   "bgcolor": "#305D1AFF"
+  },
+  {
+   "id": 104,
+   "type": "VHS_LoadVideo",
+   "pos": [
+    490,
+    4210
+   ],
+   "size": [
+    520,
+    1212.888888888889
+   ],
+   "flags": {},
+   "order": 16,
+   "mode": 0,
+   "inputs": [
+    {
+     "label": "批次管理",
+     "name": "meta_batch",
+     "shape": 7,
+     "type": "VHS_BatchManager",
+     "link": null
+    },
+    {
+     "name": "vae",
+     "shape": 7,
+     "type": "VAE",
+     "link": null
+    },
+    {
+     "label": "视频",
+     "name": "video",
+     "type": "COMBO",
+     "widget": {
+      "name": "video"
+     },
+     "link": null
+    },
+    {
+     "label": "强制帧率",
+     "name": "force_rate",
+     "type": "FLOAT",
+     "widget": {
+      "name": "force_rate"
+     },
+     "link": null
+    },
+    {
+     "label": "自定义宽度",
+     "name": "custom_width",
+     "type": "INT",
+     "widget": {
+      "name": "custom_width"
+     },
+     "link": null
+    },
+    {
+     "label": "自定义高度",
+     "name": "custom_height",
+     "type": "INT",
+     "widget": {
+      "name": "custom_height"
+     },
+     "link": null
+    },
+    {
+     "label": "帧数读取上限",
+     "name": "frame_load_cap",
+     "type": "INT",
+     "widget": {
+      "name": "frame_load_cap"
+     },
+     "link": null
+    },
+    {
+     "label": "跳过前X帧",
+     "name": "skip_first_frames",
+     "type": "INT",
+     "widget": {
+      "name": "skip_first_frames"
+     },
+     "link": null
+    },
+    {
+     "label": "间隔",
+     "name": "select_every_nth",
+     "type": "INT",
+     "widget": {
+      "name": "select_every_nth"
+     },
+     "link": null
+    },
+    {
+     "label": "格式",
+     "name": "format",
+     "shape": 7,
+     "type": "COMBO",
+     "widget": {
+      "name": "format"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "label": "图像",
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": []
+    },
+    {
+     "label": "帧计数",
+     "name": "frame_count",
+     "type": "INT",
+     "links": []
+    },
+    {
+     "label": "音频",
+     "name": "audio",
+     "type": "AUDIO",
+     "links": []
+    },
+    {
+     "label": "视频信息",
+     "name": "video_info",
+     "type": "VHS_VIDEOINFO",
+     "links": []
+    }
+   ],
+   "title": "加载视频",
+   "properties": {
+    "cnr_id": "comfyui-videohelpersuite",
+    "ver": "4d907bee61e92c2e65af3bd6383a4e4d356126d1",
+    "Node name for S&R": "VHS_LoadVideo",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {},
+     "version": "7.8"
+    }
+   },
+   "widgets_values": {
+    "video": "白模1.mp4",
+    "force_rate": 24,
+    "custom_width": 0,
+    "custom_height": 0,
+    "frame_load_cap": 124,
+    "skip_first_frames": 0,
+    "select_every_nth": 1,
+    "format": "AnimateDiff",
+    "choose video to upload": "image",
+    "videopreview": {
+     "hidden": false,
+     "paused": false,
+     "params": {
+      "filename": "X 上的 serein：“借用这位老师@jackchen1919 的 白模参考视频 没想到老黄耍枪还是厉害的 跳的很有质感很有节奏 https---t.co-VkRBrYoFU7” - X.mp4",
+      "type": "input",
+      "format": "video/mp4",
+      "force_rate": 24,
+      "custom_width": 0,
+      "custom_height": 0,
+      "frame_load_cap": 124,
+      "skip_first_frames": 0,
+      "select_every_nth": 1
+     }
+    }
+   },
+   "widgets_values_named": {
+    "video": "X 上的 serein：“借用这位老师@jackchen1919 的 白模参考视频 没想到老黄耍枪还是厉害的 跳的很有质感很有节奏 https---t.co-VkRBrYoFU7” - X.mp4",
+    "force_rate": 24,
+    "custom_width": 0,
+    "custom_height": 0,
+    "frame_load_cap": 124,
+    "skip_first_frames": 0,
+    "select_every_nth": 1,
+    "format": "AnimateDiff",
+    "choose video to upload": "image",
+    "videopreview": {
+     "hidden": false,
+     "paused": false,
+     "params": {
+      "filename": "X 上的 serein：“借用这位老师@jackchen1919 的 白模参考视频 没想到老黄耍枪还是厉害的 跳的很有质感很有节奏 https---t.co-VkRBrYoFU7” - X.mp4",
+      "type": "input",
+      "format": "video/mp4",
+      "force_rate": 24,
+      "custom_width": 0,
+      "custom_height": 0,
+      "frame_load_cap": 124,
+      "skip_first_frames": 0,
+      "select_every_nth": 1
+     }
+    }
+   },
+   "color": "#203E11FF",
+   "bgcolor": "#305D1AFF"
+  },
+  {
+   "id": 105,
+   "type": "VOSR2Upscale",
+   "pos": [
+    5890,
+    3340
+   ],
+   "size": [
+    320,
+    390
+   ],
+   "flags": {
+    "disabled": false
+   },
+   "order": 66,
+   "mode": 4,
+   "inputs": [
+    {
+     "name": "model",
+     "type": "VOSR2_MODEL",
+     "link": 145
+    },
+    {
+     "name": "image",
+     "type": "IMAGE",
+     "link": 148
+    }
+   ],
+   "outputs": [
+    {
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      146
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfyui-vosr2",
+    "ver": "6a21810b3f4f1a0ffc477c55330db0ac03c671f0",
+    "Node name for S&R": "VOSR2Upscale",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {},
+     "version": "7.8"
+    }
+   },
+   "widgets_values": [
+    2,
+    42,
+    "fixed",
+    "wavelet",
+    512,
+    32,
+    1024,
+    32
+   ],
+   "widgets_values_named": {
+    "upscale": 2,
+    "seed": 42,
+    "fixed": "fixed",
+    "color_alignment": "wavelet",
+    "tile_size": 512,
+    "tile_overlap": 32,
+    "vae_tile_size": 1024,
+    "vae_tile_overlap": 32
+   }
+  },
+  {
+   "id": 106,
+   "type": "VHS_VideoCombine",
+   "pos": [
+    6250,
+    3340
+   ],
+   "size": [
+    530,
+    334
+   ],
+   "flags": {
+    "disabled": false
+   },
+   "order": 69,
+   "mode": 4,
+   "inputs": [
+    {
+     "label": "图像",
+     "name": "images",
+     "type": "IMAGE",
+     "link": 146
+    },
+    {
+     "label": "音频",
+     "name": "audio",
+     "shape": 7,
+     "type": "AUDIO",
+     "link": 182
+    },
+    {
+     "label": "批次管理",
+     "name": "meta_batch",
+     "shape": 7,
+     "type": "VHS_BatchManager",
+     "link": null
+    },
+    {
+     "name": "vae",
+     "shape": 7,
+     "type": "VAE",
+     "link": null
+    },
+    {
+     "label": "帧率",
+     "name": "frame_rate",
+     "type": "FLOAT",
+     "widget": {
+      "name": "frame_rate"
+     },
+     "link": null
+    },
+    {
+     "label": "循环次数",
+     "name": "loop_count",
+     "type": "INT",
+     "widget": {
+      "name": "loop_count"
+     },
+     "link": null
+    },
+    {
+     "label": "文件名前缀",
+     "name": "filename_prefix",
+     "type": "STRING",
+     "widget": {
+      "name": "filename_prefix"
+     },
+     "link": null
+    },
+    {
+     "label": "格式",
+     "name": "format",
+     "type": "COMBO",
+     "widget": {
+      "name": "format"
+     },
+     "link": null
+    },
+    {
+     "label": "Ping-Pong",
+     "name": "pingpong",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "pingpong"
+     },
+     "link": null
+    },
+    {
+     "label": "保存到输出文件夹",
+     "name": "save_output",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "save_output"
+     },
+     "link": null
+    },
+    {
+     "label": "保存元数据",
+     "name": "save_metadata",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "save_metadata"
+     },
+     "link": null
+    },
+    {
+     "label": "修剪音频",
+     "name": "trim_to_audio",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "trim_to_audio"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "label": "文件名",
+     "name": "Filenames",
+     "type": "VHS_FILENAMES",
+     "links": []
+    }
+   ],
+   "title": "合并为视频",
+   "properties": {
+    "cnr_id": "comfyui-videohelpersuite",
+    "ver": "4d907bee61e92c2e65af3bd6383a4e4d356126d1",
+    "Node name for S&R": "VHS_VideoCombine",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {},
+     "version": "7.8"
+    }
+   },
+   "widgets_values": {
+    "frame_rate": 24,
+    "loop_count": 0,
+    "filename_prefix": "AnimateDiff",
+    "format": "video/h264-mp4",
+    "pix_fmt": "yuv420p",
+    "crf": 19,
+    "save_metadata": false,
+    "trim_to_audio": false,
+    "pingpong": false,
+    "save_output": true,
+    "videopreview": {
+     "hidden": false,
+     "paused": false,
+     "params": {
+      "filename": "AnimateDiff_00121-audio.mp4",
+      "subfolder": "",
+      "type": "temp",
+      "format": "video/h264-mp4",
+      "frame_rate": 24,
+      "workflow": "AnimateDiff_00121.png",
+      "fullpath": "E:\\AIDEN\\ComfyUI_windows_portable\\ComfyUI\\temp\\AnimateDiff_00121-audio.mp4"
+     }
+    }
+   },
+   "widgets_values_named": {
+    "frame_rate": 24,
+    "loop_count": 0,
+    "filename_prefix": "AnimateDiff",
+    "format": "video/h264-mp4",
+    "pix_fmt": "yuv420p",
+    "crf": 19,
+    "save_metadata": false,
+    "trim_to_audio": false,
+    "pingpong": false,
+    "save_output": true,
+    "videopreview": {
+     "hidden": false,
+     "paused": false,
+     "params": {
+      "filename": "AnimateDiff_00121-audio.mp4",
+      "subfolder": "",
+      "type": "temp",
+      "format": "video/h264-mp4",
+      "frame_rate": 24,
+      "workflow": "AnimateDiff_00121.png",
+      "fullpath": "E:\\AIDEN\\ComfyUI_windows_portable\\ComfyUI\\temp\\AnimateDiff_00121-audio.mp4"
+     }
+    }
+   }
+  },
+  {
+   "id": 108,
+   "type": "VOSR2ModelLoader",
+   "pos": [
+    5500,
+    3340
+   ],
+   "size": [
+    350,
+    120
+   ],
+   "flags": {
+    "disabled": false
+   },
+   "order": 17,
+   "mode": 4,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "model",
+     "type": "VOSR2_MODEL",
+     "links": [
+      145
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfyui-vosr2",
+    "ver": "6a21810b3f4f1a0ffc477c55330db0ac03c671f0",
+    "Node name for S&R": "VOSR2ModelLoader",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {},
+     "version": "7.8"
+    }
+   },
+   "widgets_values": [
+    "VOSR2",
+    "default"
+   ],
+   "widgets_values_named": {
+    "model": "VOSR2",
+    "dtype": "default"
+   }
+  },
+  {
+   "id": 111,
+   "type": "VHS_VideoCombine",
+   "pos": [
+    3750,
+    4340
+   ],
+   "size": [
+    320,
+    878.7692307692308
+   ],
+   "flags": {},
+   "order": 47,
+   "mode": 0,
+   "inputs": [
+    {
+     "label": "图像",
+     "name": "images",
+     "type": "IMAGE",
+     "link": 153
+    },
+    {
+     "label": "音频",
+     "name": "audio",
+     "shape": 7,
+     "type": "AUDIO",
+     "link": null
+    },
+    {
+     "label": "批次管理",
+     "name": "meta_batch",
+     "shape": 7,
+     "type": "VHS_BatchManager",
+     "link": null
+    },
+    {
+     "name": "vae",
+     "shape": 7,
+     "type": "VAE",
+     "link": null
+    },
+    {
+     "label": "帧率",
+     "name": "frame_rate",
+     "type": "FLOAT",
+     "widget": {
+      "name": "frame_rate"
+     },
+     "link": null
+    },
+    {
+     "label": "循环次数",
+     "name": "loop_count",
+     "type": "INT",
+     "widget": {
+      "name": "loop_count"
+     },
+     "link": null
+    },
+    {
+     "label": "文件名前缀",
+     "name": "filename_prefix",
+     "type": "STRING",
+     "widget": {
+      "name": "filename_prefix"
+     },
+     "link": null
+    },
+    {
+     "label": "格式",
+     "name": "format",
+     "type": "COMBO",
+     "widget": {
+      "name": "format"
+     },
+     "link": null
+    },
+    {
+     "label": "Ping-Pong",
+     "name": "pingpong",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "pingpong"
+     },
+     "link": null
+    },
+    {
+     "label": "保存到输出文件夹",
+     "name": "save_output",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "save_output"
+     },
+     "link": null
+    },
+    {
+     "label": "保存元数据",
+     "name": "save_metadata",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "save_metadata"
+     },
+     "link": null
+    },
+    {
+     "label": "修剪音频",
+     "name": "trim_to_audio",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "trim_to_audio"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "label": "文件名",
+     "name": "Filenames",
+     "type": "VHS_FILENAMES",
+     "links": null
+    }
+   ],
+   "title": "合并为视频",
+   "properties": {
+    "cnr_id": "comfyui-videohelpersuite",
+    "ver": "4d907bee61e92c2e65af3bd6383a4e4d356126d1",
+    "Node name for S&R": "VHS_VideoCombine",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {},
+     "version": "7.8"
+    }
+   },
+   "widgets_values": {
+    "frame_rate": 24,
+    "loop_count": 0,
+    "filename_prefix": "AnimateDiff",
+    "format": "video/h264-mp4",
+    "pix_fmt": "yuv420p",
+    "crf": 19,
+    "save_metadata": false,
+    "trim_to_audio": false,
+    "pingpong": false,
+    "save_output": false,
+    "videopreview": {
+     "hidden": false,
+     "paused": false,
+     "params": {
+      "filename": "AnimateDiff_00001.mp4",
+      "subfolder": "",
+      "type": "temp",
+      "format": "video/h264-mp4",
+      "frame_rate": 24,
+      "workflow": "AnimateDiff_00001.png",
+      "fullpath": "E:\\AIDEN\\ComfyUI_windows_portable\\ComfyUI\\temp\\AnimateDiff_00001.mp4",
+      "metadata": {
+       "kind": "video",
+       "width": 416,
+       "height": 736,
+       "duration": 5.166666666666667,
+       "fps": 24,
+       "frame_count": 124
+      },
+      "id": "a1ee5245-6804-4e5a-9608-750bfe91ff6e"
+     }
+    }
+   },
+   "widgets_values_named": {
+    "frame_rate": 24,
+    "loop_count": 0,
+    "filename_prefix": "AnimateDiff",
+    "format": "video/h264-mp4",
+    "pix_fmt": "yuv420p",
+    "crf": 19,
+    "save_metadata": false,
+    "trim_to_audio": false,
+    "pingpong": false,
+    "save_output": false,
+    "videopreview": {
+     "hidden": false,
+     "paused": false,
+     "params": {
+      "filename": "AnimateDiff_00001.mp4",
+      "subfolder": "",
+      "type": "temp",
+      "format": "video/h264-mp4",
+      "frame_rate": 24,
+      "workflow": "AnimateDiff_00001.png",
+      "fullpath": "E:\\AIDEN\\ComfyUI_windows_portable\\ComfyUI\\temp\\AnimateDiff_00001.mp4",
+      "metadata": {
+       "kind": "video",
+       "width": 416,
+       "height": 736,
+       "duration": 5.166666666666667,
+       "fps": 24,
+       "frame_count": 124
+      },
+      "id": "a1ee5245-6804-4e5a-9608-750bfe91ff6e"
+     }
+    }
+   }
+  },
+  {
+   "id": 112,
+   "type": "VHS_VideoCombine",
+   "pos": [
+    4130,
+    4340
+   ],
+   "size": [
+    320,
+    878.7692307692308
+   ],
+   "flags": {},
+   "order": 52,
+   "mode": 0,
+   "inputs": [
+    {
+     "label": "图像",
+     "name": "images",
+     "type": "IMAGE",
+     "link": 154
+    },
+    {
+     "label": "音频",
+     "name": "audio",
+     "shape": 7,
+     "type": "AUDIO",
+     "link": null
+    },
+    {
+     "label": "批次管理",
+     "name": "meta_batch",
+     "shape": 7,
+     "type": "VHS_BatchManager",
+     "link": null
+    },
+    {
+     "name": "vae",
+     "shape": 7,
+     "type": "VAE",
+     "link": null
+    },
+    {
+     "label": "帧率",
+     "name": "frame_rate",
+     "type": "FLOAT",
+     "widget": {
+      "name": "frame_rate"
+     },
+     "link": null
+    },
+    {
+     "label": "循环次数",
+     "name": "loop_count",
+     "type": "INT",
+     "widget": {
+      "name": "loop_count"
+     },
+     "link": null
+    },
+    {
+     "label": "文件名前缀",
+     "name": "filename_prefix",
+     "type": "STRING",
+     "widget": {
+      "name": "filename_prefix"
+     },
+     "link": null
+    },
+    {
+     "label": "格式",
+     "name": "format",
+     "type": "COMBO",
+     "widget": {
+      "name": "format"
+     },
+     "link": null
+    },
+    {
+     "label": "Ping-Pong",
+     "name": "pingpong",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "pingpong"
+     },
+     "link": null
+    },
+    {
+     "label": "保存到输出文件夹",
+     "name": "save_output",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "save_output"
+     },
+     "link": null
+    },
+    {
+     "label": "保存元数据",
+     "name": "save_metadata",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "save_metadata"
+     },
+     "link": null
+    },
+    {
+     "label": "修剪音频",
+     "name": "trim_to_audio",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "trim_to_audio"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "label": "文件名",
+     "name": "Filenames",
+     "type": "VHS_FILENAMES",
+     "links": null
+    }
+   ],
+   "title": "合并为视频",
+   "properties": {
+    "cnr_id": "comfyui-videohelpersuite",
+    "ver": "4d907bee61e92c2e65af3bd6383a4e4d356126d1",
+    "Node name for S&R": "VHS_VideoCombine",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {},
+     "version": "7.8"
+    }
+   },
+   "widgets_values": {
+    "frame_rate": 24,
+    "loop_count": 0,
+    "filename_prefix": "AnimateDiff",
+    "format": "video/h264-mp4",
+    "pix_fmt": "yuv420p",
+    "crf": 19,
+    "save_metadata": false,
+    "trim_to_audio": false,
+    "pingpong": false,
+    "save_output": false,
+    "videopreview": {
+     "hidden": false,
+     "paused": false,
+     "params": {
+      "filename": "AnimateDiff_00002.mp4",
+      "subfolder": "",
+      "type": "temp",
+      "format": "video/h264-mp4",
+      "frame_rate": 24,
+      "workflow": "AnimateDiff_00002.png",
+      "fullpath": "E:\\AIDEN\\ComfyUI_windows_portable\\ComfyUI\\temp\\AnimateDiff_00002.mp4",
+      "metadata": {
+       "kind": "video",
+       "width": 416,
+       "height": 736,
+       "duration": 5.166666666666667,
+       "fps": 24,
+       "frame_count": 124
+      },
+      "id": "dc2e1cdf-44ac-4bf1-b2d6-8bdda2621d32"
+     }
+    }
+   },
+   "widgets_values_named": {
+    "frame_rate": 24,
+    "loop_count": 0,
+    "filename_prefix": "AnimateDiff",
+    "format": "video/h264-mp4",
+    "pix_fmt": "yuv420p",
+    "crf": 19,
+    "save_metadata": false,
+    "trim_to_audio": false,
+    "pingpong": false,
+    "save_output": false,
+    "videopreview": {
+     "hidden": false,
+     "paused": false,
+     "params": {
+      "filename": "AnimateDiff_00002.mp4",
+      "subfolder": "",
+      "type": "temp",
+      "format": "video/h264-mp4",
+      "frame_rate": 24,
+      "workflow": "AnimateDiff_00002.png",
+      "fullpath": "E:\\AIDEN\\ComfyUI_windows_portable\\ComfyUI\\temp\\AnimateDiff_00002.mp4",
+      "metadata": {
+       "kind": "video",
+       "width": 416,
+       "height": 736,
+       "duration": 5.166666666666667,
+       "fps": 24,
+       "frame_count": 124
+      },
+      "id": "dc2e1cdf-44ac-4bf1-b2d6-8bdda2621d32"
+     }
+    }
+   }
+  },
+  {
+   "id": 115,
+   "type": "VHS_VideoCombine",
+   "pos": [
+    4500,
+    3300
+   ],
+   "size": [
+    930,
+    1953.8823529411766
+   ],
+   "flags": {},
+   "order": 67,
+   "mode": 0,
+   "inputs": [
+    {
+     "label": "图像",
+     "name": "images",
+     "type": "IMAGE",
+     "link": 159
+    },
+    {
+     "label": "音频",
+     "name": "audio",
+     "shape": 7,
+     "type": "AUDIO",
+     "link": 181
+    },
+    {
+     "label": "批次管理",
+     "name": "meta_batch",
+     "shape": 7,
+     "type": "VHS_BatchManager",
+     "link": null
+    },
+    {
+     "name": "vae",
+     "shape": 7,
+     "type": "VAE",
+     "link": null
+    },
+    {
+     "label": "帧率",
+     "name": "frame_rate",
+     "type": "FLOAT",
+     "widget": {
+      "name": "frame_rate"
+     },
+     "link": null
+    },
+    {
+     "label": "循环次数",
+     "name": "loop_count",
+     "type": "INT",
+     "widget": {
+      "name": "loop_count"
+     },
+     "link": null
+    },
+    {
+     "label": "文件名前缀",
+     "name": "filename_prefix",
+     "type": "STRING",
+     "widget": {
+      "name": "filename_prefix"
+     },
+     "link": null
+    },
+    {
+     "label": "格式",
+     "name": "format",
+     "type": "COMBO",
+     "widget": {
+      "name": "format"
+     },
+     "link": null
+    },
+    {
+     "label": "Ping-Pong",
+     "name": "pingpong",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "pingpong"
+     },
+     "link": null
+    },
+    {
+     "label": "保存到输出文件夹",
+     "name": "save_output",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "save_output"
+     },
+     "link": null
+    },
+    {
+     "label": "修剪音频",
+     "name": "trim_to_audio",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "trim_to_audio"
+     },
+     "link": null
+    },
+    {
+     "label": "保存元数据",
+     "name": "save_metadata",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "save_metadata"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "label": "文件名",
+     "name": "Filenames",
+     "type": "VHS_FILENAMES",
+     "links": null
+    }
+   ],
+   "title": "合并为视频",
+   "properties": {
+    "cnr_id": "comfyui-videohelpersuite",
+    "ver": "4d907bee61e92c2e65af3bd6383a4e4d356126d1",
+    "Node name for S&R": "VHS_VideoCombine",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {},
+     "version": "7.8"
+    }
+   },
+   "widgets_values": {
+    "frame_rate": 24,
+    "loop_count": 0,
+    "filename_prefix": "AnimateDiff",
+    "format": "video/h264-mp4",
+    "pix_fmt": "yuv420p",
+    "crf": 19,
+    "save_metadata": false,
+    "trim_to_audio": false,
+    "pingpong": false,
+    "save_output": true,
+    "videopreview": {
+     "hidden": false,
+     "paused": false,
+     "params": {
+      "filename": "AnimateDiff_00534-audio.mp4",
+      "subfolder": "",
+      "type": "output",
+      "format": "video/h264-mp4",
+      "frame_rate": 24,
+      "workflow": "AnimateDiff_00534.png",
+      "fullpath": "E:\\AIDEN\\ComfyUI_windows_portable\\ComfyUI\\output\\AnimateDiff_00534-audio.mp4",
+      "metadata": {
+       "kind": "video",
+       "width": 544,
+       "height": 960,
+       "duration": 6.583333333333333,
+       "fps": 24,
+       "frame_count": 158
+      },
+      "id": "173eaaeb-8462-4d9f-82a5-0aeddcf846b9"
+     }
+    }
+   },
+   "widgets_values_named": {
+    "frame_rate": 24,
+    "loop_count": 0,
+    "filename_prefix": "AnimateDiff",
+    "format": "video/h264-mp4",
+    "pix_fmt": "yuv420p",
+    "crf": 19,
+    "save_metadata": false,
+    "trim_to_audio": false,
+    "pingpong": false,
+    "save_output": true,
+    "videopreview": {
+     "hidden": false,
+     "paused": false,
+     "params": {
+      "filename": "AnimateDiff_00534-audio.mp4",
+      "subfolder": "",
+      "type": "output",
+      "format": "video/h264-mp4",
+      "frame_rate": 24,
+      "workflow": "AnimateDiff_00534.png",
+      "fullpath": "E:\\AIDEN\\ComfyUI_windows_portable\\ComfyUI\\output\\AnimateDiff_00534-audio.mp4",
+      "metadata": {
+       "kind": "video",
+       "width": 544,
+       "height": 960,
+       "duration": 6.583333333333333,
+       "fps": 24,
+       "frame_count": 158
+      },
+      "id": "173eaaeb-8462-4d9f-82a5-0aeddcf846b9"
+     }
+    }
+   }
+  },
+  {
+   "id": 117,
+   "type": "VHS_LoadVideo",
+   "pos": [
+    2260,
+    4330
+   ],
+   "size": [
+    360,
+    928
+   ],
+   "flags": {},
+   "order": 34,
+   "mode": 0,
+   "inputs": [
+    {
+     "label": "批次管理",
+     "name": "meta_batch",
+     "shape": 7,
+     "type": "VHS_BatchManager",
+     "link": null
+    },
+    {
+     "name": "vae",
+     "shape": 7,
+     "type": "VAE",
+     "link": null
+    },
+    {
+     "label": "视频",
+     "name": "video",
+     "type": "COMBO",
+     "widget": {
+      "name": "video"
+     },
+     "link": null
+    },
+    {
+     "label": "强制帧率",
+     "name": "force_rate",
+     "type": "FLOAT",
+     "widget": {
+      "name": "force_rate"
+     },
+     "link": null
+    },
+    {
+     "label": "自定义宽度",
+     "name": "custom_width",
+     "type": "INT",
+     "widget": {
+      "name": "custom_width"
+     },
+     "link": null
+    },
+    {
+     "label": "自定义高度",
+     "name": "custom_height",
+     "type": "INT",
+     "widget": {
+      "name": "custom_height"
+     },
+     "link": null
+    },
+    {
+     "label": "帧数读取上限",
+     "name": "frame_load_cap",
+     "type": "INT",
+     "widget": {
+      "name": "frame_load_cap"
+     },
+     "link": 163
+    },
+    {
+     "label": "跳过前X帧",
+     "name": "skip_first_frames",
+     "type": "INT",
+     "widget": {
+      "name": "skip_first_frames"
+     },
+     "link": null
+    },
+    {
+     "label": "间隔",
+     "name": "select_every_nth",
+     "type": "INT",
+     "widget": {
+      "name": "select_every_nth"
+     },
+     "link": null
+    },
+    {
+     "label": "格式",
+     "name": "format",
+     "shape": 7,
+     "type": "COMBO",
+     "widget": {
+      "name": "format"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "label": "图像",
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      196
+     ]
+    },
+    {
+     "label": "帧计数",
+     "name": "frame_count",
+     "type": "INT",
+     "links": null
+    },
+    {
+     "label": "音频",
+     "name": "audio",
+     "type": "AUDIO",
+     "links": [
+      165
+     ]
+    },
+    {
+     "label": "视频信息",
+     "name": "video_info",
+     "type": "VHS_VIDEOINFO",
+     "links": null
+    }
+   ],
+   "title": "加载视频",
+   "properties": {
+    "cnr_id": "comfyui-videohelpersuite",
+    "ver": "4d907bee61e92c2e65af3bd6383a4e4d356126d1",
+    "Node name for S&R": "VHS_LoadVideo",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {},
+     "version": "7.8"
+    }
+   },
+   "widgets_values": {
+    "video": "白模1.mp4",
+    "force_rate": 24,
+    "custom_width": 0,
+    "custom_height": 0,
+    "frame_load_cap": 124,
+    "skip_first_frames": 0,
+    "select_every_nth": 1,
+    "format": "AnimateDiff",
+    "choose video to upload": "image",
+    "videopreview": {
+     "hidden": false,
+     "paused": false,
+     "params": {
+      "filename": "抖音2026612-265125.mp4",
+      "type": "input",
+      "format": "video/mp4",
+      "force_rate": 24,
+      "custom_width": 0,
+      "custom_height": 0,
+      "frame_load_cap": 124,
+      "skip_first_frames": 0,
+      "select_every_nth": 1
+     }
+    }
+   },
+   "widgets_values_named": {
+    "video": "抖音2026612-265125.mp4",
+    "force_rate": 24,
+    "custom_width": 0,
+    "custom_height": 0,
+    "frame_load_cap": 124,
+    "skip_first_frames": 0,
+    "select_every_nth": 1,
+    "format": "AnimateDiff",
+    "choose video to upload": "image",
+    "videopreview": {
+     "hidden": false,
+     "paused": false,
+     "params": {
+      "filename": "抖音2026612-265125.mp4",
+      "type": "input",
+      "format": "video/mp4",
+      "force_rate": 24,
+      "custom_width": 0,
+      "custom_height": 0,
+      "frame_load_cap": 124,
+      "skip_first_frames": 0,
+      "select_every_nth": 1
+     }
+    }
+   },
+   "color": "#203E11FF",
+   "bgcolor": "#305D1AFF"
+  },
+  {
+   "id": 126,
+   "type": "MiniMaxH3FunControlNetApply",
+   "pos": [
+    4650,
+    2950
+   ],
+   "size": [
+    320,
+    210
+   ],
+   "flags": {},
+   "order": 53,
+   "mode": 4,
+   "inputs": [
+    {
+     "name": "model",
+     "type": "MODEL",
+     "link": 173
+    },
+    {
+     "name": "model_patch",
+     "type": "MODEL_PATCH",
+     "link": 177
+    },
+    {
+     "name": "vae",
+     "type": "VAE",
+     "link": 176
+    },
+    {
+     "name": "control_video",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": 175
+    },
+    {
+     "name": "mask",
+     "shape": 7,
+     "type": "MASK",
+     "link": null
+    },
+    {
+     "name": "source_video",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "name": "MODEL",
+     "type": "MODEL",
+     "links": [
+      174
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.39.0",
+    "Node name for S&R": "MiniMaxH3FunControlNetApply",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {},
+     "version": "7.8"
+    }
+   },
+   "widgets_values": [
+    0.45,
+    0,
+    0.75
+   ],
+   "widgets_values_named": {
+    "strength": 0.45,
+    "start_percent": 0,
+    "end_percent": 0.75
+   }
+  },
+  {
+   "id": 127,
+   "type": "ModelPatchLoader",
+   "pos": [
+    4550,
+    2830
+   ],
+   "size": [
+    510,
+    60
+   ],
+   "flags": {},
+   "order": 19,
+   "mode": 4,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "MODEL_PATCH",
+     "type": "MODEL_PATCH",
+     "links": [
+      177
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.39.0",
+    "Node name for S&R": "ModelPatchLoader",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {},
+     "version": "7.8"
+    }
+   },
+   "widgets_values": [
+    "minimax_h3_fun_controlnet_union_2.0_pruned_int8_convrot.safetensors"
+   ],
+   "widgets_values_named": {
+    "name": "minimax_h3_fun_controlnet_union_2.0_pruned_int8_convrot.safetensors"
+   }
+  },
+  {
+   "id": 132,
+   "type": "VAEEncodeAudio",
+   "pos": [
+    3190,
+    4030
+   ],
+   "size": [
+    230,
+    60
+   ],
+   "flags": {},
+   "order": 44,
+   "mode": 4,
+   "inputs": [
+    {
+     "name": "audio",
+     "type": "AUDIO",
+     "link": 188
+    },
+    {
+     "name": "vae",
+     "type": "VAE",
+     "link": 187
+    }
+   ],
+   "outputs": [
+    {
+     "name": "LATENT",
+     "type": "LATENT",
+     "links": [
+      184
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.35.0",
+    "Node name for S&R": "VAEEncodeAudio",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   }
+  },
+  {
+   "id": 133,
+   "type": "SetLatentNoiseMask",
+   "pos": [
+    3450,
+    4100
+   ],
+   "size": [
+    230,
+    60
+   ],
+   "flags": {},
+   "order": 48,
+   "mode": 4,
+   "inputs": [
+    {
+     "name": "samples",
+     "type": "LATENT",
+     "link": 184
+    },
+    {
+     "name": "mask",
+     "type": "MASK",
+     "link": 185
+    }
+   ],
+   "outputs": [
+    {
+     "name": "LATENT",
+     "type": "LATENT",
+     "links": [
+      186
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.35.0",
+    "Node name for S&R": "SetLatentNoiseMask",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   }
+  },
+  {
+   "id": 134,
+   "type": "SolidMask",
+   "pos": [
+    3240,
+    4150
+   ],
+   "size": [
+    270,
+    120
+   ],
+   "flags": {
+    "collapsed": true
+   },
+   "order": 20,
+   "mode": 4,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "MASK",
+     "type": "MASK",
+     "links": [
+      185
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.35.0",
+    "Node name for S&R": "SolidMask",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    0,
+    1,
+    1
+   ],
+   "widgets_values_named": {
+    "value": 0,
+    "width": 1,
+    "height": 1
+   }
+  },
+  {
+   "id": 135,
+   "type": "LTXVConcatAVLatent",
+   "pos": [
+    3440,
+    3960
+   ],
+   "size": [
+    230,
+    60
+   ],
+   "flags": {},
+   "order": 57,
+   "mode": 4,
+   "inputs": [
+    {
+     "name": "video_latent",
+     "type": "LATENT",
+     "link": 189
+    },
+    {
+     "name": "audio_latent",
+     "type": "LATENT",
+     "link": 186
+    }
+   ],
+   "outputs": [
+    {
+     "name": "latent",
+     "type": "LATENT",
+     "links": [
+      190
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.35.0",
+    "Node name for S&R": "LTXVConcatAVLatent",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   }
+  },
+  {
+   "id": 137,
+   "type": "easy positive",
+   "pos": [
+    1520,
+    4090
+   ],
+   "size": [
+    480,
+    110
+   ],
+   "flags": {},
+   "order": 21,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "label": "正面提示词",
+     "name": "positive",
+     "type": "STRING",
+     "links": [
+      238
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfyui-easy-use",
+    "ver": "67afdc8204683e32549e63b7b02dc006d20441fa",
+    "Node name for S&R": "easy positive",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {},
+     "version": "7.8"
+    }
+   },
+   "widgets_values": [
+    "subject_definitions:\n<Subject 1> is the target person in <Picture 1>. Preserve identity, age, facial structure, hairstyle, body proportions, clothing and accessories. Multiple views depict one person; the picture does not prescribe a static pose or expression.\n<Subject 2> is the observable performance in <Video 1>: body, head, arms, palms and fingers, plus clearly readable facial and mouth changes.\n<Video 1> is the motion-normal reference for the selected clip. It supplies the original action order, posture changes, rhythm and timing, not target appearance or final scene content.\n\nsummary:\n[reference generation] Transfer <Subject 2> to <Subject 1>, preserving the source sequence and timing while keeping the target appearance from <Picture 1>. Generate only movements actually present in <Video 1>.\n\nretention_analysis:\n<Subject 1>: fully_preserved - retain identity and appearance while pose and performance change.\n<Subject 2>: attribute_transfer - transfer observable motion and timing to the target anatomy.\n<Video 1>: fully_preserved - retain its defined motion-reference role, excluding visualization colours and source appearance.\n\ndetailed_description:\nCreate a normal full-colour realistic video of <Subject 1>.\n[Shot 1] Start in the source clip's initial motion state. Target time t corresponds to source time t; align by actual time if frame rates differ. Preserve the source duration unless another source interval is explicitly selected.\n\nReproduce the visible body, head, arm, palm and finger changes in their original order. Retain small movements, pauses, amplitude and speed changes. Each body part follows its own source motion with the original coordination; do not expand local motion into additional whole-body movement, skip transitions or introduce new actions.\n\nThe picture controls appearance, not posture. Target hair and clothes keep their own shapes and respond naturally to the inherited movement; source hair and clothing silhouettes are not transferred.\n\nTransfer only clearly readable facial and mouth changes. If usable original human vocals are supplied, source-visible mouth shapes and the real audio signal jointly guide timing; do not estimate phoneme timestamps or invent speech.\n\nFollow the requested scene and camera. Without new camera instructions, retain source framing and viewing direction. Exclude normal colours, grids, markers, reference layouts, subtitles and additional shots.\n\noverall_soundscape:\nIf original audio is supplied and enabled, keep its original start point and speed. Add no new dialogue.\n\nnon_diegetic_music:\nRetain only supplied and enabled source music or music explicitly requested for this task. Add no unrequested score."
+   ],
+   "widgets_values_named": {
+    "positive": "subject_definitions:\n<Subject 1> is the target person in <Picture 1>. Preserve identity, age, facial structure, hairstyle, body proportions, clothing and accessories. Multiple views depict one person; the picture does not prescribe a static pose or expression.\n<Subject 2> is the observable performance in <Video 1>: body, head, arms, palms and fingers, plus clearly readable facial and mouth changes.\n<Video 1> is the motion-normal reference for the selected clip. It supplies the original action order, posture changes, rhythm and timing, not target appearance or final scene content.\n\nsummary:\n[reference generation] Transfer <Subject 2> to <Subject 1>, preserving the source sequence and timing while keeping the target appearance from <Picture 1>. Generate only movements actually present in <Video 1>.\n\nretention_analysis:\n<Subject 1>: fully_preserved - retain identity and appearance while pose and performance change.\n<Subject 2>: attribute_transfer - transfer observable motion and timing to the target anatomy.\n<Video 1>: fully_preserved - retain its defined motion-reference role, excluding visualization colours and source appearance.\n\ndetailed_description:\nCreate a normal full-colour realistic video of <Subject 1>.\n[Shot 1] Start in the source clip's initial motion state. Target time t corresponds to source time t; align by actual time if frame rates differ. Preserve the source duration unless another source interval is explicitly selected.\n\nReproduce the visible body, head, arm, palm and finger changes in their original order. Retain small movements, pauses, amplitude and speed changes. Each body part follows its own source motion with the original coordination; do not expand local motion into additional whole-body movement, skip transitions or introduce new actions.\n\nThe picture controls appearance, not posture. Target hair and clothes keep their own shapes and respond naturally to the inherited movement; source hair and clothing silhouettes are not transferred.\n\nTransfer only clearly readable facial and mouth changes. If usable original human vocals are supplied, source-visible mouth shapes and the real audio signal jointly guide timing; do not estimate phoneme timestamps or invent speech.\n\nFollow the requested scene and camera. Without new camera instructions, retain source framing and viewing direction. Exclude normal colours, grids, markers, reference layouts, subtitles and additional shots.\n\noverall_soundscape:\nIf original audio is supplied and enabled, keep its original start point and speed. Add no new dialogue.\n\nnon_diegetic_music:\nRetain only supplied and enabled source music or music explicitly requested for this task. Add no unrequested score."
+   },
+   "color": "#232",
+   "bgcolor": "#353"
+  },
+  {
+   "id": 138,
+   "type": "MMH3LatentUpscaleWithModelParams",
+   "pos": [
+    6700,
+    4400
+   ],
+   "size": [
+    320,
+    180
+   ],
+   "flags": {
+    "disabled": false
+   },
+   "order": 40,
+   "mode": 4,
+   "inputs": [
+    {
+     "name": "width",
+     "type": "INT",
+     "widget": {
+      "name": "width"
+     },
+     "link": 197
+    },
+    {
+     "name": "height",
+     "type": "INT",
+     "widget": {
+      "name": "height"
+     },
+     "link": 198
+    }
+   ],
+   "outputs": [
+    {
+     "name": "latent_upscale_param",
+     "type": "H3_UPSCALE_PARAM",
+     "links": [
+      208
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "Comfyui-MMH3-UltimateUpscale",
+    "ver": "26cf738a33bbd497299663c26c6dfc8f26d5c2ee",
+    "Node name for S&R": "MMH3LatentUpscaleWithModelParams",
+    "ue_properties": {
+     "widget_ue_connectable": {
+      "model_name": true,
+      "width": true,
+      "height": true,
+      "device": true,
+      "precision": true
+     },
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    },
+    "aux_id": "bbaudio-2025/Comfyui-MMH3-UltimateUpscale"
+   },
+   "widgets_values": [
+    "minimax_h3_latent_upscaler_3d_fp16.safetensors",
+    1280,
+    704,
+    "cuda",
+    "fp16",
+    true
+   ],
+   "widgets_values_named": {
+    "model_name": "minimax_h3_latent_upscaler_3d_fp16.safetensors",
+    "width": 1280,
+    "height": 704,
+    "device": "cuda",
+    "precision": "fp16",
+    "offload_model": true
+   }
+  },
+  {
+   "id": 139,
+   "type": "MMH3TemporalSplitParams",
+   "pos": [
+    6700,
+    4630
+   ],
+   "size": [
+    320,
+    110
+   ],
+   "flags": {
+    "disabled": false
+   },
+   "order": 22,
+   "mode": 4,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "temporal_split_param",
+     "type": "H3_TEMPORAL_PARAM",
+     "links": [
+      209
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "Comfyui-MMH3-UltimateUpscale",
+    "ver": "26cf738a33bbd497299663c26c6dfc8f26d5c2ee",
+    "Node name for S&R": "MMH3TemporalSplitParams",
+    "ue_properties": {
+     "widget_ue_connectable": {
+      "chunk_length": true,
+      "temporal_overlap": true,
+      "anchor_strength": true
+     },
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    },
+    "aux_id": "bbaudio-2025/Comfyui-MMH3-UltimateUpscale"
+   },
+   "widgets_values": [
+    85,
+    17,
+    0.999
+   ],
+   "widgets_values_named": {
+    "chunk_length": 85,
+    "temporal_overlap": 17,
+    "anchor_strength": 0.999
+   }
+  },
+  {
+   "id": 140,
+   "type": "VHS_VideoCombine",
+   "pos": [
+    7460,
+    3970
+   ],
+   "size": [
+    440,
+    1089.1764705882354
+   ],
+   "flags": {
+    "disabled": false
+   },
+   "order": 70,
+   "mode": 4,
+   "inputs": [
+    {
+     "label": "图像",
+     "name": "images",
+     "type": "IMAGE",
+     "link": 199
+    },
+    {
+     "label": "音频",
+     "name": "audio",
+     "shape": 7,
+     "type": "AUDIO",
+     "link": null
+    },
+    {
+     "label": "批次管理",
+     "name": "meta_batch",
+     "shape": 7,
+     "type": "VHS_BatchManager",
+     "link": null
+    },
+    {
+     "name": "vae",
+     "shape": 7,
+     "type": "VAE",
+     "link": null
+    },
+    {
+     "label": "帧率",
+     "name": "frame_rate",
+     "type": "FLOAT",
+     "widget": {
+      "name": "frame_rate"
+     },
+     "link": null
+    },
+    {
+     "label": "循环次数",
+     "name": "loop_count",
+     "type": "INT",
+     "widget": {
+      "name": "loop_count"
+     },
+     "link": null
+    },
+    {
+     "label": "文件名前缀",
+     "name": "filename_prefix",
+     "type": "STRING",
+     "widget": {
+      "name": "filename_prefix"
+     },
+     "link": null
+    },
+    {
+     "label": "格式",
+     "name": "format",
+     "type": "COMBO",
+     "widget": {
+      "name": "format"
+     },
+     "link": null
+    },
+    {
+     "label": "Ping-Pong",
+     "name": "pingpong",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "pingpong"
+     },
+     "link": null
+    },
+    {
+     "label": "保存到输出文件夹",
+     "name": "save_output",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "save_output"
+     },
+     "link": null
+    },
+    {
+     "label": "保存元数据",
+     "name": "save_metadata",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "save_metadata"
+     },
+     "link": null
+    },
+    {
+     "label": "修剪音频",
+     "name": "trim_to_audio",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "trim_to_audio"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "label": "文件名",
+     "name": "Filenames",
+     "type": "VHS_FILENAMES",
+     "links": []
+    }
+   ],
+   "title": "合并为视频",
+   "properties": {
+    "cnr_id": "comfyui-videohelpersuite",
+    "ver": "4d907bee61e92c2e65af3bd6383a4e4d356126d1",
+    "Node name for S&R": "VHS_VideoCombine",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {},
+     "version": "7.8"
+    }
+   },
+   "widgets_values": {
+    "frame_rate": 24,
+    "loop_count": 0,
+    "filename_prefix": "AnimateDiff",
+    "format": "video/h264-mp4",
+    "pix_fmt": "yuv420p",
+    "crf": 19,
+    "save_metadata": false,
+    "trim_to_audio": false,
+    "pingpong": false,
+    "save_output": true,
+    "videopreview": {
+     "hidden": false,
+     "paused": false,
+     "params": {
+      "filename": "AnimateDiff_00532.mp4",
+      "subfolder": "",
+      "type": "output",
+      "format": "video/h264-mp4",
+      "frame_rate": 24,
+      "workflow": "AnimateDiff_00532.png",
+      "fullpath": "E:\\AIDEN\\ComfyUI_windows_portable\\ComfyUI\\output\\AnimateDiff_00532.mp4",
+      "metadata": {
+       "kind": "video",
+       "width": 1088,
+       "height": 1920,
+       "duration": 6.583333333333333,
+       "fps": 24,
+       "frame_count": 158
+      },
+      "id": "172c21df-f1ac-471c-a3d2-cf0907118a54"
+     }
+    }
+   },
+   "widgets_values_named": {
+    "frame_rate": 24,
+    "loop_count": 0,
+    "filename_prefix": "AnimateDiff",
+    "format": "video/h264-mp4",
+    "pix_fmt": "yuv420p",
+    "crf": 19,
+    "save_metadata": false,
+    "trim_to_audio": false,
+    "pingpong": false,
+    "save_output": true,
+    "videopreview": {
+     "hidden": false,
+     "paused": false,
+     "params": {
+      "filename": "AnimateDiff_00532.mp4",
+      "subfolder": "",
+      "type": "output",
+      "format": "video/h264-mp4",
+      "frame_rate": 24,
+      "workflow": "AnimateDiff_00532.png",
+      "fullpath": "E:\\AIDEN\\ComfyUI_windows_portable\\ComfyUI\\output\\AnimateDiff_00532.mp4",
+      "metadata": {
+       "kind": "video",
+       "width": 1088,
+       "height": 1920,
+       "duration": 6.583333333333333,
+       "fps": 24,
+       "frame_count": 158
+      },
+      "id": "172c21df-f1ac-471c-a3d2-cf0907118a54"
+     }
+    }
+   }
+  },
+  {
+   "id": 141,
+   "type": "Note",
+   "pos": [
+    7150,
+    4460
+   ],
+   "size": [
+    240,
+    130
+   ],
+   "flags": {
+    "disabled": false
+   },
+   "order": 23,
+   "mode": 4,
+   "inputs": [],
+   "outputs": [],
+   "properties": {
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    "不想按时间切段时，静音或删除 Temporal Split。"
+   ],
+   "widgets_values_named": {
+    "text": "不想按时间切段时，静音或删除 Temporal Split。"
+   },
+   "color": "#432",
+   "bgcolor": "#653"
+  },
+  {
+   "id": 142,
+   "type": "MiniMaxH3ReferenceToVideo",
+   "pos": [
+    6210,
+    4000
+   ],
+   "size": [
+    330,
+    570
+   ],
+   "flags": {
+    "disabled": false
+   },
+   "order": 41,
+   "mode": 4,
+   "inputs": [
+    {
+     "name": "clip",
+     "type": "CLIP",
+     "link": 220
+    },
+    {
+     "name": "vae",
+     "shape": 7,
+     "type": "VAE",
+     "link": 221
+    },
+    {
+     "name": "audio_vae",
+     "shape": 7,
+     "type": "VAE",
+     "link": 222
+    },
+    {
+     "label": "ref_image_0",
+     "name": "ref_images.ref_image_0",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": 219
+    },
+    {
+     "name": "ref_images.ref_image_1",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": null
+    },
+    {
+     "label": "ref_video_0",
+     "name": "ref_videos.ref_video_0",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": null
+    },
+    {
+     "label": "ref_video_audio_0",
+     "name": "ref_video_audios.ref_video_audio_0",
+     "shape": 7,
+     "type": "AUDIO",
+     "link": null
+    },
+    {
+     "label": "ref_audio_0",
+     "name": "ref_audios.ref_audio_0",
+     "shape": 7,
+     "type": "AUDIO",
+     "link": null
+    },
+    {
+     "name": "width",
+     "type": "INT",
+     "widget": {
+      "name": "width"
+     },
+     "link": 223
+    },
+    {
+     "name": "height",
+     "type": "INT",
+     "widget": {
+      "name": "height"
+     },
+     "link": 224
+    },
+    {
+     "name": "length",
+     "type": "INT",
+     "widget": {
+      "name": "length"
+     },
+     "link": 225
+    }
+   ],
+   "outputs": [
+    {
+     "name": "positive",
+     "type": "CONDITIONING",
+     "links": [
+      228
+     ]
+    },
+    {
+     "name": "LATENT",
+     "type": "LATENT",
+     "links": []
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.33.0",
+    "Node name for S&R": "MiniMaxH3ReferenceToVideo",
+    "ue_properties": {
+     "widget_ue_connectable": {
+      "prompt": true,
+      "width": true,
+      "height": true,
+      "length": true,
+      "ref_image_size": true
+     },
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    "segment video which takes the first frame as reference, sharp focus, clear details",
+    1344,
+    768,
+    124,
+    "match"
+   ],
+   "widgets_values_named": {
+    "prompt": "segment video which takes the first frame as reference, sharp focus, clear details",
+    "width": 1344,
+    "height": 768,
+    "length": 124,
+    "ref_image_size": "match"
+   }
+  },
+  {
+   "id": 143,
+   "type": "VAEDecode",
+   "pos": [
+    7150,
+    4340
+   ],
+   "size": [
+    230,
+    60
+   ],
+   "flags": {
+    "disabled": false
+   },
+   "order": 68,
+   "mode": 4,
+   "inputs": [
+    {
+     "name": "samples",
+     "type": "LATENT",
+     "link": 202
+    },
+    {
+     "name": "vae",
+     "type": "VAE",
+     "link": 232
+    }
+   ],
+   "outputs": [
+    {
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      199
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.30.0",
+    "Node name for S&R": "VAEDecode",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   }
+  },
+  {
+   "id": 144,
+   "type": "ComfyMathExpression",
+   "pos": [
+    5880,
+    4370
+   ],
+   "size": [
+    210,
+    130
+   ],
+   "flags": {
+    "collapsed": false,
+    "disabled": false
+   },
+   "order": 36,
+   "mode": 4,
+   "inputs": [
+    {
+     "label": "a",
+     "name": "values.a",
+     "type": "FLOAT,INT,BOOLEAN",
+     "link": 203
+    },
+    {
+     "name": "values.b",
+     "shape": 7,
+     "type": "FLOAT,INT,BOOLEAN",
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "name": "FLOAT",
+     "type": "FLOAT",
+     "links": []
+    },
+    {
+     "name": "INT",
+     "type": "INT",
+     "links": [
+      198,
+      224
+     ]
+    },
+    {
+     "name": "BOOL",
+     "type": "BOOLEAN",
+     "links": []
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.33.0",
+    "Node name for S&R": "ComfyMathExpression",
+    "ue_properties": {
+     "widget_ue_connectable": {
+      "expression": true
+     },
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    "a//32*32"
+   ],
+   "widgets_values_named": {
+    "expression": "a//32*32"
+   }
+  },
+  {
+   "id": 145,
+   "type": "BasicScheduler",
+   "pos": [
+    6700,
+    4230
+   ],
+   "size": [
+    320,
+    110
+   ],
+   "flags": {
+    "disabled": false
+   },
+   "order": 60,
+   "mode": 4,
+   "inputs": [
+    {
+     "name": "model",
+     "type": "MODEL",
+     "link": 231
+    }
+   ],
+   "outputs": [
+    {
+     "name": "SIGMAS",
+     "type": "SIGMAS",
+     "links": [
+      207
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.33.0",
+    "Node name for S&R": "BasicScheduler",
+    "ue_properties": {
+     "widget_ue_connectable": {
+      "scheduler": true,
+      "steps": true,
+      "denoise": true
+     },
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    "simple",
+    2,
+    0.1
+   ],
+   "widgets_values_named": {
+    "scheduler": "simple",
+    "steps": 2,
+    "denoise": 0.1
+   }
+  },
+  {
+   "id": 146,
+   "type": "ComfyMathExpression",
+   "pos": [
+    5610,
+    4350
+   ],
+   "size": [
+    210,
+    150
+   ],
+   "flags": {
+    "collapsed": false,
+    "disabled": false
+   },
+   "order": 31,
+   "mode": 4,
+   "inputs": [
+    {
+     "label": "a",
+     "name": "values.a",
+     "type": "FLOAT,INT,BOOLEAN",
+     "link": 216
+    },
+    {
+     "name": "values.b",
+     "shape": 7,
+     "type": "FLOAT,INT,BOOLEAN",
+     "link": 218
+    },
+    {
+     "name": "values.c",
+     "shape": 7,
+     "type": "FLOAT,INT,BOOLEAN",
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "name": "FLOAT",
+     "type": "FLOAT",
+     "links": []
+    },
+    {
+     "name": "INT",
+     "type": "INT",
+     "links": [
+      203
+     ]
+    },
+    {
+     "name": "BOOL",
+     "type": "BOOLEAN",
+     "links": []
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.33.0",
+    "Node name for S&R": "ComfyMathExpression",
+    "ue_properties": {
+     "widget_ue_connectable": {
+      "expression": true
+     },
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    "a * b"
+   ],
+   "widgets_values_named": {
+    "expression": "a * b"
+   }
+  },
+  {
+   "id": 147,
+   "type": "MMH3UltimateUpscale",
+   "pos": [
+    7140,
+    3970
+   ],
+   "size": [
+    250,
+    290
+   ],
+   "flags": {
+    "disabled": false
+   },
+   "order": 64,
+   "mode": 4,
+   "inputs": [
+    {
+     "name": "model",
+     "type": "MODEL",
+     "link": 226
+    },
+    {
+     "name": "conditioning",
+     "type": "CONDITIONING",
+     "link": 228
+    },
+    {
+     "name": "latent",
+     "type": "LATENT",
+     "link": 227
+    },
+    {
+     "name": "noise",
+     "type": "NOISE",
+     "link": 205
+    },
+    {
+     "name": "sampler",
+     "type": "SAMPLER",
+     "link": 206
+    },
+    {
+     "name": "sigmas",
+     "type": "SIGMAS",
+     "link": 207
+    },
+    {
+     "name": "negative",
+     "shape": 7,
+     "type": "CONDITIONING",
+     "link": null
+    },
+    {
+     "name": "latent_upscale_param",
+     "shape": 7,
+     "type": "H3_UPSCALE_PARAM",
+     "link": 208
+    },
+    {
+     "name": "temporal_split_param",
+     "shape": 7,
+     "type": "H3_TEMPORAL_PARAM",
+     "link": 209
+    },
+    {
+     "name": "spatial_split_param",
+     "shape": 7,
+     "type": "H3_SPATIAL_PARAM",
+     "link": null
+    },
+    {
+     "name": "fun_control_param",
+     "shape": 7,
+     "type": "H3_FUN_CONTROL_PARAM",
+     "link": null
+    },
+    {
+     "name": "inpaint_param",
+     "shape": 7,
+     "type": "H3_INPAINT_PARAM",
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "name": "latent",
+     "type": "LATENT",
+     "links": [
+      202
+     ]
+    },
+    {
+     "name": "segments_info",
+     "type": "DICT",
+     "links": []
+    },
+    {
+     "name": "tiles_info",
+     "type": "DICT",
+     "links": []
+    }
+   ],
+   "properties": {
+    "cnr_id": "Comfyui-MMH3-UltimateUpscale",
+    "ver": "26cf738a33bbd497299663c26c6dfc8f26d5c2ee",
+    "Node name for S&R": "MMH3UltimateUpscale",
+    "ue_properties": {
+     "widget_ue_connectable": {
+      "cfg": true
+     },
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    },
+    "aux_id": "bbaudio-2025/Comfyui-MMH3-UltimateUpscale"
+   },
+   "widgets_values": [
+    1
+   ],
+   "widgets_values_named": {
+    "cfg": 1
+   }
+  },
+  {
+   "id": 149,
+   "type": "ComfyMathExpression",
+   "pos": [
+    5600,
+    4070
+   ],
+   "size": [
+    210,
+    150
+   ],
+   "flags": {
+    "collapsed": false,
+    "disabled": false
+   },
+   "order": 30,
+   "mode": 4,
+   "inputs": [
+    {
+     "label": "a",
+     "name": "values.a",
+     "type": "FLOAT,INT,BOOLEAN",
+     "link": 215
+    },
+    {
+     "name": "values.b",
+     "shape": 7,
+     "type": "FLOAT,INT,BOOLEAN",
+     "link": 217
+    },
+    {
+     "name": "values.c",
+     "shape": 7,
+     "type": "FLOAT,INT,BOOLEAN",
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "name": "FLOAT",
+     "type": "FLOAT",
+     "links": []
+    },
+    {
+     "name": "INT",
+     "type": "INT",
+     "links": [
+      211
+     ]
+    },
+    {
+     "name": "BOOL",
+     "type": "BOOLEAN",
+     "links": []
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.33.0",
+    "Node name for S&R": "ComfyMathExpression",
+    "ue_properties": {
+     "widget_ue_connectable": {
+      "expression": true
+     },
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    "a * b"
+   ],
+   "widgets_values_named": {
+    "expression": "a * b"
+   }
+  },
+  {
+   "id": 150,
+   "type": "ComfyMathExpression",
+   "pos": [
+    5880,
+    4090
+   ],
+   "size": [
+    210,
+    130
+   ],
+   "flags": {
+    "collapsed": false,
+    "disabled": false
+   },
+   "order": 35,
+   "mode": 4,
+   "inputs": [
+    {
+     "label": "a",
+     "name": "values.a",
+     "type": "FLOAT,INT,BOOLEAN",
+     "link": 211
+    },
+    {
+     "name": "values.b",
+     "shape": 7,
+     "type": "FLOAT,INT,BOOLEAN",
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "name": "FLOAT",
+     "type": "FLOAT",
+     "links": []
+    },
+    {
+     "name": "INT",
+     "type": "INT",
+     "links": [
+      197,
+      223
+     ]
+    },
+    {
+     "name": "BOOL",
+     "type": "BOOLEAN",
+     "links": []
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.33.0",
+    "Node name for S&R": "ComfyMathExpression",
+    "ue_properties": {
+     "widget_ue_connectable": {
+      "expression": true
+     },
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    "a//32*32"
+   ],
+   "widgets_values_named": {
+    "expression": "a//32*32"
+   }
+  },
+  {
+   "id": 151,
+   "type": "KSamplerSelect",
+   "pos": [
+    6700,
+    4120
+   ],
+   "size": [
+    320,
+    60
+   ],
+   "flags": {
+    "collapsed": false,
+    "disabled": false
+   },
+   "order": 24,
+   "mode": 4,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "SAMPLER",
+     "type": "SAMPLER",
+     "links": [
+      206
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.33.0",
+    "Node name for S&R": "KSamplerSelect",
+    "ue_properties": {
+     "widget_ue_connectable": {
+      "sampler_name": true
+     },
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    "sa_solver"
+   ],
+   "widgets_values_named": {
+    "sampler_name": "sa_solver"
+   }
+  },
+  {
+   "id": 153,
+   "type": "RandomNoise",
+   "pos": [
+    6690,
+    3960
+   ],
+   "size": [
+    320,
+    90
+   ],
+   "flags": {
+    "disabled": false
+   },
+   "order": 25,
+   "mode": 4,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "NOISE",
+     "type": "NOISE",
+     "links": [
+      205
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.33.0",
+    "Node name for S&R": "RandomNoise",
+    "ue_properties": {
+     "widget_ue_connectable": {
+      "noise_seed": true
+     },
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    745914287007517,
+    "fixed"
+   ],
+   "widgets_values_named": {
+    "noise_seed": 745914287007517,
+    "control_after_generate": "fixed"
+   }
+  },
+  {
+   "id": 156,
+   "type": "PrimitiveFloat",
+   "pos": [
+    1510,
+    4690
+   ],
+   "size": [
+    430,
+    80
+   ],
+   "flags": {},
+   "order": 26,
+   "mode": 0,
+   "inputs": [
+    {
+     "label": "value",
+     "name": "value",
+     "type": "FLOAT",
+     "widget": {
+      "name": "value"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "label": "FLOAT",
+     "name": "FLOAT",
+     "type": "FLOAT",
+     "links": [
+      215,
+      216
+     ]
+    }
+   ],
+   "title": "Float (Duration)",
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.33.0",
+    "Node name for S&R": "PrimitiveFloat",
+    "ue_properties": {
+     "version": "7.8",
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    2
+   ],
+   "widgets_values_named": {
+    "value": 2
+   },
+   "color": "#203E11FF",
+   "bgcolor": "#305D1AFF"
+  },
+  {
+   "id": 160,
+   "type": "VAEDecodeAudio",
+   "pos": [
+    4260,
+    3480
+   ],
+   "size": [
+    160,
+    50
+   ],
+   "flags": {},
+   "order": 65,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "samples",
+     "type": "LATENT",
+     "link": 234
+    },
+    {
+     "name": "vae",
+     "type": "VAE",
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "name": "AUDIO",
+     "type": "AUDIO",
+     "links": null
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.39.0",
+    "Node name for S&R": "VAEDecodeAudio",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {},
+     "version": "7.8"
+    }
+   }
+  },
+  {
+   "id": 161,
+   "type": "LoadBackgroundRemovalModel",
+   "pos": [
+    2830,
+    4000
+   ],
+   "size": [
+    300,
+    60
+   ],
+   "flags": {},
+   "order": 0,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "BACKGROUND_REMOVAL",
+     "type": "BACKGROUND_REMOVAL",
+     "links": [
+      239
+     ]
+    }
+   ],
+   "properties": {
+    "Node name for S&R": "LoadBackgroundRemovalModel"
+   },
+   "widgets_values": [
+    "BiRefNet-general.safetensors"
+   ]
+  },
+  {
+   "id": 162,
+   "type": "RemoveBackground",
+   "pos": [
+    3130,
+    4000
+   ],
+   "size": [
+    290,
+    80
+   ],
+   "flags": {},
+   "order": 1,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "bg_removal_model",
+     "type": "BACKGROUND_REMOVAL",
+     "link": 239
+    },
+    {
+     "name": "image",
+     "type": "IMAGE",
+     "link": 240
+    }
+   ],
+   "outputs": [
+    {
+     "name": "MASK",
+     "type": "MASK",
+     "links": [
+      245
+     ]
+    }
+   ],
+   "properties": {
+    "Node name for S&R": "RemoveBackground"
+   },
+   "widgets_values": []
+  },
+  {
+   "id": 163,
+   "type": "EmptyImage",
+   "pos": [
+    2830,
+    4160
+   ],
+   "size": [
+    290,
+    106
+   ],
+   "flags": {},
+   "order": 2,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "width",
+     "type": "INT",
+     "link": 241,
+     "widget": {
+      "name": "width"
+     }
+    },
+    {
+     "name": "height",
+     "type": "INT",
+     "link": 242,
+     "widget": {
+      "name": "height"
+     }
+    }
+   ],
+   "outputs": [
+    {
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      243
+     ]
+    }
+   ],
+   "properties": {
+    "Node name for S&R": "EmptyImage"
+   },
+   "widgets_values": [
+    512,
+    512,
+    124,
+    8882055
+   ]
+  },
+  {
+   "id": 164,
+   "type": "ImageCompositeMasked",
+   "pos": [
+    3130,
+    4160
+   ],
+   "size": [
+    300,
+    130
+   ],
+   "flags": {},
+   "order": 3,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "destination",
+     "type": "IMAGE",
+     "link": 243
+    },
+    {
+     "name": "source",
+     "type": "IMAGE",
+     "link": 244
+    },
+    {
+     "name": "mask",
+     "type": "MASK",
+     "link": 245,
+     "shape": 7
+    }
+   ],
+   "outputs": [
+    {
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      140,
+      153,
+      171
+     ]
+    }
+   ],
+   "properties": {
+    "Node name for S&R": "ImageCompositeMasked"
+   },
+   "widgets_values": [
+    0,
+    0,
+    false
+   ]
+  }
+ ],
+ "links": [
+  [
+   4,
+   9,
+   0,
+   6,
+   0,
+   "MODEL"
+  ],
+  [
+   5,
+   5,
+   0,
+   7,
+   0,
+   "MODEL"
+  ],
+  [
+   6,
+   7,
+   0,
+   8,
+   0,
+   "MODEL"
+  ],
+  [
+   7,
+   8,
+   0,
+   9,
+   0,
+   "MODEL"
+  ],
+  [
+   16,
+   6,
+   0,
+   13,
+   0,
+   "MODEL"
+  ],
+  [
+   18,
+   15,
+   0,
+   20,
+   0,
+   "MODEL"
+  ],
+  [
+   19,
+   11,
+   0,
+   15,
+   0,
+   "MODEL"
+  ],
+  [
+   20,
+   12,
+   0,
+   20,
+   2,
+   "CONDITIONING"
+  ],
+  [
+   21,
+   12,
+   0,
+   21,
+   0,
+   "CONDITIONING"
+  ],
+  [
+   22,
+   21,
+   0,
+   20,
+   3,
+   "CONDITIONING"
+  ],
+  [
+   23,
+   2,
+   0,
+   20,
+   4,
+   "VAE"
+  ],
+  [
+   30,
+   26,
+   0,
+   20,
+   6,
+   "SAMPLER"
+  ],
+  [
+   32,
+   11,
+   0,
+   27,
+   0,
+   "MODEL"
+  ],
+  [
+   33,
+   27,
+   0,
+   28,
+   0,
+   "SIGMAS"
+  ],
+  [
+   34,
+   28,
+   0,
+   20,
+   7,
+   "SIGMAS"
+  ],
+  [
+   48,
+   20,
+   0,
+   36,
+   0,
+   "LATENT"
+  ],
+  [
+   51,
+   2,
+   0,
+   36,
+   1,
+   "VAE"
+  ],
+  [
+   59,
+   42,
+   1,
+   13,
+   6,
+   "INT"
+  ],
+  [
+   68,
+   50,
+   0,
+   49,
+   1,
+   "FLOAT"
+  ],
+  [
+   96,
+   68,
+   0,
+   67,
+   0,
+   "MOGE_GEOMETRY"
+  ],
+  [
+   97,
+   70,
+   0,
+   68,
+   0,
+   "MOGE_MODEL"
+  ],
+  [
+   106,
+   67,
+   0,
+   55,
+   0,
+   "IMAGE"
+  ],
+  [
+   124,
+   55,
+   0,
+   92,
+   1,
+   "IMAGE"
+  ],
+  [
+   140,
+   164,
+   0,
+   68,
+   1,
+   "IMAGE"
+  ],
+  [
+   141,
+   162,
+   0,
+   92,
+   2,
+   "MASK"
+  ],
+  [
+   145,
+   108,
+   0,
+   105,
+   0,
+   "VOSR2_MODEL"
+  ],
+  [
+   146,
+   105,
+   0,
+   106,
+   0,
+   "IMAGE"
+  ],
+  [
+   148,
+   36,
+   0,
+   105,
+   1,
+   "IMAGE"
+  ],
+  [
+   150,
+   29,
+   0,
+   30,
+   0,
+   "IMAGE"
+  ],
+  [
+   153,
+   164,
+   0,
+   111,
+   0,
+   "IMAGE"
+  ],
+  [
+   154,
+   92,
+   0,
+   112,
+   0,
+   "IMAGE"
+  ],
+  [
+   163,
+   42,
+   1,
+   117,
+   6,
+   "INT"
+  ],
+  [
+   165,
+   117,
+   2,
+   49,
+   0,
+   "AUDIO"
+  ],
+  [
+   159,
+   36,
+   0,
+   115,
+   0,
+   "IMAGE"
+  ],
+  [
+   171,
+   164,
+   0,
+   92,
+   0,
+   "IMAGE"
+  ],
+  [
+   173,
+   13,
+   0,
+   126,
+   0,
+   "MODEL"
+  ],
+  [
+   175,
+   92,
+   0,
+   126,
+   3,
+   "IMAGE"
+  ],
+  [
+   176,
+   2,
+   0,
+   126,
+   2,
+   "VAE"
+  ],
+  [
+   177,
+   127,
+   0,
+   126,
+   1,
+   "MODEL_PATCH"
+  ],
+  [
+   181,
+   49,
+   0,
+   115,
+   1,
+   "AUDIO"
+  ],
+  [
+   182,
+   49,
+   0,
+   106,
+   1,
+   "AUDIO"
+  ],
+  [
+   184,
+   132,
+   0,
+   133,
+   0,
+   "LATENT"
+  ],
+  [
+   185,
+   134,
+   0,
+   133,
+   1,
+   "MASK"
+  ],
+  [
+   186,
+   133,
+   0,
+   135,
+   1,
+   "LATENT"
+  ],
+  [
+   187,
+   4,
+   0,
+   132,
+   1,
+   "VAE"
+  ],
+  [
+   188,
+   49,
+   0,
+   132,
+   0,
+   "AUDIO"
+  ],
+  [
+   189,
+   12,
+   1,
+   135,
+   0,
+   "LATENT"
+  ],
+  [
+   190,
+   135,
+   0,
+   20,
+   5,
+   "LATENT"
+  ],
+  [
+   196,
+   117,
+   0,
+   32,
+   0,
+   "IMAGE"
+  ],
+  [
+   197,
+   150,
+   1,
+   138,
+   0,
+   "INT"
+  ],
+  [
+   198,
+   144,
+   1,
+   138,
+   1,
+   "INT"
+  ],
+  [
+   199,
+   143,
+   0,
+   140,
+   0,
+   "IMAGE"
+  ],
+  [
+   202,
+   147,
+   0,
+   143,
+   0,
+   "LATENT"
+  ],
+  [
+   205,
+   153,
+   0,
+   147,
+   3,
+   "NOISE"
+  ],
+  [
+   206,
+   151,
+   0,
+   147,
+   4,
+   "SAMPLER"
+  ],
+  [
+   207,
+   145,
+   0,
+   147,
+   5,
+   "SIGMAS"
+  ],
+  [
+   208,
+   138,
+   0,
+   147,
+   7,
+   "H3_UPSCALE_PARAM"
+  ],
+  [
+   209,
+   139,
+   0,
+   147,
+   8,
+   "H3_TEMPORAL_PARAM"
+  ],
+  [
+   226,
+   15,
+   0,
+   147,
+   0,
+   "MODEL"
+  ],
+  [
+   227,
+   20,
+   0,
+   147,
+   2,
+   "LATENT"
+  ],
+  [
+   228,
+   142,
+   0,
+   147,
+   1,
+   "CONDITIONING"
+  ],
+  [
+   231,
+   15,
+   0,
+   145,
+   0,
+   "MODEL"
+  ],
+  [
+   232,
+   2,
+   0,
+   143,
+   1,
+   "VAE"
+  ],
+  [
+   234,
+   20,
+   0,
+   160,
+   0,
+   "LATENT"
+  ],
+  [
+   174,
+   126,
+   0,
+   11,
+   0,
+   "MODEL"
+  ],
+  [
+   57,
+   41,
+   0,
+   42,
+   0,
+   "FLOAT"
+  ],
+  [
+   67,
+   42,
+   1,
+   50,
+   0,
+   "INT"
+  ],
+  [
+   220,
+   3,
+   0,
+   142,
+   0,
+   "CLIP"
+  ],
+  [
+   221,
+   2,
+   0,
+   142,
+   1,
+   "VAE"
+  ],
+  [
+   222,
+   4,
+   0,
+   142,
+   2,
+   "VAE"
+  ],
+  [
+   219,
+   30,
+   0,
+   142,
+   3,
+   "IMAGE"
+  ],
+  [
+   203,
+   146,
+   1,
+   144,
+   0,
+   "INT"
+  ],
+  [
+   216,
+   156,
+   0,
+   146,
+   0,
+   "FLOAT"
+  ],
+  [
+   218,
+   39,
+   1,
+   146,
+   1,
+   "INT"
+  ],
+  [
+   215,
+   156,
+   0,
+   149,
+   0,
+   "FLOAT"
+  ],
+  [
+   217,
+   39,
+   0,
+   149,
+   1,
+   "INT"
+  ],
+  [
+   211,
+   149,
+   1,
+   150,
+   0,
+   "INT"
+  ],
+  [
+   12,
+   3,
+   0,
+   12,
+   0,
+   "CLIP"
+  ],
+  [
+   13,
+   2,
+   0,
+   12,
+   1,
+   "VAE"
+  ],
+  [
+   14,
+   4,
+   0,
+   12,
+   2,
+   "VAE"
+  ],
+  [
+   36,
+   30,
+   0,
+   12,
+   3,
+   "IMAGE"
+  ],
+  [
+   235,
+   92,
+   0,
+   12,
+   6,
+   "IMAGE"
+  ],
+  [
+   54,
+   39,
+   0,
+   12,
+   13,
+   "INT"
+  ],
+  [
+   55,
+   39,
+   1,
+   12,
+   14,
+   "INT"
+  ],
+  [
+   58,
+   42,
+   1,
+   12,
+   15,
+   "INT"
+  ],
+  [
+   223,
+   150,
+   1,
+   142,
+   8,
+   "INT"
+  ],
+  [
+   224,
+   144,
+   1,
+   142,
+   9,
+   "INT"
+  ],
+  [
+   225,
+   42,
+   1,
+   142,
+   10,
+   "INT"
+  ],
+  [
+   238,
+   137,
+   0,
+   12,
+   12,
+   "STRING"
+  ],
+  [
+   239,
+   161,
+   0,
+   162,
+   "bg_removal_model",
+   "BACKGROUND_REMOVAL"
+  ],
+  [
+   240,
+   32,
+   0,
+   162,
+   "image",
+   "IMAGE"
+  ],
+  [
+   241,
+   32,
+   3,
+   163,
+   "width",
+   "INT"
+  ],
+  [
+   242,
+   32,
+   4,
+   163,
+   "height",
+   "INT"
+  ],
+  [
+   243,
+   163,
+   0,
+   164,
+   "destination",
+   "IMAGE"
+  ],
+  [
+   244,
+   32,
+   0,
+   164,
+   "source",
+   "IMAGE"
+  ],
+  [
+   245,
+   162,
+   0,
+   164,
+   "mask",
+   "MASK"
+  ]
+ ],
+ "groups": [
+  {
+   "id": 4,
+   "title": "参考数据处理",
+   "bounding": [
+    1500,
+    4260,
+    2970,
+    1050
+   ],
+   "color": "#3f789e",
+   "flags": {}
+  },
+  {
+   "id": 6,
+   "title": "视频放大",
+   "bounding": [
+    5480,
+    3260,
+    1420,
+    520
+   ],
+   "color": "#3f789e",
+   "flags": {}
+  },
+  {
+   "id": 7,
+   "title": "controlnet控制条件",
+   "bounding": [
+    4530,
+    2730,
+    590,
+    450
+   ],
+   "color": "#3f789e",
+   "flags": {}
+  },
+  {
+   "id": 8,
+   "title": "生产",
+   "bounding": [
+    1500,
+    3240,
+    2970,
+    980
+   ],
+   "color": "#3f789e",
+   "flags": {}
+  },
+  {
+   "id": 9,
+   "title": "音频遮罩",
+   "bounding": [
+    3180,
+    3880,
+    520,
+    310
+   ],
+   "color": "#3f789e",
+   "flags": {}
+  },
+  {
+   "id": 10,
+   "title": "分块放大",
+   "bounding": [
+    5480,
+    3830,
+    2460,
+    1420
+   ],
+   "color": "#3f789e",
+   "flags": {}
+  }
+ ],
+ "config": {},
+ "extra": {
+  "ue_links": [],
+  "ds": {
+   "scale": 0.3321506250000001,
+   "offset": [
+    545.651686543432,
+    -2615.2152962044397
+   ]
+  },
+  "links_added_by_ue": [],
+  "frontendVersion": "1.55.14",
+  "VHS_latentpreview": true,
+  "VHS_latentpreviewrate": 0,
+  "VHS_MetadataImage": true,
+  "VHS_KeepIntermediate": true
+ },
+ "version": 0.4,
+ "seed_widgets": {
+  "20": 0,
+  "105": 1,
+  "153": 0
+ }
+}

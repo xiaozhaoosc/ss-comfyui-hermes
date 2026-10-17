@@ -365,6 +365,7 @@ def parse_args(argv=None):
                     help="internal=内置 DWPreprocessor；ours=用 keypoints.json 重绘控制视频")
     ap.add_argument("--frame-offset", type=int, default=0, help="起始帧偏移")
     ap.add_argument("--dry-run", action="store_true", help="只校验、不提交")
+    ap.add_argument("--dump-api", default=None, help="只把注入后的 API 格式工作流写出到该路径并退出（供 api2canvas 转 UI 版）")
     return ap.parse_args(argv)
 
 
@@ -471,8 +472,23 @@ def main(argv=None):
     else:
         # internal：--frame-offset 映射到 WanAnimateToVideo.video_frame_offset
         wf["17"]["inputs"]["video_frame_offset"] = args.frame_offset
+        # 姿态/人脸检测的输入分辨率跟随目标画幅：否则 9:16 竖屏会被 512×512 中心裁剪掉大半。
+        # 默认 512×512 时与原行为完全一致（向后兼容）。
+        wf["14"]["inputs"]["width"] = args.width
+        wf["14"]["inputs"]["height"] = args.height
 
     wf["21"]["inputs"]["filename_prefix"] = filename_prefix
+
+    if args.dump_api:
+        # UI 版要手工操作：把输入指向 input/ 下的稳定平铺文件名（VHS 下拉是扁平非递归的，
+        # 子目录路径在下拉里选不到），并给一个固定产物前缀。
+        wf["10"]["inputs"]["image"] = os.path.basename(args.ref_image)
+        wf["12"]["inputs"]["file"] = os.path.basename(args.video)
+        wf["21"]["inputs"]["filename_prefix"] = "wan_animate_ui/jia_wan_internal"
+        with open(args.dump_api, "w", encoding="utf-8") as f:
+            json.dump(wf, f, ensure_ascii=False, indent=2)
+        print("  已写出 API 工作流: %s（供 tools/api2canvas.py 转 UI 版）" % args.dump_api)
+        return 0
 
     # 10. dry-run
     if args.dry_run:

@@ -1,0 +1,113 @@
+{
+  "1": {
+    "class_type": "VHS_LoadVideo",
+    "inputs": {
+      "video": "bgswap/ayano_dcab_src.mp4",
+      "force_rate": 0,
+      "custom_width": 0,
+      "custom_height": 0,
+      "frame_load_cap": 0,
+      "skip_first_frames": 0,
+      "select_every_nth": 1,
+      "format": "AnimateDiff"
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "bgswap/ayano_dcab_bg.png"
+    }
+  },
+  "11": {
+    "class_type": "ImageScale",
+    "inputs": {
+      "image": ["10", 0],
+      "upscale_method": "lanczos",
+      "width": 720,
+      "height": 1280,
+      "crop": "center"
+    }
+  },
+  "12": {
+    "class_type": "RepeatImageBatch",
+    "inputs": {
+      "image": ["11", 0],
+      "amount": 312
+    }
+  },
+  "4": {
+    "class_type": "LoadBackgroundRemovalModel",
+    "inputs": {
+      "bg_removal_name": "BiRefNet-general.safetensors"
+    }
+  },
+  "20": {
+    "class_type": "ResizeAndPadImage",
+    "inputs": {
+      "image": ["1", 0],
+      "target_width": 1280,
+      "target_height": 1280,
+      "padding_color": "black",
+      "interpolation": "lanczos"
+    }
+  },
+  "5": {
+    "class_type": "RemoveBackground",
+    "inputs": {
+      "bg_removal_model": ["4", 0],
+      "image": ["20", 0]
+    }
+  },
+  "21": {
+    "class_type": "CropMask",
+    "inputs": {
+      "mask": ["5", 0],
+      "x": 280,
+      "y": 0,
+      "width": 720,
+      "height": 1280
+    }
+  },
+  "6": {
+    "class_type": "GrowMaskWithBlur",
+    "inputs": {
+      "mask": ["21", 0],
+      "expand": 0,
+      "incremental_expandrate": 0.0,
+      "tapered_corners": true,
+      "flip_input": false,
+      "blur_radius": 3.0,
+      "lerp_alpha": 1.0,
+      "decay_factor": 1.0,
+      "fill_holes": false
+    }
+  },
+  "13": {
+    "class_type": "ImageCompositeMasked",
+    "inputs": {
+      "destination": ["12", 0],
+      "source": ["1", 0],
+      "x": 0,
+      "y": 0,
+      "resize_source": false,
+      "mask": ["6", 0]
+    }
+  },
+  "30": {
+    "class_type": "VHS_VideoCombine",
+    "inputs": {
+      "images": ["13", 0],
+      "audio": ["1", 2],
+      "frame_rate": 30,
+      "loop_count": 0,
+      "filename_prefix": "2026-10-17/bgswap/ayano_dcab_v1",
+      "format": "video/h264-mp4",
+      "pix_fmt": "yuv420p",
+      "crf": 19,
+      "save_metadata": true,
+      "trim_to_audio": false,
+      "pingpong": false,
+      "save_output": true
+    }
+  }
+}

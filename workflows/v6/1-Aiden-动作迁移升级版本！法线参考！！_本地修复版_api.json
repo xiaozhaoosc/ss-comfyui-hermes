@@ -1,0 +1,620 @@
+{
+  "2": {
+    "inputs": {
+      "vae_name": "minimax_h3_video_vae_int8_convrot.safetensors"
+    },
+    "class_type": "VAELoader"
+  },
+  "3": {
+    "inputs": {
+      "clip_name": "qwen3vl_32b_minimax_h3_int8_convrot.safetensors",
+      "type": "minimax",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader"
+  },
+  "4": {
+    "inputs": {
+      "vae_name": "minimax_h3_audio_vae_fp32.safetensors"
+    },
+    "class_type": "VAELoader"
+  },
+  "5": {
+    "inputs": {
+      "unet_name": "minimax_h3_ref2va_pruned_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader"
+  },
+  "6": {
+    "inputs": {
+      "lora_name": "Motion_Repair_V2.safetensors",
+      "strength_model": 0.3,
+      "model": [
+        "9",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly"
+  },
+  "7": {
+    "inputs": {
+      "shift_video": 12,
+      "shift_audio": 3,
+      "model": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "MiniMaxH3SigmaShift"
+  },
+  "8": {
+    "inputs": {
+      "attention": "comfy kitchen attention",
+      "model": [
+        "7",
+        0
+      ]
+    },
+    "class_type": "ModelAttentionBackend"
+  },
+  "9": {
+    "inputs": {
+      "lora_name": "minimax_h3_DMAD_4step_full_lora_avg_rank_39_bf16.safetensors",
+      "strength_model": 1,
+      "model": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly"
+  },
+  "11": {
+    "inputs": {
+      "selection": "sol-attn",
+      "selection.tau": 1.1,
+      "start_percent": 0.2,
+      "end_percent": 1,
+      "dense_blocks": "",
+      "min_tokens": 12288,
+      "extra_tokens": 256,
+      "sink_conditioning": "exact_kv_and_rows",
+      "verbose": false,
+      "model": [
+        "13",
+        0
+      ]
+    },
+    "class_type": "BlockSparseAttention"
+  },
+  "12": {
+    "inputs": {
+      "prompt": [
+        "137",
+        0
+      ],
+      "width": [
+        "39",
+        0
+      ],
+      "height": [
+        "39",
+        1
+      ],
+      "length": [
+        "42",
+        1
+      ],
+      "ref_image_size": "match",
+      "clip": [
+        "3",
+        0
+      ],
+      "vae": [
+        "2",
+        0
+      ],
+      "audio_vae": [
+        "4",
+        0
+      ],
+      "ref_images.ref_image_0": [
+        "30",
+        0
+      ],
+      "ref_videos.ref_video_0": [
+        "92",
+        0
+      ]
+    },
+    "class_type": "MiniMaxH3ReferenceToVideo"
+  },
+  "13": {
+    "inputs": {
+      "max_resolution": 1024,
+      "jpeg_quality": 80,
+      "suppress_default_preview": true,
+      "preview_frames": [
+        "42",
+        1
+      ],
+      "preview_fps": 12,
+      "tiny_vae": "taeh3.safetensors",
+      "model": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "ModelPreviewOverrideKJ"
+  },
+  "15": {
+    "inputs": {
+      "tau": 0.2,
+      "log_diagnostics": false,
+      "model": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "SelfLiftAvatarH3TST"
+  },
+  "20": {
+    "inputs": {
+      "seed": 210,
+      "cfg": 1,
+      "transition_step": 6,
+      "lowres_scale": 0.5,
+      "rho": 0,
+      "w_min": 0.5,
+      "w_max": 1,
+      "upscaler_model": "h3_upscaler_lms_v0.1_fp32.safetensors",
+      "highres_tiling": false,
+      "tiling_mode": "auto",
+      "tiling_tiles": 2,
+      "tiling_axis": "auto",
+      "low_res_model": [
+        "15",
+        0
+      ],
+      "positive": [
+        "12",
+        0
+      ],
+      "negative": [
+        "21",
+        0
+      ],
+      "vae": [
+        "2",
+        0
+      ],
+      "latent_image": [
+        "12",
+        1
+      ],
+      "sampler": [
+        "26",
+        0
+      ],
+      "sigmas": [
+        "28",
+        0
+      ]
+    },
+    "class_type": "SelfLiftAvatarH3Sampler"
+  },
+  "21": {
+    "inputs": {
+      "conditioning": [
+        "12",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut"
+  },
+  "26": {
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "class_type": "KSamplerSelect"
+  },
+  "27": {
+    "inputs": {
+      "scheduler": "simple",
+      "steps": 8,
+      "denoise": 1,
+      "model": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "BasicScheduler"
+  },
+  "28": {
+    "inputs": {
+      "extra_steps": 1,
+      "start_at_sigma": 0.7,
+      "end_at_sigma": 0,
+      "spacing": "cosine",
+      "sigmas": [
+        "27",
+        0
+      ]
+    },
+    "class_type": "H3SigmaRefiner"
+  },
+  "29": {
+    "inputs": {
+      "image": "ig_target_character.jpeg"
+    },
+    "class_type": "LoadImage"
+  },
+  "30": {
+    "inputs": {
+      "aspect_ratio": "original",
+      "proportional_width": 1,
+      "proportional_height": 1,
+      "fit": "crop",
+      "method": "lanczos",
+      "round_to_multiple": "32",
+      "scale_to_side": "longest",
+      "scale_to_length": 1536,
+      "background_color": "#000000",
+      "image": [
+        "29",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageScaleByAspectRatio V2"
+  },
+  "31": {
+    "inputs": {
+      "video": "白模1.mp4",
+      "force_rate": 24,
+      "custom_width": 0,
+      "custom_height": 0,
+      "frame_load_cap": 0,
+      "skip_first_frames": 0,
+      "select_every_nth": 1,
+      "format": "AnimateDiff"
+    },
+    "class_type": "VHS_LoadVideo",
+    "_meta": {
+      "title": "加载视频"
+    }
+  },
+  "32": {
+    "inputs": {
+      "aspect_ratio": "original",
+      "proportional_width": 1,
+      "proportional_height": 1,
+      "fit": "crop",
+      "method": "lanczos",
+      "round_to_multiple": "32",
+      "scale_to_side": "longest",
+      "scale_to_length": 736,
+      "background_color": "#000000",
+      "image": [
+        "117",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageScaleByAspectRatio V2"
+  },
+  "36": {
+    "inputs": {
+      "samples": [
+        "20",
+        0
+      ],
+      "vae": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "39": {
+    "inputs": {
+      "aspect_ratio": "9:16 (Portrait Widescreen)",
+      "megapixels": 0.5,
+      "multiple": 32
+    },
+    "class_type": "ResolutionSelector"
+  },
+  "41": {
+    "inputs": {
+      "value": 5
+    },
+    "class_type": "PrimitiveFloat",
+    "_meta": {
+      "title": "Float (Duration)"
+    }
+  },
+  "42": {
+    "inputs": {
+      "expression": "max(5, round(a * 24)) + (5 - (max(5, round(a * 24)) % 17)) % 17",
+      "values.a": [
+        "41",
+        0
+      ]
+    },
+    "class_type": "ComfyMathExpression"
+  },
+  "49": {
+    "inputs": {
+      "start_index": 0,
+      "duration": [
+        "50",
+        0
+      ],
+      "audio": [
+        "117",
+        2
+      ]
+    },
+    "class_type": "TrimAudioDuration"
+  },
+  "50": {
+    "inputs": {
+      "expression": "a/24",
+      "values.a": [
+        "42",
+        1
+      ]
+    },
+    "class_type": "ComfyMathExpression"
+  },
+  "55": {
+    "inputs": {
+      "purge_cache": true,
+      "purge_models": true,
+      "anything": [
+        "67",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: PurgeVRAM V2"
+  },
+  "67": {
+    "inputs": {
+      "output": "normal_opengl",
+      "moge_geometry": [
+        "68",
+        0
+      ]
+    },
+    "class_type": "MoGeRender"
+  },
+  "68": {
+    "inputs": {
+      "resolution_level": 9,
+      "fov_x_degrees": 0,
+      "batch_size": 4,
+      "force_projection": true,
+      "apply_mask": true,
+      "refine_steps": 3,
+      "moge_model": [
+        "70",
+        0
+      ],
+      "image": [
+        "164",
+        0
+      ]
+    },
+    "class_type": "MoGeInference"
+  },
+  "70": {
+    "inputs": {
+      "model_name": "moge_3_vitg_fp16.safetensors"
+    },
+    "class_type": "LoadMoGeModel"
+  },
+  "91": {
+    "inputs": {
+      "positive": "subject_definitions:\n<Subject 1> is the single target person in <Picture 1>. Preserve the reference identity, age, facial structure, hairstyle, hair length and silhouette, physique, clothing construction, accessories and footwear. Multiple views on the sheet describe the same individual. The picture defines appearance only, not the opening pose, expression or action timing.\n<Subject 2> is the pair of handguns visible in the X white-model reference <Video 1>. Preserve each source gun's rigid shape, barrel and slide proportions, grip, metallic surfaces, corresponding hand, hand-relative orientation and source-visible flash events. Track actual visibility and contact rather than requiring an unsupported permanent fist grip.\n<Subject 3> is the complete source performance in <Video 1>, including torso and pelvis motion, head direction, shoulders, elbows, wrists, palms, fingers, supporting legs, lifted legs, foot paths, balance, small holds and gun coordination. Transfer this performance without the white model's identity, anatomy-specific proportions, materials, seams or costume.\n<Video 1> is the original vertical X white-model video, not the AnimateDiff result. Its verified visual stream is 720×1280, constant 24 fps, 419 frames, with zero-based source frames F0 through F418. Frame Fn begins at t=n/24 seconds. The visual interval ends at 17.458333 seconds. F415 is the last visible character frame; F416–F418 are black tail frames.\n<Audio 1> is the original synchronized soundtrack of <Video 1>, reused at its existing start point and speed. Its approximately 17.504-second audio tail does not redefine the 17.458333-second visual motion interval.\n\nsummary:\n[reference generation + audio reuse] Generate <Subject 1> performing <Subject 3> with <Subject 2>, using the original <Video 1> as the sole action and timing master. Match the verified source-frame anchors below and preserve every intervening source transition. Maintain target appearance from <Picture 1>, source 9:16 composition and source-relative framing changes. Do not use the mismatched AnimateDiff result as choreography, timing, camera or ending guidance.\n\nretention_analysis:\n<Subject 1> (all visible performance frames): fully_preserved - preserve identity, body proportions, hair, wardrobe and accessories while posture and acting follow the source performance.\n<Subject 2> (at corresponding source visibility): fully_preserved - preserve both guns, hand ownership, rigid geometry, contact changes, relative rotations and observed flash events.\n<Subject 3> (F0–F415): attribute_transfer - transfer the source's complete movement and coordination onto the target anatomy, retaining action order and timing.\n<Video 1> (visual timeline and camera): fully_preserved - retain its 419-frame visual sequence, frame times, screen orientation, framing changes and terminal black frames within this defined role.\n<Audio 1>: fully_copy - preserve the source audio's sample timing, rhythm, pitch and content without regenerated speech or added effects.\n\ndetailed_description:\nCreate a realistic target-character performance in a simple neutral-grey studio with subtle floor contact shadows. Use the source's vertical 9:16 frame, viewing direction and changes of subject scale. Motion blur follows source movement; target skin, hair, garment materials and footwear remain consistent.\n\n[Shot 1] Begin immediately in source F0's state. Hands are near the waist, elbows bent and the body near front-facing. Do not begin from the identity sheet's standing pose, add an introduction or start with a later raised-gun pose. Follow the reference's own camera sequence without adding a new cinematic shot plan.\n\nTIME AND ANCHOR RULES:\nUse source time t as target time t, with no global offset, local time stretching, rhythm reinterpretation or event reordering. At 24 fps, target Fn corresponds to source Fn. If the output uses another frame rate, evaluate the source at the same actual time rather than matching frame numbers or rescaling the entire dance.\n\nThe anchors below are observed snapshots from exact source frames. They are not instructions to start an action at that time, not isolated keyframes to interpolate freely between, and not minimum-time deadlines. At each listed time the target must already occupy the corresponding source posture and current movement state. The onset, path, pauses and completion between anchors remain governed by the intervening source frames.\n\nLeft and right screen directions below refer to the displayed source frame at that anchor, not permanent anatomical hand labels. Maintain each gun's actual anatomical hand ownership through turns. Where the source crop hides a foot or weapon, retain the source crop and natural occlusion; do not invent a supporting-foot change or widen the camera just to show it.\n\nSOURCE-FRAME ANCHORS IN PLAYBACK ORDER:\n\nA01 — F0 / 00:00.000:\nNear-front body, arms bent with both hands gathered at waist level, legs separated in the source stance. Match the source head tilt and actual hand/object visibility. This is the opening state, not a posed identity-image introduction.\n\nA02 — F12 / 00:00.500:\nBoth elbows are lifted outward and the palms are raised near head height in the source open-hand gesture. The head is tilted, torso and shoulders follow the visible sway. Match the observed empty-palm visibility instead of forcing two guns into a frame where they are not shown.\n\nA03 — F24 / 00:01.000:\nHands return toward the waist with elbows spread, and the stance widens. Preserve finger and wrist orientation and the actual visibility around the hands and belt. Do not already jump into the later overhead or rear-leg pose.\n\nA04 — F36 / 00:01.500:\nThe knees are bending into the low wide stance, arms and visible guns moving downward beside the trunk. This is a moving descent, with visible source blur, not a frozen upright gun-display pose. Guns follow their observed directions.\n\nA05 — F48 / 00:02.000:\nThe body is low in a broad bent-knee stance. Both elbows bend and both guns stand beside the face, with the source head tilt. Match the depth of the squat, shoulder relationship and gun-to-palm angles; do not raise one entire arm straight overhead.\n\nA06 — F72 / 00:03.000:\nThe source is near front-facing with bent knees and both gun-bearing elbows still flexed, guns near the face/upper chest during the transition. Keep this stage distinct from the later single-arm overhead extension. Do not substitute a back-kick or single-leg catch.\n\nA07 — F84 / 00:03.500:\nThe source is side-facing toward screen-right. One gun-bearing arm extends horizontally toward screen-right while the other folds across the chest toward screen-left. The body leans and the legs follow the source crossing support. Visible muzzle flashes belong to the corresponding barrels and directions. This is the lateral dual-gun phrase.\n\nA08 — F96 / 00:04.000:\nThe torso has returned toward a front three-quarter view with flexed knees and a lateral lean. The screen-right gun is bent up near the head; the screen-left elbow is out and its gun-hand travels lower. Retain this asymmetry and current foot placement rather than replacing it with a new knee-lift or overhead hold.\n\nA09 — F120 / 00:05.000:\nFollow the source arm sweep: one gun-hand rises in front of or near the head while the other reaches downward, with the torso and knees participating. This frame is transitional and motion-blurred. Preserve the sweep trajectory; do not turn it into an invented held pose.\n\nA10 — F144 / 00:06.000:\nThe source arms continue their crossing/head-level sweep with the trunk leaning through the reversal and the legs maintaining the visible wide support. Match both hands' current positions and directions from F144. Keep the intermediate transition rather than skipping directly to the next open-arm state.\n\nA11 — F168 / 00:07.000:\nThe source faces toward screen-left. One arm reaches diagonally toward upper-left while the other is bent back with its gun lower. A bent-leg step lifts a foot in the source pattern. Preserve the side-facing torso, knee bend and forward/crossing leg travel. This is not the later rear-leg-to-ankle pose.\n\nA12 — F192 / 00:08.000:\nContinue the side-facing diagonal reach toward upper-left; the opposite arm opens toward the right edge in the source crop. The bent-leg stepping phrase continues with its existing support and weight transfer. Do not reset the torso square to the camera or replace this with generic arm waving.\n\nA13 — F216 / 00:09.000:\nThe torso leans toward screen-left while the screen-right gun-bearing arm reaches high diagonally. The opposite arm travels low. Reproduce the visible flash at the raised source barrel. Preserve this long body diagonal and the source stance instead of performing the ankle-catch phrase.\n\nA14 — F240 / 00:10.000:\nThe source changes to the opposite high-low arm relationship: the screen-left gun-bearing arm is raised near/above the head, the screen-right gun-hand is low near the hip. Knees stay flexed in the source lateral weight shift. Keep the arm reversal in this original order.\n\nA15 — F264 / 00:11.000:\nThe source is already balancing on one leg. The other leg is bent and lifted behind/alongside the body, with the foot visible toward screen-left near waist level. The hand nearest that ankle reaches to or contacts the ankle region while retaining its source pistol relationship; the other gun is near the screen-right side of the face. Match the strong torso lean and one-leg support. This distinctive rear-leg/ankle pose belongs here, not at 17 seconds.\n\nA16 — F288 / 00:12.000:\nThe rear-leg/ankle pose is still present with its continued source lean and head direction. Preserve its actual persistence and small changes. Do not compress this stage into one frame, omit it, or immediately lower the foot just because another anchor follows.\n\nA17 — F312 / 00:13.000:\nThe rear-leg phrase has transitioned into the source's side-facing raised-forward-knee step. The arms/guns are drawn toward the rear-hip/back region in the source view. Match the source trunk turn, bent support and lifted leg. This differs from the rear-foot catch and must not be replaced by a head-level double-gun pose.\n\nA18 — F336 / 00:14.000:\nThe source is returning toward front-facing with elbows bent outward and the guns raised around shoulder/head level. Legs and torso are transitioning through the visible step into the next broad stance. Preserve the current weight transfer rather than adding a static reset.\n\nA19 — F360 / 00:15.000:\nBoth arms cross horizontally in front of the torso, with guns pointing toward opposite screen directions and visible flashes at the corresponding source barrels. Legs are separated and knees flexed. Match the upper and lower arm crossing order and both independent gun directions. Do not substitute a single diagonal shot.\n\nA20 — F384 / 00:16.000:\nThe arms reopen laterally while the torso leans and the legs maintain the source wide support. Preserve the visible arm travel and the source edge crop. This is the late reopening after the crossed-gun phrase, not a repetition of the opening empty palms.\n\nA21 — F408 / 00:17.000:\nThe target must already be in the final source phrase: near-front wide stance, one gun-bearing forearm raised by the screen-right side of the head, the other gun-arm drawn horizontally across the upper chest. Both legs are down in the source support. No rear-leg/ankle-catch pose belongs here.\n\nA22 — F415 / 00:17.291667:\nThis is the last visible character frame. Match its low wide stance, head-facing direction, gun near the head and other gun-arm across the chest. Preserve the small differences from F408 rather than freezing F408 for the remainder. Do not append a new finale, lifted leg, salute, turn or settled display pose.\n\nA23 — F416 / 00:17.333333, through F418 / 00:17.416667:\nThe source is black in these terminal frames. Preserve this existing short black ending; it is not a window for more choreography. The final frame's display interval ends at 17.458333 seconds. Any original audio tail extending to approximately 17.504 seconds remains an audio tail only and must not stretch the visual action.\n\nCONTINUOUS MOTION BETWEEN ANCHORS:\nUse every intervening source pose and motion state. Do not choose a few recognizable gun-dance gestures and perform them in a new order. The rear-leg catch, forward knee lift, opposite high-low arms, crossed-gun phrase and final raised-forearm state remain distinct events in their source positions.\n\nPreserve how head, shoulder girdle, pelvis, knees and hands act together. Source holds keep their full duration; moving intervals keep their actual speed and acceleration. A supporting foot does not glide merely because the source model has bare feet while the target wears different shoes. Adapt target footwear contact, ankle compensation and garment clearance without changing the source support sequence or timing.\n\nGUN AND HAND MOTION:\nTrack each gun as a rigid object whose orientation relative to its palm follows the reference. Preserve wrist orientation, barrel direction, grip direction and visible contact changes separately from arm travel. During source-supported flips or regrips, reproduce the intermediate states instead of locking a fixed weapon to the moving fist. During stable holds, preserve the stable source hold. Do not invent finger spins, airborne releases or full revolutions absent from the frames.\n\nSource visibility governs the opening, occlusions and reappearances. Preserve two identifiable weapons whenever both are visible, keeping their corresponding hands and shapes. Flash timing, duration and barrel direction follow the original video, not a guessed musical beat. Flash light briefly touches target fingers and cloth, then disappears. No additional firing event, target, explosion, combat or reload is introduced.\n\nAPPEARANCE AND PRESENTATION:\nAll target hair length, haircut, clothing shape, accessories and footwear come from <Picture 1>, not the source silhouette. Transfer head and body kinematics; regenerate target-specific hair and garment responses from those movements. Do not copy the white model's bald head, seams, proportions, test surfaces or attached costume geometry.\n\nKeep the reference framing at corresponding times. Where the source is tighter, retain that relationship; where it reveals whole-body steps, show the corresponding feet and support. Do not replace the vertical sequence with a new horizontal wide shot or invent camera cuts, orbits or hero poses.\n\nUse restrained neutral studio light, natural target skin and clear wardrobe materials. Facial demeanor remains compatible with the source head action without inventing speech or human articulation unsupported by the white model. Keep identity stable through blur and turns; do not stabilize the face independently while allowing the torso to lag.\n\noverall_soundscape:\nReuse all existing sound layers in <Audio 1> without regeneration, additional gunshots, new dialogue or new movement effects. Maintain their original sample position relative to the source visual timeline.\n\nnon_diegetic_music:\nKeep any original music within <Audio 1> at its existing tempo, level, progression and sample timing. Add no replacement score."
+    },
+    "class_type": "easy positive"
+  },
+  "92": {
+    "inputs": {
+      "invert_mask": false,
+      "blend_mode": "normal",
+      "opacity": 100,
+      "background_image": [
+        "164",
+        0
+      ],
+      "layer_image": [
+        "55",
+        0
+      ],
+      "layer_mask": [
+        "162",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: ImageBlend V2"
+  },
+  "94": {
+    "inputs": {
+      "image": "ig_target_character.jpeg"
+    },
+    "class_type": "LoadImage"
+  },
+  "104": {
+    "inputs": {
+      "video": "白模1.mp4",
+      "force_rate": 24,
+      "custom_width": 0,
+      "custom_height": 0,
+      "frame_load_cap": 124,
+      "skip_first_frames": 0,
+      "select_every_nth": 1,
+      "format": "AnimateDiff"
+    },
+    "class_type": "VHS_LoadVideo",
+    "_meta": {
+      "title": "加载视频"
+    }
+  },
+  "111": {
+    "inputs": {
+      "frame_rate": 24,
+      "loop_count": 0,
+      "filename_prefix": "AnimateDiff",
+      "format": "video/h264-mp4",
+      "pingpong": false,
+      "save_output": false,
+      "images": [
+        "164",
+        0
+      ]
+    },
+    "class_type": "VHS_VideoCombine",
+    "_meta": {
+      "title": "合并为视频"
+    }
+  },
+  "112": {
+    "inputs": {
+      "frame_rate": 24,
+      "loop_count": 0,
+      "filename_prefix": "AnimateDiff",
+      "format": "video/h264-mp4",
+      "pingpong": false,
+      "save_output": false,
+      "images": [
+        "92",
+        0
+      ]
+    },
+    "class_type": "VHS_VideoCombine",
+    "_meta": {
+      "title": "合并为视频"
+    }
+  },
+  "115": {
+    "inputs": {
+      "frame_rate": 24,
+      "loop_count": 0,
+      "filename_prefix": "AnimateDiff",
+      "format": "video/h264-mp4",
+      "pingpong": false,
+      "save_output": true,
+      "images": [
+        "36",
+        0
+      ],
+      "audio": [
+        "49",
+        0
+      ]
+    },
+    "class_type": "VHS_VideoCombine",
+    "_meta": {
+      "title": "合并为视频"
+    }
+  },
+  "117": {
+    "inputs": {
+      "video": "白模1.mp4",
+      "force_rate": 24,
+      "custom_width": 0,
+      "custom_height": 0,
+      "frame_load_cap": [
+        "42",
+        1
+      ],
+      "skip_first_frames": 0,
+      "select_every_nth": 1,
+      "format": "AnimateDiff"
+    },
+    "class_type": "VHS_LoadVideo",
+    "_meta": {
+      "title": "加载视频"
+    }
+  },
+  "137": {
+    "inputs": {
+      "positive": "subject_definitions:\n<Subject 1> is the target person in <Picture 1>. Preserve identity, age, facial structure, hairstyle, body proportions, clothing and accessories. Multiple views depict one person; the picture does not prescribe a static pose or expression.\n<Subject 2> is the observable performance in <Video 1>: body, head, arms, palms and fingers, plus clearly readable facial and mouth changes.\n<Video 1> is the motion-normal reference for the selected clip. It supplies the original action order, posture changes, rhythm and timing, not target appearance or final scene content.\n\nsummary:\n[reference generation] Transfer <Subject 2> to <Subject 1>, preserving the source sequence and timing while keeping the target appearance from <Picture 1>. Generate only movements actually present in <Video 1>.\n\nretention_analysis:\n<Subject 1>: fully_preserved - retain identity and appearance while pose and performance change.\n<Subject 2>: attribute_transfer - transfer observable motion and timing to the target anatomy.\n<Video 1>: fully_preserved - retain its defined motion-reference role, excluding visualization colours and source appearance.\n\ndetailed_description:\nCreate a normal full-colour realistic video of <Subject 1>.\n[Shot 1] Start in the source clip's initial motion state. Target time t corresponds to source time t; align by actual time if frame rates differ. Preserve the source duration unless another source interval is explicitly selected.\n\nReproduce the visible body, head, arm, palm and finger changes in their original order. Retain small movements, pauses, amplitude and speed changes. Each body part follows its own source motion with the original coordination; do not expand local motion into additional whole-body movement, skip transitions or introduce new actions.\n\nThe picture controls appearance, not posture. Target hair and clothes keep their own shapes and respond naturally to the inherited movement; source hair and clothing silhouettes are not transferred.\n\nTransfer only clearly readable facial and mouth changes. If usable original human vocals are supplied, source-visible mouth shapes and the real audio signal jointly guide timing; do not estimate phoneme timestamps or invent speech.\n\nFollow the requested scene and camera. Without new camera instructions, retain source framing and viewing direction. Exclude normal colours, grids, markers, reference layouts, subtitles and additional shots.\n\noverall_soundscape:\nIf original audio is supplied and enabled, keep its original start point and speed. Add no new dialogue.\n\nnon_diegetic_music:\nRetain only supplied and enabled source music or music explicitly requested for this task. Add no unrequested score."
+    },
+    "class_type": "easy positive"
+  },
+  "156": {
+    "inputs": {
+      "value": 2
+    },
+    "class_type": "PrimitiveFloat",
+    "_meta": {
+      "title": "Float (Duration)"
+    }
+  },
+  "160": {
+    "inputs": {
+      "samples": [
+        "20",
+        0
+      ]
+    },
+    "class_type": "VAEDecodeAudio"
+  },
+  "161": {
+    "inputs": {
+      "bg_removal_name": "BiRefNet-general.safetensors"
+    },
+    "class_type": "LoadBackgroundRemovalModel"
+  },
+  "162": {
+    "inputs": {
+      "bg_removal_model": [
+        "161",
+        0
+      ],
+      "image": [
+        "32",
+        0
+      ]
+    },
+    "class_type": "RemoveBackground"
+  },
+  "163": {
+    "inputs": {
+      "width": [
+        "32",
+        3
+      ],
+      "height": [
+        "32",
+        4
+      ],
+      "batch_size": [
+        "42",
+        1
+      ],
+      "color": 8882055
+    },
+    "class_type": "EmptyImage"
+  },
+  "164": {
+    "inputs": {
+      "x": 0,
+      "y": 0,
+      "resize_source": false,
+      "destination": [
+        "163",
+        0
+      ],
+      "source": [
+        "32",
+        0
+      ],
+      "mask": [
+        "162",
+        0
+      ]
+    },
+    "class_type": "ImageCompositeMasked"
+  }
+}

@@ -75,7 +75,7 @@ def main() -> int:
     for g in manifest:
         category = CATEGORY.get(g["name"], "full")
         prefix = PREFIX[category]
-        seq = 1 + sum(1 for e in index if e["category"] == category and e["id"].startswith(f"{prefix}_{today}"))
+        seq = 1 + sum(1 for e in index if e["category"] == category and e["garment_id"].startswith(f"{prefix}_{today}"))
         gid = f"{prefix}_{today}_{seq:02d}"
         gdir = os.path.join(LIB_ROOT, category, gid)
         os.makedirs(gdir, exist_ok=True)

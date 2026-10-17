@@ -38,3 +38,35 @@ uv.lock
 /.agents/
 /.cache/
 /.cowart-compat-marketplace/
+
+# === 资产库发布工具（登录态/任务记录/密钥不入库）===
+tools/asset_manager/publish_config.json
+tools/asset_manager/publish_jobs/
+tools/asset_manager/browser_profiles/
+
+# === ideogram4 本地虚拟环境（HF_TOKEN/API Key 一律走环境变量，不入库）===
+/ideogram4_venv/
+
+# === 内嵌仓库与本地大体积目录（不入库）===
+/gfpgan/
+/tools/models/
+/tools/tmp_faceswap_verify/
+/tools/faceswap_app/dist/
+/tools/tiktok-downloader/
+/tools/tiktok_downloader_app/build/
+/tools/tiktok_downloader_app/dist/
+/tools/tiktok_downloader_app/yt-dlp.exe
+
+# === 临时帧/测试输入/缓存（不入库）===
+/temp_frames/
+/temp_faceswap_frames/
+/temp_faceswap_xiaozhan/
+/_compare_frames/
+/test_inputs/
+/tools/.cache/
+/tools/_scratch_h3/
+
+# === 分享包输出/运行日志/本地数据库 ===
+/.trae-html-share-packages/
+*.err
+*.db

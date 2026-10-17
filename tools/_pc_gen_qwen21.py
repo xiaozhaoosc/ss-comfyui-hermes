@@ -43,7 +43,8 @@ DEF_W = DEF_H = 1024
 DEF_SEED_BASE = 800000
 
 QWEN_NEG = ("lowres, bad anatomy, bad hands, extra limbs, deformed, watermark, "
-            "text, jpeg artifacts, blurry, plastic skin, waxy skin")
+            "text, jpeg artifacts, blurry, plastic skin, waxy skin, "
+            "2girls, multiple girls, two people, twin, duplicate, cloned person, extra person")
 
 
 def build(pos, neg, w, h, steps, cfg, seed, prefix, shift=DEF_SHIFT,

@@ -265,3 +265,97 @@
 | `char_lib_add.py` | 角色库入库 | RetinaFace+w600k_r50 双直连（`rec.get(img, SimpleNamespace(kps=...))`）；主脸+备选角度入库、512 维向量、`--matrix` 全库身份 cos |
 
 配套：`batch_faceswap_overlay.py` 已打 P-1..P-10 补丁（绕代理 / /history 终态判定 / 跳过已产出 / _done_map / manifest / --limit / --submit-only / --poll-only / --order-file）。资产库：`character_library/`（角色，对齐 garment_library 约定）。
+
+---
+
+## 十、动作保真客观验收（2026-10-13 新增）
+
+| 脚本 | 用途 | 关键点 |
+|---|---|---|
+| `motion_fidelity_qa.py` | 源视频 vs 产物视频的**动作保真客观比对**：判定产物是"真复刻"还是"另一支舞" | DWPose 抽骨架（`--every` 跨步提速）→ 逐帧以 neck 为原点、|neck-midhip| 为尺度归一化（消平移/画幅差异）→ 重采样到固定时间桶；输出 4 指标：`traj_corr`（关节轨迹时间相关）、`orient_corr`（肩线角度，抓转身/侧身）、`pose_err`（姿势误差，单位=躯干长度）、`dyn_corr`（仅参考）。判定阈值 `_THRESH` 经合成数据噪声 0.005~0.2 标定（traj≥0.50 / orient≥0.50 / err≤0.30）；`--self-test` 离线 4/4 PASS（同动作+独立噪声 PASS、平移缩放不变 PASS、异动作 FAIL、静止 FAIL）。实测：H3 现成片 traj=0.085 / orient=-0.295 → FAIL（机会水平 -0.108），坐实"转身/侧身未复刻" |
+
+**已知坑**：`--ref-video` 与 `--cand-video` 必须**时间窗对齐**（若产物只渲染了源视频的一段，需先裁出对应时长的参考片段，否则归一化时间轴对不上，比对无效）。
+
+**2026-10-14 补充（对齐搜索 + 转身/身份闸门）**：生成模型有时间膨胀（Wan 49→53 帧），产物内容相对控制帧**整体偏移约 3 帧**，标称对齐会把 PASS 误判成 FAIL。故新增：`--ref-search N`（在 `--ref-window` 起点附近 ±N 帧搜最佳对齐，按 traj+turn 取最优并打印整条搜索曲线）、`--ref-window START:LEN`、`--smooth`（两侧都套 pose_extract 同参数卡尔曼，统一口径）、`--identity-ref`（人脸身份闸门，insightface w600k_r50，默认 cos≥0.50）。
+指标新增 **`turn_corr`**（归一化肩宽时序相关）：2D 投影里"转身"主要表现为肩宽缩短而非肩线角度变化（本片肩线角度全程仅变 17.7° 而肩宽变 70.9px），故纳入判定闸门。最终闸门 = `traj_corr≥0.50` + `turn_corr≥0.50` + `pose_err≤0.30` + 身份 cos≥0.50。
+
+**2026-10-14 新增：表情复刻闸门 `face_expression_qa.py`（此前表情是验收盲区）**
+架构分工（user_confirmed）：**身体动作走骨架/法线（白模本职）；表情走独立面捕通道（DWPose face70）+ 原生音频轨**。微表情**不能**塞进法线/白模（MoGe 平滑掉毫米级起伏，且视线/眨眼/牙齿不是表面几何）。
+做法：逐帧质心 + RMS 尺度归一（**不做**旋转对齐，以保留头部朝向这类表演信息）→ 重采样到时间桶；指标 `face_traj_corr`（全脸 70 点构型时序相关均值）、`active_corr`（源片方差最大 20 点 = 嘴/眼/眉）、`face_err`（归一化构型误差，单位 = 脸尺度）；闸门 `face_traj_corr≥0.50` + `active_corr≥0.50` + `face_err≤0.35`；`--self-test` 3/3 PASS；B 母带 v2 实测 **0.736 / 0.794 / 0.084 → PASS**。
+
+---
+
+## 十一、A 路线：H3 + Fun ControlNet（法线）动作迁移（2026-10-14 新增）
+
+| 脚本 | 用途 | 关键点 |
+|---|---|---|
+| `run_h3_controlnet_transfer.py` | **A 路线提交器**：MiniMax H3 ref2va + H3 Fun ControlNet（MoGe 法线 `control_video`）做**逐帧几何约束**的动作迁移 | 配置照抄 Aiden 原版：`ModelPatchLoader`(4.53GB) + `MiniMaxH3FunControlNetApply` **strength 0.45 / start 0 / end 0.75**，且置于 `BlockSparseAttention` **之前**；控制信号 = `LoadMoGeModel → MoGeInference → MoGeRender(normal_opengl)` 法线图，且**同一路法线同时作为 `ref_video`** 喂 H3 语义塔（动作几何参与条件、服饰只来自 `ref_image`）；主干保留 ref2va + 4 步 turbo + 音频。`--no-controlnet` 可回退纯 ref2va 基线做 A/B 对照。干跑校验 26 节点零缺失；73 帧冒烟实测 `completed` |
+
+**要点**：`ModelPatchLoader` 的模型枚举**按需重扫**，新权重放进 `models/model_patches/` 后**无需重启 ComfyUI** 即可被下拉列出（实测已列出）；因此不必为"让新模型生效"而重启（重启反而会杀掉队列）。
+**踩坑**：ComfyUI 要求 prompt 至少有一个**输出节点**，否则报 `prompt_no_outputs`（本脚本初版漏了 `VHS_VideoCombine`，已修）；`/free` 在队列非空时会打断排队任务的模型缓存，已加"队列非空即跳过 /free"护栏。
+
+### 十一B、两条路线的 **UI 版工作流**（2026-10-14 新增，便于手工操作验证）
+
+| 文件 | 路线 | 画布节点 | 关键参数 |
+|---|---|---|---|
+| `workflows/v6/h3_controlnet_normal_motion_ui.json` ／ `user/default/workflows/motion_transfer_A_h3_controlnet_normal_ui.json` | **A**：H3 + 法线 ControlNet | 26 图节点 + 1 MarkdownNote | MoGe 法线 → ControlNet **strength 0.45 / 0~0.75**；长度 277 帧 ≈ 11.5s@24fps；4 步 turbo + sol-attn |
+| `workflows/wan22_animate/wan22_animate_internal_9x16_ui.json` ／ `user/default/workflows/motion_transfer_B_wan_animate_9x16_ui.json` | **B**：Wan2.2 Animate（internal 模式） | 21 图节点 + 1 MarkdownNote | 内建 DWPreprocessor×2；画幅 **544×960**；length=49（实产 53 帧）；输出 fps 跟随驱动视频 |
+
+**生成方式（可复现）**：`--dump-api` 从**已验证可跑的构建器**导出 API 图（A: `run_h3_controlnet_transfer.py`；B: `render_wan_animate.py --pose-mode internal`）→ `tools/api2canvas.py` 转画布格式 → 追加 MarkdownNote 使用说明 → 各存一份到 `user/default/workflows/`。
+
+**`api2canvas.py` 本次新增**：支持 **`COMFY_AUTOGROW_V3`**。API 侧是 dict（`{ref_video_0: [node, slot]}`），UI 侧必须展开成**每个实例一个点号端口**（`ref_videos.ref_video_0`，带 `shape: 7`，首个实例另有 `label`）；否则 H3 ref 节点的连接会被**静默丢弃**（格式依据：作者发布的真实 UI 工作流 `workflows/v6/1-Aiden-…json` 节点 12）。
+另修 `render_wan_animate.py`：internal 模式下 `ImageScale`(节点14) 的分辨率**跟随目标画幅**（默认 512×512 时与原行为完全一致，向后兼容），否则 9:16 竖屏会被 512×512 中心裁剪掉大半。
+
+**验证方式（两道）**：
+1. **静态校验**：节点类型全部在 `/object_info` 注册；每条 link 的端点存在、槽位一致、`TYPE` 与目标端口类型一致；所有 COMBO widget 值都在本机枚举内；widget 数量与 api2canvas 的期望序列一致（含 seed 的 `control_after_generate` 伪 widget）。
+2. **浏览器实测**：在真实 ComfyUI 前端执行 `app.loadGraphData(<该文件>)` → A 得 `load_error=null / missing_nodes=0 / 27 节点`，B 得 `load_error=null / missing_nodes=0 / 22 节点`，且 MarkdownNote 均存活、`WanAnimateToVideo` widget 读回 `[544,960,49,1,5,0]`。
+   ⚠️ 注意：侧边栏条目可见，但**自动化"点击侧边栏"这一步不可靠**（会静默停在默认 10 节点起始图而不报错），所以判定"能否加载"要用上面的 `loadGraphData` 直连测试，不要只看点击后的截图。
+
+
+### 十一C、A/B 全长对照终局（2026-10-14，objective 收口）
+
+| 路线 | 产物 | traj_corr≥0.5 | turn_corr≥0.5 | pose_err≤0.3 | 身份cos≥0.5 | 判定 |
+|---|---|---|---|---|---|---|
+| **B** Wan2.2 Animate（ours 7 窗合并 + 裁头3帧 + 49/53 重定时） | `output/2026-10-13/motion_optimize/jia_wan_full_master_v2.mp4` | **0.693** | **0.566** | **0.087** | **0.918** | **PASS** |
+| A H3+法线ControlNet（4步turbo简化版，277帧单次） | `output/2026-10-14/motion_optimize/h3_controlnet_full/jia_h3cn_00001-audio.mp4` | 0.085 | 0.018 | 0.212 | 0.207 | **FAIL** |
+
+**定论**：动作迁移用 **B 路线**。A 失败根因是 Aiden 原版 ControlNet 依赖 8 步采样 + SelfLift 双阶段 + H3SigmaRefiner 完整链路，4 步 turbo 简化版上 ControlNet 完全不咬合——**冒烟 completed ≠ 控制生效，新工作流必须过全长动作指标闸门**。验证 lesson：QA 双进程并行因 DWPose GPU 争用慢 4~5 倍，必须串行 + `--every 2`（96 时间桶下无指标损失）。
+
+> ⚠️ **本节 A 侧的失败定性已被 十一D 推翻**（真凶是 Autogrow 键格式，不是"ControlNet 不咬合"）。B 路线的结论仍然有效。
+
+### 十一D、⚠️ Autogrow 扁平键更正 + A 路线 v3（SelfLift 完整链）（2026-10-14 追加，推翻十一C 的 A 失败定性）
+
+**核心更正**：`MiniMaxH3ReferenceToVideo` 的 Autogrow 输入（`ref_images` / `ref_videos` / `ref_video_audios`）在服务端要求**扁平点号键**（如 `ref_videos.ref_video_0`）；**嵌套字典 `{"ref_video_0": [...]}` 会被静默丢弃且不报错**。历史所有 A 路线提交（含十一C 那片 277 帧"全长实测"）都用了错格式 → 参考条件从未送达 → 这才是「ref_video 无效 / ControlNet 无效 / 身份全崩」的统一根因；"ControlNet 不咬合 / 结构性失效"的定性据此作废（调参方向本就无意义，问题在通路）。
+
+**单变量实证**：T1（嵌套）vs T4b（扁平，其余全同）→ 产物 **MD5 不同**，traj 0.036 → **0.363**。
+
+**扁平键修正后全长 277 帧实测（0.3MP，`--ref-video-mode real --prompt-mode natural`）**：traj=**0.246**（机会 0.018）/ turn=**0.399** / pose_err=0.139 / 身份 cos=**0.366**（此前 0.182 / 0.018 / 0.212 / 0.207）→ 条件已生效但强度仍不足，**仍未达闸门**；产物 `output/2026-10-14/motion_optimize/h3_selflift_full/jia_selflift_00001-audio.mp4`。
+
+| 脚本 | 用途 | 关键点 |
+|---|---|---|
+| `run_h3_selflift_transfer.py` | **A 路线 v3 提交器**（完整 Aiden 链，39 节点） | `SelfLiftAvatarH3TST`(tau 0.2) → `SelfLiftAvatarH3Sampler`（6/8 双阶段，lowres_scale 0.5 + `h3_upscaler_lms`）；音频遮罩组（VAEEncodeAudio → SetLatentNoiseMask(0) → LTXVConcatAVLatent）；`MiniMaxH3FunControlNetApply` 置于 `BlockSparseAttention` **之前**；**ref 三路全用扁平点号键**；缺失插件用本机验证过的等价物替代（H3SigmaRefiner→BasicScheduler(simple,8)、RMBG-2.0→BiRefNet、ImageBlend V2→ImageCompositeMasked、LayerStyle→ImageScale、VOSR2/MMH3 放大支路删除）；开关 `--ref-video-mode {white_model,real}` / `--prompt-mode {natural,geometry}` / `--no-controlnet` / `--dump-api` / `--dry-run` |
+| `tools/wait_prompt.py` | **通用 prompt 等待器**（长任务只提交不轮询；挂后台等待拿完成通知） | `python tools/wait_prompt.py <prompt_id> [--timeout 7200] [--interval 20]`；成功 0 / error 1 / 超时 2，完成时打印各节点 outputs |
+| `models/model_patches/minimax_h3_fun_controlnet_union_2.0_pruned_int8_convrot.safetensors` | FunControlNet 权重（4.53GB，已就位） | `ModelPatchLoader` 按需重扫，落盘即被枚举、**无需重启** ComfyUI |
+
+**教训升级**：V3 动态输入（Autogrow）用**扁平点号键**，不要用嵌套字典；提交"成功"不等于输入被消费 —— 必须用**单变量 + MD5 对比**验证。
+
+**🔴 2026-10-14 又一实锤：白模支路被压成 1 帧（v3 提交器的核心节点替换 bug）**
+`ImageCompositeMasked` 底层 `composite()` 的批长语义是「**返回 destination**」（内部 `source = repeat_to_batch_size(source, destination.shape[0])`），即输出批长 = destination 的批长。v3 用 `SolidMask(0.529) → MaskToImage` 做灰底只有 **1 帧** → 整条白模支路（`55 → MoGeInference → 46 → 54`）**静默坍缩成 1 帧**。后果两条：
+1. `--ref-video-mode white_model` 时把 1 帧喂给 `ref_videos.ref_video_0` → H3 直接报 `reference videos need at least 5 frames`（本轮 157 帧提交即因此失败）；
+2. 此前所有「真实 ref_video + 带 ControlNet」的运行（含 277 帧全长片），`control_video` 也是这 1 帧 → **ControlNet 的逐帧几何约束从未真正生效**（单张图广播到整段序列 = 静态约束）。这解释了「strength 从 0.45 上调到 0.6~0.9 毫无改善」。
+**修复**：灰底改用 `EmptyImage(width=415, height=736, batch_size=length, color=0x878787)`，批长与源帧数对齐（节点数 39→38）。修复后白模法线才第一次真正逐帧进入 `control_video` 与 `ref_video`。
+**教训**：替换批量运算节点必须核对**输出批长语义**——`ImageCompositeMasked` / ImageBlend 这类以 destination 批长为准，单帧 destination 会静默坍缩整条支路。
+
+**🎉 2026-10-15 调优轮实测：A 路线首次全闸门 PASS（1 帧坍缩修复 + 白模法线 ref_video + CN 0.6/0.9 + 0.5MP）**
+- 命令：`run_h3_selflift_transfer.py --length 157 --mp 0.5 --steps 8 --transition-step 6 --cn-strength 0.6 --cn-end 0.9 --ref-video-mode white_model --prompt-mode natural --tag h3_selflift_tune1`（实际产出 158 帧 = 17n+5）
+- 产物 `output/2026-10-14/motion_optimize/h3_selflift_tune1/jia_selflift_00001-audio.mp4`（544×960/24fps/6.6s）
+- 动作：traj=**0.624** / turn=**0.526** / pose_err=**0.114**（对齐搜索 +0 最优 → H3 产物与源逐帧对齐，无 Wan 的时间膨胀）；身份 max cos=**0.563**（压线 PASS，均值 0.451）；表情：**0.782 / 0.875 / 0.085** 全 PASS
+- 旧 A 全长片（277帧，扁平键已修但 1 帧坍缩未修）补跑表情闸门 = 0.472 / 0.551 / 0.110 **FAIL** → 与其动作/身份 FAIL 一致，实锤 1 帧坍缩是 A 路线此前全部失败的最后一环
+- 对比：B 母带 v2 仍更强（动作 0.693/0.566/0.087、身份 0.918、表情 0.736/0.794/0.084）
+- `face_expression_qa.py` 本轮新增 `--ref-window START:LEN`（窗长换算：产物帧数/产物fps×源fps），部分时长产物与全长源的时间轴才能对齐
+- 待办：A 全长母带（277 帧 @0.5MP 的 SelfLift 显存未验证，保守用 0.3MP 或分段渲染）
+
+**2026-10-17 UI→API 工作流转换（新增 2 个通用工具）**
+- `tools/uiwf_to_api.py <ui.json> [--map 旧值=新值] [--no-file-check]`：UI(graph) 转 API(prompt) 格式。跳过 mode=2/4 与 Note/Reroute，bypass 节点连线自动穿透；`widgets_values_named` 优先，缺失时按 object_info 顺序回推；处理 Autogrow（`values.a`→`values:{"a":..}`）与 DynamicCombo（`selection.tau`→`selection:{"tau":..}`）；用 8188 的 object_info 校验节点注册/必填/连线类型/下拉值，并按磁盘校正模型名（object_info 缓存在 `tools/.cache/object_info/`）
+- `tools/post_api_prompt.py <api.json> [--set 节点号.输入名=值] [--wait]`：POST /prompt 提交，失败时打印服务端 node_errors
+- 首个产物：`workflows/v6/1-Aiden-动作迁移升级版本！法线参考！！_本地修复版_api.json`（71 UI 节点 → 46 API 节点）

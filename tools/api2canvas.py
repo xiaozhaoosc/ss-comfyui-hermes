@@ -54,6 +54,65 @@ def is_link_value(v, node_ids):
     return isinstance(v, list) and len(v) == 2 and isinstance(v[0], str) and v[0] in node_ids and isinstance(v[1], int)
 
 
+AUTOGROW = "COMFY_AUTOGROW_V3"
+
+
+def is_autogrow(type_spec):
+    body = _type_body(type_spec)
+    return isinstance(body, list) and len(body) == 1 and body[0] == AUTOGROW
+
+
+def autogrow_prefix(type_spec):
+    cfg = type_spec[-1] if isinstance(type_spec[-1], dict) else {}
+    return ((cfg.get("template") or {}).get("prefix")) or "item_"
+
+
+def autogrow_inner_type(type_spec):
+    """Autogrow 模板里实例输入端口的类型名（IMAGE / AUDIO ...）。"""
+    cfg = type_spec[-1] if isinstance(type_spec[-1], dict) else {}
+    inputs = ((cfg.get("template") or {}).get("input") or {})
+    for grp in ("required", "optional"):
+        for _n, spec in (inputs.get(grp) or {}).items():
+            return port_type(spec)
+    return "IMAGE"
+
+
+def _autogrow_sort_key(key, prefix):
+    tail = key[len(prefix):] if key.startswith(prefix) else key
+    return int(tail) if tail.isdigit() else 0
+
+
+def autogrow_ports(name, type_spec, val, node_ids, nid, input_ports, links, next_link, parents):
+    """Autogrow（COMFY_AUTOGROW_V3）在真实 UI 文件里的形态是**每个实例一个端口**，
+    端口名带点号前缀（如 `ref_videos.ref_video_0`）、带 `shape: 7`，首个实例另有 `label`。
+    参考仓库内作者发布的真实 UI 工作流
+    `workflows/v6/1-Aiden-动作迁移升级版本！法线参考！！.json` 的节点 12。
+    API 侧的值是 dict（{ref_video_0: [node, slot]}）或 list（多连接）。"""
+    inner = autogrow_inner_type(type_spec)
+    prefix = autogrow_prefix(type_spec)
+    if isinstance(val, dict):
+        keys = sorted(val.keys(), key=lambda k: _autogrow_sort_key(k, prefix))
+        items = [val[k] for k in keys]
+    elif isinstance(val, list):
+        keys = ["%s%d" % (prefix, i) for i in range(len(val))]
+        items = list(val)
+    else:
+        keys, items = [], []
+    for i, (key, lv) in enumerate(zip(keys, items)):
+        port = {"name": "%s.%s" % (name, key), "shape": 7, "type": inner, "link": None}
+        if i == 0:
+            port["label"] = key
+        if is_link_value(lv, node_ids):
+            lid = next_link[0]; next_link[0] += 1
+            links.append([lid, int(lv[0]), lv[1], int(nid), len(input_ports), inner])
+            port["link"] = lid
+            parents.append(lv[0])
+        input_ports.append(port)
+    if not items:
+        # 一个实例都没接时，仍保留一个空槽，前端才会渲染出可连线的端口
+        input_ports.append({"name": "%s.%s0" % (name, prefix), "shape": 7, "type": inner, "link": None})
+
+
 def class_inputs(obj_def):
     """required + optional 的 (name, spec) 有序列表, hidden 跳过。"""
     inp = obj_def.get("input", {})
@@ -81,6 +140,11 @@ def build_canvas(prompt, object_info):
 
         for name, type_spec in class_inputs(obj_def):
             val = api_inputs.get(name)
+            if is_autogrow(type_spec):
+                # Autogrow：dict/list -> 每个实例一个点号端口（shape 7）
+                autogrow_ports(name, type_spec, val, node_ids, nid,
+                               input_ports, links, next_link, parents)
+                continue
             if is_port_type(type_spec):
                 t = port_type(type_spec)
                 # 连接端口
