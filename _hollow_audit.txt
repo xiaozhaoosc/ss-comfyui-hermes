@@ -1,0 +1,199 @@
+========================================================================
+PART 1: 各空壳技能声明的模型需求
+
+### comfy-cartoon-avatar
+  README_en.md:3| **Status:** ready (PLACEHOLDER replaced with `3D cartoon avatar.safetensors`)
+  README_en.md:8| Turn a clear frontal portrait into a 3D / blind-box style cartoon avatar with IP-Adapter FaceID + upscale.
+  README_en.md:25| 3. **Replace 3D cartoon avatar.safetensors with a real public 3D-style LoRA**
+  README_en.md:41| - 3D cartoon avatar.safetensors
+  README_en.md:45| - Requires InsightFace / IP-Adapter FaceID custom nodes
+  README_en.md:46| - Checkpoint names were remapped for sharing; style may differ from the original private stack
+  README_zh.md:3| **状态：** ready（PLACEHOLDER 已换成本机 LoRA 名）
+  README_zh.md:8| 真人正脸照片 → 3D/盲盒风卡通形象（IP-Adapter FaceID + 超分）。
+  README_zh.md:25| 3. **先将 3D cartoon avatar.safetensors 换成真实公开 3D 风 LoRA，并改节点文件名**
+  README_zh.md:26| 4. 按 models.txt 装齐 FaceID / Checkpoint / 超分等权重
+  README_zh.md:35| > 示例为用户提供的真实效果素材。商店页展示可用；本地复现需补齐占位 LoRA。
+  README_zh.md:43| - 3D cartoon avatar.safetensors
+  README_zh.md:47| - 需要 InsightFace / IP-Adapter FaceID 相关自定义节点
+  README_zh.md:55| A: 效果图已齐，但工作流仍引用 PLACEHOLDER LoRA，买家按包无法直接跑出同款风格。换真实权重并自测后可改为
+  README_zh.md:58| **Q: hyper / XL-hyper 要不要一起上？**
+  SKILL.md:3| description: Use this skill when a user wants to turn a clear frontal portrait photo into a 3D / blind-box style cartoon avatar using a ComfyUI IP-Adapter FaceID + upscale workflow. Trigger on requests like "真人转卡通", "pho
+  SKILL.md:7| description_zh: 真人正脸 → 3D/盲盒风卡通形象（IP-Adapter FaceID）。
+  SKILL.md:15| 把真人正脸照片变成 3D / 盲盒风卡通形象。执行体是本目录的 `workflow.json`（IP-Adapter FaceID + 超分）。
+  SKILL.md:24| 3. **先将 `3D cartoon avatar.safetensors` 换成真实公开的 3D 风 LoRA，并改对应节点文件名**（见下方阻断项）。
+  SKILL.md:25| 4. 按 `models.txt` 装齐 FaceID / Checkpoint / 超分等权重（需 InsightFace + IP-Adapter FaceID 自定义节点）。
+  SKILL.md:29| - 工作流仍引用 PLACEHOLDER 风格 LoRA：`3D cartoon avatar.safetensors`。买家按原样无法直接复现同款风格。
+  SKILL.md:30| - 发布前请：替换为已获分发权的真实公开 3D 风 LoRA（并同步修改节点文件名），或取得该权重授权。
+  UPLOAD_CHECKLIST.md:8| **ZH:** 真人正脸 → 3D/盲盒风卡通形象（IP-Adapter FaceID）。
+  UPLOAD_CHECKLIST.md:12| Requires `3D cartoon avatar.safetensors` (style LoRA) + FaceID stack.
+  UPLOAD_CHECKLIST.md:13| If you redistribute, ensure you have rights to that LoRA or swap to a public equivalent.
+  references\usage.md:3| **状态：** ready（PLACEHOLDER 已换成本机 LoRA 名）
+  references\usage.md:8| 真人正脸照片 → 3D/盲盒风卡通形象（IP-Adapter FaceID + 超分）。
+  references\usage.md:25| 3. **先将 3D cartoon avatar.safetensors 换成真实公开 3D 风 LoRA，并改节点文件名**
+  references\usage.md:26| 4. 按 models.txt 装齐 FaceID / Checkpoint / 超分等权重
+  references\usage.md:35| > 示例为用户提供的真实效果素材。商店页展示可用；本地复现需补齐占位 LoRA。
+  references\usage.md:43| - 3D cartoon avatar.safetensors
+  references\usage.md:47| - 需要 InsightFace / IP-Adapter FaceID 相关自定义节点
+  references\usage.md:55| A: 效果图已齐，但工作流仍引用 PLACEHOLDER LoRA，买家按包无法直接跑出同款风格。换真实权重并自测后可改为
+  references\usage.md:58| **Q: hyper / XL-hyper 要不要一起上？**
+
+### comfy-lineart-colorization
+  README_en.md:1| # SDXL Lineart Colorization
+  README_en.md:8| Colorize clean black-and-white lineart into polished finished art with SDXL + Canny conditioning.
+  README_en.md:48| Measured on an equivalent Canny + ControlNet + SDXL path.
+  README_zh.md:8| 黑白线稿 → 高完成度上色成片（SDXL + Canny 条件控制）。
+  README_zh.md:50| > 测的是等价 Canny+ControlNet+SDXL 路径；完整商店 UI 图依赖的部分自定义节点本机未全部加载成功。
+  README_zh.md:64| A: 可改用「线稿上色-sd15」（SD1.5 Lineart ControlNet，一般更省显存）。
+  SKILL.md:3| description: Use this skill when a user wants to colorize black-and-white lineart, comic/illustration sketches, or turn a pencil/ink drawing into a finished colored image using a ComfyUI SDXL + Canny workflow. Trigger on
+  SKILL.md:5| display_name: 线稿上色（ComfyUI SDXL+Canny）
+  SKILL.md:6| display_name_en: Lineart Colorization (ComfyUI SDXL + Canny)
+  SKILL.md:7| description_zh: 黑白线稿上色（SDXL + Canny）。适合漫画/插画线稿快速成片。
+  SKILL.md:8| description_en: Colorize B/W lineart with SDXL + Canny. Great for comics & illustration drafts.
+  SKILL.md:15| 把清晰的黑白线稿（漫画 / 插画 / 角色 / 纹样）上色成高完成度成片。执行体是本目录的 `workflow.json`（SDXL + Canny/ControlNet 条件控制）。
+  SKILL.md:25| 3. 按 `models.txt` 安装模型：dreamshaperXL Turbo + Canny LoRA + SDXL VAE。
+  SKILL.md:34| - 显存不足时可改用「线稿上色-sd15」变体（SD1.5 Lineart ControlNet，更省显存）。
+  UPLOAD_CHECKLIST.md:16| **ZH:** 黑白线稿上色（SDXL + Canny）。适合漫画/插画线稿快速成片。
+  UPLOAD_CHECKLIST.md:17| **EN:** Colorize B/W lineart with SDXL + Canny. Great for comics & illustration drafts.
+  references\usage.md:8| 黑白线稿 → 高完成度上色成片（SDXL + Canny 条件控制）。
+  references\usage.md:50| > 测的是等价 Canny+ControlNet+SDXL 路径；完整商店 UI 图依赖的部分自定义节点本机未全部加载成功。
+  references\usage.md:64| A: 可改用「线稿上色-sd15」（SD1.5 Lineart ControlNet，一般更省显存）。
+
+### comfy-realtime-doodle
+  README_en.md:9| Turn canvas doodles into cute finished illustrations quickly with SDXL + Hyper-SDXL few-step LoRA.
+  README_en.md:27| 4. Queue Prompt (few steps via Hyper)
+  README_zh.md:9| 画布涂鸦 / 儿童简笔画 → 快速出可爱成片（SDXL + Hyper 少步加速）。
+  README_zh.md:26| 3. 按 models.txt 安装 SDXL Base + Hyper-SDXL
+  README_zh.md:27| 4. 编写提示词后 Queue Prompt（Hyper 少步，适合互动）
+  README_zh.md:45| - 与「涂鸦-儿童」区别：本包更偏 Hyper 少步实时互动；儿童包含更完整的 Canny/Depth/CLIP 约束
+  SKILL.md:3| description: Use this skill when a user wants to turn a canvas doodle, kids sketch, or simple scribble into a cute finished illustration in near real time using a ComfyUI SDXL + Hyper-SDXL few-step workflow. Trigger on r
+  SKILL.md:5| display_name: 实时涂鸦成图（ComfyUI SDXL+Hyper）
+  SKILL.md:6| display_name_en: Realtime Doodle to Image (ComfyUI SDXL + Hyper)
+  SKILL.md:7| description_zh: 画布涂鸦快速出图（SDXL + Hyper）。适合互动演示与儿童简笔画。
+  SKILL.md:8| description_en: Canvas doodle to image with SDXL + Hyper-SDXL. Great for live demos.
+  SKILL.md:15| 把画布涂鸦 / 儿童简笔画快速变成可爱成片。执行体是本目录的 `workflow.json`（SDXL + Hyper-SDXL 少步加速，适合互动场景）。
+  SKILL.md:24| 3. 按 `models.txt` 安装 SDXL Base + Hyper-SDXL LoRA。
+  SKILL.md:25| 4. 编写提示词（建议补全主体与场景，如「粉兔子、柜子、草地、可爱插画」）后 Queue Prompt（Hyper 少步，适合互动）。
+  SKILL.md:31| - 与「涂鸦-儿童」区别：本包更偏 Hyper 少步实时互动；儿童包含更完整的 Canny/Depth/CLIP 约束。
+  UPLOAD_CHECKLIST.md:9| **ZH:** 画布涂鸦快速出图（SDXL + Hyper）。适合互动演示与儿童简笔画。
+  UPLOAD_CHECKLIST.md:10| **EN:** Canvas doodle to image with SDXL + Hyper-SDXL. Great for live demos.
+  UPLOAD_CHECKLIST.md:13| RTX 3060 12GB: ~17s (img2img+Hyper equivalent; 4 steps, denoise 0.65), peak VRAM ~9.6GB.
+  references\usage.md:9| 画布涂鸦 / 儿童简笔画 → 快速出可爱成片（SDXL + Hyper 少步加速）。
+  references\usage.md:26| 3. 按 models.txt 安装 SDXL Base + Hyper-SDXL
+  references\usage.md:27| 4. 编写提示词后 Queue Prompt（Hyper 少步，适合互动）
+  references\usage.md:45| - 与「涂鸦-儿童」区别：本包更偏 Hyper 少步实时互动；儿童包含更完整的 Canny/Depth/CLIP 约束
+
+### comfyui-imagegen
+  (not installed)
+
+### comfyui-image-gen
+  (not installed)
+
+### comfyui-upscaler
+  (not installed)
+
+========================================================================
+PART 2: 本机 models 目录现有权重（>=100MB）
+  [animatediff_models]
+      v3_sd15_mm.ckpt                                                        1.56 GB
+  [background_removal]
+      BiRefNet-general.safetensors                                           0.41 GB
+  [checkpoints]
+      Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors                      6.62 GB
+      RealVisXL_V4.0.safetensors                                             6.46 GB
+      v1-5-pruned-emaonly.safetensors                                        3.97 GB
+  [clip]
+      qwen3vl_8b_heretic-Q4_K_M.gguf                                         4.68 GB
+  [clip_vision]
+      clip_vision_h.safetensors                                              1.18 GB
+  [controlnet]
+      flux_controlnet_union_pro_2.0.safetensors                              3.99 GB
+      TTPLANET_Controlnet_Tile_realistic_v2_fp16.safetensors                 2.33 GB
+      control_v11p_sd15_openpose.pth                                         1.35 GB
+  [diffusion_models]
+      minimax_h3_fused_refdelta_r1024_turbo8_mystic07_int8_convrot.safetensors 19.54 GB
+      minimax_h3_fl2va_pruned_int8_convrot.safetensors                       19.53 GB
+      minimax_h3_ref2va_pruned_int8_convrot.safetensors                      19.53 GB
+      Wan2_2-Animate-14B_fp8_e4m3fn_scaled_KJ.safetensors                    17.14 GB
+  [facedetection]
+      yolov5l-face.pth                                                       0.17 GB
+      detection_Resnet50_Final.pth                                           0.10 GB
+  [facerestore_models]
+      codeformer.pth                                                         0.35 GB
+      GFPGANv1.4.pth                                                         0.32 GB
+  [insightface]
+      inswapper_128.onnx                                                     0.52 GB
+  [loras]
+      Qwen-Image-Lightning-4steps-V1.0.safetensors                           1.58 GB
+      Qwen-Image-Lightning-4steps-V2.0.safetensors                           1.58 GB
+      Qwen-Image-Lightning-8steps-V1.0.safetensors                           1.58 GB
+      WanAnimate_relight_lora_fp16.safetensors                               1.34 GB
+      Qwen-Image-2.1-viggle-turbo-v0.2.1-6step-lora-r256.safetensors         1.27 GB
+      Qwen-Image-Edit-Lightning-4steps-V1.0-bf16.safetensors                 0.79 GB
+      Qwen-Image-Edit-Lightning-8steps-V1.0-bf16.safetensors                 0.79 GB
+      minimax_h3_turbo_4step_ckpt500_comfyui_T8.safetensors                  0.73 GB
+      lightx2v_I2V_14B_480p_cfg_step_distill_rank64_bf16.safetensors         0.69 GB
+      minimax_h3_turbo_v4_step600_ema_pruned_comfyui.safetensors             0.58 GB
+      minimax_h3_turbo_4step_comfyui_pruned.safetensors                      0.58 GB
+      hinaFluxDevAsianMix_v12.safetensors                                    0.34 GB
+      hina_flux2klein4b_asianMix_v4.0-lora.safetensors                       0.17 GB
+      my_flux_lora_v1.safetensors                                            0.16 GB
+      thai_shorty_zimgT.safetensors                                          0.16 GB
+      ppango_women.safetensors                                               0.16 GB
+      hinaFluxSchnellAsianMix_v25-rev1.safetensors                           0.16 GB
+      NexBlend Asian 01 (Flux 2 Klein 9B).safetensors                        0.15 GB
+      hina_flux2Klein9b_asianMix_v1.4.safetensors                            0.15 GB
+      hinaFluxKreaAsianMix_v19-rev2.safetensors                              0.15 GB
+      hinaFluxKreaAsianMix_v195.safetensors                                  0.14 GB
+  [mimicmotion]
+      MimicMotionMergedUnet_1-1-fp16.safetensors                             2.84 GB
+  [sam2]
+      sam2_hiera_base_plus.safetensors                                       0.30 GB
+  [sams]
+      sam_vit_b_01ec64.pth                                                   0.35 GB
+  [text_encoders]
+      qwen3vl_32b_minimax_h3_int8_convrot.safetensors                        25.28 GB
+      gemma-4-31b-jang-crack-Q4_K_M.gguf                                     17.40 GB
+      qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors                           14.61 GB
+      qwen3vl_32b_heretic_minimax_h3_nvfp4.safetensors                       14.61 GB
+      gemma-4-31b-jang-crack-Q3_K_M.gguf                                     14.24 GB
+      RVN-Qwen3.8-27B-Heretic-GSQ-RCO-IQ3_S-mtp.gguf                         11.41 GB
+      Qwen3.8-27B-GSQ-RCO-IQ3_S-mtp.gguf                                     11.29 GB
+      qwen3vl_8b_int8_convrot.safetensors                                    8.71 GB
+      umt5_xxl_fp8_e4m3fn_scaled.safetensors                                 6.27 GB
+      t5xxl_fp8_e4m3fn.safetensors                                           4.56 GB
+      mmproj-google_gemma-4-31B-it-bf16.gguf                                 1.12 GB
+      mmproj-Qwen3.8-27B-BF16.gguf                                           0.87 GB
+      clip_l.safetensors                                                     0.23 GB
+  [unet]
+      T8-flux.1-dev-abliterated-V2-GGUF-Q8_0.gguf                            11.85 GB
+      flux1-dev-fp8.safetensors                                              11.08 GB
+      qwen-image-2.1-UC-Q4_K_M.gguf                                          4.29 GB
+  [vae]
+      minimax_h3_video_vae_fp16.safetensors                                  4.85 GB
+      minimax_h3_video_vae_int8_convrot.safetensors                          2.95 GB
+      qwen_image_2.1_vae_bf16.safetensors                                    0.63 GB
+      minimax_h3_audio_vae_fp32.safetensors                                  0.56 GB
+      sdxl_vae.safetensors                                                   0.31 GB
+      wan_2.1_vae.safetensors                                                0.24 GB
+      qwen_image_vae.safetensors                                             0.24 GB
+      flux-vae-bf16.safetensors                                              0.16 GB
+
+========================================================================
+PART 3: 磁盘剩余空间
+  C:\ total=511 GB used=402 GB free=109 GB
+  D:\ total=1351 GB used=1149 GB free=202 GB
+
+PART 4: 关键文件名是否已存在（模糊匹配）
+  sdxl           -> ['vae\\sdxl_vae.safetensors']
+  sd_xl          -> ['NONE']
+  z_image        -> ['NONE']
+  z-image        -> ['NONE']
+  flux2          -> ['loras\\hina_flux2klein4b_asianMix_v4.0-lora.safetensors', 'loras\\hina_flux2Klein9b_asianMix_v1.4.safetensors']
+  flux_2         -> ['NONE']
+  klein          -> ['loras\\hina_flux2klein4b_asianMix_v4.0-lora.safetensors', 'loras\\hina_flux2Klein9b_asianMix_v1.4.safetensors', 'loras\\NexBlend Asian 01 (Flux 2 Klein 9B).safetensors']
+  ip-adapter     -> ['NONE']
+  ip_adapter     -> ['NONE']
+  hyper          -> ['NONE']
+  canny          -> ['NONE']
+  4x             -> ['NONE']
+  upscale        -> ['NONE']

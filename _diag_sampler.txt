@@ -1,0 +1,11 @@
+[PASS] T1 official example (control)                  prompt_id=3c2b5935-6ef9-4f03-a41e-c06e25f10c49
+[FAIL] T2 base + gradient_estimation                  HTTP 400
+         node 16 (SamplerCustomAdvanced): exception_during_inner_validation | unhashable type: 'list'
+[FAIL] T3 base + H3InjectSchedule sigmas              HTTP 400
+         node 16 (SamplerCustomAdvanced): exception_during_inner_validation | unhashable type: 'list'
+[FAIL] T4 base without LoRA                           HTTP 400
+         node 16 (SamplerCustomAdvanced): exception_during_inner_validation | unhashable type: 'list'
+[FAIL] T5 base without SigmaShift                     HTTP 400
+         node 16 (SamplerCustomAdvanced): exception_during_inner_validation | unhashable type: 'list'
+[FAIL] T6 base without ReActor chain                  HTTP 400
+         node 16 (SamplerCustomAdvanced): exception_during_inner_validation | unhashable type: 'list'

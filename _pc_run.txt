@@ -1,0 +1,7 @@
+﻿[backend] zimage 鈥?Z-Image Turbo bf16 鈥?8 姝?/ 0.9 鍒嗛挓 / 1024px锛岄粯璁ゆ。
+=== Z-Image Turbo | 1024x1024 | steps=8 cfg=1.0 euler/simple | out=D:\ai_projects\ComfyUI\output\2026-10-10_wb\pc_zimage ===
+[submit] s01_camisole_touch_hair seed=900000 -> True 3f58e24b-8b21-4c1c-b56a-bec0b5f9aad6
+   [done] True in 45.4s files=['pc_pc_zimage_s01_camisole_touch_hair_00001_.png'] 
+
+=== zimage : 1/1 ok, total 45.4s ===
+meta: D:\ai_projects\ComfyUI\output\2026-10-10_wb\pc_zimage\_run.json

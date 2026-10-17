@@ -1,0 +1,574 @@
+WORKFLOWS PARSED: 52
+MODEL FILES ENUMERATED: 150
+
+================================================================================
+FILE: 8.11MiniMaxH3女团MV\工作流\MiniMaxH3多参MV生成工作流 By 像素幻想Lab.json
+  format=ui  nodes=20
+  class_types(20): AudioDurationToFrames, BasicGuider, BasicScheduler, CLIPLoader, ComfyMathExpression, KSamplerSelect, LoadAudio, LoadImage, LoraLoaderModelOnly, MarkdownNote, MiniMaxH3MemoryEfficientSageAttentionPatch, MiniMaxH3ReferenceToVideo, PrimitiveFloat, RandomNoise, ResolutionSelector, SamplerCustomAdvanced, UNETLoader, VAEDecode, VAEDecodeAudio, VAELoader
+  [节点OK] 已启用: ComfyUI-KJNodes, ComfyUI-MAINodes
+  [缺节点] 未安装/未知: AudioDurationToFrames
+  [模型OK] minimax_h3_audio_vae_fp32.safetensors, minimax_h3_ref2va_pruned_int8_convrot.safetensors, minimax_h3_turbo_v4_step600_ema_pruned_comfyui.safetensors, minimax_h3_video_vae_fp16.safetensors, minimax_h3_video_vae_int8_convrot.safetensors, qwen3vl_32b_minimax_h3_int8_convrot.safetensors, qwen3vl_32b_min
+  >>> 结论: 缺节点(未安装)
+
+================================================================================
+FILE: 8.11MiniMaxH3女团MV\工作流\MiniMaxH3文生视频工作流 By 像素幻想Lab.json
+  format=ui  nodes=17
+  class_types(17): BasicGuider, BasicScheduler, CLIPLoader, ComfyMathExpression, KSamplerSelect, LoraLoaderModelOnly, MarkdownNote, MiniMaxH3ImageToVideo, MiniMaxH3MemoryEfficientSageAttentionPatch, PrimitiveFloat, RandomNoise, ResolutionSelector, SamplerCustomAdvanced, UNETLoader, VAEDecode, VAEDecodeAudio, VAELoader
+  [节点OK] 已启用: ComfyUI-KJNodes, ComfyUI-MAINodes
+  [模型OK] minimax_h3_audio_vae_fp32.safetensors, minimax_h3_fl2va_pruned_int8_convrot.safetensors, minimax_h3_ref2va_pruned_int8_convrot.safetensors, minimax_h3_turbo_v4_step600_ema_pruned_comfyui.safetensors, minimax_h3_video_vae_fp16.safetensors, minimax_h3_video_vae_int8_convrot.safetensors, qwen3vl_32b_mi
+  >>> 结论: 本机可运行
+
+================================================================================
+FILE: 8.11MiniMaxH3女团MV\工作流\MiniMaxH3首尾帧工作流 By 像素幻想Lab (Copy).json
+  format=ui  nodes=18
+  class_types(18): BasicGuider, BasicScheduler, CLIPLoader, ComfyMathExpression, KSamplerSelect, LoadImage, LoraLoaderModelOnly, MarkdownNote, MiniMaxH3ImageToVideo, MiniMaxH3MemoryEfficientSageAttentionPatch, PrimitiveFloat, RandomNoise, ResolutionSelector, SamplerCustomAdvanced, UNETLoader, VAEDecode, VAEDecodeAudio, VAELoader
+  [节点OK] 已启用: ComfyUI-KJNodes, ComfyUI-MAINodes
+  [模型OK] minimax_h3_audio_vae_fp32.safetensors, minimax_h3_fl2va_pruned_int8_convrot.safetensors, minimax_h3_ref2va_pruned_int8_convrot.safetensors, minimax_h3_turbo_v4_step600_ema_pruned_comfyui.safetensors, minimax_h3_video_vae_fp16.safetensors, minimax_h3_video_vae_int8_convrot.safetensors, qwen3vl_32b_mi
+  >>> 结论: 本机可运行
+
+================================================================================
+FILE: 8.11MiniMaxH3女团MV\工作流\视频反推.json
+  format=ui  nodes=2
+  class_types(2): ShowText|pysssss, VideoCaptionNode
+  [缺节点] 未安装/未知: ShowText|pysssss, VideoCaptionNode
+  >>> 结论: 缺节点(未安装)
+
+================================================================================
+FILE: 一致的角色创建器（角色表）\workflow-consistant-character-maker-character-sheet-TC5NGDBc2Rdbq8YjKGYH-tenforce-openart.ai.json
+  format=ui  nodes=30
+  class_types(30): AV_IPAdapter, BboxDetectorSEGS, CLIPTextEncode, CLIPVisionLoader, CheckpointLoaderSimple, ControlNetApply, ControlNetLoader, EmptyImage, EmptyLatentImage, FaceDetailer, IPAdapterApplyFaceID, IPAdapterModelLoader, Image Rembg (Remove Background), ImageCompositeMasked, ImageCrop+, ImageScaleToTotalPixels, ImageToMask, ImpactDilateMaskInSEGS, ImpactKSamplerBasicPipe, ImpactSEGSOrderedFilter, InsightF
+  [需启用] 已安装但禁用: ComfyUI-Impact-Pack, ComfyUI-PuLID-Flux, ComfyUI_IPAdapter_plus, ComfyUI_essentials, WAS-Node-Suite-ComfyUI
+  [缺节点] 未安装/未知: AV_IPAdapter, IPAdapterApplyFaceID, RegionalIPAdapterColorMask //Inspire, UltimateSDUpscale
+  [模型OK] face_yolov8m.pt, sam_vit_b_01ec64.pth
+  [缺模型] 4x-AnimeSharp.pth, add_detail.safetensors, comicmixNSFWByMrMonster_v325.safetensors, control_v11p_sd15_openpose.pth, face_yolov8n.pt, face_yolov8s.pt, ip-adapter-plus-face_sd15.safetensors, ip-adapter-plus_sd15.safetensors, pytorch_model.bin
+  >>> 结论: 缺节点(未安装)
+
+================================================================================
+FILE: 一键抠图换背景融图的工作流\workflow-superb-product-background-replacement-workflow-m56e9sjLf0G0rFpGvcS9-spaniel_offbeat_13-openart.ai.json
+  format=ui  nodes=21
+  class_types(21): ACN_AdvancedControlNetApply, AnyLineArtPreprocessor_aux, BiRefNet_ModelLoader_Zho, CLIPSetLastLayer, CLIPTextEncode, CR Simple Image Compare, CheckpointLoaderSimple, ControlNetLoaderAdvanced, DetailTransfer, EmptyLatentImage, GrowMask, ICLightConditioning, Image Blend by Mask, KSampler, LayerUtility: ImageRemoveAlpha, LoadAndApplyICLightUnet, LoadImage, Mask Gaussian Region, Note, SaveImage, Zoe-D
+  [节点OK] 已启用: comfyui_controlnet_aux
+  [需启用] 已安装但禁用: ComfyUI-Impact-Pack, ComfyUI_Comfyroll_CustomNodes, ComfyUI_LayerStyle, WAS-Node-Suite-ComfyUI
+  [缺节点] 未安装/未知: BiRefNet_ModelLoader_Zho, ControlNetLoaderAdvanced, DetailTransfer, ICLightConditioning, LoadAndApplyICLightUnet
+  [模型OK] majicmixRealistic_v7.safetensors
+  [缺模型] BiRefNet-DIS_ep580.pth, iclight_sd15_fc.safetensors, leosamsHelloworldXL_helloworldXL60.safetensors, mistoLine_rank256.safetensors, xinsir_controlnet-depth-sdxl-1.0.safetensors
+  >>> 结论: 缺节点(未安装)
+
+================================================================================
+FILE: 万物手办\workflow-everything-be-garage-kit-zgNvaIGXQ7wjNZtvbeN5-emu_simple_43-openart.ai.json
+  format=ui  nodes=19
+  class_types(19): ApplyPulidAdvanced, CLIPTextEncode, CLIPVisionLoader, CR Text Blacklist, CharacterInText, CheckpointLoaderSimple, Compare, ConcatStringSingle, DF_Text, EmptyLatentImage, IPAdapterAdvanced, IPAdapterModelLoader, KSampler, LoadImage, PulidInsightFaceLoader, PulidModelLoader, ShowText|pysssss, SomethingToString, WD14Tagger|pysssss
+  [节点OK] 已启用: ComfyUI-KJNodes
+  [需启用] 已安装但禁用: ComfyUI-Impact-Pack, ComfyUI_Comfyroll_CustomNodes, ComfyUI_IPAdapter_plus
+  [缺节点] 未安装/未知: ApplyPulidAdvanced, CharacterInText, ConcatStringSingle, DF_Text, PulidInsightFaceLoader, PulidModelLoader, ShowText|pysssss, WD14Tagger|pysssss
+  [缺模型] PVCStyleModelMovable_beta25Realistic.safetensors, ip-adapter-plus_sdxl_vit-h.bin, ip-adapter_pulid_sdxl_fp16.safetensors, sd15_clip.pth
+  >>> 结论: 缺节点(未安装)
+
+================================================================================
+FILE: 产品摄影重新点亮\workflow-relight-with-ic-light---product-photography-relight-kdypWGlBPE7DZkqHALVi-risunobushi-openart.ai.json
+  format=ui  nodes=13
+  class_types(13): CLIPTextEncode, CheckpointLoaderSimple, EmptyLatentImage, GrowMaskWithBlur, ICLightConditioning, ImageResize+, KSampler, LoadAndApplyICLightUnet, LoadImage, LoadImageMask, Note, PreviewBridge, RemapMaskRange
+  [节点OK] 已启用: ComfyUI-KJNodes
+  [需启用] 已安装但禁用: ComfyUI-Impact-Pack, ComfyUI_essentials
+  [缺节点] 未安装/未知: ICLightConditioning, LoadAndApplyICLightUnet
+  [缺模型] epicrealism_naturalSinRC1VAE.safetensors, iclight_sd15_fc.safetensors
+  >>> 结论: 缺节点(未安装)
+
+================================================================================
+FILE: 写真工作流\workflow-lora-Ww7Q3SAvg2fDjRzYlSXP-liubai-openart.ai.json
+  format=ui  nodes=25
+  class_types(25): BNK_CLIPTextEncodeAdvanced, CLIPTextEncode, CheckpointLoaderSimple, ConstrainImage|pysssss, ControlNetApplyAdvanced, ControlNetLoader, DWPreprocessor, FeatheredMask, GroundingDinoModelLoader (segment anything), GroundingDinoSAMSegment (segment anything), HEDPreprocessor, IPAdapter, IPAdapterUnifiedLoader, Image Remove Background (rembg), KSampler, LoadImage, LoraLoader, PixelPerfectResolution, SAM
+  [节点OK] 已启用: ComfyUI-IDM-VTON, comfyui_controlnet_aux
+  [需启用] 已安装但禁用: ComfyUI_IPAdapter_plus, comfyui_segment_anything
+  [缺节点] 未安装/未知: BNK_CLIPTextEncodeAdvanced, ConstrainImage|pysssss, FeatheredMask, Image Remove Background (rembg), SDXLPromptStyler, SUPIR_Upscale, StringFunction|pysssss, WD14Tagger|pysssss, easy imageSize
+  [模型OK] control_v11p_sd15_inpaint.pth
+  [缺模型] control_v11f1p_sd15_depth.pth, control_v11p_sd15_openpose.pth, control_v11p_sd15_softedge.pth, dw-ll_ucoco_384_bs5.torchscript.pt, yolox_l.torchscript.pt
+  >>> 结论: 缺节点(未安装)
+
+================================================================================
+FILE: 制作自己的免费贴纸\workflow-stickeryou---1-photo-for-stickers-e8TPNxcEGKdNJ40bQXlU-rui400-openart.ai.json
+  format=ui  nodes=44
+  class_types(44): Anything Everywhere3, ApplyInstantID, ApplyPulid, BatchPromptSchedule, CLIPTextEncode, CR Image Grid Panel, CR Simple Prompt List, CR Simple Prompt List Keyframes, CheckpointLoaderSimple, Concat Text _O, ControlNetLoader, DF_Image_scale_to_side, DF_Integer, EmptyLatentImage, FreeU_V2, ImageCompositeAbsolute, ImageCompositeAbsoluteByContainer, InstantIDFaceAnalysis, InstantIDModelLoader, KSampler (
+  [节点OK] 已启用: ComfyUI-KJNodes
+  [需启用] 已安装但禁用: ComfyUI-PuLID-Flux, ComfyUI_Comfyroll_CustomNodes, ComfyUI_LayerStyle, ComfyUI_essentials, WAS-Node-Suite-ComfyUI, efficiency-nodes-comfyui
+  [缺节点] 未安装/未知: Anything Everywhere3, ApplyInstantID, Concat Text _O, DF_Image_scale_to_side, DF_Integer, ImageCompositeAbsolute, ImageCompositeAbsoluteByContainer, InstantIDFaceAnalysis, InstantIDModelLoader, LLava Loader Simple, LLavaSamplerSimple, LlavaClipLoader, PulidInsightFaceLoader, PulidModelLoader, SDXLPr
+  [模型OK] diffusion_pytorch_model.safetensors
+  [缺模型] StickersRedmond_XL.safetensors, cartoon卡通化.pt, dreamshaperXL_lightningDPMSDE.safetensors, ggml-model-q4_k.gguf, ip-adapter.bin, ip-adapter_pulid_sdxl_fp16.safetensors, mmproj-model-f16.gguf, smiling笑.pt
+  >>> 结论: 缺节点(未安装)
+
+================================================================================
+FILE: 双人婚纱照合影+背景控制\workflow.json
+  format=ui  nodes=29
+  class_types(29): Anything Everywhere?, CLIPTextEncodeSDXL, CLIPVisionLoader, CheckpointLoader|pysssss, DetailerForEach, EmptyLatentImage, IPAdapterApply, IPAdapterApplyFaceID, IPAdapterModelLoader, ImageToMask, ImpactSEGSOrderedFilter, ImpactSimpleDetectorSEGS, InsightFaceLoader, KSampler (Efficient), LoadImage, LoraLoader|pysssss, PainterNode, PrepImageForClipVision, PrimitiveNode, ReActorFaceSwap, SAMLoader, SDX
+  [节点OK] 已启用: ComfyUI-MAINodes, ComfyUI-ReActor-Nodes
+  [需启用] 已安装但禁用: ComfyUI-Impact-Pack, ComfyUI-PuLID-Flux, ComfyUI_IPAdapter_plus, efficiency-nodes-comfyui
+  [缺节点] 未安装/未知: Anything Everywhere?, CheckpointLoader|pysssss, IPAdapterApplyFaceID, LoraLoader|pysssss, SDXLPromptStylerbyMileHigh, Seed Everywhere, ShowText|pysssss, Text Input [Dream], UltimateSDUpscale, ttN text3BOX_3WAYconcat
+  [模型OK] face_yolov8m.pt, inswapper_128.onnx, sam_vit_b_01ec64.pth
+  [缺模型] RealESRGAN_x4plus.pth, ip-adapter-faceid_sdxl.bin, ip-adapter_sdxl.safetensors, open_clip_pytorch_model.bin, pytorch_model.bin
+  >>> 结论: 缺节点(未安装)
+
+================================================================================
+FILE: 图生视频(1)\AnimateDiff+IPAdapter图生成动画.json
+  format=ui  nodes=14
+  class_types(14): ADE_AnimateDiffCombine, ADE_AnimateDiffLoaderWithContext, CLIPSetLastLayer, CLIPTextEncode, CLIPVisionLoader, CheckpointLoaderSimple, EmptyLatentImage, IPAdapterApply, IPAdapterModelLoader, KSampler, LatentUpscaleBy, LoadImage, PrimitiveNode, VAELoader
+  [节点OK] 已启用: ComfyUI-MAINodes
+  [需启用] 已安装但禁用: ComfyUI-AnimateDiff-Evolved, ComfyUI-Impact-Pack, ComfyUI_IPAdapter_plus
+  [模型OK] model.safetensors
+  [缺模型] ip-adapter_sd15.bin, meinamix_meinaV11.safetensors, mm_sd_v14.ckpt, vae-ft-mse-840000-ema-pruned.safetensors
+  >>> 结论: 需启用节点
+
+================================================================================
+FILE: 图生视频(1)\实时手绘或者上传图片\实时绘图生成视频.json
+  format=ui  nodes=15
+  class_types(15): CLIPTextEncode, CheckpointLoader|pysssss, ImageOnlyCheckpointLoader, ImageScale, ImageScaleBy, KSampler, KSampler (Efficient), LoraLoader|pysssss, ModelSamplingDiscrete, PainterNode, SVD_img2vid_Conditioning, SaveImage, UpscaleModelLoader, VAELoader, VideoLinearCFGGuidance
+  [需启用] 已安装但禁用: efficiency-nodes-comfyui
+  [缺节点] 未安装/未知: CheckpointLoader|pysssss, LoraLoader|pysssss
+  [缺模型] 4x-UltraSharp.pth, svd.safetensors, vae-ft-mse-840000-ema-pruned.safetensors
+  >>> 结论: 缺节点(未安装)
+
+================================================================================
+FILE: 图生视频\AnimateDiff+IPAdapter图生成动画.json
+  format=ui  nodes=14
+  class_types(14): ADE_AnimateDiffCombine, ADE_AnimateDiffLoaderWithContext, CLIPSetLastLayer, CLIPTextEncode, CLIPVisionLoader, CheckpointLoaderSimple, EmptyLatentImage, IPAdapterApply, IPAdapterModelLoader, KSampler, LatentUpscaleBy, LoadImage, PrimitiveNode, VAELoader
+  [节点OK] 已启用: ComfyUI-MAINodes
+  [需启用] 已安装但禁用: ComfyUI-AnimateDiff-Evolved, ComfyUI-Impact-Pack, ComfyUI_IPAdapter_plus
+  [模型OK] model.safetensors
+  [缺模型] ip-adapter_sd15.bin, meinamix_meinaV11.safetensors, mm_sd_v14.ckpt, vae-ft-mse-840000-ema-pruned.safetensors
+  >>> 结论: 需启用节点
+
+================================================================================
+FILE: 图生视频\实时手绘或者上传图片\实时绘图生成视频.json
+  format=ui  nodes=15
+  class_types(15): CLIPTextEncode, CheckpointLoader|pysssss, ImageOnlyCheckpointLoader, ImageScale, ImageScaleBy, KSampler, KSampler (Efficient), LoraLoader|pysssss, ModelSamplingDiscrete, PainterNode, SVD_img2vid_Conditioning, SaveImage, UpscaleModelLoader, VAELoader, VideoLinearCFGGuidance
+  [需启用] 已安装但禁用: efficiency-nodes-comfyui
+  [缺节点] 未安装/未知: CheckpointLoader|pysssss, LoraLoader|pysssss
+  [缺模型] 4x-UltraSharp.pth, svd.safetensors, vae-ft-mse-840000-ema-pruned.safetensors
+  >>> 结论: 缺节点(未安装)
+
+================================================================================
+FILE: 生成自己的机器人\workflow-generate-your-own-robot-pGwMIi92nl9nWc6P2hMB-macaque_keen_26-openart.ai.json
+  format=ui  nodes=36
+  class_types(36): CLIPSeg Masking, CLIPSeg Model Loader, CLIPTextEncode (BlenderNeko Advanced + NSP), CR LoRA Stack, CR Overlay Text, CR SDXL Aspect Ratio, CR Upscale Image, CameraStyler, Cfg Literal, CheckpointLoaderSimple, FreeU (Advanced), FreeU_V2, Image Blend, Image Crop Location, Image Filter Adjustments, Image Lucy Sharpen, Image Paste Crop, Image Paste Crop by Location, Image Remove Background (Alpha), Imag
+  [节点OK] 已启用: ComfyUI-MAINodes
+  [需启用] 已安装但禁用: ComfyUI-WanVideoWrapper, ComfyUI_Comfyroll_CustomNodes, WAS-Node-Suite-ComfyUI
+  [缺节点] 未安装/未知: CameraStyler, Cfg Literal, FreeU (Advanced), LatentGaussianNoise, MilehighStyler, SDPromptSaver, ShowText|pysssss
+  [缺模型] 4x_NMKD-UltraYandere_300k.pth, AderekSDXL DPO.safetensors, mixxl_v4.safetensors, sdxl_lora_green_gifts-000016.safetensors, sdxl_lora_pawelT100.safetensors, sdxl_lora_stworki-000014.safetensors, sdxl_vae.safetensors
+  >>> 结论: 缺节点(未安装)
+
+================================================================================
+FILE: 神奇服装工作流\workflow-comfyui---magic-clothing-workflow-lz0wWAC9RhEWNFd2IZvO-cgtips-openart.ai.json
+  format=ui  nodes=11
+  class_types(11): Add Magic Clothing Attention, Anything Everywhere, BiRefNet, CLIPTextEncode, CheckpointLoaderSimple, EmptyLatentImage, Image Adaptive Crop With Mask, KSampler, Load Magic Clothing Model, LoadImage, SaveImage
+  [缺节点] 未安装/未知: Add Magic Clothing Attention, Anything Everywhere, BiRefNet, Image Adaptive Crop With Mask, Load Magic Clothing Model
+  [缺模型] Realistic_Vision_V4.0_fp16-no-ema.safetensors, oms_diffusion_768_200000.safetensors
+  >>> 结论: 缺节点(未安装)
+
+================================================================================
+FILE: 老照片翻新\workflow-old-photo-restoration-xl-vKtihSX1DGBiBjAovlSP-datou-openart.ai.json
+  format=ui  nodes=22
+  class_types(22): Automatic CFG, BOPBTL_LoadRestoreOldPhotosModel, BOPBTL_LoadScratchMaskModel, BOPBTL_ScratchMask, CLIPTextEncode, CR Text, CheckpointLoaderSimple, ComfyUI_Image_Round__ImageCropAdvanced, ComfyUI_Image_Round__ImageRoundAdvanced, ConcatText_Zho, ControlNetApplyAdvanced, ControlNetLoader, DWPreprocessor, DepthAnythingV2Preprocessor, DisplayText_Zho, ImageScaleToMegapixels, KSampler, LoadImage, Ollama
+  [节点OK] 已启用: ComfyUI-ReActor-Nodes, comfyui_controlnet_aux
+  [需启用] 已安装但禁用: ComfyUI_Comfyroll_CustomNodes
+  [缺节点] 未安装/未知: Automatic CFG, BOPBTL_LoadRestoreOldPhotosModel, BOPBTL_LoadScratchMaskModel, BOPBTL_ScratchMask, ComfyUI_Image_Round__ImageCropAdvanced, ComfyUI_Image_Round__ImageRoundAdvanced, ConcatText_Zho, DisplayText_Zho, ImageScaleToMegapixels, OllamaGenerate, OllamaVision
+  [模型OK] inswapper_128.onnx
+  [缺模型] FT_Epoch_latest.pt, codeformer-v0.1.0.pth, depth_anything_v2_vitb.pth, dw-ll_ucoco_384.onnx, juggernautXL_v9Rdphoto2Lightning.safetensors, latest_net_G.pth, latest_net_mapping_net.pth, xinsir-controlnet-depth-sdxl-1.0.safetensors, xinsir-controlnet-openpose-sdxl-1.0.safetensors, xinsir-controlnet-ti
+  >>> 结论: 缺节点(未安装)
+
+================================================================================
+FILE: 肖像转证件照\workflow-portrait-2-id-photo-4k4MCtCJxcVyN1H471lr-ezzyuxi-openart.ai.json
+  format=ui  nodes=24
+  class_types(24): ApplyInstantIDAdvanced, CLIPSetLastLayer, CLIPTextEncode, CR Color Panel, CheckpointLoaderSimple, ConcatStringSingle, ControlNetApplyAdvanced, ControlNetLoaderAdvanced, DF_Image_scale_to_side, DF_Text, DWPreprocessor, EmptyLatentImage, Image2Text, ImageCompositeMasked, InstantIDFaceAnalysis, InstantIDModelLoader, KSampler (Efficient), LayerColor: AutoAdjust, LayerColor: ColorTemperature, LayerFilt
+  [节点OK] 已启用: comfyui_controlnet_aux
+  [需启用] 已安装但禁用: ComfyUI_Comfyroll_CustomNodes, ComfyUI_LayerStyle, efficiency-nodes-comfyui
+  [缺节点] 未安装/未知: ApplyInstantIDAdvanced, ConcatStringSingle, ControlNetLoaderAdvanced, DF_Image_scale_to_side, DF_Text, Image2Text, InstantIDFaceAnalysis, InstantIDModelLoader, LoadImage2TextModel, RandomInt
+  [模型OK] diffusion_pytorch_model.safetensors
+  [缺模型] LEOSAM_HelloWorld_极速版_5.0_Lightning.safetensors, dw-ll_ucoco_384_bs5.torchscript.pt, ip-adapter.bin, thibaud_xl_openpose.safetensors, yolox_l.onnx
+  >>> 结论: 缺节点(未安装)
+
+================================================================================
+FILE: 自制换脸工作流\workflow-change-face-4RJFsFp9oXdlP9rty2cI-grinlau-openart.ai.json
+  format=ui  nodes=46
+  class_types(46): Any Switch (rgthree), ApplyInstantID, Bounded Image Crop with Mask, CLIPSetLastLayer, CLIPTextEncode, CR Image Input Switch, CR Image Input Switch (4 way), CheckpointLoaderSimple, ControlNetApplyAdvanced, ControlNetLoader, DF_Float, DF_Integer, DepthAnythingPreprocessor, EG_RY_HT, EmptyImage, GetNode, IPAdapterFaceID, IPAdapterMS, IPAdapterUnifiedLoader, IPAdapterUnifiedLoaderFaceID, ImageComposit
+  [节点OK] 已启用: ComfyUI-MAINodes, ComfyUI-ReActor-Nodes, comfyui_controlnet_aux
+  [需启用] 已安装但禁用: ComfyUI-Impact-Pack, ComfyUI_Comfyroll_CustomNodes, ComfyUI_IPAdapter_plus, ComfyUI_essentials, WAS-Node-Suite-ComfyUI
+  [缺节点] 未安装/未知: ApplyInstantID, DF_Float, DF_Integer, EG_RY_HT, GetNode, InstantIDFaceAnalysis, InstantIDModelLoader, Lora Loader Stack (rgthree), Note Plus (mtb), SDXLPromptStyler, SetNode, UltimateSDUpscale, WD14Tagger|pysssss, easy bookmark
+  [模型OK] GFPGANv1.4.pth, face_yolov8m.pt, inswapper_128.onnx, sam_vit_b_01ec64.pth
+  [缺模型] GPEN-BFR-2048.onnx, HAT-L_SRx3_ImageNet-pretrain.pth, add-detail-xl.safetensors, control_instant_id_sdxl.safetensors, depth_anything_vitl14.pth, ip-adapter_instant_id_sdxl.bin, t2i-adapter_diffusers_xl_depth_zoe.safetensors, x1_ITF_SkinDiffDetail_Lite_v1.pth, xxmix9realisticsdxl_testV10.safetensors
+  >>> 结论: 缺节点(未安装)
+
+================================================================================
+FILE: 视频换脸工作流\视频换脸工作流.json
+  format=ui  nodes=3
+  class_types(3): ReActorFaceSwap, ReActorLoadFaceModel, ReActorSaveFaceModel
+  [节点OK] 已启用: ComfyUI-ReActor-Nodes
+  [模型OK] inswapper_128.onnx
+  [缺模型] face_test.safetensors
+  >>> 结论: 缺模型
+
+================================================================================
+FILE: 风格化写真\workflow-stylize-photo-pNTGLYvKsDAskUPyERHG-noan-openart.ai.json
+  format=ui  nodes=42
+  class_types(42): AIO_Preprocessor, BNK_CLIPTextEncodeAdvanced, CLIPSetLastLayer, CLIPVisionLoader, CR Apply Multi-ControlNet, CR LoRA Stack, CR Load LoRA, CR Multi-ControlNet Stack, CfgScheduleHookProvider, CheckpointLoaderSimple, ConcatText_Zho, DenoiseScheduleHookProvider, DisplayText_Zho, EmptyLatentImage, FaceDetailer, FilmGrain, FreeU_V2, GroundingDinoSAMSegment (segment anything), GrowMask, IPAAdapterFaceIDB
+  [节点OK] 已启用: ComfyUI-ReActor-Nodes, comfyui_controlnet_aux
+  [需启用] 已安装但禁用: ComfyUI-Impact-Pack, ComfyUI_Comfyroll_CustomNodes, ComfyUI_IPAdapter_plus, ComfyUI_LayerStyle, comfyui_segment_anything, efficiency-nodes-comfyui
+  [缺节点] 未安装/未知: BNK_CLIPTextEncodeAdvanced, ConcatText_Zho, DisplayText_Zho, FilmGrain, Text box, WD14Tagger|pysssss
+  [模型OK] face_yolov8m.pt, inswapper_128.onnx, majicmixRealistic_v7.safetensors
+  [缺模型] DetailTweakerLoRA.safetensors, OmniSR_X2_DIV2K.safetensors, codeformer-v0.1.0.pth, ip-adapter-faceid-plusv2_sd15.bin, ip-adapter-faceid-plusv2_sd15_lora.safetensors, ip-adapter-plus_sd15.safetensors, pytorch_model.bin, sam_vit_l_0b3195.pth, 泛光.safetensors, 绪儿怒海争锋Pirate.safetensors
+  >>> 结论: 缺节点(未安装)
+
+================================================================================
+FILE: （赠送）更新工作流1\LTX 2.3  单图数字人.json
+  format=ui  nodes=62
+  class_types(62): AudioCrop, AudioDurationToFrames, CLIPTextEncode, CM_FloatToInt, CheckpointLoaderSimple, DiffusionModelLoaderKJ, Display Any (rgthree), DualCLIPLoader, EmptyLTXVLatentVideo, FloatConstant, GetImageSize, GetNode, GuiderParameters, INTConstant, ImageFlip, ImageResizeKJv2, KSamplerSelect, LTX2SamplingPreviewOverride, LTXVAddGuide, LTXVAudioVAEDecode, LTXVAudioVAEEncode, LTXVAudioVAELoader, LTXVConcat
+  [节点OK] 已启用: ComfyUI-KJNodes, ComfyUI-MAINodes, ComfyUI-VideoHelperSuite
+  [需启用] 已安装但禁用: ComfyUI-Impact-Pack, ComfyUI_LayerStyle, ComfyUI_essentials
+  [缺节点] 未安装/未知: AudioCrop, AudioDurationToFrames, CM_FloatToInt, Display Any (rgthree), GetNode, GuiderParameters, LTXVGemmaCLIPModelLoader, LTXVSequenceParallelMultiGPUPatcher, MelBandRoFormerModelLoader, MelBandRoFormerSampler, MultimodalGuider, SetNode, easy showAnything, llama_cpp_clean_states, llama_cpp_instru
+  [模型OK] LTX23_audio_vae_bf16.safetensors, LTX23_video_vae_bf16.safetensors, ltx-2.3_text_projection_bf16.safetensors
+  [缺模型] Ltx2.3-Licon-VBVR-I2V-240K-R32.safetensors, MelBandRoformer_fp32.safetensors, Qwen3-VL-8B-Instruct-abliterated-v2.0.Q8_0.gguf, Qwen3-VL-8B-Instruct-abliterated-v2.0.mmproj-Q8_0.gguf, gemma_3_12B_it_fp8_e4m3fn.safetensors, ltx-2-19b-ic-lora-detailer.safetensors, ltx-2-spatial-upscaler-x2-1.0.safetens
+  >>> 结论: 缺节点(未安装)
+
+================================================================================
+FILE: （赠送）更新工作流1\WAN-SCAIL动作迁移.json
+  format=ui  nodes=30
+  class_types(30): CLIPVisionLoader, ImageResizeKJv2, LayerUtility: PurgeVRAM V2, LoadImage, LoadNLFModel, NLFPredict, OnnxDetectionModelLoader, PoseDetectionVitPoseToDWPose, RenderNLFPoses, WanVideoAddSCAILPoseEmbeds, WanVideoAddSCAILReferenceEmbeds, WanVideoBlockSwap, WanVideoClipVisionEncode, WanVideoContextOptions, WanVideoDecode, WanVideoEmptyEmbeds, WanVideoEncode, WanVideoLoraSelect, WanVideoModelLoader, WanV
+  [节点OK] 已启用: ComfyUI-KJNodes
+  [需启用] 已安装但禁用: ComfyUI-WanVideoWrapper, ComfyUI_LayerStyle
+  [缺节点] 未安装/未知: OnnxDetectionModelLoader, PoseDetectionVitPoseToDWPose, RenderNLFPoses, easy mathInt
+  [缺模型] Wan21-14B-SCAIL-preview_fp8_e4m3fn_scaled_KJ.safetensors, Wan21_I2V_14B_lightx2v_cfg_step_distill_lora_rank64.safetensors, Wan21_Uni3C_controlnet_fp16.safetensors, clip_vision_h.safetensors, umt5-xxl-enc-bf16.safetensors, vitpose_h_wholebody_model.onnx, wan_2.1_vae.safetensors, yolov10m.onnx
+  >>> 结论: 缺节点(未安装)
+
+================================================================================
+FILE: （赠送）更新工作流1\WAN-SCAIL动作迁移（高显存版）.json
+  format=ui  nodes=29
+  class_types(29): CLIPVisionLoader, ImageResizeKJv2, LoadImage, LoadNLFModel, NLFPredict, OnnxDetectionModelLoader, PoseDetectionVitPoseToDWPose, RenderNLFPoses, WanVideoAddSCAILPoseEmbeds, WanVideoAddSCAILReferenceEmbeds, WanVideoBlockSwap, WanVideoClipVisionEncode, WanVideoContextOptions, WanVideoDecode, WanVideoEmptyEmbeds, WanVideoEncode, WanVideoLoraSelect, WanVideoModelLoader, WanVideoSamplerExtraArgs, WanVid
+  [节点OK] 已启用: ComfyUI-KJNodes
+  [需启用] 已安装但禁用: ComfyUI-WanVideoWrapper
+  [缺节点] 未安装/未知: OnnxDetectionModelLoader, PoseDetectionVitPoseToDWPose, RenderNLFPoses, easy mathInt
+  [缺模型] Wan21-14B-SCAIL-preview_fp8_e4m3fn_scaled_KJ.safetensors, Wan21_I2V_14B_lightx2v_cfg_step_distill_lora_rank64.safetensors, Wan21_Uni3C_controlnet_fp16.safetensors, clip_vision_h.safetensors, umt5-xxl-enc-bf16.safetensors, vitpose_h_wholebody_model.onnx, wan_2.1_vae.safetensors, yolov10m.onnx
+  >>> 结论: 缺节点(未安装)
+
+================================================================================
+FILE: （赠送）更新工作流1\反推.json
+  format=ui  nodes=7
+  class_types(7): Display Any (rgthree), LayerUtility: PurgeVRAM V2, LoadImage, llama_cpp_clean_states, llama_cpp_instruct_adv, llama_cpp_model_loader, llama_cpp_parameters
+  [需启用] 已安装但禁用: ComfyUI_LayerStyle
+  [缺节点] 未安装/未知: Display Any (rgthree), llama_cpp_clean_states, llama_cpp_instruct_adv, llama_cpp_model_loader, llama_cpp_parameters
+  [缺模型] Qwen3-VL-8B-Instruct-abliterated-v2.0.Q8_0.gguf, Qwen3-VL-8B-Instruct-abliterated-v2.0.mmproj-Q8_0.gguf
+  >>> 结论: 缺节点(未安装)
+
+================================================================================
+FILE: （赠送）更新工作流1\图片-FLUX-ControlNet-AUX.json
+  format=ui  nodes=20
+  class_types(20): AIO_Preprocessor, CLIPTextEncode, ConditioningZeroOut, ControlNetApplyAdvanced, ControlNetLoader, DualCLIPLoader, FluxGuidance, KSampler, LayerUtility: ImageReel, LayerUtility: ImageReelComposit, LayerUtility: ImageScaleByAspectRatio V2, LoadImage, LoraLoaderModelOnly, PreviewImage, SetUnionControlNetType, UNETLoader, VAEDecode, VAEEncode, VAELoader, easy clearCacheAll
+  [节点OK] 已启用: comfyui_controlnet_aux
+  [需启用] 已安装但禁用: ComfyUI_LayerStyle
+  [缺节点] 未安装/未知: easy clearCacheAll
+  [模型OK] clip_l.safetensors, flux1-dev-fp8.safetensors
+  [缺模型] FLUX.1-Turbo-Alpha.safetensors, FLUX.1-dev-ControlNet-Union-Pro.safetensors, ae.safetensors, t5xxl_fp16.safetensors, 大胸美女.safetensors
+  >>> 结论: 缺节点(未安装)
+
+================================================================================
+FILE: （赠送）更新工作流1\图片-FLUX-FILL-OneReward-遮罩迁移.json
+  format=ui  nodes=23
+  class_types(23): CLIPTextEncode, CLIPVisionEncode, CLIPVisionLoader, ConditioningZeroOut, DifferentialDiffusion, DualCLIPLoader, Image Comparer (rgthree), ImageAndMaskPreview, InpaintModelConditioning, KSampler, LatentCrop, LayerUtility: ImageScaleByAspectRatio V2, LoadImage, LoraLoaderModelOnly, Mask Fill Holes, MaskPreview, PreviewImage, StyleModelApply, StyleModelLoader, UNETLoader, VAEDecode, VAELoader, easy m
+  [节点OK] 已启用: ComfyUI-KJNodes
+  [需启用] 已安装但禁用: ComfyUI_LayerStyle, WAS-Node-Suite-ComfyUI
+  [缺节点] 未安装/未知: Image Comparer (rgthree), easy makeImageForICLora
+  [模型OK] clip_l.safetensors
+  [缺模型] FLUX.1-Turbo-Alpha.safetensors, ae.safetensors, flux1-fill-dev-OneReward-fp8.safetensors, flux1-fill-dev.safetensors, flux1-redux-dev.safetensors, sigclip_vision_patch14_384.safetensors, t5xxl_fp16.safetensors
+  >>> 结论: 缺节点(未安装)
+
+================================================================================
+FILE: （赠送）更新工作流1\图片-FLUX-OneReward-遮罩移除.json
+  format=ui  nodes=16
+  class_types(16): CLIPTextEncode, ConditioningZeroOut, DifferentialDiffusion, DualCLIPLoader, ImageColorMatchAdobe+, InpaintModelConditioning, KSampler, LayerUtility: ImageScaleByAspectRatio V2, LoadImage, LoraLoaderModelOnly, Mask Fill Holes, MaskPreview+, PreviewImage, UNETLoader, VAEDecode, VAELoader
+  [需启用] 已安装但禁用: ComfyUI_LayerStyle, ComfyUI_essentials, WAS-Node-Suite-ComfyUI
+  [模型OK] clip_l.safetensors
+  [缺模型] FLUX.1-Turbo-Alpha.safetensors, ae.safetensors, flux1-fill-dev-OneReward-fp8.safetensors, flux1-fill-dev.safetensors, pytorch_lora_weights.safetensors, t5xxl_fp16.safetensors
+  >>> 结论: 需启用节点
+
+================================================================================
+FILE: （赠送）更新工作流1\图片-FLUX-seedvr2.json
+  format=ui  nodes=16
+  class_types(16): CLIPTextEncode, DualCLIPLoader, EmptyLatentImage, Image Comparer (rgthree), KSampler, LatentUpscaleBy, LayerUtility: PurgeVRAM V2, LoraLoaderModelOnly, PreviewImage, SeedVR2LoadDiTModel, SeedVR2LoadVAEModel, SeedVR2VideoUpscaler, UNETLoader, VAEDecode, VAELoader, easy clearCacheAll
+  [需启用] 已安装但禁用: ComfyUI-SeedVR2_VideoUpscaler, ComfyUI_LayerStyle
+  [缺节点] 未安装/未知: Image Comparer (rgthree), easy clearCacheAll
+  [模型OK] clip_l.safetensors, flux1-dev-fp8.safetensors
+  [缺模型] FLUX-人像质感皮肤增强_v1.0.safetensors, FLUX.1-Turbo-Alpha.safetensors, ae.safetensors, ema_vae_fp16.safetensors, seedvr2_ema_3b_fp16.safetensors, t5xxl_fp16.safetensors
+  >>> 结论: 缺节点(未安装)
+
+================================================================================
+FILE: （赠送）更新工作流1\图片-FLUX-uso风格参考.json
+  format=ui  nodes=14
+  class_types(14): CLIPTextEncode, CLIPVisionEncode, CLIPVisionLoader, DualCLIPLoader, EmptyLatentImage, KSampler, LayerUtility: ImageReel, LayerUtility: ImageReelComposit, LoadImage, LoraLoaderModelOnly, ModelPatchLoader, PreviewImage, UNETLoader, VAELoader
+  [需启用] 已安装但禁用: ComfyUI_LayerStyle
+  [模型OK] clip_l.safetensors, flux1-dev-fp8.safetensors
+  [缺模型] FLUX.1-Turbo-Alpha.safetensors, ae.safetensors, sigclip_vision_patch14_384.safetensors, t5xxl_fp16.safetensors, uso-flux1-dit-lora-v1.safetensors, uso-flux1-projector-v1.safetensors
+  >>> 结论: 需启用节点
+
+================================================================================
+FILE: （赠送）更新工作流1\图片-FLUX-扩图.json
+  format=ui  nodes=14
+  class_types(14): CLIPTextEncode, ConditioningZeroOut, DifferentialDiffusion, DualCLIPLoader, ImagePadForOutpaint, InpaintModelConditioning, KSampler, LayerUtility: ImageScaleByAspectRatio V2, LoadImage, LoraLoaderModelOnly, SaveImage, UNETLoader, VAEDecode, VAELoader
+  [需启用] 已安装但禁用: ComfyUI_LayerStyle
+  [模型OK] clip_l.safetensors
+  [缺模型] FLUX.1-Turbo-Alpha.safetensors, ae.safetensors, flux1-fill-dev-OneReward-fp8.safetensors, flux1-fill-dev.safetensors, t5xxl_fp16.safetensors
+  >>> 结论: 需启用节点
+
+================================================================================
+FILE: （赠送）更新工作流1\图片-FLUX-遮罩重绘.json
+  format=ui  nodes=16
+  class_types(16): CLIPTextEncode, ConditioningZeroOut, DifferentialDiffusion, DualCLIPLoader, Image Comparer (rgthree), InpaintModelConditioning, KSampler, LayerUtility: ImageScaleByAspectRatio V2, LoadImage, LoraLoaderModelOnly, Mask Fill Holes, PreviewImage, SaveImage, UNETLoader, VAEDecode, VAELoader
+  [需启用] 已安装但禁用: ComfyUI_LayerStyle, WAS-Node-Suite-ComfyUI
+  [缺节点] 未安装/未知: Image Comparer (rgthree)
+  [模型OK] clip_l.safetensors
+  [缺模型] FLUX.1-Turbo-Alpha.safetensors, ae.safetensors, flux1-fill-dev-OneReward-fp8.safetensors, flux1-fill-dev.safetensors, t5xxl_fp16.safetensors
+  >>> 结论: 缺节点(未安装)
+
+================================================================================
+FILE: （赠送）更新工作流1\图片-FLUX.json
+  format=ui  nodes=17
+  class_types(17): CLIPTextEncode, DualCLIPLoader, EmptyLatentImage, FluxGuidance, Image Comparer (rgthree), KSampler, LatentUpscaleBy, LoraLoaderModelOnly, PreviewImage, SaveImage, SeedVR2LoadDiTModel, SeedVR2LoadVAEModel, SeedVR2VideoUpscaler, UNETLoader, VAEDecode, VAELoader, easy cleanGpuUsed
+  [需启用] 已安装但禁用: ComfyUI-SeedVR2_VideoUpscaler
+  [缺节点] 未安装/未知: Image Comparer (rgthree), easy cleanGpuUsed
+  [模型OK] clip_l.safetensors, flux1-dev-fp8.safetensors
+  [缺模型] F.1真实质感-油油嗨丝小学姐_v1.safetensors, FLUX-人像质感皮肤增强_v1.0.safetensors, FLUX.1-Turbo-Alpha.safetensors, ae.safetensors, ema_vae_fp16.safetensors, seedvr2_ema_3b_fp8_e4m3fn.safetensors, t5xxl_fp16.safetensors
+  >>> 结论: 缺节点(未安装)
+
+================================================================================
+FILE: （赠送）更新工作流1\图片-FLUX2-klein图片编辑.json
+  format=ui  nodes=14
+  class_types(14): CLIPLoader, CLIPTextEncode, EmptyFlux2LatentImage, Image Comparer (rgthree), KSampler, LayerUtility: ImageScaleByAspectRatio V2, LayerUtility: PurgeVRAM, LoadImage, PreviewImage, ReferenceLatent, UNETLoader, VAEDecode, VAEEncode, VAELoader
+  [需启用] 已安装但禁用: ComfyUI_LayerStyle
+  [缺节点] 未安装/未知: Image Comparer (rgthree)
+  [缺模型] flux-2-klein-4b.safetensors, flux-2-klein-9b.safetensors, flux2-vae.safetensors, qwen_3_4b.safetensors, qwen_3_8b_fp8mixed.safetensors
+  >>> 结论: 缺节点(未安装)
+
+================================================================================
+FILE: （赠送）更新工作流1\图片-QWEN-control姿态控制.json
+  format=ui  nodes=18
+  class_types(18): AIO_Preprocessor, CLIPLoader, CLIPTextEncode, ComfySwitchNode, ConditioningZeroOut, ControlNetApplyAdvanced, ControlNetLoader, KSampler, LayerUtility: ImageScaleByAspectRatio V2, LoadImage, LoraLoaderModelOnly, PreviewImage, SDPoseOODLoader, SDPoseOODProcessor, SaveImage, SetUnionControlNetType, UNETLoader, VAELoader
+  [节点OK] 已启用: comfyui_controlnet_aux
+  [需启用] 已安装但禁用: ComfyUI_LayerStyle
+  [缺节点] 未安装/未知: SDPoseOODLoader, SDPoseOODProcessor
+  [缺模型] Qwen-Image-ControlNet-Union.safetensors, Qwen-Image-Lightning-4steps-V2.0-bf16.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_image_fp8_e4m3fn.safetensors, qwen_image_vae.safetensors, 光影girlv1.safetensors
+  >>> 结论: 缺节点(未安装)
+
+================================================================================
+FILE: （赠送）更新工作流1\图片-QWEN-Edit2511-图片编辑.json
+  format=ui  nodes=15
+  class_types(15): CFGNorm, CLIPLoader, ConditioningZeroOut, Image Comparer (rgthree), KSampler, LayerUtility: ImageScaleByAspectRatio V2, LoadImage, LoraLoaderModelOnly, PreviewImage, ReferenceLatent, TextEncodeQwenImageEditPlus, UNETLoader, VAEDecode, VAEEncode, VAELoader
+  [需启用] 已安装但禁用: ComfyUI_LayerStyle
+  [缺节点] 未安装/未知: Image Comparer (rgthree)
+  [缺模型] Qwen-Image-Edit-2511-Lightning-4steps-V1.0-fp32.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_image_edit_2511_fp8mixed.safetensors, qwen_image_vae.safetensors
+  >>> 结论: 缺节点(未安装)
+
+================================================================================
+FILE: （赠送）更新工作流1\图片-QWEN-Image-图生图.json
+  format=ui  nodes=13
+  class_types(13): CLIPLoader, CLIPTextEncode, ConditioningZeroOut, KSampler, LayerUtility: ImageScaleByAspectRatio V2, LoadImage, ModelSamplingAuraFlow, Power Lora Loader (rgthree), SaveImage, UNETLoader, VAEDecode, VAEEncode, VAELoader
+  [需启用] 已安装但禁用: ComfyUI_LayerStyle
+  [缺节点] 未安装/未知: Power Lora Loader (rgthree)
+  [缺模型] qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_image_fp8_e4m3fn.safetensors, qwen_image_vae.safetensors
+  >>> 结论: 缺节点(未安装)
+
+================================================================================
+FILE: （赠送）更新工作流1\图片-QWEN-Image-局部重绘.json
+  format=ui  nodes=22
+  class_types(22): 68c103d9-945d-40fa-bc0a-c806d186e183, CLIPLoader, CLIPTextEncode, ControlNetInpaintingAliMamaApply, ControlNetLoader, GrowMask, ImageBlur, ImageToMask, KSampler, LayerUtility: ImageScaleByAspectRatio V2, LoadImage, LoraLoaderModelOnly, Mask Fill Holes, MaskPreview, MaskToImage, ModelSamplingAuraFlow, SaveImage, SetLatentNoiseMask, UNETLoader, VAEDecode, VAEEncode, VAELoader
+  [需启用] 已安装但禁用: ComfyUI_LayerStyle, WAS-Node-Suite-ComfyUI
+  [缺节点] 未安装/未知: 68c103d9-945d-40fa-bc0a-c806d186e183
+  [缺模型] Qwen-Image-InstantX-ControlNet-Inpainting.safetensors, Qwen-Image-Lightning-4steps-V1.0.safetensors, Qwen-Image-Lightning-4steps-V2.0-bf16.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_image_fp8_e4m3fn.safetensors, qwen_image_vae.safetensors
+  >>> 结论: 缺节点(未安装)
+
+================================================================================
+FILE: （赠送）更新工作流1\图片-QWEN-Image-扩图.json
+  format=ui  nodes=17
+  class_types(17): CLIPLoader, CLIPTextEncode, ConditioningZeroOut, ControlNetInpaintingAliMamaApply, ControlNetLoader, Image Comparer (rgthree), ImagePadForOutpaint, KSampler, LayerUtility: ImageScaleByAspectRatio V2, LoadImage, MaskPreview+, Power Lora Loader (rgthree), SaveImage, UNETLoader, VAEDecode, VAEEncode, VAELoader
+  [需启用] 已安装但禁用: ComfyUI_LayerStyle, ComfyUI_essentials
+  [缺节点] 未安装/未知: Image Comparer (rgthree), Power Lora Loader (rgthree)
+  [缺模型] Qwen-Image-InstantX-ControlNet-Inpainting.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_image_fp8_e4m3fn.safetensors, qwen_image_vae.safetensors
+  >>> 结论: 缺节点(未安装)
+
+================================================================================
+FILE: （赠送）更新工作流1\图片-Qwen基础文生图.json
+  format=ui  nodes=17
+  class_types(17): CLIPLoader, CLIPTextEncode, ConditioningZeroOut, EmptyLatentImage, KSampler, LayerUtility: ImageReel, LayerUtility: ImageReelComposit, LoraLoaderModelOnly, ModelSamplingAuraFlow, PreviewImage, SaveImage, SeedVR2LoadDiTModel, SeedVR2LoadVAEModel, SeedVR2VideoUpscaler, UNETLoader, VAEDecode, VAELoader
+  [需启用] 已安装但禁用: ComfyUI-SeedVR2_VideoUpscaler, ComfyUI_LayerStyle
+  [缺模型] Qwen-Image-Lightning-8steps-V2.0-bf16.safetensors, ema_vae_fp16.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_image_fp8_e4m3fn.safetensors, qwen_image_vae.safetensors, seedvr2_ema_3b_fp8_e4m3fn.safetensors, 光影girlv1.safetensors
+  >>> 结论: 需启用节点
+
+================================================================================
+FILE: （赠送）更新工作流1\图片-Z-image-control姿态控制.json
+  format=ui  nodes=22
+  class_types(22): AIO_Preprocessor, CLIPLoader, CLIPTextEncode, EmptyLatentImage, Image Comparer (rgthree), KSampler, LayerUtility: ImageReel, LayerUtility: ImageReelComposit, LayerUtility: ImageScaleByAspectRatio V2, LoadImage, ModelPatchLoader, ModelSamplingAuraFlow, PreviewImage, SDPoseOODLoader, SDPoseOODProcessor, SavePoseKpsAsJsonFile, UNETLoader, VAEDecode, VAELoader, YOLOModelLoader, ZImageFunControlnet, ea
+  [节点OK] 已启用: comfyui_controlnet_aux
+  [需启用] 已安装但禁用: ComfyUI_LayerStyle
+  [缺节点] 未安装/未知: Image Comparer (rgthree), SDPoseOODLoader, SDPoseOODProcessor, YOLOModelLoader, easy clearCacheAll
+  [缺模型] Z-Image-Turbo-Fun-Controlnet-Union-2.1.safetensors, ae.safetensors, qwen_3_4b.safetensors, yolo11x.pt, z_image_turbo_bf16.safetensors
+  >>> 结论: 缺节点(未安装)
+
+================================================================================
+FILE: （赠送）更新工作流1\图片-Z-IMAGE.json
+  format=ui  nodes=15
+  class_types(15): CLIPLoader, CLIPTextEncode, EmptyLatentImage, Image Comparer (rgthree), KSampler, LatentUpscaleBy, LoraLoaderModelOnly, SaveImage, SeedVR2LoadDiTModel, SeedVR2LoadVAEModel, SeedVR2VideoUpscaler, UNETLoader, VAEDecode, VAELoader, easy cleanGpuUsed
+  [需启用] 已安装但禁用: ComfyUI-SeedVR2_VideoUpscaler
+  [缺节点] 未安装/未知: Image Comparer (rgthree), easy cleanGpuUsed
+  [缺模型] Kook_Zimage_%E7%9C%9F%E5%AE%9E%E5%B9%BB%E6%83%B3_Turbo.safetensors, ZIT_Midjourney_Luneva_Cinematic_v1_r128.safetensors, ae.safetensors, ema_vae_fp16.safetensors, flux-2-klein-base-4b.safetensors, flux2-vae.safetensors, ovc.safetensors, qwen_3_4b.safetensors, seedvr2_ema_3b_fp8_e4m3fn.safetensors, z
+  >>> 结论: 缺节点(未安装)
+
+================================================================================
+FILE: （赠送）更新工作流1\图片-电商图专用.json
+  format=ui  nodes=39
+  class_types(39): CLIPLoader, CLIPTextEncode, CM_FloatToInt, CheckpointLoaderSimple, ConditioningZeroOut, EmptyLTXVLatentVideo, FloatConstant, GetNode, GuiderParameters, INTConstant, KSampler, KSamplerSelect, LTXVAddGuide, LTXVAudioVAEDecode, LTXVAudioVAELoader, LTXVConcatAVLatent, LTXVConditioning, LTXVEmptyLatentAudio, LTXVGemmaCLIPModelLoader, LTXVScheduler, LTXVSeparateAVLatent, LTXVSequenceParallelMultiGPUPatc
+  [节点OK] 已启用: ComfyUI-KJNodes, ComfyUI-VideoHelperSuite
+  [需启用] 已安装但禁用: ComfyUI_LayerStyle, WAS-Node-Suite-ComfyUI
+  [缺节点] 未安装/未知: CM_FloatToInt, GetNode, GuiderParameters, LTXVGemmaCLIPModelLoader, LTXVSequenceParallelMultiGPUPatcher, MultimodalGuider, SetNode, TextEncodeQwenImageEditPlusAdvance_lrzjason
+  [缺模型] FireRed-Image-Edit-1.1_fp8mixed_comfy.safetensors, Qwen-Image-Lightning-8steps-V2.0-bf16.safetensors, ltx-av-step-1751000_vocoder_24K.safetensors, qwen_2.5_vl_7b_fp8_scaled.safetensors, qwen_image_vae.safetensors
+  >>> 结论: 缺节点(未安装)
+
+================================================================================
+FILE: （赠送）更新工作流1\图生图-FLUX风格转绘.json
+  format=ui  nodes=17
+  class_types(17): CLIPTextEncode, CLIPVisionEncode, CLIPVisionLoader, ConditioningZeroOut, DualCLIPLoader, KSampler, LayerUtility: ImageReel, LayerUtility: ImageReelComposit, LayerUtility: ImageScaleByAspectRatio V2, LoadImage, LoraLoaderModelOnly, ModelPatchLoader, PreviewImage, UNETLoader, USOStyleReference, VAEDecode, VAELoader
+  [需启用] 已安装但禁用: ComfyUI_LayerStyle
+  [模型OK] clip_l.safetensors, flux1-dev-fp8.safetensors
+  [缺模型] FLUX.1-Turbo-Alpha.safetensors, ae.safetensors, sigclip_vision_patch14_384.safetensors, t5xxl_fp16.safetensors, uso-flux1-dit-lora-v1.safetensors, uso-flux1-projector-v1.safetensors
+  >>> 结论: 需启用节点
+
+================================================================================
+FILE: （赠送）更新工作流1\视频-LTX 2.3 二合一工作流.json
+  format=ui  nodes=51
+  class_types(51): CLIPTextEncode, CM_FloatToInt, CheckpointLoaderSimple, DualCLIPLoader, EmptyLTXVLatentVideo, FloatConstant, GetImageSize, GetNode, GuiderParameters, INTConstant, ImageResizeKJv2, KSamplerSelect, LTX2SamplingPreviewOverride, LTX2_NAG, LTXVAddGuide, LTXVAudioVAEDecode, LTXVAudioVAELoader, LTXVChunkFeedForward, LTXVConcatAVLatent, LTXVConditioning, LTXVEmptyLatentAudio, LTXVGemmaCLIPModelLoader, LTXV
+  [节点OK] 已启用: ComfyUI-KJNodes, ComfyUI-VideoHelperSuite
+  [需启用] 已安装但禁用: ComfyUI-Impact-Pack
+  [缺节点] 未安装/未知: CM_FloatToInt, GetNode, GuiderParameters, LTXVGemmaCLIPModelLoader, LTXVSequenceParallelMultiGPUPatcher, MultimodalGuider, SetNode
+  [模型OK] LTX23_audio_vae_bf16.safetensors, LTX23_video_vae_bf16.safetensors, ltx-2.3_text_projection_bf16.safetensors
+  [缺模型] gemma_3_12B_it_fp8_e4m3fn.safetensors, ltx-2-19b-distilled-lora-384.safetensors, ltx-2-spatial-upscaler-x2-1.0.safetensors, ltx-2.3-22b-dev_transformer_only_fp8_scaled.safetensors, ltx-2.3-22b-distilled-lora-384.safetensors, ltx-2.3-spatial-upscaler-x2-1.0.safetensors, ltx-av-step-1751000_vocoder_24
+  >>> 结论: 缺节点(未安装)
+
+================================================================================
+FILE: （赠送）更新工作流1\视频-LTX 2.3 低显存版.json
+  format=ui  nodes=52
+  class_types(52): CLIPTextEncode, CM_FloatToInt, CR Text, CheckpointLoaderSimple, DualCLIPLoader, EmptyLTXVLatentVideo, FloatConstant, GetImageSize, GetNode, GuiderParameters, INTConstant, ImageResizeKJv2, KSamplerSelect, LTX2SamplingPreviewOverride, LTX2_NAG, LTXVAddGuide, LTXVAudioVAEDecode, LTXVAudioVAELoader, LTXVChunkFeedForward, LTXVConcatAVLatent, LTXVConditioning, LTXVEmptyLatentAudio, LTXVGemmaCLIPModelLoa
+  [节点OK] 已启用: ComfyUI-GGUF, ComfyUI-KJNodes, ComfyUI-VideoHelperSuite
+  [需启用] 已安装但禁用: ComfyUI-Impact-Pack, ComfyUI_Comfyroll_CustomNodes
+  [缺节点] 未安装/未知: CM_FloatToInt, GetNode, GuiderParameters, LTXVGemmaCLIPModelLoader, LTXVSequenceParallelMultiGPUPatcher, MultimodalGuider, SetNode
+  [模型OK] LTX23_audio_vae_bf16.safetensors, LTX23_video_vae_bf16.safetensors, ltx-2.3_text_projection_bf16.safetensors
+  [缺模型] gemma_3_12B_it_fp8_e4m3fn.safetensors, ltx-2-19b-distilled-lora-384.safetensors, ltx-2-spatial-upscaler-x2-1.0.safetensors, ltx-2.3-22b-dev-Q4_K_M.gguf, ltx-2.3-22b-distilled-lora-384.safetensors, ltx-2.3-spatial-upscaler-x2-1.0.safetensors, ltx-av-step-1751000_vocoder_24K.safetensors
+  >>> 结论: 缺节点(未安装)
+
+================================================================================
+FILE: （赠送）更新工作流1\视频-LTX-2.3-图-文-生视频-极速版.json
+  format=ui  nodes=52
+  class_types(52): CFGGuider, CLIPTextEncode, CM_FloatToInt, CR Text, CheckpointLoaderSimple, EmptyLTXVLatentVideo, FloatConstant, GetImageSize, GetNode, GuiderParameters, INTConstant, ImageResizeKJv2, KSamplerSelect, LTX2SamplingPreviewOverride, LTX2_NAG, LTXAVTextEncoderLoader, LTXVAddGuide, LTXVAudioVAEDecode, LTXVAudioVAELoader, LTXVChunkFeedForward, LTXVConcatAVLatent, LTXVConditioning, LTXVEmptyLatentAudio, LT
+  [节点OK] 已启用: ComfyUI-KJNodes, ComfyUI-VideoHelperSuite
+  [需启用] 已安装但禁用: ComfyUI_Comfyroll_CustomNodes
+  [缺节点] 未安装/未知: CM_FloatToInt, GetNode, GuiderParameters, LTXVGemmaCLIPModelLoader, LTXVSequenceParallelMultiGPUPatcher, MultimodalGuider, Power Lora Loader (rgthree), SetNode
+  [模型OK] taeltx2_3.safetensors
+  [缺模型] gemma_3_12B_it_fp4_mixed.safetensors, gemma_3_12B_it_fpmixed.safetensors, ltx-2-19b-distilled-lora-384.safetensors, ltx-2-19b-ic-lora-detailer.safetensors, ltx-2-spatial-upscaler-x2-1.0.safetensors, ltx-2.3-22b-dev-fp8.safetensors, ltx-2.3-22b-distilled-fp8.safetensors, ltx-2.3-spatial-upscaler-x2-1
+  >>> 结论: 缺节点(未安装)
+
+================================================================================
+FILE: （赠送）更新工作流1\视频-LTX-2.3-首尾帧.json
+  format=ui  nodes=40
+  class_types(40): CFGGuider, CLIPTextEncode, CR Text, DualCLIPLoader, EmptyLTXVLatentVideo, GetImageSize, GetNode, INTConstant, ImageConcatMulti, ImageResizeKJv2, ImageScaleBy, KSamplerSelect, LTX2SamplingPreviewOverride, LTX2_NAG, LTXVAudioVAEDecode, LTXVChunkFeedForward, LTXVConcatAVLatent, LTXVConditioning, LTXVEmptyLatentAudio, LTXVImgToVideoInplace, LTXVImgToVideoInplaceKJ, LTXVLatentUpsampler, LTXVPreprocess,
+  [节点OK] 已启用: ComfyUI-KJNodes
+  [需启用] 已安装但禁用: ComfyUI_Comfyroll_CustomNodes
+  [缺节点] 未安装/未知: GetNode, SetNode
+  [模型OK] LTX23_audio_vae_bf16.safetensors, LTX23_video_vae_bf16.safetensors, ltx-2.3_text_projection_bf16.safetensors
+  [缺模型] gemma_3_12B_it_fpmixed.safetensors, ltx-2-19b-distilled-lora-384.safetensors, ltx-2-spatial-upscaler-x2-1.0.safetensors, ltx-2.3-22b-distilled-lora-384.safetensors, ltx-2.3-22b-distilled_transformer_only_fp8_input_scaled.safetensors, ltx-2.3-spatial-upscaler-x2-1.1.safetensors
+  >>> 结论: 缺节点(未安装)
+
+================================================================================
+FILE: （赠送）更新工作流1\视频-Wan2.2 Remix i2v 图生视频.json
+  format=ui  nodes=16
+  class_types(16): CLIPLoader, CLIPTextEncode, GetNode, INTConstant, ImageResize+, KSamplerAdvanced, LoadImage, ModelSamplingSD3, Seed (rgthree), SetNode, TextInput_, UNETLoader, VAEDecode, VAELoader, VRAMCleanup, WanImageToVideo
+  [节点OK] 已启用: ComfyUI-KJNodes
+  [需启用] 已安装但禁用: ComfyUI-Impact-Pack, ComfyUI_essentials
+  [缺节点] 未安装/未知: GetNode, SetNode, TextInput_, VRAMCleanup
+  [缺模型] Wan2.2_Remix_NSFW_i2v_14b_high_lighting_fp8_e4m3fn_v3.0.safetensors, Wan2.2_Remix_NSFW_i2v_14b_low_lighting_fp8_e4m3fn_v3.0.safetensors, nsfw_wan_umt5-xxl_fp8_scaled.safetensors, wan_2.1_vae.safetensors
+  >>> 结论: 缺节点(未安装)
+
+================================================================================
+FILE: （赠送）更新工作流1\视频-wan2.2-remix首尾帧.json
+  format=ui  nodes=12
+  class_types(12): CLIPLoader, CLIPTextEncode, INTConstant, ImageResizeKJv2, KSamplerAdvanced, LoadImage, ModelSamplingSD3, Seed (rgthree), UNETLoader, VAEDecode, VAELoader, WanFunInpaintToVideo
+  [节点OK] 已启用: ComfyUI-KJNodes
+  [需启用] 已安装但禁用: ComfyUI-Impact-Pack
+  [缺模型] Wan2.2_Remix_NSFW_i2v_14b_high_lighting_fp8_e4m3fn_v3.0.safetensors, Wan2.2_Remix_NSFW_i2v_14b_low_lighting_fp8_e4m3fn_v3.0.safetensors, nsfw_wan_umt5-xxl_fp8_scaled.safetensors, wan_2.1_vae.safetensors
+  >>> 结论: 需启用节点
+
+================================================================================
+FILE: （赠送）更新工作流1\视频放大 插帧.json
+  format=ui  nodes=5
+  class_types(5): LayerUtility: PurgeVRAM, RIFE VFI, SeedVR2LoadDiTModel, SeedVR2LoadVAEModel, SeedVR2VideoUpscaler
+  [需启用] 已安装但禁用: ComfyUI-SeedVR2_VideoUpscaler, ComfyUI_LayerStyle
+  [缺节点] 未安装/未知: RIFE VFI
+  [缺模型] ema_vae_fp16.safetensors, rife47.pth, seedvr2_ema_3b_fp16.safetensors
+  >>> 结论: 缺节点(未安装)
+
+
+################################################################################
+# SUMMARY
+################################################################################
+
+## 本机可运行  (2)
+  - D:\BaiduNetdiskDownload\8.11MiniMaxH3女团MV\工作流\MiniMaxH3文生视频工作流 By 像素幻想Lab.json
+  - D:\BaiduNetdiskDownload\8.11MiniMaxH3女团MV\工作流\MiniMaxH3首尾帧工作流 By 像素幻想Lab (Copy).json
+
+## 需启用节点  (8)
+  - D:\BaiduNetdiskDownload\图生视频(1)\AnimateDiff+IPAdapter图生成动画.json
+  - D:\BaiduNetdiskDownload\图生视频\AnimateDiff+IPAdapter图生成动画.json
+  - D:\BaiduNetdiskDownload\（赠送）更新工作流1\图片-FLUX-OneReward-遮罩移除.json
+  - D:\BaiduNetdiskDownload\（赠送）更新工作流1\图片-FLUX-uso风格参考.json
+  - D:\BaiduNetdiskDownload\（赠送）更新工作流1\图片-FLUX-扩图.json
+  - D:\BaiduNetdiskDownload\（赠送）更新工作流1\图片-Qwen基础文生图.json
+  - D:\BaiduNetdiskDownload\（赠送）更新工作流1\图生图-FLUX风格转绘.json
+  - D:\BaiduNetdiskDownload\（赠送）更新工作流1\视频-wan2.2-remix首尾帧.json
+
+## 缺模型  (1)
+  - D:\BaiduNetdiskDownload\视频换脸工作流\视频换脸工作流.json
+
+## 缺节点(未安装)  (41)
+  - D:\BaiduNetdiskDownload\8.11MiniMaxH3女团MV\工作流\MiniMaxH3多参MV生成工作流 By 像素幻想Lab.json
+  - D:\BaiduNetdiskDownload\8.11MiniMaxH3女团MV\工作流\视频反推.json
+  - D:\BaiduNetdiskDownload\一致的角色创建器（角色表）\workflow-consistant-character-maker-character-sheet-TC5NGDBc2Rdbq8YjKGYH-tenforce-openart.ai.json
+  - D:\BaiduNetdiskDownload\一键抠图换背景融图的工作流\workflow-superb-product-background-replacement-workflow-m56e9sjLf0G0rFpGvcS9-spaniel_offbeat_13-openart.ai.json
+  - D:\BaiduNetdiskDownload\万物手办\workflow-everything-be-garage-kit-zgNvaIGXQ7wjNZtvbeN5-emu_simple_43-openart.ai.json
+  - D:\BaiduNetdiskDownload\产品摄影重新点亮\workflow-relight-with-ic-light---product-photography-relight-kdypWGlBPE7DZkqHALVi-risunobushi-openart.ai.json
+  - D:\BaiduNetdiskDownload\写真工作流\workflow-lora-Ww7Q3SAvg2fDjRzYlSXP-liubai-openart.ai.json
+  - D:\BaiduNetdiskDownload\制作自己的免费贴纸\workflow-stickeryou---1-photo-for-stickers-e8TPNxcEGKdNJ40bQXlU-rui400-openart.ai.json
+  - D:\BaiduNetdiskDownload\双人婚纱照合影+背景控制\workflow.json
+  - D:\BaiduNetdiskDownload\图生视频(1)\实时手绘或者上传图片\实时绘图生成视频.json
+  - D:\BaiduNetdiskDownload\图生视频\实时手绘或者上传图片\实时绘图生成视频.json
+  - D:\BaiduNetdiskDownload\生成自己的机器人\workflow-generate-your-own-robot-pGwMIi92nl9nWc6P2hMB-macaque_keen_26-openart.ai.json
+  - D:\BaiduNetdiskDownload\神奇服装工作流\workflow-comfyui---magic-clothing-workflow-lz0wWAC9RhEWNFd2IZvO-cgtips-openart.ai.json
+  - D:\BaiduNetdiskDownload\老照片翻新\workflow-old-photo-restoration-xl-vKtihSX1DGBiBjAovlSP-datou-openart.ai.json
+  - D:\BaiduNetdiskDownload\肖像转证件照\workflow-portrait-2-id-photo-4k4MCtCJxcVyN1H471lr-ezzyuxi-openart.ai.json
+  - D:\BaiduNetdiskDownload\自制换脸工作流\workflow-change-face-4RJFsFp9oXdlP9rty2cI-grinlau-openart.ai.json
+  - D:\BaiduNetdiskDownload\风格化写真\workflow-stylize-photo-pNTGLYvKsDAskUPyERHG-noan-openart.ai.json
+  - D:\BaiduNetdiskDownload\（赠送）更新工作流1\LTX 2.3  单图数字人.json
+  - D:\BaiduNetdiskDownload\（赠送）更新工作流1\WAN-SCAIL动作迁移.json
+  - D:\BaiduNetdiskDownload\（赠送）更新工作流1\WAN-SCAIL动作迁移（高显存版）.json
+  - D:\BaiduNetdiskDownload\（赠送）更新工作流1\反推.json
+  - D:\BaiduNetdiskDownload\（赠送）更新工作流1\图片-FLUX-ControlNet-AUX.json
+  - D:\BaiduNetdiskDownload\（赠送）更新工作流1\图片-FLUX-FILL-OneReward-遮罩迁移.json
+  - D:\BaiduNetdiskDownload\（赠送）更新工作流1\图片-FLUX-seedvr2.json
+  - D:\BaiduNetdiskDownload\（赠送）更新工作流1\图片-FLUX-遮罩重绘.json
+  - D:\BaiduNetdiskDownload\（赠送）更新工作流1\图片-FLUX.json
+  - D:\BaiduNetdiskDownload\（赠送）更新工作流1\图片-FLUX2-klein图片编辑.json
+  - D:\BaiduNetdiskDownload\（赠送）更新工作流1\图片-QWEN-control姿态控制.json
+  - D:\BaiduNetdiskDownload\（赠送）更新工作流1\图片-QWEN-Edit2511-图片编辑.json
+  - D:\BaiduNetdiskDownload\（赠送）更新工作流1\图片-QWEN-Image-图生图.json
+  - D:\BaiduNetdiskDownload\（赠送）更新工作流1\图片-QWEN-Image-局部重绘.json
+  - D:\BaiduNetdiskDownload\（赠送）更新工作流1\图片-QWEN-Image-扩图.json
+  - D:\BaiduNetdiskDownload\（赠送）更新工作流1\图片-Z-image-control姿态控制.json
+  - D:\BaiduNetdiskDownload\（赠送）更新工作流1\图片-Z-IMAGE.json
+  - D:\BaiduNetdiskDownload\（赠送）更新工作流1\图片-电商图专用.json
+  - D:\BaiduNetdiskDownload\（赠送）更新工作流1\视频-LTX 2.3 二合一工作流.json
+  - D:\BaiduNetdiskDownload\（赠送）更新工作流1\视频-LTX 2.3 低显存版.json
+  - D:\BaiduNetdiskDownload\（赠送）更新工作流1\视频-LTX-2.3-图-文-生视频-极速版.json
+  - D:\BaiduNetdiskDownload\（赠送）更新工作流1\视频-LTX-2.3-首尾帧.json
+  - D:\BaiduNetdiskDownload\（赠送）更新工作流1\视频-Wan2.2 Remix i2v 图生视频.json
+  - D:\BaiduNetdiskDownload\（赠送）更新工作流1\视频放大 插帧.json

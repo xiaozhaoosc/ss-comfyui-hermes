@@ -1,0 +1,3 @@
+diffusion_models/z_image_turbo_bf16.safetensors: 11.46 GB / want 11.46 GB -> COMPLETE
+text_encoders/qwen_3_4b.safetensors: 7.49 GB / want 7.49 GB -> INCOMPLETE
+vae/ae.safetensors: 0.31 GB / want 0.31 GB -> INCOMPLETE

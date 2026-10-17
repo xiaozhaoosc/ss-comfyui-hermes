@@ -1,0 +1,22 @@
+{
+  "builtin": "schedule",
+  "args": [
+    "CRON_TZ=Asia/Shanghai 0,30 * * * *",
+    "agentapi",
+    "new-conversation",
+    "--",
+    "Activate the '/google-flow-image' skill to perform the scheduled Asian female character asset generation. In workspace d:/ai_projects/ComfyUI, execute the character asset generation pipeline powered by google-flow-image by running: 'cmd /c D:\\ai_projects\\ComfyUI\\venv\\Scripts\\python.exe tools/hourly_character_task.py --count 1'. Confirm that 9 standalone HD views (with 01_face_portrait as native 9:16 HD primary face) are generated via Google Flow (Imagen 3 / Nano Banana 2.1), face embeddings are extracted from the HD portrait, and the asset is successfully ingested into character_library/index.json."
+  ],
+  "restart_policy": "always",
+  "display_name": "Hourly Asian Female Character Generator (Google Flow Image)",
+  "description": "Every hour at :00 and :30 (Asia/Shanghai), uses the /google-flow-image skill to automatically generate 1 unique Asian female character asset with 9 standalone high-definition views via Google Flow (Imagen 3, with 01_face_portrait as native 9:16 HD primary face), extracts face embeddings, and ingests into character_library and assets.db.",
+  "agent_permissions": {
+    "workspace_uris": [
+      "file:///d:/ai_projects/ComfyUI"
+    ],
+    "access_grants": [
+      "command(cmd /c D:\\ai_projects\\ComfyUI\\venv\\Scripts\\python.exe tools/hourly_character_task.py --count 1)",
+      "command(cmd /c python tools/hourly_character_task.py --count 1)"
+    ]
+  }
+}

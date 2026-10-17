@@ -1,0 +1,23 @@
+[17:25:23] === run set=small jobs=3 ===
+[17:25:27] START 4x-UltraSharp.pth total=0.06 GB resume_from=0.00 GB
+[17:25:47]   34.45%  0.02/0.06 GB  1.1 MB/s
+[17:26:02] DONE 4x-UltraSharp.pth 0.06 GB in 0.6 min
+[17:26:07] START Hyper-SDXL-1step-lora.safetensors total=0.73 GB resume_from=0.00 GB
+[17:26:27]   5.46%  0.04/0.73 GB  2.0 MB/s
+[17:26:47]   16.78%  0.12/0.73 GB  3.1 MB/s
+[17:27:08]   28.63%  0.21/0.73 GB  3.5 MB/s
+[17:27:28]   39.02%  0.29/0.73 GB  3.6 MB/s
+[17:27:48]   49.01%  0.36/0.73 GB  3.6 MB/s
+[17:28:09]   60.73%  0.45/0.73 GB  3.8 MB/s
+[17:28:29]   74.98%  0.55/0.73 GB  4.0 MB/s
+[17:28:49]   89.23%  0.65/0.73 GB  4.1 MB/s
+[17:29:09]   99.35%  0.73/0.73 GB  4.1 MB/s
+[17:29:10] DONE Hyper-SDXL-1step-lora.safetensors 0.73 GB in 3.0 min
+[17:29:12] START control-lora-canny-rank128.safetensors total=0.37 GB resume_from=0.00 GB
+[17:29:32]   16.96%  0.06/0.37 GB  3.1 MB/s
+[17:29:53]   34.45%  0.13/0.37 GB  3.2 MB/s
+[17:30:13]   56.44%  0.21/0.37 GB  3.5 MB/s
+[17:30:33]   77.90%  0.29/0.37 GB  3.6 MB/s
+[17:30:53]   94.06%  0.35/0.37 GB  3.5 MB/s
+[17:31:00] DONE control-lora-canny-rank128.safetensors 0.37 GB in 1.8 min
+[17:31:00] === finished ok=3/3 ===

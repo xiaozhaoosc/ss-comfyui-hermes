@@ -1,0 +1,23 @@
+﻿python.exe : C:\Users\kenzhao\anaconda3\Lib\site-packages\onnxruntime\capi\onnx
+runtime_inference_collection.py:123: UserWarning: Specified provider 'CUDAExecu
+tionProvider' is not in available provider names.Available providers: 'DmlExecu
+tionProvider, CPUExecutionProvider'
+所在位置 行:503 字符: 32
++ ... NG="utf-8"; & "C:\Users\kenzhao\anaconda3\python.exe" "D:\ai_projects ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (C:\Users\kenzha...cutionProvider' 
+   :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  warnings.warn(
+Applied providers: ['CPUExecutionProvider'], with options: {'CPUExecutionProvider': {}}
+Traceback (most recent call last):
+  File "D:\ai_projects\ComfyUI\tools\eval_pc_models.py", line 380, in <module>
+    main()
+  File "D:\ai_projects\ComfyUI\tools\eval_pc_models.py", line 245, in main
+    m = measure(p)
+        ^^^^^^^^^^
+  File "D:\ai_projects\ComfyUI\tools\eval_pc_models.py", line 199, in measure
+    skin_metric = max(0.0, 1.0 - abs(skin_hf - IDEAL_SKIN_HF) / IDEAL_SKIN_HF)
+                                               ^^^^^^^^^^^^^
+NameError: name 'IDEAL_SKIN_HF' is not defined

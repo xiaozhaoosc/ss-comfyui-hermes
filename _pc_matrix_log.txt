@@ -1,0 +1,61 @@
+[22:50:28] === START z_image_turbo : tools/_pc_gen.py
+[22:52:57]    |    [done] True in 21.1s files=['pc_z_image_turbo_s04_flushed_selfie_00001_.png'] 
+[22:52:57]    | [submit] s05_outdoor_knit_hat seed=900004 -> True 087bc9a6-98c3-49bb-8d34-34d70986962e
+[22:52:57]    |    [done] True in 21.2s files=['pc_z_image_turbo_s05_outdoor_knit_hat_00001_.png'] 
+[22:52:57]    | [submit] s06_indoor_standing seed=900005 -> True cc3584cd-efa3-4203-87b6-c08dd3ddf61b
+[22:52:57]    |    [done] True in 18.8s files=['pc_z_image_turbo_s06_indoor_standing_00001_.png'] 
+[22:52:57]    | [submit] s07_hand_on_chest seed=900006 -> True 9ef5164b-8d44-4389-b583-3311b5944806
+[22:52:57]    |    [done] True in 21.2s files=['pc_z_image_turbo_s07_hand_on_chest_00001_.png'] 
+[22:52:57]    | [submit] s08_tousle_hair seed=900007 -> True 546fabda-12ae-4133-ac8a-0cb31b4bf05a
+[22:52:57]    |    [done] True in 19.0s files=['pc_z_image_turbo_s08_tousle_hair_00001_.png'] 
+[22:52:57]    | 
+[22:52:57]    | === zimage : 8/8 ok, total 147.1s ===
+[22:52:57]    | meta: D:\ai_projects\ComfyUI\output\2026-10-10_wb\z_image_turbo\_run.json
+[22:52:57] === DONE z_image_turbo in 2.5 min
+[22:52:57] === START flux_dev_fp8 : tools/_pc_gen.py --backend flux fp8 --outdir output/2026-10-10_wb/flux_dev_fp8
+[22:57:10]    | [submit] s04_flushed_selfie seed=710003 -> True a47c0b39-1c5c-4714-8624-6f00b12bbce7
+[22:57:10]    |    [done] True in 27.2s files=['pc_flux_dev_fp8_s04_flushed_selfie_00001_.png'] 
+[22:57:10]    | [submit] s05_outdoor_knit_hat seed=710004 -> True a9fda23e-faf9-48ca-858c-df3f2701bed1
+[22:57:10]    |    [done] True in 27.3s files=['pc_flux_dev_fp8_s05_outdoor_knit_hat_00001_.png'] 
+[22:57:10]    | [submit] s06_indoor_standing seed=710005 -> True eb05a07a-83b8-46a4-bd68-ceaecc33759a
+[22:57:10]    |    [done] True in 27.3s files=['pc_flux_dev_fp8_s06_indoor_standing_00001_.png'] 
+[22:57:10]    | [submit] s07_hand_on_chest seed=710006 -> True 9c60eee8-38f6-48f3-bc74-50968c298fef
+[22:57:10]    |    [done] True in 27.3s files=['pc_flux_dev_fp8_s07_hand_on_chest_00001_.png'] 
+[22:57:10]    | [submit] s08_tousle_hair seed=710007 -> True ebc93369-7051-4b6e-8c5b-29682e2242e7
+[22:57:10]    |    [done] True in 27.3s files=['pc_flux_dev_fp8_s08_tousle_hair_00001_.png'] 
+[22:57:10]    | 
+[22:57:10]    | === flux flux1-dev-fp8.safetensors : 8/8 ok, total 251.6s ===
+[22:57:10] === DONE flux_dev_fp8 in 4.2 min
+[22:57:10] === START majicmix : tools/_pc_gen.py --backend sd15 majicmixRealistic_v7.safetensors majicmix --outdir output/2026-10-10_wb/majicmix
+[22:57:15]    | [backend] sd15 — SD1.5 写实底模（majicmixRealistic 等）— 30 步，最省显存
+[22:57:15]    | [submit] s01_camisole_touch_hair seed=210000 -> False {"error": {"type": "prompt_outputs_failed_validation", "message": "Prompt outputs failed validation", "details": "", "extra_info": {}}, "node_errors": {"1": {"errors": [{"type": "value_not_in_list", "message": "Value not in list", "details": "ckpt_name: 'majicmixRealistic_v7.safetensors' not in ['Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors', 'RealVisXL_V4.0.safetensors', 'v1-5-pruned-emaonly.safetensors']", "extra_info": {"input_name": "ckpt_name", "input_config": [["Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors", "RealVisXL_V4.0.safetensors", "v1-5-pruned-emaonly.safetensors"], {"tooltip": "The name of the checkpoint (model) to load."}], "received_value": "majicmixRealistic_v7.safetensors"}}], "dependent_outputs": ["7"], "class_type": "CheckpointLoaderSimple"}}}
+[22:57:15]    | [submit] s02_lying_on_sofa seed=210001 -> False {"error": {"type": "prompt_outputs_failed_validation", "message": "Prompt outputs failed validation", "details": "", "extra_info": {}}, "node_errors": {"1": {"errors": [{"type": "value_not_in_list", "message": "Value not in list", "details": "ckpt_name: 'majicmixRealistic_v7.safetensors' not in ['Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors', 'RealVisXL_V4.0.safetensors', 'v1-5-pruned-emaonly.safetensors']", "extra_info": {"input_name": "ckpt_name", "input_config": [["Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors", "RealVisXL_V4.0.safetensors", "v1-5-pruned-emaonly.safetensors"], {"tooltip": "The name of the checkpoint (model) to load."}], "received_value": "majicmixRealistic_v7.safetensors"}}], "dependent_outputs": ["7"], "class_type": "CheckpointLoaderSimple"}}}
+[22:57:15]    | [submit] s03_hugging_knees seed=210002 -> False {"error": {"type": "prompt_outputs_failed_validation", "message": "Prompt outputs failed validation", "details": "", "extra_info": {}}, "node_errors": {"1": {"errors": [{"type": "value_not_in_list", "message": "Value not in list", "details": "ckpt_name: 'majicmixRealistic_v7.safetensors' not in ['Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors', 'RealVisXL_V4.0.safetensors', 'v1-5-pruned-emaonly.safetensors']", "extra_info": {"input_name": "ckpt_name", "input_config": [["Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors", "RealVisXL_V4.0.safetensors", "v1-5-pruned-emaonly.safetensors"], {"tooltip": "The name of the checkpoint (model) to load."}], "received_value": "majicmixRealistic_v7.safetensors"}}], "dependent_outputs": ["7"], "class_type": "CheckpointLoaderSimple"}}}
+[22:57:15]    | [submit] s04_flushed_selfie seed=210003 -> False {"error": {"type": "prompt_outputs_failed_validation", "message": "Prompt outputs failed validation", "details": "", "extra_info": {}}, "node_errors": {"1": {"errors": [{"type": "value_not_in_list", "message": "Value not in list", "details": "ckpt_name: 'majicmixRealistic_v7.safetensors' not in ['Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors', 'RealVisXL_V4.0.safetensors', 'v1-5-pruned-emaonly.safetensors']", "extra_info": {"input_name": "ckpt_name", "input_config": [["Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors", "RealVisXL_V4.0.safetensors", "v1-5-pruned-emaonly.safetensors"], {"tooltip": "The name of the checkpoint (model) to load."}], "received_value": "majicmixRealistic_v7.safetensors"}}], "dependent_outputs": ["7"], "class_type": "CheckpointLoaderSimple"}}}
+[22:57:15]    | [submit] s05_outdoor_knit_hat seed=210004 -> False {"error": {"type": "prompt_outputs_failed_validation", "message": "Prompt outputs failed validation", "details": "", "extra_info": {}}, "node_errors": {"1": {"errors": [{"type": "value_not_in_list", "message": "Value not in list", "details": "ckpt_name: 'majicmixRealistic_v7.safetensors' not in ['Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors', 'RealVisXL_V4.0.safetensors', 'v1-5-pruned-emaonly.safetensors']", "extra_info": {"input_name": "ckpt_name", "input_config": [["Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors", "RealVisXL_V4.0.safetensors", "v1-5-pruned-emaonly.safetensors"], {"tooltip": "The name of the checkpoint (model) to load."}], "received_value": "majicmixRealistic_v7.safetensors"}}], "dependent_outputs": ["7"], "class_type": "CheckpointLoaderSimple"}}}
+[22:57:15]    | [submit] s06_indoor_standing seed=210005 -> False {"error": {"type": "prompt_outputs_failed_validation", "message": "Prompt outputs failed validation", "details": "", "extra_info": {}}, "node_errors": {"1": {"errors": [{"type": "value_not_in_list", "message": "Value not in list", "details": "ckpt_name: 'majicmixRealistic_v7.safetensors' not in ['Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors', 'RealVisXL_V4.0.safetensors', 'v1-5-pruned-emaonly.safetensors']", "extra_info": {"input_name": "ckpt_name", "input_config": [["Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors", "RealVisXL_V4.0.safetensors", "v1-5-pruned-emaonly.safetensors"], {"tooltip": "The name of the checkpoint (model) to load."}], "received_value": "majicmixRealistic_v7.safetensors"}}], "dependent_outputs": ["7"], "class_type": "CheckpointLoaderSimple"}}}
+[22:57:15]    | [submit] s07_hand_on_chest seed=210006 -> False {"error": {"type": "prompt_outputs_failed_validation", "message": "Prompt outputs failed validation", "details": "", "extra_info": {}}, "node_errors": {"1": {"errors": [{"type": "value_not_in_list", "message": "Value not in list", "details": "ckpt_name: 'majicmixRealistic_v7.safetensors' not in ['Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors', 'RealVisXL_V4.0.safetensors', 'v1-5-pruned-emaonly.safetensors']", "extra_info": {"input_name": "ckpt_name", "input_config": [["Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors", "RealVisXL_V4.0.safetensors", "v1-5-pruned-emaonly.safetensors"], {"tooltip": "The name of the checkpoint (model) to load."}], "received_value": "majicmixRealistic_v7.safetensors"}}], "dependent_outputs": ["7"], "class_type": "CheckpointLoaderSimple"}}}
+[22:57:15]    | [submit] s08_tousle_hair seed=210007 -> False {"error": {"type": "prompt_outputs_failed_validation", "message": "Prompt outputs failed validation", "details": "", "extra_info": {}}, "node_errors": {"1": {"errors": [{"type": "value_not_in_list", "message": "Value not in list", "details": "ckpt_name: 'majicmixRealistic_v7.safetensors' not in ['Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors', 'RealVisXL_V4.0.safetensors', 'v1-5-pruned-emaonly.safetensors']", "extra_info": {"input_name": "ckpt_name", "input_config": [["Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors", "RealVisXL_V4.0.safetensors", "v1-5-pruned-emaonly.safetensors"], {"tooltip": "The name of the checkpoint (model) to load."}], "received_value": "majicmixRealistic_v7.safetensors"}}], "dependent_outputs": ["7"], "class_type": "CheckpointLoaderSimple"}}}
+[22:57:15]    | 
+[22:57:15]    | === majicmixRealistic_v7.safetensors : 0/8 ok, total 0.3s ===
+[22:57:15] === DONE majicmix in 0.1 min
+[22:57:15] === START sdxl_realvis : tools/_pc_gen.py --backend sd15 RealVisXL_V4.0.safetensors sdxl_realvis --outdir output/2026-10-10_wb/sdxl_realvis
+[23:00:25]    | [submit] s04_flushed_selfie seed=510003 -> True f9e8ba4f-a8d3-4045-8f36-ec2f1a93630e
+[23:00:25]    |    [done] True in 21.3s files=['pc_sdxl_realvis_s04_flushed_selfie_00001_.png']
+[23:00:25]    | [submit] s05_outdoor_knit_hat seed=510004 -> True 1689ffb3-3e6b-4e2b-b977-93c672413bb6
+[23:00:25]    |    [done] True in 21.2s files=['pc_sdxl_realvis_s05_outdoor_knit_hat_00001_.png']
+[23:00:25]    | [submit] s06_indoor_standing seed=510005 -> True 76082299-5a0c-44f9-828c-c69c4f4fd08c
+[23:00:25]    |    [done] True in 21.2s files=['pc_sdxl_realvis_s06_indoor_standing_00001_.png']
+[23:00:25]    | [submit] s07_hand_on_chest seed=510006 -> True 15b05700-c3dc-43ad-a1d7-45b514ca10b6
+[23:00:25]    |    [done] True in 21.2s files=['pc_sdxl_realvis_s07_hand_on_chest_00001_.png']
+[23:00:25]    | [submit] s08_tousle_hair seed=510007 -> True 07596be8-9751-4a64-91c0-40e8678cd9f2
+[23:00:25]    |    [done] True in 21.2s files=['pc_sdxl_realvis_s08_tousle_hair_00001_.png']
+[23:00:25]    | 
+[23:00:25]    | === RealVisXL_V4.0.safetensors : 8/8 ok, total 188.3s ===
+[23:00:25] === DONE sdxl_realvis in 3.2 min
+[23:00:25] 
+[23:00:25] === 矩阵完成，总耗时 10.0 分钟 ===
+[23:00:25]    z_image_turbo    2.5 min
+[23:00:25]    flux_dev_fp8     4.2 min
+[23:00:25]    majicmix         0.1 min
+[23:00:25]    sdxl_realvis     3.2 min

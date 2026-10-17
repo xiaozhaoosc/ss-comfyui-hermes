@@ -1,0 +1,79 @@
+﻿python.exe : C:\Users\kenzhao\anaconda3\Lib\site-packages\onnxruntime\capi\onnx
+runtime_inference_collection.py:123: UserWarning: Specified provider 'CUDAExecu
+tionProvider' is not in available provider names.Available providers: 'DmlExecu
+tionProvider, CPUExecutionProvider'
+所在位置 行:503 字符: 32
++ ... NG="utf-8"; & "C:\Users\kenzhao\anaconda3\python.exe" "D:\ai_projects ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (C:\Users\kenzha...cutionProvider' 
+   :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  warnings.warn(
+Applied providers: ['CPUExecutionProvider'], with options: {'CPUExecutionProvider': {}}
+  measured z_image_turbo    s01_camisole_touch_hair  lap=72 hf=0.0009
+  measured flux_dev_fp8     s01_camisole_touch_hair  lap=48 hf=0.0008
+  measured sdxl_realvis     s01_camisole_touch_hair  lap=69 hf=0.0007
+  measured juggernaut       s01_camisole_touch_hair  lap=72 hf=0.0007
+  measured z_image_turbo    s02_lying_on_sofa  lap=84 hf=0.0009
+  measured flux_dev_fp8     s02_lying_on_sofa  lap=40 hf=0.0007
+  measured sdxl_realvis     s02_lying_on_sofa  lap=118 hf=0.0009
+  measured juggernaut       s02_lying_on_sofa  lap=144 hf=0.0015
+  measured z_image_turbo    s03_hugging_knees  lap=73 hf=0.0007
+  measured flux_dev_fp8     s03_hugging_knees  lap=106 hf=0.0009
+  measured sdxl_realvis     s03_hugging_knees  lap=87 hf=0.0010
+  measured juggernaut       s03_hugging_knees  lap=99 hf=0.0010
+  measured z_image_turbo    s04_flushed_selfie  lap=138 hf=0.0012
+  measured flux_dev_fp8     s04_flushed_selfie  lap=49 hf=0.0006
+  measured sdxl_realvis     s04_flushed_selfie  lap=92 hf=0.0008
+  measured juggernaut       s04_flushed_selfie  lap=114 hf=0.0012
+  measured z_image_turbo    s05_outdoor_knit_hat  lap=162 hf=0.0022
+  measured flux_dev_fp8     s05_outdoor_knit_hat  lap=20 hf=0.0005
+  measured sdxl_realvis     s05_outdoor_knit_hat  lap=205 hf=0.0019
+  measured juggernaut       s05_outdoor_knit_hat  lap=329 hf=0.0033
+  measured z_image_turbo    s06_indoor_standing  lap=106 hf=0.0014
+  measured flux_dev_fp8     s06_indoor_standing  lap=84 hf=0.0007
+  measured sdxl_realvis     s06_indoor_standing  lap=103 hf=0.0014
+  measured juggernaut       s06_indoor_standing  lap=66 hf=0.0008
+  measured z_image_turbo    s07_hand_on_chest  lap=59 hf=0.0008
+  measured flux_dev_fp8     s07_hand_on_chest  lap=166 hf=0.0013
+  measured sdxl_realvis     s07_hand_on_chest  lap=73 hf=0.0008
+  measured juggernaut       s07_hand_on_chest  lap=82 hf=0.0008
+  measured z_image_turbo    s08_tousle_hair  lap=89 hf=0.0009
+  measured flux_dev_fp8     s08_tousle_hair  lap=126 hf=0.0010
+  measured sdxl_realvis     s08_tousle_hair  lap=64 hf=0.0006
+  measured juggernaut       s08_tousle_hair  lap=96 hf=0.0010
+
+# 澶氭ā鍨嬪嚭鍥捐川閲忚瘎娴嬶紙鍚屼竴缁勬彁绀鸿瘝锛?
+
+璇勬祴鏃堕棿锛?026-10-10 23:05 锝?鍥惧儚鏁帮細32 锝?绾圭悊鎸囨爣缁熶竴缂╂斁鐭竟鑷?768
+
+| 妯″瀷 | 娓呮櫚搴?0.20) | 缁嗚妭涓板瘜搴?0.15) | 鐨偆璐ㄦ劅(0.15) | 浜鸿劯璐ㄩ噺(0.15) | 鑹插僵鑷劧(0.15) | 鏇濆厜(0.10) | 鐢婚潰骞插噣(0.10) | **缁煎悎** |
+|---|---|---|---|---|---|---|---|---|
+| 馃 SDXL Juggernaut v9 (30姝? | 6.51 | 6.62 | 8.27 | 6.14 | 7.90 | 7.83 | 4.00 | **6.83** |
+| 馃 SDXL RealVisXL v4.0 (30姝? | 5.21 | 3.73 | 5.76 | 7.14 | 5.43 | 9.27 | 3.04 | **5.58** |
+| 馃 Flux.1 Dev FP8 (20姝? | 4.31 | 3.71 | 2.73 | 3.91 | 4.70 | 1.78 | 8.34 | **4.13** |
+| 4锔忊儯 Z-Image Turbo (8姝? | 5.38 | 5.52 | 1.65 | 2.04 | 3.62 | 4.35 | 3.66 | **3.80** |
+
+## 鍗曢」鍐犲啗
+- **娓呮櫚搴?*锛歋DXL Juggernaut v9 (30姝?锛?.51锛?
+- **缁嗚妭涓板瘜搴?*锛歋DXL Juggernaut v9 (30姝?锛?.62锛?
+- **鐨偆璐ㄦ劅**锛歋DXL Juggernaut v9 (30姝?锛?.27锛?
+- **浜鸿劯璐ㄩ噺**锛歋DXL RealVisXL v4.0 (30姝?锛?.14锛?
+- **鑹插僵鑷劧**锛歋DXL Juggernaut v9 (30姝?锛?.90锛?
+- **鏇濆厜**锛歋DXL RealVisXL v4.0 (30姝?锛?.27锛?
+- **鐢婚潰骞插噣**锛欶lux.1 Dev FP8 (20姝?锛?.34锛?
+
+## 鍘熷鎸囨爣鍧囧€?
+| 妯″瀷 | 鎷夋櫘鎷夋柉鏂瑰樊 | 楂橀鍗犳瘮 | 楗卞拰搴?| 鍧楁晥搴?| 浜鸿劯闈㈢Н鍗犳瘮 |
+|---|---|---|---|---|---|
+| SDXL Juggernaut v9 (30姝? | 125.2 | 0.0013 | 0.243 | 1.001 | 0.0496 |
+| SDXL RealVisXL v4.0 (30姝? | 101.4 | 0.0010 | 0.219 | 1.006 | 0.0439 |
+| Flux.1 Dev FP8 (20姝? | 79.9 | 0.0008 | 0.202 | 0.989 | 0.0981 |
+| Z-Image Turbo (8姝? | 98.1 | 0.0011 | 0.197 | 1.003 | 0.0802 |
+
+鑰楁椂 0.6 鍒嗛挓
+
+CSV : D:\ai_projects\ComfyUI\output\2026-10-10_wb\_eval\metrics_per_image.csv
+JSON: D:\ai_projects\ComfyUI\output\2026-10-10_wb\_eval\summary.json
+MD  : D:\ai_projects\ComfyUI\output\2026-10-10_wb\_eval\璇勬祴鎶ュ憡.md

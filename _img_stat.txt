@@ -1,0 +1,5 @@
+zimage_test_00001_.png
+  size=(1024, 1024)  mean=0.286  std=0.156  min=0.000  max=0.935
+  per-channel mean R/G/B = 0.280 / 0.307 / 0.269
+  gradient(sharpness proxy)=0.0104
+  判定: 有正常图像内容

@@ -1,0 +1,7 @@
+=== JosephMinchala/JosephMinchala-skin-texture-zturbo-v45 ===
+   skin texture Photorealistic style v4.5.safetensors
+   (共 5 个文件)
+
+=== suayptalha/Z-Image-Turbo-Realism-LoRA ===
+   pytorch_lora_weights.safetensors
+   (共 9 个文件)

@@ -1,0 +1,17 @@
+﻿鍙敤鍚庣锛堥粯璁?= zimage锛夛細
+
+  鈽?zimage   Z-Image Turbo bf16 鈥?8 姝?/ 0.9 鍒嗛挓 / 1024px锛岄粯璁ゆ。
+    flux     Flux.1 Dev锛坒p8 鎴?T8 abliterated GGUF锛夆€?20 姝ワ紝鎱絾姘涘洿寮?
+    sd15     SD1.5 鍐欏疄搴曟ā锛坢ajicmixRealistic 绛夛級鈥?30 姝ワ紝鏈€鐪佹樉瀛?
+
+鈽?= 榛樿妗ｏ紝涓嶅甫 --backend 鏃朵娇鐢?
+[backend] zimage 鈥?Z-Image Turbo bf16 鈥?8 姝?/ 0.9 鍒嗛挓 / 1024px锛岄粯璁ゆ。
+=== Z-Image Turbo | 1024x1024 | steps=8 cfg=1.0 euler/simple | out=D:\ai_projects\ComfyUI\output\2026-10-10_wb\pc_zimage ===
+[dry] s01_camisole_touch_hair seed=900000 nodes=9
+[dry] s02_lying_on_sofa seed=900001 nodes=9
+[dry] s03_hugging_knees seed=900002 nodes=9
+[dry] s04_flushed_selfie seed=900003 nodes=9
+[dry] s05_outdoor_knit_hat seed=900004 nodes=9
+[dry] s06_indoor_standing seed=900005 nodes=9
+[dry] s07_hand_on_chest seed=900006 nodes=9
+[dry] s08_tousle_hair seed=900007 nodes=9

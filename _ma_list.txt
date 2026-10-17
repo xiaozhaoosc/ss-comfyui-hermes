@@ -1,0 +1,53 @@
+﻿
+Name                    Length
+----                    ------
+.gitignore                  19
+__init__.py               2672
+ALPHA.md                 15369
+capsule_types.py          6732
+contact_sheet.py          7457
+derope_any.py            10478
+DEROPE_ANY_MODEL.md       9454
+example_api_workflow.py   3336
+FASTER.md                 3233
+h3_capabilities.py       12723
+h3_color_carry.py        13789
+h3_drift.py              11474
+h3_extend.py             27522
+h3_repair.py             23512
+HARDWARE.md               6106
+LICENSE                  35465
+LOWVRAM.md               22988
+LOWVRAM_lines.html       18064
+model_profiles.py         9225
+motion.py               285210
+pyproject.toml             413
+README.md                70992
+RESEARCH_NOTES_ATOS.md   13979
+ROADMAP.md               21906
+TESTING_ALPHA.md          7828
+TUNING.md                43044
+video_compare.py          9722
+video_out.py             12984
+VIDEO_TOOLS.md            6215
+vram_lab.py             106422
+window_expand.py         30115
+window_loop.py           31162
+
+
+
+Name          
+----          
+a6-review     
+latents       
+roadmaps      
+index.html    
+WINDOW_MODE.md
+
+
+
+FullName                                                              
+--------                                                              
+D:\ai_projects\ComfyUI\custom_nodes\ComfyUI-PlagueKind-Nodes\README.md
+
+

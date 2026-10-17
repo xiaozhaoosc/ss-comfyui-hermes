@@ -1,0 +1,33 @@
+==================================================================
+EXAMPLE  SamplerCustomAdvanced = node 125
+  inputs: {"noise": ["129", 0], "guider": ["126", 0], "sampler": ["135", 0], "sigmas": ["124", 0], "latent_image": ["131", 1]}
+    noise          <- node 129   slot 0  (RandomNoise)
+    guider         <- node 126   slot 0  (BasicGuider)
+    sampler        <- node 135   slot 0  (KSamplerSelect)
+    sigmas         <- node 124   slot 0  (BasicScheduler)
+    latent_image   <- node 131   slot 1  (MiniMaxH3ReferenceToVideo)
+
+  latent_image source 131 (MiniMaxH3ReferenceToVideo) inputs: {"clip": ["128", 0], "vae": ["119", 0], "audio_vae": ["120", 0], "prompt": "subject_definitions:\n<Subject 1> is the person shown in <Picture 1>; their face, hair and clothing are carried into the target video unchanged.\n\nsummary:\n[reference generation] The target video is a single continuous shot of <Subject 1> performing a fast turning movement, with their appearance taken from <Picture 1>.\n
+
+==================================================================
+OURS  SamplerCustomAdvanced = node 16
+  inputs: {"noise": ["15", 0], "guider": ["13", 0], "sampler": ["14", 0], "sigmas": ["12", 0], "latent_image": [["11", 1], 0]}
+    noise          <- node 15    slot 0  (RandomNoise)
+    guider         <- node 13    slot 0  (BasicGuider)
+    sampler        <- node 14    slot 0  (KSamplerSelect)
+    sigmas         <- node 12    slot 0  (BasicScheduler)
+    latent_image   <- node ['11', 1] slot 0  (MISSING)
+
+
+==================================================================
+types only in EXAMPLE: ['ComfyMathExpression', 'H3AudioRecover', 'H3AudioSmear', 'H3ExactRecover', 'H3InjectSchedule', 'H3JerkOracle', 'H3TimeSmear', 'H3V2VInit', 'LoraLoaderModelOnly', 'PrimitiveFloat', 'ResolutionSelector', 'VAEEncode', 'VAEEncodeAudio']
+types only in OURS   : ['MiniMaxH3SigmaShift', 'ReActorFaceSwapOpt', 'ReActorOptions', 'VHS_LoadVideo']
+
+example Ref2VA width/height/length inputs:
+   width = ['115', 0]
+   height = ['115', 1]
+   length = ['132', 1]
+ours Ref2VA width/height/length inputs:
+   width = 448
+   height = 768
+   length = 73

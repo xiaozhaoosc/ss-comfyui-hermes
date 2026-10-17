@@ -1,0 +1,46 @@
+﻿=== Z-Image 鐨偆绾圭悊琛ュ伩 A/B | 杈撳嚭 D:\ai_projects\ComfyUI\output\2026-10-10_wb\lora_ab ===
+妯″紡: 鍙彁浜わ紙鐢?_pc_status.py 鏌ヨ繘搴︼級
+
+--- 缁?zimg_base | lora=None strength=None boost=False ---
+[submit] zimg_base      s01_camisole_touch_hair  seed=900000 -> True 9b724033-5517-445c-85a8-960b8e512a4d
+[submit] zimg_base      s02_lying_on_sofa        seed=900001 -> True 9e1aa525-ce1c-47a7-b12d-0c336ab313a4
+[submit] zimg_base      s03_hugging_knees        seed=900002 -> True 0f44eec9-dd7e-464c-bfa3-2504129739ec
+[submit] zimg_base      s04_flushed_selfie       seed=900003 -> True 2a13c29a-f561-4c7d-9a5e-f8afdc2bb8ea
+[submit] zimg_base      s05_outdoor_knit_hat     seed=900004 -> True 7b056f1d-6726-429d-b48c-a9d08b6c729c
+[submit] zimg_base      s06_indoor_standing      seed=900005 -> True 7df40cb2-a1a1-46ec-aed4-9e76bd05d0c9
+[submit] zimg_base      s07_hand_on_chest        seed=900006 -> True 146d0047-acd0-4b9c-9209-4e79cc170f48
+[submit] zimg_base      s08_tousle_hair          seed=900007 -> True be6987ef-7602-443c-b6a9-3aa85257aedf
+
+--- 缁?zimg_skinlora | lora=skin_texture_zturbo_v45.safetensors strength=0.7 boost=False ---
+[submit] zimg_skinlora  s01_camisole_touch_hair  seed=900000 -> True 26d00128-a364-43bd-8903-100ffad53286
+[submit] zimg_skinlora  s02_lying_on_sofa        seed=900001 -> True 24b139a9-7fe4-444a-9e3e-abe6314b177f
+[submit] zimg_skinlora  s03_hugging_knees        seed=900002 -> True 2f5c3186-ccc1-4be2-8444-6f26d7de5718
+[submit] zimg_skinlora  s04_flushed_selfie       seed=900003 -> True e2e5529a-ca03-482e-86d3-ef3b8b5740c4
+[submit] zimg_skinlora  s05_outdoor_knit_hat     seed=900004 -> True f26164f3-46b5-45b2-a83f-a1be6e1e2737
+[submit] zimg_skinlora  s06_indoor_standing      seed=900005 -> True 9f0e7868-680c-4be6-8680-66bff3d065e6
+[submit] zimg_skinlora  s07_hand_on_chest        seed=900006 -> True 1925fdb4-387b-4e50-b3e2-866605fd2492
+[submit] zimg_skinlora  s08_tousle_hair          seed=900007 -> True b4de3d8b-c3b7-4279-ae6a-ecff993f74d5
+
+--- 缁?zimg_realism | lora=zimage_realism_lora.safetensors strength=0.8 boost=False ---
+[submit] zimg_realism   s01_camisole_touch_hair  seed=900000 -> True 4848b6f1-a033-46b8-b287-3c6ac2fb00ec
+[submit] zimg_realism   s02_lying_on_sofa        seed=900001 -> True 4adb4dfa-c9e9-4523-861d-1f7cab5a59b4
+[submit] zimg_realism   s03_hugging_knees        seed=900002 -> True 6e4630eb-d003-4b74-8dd5-830564c8ae15
+[submit] zimg_realism   s04_flushed_selfie       seed=900003 -> True c271f1ed-96e6-4cf2-86c6-1f2f97604288
+[submit] zimg_realism   s05_outdoor_knit_hat     seed=900004 -> True d0a71f95-6348-41d0-a3c2-710ffab30673
+[submit] zimg_realism   s06_indoor_standing      seed=900005 -> True 29797450-6740-4aec-96b7-6c6fd4b30bd1
+[submit] zimg_realism   s07_hand_on_chest        seed=900006 -> True ecf2bfb0-b3d1-4de8-be88-9479ddad276e
+[submit] zimg_realism   s08_tousle_hair          seed=900007 -> True 5e9b45f7-ab93-494a-b74b-d13d2ee30b46
+
+--- 缁?zimg_boost | lora=None strength=None boost=True ---
+[submit] zimg_boost     s01_camisole_touch_hair  seed=900000 -> True af21c17f-1231-4719-9dc3-62f34e58f2e2
+[submit] zimg_boost     s02_lying_on_sofa        seed=900001 -> True 33df0fb4-37e4-4c5c-acc7-768beb246bc4
+[submit] zimg_boost     s03_hugging_knees        seed=900002 -> True ca3b8311-a882-4f45-8e8b-b517b534c9cc
+[submit] zimg_boost     s04_flushed_selfie       seed=900003 -> True a302596c-4390-4ffd-95f1-e07994f0b1e8
+[submit] zimg_boost     s05_outdoor_knit_hat     seed=900004 -> True b7322499-84c4-44c8-a69a-d5c7b05c7ec0
+[submit] zimg_boost     s06_indoor_standing      seed=900005 -> True 2efbb504-927a-46fb-b429-2a26df64a043
+[submit] zimg_boost     s07_hand_on_chest        seed=900006 -> True 887b8bbe-1e8b-4d9b-a374-ae120083ce09
+[submit] zimg_boost     s08_tousle_hair          seed=900007 -> True 8b24bfe4-6274-4319-a9a3-f66b42ec82e1
+
+=== 宸茬櫥璁?32 涓换鍔?-> D:\ai_projects\ComfyUI\output\2026-10-10_wb\lora_ab\_submit_log.json ===
+鏌ヨ繘搴︼細python tools/_pc_status.py
+鍑哄浘瀹屾垚鍚庨噸鏂拌瘎娴嬶細python tools/eval_pc_models.py   锛堟ā鍨嬪垪琛ㄩ渶鍚繖浜涚粍锛?

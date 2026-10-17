@@ -1,0 +1,31 @@
+﻿鍙敤鍚庣锛堥粯璁?= zimage锛夛細
+
+  鈽?zimage   Z-Image Turbo bf16 鈥?8 姝?/ cfg1.0 / 1024px锛岄粯璁ゆ。
+    flux     Flux.1 Dev锛坒p8 鎴?T8 abliterated GGUF锛夆€?20 姝ワ紝鎱絾姘涘洿寮?
+    sd15     SD1.5 / SDXL 搴曟ā 鈥?30 姝ャ€傛湰鏈哄彲鐢ㄥ簳妯★細Juggernaut-XL_v9 / RealVisXL_V4.0 / v1-5
+    qwen21   Qwen-Image 2.1 GGUF Q4_K_M 鈥?25 姝?/ cfg3.0锛?*璐熼潰鎻愮ず璇嶆湁鏁?*
+
+鈽?= 榛樿妗ｏ紝涓嶅甫 --backend 鏃朵娇鐢?
+[backend] qwen21 鈥?Qwen-Image 2.1 GGUF Q4_K_M 鈥?25 姝?/ cfg3.0锛?*璐熼潰鎻愮ず璇嶆湁鏁?*
+=== Qwen-Image 2.1 | 1024x1024 | steps=25 cfg=3.0 shift=3.0 | out=D:\ai_projects\ComfyUI\output\2026-10-10_wb\qwen_image_21 ===
+[dry] s01_camisole_touch_hair seed=800000 nodes=10
+=== Z-Image 鐨偆绾圭悊琛ュ伩 A/B | 杈撳嚭 D:\ai_projects\ComfyUI\output\2026-10-10_wb\lora_ab ===
+妯″紡: 鍙彁浜わ紙鐢?_pc_status.py 鏌ヨ繘搴︼級
+
+!! 浠ヤ笅 LoRA 灏氭湭涓嬭浇瀹屾垚锛岃鍏堣窇锛?
+   python tools/_dl_weights.py --set lora_skin
+   - zimg_realism -> zimage_realism_lora.safetensors
+
+--- 缁?zimg_base | lora=None strength=None boost=False ---
+[dry] zimg_base / s01_camisole_touch_hair seed=900000 nodes=9
+
+--- 缁?zimg_skinlora | lora=skin_texture_zturbo_v45.safetensors strength=0.7 boost=False ---
+[dry] zimg_skinlora / s01_camisole_touch_hair seed=900000 nodes=10
+[skip] zimg_realism锛圠oRA 缂哄け锛?
+
+--- 缁?zimg_boost | lora=None strength=None boost=True ---
+[dry] zimg_boost / s01_camisole_touch_hair seed=900000 nodes=9
+
+=== 宸茬櫥璁?0 涓换鍔?-> D:\ai_projects\ComfyUI\output\2026-10-10_wb\lora_ab\_submit_log.json ===
+鏌ヨ繘搴︼細python tools/_pc_status.py
+鍑哄浘瀹屾垚鍚庨噸鏂拌瘎娴嬶細python tools/eval_pc_models.py   锛堟ā鍨嬪垪琛ㄩ渶鍚繖浜涚粍锛?

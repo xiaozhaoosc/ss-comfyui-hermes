@@ -1,0 +1,196 @@
+{
+  "version": "2.0.0",
+  "updated_at": "2026-10-17",
+  "body_tension_curves": [
+    {
+      "id": "slim_willowy",
+      "name_cn": "纤细清瘦骨感型",
+      "tier": "slim",
+      "weight": 14,
+      "prompt_en": "slim willowy frame, slender arms and long delicate neck, subtle flat chest line, narrow waist with minimal hip curve, light graceful posture",
+      "tags": ["slim", "willowy", "flat chest", "narrow waist"]
+    },
+    {
+      "id": "average_balanced",
+      "name_cn": "标准匀称日常型",
+      "tier": "average",
+      "weight": 20,
+      "prompt_en": "natural average build, balanced shoulder-to-hip proportion, healthy soft waistline, realistic everyday body proportions, relaxed natural stance",
+      "tags": ["average", "balanced", "everyday proportions"]
+    },
+    {
+      "id": "soft_full_figured",
+      "name_cn": "微胖圆润亲善型",
+      "tier": "plus",
+      "weight": 12,
+      "prompt_en": "soft full-figured build, gently rounded belly and fuller arms and thighs, warm approachable presence, realistic soft body contours, comfortable posture",
+      "tags": ["full-figured", "rounded belly", "fuller arms", "realistic"]
+    },
+    {
+      "id": "tall_slender",
+      "name_cn": "高挑清瘦模特型",
+      "tier": "tall",
+      "weight": 10,
+      "prompt_en": "tall statuesque frame with elongated limbs, narrow shoulders and long elegant legs, lean linear silhouette, upright poised stance",
+      "tags": ["tall", "long limbs", "lean", "linear silhouette"]
+    },
+    {
+      "id": "petite_compact",
+      "name_cn": "娇小玲珑匀称型",
+      "tier": "petite",
+      "weight": 9,
+      "prompt_en": "petite compact build, shorter stature with delicate proportions, small shoulders and short waist, youthful compact silhouette",
+      "tags": ["petite", "compact", "short stature"]
+    },
+    {
+      "id": "athletic_toned_core",
+      "name_cn": "运动健硕力量型",
+      "tier": "athletic",
+      "weight": 10,
+      "prompt_en": "athletic muscular build, defined shoulders and toned arms, firm flat stomach, strong upright posture, healthy fit appearance",
+      "tags": ["athletic", "muscular", "toned arms", "flat stomach"]
+    },
+    {
+      "id": "pear_shaped",
+      "name_cn": "梨形下盘丰满型",
+      "tier": "pear",
+      "weight": 8,
+      "prompt_en": "pear-shaped figure with narrower shoulders, fuller hips and thighs, balanced natural lower-body silhouette, grounded stance",
+      "tags": ["pear-shaped", "fuller hips", "narrow shoulders"]
+    },
+    {
+      "id": "sleek_hourglass",
+      "name_cn": "古典沙漏曲线型",
+      "tier": "hourglass",
+      "weight": 7,
+      "prompt_en": "classic hourglass figure with balanced bust and hip line, naturally defined waist, smooth continuous silhouette",
+      "tags": ["hourglass", "defined waist", "balanced"]
+    },
+    {
+      "id": "voluptuous_grace",
+      "name_cn": "丰腴性感曲线型",
+      "tier": "voluptuous",
+      "weight": 7,
+      "prompt_en": "voluptuous natural curves, full bust and rounded hip contour, softly sculpted waist, confident feminine presence",
+      "tags": ["voluptuous", "full bust", "rounded hips"]
+    },
+    {
+      "id": "straight_column",
+      "name_cn": "直筒中性清淡型",
+      "tier": "column",
+      "weight": 5,
+      "prompt_en": "straight up-and-down column figure, minimal waist definition, narrower boyish hips, clean linear silhouette, understated stance",
+      "tags": ["column", "minimal waist", "linear"]
+    },
+    {
+      "id": "mature_full",
+      "name_cn": "熟龄丰韵成熟型",
+      "tier": "mature",
+      "weight": 5,
+      "prompt_en": "mature fuller figure, softened waistline with fuller bust and hips, confident womanly presence, settled graceful posture",
+      "tags": ["mature", "fuller bust", "womanly"]
+    },
+    {
+      "id": "wasp_waist_dramatic",
+      "name_cn": "极致蜂腰戏剧型",
+      "tier": "dramatic",
+      "weight": 3,
+      "prompt_en": "dramatic wasp waist, deep hip-to-waist ratio, strongly curved feminine silhouette, statuesque posture",
+      "tags": ["wasp waist", "high hip ratio", "dramatic curves"]
+    }
+  ],
+  "expression_tones": [
+    {
+      "id": "gentle_smile",
+      "name_cn": "温柔含笑",
+      "prompt_en": "soft warm smile with relaxed brow, gentle downward gaze, serene approachable demeanor"
+    },
+    {
+      "id": "cool_alienated",
+      "name_cn": "清冷疏离",
+      "prompt_en": "cool detached expression, level unsmiling gaze, composed aloof demeanor, minimal facial tension"
+    },
+    {
+      "id": "playful_spirited",
+      "name_cn": "俏皮灵动",
+      "prompt_en": "playful bright expression, slightly raised brows, subtle smirk, lively alert demeanor"
+    },
+    {
+      "id": "sultry_alluring",
+      "name_cn": "妩媚勾人",
+      "prompt_en": "sultry half-lidded gaze, softly parted lips, sensual confident demeanor"
+    },
+    {
+      "id": "calm_composed",
+      "name_cn": "沉稳内敛",
+      "prompt_en": "calm composed expression, steady direct gaze, quiet self-possessed demeanor"
+    },
+    {
+      "id": "sunny_open",
+      "name_cn": "阳光爽朗",
+      "prompt_en": "open cheerful expression, bright wide smile, friendly outgoing demeanor"
+    },
+    {
+      "id": "melancholic_artistic",
+      "name_cn": "忧郁文艺",
+      "prompt_en": "pensive melancholic expression, distant softened gaze, introspective artistic demeanor"
+    },
+    {
+      "id": "determined_driven",
+      "name_cn": "坚定果敢",
+      "prompt_en": "firm determined expression, sharp focused gaze, resolute driven demeanor"
+    },
+    {
+      "id": "languid_relaxed",
+      "name_cn": "慵懒松弛",
+      "prompt_en": "languid relaxed expression, soft unfocused gaze, effortless unhurried demeanor"
+    },
+    {
+      "id": "noble_reserved",
+      "name_cn": "高贵矜持",
+      "prompt_en": "poised reserved expression, chin slightly raised, aristocratic restrained demeanor"
+    },
+    {
+      "id": "shy_demure",
+      "name_cn": "腼腆羞涩",
+      "prompt_en": "shy demure expression, lowered lashes, slight blush, timid soft demeanor"
+    },
+    {
+      "id": "bold_defiant",
+      "name_cn": "张扬叛逆",
+      "prompt_en": "bold defiant expression, direct challenging gaze, rebellious attitude"
+    }
+  ],
+  "special_aesthetics": [
+    {
+      "id": "porcelain_sheen_collarbone",
+      "name_cn": "瓷白微光与深邃锁骨",
+      "prompt_en": "luminous translucent skin with subtle collarbone sheen, delicate stray hair strands dancing in gentle breeze",
+      "tags": ["translucent skin", "collarbone sheen", "stray wisps"]
+    },
+    {
+      "id": "cinematic_rim_highlights",
+      "name_cn": "电影级轮廓光与发丝质感",
+      "prompt_en": "delicate rim light accentuating shoulder contours, crisp individual hair strand definition",
+      "tags": ["rim light", "hair strand definition"]
+    },
+    {
+      "id": "strained_fabric_tension",
+      "name_cn": "面料张力微拉扯细节",
+      "prompt_en": "fabric naturally contouring the body with realistic tension folds, elegant physical drape",
+      "tags": ["tension folds", "contouring drape", "realistic fabric physics"]
+    },
+    {
+      "id": "poetic_waterdrop_sheen",
+      "name_cn": "水光微润与清冽气场",
+      "prompt_en": "subtle dewy glow on temples and collarbone, refined skin luminosity, sharp high-fashion editorial clarity",
+      "tags": ["dewy glow", "editorial clarity", "skin luminosity"]
+    },
+    {
+      "id": "freckles_natural_texture",
+      "name_cn": "自然雀斑与真实肌理",
+      "prompt_en": "light natural freckles across the nose bridge, visible skin texture and pores, unretouched realistic finish",
+      "tags": ["freckles", "skin texture", "unretouched"]
+    }
+  ]
+}

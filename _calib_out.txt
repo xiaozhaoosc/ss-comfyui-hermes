@@ -1,0 +1,14 @@
+﻿python.exe : C:\Users\kenzhao\anaconda3\Lib\site-packages\insightface\utils\tra
+nsform.py:68: FutureWarning: `rcond` parameter will change to the default of ma
+chine precision times ``max(M, N)`` where M and N are the input matrix dimensio
+ns.
+所在位置 行:445 字符: 1
++ & "C:\Users\kenzhao\anaconda3\python.exe" "D:\ai_projects\ComfyUI\too ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (C:\Users\kenzha...rix dimensions. 
+   :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+To use the future default and silence this warning we advise to pass `rcond=Non
+e`, to keep using the old, explicitly pass `rcond=-1`.
+  P = np.linalg.lstsq(X_homo, Y)[0].T # Affine matrix. 3 x 4

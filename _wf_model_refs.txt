@@ -1,0 +1,46 @@
+### comfy-cartoon-avatar
+  -- models.txt
+     # Required models for 卡通形象
+     - toonyou_beta6.safetensors  (or your preferred SD1.5 cartoon ckpt)
+     - 3D cartoon avatar.safetensors  (FaceID style LoRA; was PLACEHOLDER)
+     - ip-adapter-faceid-plusv2_sd15.bin
+     - ip-adapter-faceid-plusv2_sd15_lora.safetensors
+     - ip-adapter_sd15.bin
+     - BSRGANx2.pth
+     - vae-ft-mse-840000-ema-pruned.safetensors
+     # Needs InsightFace / IP-Adapter FaceID custom nodes.
+  -- workflow.json 引用的模型文件:
+     3D cartoon avatar.safetensors
+     BSRGANx2.pth
+     ip-adapter-faceid-plusv2_sd15.bin
+     ip-adapter-faceid-plusv2_sd15_lora.safetensors
+     ip-adapter_sd15.bin
+     toonyou_beta6.safetensors
+     vae-ft-mse-840000-ema-pruned.safetensors
+
+### comfy-lineart-colorization
+  -- models.txt
+     # Required models for 线稿上色 (SDXL)
+     - dreamshaperXL_v21TurboDPMSDE.safetensors
+     - sai_xl_canny_128lora.safetensors
+     - sdxl_vae.safetensors
+     # Suggested sources (verify yourself):
+     # - dreamshaperXL_v21TurboDPMSDE.safetensors
+     # - sai_xl_canny_128lora.safetensors (Stability AI Canny LoRA)
+     # - sdxl_vae.safetensors
+  -- workflow.json 引用的模型文件:
+     dreamshaperXL_v21TurboDPMSDE.safetensors
+     sai_xl_canny_128lora.safetensors
+     sdxl_vae.safetensors
+
+### comfy-realtime-doodle
+  -- models.txt
+     # Required models for 实时绘画 / 涂鸦-实时绘画 (SDXL + Hyper)
+     - Hyper-SDXL-2steps-lora.safetensors
+     - sd_xl_base_1.0_0.9vae.safetensors
+     # Notes:
+     # - Hyper-SDXL-2steps-lora: few-step realtime-ish generation
+     # - Requires PainterNode (AlekPet) for canvas input
+  -- workflow.json 引用的模型文件:
+     Hyper-SDXL-2steps-lora.safetensors
+     sd_xl_base_1.0_0.9vae.safetensors

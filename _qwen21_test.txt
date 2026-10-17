@@ -1,0 +1,7 @@
+﻿[backend] qwen21 鈥?Qwen-Image 2.1 GGUF Q4_K_M 鈥?25 姝?/ cfg3.0锛?*璐熼潰鎻愮ず璇嶆湁鏁?*
+=== Qwen-Image 2.1 | 1024x1024 | steps=25 cfg=3.0 shift=3.0 | out=D:\ai_projects\ComfyUI\output\2026-10-10_wb\qwen_image_21 ===
+[submit] s01_camisole_touch_hair seed=800000 -> True 2d503b3a-e085-4848-aaa9-61469bf6f129
+   [done] True in 560.9s files=['pc_qwen_image_21_s01_camisole_touch_hair_00001_.png'] 
+
+=== qwen_image_21 : 1/1 ok, total 560.9s ===
+meta: D:\ai_projects\ComfyUI\output\2026-10-10_wb\qwen_image_21\_run.json

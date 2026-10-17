@@ -1,0 +1,2 @@
+﻿WROTE D:\ai_projects\ComfyUI\_validate_v5.txt
+passed 0/7

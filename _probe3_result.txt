@@ -1,0 +1,120 @@
+=== node -> category (pack hint) ===
+
+[KJNodes/experimental]  (1 nodes)
+   MiniMaxLowVRAMAttention
+
+[KJNodes/minimax]  (1 nodes)
+   MiniMaxH3MemoryEfficientSageAttentionPatch
+
+[KJNodes/misc]  (1 nodes)
+   MiniMaxH3TokenCounter
+
+[MAINodes/alpha]  (12 nodes)
+   H3CapabilityProbe
+   H3DeltaColorCarry
+   H3DriftControl
+   H3ExtensionPlan
+   H3PrefixFreezeMask
+   H3ProtectPrefix
+   H3RepairPlan
+   H3RepairSplice
+   H3SceneColorStats
+   H3SeamNormalize
+   H3TailContext
+   H3Trim
+
+[PlagueKind/model_patches/minimax]  (3 nodes)
+   H3AdaLNLoRAFix
+   H3MiniMaxCache
+   H3SLAAttention
+
+[PlagueKind/upscaling]  (1 nodes)
+   H3UpscaleSizeLD
+
+[PlagueKind/upscaling/minimax]  (1 nodes)
+   MMH3UltimateUpscale
+
+[audio/minimax/motion]  (1 nodes)
+   H3AudioRecover
+
+[conditioning/minimax]  (1 nodes)
+   H3ConditioningBank
+
+[image/minimax/motion]  (17 nodes)
+   H3ClockRemap
+   H3ExactRecover
+   H3JerkHeatmap
+   H3LoadHoldMap
+   H3MotionComposite
+   H3SaveHoldMap
+   H3SegmentCrop
+   H3SegmentSplice
+   H3TimeSmear
+   H3VideoFit
+   H3WindowCollect
+   H3WindowCrop
+   H3WindowExpand
+   H3WindowLoop
+   H3WindowPass
+   H3WindowPlan
+   H3WindowSeam
+
+[latent/minimax]  (2 nodes)
+   H3ContactSheetDecode
+   H3LatentBank
+
+[latent/minimax/motion]  (9 nodes)
+   H3IndecisionOracle
+   H3JerkOracle
+   H3LatentUpscale
+   H3ManualHoldMap
+   H3MidInsert
+   H3MotionEditor
+   H3TemporalInsert
+   H3TrajectoryLoad
+   H3V2VInit
+
+[latent/minimax/timeline]  (7 nodes)
+   H3DrawnPlan
+   H3PlanEstimate
+   H3PlanSettings
+   H3RecordStart
+   H3RecordStop
+   H3TimelineAnalyze
+   H3TimelineRender
+
+[model/conditioning/minimax]  (1 nodes)
+   H3ContactSheet
+
+[sampling/custom_sampling/samplers]  (3 nodes)
+   H3DyRoPE
+   H3TrajectoryBank
+   H3TrueClock
+
+[sampling/custom_sampling/schedulers]  (3 nodes)
+   H3ExpertSchedule
+   H3InjectSchedule
+   H3ProbeSchedule
+
+[utils/minimax]  (1 nodes)
+   H3ModeSwitch
+
+======================================================================
+=== custom_nodes packages referencing these node classes ===
+======================================================================
+custom_nodes entries: 39
+
+# ComfyUI-KJNodes  (py files: 24)
+    hits: MiniMaxLowVRAMAttention
+    path: D:\ai_projects\ComfyUI\custom_nodes\ComfyUI-KJNodes
+    entries: .git, .github, .gitignore, LICENSE, README.md, __init__.py, __pycache__, custom_dimensions_example.json, docs, example_workflows, examples, fonts, kjweb_async, nodes, pyproject.toml, requirements.txt, utility, web
+
+# ComfyUI-MAINodes  (py files: 87)
+    hits: H3DeltaColorCarry, H3DriftControl, H3JerkOracle, H3MotionComposite, H3TimelineAnalyze, H3TrajectoryBank
+    path: D:\ai_projects\ComfyUI\custom_nodes\ComfyUI-MAINodes
+    entries: .github, .gitignore, ALPHA.md, DEROPE_ANY_MODEL.md, FASTER.md, HARDWARE.md, LICENSE, LOWVRAM.md, LOWVRAM_lines.html, README.md, RESEARCH_NOTES_ATOS.md, ROADMAP.md, TESTING_ALPHA.md, TUNING.md, VIDEO_TOOLS.md, __init__.py, __pycache__, assets, capsule_types.py, concept_lab, contact_sheet.py, derope_any.py, docs, example_api_workflow.py, examples
+
+# ComfyUI-PlagueKind-Nodes  (py files: 24)
+    hits: H3SLAAttention, MMH3UltimateUpscale
+    path: D:\ai_projects\ComfyUI\custom_nodes\ComfyUI-PlagueKind-Nodes
+    entries: .github, ComfyUI-H3-AdaLN-LoRA-Fix, ComfyUI-H3-MiniMax-Cache, ComfyUI-H3-SLA-Attention, ComfyUI-H3-UltimateUpscale-LD, ComfyUI-H3-UpscaleSize, LICENSE, README.md, __init__.py, __pycache__, bbox_crop, bundle_nodes, crop_and_resize, js, ltx_lora_loader, pyproject.toml, unified_resize

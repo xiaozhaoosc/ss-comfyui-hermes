@@ -1,0 +1,4 @@
+z_image_turbo_bf16.safetensors         local=11.46GB remote=11.46GB size=OK header=OK (453 tensors)
+qwen_3_4b.safetensors                  local=7.49GB remote=7.49GB size=OK header=OK (398 tensors)
+ae.safetensors                         local=0.31GB remote=0.31GB size=OK header=OK (244 tensors, fmt=?)
+Counterfeit-V3.0_fp16.safetensors : MISSING

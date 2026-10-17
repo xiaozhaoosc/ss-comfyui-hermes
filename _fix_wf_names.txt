@@ -1,0 +1,12 @@
+RENAME control-lora-canny-rank128.safetensors -> sai_xl_canny_128lora.safetensors
+local sdxl checkpoint RealVisXL_V4.0.safetensors exists=True
+PATCH comfy-lineart-colorization/workflow.json : dreamshaperXL_v21TurboDPMSDE.safetensors -> RealVisXL_V4.0.safetensors (1 处)
+PATCH comfy-realtime-doodle/workflow.json : sd_xl_base_1.0_0.9vae.safetensors -> RealVisXL_V4.0.safetensors (1 处)
+
+=== 权重齐备性核对 ===
+  comfy-lineart-colorization   checkpoints    RealVisXL_V4.0.safetensors         OK 6.46 GB
+  comfy-lineart-colorization   controlnet     sai_xl_canny_128lora.safetensors   OK 0.37 GB
+  comfy-lineart-colorization   vae            sdxl_vae.safetensors               OK 0.31 GB
+  comfy-realtime-doodle        checkpoints    RealVisXL_V4.0.safetensors         OK 6.46 GB
+  comfy-realtime-doodle        loras          Hyper-SDXL-2steps-lora.safetensors OK 0.73 GB
+  comfyui-upscaler             upscale_models 4x-UltraSharp.pth                  OK 0.06 GB

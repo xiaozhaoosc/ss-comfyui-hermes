@@ -1,0 +1,22 @@
+{
+  "builtin": "schedule",
+  "args": [
+    "CRON_TZ=Asia/Shanghai 0,30 * * * *",
+    "agentapi",
+    "new-conversation",
+    "--",
+    "Run the scheduled character generation task for ComfyUI. In directory d:/ai_projects/ComfyUI, execute the command: 'cmd /c D:\\ai_projects\\ComfyUI\\venv\\Scripts\\python.exe tools/hourly_character_task.py --count 1'. Ensure it completes all 9 standalone HD view generations (with 01_face_portrait as native 9:16 HD primary face) and verify the character is ingested into character_library/index.json."
+  ],
+  "restart_policy": "always",
+  "display_name": "Hourly Asian Female Character Generator",
+  "description": "Every hour at :00 and :30 (Asia/Shanghai), automatically generates 1 unique Asian female character asset with 9 standalone high-definition views (Google Flow Imagen 3, with 01_face_portrait as native 9:16 HD primary face), extracts face embedding from HD portrait, and syncs into character_library and assets.db.",
+  "agent_permissions": {
+    "workspace_uris": [
+      "file:///d:/ai_projects/ComfyUI"
+    ],
+    "access_grants": [
+      "command(cmd /c D:\\ai_projects\\ComfyUI\\venv\\Scripts\\python.exe tools/hourly_character_task.py --count 1)",
+      "command(cmd /c python tools/hourly_character_task.py --count 1)"
+    ]
+  }
+}

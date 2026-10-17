@@ -1,0 +1,20 @@
+=== 服务 ===
+  ComfyUI alive
+
+=== Qwen-Image 2.1 需要的件 ===
+  UnetLoaderGGUF 里 qwen: ['qwen-image-2.1-UC-Q4_K_M.gguf']
+  (GGUF unet 共 2 项: ['T8-flux.1-dev-abliterated-V2-GGUF-Q8_0.gguf', 'qwen-image-2.1-UC-Q4_K_M.gguf'])
+  UNETLoader 里 qwen: []
+  CLIPLoader 里 qwen/vl: ['qwen3vl_32b_heretic_minimax_h3_nvfp4.safetensors', 'qwen3vl_32b_minimax_h3_int8_convrot.safetensors', 'qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors', 'qwen3vl_8b_int8_convrot.safetensors', 'qwen_3_4b.safetensors']
+  (全部 8 项: ['clip_l.safetensors', 'qwen3vl_32b_heretic_minimax_h3_nvfp4.safetensors', 'qwen3vl_32b_minimax_h3_int8_convrot.safetensors', 'qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors', 'qwen3vl_8b_int8_convrot.safetensors', 'qwen_3_4b.safetensors', 't5xxl_fp8_e4m3fn.safetensors', 'umt5_xxl_fp8_e4m3fn_scaled.safetensors'])
+  VAELoader 里 qwen: ['qwen_image_2.1_vae_bf16.safetensors', 'qwen_image_vae.safetensors']
+
+=== Z-Image / 通用 LoRA ===
+  LoRA 总数 28
+  含 zimg/z_image/zimage: ['thai_shorty_zimgT.safetensors']
+  含 skin/texture/detail: []
+
+=== 采样辅助节点 ===
+  ModelSamplingAuraFlow    OK
+  ModelSamplingSD3         OK
+  LoraLoaderModelOnly      OK

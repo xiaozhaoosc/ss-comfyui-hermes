@@ -1,0 +1,24 @@
+=== 1) 服务存活 ===
+  /queue -> OK
+  /object_info/KSampler -> OK
+  alive=True
+
+=== 2) 关键节点是否存在 ===
+  UNETLoader                 OK
+  CLIPLoader                 OK
+  VAELoader                  OK
+  KSampler                   OK
+  CLIPTextEncode             OK
+  VAEDecode                  OK
+  SaveImage                  OK
+  EmptySD3LatentImage        OK
+  EmptyLatentImage           OK
+  ModelSamplingAuraFlow      OK
+  ModelSamplingSD3           OK
+
+=== 3) 权重是否被 ComfyUI 看见 ===
+  UNETLoader 里 z_image 相关: ['z_image_turbo_bf16.safetensors']
+  (unet 列表共 6 项，样本: ['Wan2_2-Animate-14B_fp8_e4m3fn_scaled_KJ.safetensors', 'flux1-dev-fp8.safetensors', 'minimax_h3_fl2va_pruned_int8_convrot.safetensors', 'minimax_h3_fused_refdelta_r1024_turbo8_mystic07_int8_convrot.safetensors', 'minimax_h3_ref2va_pruned_int8_convrot.safetensors'])
+  CLIPLoader type 可选值: ['stable_diffusion', 'stable_cascade', 'sd3', 'stable_audio', 'mochi', 'ltxv', 'pixart', 'cosmos', 'lumina2', 'wan', 'hidream', 'chroma', 'ace', 'omnigen2', 'qwen_image', 'hunyuan_image', 'flux2', 'ovis', 'longcat_image', 'cogvideox', 'lens', 'pixeldit', 'ideogram4', 'boogu', 'krea2', 'joyimage', 'mage', 'minimax']
+  CLIPLoader 里 qwen_3_4b: ['qwen_3_4b.safetensors']
+  VAELoader 里 ae.safetensors: ['ae.safetensors']

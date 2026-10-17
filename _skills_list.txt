@@ -1,0 +1,102 @@
+=== C:\Users\kenzhao\.workbuddy\skills ===
+  .disable_to_model_invocation_migration.json (file)
+  .model_invocation_to_override_migration.json (file)
+  _bm_skillid_migration.json (file)
+  ai-ad-video/  skill_md=1
+      SKILL.md
+  ai-short-drama-oneclick/  skill_md=1
+      SKILL.md
+  cinematic-shot-prompt-expert/  skill_md=1
+      SKILL.md
+  comfy-cartoon-avatar/  skill_md=1
+      SKILL.md
+  comfy-lineart-colorization/  skill_md=1
+      SKILL.md
+  comfy-realtime-doodle/  skill_md=1
+      SKILL.md
+  comfyui-api-skill__skillhub/  skill_md=1
+      SKILL.md
+  comfyui-api__skillhub/  skill_md=1
+      SKILL.md
+  comfyui-client__skillhub/  skill_md=1
+      SKILL.md
+  comfyui-flux__skillhub/  skill_md=1
+      SKILL.md
+  comfyui-image-gen__skillhub/  skill_md=1
+      SKILL.md
+  comfyui-imagegen__skillhub/  skill_md=1
+      SKILL.md
+  comfyui-ops/  skill_md=1
+      SKILL.md
+  comfyui-pro__skillhub/  skill_md=1
+      SKILL.md
+  comfyui-upscaler__skillhub/  skill_md=1
+      SKILL.md
+  comfyui-video__skillhub/  skill_md=1
+      SKILL.md
+  comfyui-wan22-video__skillhub/  skill_md=1
+      SKILL.md
+  comfyui-workflow-doctor/  skill_md=1
+      SKILL.md
+  comfyui-workflow-generator__skillhub/  skill_md=1
+      SKILL.md
+  dynamic-comic-video/  skill_md=1
+      SKILL.md
+  ecommerce-video/  skill_md=1
+      SKILL.md
+  first-last-frame-to-video/  skill_md=1
+      SKILL.md
+  h3-prompt-writing/  skill_md=1
+      SKILL.md
+  image-reference-to-video/  skill_md=1
+      SKILL.md
+  image-to-video/  skill_md=1
+      SKILL.md
+  minimax-h3/  skill_md=1
+      SKILL.md
+  minimax-h3-image-reference-to-video/  skill_md=1
+      SKILL.md
+  minimax-h3-image-to-video/  skill_md=1
+      SKILL.md
+  minimax-h3-seeding-video/  skill_md=1
+      SKILL.md
+  minimax-h3-social-commerce-video/  skill_md=1
+      SKILL.md
+  minimax-h3-video-generation-and-editing/  skill_md=1
+      SKILL.md
+  safety-cartoon-batch-gen/  skill_md=1
+      SKILL.md
+  short-drama-video/  skill_md=1
+      SKILL.md
+  social-commerce-video/  skill_md=1
+      SKILL.md
+  tvc-video/  skill_md=1
+      SKILL.md
+  video-generation/  skill_md=1
+      SKILL.md
+=== C:\Users\kenzhao\.workbuddy\plugins\cache ===
+  cb_teams_marketplace/  skill_md=5
+      document-skills\1.0.0\skills\pdf\SKILL.md
+      document-skills\1.0.0\skills\pdfkit-py\SKILL.md
+      finance-data\1.6.0\skills\neodata-financial-search\SKILL.md
+      finance-data\1.6.0\skills\westock-data\SKILL.md
+      finance-data\1.6.0\skills\westock-tool\SKILL.md
+  codebuddy-plugins-official/  skill_md=4
+      agent-browser\1.3.0\SKILL.md
+      find-skills\1.0.0\skills\find-skills\SKILL.md
+      playwright-cli\0.1.0\skills\playwright-cli\SKILL.md
+      skills-sec-audit\1.0.0\skills\skills-sec-audit\SKILL.md
+  workbuddy-builtin/  skill_md=263
+      ardot\5.7.3-wb.40038958.gaa9f13d9.hff9adc917099\skills\ardot-design-core\SKILL.md
+      ardot\5.7.3-wb.40038958.gaa9f13d9.hff9adc917099\skills\ardot-design-core\func-rule\component-instance\SKILL.md
+      ardot\5.7.3-wb.40038958.gaa9f13d9.hff9adc917099\skills\ardot-design-core\func-rule\design-variables\SKILL.md
+      ardot\5.7.3-wb.40038958.gaa9f13d9.hff9adc917099\skills\ardot-design-core\func-rule\shared-styles\SKILL.md
+      ardot\5.7.3-wb.40038958.gaa9f13d9.hff9adc917099\skills\ardot-design-to-code\SKILL.md
+      ardot\5.7.3-wb.40038958.gaa9f13d9.hff9adc917099\skills\ardot-poster\SKILL.md
+=== D:\ai_projects\ComfyUI\.workbuddy\skills ===
+  (not exist)
+
+=== search targets under .workbuddy ===
+text-to-image-prompt -> NOT FOUND
+video-editor -> ['C:\\Users\\kenzhao\\.workbuddy\\connectors-marketplace\\connectors\\chuhaijiang\\skills\\chuhaijiang\\references\\video-editor.md', 'C:\\Users\\kenzhao\\.workbuddy\\plugins\\marketplaces\\workbuddy-connector-plugins-official\\connectors\\chuhaijiang\\skills\\chuhaijiang\\references\\video-editor.md']
+sherpa-onnx-tts -> NOT FOUND

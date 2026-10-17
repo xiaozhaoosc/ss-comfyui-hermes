@@ -1,0 +1,9 @@
+OK   4x-UltraSharp (upscaler)                   0.06 GB      status=200 final=https://us.aws.cdn.hf.co/xet-bridge-us/6430096543a53c86b3fcb2a0/080be486975ca8916a1a6fda9e763332b218dbc306ca99
+FAIL RealESRGAN_x4plus (upscaler)               HTTPError: HTTP Error 404: Not Found
+OK   Hyper-SDXL-1step-lora (doodle)             0.73 GB      status=200 final=https://us.aws.cdn.hf.co/xet-bridge-us/6623620e439565130935a9cb/e1ae5f5d1aa190852e2190c5b3e40a4cbd6652cc565c37
+OK   SDXL Canny ControlLoRA r128 (lineart)      0.37 GB      status=200 final=https://us.aws.cdn.hf.co/xet-bridge-us/64de78eae44c1c0fa8d0136b/68fd93d1e6308a7eefd0da6583d6b25ce6e3c60eacbda1
+OK   Z-Image Turbo DiT                          11.46 GB     status=200 final=https://us.aws.cdn.hf.co/xet-bridge-us/692651442d28dcd60d675b85/108e591ea419cb178f4c5c8c08d6c53c44ea3d787733b2
+OK   Z-Image Turbo TE qwen_3_4b                 7.49 GB      status=200 final=https://us.aws.cdn.hf.co/xet-bridge-us/692651442d28dcd60d675b85/f459cd74b7868799ea82f97601a650afcedc399596dc26
+OK   Z-Image Turbo VAE ae                       0.31 GB      status=200 final=https://us.aws.cdn.hf.co/xet-bridge-us/692651442d28dcd60d675b85/f744f169fc8c7d1c8fcfdfdbd86251d518c80108488037
+FAIL Flux2 Klein 9B fp8 (guess1)                HTTPError: HTTP Error 404: Not Found
+FAIL Flux2 Klein 9B bf16 (guess2)               HTTPError: HTTP Error 404: Not Found

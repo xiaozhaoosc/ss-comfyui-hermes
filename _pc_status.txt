@@ -1,0 +1,36 @@
+﻿=== ComfyUI 闃熷垪锛?3:26:21锛?==
+  !! 杩炰笉涓?ComfyUI: <urlopen error [WinError 10061] 鐢变簬鐩爣璁＄畻鏈虹Н鏋佹嫆缁濓紝鏃犳硶杩炴帴銆?
+     锛堝厛纭 main.py 宸插惎鍔紱鏈満 8188 浼氳 HTTP_PROXY 鍔寔锛屾湰鑴氭湰宸茬粫浠ｇ悊锛?
+
+=== 鍙拌处 D:\ai_projects\ComfyUI\output\2026-10-10_wb\lora_ab\_submit_log.json ===
+  鍒涘缓浜?2026-10-10 23:48:32 锝?浠诲姟 32 涓?锝?妯″紡 鍙彁浜?
+
+  缁?                   鎻愪氦     瀹屾垚     澶辫触      鏈畬鎴?
+  zimg_base             8      0      0        8
+  zimg_skinlora         8      0      0        8
+  zimg_realism          8      0      0        8
+  zimg_boost            8      0      0        8
+
+  鏈畬鎴?32 涓細
+    zimg_base        s01_camisole_touch_hair  pid=9b724033-5517-445c-85a8-960b8e512a4d
+    zimg_base        s02_lying_on_sofa        pid=9e1aa525-ce1c-47a7-b12d-0c336ab313a4
+    zimg_base        s03_hugging_knees        pid=0f44eec9-dd7e-464c-bfa3-2504129739ec
+    zimg_base        s04_flushed_selfie       pid=2a13c29a-f561-4c7d-9a5e-f8afdc2bb8ea
+    zimg_base        s05_outdoor_knit_hat     pid=7b056f1d-6726-429d-b48c-a9d08b6c729c
+    zimg_base        s06_indoor_standing      pid=7df40cb2-a1a1-46ec-aed4-9e76bd05d0c9
+    zimg_base        s07_hand_on_chest        pid=146d0047-acd0-4b9c-9209-4e79cc170f48
+    zimg_base        s08_tousle_hair          pid=be6987ef-7602-443c-b6a9-3aa85257aedf
+    zimg_skinlora    s01_camisole_touch_hair  pid=26d00128-a364-43bd-8903-100ffad53286
+    zimg_skinlora    s02_lying_on_sofa        pid=24b139a9-7fe4-444a-9e3e-abe6314b177f
+    zimg_skinlora    s03_hugging_knees        pid=2f5c3186-ccc1-4be2-8444-6f26d7de5718
+    zimg_skinlora    s04_flushed_selfie       pid=e2e5529a-ca03-482e-86d3-ef3b8b5740c4
+    zimg_skinlora    s05_outdoor_knit_hat     pid=f26164f3-46b5-45b2-a83f-a1be6e1e2737
+    zimg_skinlora    s06_indoor_standing      pid=9f0e7868-680c-4be6-8680-66bff3d065e6
+    zimg_skinlora    s07_hand_on_chest        pid=1925fdb4-387b-4e50-b3e2-866605fd2492
+    zimg_skinlora    s08_tousle_hair          pid=b4de3d8b-c3b7-4279-ae6a-ecff993f74d5
+    zimg_realism     s01_camisole_touch_hair  pid=4848b6f1-a033-46b8-b287-3c6ac2fb00ec
+    zimg_realism     s02_lying_on_sofa        pid=4adb4dfa-c9e9-4523-861d-1f7cab5a59b4
+    zimg_realism     s03_hugging_knees        pid=6e4630eb-d003-4b74-8dd5-830564c8ae15
+    zimg_realism     s04_flushed_selfie       pid=c271f1ed-96e6-4cf2-86c6-1f2f97604288
+
+  宸茶惤鐩樹骇鐗╋細

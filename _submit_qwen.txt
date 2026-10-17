@@ -1,0 +1,12 @@
+﻿[backend] qwen21 鈥?Qwen-Image 2.1 GGUF Q4_K_M 鈥?25 姝?/ cfg3.0锛?*璐熼潰鎻愮ず璇嶆湁鏁?*
+=== Qwen-Image 2.1 | 1024x1024 | steps=25 cfg=3.0 shift=3.0 | out=D:\ai_projects\ComfyUI\output\2026-10-10_wb\qwen_image_21 ===
+[submit] s02_lying_on_sofa seed=800001 -> True 71d61b34-a8e9-4b01-b1ce-5793741fa624
+[submit] s03_hugging_knees seed=800002 -> True 6302f72e-6d87-4021-a2e2-f74f96d5a51b
+[submit] s04_flushed_selfie seed=800003 -> True b5498e31-c52f-44c8-9f01-c653f5636051
+[submit] s05_outdoor_knit_hat seed=800004 -> True d3869816-7ebb-424c-9474-a8f3f900e907
+[submit] s06_indoor_standing seed=800005 -> True 005cfca5-e758-4f63-aeed-9b42207443c1
+[submit] s07_hand_on_chest seed=800006 -> True 475b25a2-d856-4144-8070-051a23ac628a
+[submit] s08_tousle_hair seed=800007 -> True db26462f-f01c-4ccd-bc6f-6ea429a61de0
+
+=== qwen_image_21 : 1/8 ok, total 0.2s ===
+meta: D:\ai_projects\ComfyUI\output\2026-10-10_wb\qwen_image_21\_run.json

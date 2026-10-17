@@ -1,0 +1,96 @@
+{
+  "dataset": "C:\\Users\\kenzhao\\Pictures\\gpt\\1",
+  "extracted_date": "2026-10-15",
+  "styles": [
+    {
+      "id": "ref_01_blue_floral_sundress",
+      "source_image": "微信图片_20261015075728_529_2344.png",
+      "category": "full",
+      "theme_cn": "清新田园蓝白碎花吊带裙",
+      "theme_en": "French Pastoral Blue Floral Sundress",
+      "character_prompt": "Portrait of a 20yo East Asian beauty, clear doe eyes, breezy wavy brown hair, delicate pendant necklace, wearing a white sundress with blue ditsy floral print and chest tie bow. Bright outdoor blue sky with soft white clouds, gentle sunlight, 9:16, 8k.",
+      "garment_prompt": "Commercial product photography, vertical 9:16. A standalone French pastoral white cotton sundress with subtle blue floral print, thin spaghetti straps, front tie bow, and ruched sweetheart bust, displayed on an invisible ghost mannequin against a solid white studio background. 8k.",
+      "tags": ["summer", "pastoral", "floral", "sundress", "casual"]
+    },
+    {
+      "id": "ref_02_athleisure_grey_hoodie",
+      "source_image": "微信图片_20261015075728_530_2344.png",
+      "category": "full",
+      "theme_cn": "元气运动双马尾连帽套装",
+      "theme_en": "Athleisure Grey Zip Hoodie & Dolphin Shorts",
+      "character_prompt": "Playful young East Asian woman, cute high twintails held up with hands, slender toned waist, wearing an open heather grey fleece cropped zip hoodie, grey V-neck sports bra, and black dolphin shorts with grey trim. Modern bright interior, soft lighting, 9:16, 8k.",
+      "garment_prompt": "Commercial streetwear photography, vertical 9:16. A standalone 2-piece athleisure set: heather grey cropped zip-up fleece hoodie, matching grey V-neck sports bra, and black dolphin running shorts with contrast piping, on an invisible ghost mannequin against a solid white background. 8k.",
+      "tags": ["sporty", "athleisure", "hoodie", "shorts", "y2k"]
+    },
+    {
+      "id": "ref_03_oceanview_ribbed_camisole",
+      "source_image": "微信图片_20261015075728_531_2344.png",
+      "category": "tops",
+      "theme_cn": "海景度假大露背针织吊带",
+      "theme_en": "Quiet Luxury Backless Ribbed Knit Camisole",
+      "character_prompt": "Graceful young East Asian woman looking over shoulder, relaxed hair bun, showing elegant back, wearing an ivory ribbed-knit backless camisole top and grey lounge shorts. Sunny resort hotel balcony overlooking turquoise ocean, bright cinematic daylight, 9:16, 8k.",
+      "garment_prompt": "Luxury knitwear photography, vertical 9:16. A standalone cream-white fine ribbed-knit camisole top with deep open back and delicate spaghetti straps, paired with heather grey lounge shorts, displayed on an invisible ghost mannequin against a pure solid white studio background. 8k.",
+      "tags": ["vacation", "knitwear", "backless", "quiet_luxury", "resort"]
+    },
+    {
+      "id": "ref_04_korean_varsity_streetwear",
+      "source_image": "微信图片_20261015075728_532_2344.png",
+      "category": "full",
+      "theme_cn": "韩系高街复古棒球夹克与破洞牛仔",
+      "theme_en": "Urban Korean Streetwear Varsity Bomber & Distressed Denim",
+      "character_prompt": "Cool trendy young East Asian woman, voluminous messy wavy hair, gold chain necklace, wearing an oversized crimson red varsity jacket slipping off shoulder, white cropped ribbed tank top, and distressed washed low-rise denim jeans. Vibrant Seoul street background, sunlit, 9:16, 8k.",
+      "garment_prompt": "Commercial streetwear product photography, vertical 9:16. A standalone outfit: crimson red varsity jacket with white striped ribbing, white ribbed crop tank, and washed distressed wide-leg jeans with black leather belt, on an invisible ghost mannequin against a pure white background. 8k.",
+      "tags": ["streetwear", "varsity_jacket", "korean", "denim", "crop_top"]
+    },
+    {
+      "id": "ref_05_classical_hanfu_gown",
+      "source_image": "微信图片_20261015075728_533_2344.png",
+      "category": "full",
+      "theme_cn": "江南水乡古典仙气汉服轻纱裙",
+      "theme_en": "Classical Neo-Chinese Embroidered Silk Hanfu",
+      "character_prompt": "Serene ancient oriental lady, elegant classical updo with gold pearl hairpins (buyao) and forehead huadian, wearing flowing ivory translucent silk Hanfu robes with embroidered floral trim. Traditional Jiangnan pavilion by a calm lake with cherry blossoms, soft diffused daylight, 9:16, 8k.",
+      "garment_prompt": "High-end cultural fashion photography, vertical 9:16. A standalone classical Chinese Hanfu: ivory semi-sheer silk chiffon flowing wide-sleeve robe with delicate gold-thread floral embroidery and pleated skirt, displayed on an invisible ghost mannequin against a pure white background. 8k.",
+      "tags": ["hanfu", "oriental", "traditional", "silk", "embroidery"]
+    },
+    {
+      "id": "ref_06_urban_ol_little_black_dress",
+      "source_image": "微信图片_20261015075728_534_2344.png",
+      "category": "full",
+      "theme_cn": "干练职场极简小黑裙与细高跟",
+      "theme_en": "Minimalist Urban Professional Little Black Dress",
+      "character_prompt": "Sleek professional East Asian career woman sitting on dark stone steps outside glass corporate plaza, working on a slim laptop with wireless earbuds, wearing a tailored sleeveless black midi sheath dress and black patent stiletto pumps. Overcast clean urban daylight, 9:16, 8k.",
+      "garment_prompt": "High fashion commercial photography, vertical 9:16. A standalone minimalist little black dress: tailored sleeveless crewneck midi sheath dress in matte stretch crepe, displayed on an invisible ghost mannequin against a pure solid white studio background. 8k.",
+      "tags": ["formal", "office", "little_black_dress", "minimalist", "stilettos"]
+    },
+    {
+      "id": "ref_07_lavender_lace_resort_dress",
+      "source_image": "微信图片_20261015075728_535_2344.png",
+      "category": "full",
+      "theme_cn": "法式庄园薰衣草蕾丝吊带裙",
+      "theme_en": "French Romantic Lavender Lace Sundress",
+      "character_prompt": "Sweet smiling East Asian woman with wavy brown hair, pearl necklace and jade bangle, holding a straw sunhat, wearing a pastel lavender purple chiffon sundress with delicate lace trim along sweetheart neckline. Mediterranean terracotta villa patio, soft warm breeze and sunlight, 9:16, 8k.",
+      "garment_prompt": "Commercial fashion product photography, vertical 9:16. A standalone pastel lavender chiffon mini sundress, featuring delicate floral lace trim along sweetheart neckline and drop waist with pleated flounce hem, on an invisible ghost mannequin against a solid white background. 8k.",
+      "tags": ["french", "resort", "lace", "lavender", "straw_hat"]
+    },
+    {
+      "id": "ref_08_wine_red_satin_evening_gown",
+      "source_image": "微信图片_20261015075728_536_2344.png",
+      "category": "full",
+      "theme_cn": "老钱名媛勃艮第酒红丝绒方领礼服",
+      "theme_en": "Quiet Luxury Burgundy Wine Satin Square-Neck Gown",
+      "character_prompt": "Glamorous elegant East Asian woman seated at a bistro table, glossy dark curls, warm smile, red lips, jade bangle and diamond earrings, wearing a rich wine-red satin square-neck sheath gown. Courtyard garden with ivy and dark wood shutters, golden hour soft lighting, 9:16, 8k.",
+      "garment_prompt": "Haute couture luxury photography, vertical 9:16. A standalone rich burgundy wine-red heavy silk satin square-neck sheath gown with wide straps and fluid drape, displayed on an invisible ghost mannequin against a pure solid white studio background. 8k.",
+      "tags": ["evening", "satin", "wine_red", "quiet_luxury", "square_neck"]
+    },
+    {
+      "id": "ref_09_gothic_witch_corset_dress",
+      "source_image": "微信图片_20261015075728_537_2344.png",
+      "category": "full",
+      "theme_cn": "巴洛克奇幻银发魔女束腰礼服",
+      "theme_en": "Baroque Gothic Fantasy Witch Corset Ensemble",
+      "character_prompt": "Ethereal anime-style girl with wavy silver-white hair and violet eyes, wearing a dramatic pointed purple velvet witch hat, black and purple lace halter corset dress, and white lace garter thigh-high stockings. Baroque vintage room with purple flowers and sunlit window, 9:16, 8k.",
+      "garment_prompt": "Fantasy fashion product photography, vertical 9:16. A standalone gothic fantasy witch ensemble: deep purple and black satin corset dress with lace halter neckline, matching pointed witch hat with purple ribbon, and lace garter straps, on an invisible ghost mannequin against white background. 8k.",
+      "tags": ["gothic", "fantasy", "witch", "corset", "cosplay"]
+    }
+  ]
+}

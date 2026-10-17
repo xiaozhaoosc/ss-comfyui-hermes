@@ -1,0 +1,81 @@
+﻿python.exe : C:\Users\kenzhao\anaconda3\Lib\site-packages\onnxruntime\capi\onnx
+runtime_inference_collection.py:123: UserWarning: Specified provider 'CUDAExecu
+tionProvider' is not in available provider names.Available providers: 'DmlExecu
+tionProvider, CPUExecutionProvider'
+所在位置 行:503 字符: 77
++ ... ython.exe"; & $py "D:\ai_projects\ComfyUI\tools\eval_pc_models.py" -- ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (C:\Users\kenzha...cutionProvider' 
+   :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  warnings.warn(
+>> preset = lora_ab锛? 涓ā鍨嬶級
+Applied providers: ['CPUExecutionProvider'], with options: {'CPUExecutionProvider': {}}
+  measured zimg_base        s01_camisole_touch_hair  lap=72 hf=0.0009
+  measured zimg_skinlora    s01_camisole_touch_hair  lap=74 hf=0.0009
+  measured zimg_realism     s01_camisole_touch_hair  lap=69 hf=0.0008
+  measured zimg_boost       s01_camisole_touch_hair  lap=69 hf=0.0009
+  measured zimg_base        s02_lying_on_sofa  lap=84 hf=0.0009
+  measured zimg_skinlora    s02_lying_on_sofa  lap=90 hf=0.0009
+  measured zimg_realism     s02_lying_on_sofa  lap=133 hf=0.0011
+  measured zimg_boost       s02_lying_on_sofa  lap=69 hf=0.0010
+  measured zimg_base        s03_hugging_knees  lap=73 hf=0.0007
+  measured zimg_skinlora    s03_hugging_knees  lap=73 hf=0.0007
+  measured zimg_realism     s03_hugging_knees  lap=97 hf=0.0008
+  measured zimg_boost       s03_hugging_knees  lap=62 hf=0.0007
+  measured zimg_base        s04_flushed_selfie  lap=138 hf=0.0012
+  measured zimg_skinlora    s04_flushed_selfie  lap=158 hf=0.0013
+  measured zimg_realism     s04_flushed_selfie  lap=242 hf=0.0020
+  measured zimg_boost       s04_flushed_selfie  lap=160 hf=0.0015
+  measured zimg_base        s05_outdoor_knit_hat  lap=162 hf=0.0022
+  measured zimg_skinlora    s05_outdoor_knit_hat  lap=166 hf=0.0022
+  measured zimg_realism     s05_outdoor_knit_hat  lap=221 hf=0.0030
+  measured zimg_boost       s05_outdoor_knit_hat  lap=136 hf=0.0016
+  measured zimg_base        s06_indoor_standing  lap=106 hf=0.0014
+  measured zimg_skinlora    s06_indoor_standing  lap=113 hf=0.0014
+  measured zimg_realism     s06_indoor_standing  lap=159 hf=0.0016
+  measured zimg_boost       s06_indoor_standing  lap=52 hf=0.0008
+  measured zimg_base        s07_hand_on_chest  lap=59 hf=0.0008
+  measured zimg_skinlora    s07_hand_on_chest  lap=62 hf=0.0008
+  measured zimg_realism     s07_hand_on_chest  lap=167 hf=0.0017
+  measured zimg_boost       s07_hand_on_chest  lap=44 hf=0.0007
+  measured zimg_base        s08_tousle_hair  lap=89 hf=0.0009
+  measured zimg_skinlora    s08_tousle_hair  lap=94 hf=0.0009
+  measured zimg_realism     s08_tousle_hair  lap=177 hf=0.0015
+  measured zimg_boost       s08_tousle_hair  lap=77 hf=0.0009
+
+# 澶氭ā鍨嬪嚭鍥捐川閲忚瘎娴嬶紙鍚屼竴缁勬彁绀鸿瘝锛?
+
+璇勬祴鏃堕棿锛?026-10-11 23:29 锝?鍥惧儚鏁帮細32 锝?绾圭悊鎸囨爣缁熶竴缂╂斁鐭竟鑷?768
+
+| 妯″瀷 | 娓呮櫚搴?0.18) | 缁嗚妭涓板瘜搴?0.12) | 鐨偆璐ㄦ劅(0.15) | 浜鸿劯璐ㄩ噺(0.18) | 鏋勫浘璐村悎(0.10) | 鑹插僵鑷劧(0.12) | 鏇濆厜(0.10) | 鐢婚潰骞插噣(0.05) | **缁煎悎** |
+|---|---|---|---|---|---|---|---|---|---|
+| 馃 Z-Image + 鍐欏疄 LoRA | 8.82 | 8.75 | 4.67 | 8.75 | 4.35 | 3.80 | 1.25 | 1.92 | **6.03** |
+| 馃 Z-Image 鍩虹嚎 | 2.94 | 3.18 | 5.29 | 4.79 | 5.04 | 5.64 | 7.08 | 6.74 | **4.79** |
+| 馃 Z-Image + 鐨偆绾圭悊 LoRA | 3.85 | 3.33 | 4.98 | 5.37 | 5.14 | 3.99 | 6.40 | 5.35 | **4.71** |
+| 4锔忊儯 Z-Image + 鎻愮ず璇嶅己鍖?| 0.27 | 1.94 | 4.85 | 0.91 | 7.25 | 7.05 | 9.87 | 6.85 | **4.07** |
+
+## 鍗曢」鍐犲啗
+- **娓呮櫚搴?*锛歓-Image + 鍐欏疄 LoRA锛?.82锛?
+- **缁嗚妭涓板瘜搴?*锛歓-Image + 鍐欏疄 LoRA锛?.75锛?
+- **鐨偆璐ㄦ劅**锛歓-Image 鍩虹嚎锛?.29锛?
+- **浜鸿劯璐ㄩ噺**锛歓-Image + 鍐欏疄 LoRA锛?.75锛?
+- **鏋勫浘璐村悎**锛歓-Image + 鎻愮ず璇嶅己鍖栵紙7.25锛?
+- **鑹插僵鑷劧**锛歓-Image + 鎻愮ず璇嶅己鍖栵紙7.05锛?
+- **鏇濆厜**锛歓-Image + 鎻愮ず璇嶅己鍖栵紙9.87锛?
+- **鐢婚潰骞插噣**锛歓-Image + 鎻愮ず璇嶅己鍖栵紙6.85锛?
+
+## 鍘熷鎸囨爣鍧囧€?
+| 妯″瀷 | 鎷夋櫘鎷夋柉鏂瑰樊 | 楂橀鍗犳瘮 | 楗卞拰搴?| 鍧楁晥搴?| 浜鸿劯闈㈢Н鍗犳瘮 |
+|---|---|---|---|---|---|
+| Z-Image + 鍐欏疄 LoRA | 158.1 | 0.0016 | 0.187 | 1.014 | 0.0878 |
+| Z-Image 鍩虹嚎 | 98.1 | 0.0011 | 0.197 | 1.003 | 0.0802 |
+| Z-Image + 鐨偆绾圭悊 LoRA | 103.7 | 0.0011 | 0.194 | 1.004 | 0.0810 |
+| Z-Image + 鎻愮ず璇嶅己鍖?| 83.6 | 0.0010 | 0.201 | 1.002 | 0.0948 |
+
+鑰楁椂 0.8 鍒嗛挓
+
+CSV : D:\ai_projects\ComfyUI\output\2026-10-11_wb\_eval\metrics_lora_ab.csv
+JSON: D:\ai_projects\ComfyUI\output\2026-10-11_wb\_eval\summary_lora_ab.json
+MD  : D:\ai_projects\ComfyUI\output\2026-10-11_wb\_eval\璇勬祴鎶ュ憡_lora_ab.md

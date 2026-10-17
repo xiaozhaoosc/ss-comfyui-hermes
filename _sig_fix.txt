@@ -1,0 +1,52 @@
+--- H3SaveHoldMap ---
+  out: ['STRING'] ['path']
+  [required]
+    hold_map                   STRING                         
+    filename_prefix            STRING                         video/derope
+
+--- H3LoadHoldMap ---
+  out: ['STRING', 'INT', 'STRING'] ['hold_map', 'world_len', 'path']
+  [required]
+    path                       STRING                         video/derope
+  [optional]
+    start                      INT                            0
+    length                     INT                            0
+
+--- H3V2VInit ---
+  out: ['LATENT'] ['LATENT']
+  [required]
+    samples                    LATENT                         
+  [optional]
+    length                     INT                            0
+    oracle_samples             LATENT                         
+    freeze_threshold           FLOAT                          0.0
+    freeze_grow                INT                            2
+    mask                       MASK                           
+    mask_feather               INT                            0
+    invert_mask                BOOLEAN                        False
+    time_varying               BOOLEAN                        False
+    audio_latent               LATENT                         
+    audio_mode                 ENUM['custom (use audio_strength)', 'invent freely (original behaviour)', 'follow the original performance (0.5)', 'follow loosely, re-render more (0.7)', 'pin the original outright (0.0)'] custom (use audio_strength)
+    audio_strength             FLOAT                          1.0
+    audio_prefix_ticks         INT                            0
+    audio_prefix_release_ticks INT                            0
+
+--- H3JerkOracle ---
+  out: ['STRING', 'STRING', 'INT', 'INT', 'STRING', 'STRING'] ['hold_map', 'segments', 'window_start', 'window_len', 'profile', 'report']
+  [required]
+    samples                    LATENT                         
+    length                     INT                            124
+    q                          FLOAT                          0.75
+    d_max                      INT                            4
+    ramp                       BOOLEAN                        True
+  [optional]
+    preset                     ENUM['custom', 'balanced (default)', 'max quality (wide plateau)', 'economy (tight spans)'] balanced (default)
+    bridge                     INT                            8
+    profile_mode               ENUM['value |d3| (default)', 'value |d1| (energy baseline)', 'trajectory centroid |d3|', 'value |d3| camera-compensated'] value |d3| (default)
+    abstain_below              FLOAT                          0.0
+    fps                        INT                            24
+    s_per_step                 FLOAT                          0.0
+    est_steps                  INT                            18
+    overhead_s                 FLOAT                          6.7
+    model_profile              ENUM['minimax-h3', 'ltx-2.5', 'wan-2.2 (unmeasured)'] minimax-h3
+    protect_tail               INT                            0

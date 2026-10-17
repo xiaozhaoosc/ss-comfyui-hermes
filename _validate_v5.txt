@@ -1,0 +1,49 @@
+validating 7 profiles: base, derope, sla, lock, full, quality, upscale
+
+======================================================================
+profile: base   nodes=25  types=21
+  BasicGuider, BasicScheduler, CLIPLoader, CreateVideo, KSamplerSelect, LoadImage, MiniMaxChunkFeedForward, MiniMaxH3MemoryEfficientSageAttentionPatch, MiniMaxH3ReferenceToVideo, MiniMaxH3SigmaShift, PathchSageAttentionKJ, RandomNoise, ReActorFaceSwapOpt, ReActorOptions, SamplerCustomAdvanced, SaveVideo, UNETLoader, VAEDecode, VAEDecodeAudio, VAELoader, VHS_LoadVideo
+  => QUEUED OK  prompt_id=a57be246-7eb7-4c8a-94fe-13558bde4a83  (validation passed)
+  => interrupted+cleared (validation only)
+
+======================================================================
+profile: derope   nodes=49  types=31
+  BasicGuider, BasicScheduler, CLIPLoader, CreateVideo, H3AudioRecover, H3AudioSmear, H3ExactRecover, H3InjectSchedule, H3JerkOracle, H3SaveHoldMap, H3TimeSmear, H3V2VInit, KSamplerSelect, LoadImage, LoraLoaderModelOnly, MiniMaxChunkFeedForward, MiniMaxH3MemoryEfficientSageAttentionPatch, MiniMaxH3ReferenceToVideo, PathchSageAttentionKJ, RandomNoise, ReActorFaceSwapOpt, ReActorOptions, SamplerCustomAdvanced, SaveVideo, UNETLoader, VAEDecode, VAEDecodeAudio, VAEEncode, VAEEncodeAudio, VAELoader, VHS_LoadVideo
+  => QUEUED OK  prompt_id=2bfbbd74-8019-402f-a535-d8cd43a350f5  (validation passed)
+  => interrupted+cleared (validation only)
+
+======================================================================
+profile: sla   nodes=26  types=22
+  BasicGuider, BasicScheduler, CLIPLoader, CreateVideo, H3SLAAttention, KSamplerSelect, LoadImage, MiniMaxChunkFeedForward, MiniMaxH3MemoryEfficientSageAttentionPatch, MiniMaxH3ReferenceToVideo, MiniMaxH3SigmaShift, PathchSageAttentionKJ, RandomNoise, ReActorFaceSwapOpt, ReActorOptions, SamplerCustomAdvanced, SaveVideo, UNETLoader, VAEDecode, VAEDecodeAudio, VAELoader, VHS_LoadVideo
+  => QUEUED OK  prompt_id=12be756e-7ef3-4ac3-a13b-811099b2bb6d  (validation passed)
+  => interrupted+cleared (validation only)
+
+======================================================================
+profile: lock   nodes=27  types=23
+  BasicGuider, BasicScheduler, CLIPLoader, CreateVideo, ImageCompositeMasked, KSamplerSelect, LoadImage, MiniMaxChunkFeedForward, MiniMaxH3MemoryEfficientSageAttentionPatch, MiniMaxH3ReferenceToVideo, MiniMaxH3SigmaShift, PathchSageAttentionKJ, RandomNoise, ReActorFaceSwapOpt, ReActorMaskHelper, ReActorOptions, SamplerCustomAdvanced, SaveVideo, UNETLoader, VAEDecode, VAEDecodeAudio, VAELoader, VHS_LoadVideo
+  => QUEUED OK  prompt_id=7a5de1cf-b225-46ae-a81e-c3dff8e5b39a  (validation passed)
+  => interrupted+cleared (validation only)
+
+======================================================================
+profile: full   nodes=53  types=34
+  BasicGuider, BasicScheduler, CLIPLoader, CreateVideo, H3AudioRecover, H3AudioSmear, H3ExactRecover, H3InjectSchedule, H3JerkOracle, H3SLAAttention, H3SaveHoldMap, H3TimeSmear, H3V2VInit, ImageCompositeMasked, KSamplerSelect, LoadImage, LoraLoaderModelOnly, MiniMaxChunkFeedForward, MiniMaxH3MemoryEfficientSageAttentionPatch, MiniMaxH3ReferenceToVideo, PathchSageAttentionKJ, RandomNoise, ReActorFaceSwapOpt, ReActorMaskHelper, ReActorOptions, SamplerCustomAdvanced, SaveVideo, UNETLoader, VAEDecode, VAEDecodeAudio, VAEEncode, VAEEncodeAudio, VAELoader, VHS_LoadVideo
+  => QUEUED OK  prompt_id=479dff47-9171-4dbf-91b1-9ac4b6faee2d  (validation passed)
+  => interrupted+cleared (validation only)
+
+======================================================================
+profile: quality   nodes=50  types=33
+  BasicGuider, BasicScheduler, CLIPLoader, CreateVideo, H3AudioRecover, H3AudioSmear, H3ExactRecover, H3InjectSchedule, H3JerkOracle, H3SaveHoldMap, H3TimeSmear, H3V2VInit, ImageCompositeMasked, KSamplerSelect, LoadImage, LoraLoaderModelOnly, MiniMaxChunkFeedForward, MiniMaxH3MemoryEfficientSageAttentionPatch, MiniMaxH3ReferenceToVideo, PathchSageAttentionKJ, RandomNoise, ReActorFaceSwapOpt, ReActorMaskHelper, ReActorOptions, SamplerCustomAdvanced, SaveVideo, UNETLoader, VAEDecode, VAEDecodeAudio, VAEEncode, VAEEncodeAudio, VAELoader, VHS_LoadVideo
+  => QUEUED OK  prompt_id=ca89aa67-3a94-456d-8d47-2e7ca6d43586  (validation passed)
+  => interrupted+cleared (validation only)
+
+======================================================================
+profile: upscale   nodes=55  types=35
+  BasicGuider, BasicScheduler, CLIPLoader, CreateVideo, H3AudioRecover, H3AudioSmear, H3ExactRecover, H3InjectSchedule, H3JerkOracle, H3LatentUpscale, H3SLAAttention, H3SaveHoldMap, H3TimeSmear, H3V2VInit, ImageCompositeMasked, KSamplerSelect, LoadImage, LoraLoaderModelOnly, MiniMaxChunkFeedForward, MiniMaxH3MemoryEfficientSageAttentionPatch, MiniMaxH3ReferenceToVideo, PathchSageAttentionKJ, RandomNoise, ReActorFaceSwapOpt, ReActorMaskHelper, ReActorOptions, SamplerCustomAdvanced, SaveVideo, UNETLoader, VAEDecode, VAEDecodeAudio, VAEEncode, VAEEncodeAudio, VAELoader, VHS_LoadVideo
+  => QUEUED OK  prompt_id=ac55a157-c9da-40d9-a516-30efc5791780  (validation passed)
+  => interrupted+cleared (validation only)
+
+======================================================================
+RESULT: 7/7 profiles passed server-side validation
+(NOTE: success means the graph is structurally valid and all node inputs
+ are spelled correctly. It does NOT prove the render is good — that
+ needs a real run.)

@@ -1,0 +1,19 @@
+﻿[backend] sd15 鈥?SD1.5 鍐欏疄搴曟ā锛坢ajicmixRealistic 绛夛級鈥?30 姝ワ紝鏈€鐪佹樉瀛?
+[submit] s01_camisole_touch_hair seed=610000 -> True 6df50267-de2b-4636-afda-745c3f219d28
+   [done] True in 39.3s files=['pc_juggernaut_s01_camisole_touch_hair_00001_.png']
+[submit] s02_lying_on_sofa seed=610001 -> True 084a71b3-2c72-4275-8574-61a2a570a068
+   [done] True in 21.2s files=['pc_juggernaut_s02_lying_on_sofa_00001_.png']
+[submit] s03_hugging_knees seed=610002 -> True 23ae9de4-1d75-40ec-9354-2288905130a6
+   [done] True in 21.2s files=['pc_juggernaut_s03_hugging_knees_00001_.png']
+[submit] s04_flushed_selfie seed=610003 -> True a3e66cbd-6fe8-4988-99e9-1b8ed025ae3f
+   [done] True in 21.3s files=['pc_juggernaut_s04_flushed_selfie_00001_.png']
+[submit] s05_outdoor_knit_hat seed=610004 -> True ef616a43-0b1f-4071-b9b8-defe9cecf2a0
+   [done] True in 21.2s files=['pc_juggernaut_s05_outdoor_knit_hat_00001_.png']
+[submit] s06_indoor_standing seed=610005 -> True 76832dd3-0b46-4ae5-8526-9274a05c9330
+   [done] True in 21.2s files=['pc_juggernaut_s06_indoor_standing_00001_.png']
+[submit] s07_hand_on_chest seed=610006 -> True 69b58135-341d-4dbd-a3f8-141b4b263696
+   [done] True in 21.2s files=['pc_juggernaut_s07_hand_on_chest_00001_.png']
+[submit] s08_tousle_hair seed=610007 -> True 6c774fef-24ca-4f88-b14f-05d5ebd37785
+   [done] True in 21.3s files=['pc_juggernaut_s08_tousle_hair_00001_.png']
+
+=== Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors : 8/8 ok, total 188.1s ===

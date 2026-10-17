@@ -1,0 +1,195 @@
+
+=== diffusion_models (unet) ===
+  dir: D:\ai_projects\ComfyUI\models\diffusion_models  (exists=True)
+  minimax_h3_fused_refdelta_r1024_turbo8_mystic07_int8_convrot.safetensors 19.54 GB
+  minimax_h3_fl2va_pruned_int8_convrot.safetensors                       19.53 GB
+  minimax_h3_ref2va_pruned_int8_convrot.safetensors                      19.53 GB
+  TOTAL: 3 file(s)
+
+=== unet ===
+  dir: D:\ai_projects\ComfyUI\models\unet  (exists=True)
+  PinkCherry_FineTune_Q5_K_M_v18_LTX23.gguf                              14.84 GB
+  T8-flux.1-dev-abliterated-V2-GGUF-Q8_0.gguf                            11.85 GB
+  flux1-dev-fp8.safetensors                                              11.08 GB
+  T8-flux.1-dev-abliterated-V2-GGUF-Q6_K.gguf                            9.18 GB
+  T8-flux.1-dev-abliterated-V2-GGUF-Q4_K_M.gguf                          6.46 GB
+  TOTAL: 5 file(s)
+
+=== text_encoders ===
+  dir: D:\ai_projects\ComfyUI\models\text_encoders  (exists=True)
+  qwen3vl_32b_minimax_h3_int8_convrot.safetensors                        25.28 GB
+  gemma-3-12b-it-heretic-v2.safetensors                                  22.71 GB
+  gemma-4-31b-jang-crack-Q4_K_M.gguf                                     17.40 GB
+  qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors                           14.61 GB
+  qwen3vl_32b_heretic_minimax_h3_nvfp4.safetensors                       14.61 GB
+  gemma-4-31b-jang-crack-Q3_K_M.gguf                                     14.24 GB
+  gemma-3-12b-it-heretic-v2-Q5_K_M.gguf                                  7.87 GB
+  t5xxl_fp8_e4m3fn.safetensors                                           4.56 GB
+  ltx-2.3_text_projection_bf16.safetensors                               2.15 GB
+  mmproj-google_gemma-4-31B-it-bf16.gguf                                 1.12 GB
+  clip_l.safetensors                                                     234.74 MB
+  TOTAL: 11 file(s)
+
+=== clip ===
+  dir: D:\ai_projects\ComfyUI\models\clip  (exists=False)
+
+=== vae ===
+  dir: D:\ai_projects\ComfyUI\models\vae  (exists=True)
+  minimax_h3_video_vae_fp16.safetensors                                  4.85 GB
+  minimax_h3_video_vae_int8_convrot.safetensors                          2.95 GB
+  LTX23_video_vae_bf16.safetensors                                       1.35 GB
+  minimax_h3_audio_vae_fp32.safetensors                                  577.22 MB
+  LTX23_audio_vae_bf16.safetensors                                       347.95 MB
+  flux-vae-bf16.safetensors                                              159.90 MB
+  taeltx2_3.safetensors                                                  22.44 MB
+  TOTAL: 7 file(s)
+
+=== loras: H3 / turbo / motion / lightx2v subset ===
+  total loras on disk: 17
+  minimax_h3_turbo_4step_ckpt500_comfyui_T8.safetensors                    743.73 MB
+  minimax_h3_turbo_v4_step600_ema_pruned_comfyui.safetensors               591.55 MB
+  minimax_h3_turbo_4step_comfyui_pruned.safetensors                        591.55 MB
+  minimax_h3_temporal_expansion_step375_r16.safetensors                    60.18 MB
+  (matched 4)
+
+=== upscale_models ===
+  dir: D:\ai_projects\ComfyUI\models\upscale_models  (exists=False)
+
+=== insightface (faceswap) ===
+  dir: D:\ai_projects\ComfyUI\models\insightface  (exists=True)
+  inswapper_128.onnx                                                     528.58 MB
+  buffalo_l\w600k_r50.onnx                                               166.31 MB
+  models\buffalo_l\w600k_r50.onnx                                        166.31 MB
+  buffalo_l\1k3d68.onnx                                                  136.95 MB
+  models\buffalo_l\1k3d68.onnx                                           136.95 MB
+  buffalo_l\det_10g.onnx                                                 16.14 MB
+  models\buffalo_l\det_10g.onnx                                          16.14 MB
+  buffalo_l\2d106det.onnx                                                4.80 MB
+  models\buffalo_l\2d106det.onnx                                         4.80 MB
+  buffalo_l\genderage.onnx                                               1.26 MB
+  models\buffalo_l\genderage.onnx                                        1.26 MB
+  TOTAL: 11 file(s)
+
+=== facerestore_models ===
+  dir: D:\ai_projects\ComfyUI\models\facerestore_models  (exists=True)
+  codeformer.pth                                                         359.19 MB
+  GFPGANv1.4.pth                                                         332.48 MB
+  TOTAL: 2 file(s)
+
+=== sams ===
+  dir: D:\ai_projects\ComfyUI\models\sams  (exists=True)
+  sam_vit_b_01ec64.pth                                                   357.67 MB
+  TOTAL: 1 file(s)
+
+=== ultralytics (bbox/segm) ===
+  dir: D:\ai_projects\ComfyUI\models\ultralytics  (exists=True)
+  segm\person_yolov8m-seg.pt                                             52.29 MB
+  bbox\face_yolov8m.pt                                                   49.62 MB
+  bbox\hand_yolov8s.pt                                                   21.46 MB
+  TOTAL: 3 file(s)
+
+=== input/characters (refs) ===
+  dir: D:\ai_projects\ComfyUI\input\characters  (exists=True)
+  v3\C06_BACK.png                                                        807.14 KB
+  v3\C01_FACE_FRONT.png                                                  722.23 KB
+  v3\C03_LEFT_3Q.png                                                     552.17 KB
+  v2\C02_BODY_FRONT.png                                                  529.82 KB
+  v2\C01_FACE_FRONT.png                                                  525.03 KB
+  v3\C02_BODY_FRONT.png                                                  518.70 KB
+  v2\C03_LEFT_3Q.png                                                     496.76 KB
+  v3\C05_PROFILE.png                                                     456.41 KB
+  v3\C04_RIGHT_3Q.png                                                    388.48 KB
+  v2\C06_BACK.png                                                        357.17 KB
+  v2\C04_RIGHT_3Q.png                                                    339.05 KB
+  v2\C05_PROFILE.png                                                     321.33 KB
+  TOTAL: 12 file(s)
+
+=== input videos ===
+  dir: D:\ai_projects\ComfyUI\input  (exists=True)
+  shiling_say_yes.mp4                                                    17.90 MB
+  ootd_target.mp4                                                        14.52 MB
+  你喜欢哪一套ootd显瘦穿搭李型身材.mp4                                                 14.27 MB
+  shiling_dance_wave.mp4                                                 11.31 MB
+  shiling_whiskey.mp4                                                    10.75 MB
+  14912638572466341957.mp4                                               9.44 MB
+  🤩#dance #ootd #inmyfeeling.mp4                                         8.56 MB
+  #性感美女.mp4                                                              6.71 MB
+  打码#性感美女，#诱惑.mp4                                                        6.50 MB
+  20260513_094712_我明天去做火车_00001.mp4                                      6.37 MB
+  qdb_faceswap1_爱你没商量不许偷偷看呦_00001_.mp4                                   5.08 MB
+  test1.mp4                                                              4.57 MB
+  _test_short2s.mp4                                                      1.66 MB
+  1cf120463092a2852963bc5a8045dee0.mp4                                   1.43 MB
+  test_1234.mp4                                                          583.88 KB
+  20260517_153413_我这种颜值在古代可以换取和平多少年？各位军师。.mp4                            471.72 KB
+  20260514_132719_像我这种在古代可以换取和平多少钱各位军师？.mp4                              329.10 KB
+  _test_prompt_00001.mp4                                                 58.06 KB
+  TOTAL: 18 file(s)
+
+=== MAINodes examples/ ===
+  [.]
+     contact_sheet.json
+     contact_sheet_api.json
+     contact_sheet_t2i.json
+     contact_sheet_t2i_api.json
+     motion_pipeline.json
+     motion_pipeline_api.json
+     motion_pipeline_editor.json
+     motion_pipeline_editor_api.json
+     motion_pipeline_editor_segment.json
+     motion_pipeline_editor_segment_api.json
+     motion_pipeline_extend_api.json
+     motion_pipeline_fast_iterate.json
+     motion_pipeline_fast_iterate_api.json
+     motion_pipeline_lowvram.json
+     motion_pipeline_lowvram_api.json
+     motion_pipeline_ref2va.json
+     motion_pipeline_ref2va_api.json
+     motion_pipeline_ref2va_audioinit.json
+     motion_pipeline_ref2va_audioinit_api.json
+     motion_pipeline_rolling_window.json
+     motion_pipeline_rolling_window_api.json
+     motion_pipeline_rolling_window_lowvram.json
+     motion_pipeline_rolling_window_lowvram_api.json
+     motion_pipeline_targeted.json
+     motion_pipeline_targeted_api.json
+     motion_pipeline_upscale_derope.json
+     motion_pipeline_upscale_derope_api.json
+  [archive]
+     motion_pipeline_featherweight.json
+     motion_pipeline_featherweight_api.json
+     motion_pipeline_i50.json
+     motion_pipeline_i50_api.json
+     motion_pipeline_probe_expert.json
+     motion_pipeline_probe_expert_api.json
+     motion_pipeline_split_lora.json
+     motion_pipeline_split_lora_api.json
+     motion_pipeline_turbo.json
+     motion_pipeline_turbo_api.json
+     motion_pipeline_upscale_derope_1step.json
+     motion_pipeline_upscale_derope_1step_api.json
+     motion_pipeline_v2v_source.json
+     motion_pipeline_v2v_source_api.json
+  [experimental]
+     motion_pipeline_adapter.json
+     motion_pipeline_adapter_api.json
+     motion_window_pinned_adapter_api.json
+     time_burst_api.json
+  [ltx25]
+     derope_any_model_h3_oracles.json
+     derope_any_model_h3_oracles_api.json
+     derope_any_model_ltx25.json
+     derope_any_model_ltx25_api.json
+     derope_any_model_ltx25_fromsidecar.json
+     derope_any_model_ltx25_fromsidecar_api.json
+     panrun_ltx_d040_full.json
+     panrun_ltx_d040_full_api.json
+     panrun_or_d16_d040.json
+     panrun_or_d16_d040_api.json
+     swordspin_or_d8_d050.json
+     swordspin_or_d8_d050_api.json
+     swordspin_or_x2_d8_d050_d030.json
+     swordspin_or_x2_d8_d050_d030_api.json
+  [wan22]
+     derope_any_model_wan22.json
+     derope_any_model_wan22_api.json

@@ -1,0 +1,4 @@
+FAIL flux-2-klein-9b-fp8 (BFL, gated?)  HTTPError: HTTP Error 401: Unauthorized
+OK   qwen_3_8b_fp8mixed TE              8.07 GB    status=200
+OK   flux2-vae                          0.31 GB    status=200
+OK   ip-adapter-faceid-plusv2_sdxl      1.39 GB    status=200

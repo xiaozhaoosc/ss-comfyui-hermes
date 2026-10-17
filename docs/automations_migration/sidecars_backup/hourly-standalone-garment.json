@@ -1,0 +1,22 @@
+{
+  "builtin": "schedule",
+  "args": [
+    "CRON_TZ=Asia/Shanghai 15,45 * * * *",
+    "agentapi",
+    "new-conversation",
+    "--",
+    "Run the scheduled garment generation task for ComfyUI. In directory d:/ai_projects/ComfyUI, execute the command: 'cmd /c D:\\ai_projects\\ComfyUI\\venv\\Scripts\\python.exe tools/hourly_garment_task.py --count 1'. Ensure it completes and verify the garment is ingested into garment_library/index.json."
+  ],
+  "restart_policy": "always",
+  "display_name": "Hourly Standalone Garment Generator",
+  "description": "Every hour at :15 and :45 (Asia/Shanghai), automatically generates 1 unique standalone garment item asset, creates CPU transparent/white/thumb images, and syncs into garment_library and assets.db.",
+  "agent_permissions": {
+    "workspace_uris": [
+      "file:///d:/ai_projects/ComfyUI"
+    ],
+    "access_grants": [
+      "command(cmd /c D:\\ai_projects\\ComfyUI\\venv\\Scripts\\python.exe tools/hourly_garment_task.py --count 1)",
+      "command(cmd /c python tools/hourly_garment_task.py --count 1)"
+    ]
+  }
+}

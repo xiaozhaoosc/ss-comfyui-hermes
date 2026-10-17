@@ -1,0 +1,423 @@
+object_info node count: 1339
+
+=== ReActor / faceswap ===
+  ReActorBuildFaceModel
+  ReActorFaceBoost
+  ReActorFaceSimilarity
+  ReActorFaceSwap
+  ReActorFaceSwapOpt
+  ReActorImageDublicator
+  ReActorLoadFaceModel
+  ReActorMakeFaceModelBatch
+  ReActorMaskHelper
+  ReActorOptions
+  ReActorRestoreFace
+  ReActorRestoreFaceAdvanced
+  ReActorSaveFaceModel
+  ReActorSetWeight
+  ReActorUnload
+
+=== face detect ===
+  LoadMediaPipeFaceLandmarker
+  MediaPipe-FaceMeshPreprocessor
+  MediaPipeFaceLandmarker
+  MediaPipeFaceMask
+  MediaPipeFaceMeshVisualize
+
+=== temporal / smoothing ===
+  ConsolidateMasksKJ
+  CreateFadeMask
+  CreateFadeMaskAdvanced
+  CreateHookKeyframesInterpolated
+  CreateMagicMask
+  CreateShapeMask
+  CreateShapeMaskOnPath
+  FrameInterpolate
+  FrameInterpolationModelLoader
+  H3ClockRemap
+  H3PrefixFreezeMask
+  H3TemporalInsert
+  HiDreamO1PatchSeamSmoothing
+  ImageCompositeMasked
+  InterpolateCoords
+  LTX25TemporalSplitParams
+  LatentCompositeMasked
+  LatentInterpolate
+  LatentOperationTonemapReinhard
+  LoadImageMask
+  MMH3TemporalSplitParams
+  MaskOptFlow
+  MediaPipeFaceMask
+  ModelMergeAuraflow
+  ModelSamplingAuraFlow
+  OpticalFlowLoader
+  PreviewLatentNoiseMask
+  RIFEInterpolation
+  RemapImageRange
+  RemapMaskRange
+  ResizeImageMaskNode
+  ResizeMask
+  Rodin3D_Smooth
+  SeedVR2TemporalChunk
+  SeedVR2TemporalMerge
+  SeparateMasks
+  SetLatentNoiseMask
+  TemporalScoreRescaling
+  TextEncodeMageFlowEdit
+  UNetTemporalAttentionMultiply
+  UnifiedResizeImageMask
+  Unimatch_OptFlowPreprocessor
+  VHS_DuplicateMasks
+  VHS_MergeMasks
+  VideoRandomTemporalCrop
+  VideoTemporalCrop
+
+=== FaceDetailer / impact ===
+  (none)
+
+=== upscale / restore ===
+  H3LatentUpscale
+  H3UpscaleSizeLD
+  HunyuanVideo15LatentUpscaleWithModel
+  ImageUpscaleWithModel
+  ImageUpscaleWithModelBatched
+  LTX25LatentUpscaleParams
+  LTX25UltimateUpscale
+  LatentUpscale
+  LatentUpscaleBy
+  LatentUpscaleModelLoader
+  MMH3LatentUpscaleParams
+  MMH3LatentUpscaleWithModelParams
+  MMH3UltimateUpscale
+  MagnificImageUpscalerCreativeNode
+  MagnificImageUpscalerPreciseV2Node
+  ReActorRestoreFace
+  ReActorRestoreFaceAdvanced
+  RecraftCreativeUpscaleNode
+  RecraftCrispUpscaleNode
+  SD_4XUpscale_Conditioning
+  SamplerLCMUpscale
+  UpscaleModelLoader
+  WavespeedImageUpscaleNode
+
+=== latent video / context ===
+  AudioConcat
+  AudioConcatenate
+  ConditioningConcat
+  Context (rgthree)
+  Context Big (rgthree)
+  Context Merge (rgthree)
+  Context Merge Big (rgthree)
+  Context Switch (rgthree)
+  Context Switch Big (rgthree)
+  ContextWindowsManual
+  ContextWindowsVisualizerKJ
+  H3TailContext
+  ImageConcatFromBatch
+  ImageConcatMulti
+  LTXVChunkFeedForward
+  LTXVConcatAVLatent
+  LTXVContextWindows
+  LatentConcat
+  MiniMaxChunkFeedForward
+  SeedVR2TemporalChunk
+  StringConcatenate
+  VideoLinearCFGGuidance
+  WanChunkFeedForward
+  WanContextWindowsManual
+  WanMoveConcatTrack
+
+=== ipadapter / pulid / faceid ===
+  StyleModelApply
+  StyleModelApplyAdvanced
+  StyleModelLoader
+
+=== video combine/output ===
+  ByteDanceCreateVideoAsset
+  CreateVideo
+  DecodeAndSaveVideo
+  SaveVideo
+  VHS_AudioToVHSAudio
+  VHS_BatchManager
+  VHS_DuplicateImages
+  VHS_DuplicateLatents
+  VHS_DuplicateMasks
+  VHS_GetImageCount
+  VHS_GetLatentCount
+  VHS_GetMaskCount
+  VHS_LoadAudio
+  VHS_LoadAudioUpload
+  VHS_LoadImagePath
+  VHS_LoadImages
+  VHS_LoadImagesPath
+  VHS_LoadVideo
+  VHS_LoadVideoFFmpeg
+  VHS_LoadVideoFFmpegPath
+  VHS_LoadVideoPath
+  VHS_MergeImages
+  VHS_MergeLatents
+  VHS_MergeMasks
+  VHS_PruneOutputs
+  VHS_SelectEveryNthImage
+  VHS_SelectEveryNthLatent
+  VHS_SelectEveryNthMask
+  VHS_SelectFilename
+  VHS_SelectImages
+  VHS_SelectLatents
+  VHS_SelectLatest
+  VHS_SelectMasks
+  VHS_SplitImages
+  VHS_SplitLatents
+  VHS_SplitMasks
+  VHS_Unbatch
+  VHS_VAEDecodeBatched
+  VHS_VAEEncodeBatched
+  VHS_VHSAudioToAudio
+  VHS_VideoCombine
+  VHS_VideoInfo
+  VHS_VideoInfoLoaded
+  VHS_VideoInfoSource
+
+=== h3 / minimax ===
+  EmptyMiniMaxH3LatentAV
+  H3AdaLNLoRAFix
+  H3AudioRecover
+  H3AudioSmear
+  H3CapabilityProbe
+  H3ClockRemap
+  H3ConditioningBank
+  H3ContactSheet
+  H3ContactSheetDecode
+  H3DeltaColorCarry
+  H3DrawnPlan
+  H3DriftControl
+  H3DyRoPE
+  H3ExactRecover
+  H3ExpertSchedule
+  H3ExtensionPlan
+  H3IndecisionOracle
+  H3InjectSchedule
+  H3JerkHeatmap
+  H3JerkOracle
+  H3LatentBank
+  H3LatentUpscale
+  H3LoadHoldMap
+  H3ManualHoldMap
+  H3MidInsert
+  H3MiniMaxCache
+  H3ModeSwitch
+  H3MotionComposite
+  H3MotionEditor
+  H3PlanEstimate
+  H3PlanSettings
+  H3PrefixFreezeMask
+  H3ProbeSchedule
+  H3ProtectPrefix
+  H3RecordStart
+  H3RecordStop
+  H3RepairPlan
+  H3RepairSplice
+  H3SLAAttention
+  H3SaveHoldMap
+  H3SceneColorStats
+  H3SeamNormalize
+  H3SegmentCrop
+  H3SegmentSplice
+  H3TailContext
+  H3TemporalInsert
+  H3TimeSmear
+  H3TimelineAnalyze
+  H3TimelineRender
+  H3TrajectoryBank
+  H3TrajectoryLoad
+  H3Trim
+  H3TrueClock
+  H3UpscaleSizeLD
+  H3V2VInit
+  H3VideoFit
+  H3WindowCollect
+  H3WindowCrop
+  H3WindowExpand
+  H3WindowLoop
+  H3WindowPass
+  H3WindowPlan
+  H3WindowSeam
+  MMH3LatentUpscaleParams
+  MMH3LatentUpscaleWithModelParams
+  MMH3SpatialSplitParams
+  MMH3TemporalSplitParams
+  MMH3UltimateUpscale
+  MiniMaxChunkFeedForward
+  MiniMaxH3ImageToVideo
+  MiniMaxH3MemoryEfficientSageAttentionPatch
+  MiniMaxH3ReferenceToVideo
+  MiniMaxH3SigmaShift
+  MiniMaxH3TokenCounter
+  MiniMaxLowVRAMAttention
+  MinimaxHailuo03FirstLastFrameNode
+  MinimaxHailuo03ReferenceNode
+  MinimaxHailuo03TextToVideoNode
+  MinimaxHailuoVideoNode
+  MinimaxImageToVideoNode
+  MinimaxTextToVideoNode
+
+=== mask / composite ===
+  GrowMask
+  GrowMaskWithBlur
+  ImageCompositeMasked
+  MaskToImage
+  PorterDuffImageComposite
+  RecraftRemoveBackgroundNode
+  RemoveBackground
+
+=== color/frames util ===
+  GetImageRangeFromBatch
+  ImageBatch
+  ImageBatchExtendWithOverlap
+  ImageBatchFilter
+  ImageBatchJoinWithTransition
+  ImageBatchMulti
+  ImageBatchRepeatInterleaving
+  ImageBatchTestPattern
+  ImageBlend
+  ImageFromBatch
+  InsertImageBatchByIndexes
+  LatentBatch
+  LatentBatchSeedBehavior
+  PadImageBatchInterleaved
+  RandomImageFromBatch
+  RepeatImageBatch
+  RepeatLatentBatch
+  ReverseImageBatch
+  ShuffleImageBatch
+  _AccumulationToImageBatch
+
+======================================================================
+FULL INPUT SIGNATURES
+======================================================================
+
+--- ReActorFaceSwap  (output: ['IMAGE', 'FACE_MODEL', 'IMAGE']) ---
+  [required]
+    enabled                      BOOLEAN default=True
+    input_image                  IMAGE
+    swap_model                   ENUM['inswapper_128.onnx']
+    facedetection                ENUM['retinaface_resnet50', 'retinaface_mobile0.25', 'YOLOv5l', 'YOLOv5n']
+    face_restore_model           ENUM['none', 'codeformer.pth', 'GFPGANv1.4.pth']
+    face_restore_visibility      FLOAT default=1
+    codeformer_weight            FLOAT default=0.5
+    detect_gender_input          ENUM['no', 'female', 'male'] default=no
+    detect_gender_source         ENUM['no', 'female', 'male'] default=no
+    input_faces_index            STRING default=0
+    source_faces_index           STRING default=0
+    console_log_level            ENUM[0, 1, 2] default=1
+  [optional]
+    source_image                 IMAGE
+    face_model                   FACE_MODEL
+    face_boost                   FACE_BOOST
+
+--- ReActorFaceBoost  (output: ['FACE_BOOST']) ---
+  [required]
+    enabled                      BOOLEAN default=True
+    boost_model                  ENUM['none', 'codeformer.pth', 'GFPGANv1.4.pth']
+    interpolation                ENUM['Nearest', 'Bilinear', 'Bicubic', 'Lanczos'] default=Bicubic
+    visibility                   FLOAT default=1
+    codeformer_weight            FLOAT default=0.5
+    restore_with_main_after      BOOLEAN default=False
+
+--- MiniMaxH3ReferenceToVideo  (output: ['CONDITIONING', 'LATENT']) ---
+  [required]
+    clip                         CLIP
+    vae                          VAE
+    audio_vae                    VAE
+    prompt                       STRING
+    width                        INT default=1344
+    height                       INT default=768
+    length                       INT default=124
+    ref_image_size               COMBO default=match
+  [optional]
+    ref_images                   COMFY_AUTOGROW_V3
+    ref_videos                   COMFY_AUTOGROW_V3
+    ref_video_audios             COMFY_AUTOGROW_V3
+    ref_audios                   COMFY_AUTOGROW_V3
+
+--- MiniMaxChunkFeedForward  (output: ['MODEL']) ---
+  [required]
+    model                        MODEL
+    chunks                       INT default=2
+    seq_threshold                INT default=4096
+
+--- H3SLAAttention  (output: ['MODEL']) ---
+  [required]
+    model                        MODEL
+    sparsity_ratio               FLOAT default=0.8
+    block_size                   COMBO default=32
+  [optional]
+    min_seq_len                  INT default=12228
+    dense_last_steps             INT default=0
+    protect_audio                BOOLEAN default=False
+    enabled                      BOOLEAN default=True
+    dense_steps                  STRING default=1
+    dense_backend                COMBO default=comfy_kitchen
+    disable_fp16_accum           BOOLEAN default=True
+    stabilize_motion             BOOLEAN default=False
+    reference_protection         COMBO default=Off
+    tail_correction              BOOLEAN default=False
+    use_int8_qk                  BOOLEAN default=True
+    engine                       COMBO default=comfy_kitchen
+
+--- MiniMaxH3SigmaShift  (output: ['MODEL']) ---
+  [required]
+    model                        MODEL
+    shift_video                  FLOAT default=12.0
+    shift_audio                  FLOAT default=3.0
+
+=== fuzzy: names containing flow/ema/smooth/temporal/deflicker ===
+  ConditioningStableAudio
+  ConsolidateMasksKJ
+  CreateFadeMask
+  CreateFadeMaskAdvanced
+  CreateMagicMask
+  CreateShapeMask
+  CreateShapeMaskOnPath
+  H3ClockRemap
+  H3PrefixFreezeMask
+  H3TemporalInsert
+  HiDreamO1PatchSeamSmoothing
+  ImageCompositeMasked
+  LTX25TemporalSplitParams
+  LatentCompositeMasked
+  LatentOperationTonemapReinhard
+  LoadImageMask
+  MMH3TemporalSplitParams
+  MaskOptFlow
+  MediaPipeFaceMask
+  ModelMergeAuraflow
+  ModelSamplingAuraFlow
+  ModelSamplingStableCascade
+  OpticalFlowLoader
+  PreviewLatentNoiseMask
+  RemapImageRange
+  RemapMaskRange
+  ResizeImageMaskNode
+  ResizeMask
+  Rodin3D_Smooth
+  SeedVR2TemporalChunk
+  SeedVR2TemporalMerge
+  SeparateMasks
+  SetLatentNoiseMask
+  StableCascade_EmptyLatentImage
+  StableCascade_StageB_Conditioning
+  StableCascade_StageC_VAEEncode
+  StableCascade_SuperResolutionControlnet
+  StableZero123_BatchSchedule
+  StableZero123_Conditioning
+  StableZero123_Conditioning_Batched
+  TemporalScoreRescaling
+  TextEncodeMageFlowEdit
+  UNetTemporalAttentionMultiply
+  UnifiedResizeImageMask
+  Unimatch_OptFlowPreprocessor
+  VHS_DuplicateMasks
+  VHS_MergeMasks
+  VideoRandomTemporalCrop
+  VideoTemporalCrop

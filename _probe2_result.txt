@@ -1,0 +1,576 @@
+
+--- ReActorFaceSwapOpt ---
+  output: ['IMAGE', 'FACE_MODEL', 'IMAGE']  names: ['SWAPPED_IMAGE', 'FACE_MODEL', 'ORIGINAL_IMAGE']
+  category: 🌌 ReActor
+  [required]
+    enabled                        BOOLEAN                            default=True
+    input_image                    IMAGE                              
+    swap_model                     ENUM['inswapper_128.onnx']         
+    facedetection                  ENUM['retinaface_resnet50', 'retinaface_mobile0.25', 'YOLOv5l', 'YOLOv5n'] 
+    face_restore_model             ENUM['none', 'codeformer.pth', 'GFPGANv1.4.pth'] 
+    face_restore_visibility        FLOAT                              default=1 min=0.1 max=1
+    codeformer_weight              FLOAT                              default=0.5 min=0.0 max=1
+  [optional]
+    source_image                   IMAGE                              
+    face_model                     FACE_MODEL                         
+    options                        OPTIONS                            
+    face_boost                     FACE_BOOST                         
+
+--- ReActorRestoreFaceAdvanced ---
+  output: ['IMAGE']  names: ['IMAGE']
+  category: 🌌 ReActor
+  [required]
+    image                          IMAGE                              
+    facedetection                  ENUM['retinaface_resnet50', 'retinaface_mobile0.25', 'YOLOv5l', 'YOLOv5n'] 
+    model                          ENUM['none', 'codeformer.pth', 'GFPGANv1.4.pth'] 
+    visibility                     FLOAT                              default=1 min=0.0 max=1
+    codeformer_weight              FLOAT                              default=0.5 min=0.0 max=1
+    face_selection                 ENUM['all', 'filter', 'largest']   default=all
+  [optional]
+    sort_by                        ENUM['area', 'x_position', 'y_position', 'detection_confidence'] default=area
+    reverse_order                  BOOLEAN                            default=False
+    take_start                     INT                                default=0 min=0 max=100
+    take_count                     INT                                default=1 min=1 max=100
+
+--- ReActorOptions ---
+  output: ['OPTIONS']  names: ['OPTIONS']
+  category: 🌌 ReActor
+  [required]
+    input_faces_order              ENUM['left-right', 'right-left', 'top-bottom', 'bottom-top', 'small-large', 'large-small'] default=large-small
+    input_faces_index              STRING                             default=0
+    detect_gender_input            ENUM['no', 'female', 'male']       default=no
+    source_faces_order             ENUM['left-right', 'right-left', 'top-bottom', 'bottom-top', 'small-large', 'large-small'] default=large-small
+    source_faces_index             STRING                             default=0
+    detect_gender_source           ENUM['no', 'female', 'male']       default=no
+    console_log_level              ENUM[0, 1, 2]                      default=1
+    restore_swapped_only           BOOLEAN                            default=True
+
+--- ReActorMaskHelper ---
+  output: ['IMAGE', 'MASK', 'IMAGE', 'IMAGE']  names: ['IMAGE', 'MASK', 'MASK_PREVIEW', 'SWAPPED_FACE']
+  category: 🌌 ReActor
+  [required]
+    image                          IMAGE                              
+    swapped_image                  IMAGE                              
+    bbox_model_name                ENUM['bbox/face_yolov8m.pt', 'bbox/hand_yolov8s.pt', 'segm/person_yolov8m-seg.pt'] 
+    bbox_threshold                 FLOAT                              default=0.5 min=0.0 max=1.0
+    bbox_dilation                  INT                                default=10 min=-512 max=512
+    bbox_crop_factor               FLOAT                              default=3.0 min=1.0 max=100
+    bbox_drop_size                 INT                                default=10 min=1 max=8192
+    sam_model_name                 ENUM['sam_vit_b_01ec64.pth']       
+    sam_dilation                   INT                                default=0 min=-512 max=512
+    sam_threshold                  FLOAT                              default=0.93 min=0.0 max=1.0
+    bbox_expansion                 INT                                default=0 min=0 max=1000
+    mask_hint_threshold            FLOAT                              default=0.7 min=0.0 max=1.0
+    mask_hint_use_negative         ENUM['False', 'Small', 'Outter']   
+    morphology_operation           ENUM['dilate', 'erode', 'open', 'close'] 
+    morphology_distance            INT                                default=0 min=0 max=128
+    blur_radius                    INT                                default=9 min=0 max=48
+    sigma_factor                   FLOAT                              default=1.0 min=0.01 max=3.0
+  [optional]
+    mask_optional                  MASK                               
+
+--- ReActorFaceSimilarity ---
+  output: ['FLOAT', 'STRING']  names: ['similarity_float', 'similarity_text']
+  category: 🌌 ReActor
+  [required]
+    image1                         IMAGE                              
+    image2                         IMAGE                              
+
+--- ReActorSetWeight ---
+  output: ['IMAGE', 'FACE_MODEL']  names: ['INPUT_IMAGE', 'FACE_MODEL']
+  category: 🌌 ReActor
+  [required]
+    input_image                    IMAGE                              
+    faceswap_weight                ENUM['0%', '12.5%', '25%', '37.5%', '50%', '62.5%', '75%', '87.5%', '100%'] default=50%
+  [optional]
+    source_image                   IMAGE                              
+    face_model                     FACE_MODEL                         
+
+--- ReActorBuildFaceModel ---
+  output: ['FACE_MODEL']  names: ['FACE_MODEL']
+  category: 🌌 ReActor
+  [required]
+    save_mode                      BOOLEAN                            default=True
+    send_only                      BOOLEAN                            default=False
+    face_model_name                STRING                             default=default
+    compute_method                 ENUM['Mean', 'Median', 'Mode']     default=Mean
+  [optional]
+    images                         IMAGE                              
+    face_models                    FACE_MODEL                         
+
+--- ReActorLoadFaceModel ---
+  output: ['FACE_MODEL', 'STRING']  names: ['FACE_MODEL', 'FACE_MODEL_NAME']
+  category: 🌌 ReActor
+  [required]
+    face_model                     ENUM['none']                       
+
+--- ReActorSaveFaceModel ---
+  output: []  names: []
+  category: 🌌 ReActor
+  [required]
+    save_mode                      BOOLEAN                            default=True
+    face_model_name                STRING                             default=default
+    select_face_index              INT                                default=0 min=0
+  [optional]
+    image                          IMAGE                              
+    face_model                     FACE_MODEL                         
+
+--- H3JerkHeatmap ---
+  output: ['IMAGE']  names: ['IMAGE']
+  category: image/minimax/motion
+  [required]
+    images                         IMAGE                              
+    samples                        LATENT                             
+    alpha                          FLOAT                              default=0.55 min=0.0 max=1.0
+    strip_height                   INT                                default=96 min=0 max=256
+  [optional]
+    show_drift                     BOOLEAN                            default=True
+
+--- H3JerkOracle ---
+  output: ['STRING', 'STRING', 'INT', 'INT', 'STRING', 'STRING']  names: ['hold_map', 'segments', 'window_start', 'window_len', 'profile', 'report']
+  category: latent/minimax/motion
+  [required]
+    samples                        LATENT                             
+    length                         INT                                default=124 min=5 max=3600
+    q                              FLOAT                              default=0.75 min=0.5 max=0.99
+    d_max                          INT                                default=4 min=2 max=8
+    ramp                           BOOLEAN                            default=True
+  [optional]
+    preset                         ENUM['custom', 'balanced (default)', 'max quality (wide plateau)', 'economy (tight spans)'] default=balanced (default)
+    bridge                         INT                                default=8 min=0 max=20
+    profile_mode                   ENUM['value |d3| (default)', 'value |d1| (energy baseline)', 'trajectory centroid |d3|', 'value |d3| camera-compensated'] default=value |d3| (default)
+    abstain_below                  FLOAT                              default=0.0 min=0.0 max=10.0
+    fps                            INT                                default=24 min=1 max=120
+    s_per_step                     FLOAT                              default=0.0 min=0.0 max=120.0
+    est_steps                      INT                                default=18 min=1 max=100
+    overhead_s                     FLOAT                              default=6.7 min=0.0 max=600.0
+    model_profile                  ENUM['minimax-h3', 'ltx-2.5', 'wan-2.2 (unmeasured)'] default=minimax-h3
+    protect_tail                   INT                                default=0 min=0 max=96
+
+--- H3DriftControl ---
+  output: ['MODEL', 'STRING']  names: ['model', 'report']
+  category: MAINodes/alpha
+  [required]
+    model                          MODEL                              
+    latent                         LATENT                             
+  [optional]
+    prefix_frames                  INT                                default=39 min=5 max=3600
+    matched_steps                  INT                                default=8 min=0 max=400
+    taper_steps                    INT                                default=4 min=1 max=400
+    full_sigmas                    SIGMAS                             
+
+--- H3DeltaColorCarry ---
+  output: ['LATENT', 'STRING']  names: ['samples', 'report']
+  category: MAINodes/alpha
+  [required]
+    samples                        LATENT                             
+    vae                            VAE                                
+    anchor_stats                   STRING                             
+    current_stats                  STRING                             
+  [optional]
+    prefix_frames                  INT                                default=39 min=22 max=3600
+    strength                       FLOAT                              default=0.5 min=0.0 max=1.0
+    max_luma_shift                 FLOAT                              default=6.0 min=0.0 max=32.0
+    max_saturation_change          FLOAT                              default=0.06 min=0.0 max=0.5
+    spatial_kernel                 INT                                default=3 min=1 max=15
+
+--- H3MotionComposite ---
+  output: ['IMAGE']  names: ['IMAGE']
+  category: image/minimax/motion
+  [required]
+    regenerated                    IMAGE                              
+    baseline                       IMAGE                              
+    threshold                      FLOAT                              default=0.35 min=0.0 max=1.0
+    grow                           INT                                default=32 min=0 max=256
+    feather                        INT                                default=48 min=0 max=256
+  [optional]
+    samples                        LATENT                             
+    mask                           MASK                               
+    invert_mask                    BOOLEAN                            default=False
+    feather_profile                ENUM['linear', 'smoothstep', 'gaussian'] default=linear
+    feather_direction              ENUM['centered', 'inward', 'outward'] default=centered
+    mask_is_soft                   BOOLEAN                            default=False
+
+--- H3TimeSmear ---
+  output: ['IMAGE', 'STRING', 'INT', 'STRING']  names: ['images', 'hold_map_used', 'length', 'report']
+  category: image/minimax/motion
+  [required]
+    images                         IMAGE                              
+    dilation                       INT                                default=4 min=1 max=8
+  [optional]
+    hold_map                       STRING                             default=
+    expand_to_end                  BOOLEAN                            default=True
+    fps                            INT                                default=24 min=1 max=120
+    s_per_step                     FLOAT                              default=0.0 min=0.0 max=120.0
+    est_steps                      INT                                default=18 min=1 max=100
+    overhead_s                     FLOAT                              default=6.7 min=0.0 max=600.0
+
+--- H3TimelineAnalyze ---
+  output: ['STRING', 'IMAGE', 'STRING', 'STRING']  names: ['plan_path', 'preview', 'graph_path', 'report']
+  category: latent/minimax/timeline
+  [required]
+    clip_path                      STRING                             default=
+    frames                         INT                                default=124 min=39 max=3600
+    plan_path                      STRING                             default=
+    auto                           BOOLEAN                            default=True
+  [optional]
+    jerk_profile                   STRING                             
+    indecision_profile             STRING                             
+    ceiling                        FLOAT                              default=4.0 min=1.0 max=16.0
+    threshold                      FLOAT                              default=0.75 min=0.0 max=0.99
+    prompt                         STRING                             default= multiline
+    width                          INT                                default=1152 min=64 max=4096
+    height                         INT                                default=640 min=64 max=4096
+    regen_strength                 FLOAT                              default=0.45 min=0.0 max=1.0
+    steps                          INT                                default=25 min=1 max=100
+    seed                           INT                                default=20260817 min=0 max=18446744073709551615
+    output_prefix                  STRING                             default=video/timeline
+    graph_path                     STRING                             default=
+
+--- H3TrajectoryBank ---
+  output: ['SAMPLER']  names: ['SAMPLER']
+  category: sampling/custom_sampling/samplers
+  [required]
+    sampler                        SAMPLER                            
+    dump_dir                       STRING                             default=/tmp/h3_trajectory
+    every_n                        INT                                default=1 min=1 max=25
+
+--- H3TrajectoryLoad ---
+  output: ['LATENT', 'SIGMAS', 'INT']  names: ['samples', 'remaining_sigmas', 'loaded_step']
+  category: latent/minimax/motion
+  [required]
+    dump_dir                       STRING                             default=/tmp/h3_trajectory
+    step                           INT                                default=5 min=0 max=200
+  [optional]
+    reference                      LATENT                             
+    audio_scale                    FLOAT                              default=4.0 min=0.0 max=64.0
+    undo_const_scaling             BOOLEAN                            default=False
+
+--- H3ClockRemap ---
+  output: ['STRING', 'INT', 'STRING', 'STRING']  names: ['hold_map', 'length', 'report', 'profile_json']
+  category: image/minimax/motion
+  [required]
+    hold_map                       STRING                             default=
+    model_profile                  ENUM['minimax-h3', 'ltx-2.5', 'wan-2.2 (unmeasured)', 'custom (use the fields below)'] default=ltx-2.5
+  [optional]
+    custom_block                   INT                                default=8 min=1 max=64
+    custom_hold_scale              INT                                default=4 min=1 max=32
+    custom_legal_step              INT                                default=8 min=1 max=64
+    custom_legal_offset            INT                                default=1 min=0 max=64
+    custom_fps                     FLOAT                              default=25.0 min=1.0 max=120.0
+    custom_cap_seconds             FLOAT                              default=0.0 min=0.0 max=600.0
+
+--- H3TrueClock ---
+  output: ['SAMPLER']  names: ['sampler']
+  category: sampling/custom_sampling/samplers
+  [required]
+    sampler                        SAMPLER                            
+    hold_map                       STRING                             default=
+
+--- H3PrefixFreezeMask ---
+  output: ['MASK', 'STRING']  names: ['mask', 'report']
+  category: MAINodes/alpha
+  [required]
+    plan                           STRING                             
+    dilated_length                 INT                                default=0 min=0 max=36000
+
+--- H3ProtectPrefix ---
+  output: ['STRING', 'STRING']  names: ['hold_map', 'report']
+  category: MAINodes/alpha
+  [required]
+    hold_map                       STRING                             
+    plan                           STRING                             
+
+--- H3ExactRecover ---
+  output: ['IMAGE']  names: ['IMAGE']
+  category: image/minimax/motion
+  [required]
+    images                         IMAGE                              
+    hold_map                       STRING                             default=
+
+--- H3AudioRecover ---
+  output: ['AUDIO']  names: ['AUDIO']
+  category: audio/minimax/motion
+  [required]
+    audio                          AUDIO                              
+    hold_map                       STRING                             default=
+    fps                            INT                                default=24 min=1 max=120
+  [optional]
+    reference                      AUDIO                              
+    reference_mix                  FLOAT                              default=1.0 min=0.0 max=1.0
+    audio_source                   ENUM['custom (use reference_mix)', 'keep the original performance (safe default)', "use pass 2's foley - ONLY IF the audio rows were seeded", 'blend, favour the original', 'blend, favour pass 2'] default=custom (use reference_mix)
+
+--- H3SeamNormalize ---
+  output: ['IMAGE', 'AUDIO', 'STRING']  names: ['images', 'audio', 'report']
+  category: MAINodes/alpha
+  [required]
+    source_tail                    IMAGE                              
+    generated_prefix               IMAGE                              
+    images                         IMAGE                              
+    mode                           ENUM['channels (linear-light RGB gains)', 'luma (one gain)', 'off (report only)'] default=channels (linear-light RGB gains)
+    max_gain                       FLOAT                              default=1.25 min=1.0 max=2.0
+  [optional]
+    source_tail_audio              AUDIO                              
+    generated_prefix_audio         AUDIO                              
+    audio                          AUDIO                              
+    audio_mode                     ENUM['off', "gain (match the handle's rms)"] default=off
+    audio_fade_ms                  INT                                default=10 min=0 max=200
+
+--- H3ModeSwitch ---
+  output: ['*']  names: ['*']
+  category: utils/minimax
+  [required]
+    mode                           ENUM['preview', 'final']           default=preview
+  [optional]
+    preview                        *                                  
+    final                          *                                  
+
+--- H3MiniMaxCache ---
+  output: ['MODEL']  names: ['MODEL']
+  category: PlagueKind/model_patches/minimax
+  [required]
+    model                          MODEL                              
+    reuse_threshold                FLOAT                              default=0.05 min=0.0 max=1.0
+    start_percent                  FLOAT                              default=0.15 min=0.0 max=1.0
+    end_percent                    FLOAT                              default=0.9 min=0.0 max=1.0
+    max_steps                      INT                                default=2 min=1 max=10
+    device                         COMBO                              default=auto
+    verbose                        BOOLEAN                            default=False
+
+--- H3LatentUpscale ---
+  output: ['LATENT', 'STRING']  names: ['samples', 'report']
+  category: latent/minimax/motion
+  [required]
+    samples                        LATENT                             
+    scale                          FLOAT                              default=2.0 min=0.25 max=4.0
+    mode                           ENUM['bilinear', 'nearest-exact']  default=bilinear
+  [optional]
+    width                          INT                                default=0 min=0 max=8192
+    height                         INT                                default=0 min=0 max=8192
+
+--- H3UpscaleSizeLD ---
+  output: ['INT', 'INT', 'FLOAT', 'STRING']  names: ['width', 'height', 'scale', 'report']
+  category: PlagueKind/upscaling
+  [required]
+    width                          INT                                default=480 min=16 max=16384
+    height                         INT                                default=608 min=16 max=16384
+    mode                           ENUM['megapixels', 'multiple', 'long_edge'] default=megapixels
+    megapixels                     FLOAT                              default=2.0 min=0.05 max=16.0
+    multiple                       FLOAT                              default=2.0 min=0.25 max=8.0
+    long_edge                      INT                                default=1440 min=64 max=16384
+    align                          INT                                default=32 min=1 max=256
+
+--- H3VideoFit ---
+  output: ['IMAGE', 'INT', 'AUDIO', 'STRING']  names: ['images', 'length', 'audio', 'report']
+  category: image/minimax/motion
+  [required]
+    images                         IMAGE                              
+    mode                           ENUM['trim tail (default)', 'trim head', 'pad tail (freeze last frame)', 'nearest (trim or pad)'] default=trim tail (default)
+  [optional]
+    max_frames                     INT                                default=0 min=0 max=3600
+    fps                            FLOAT                              default=24.0 min=1.0 max=240.0
+    audio                          AUDIO                              
+
+--- H3TemporalInsert ---
+  output: ['LATENT', 'LATENT', 'STRING', 'STRING']  names: ['samples', 'noise_mask', 'hold_map', 'report']
+  category: latent/minimax/motion
+  [required]
+    samples                        LATENT                             
+    hold_map                       STRING                             default=
+    init_mode                      ENUM['lerp', 'noise']              default=lerp
+  [optional]
+    expand_to_end                  BOOLEAN                            default=True
+    length                         INT                                default=0 min=0 max=3600
+    noise_seed                     INT                                default=0 min=0 max=18446744073709551615
+
+--- OpticalFlowLoader ---
+  output: ['OPTICAL_FLOW']  names: ['OPTICAL_FLOW']
+  category: model/loaders
+  [required]
+    model_name                     COMBO                              
+
+--- MaskOptFlow ---
+  output: ['OPTICAL_FLOW', 'IMAGE']  names: ['OPTICAL_FLOW', 'PREVIEW_IMAGE']
+  category: ControlNet Preprocessors/Optical Flow
+  [required]
+    optical_flow                   OPTICAL_FLOW                       
+    mask                           MASK                               
+
+--- Unimatch_OptFlowPreprocessor ---
+  output: ['OPTICAL_FLOW', 'IMAGE']  names: ['OPTICAL_FLOW', 'PREVIEW_IMAGE']
+  category: ControlNet Preprocessors/Optical Flow
+  [required]
+    image                          IMAGE                              
+    ckpt_name                      ENUM['gmflow-scale1-mixdata.pth', 'gmflow-scale2-mixdata.pth', 'gmflow-scale2-regrefine6-mixdata.pth'] default=gmflow-scale2-regrefine6-mixdata.pth
+    backward_flow                  BOOLEAN                            default=False
+    bidirectional_flow             BOOLEAN                            default=False
+
+--- FrameInterpolate ---
+  output: ['IMAGE']  names: ['IMAGE']
+  category: video
+  [required]
+    interp_model                   INTERP_MODEL                       
+    images                         IMAGE                              
+    multiplier                     INT                                default=2 min=2 max=16
+
+--- RIFEInterpolation ---
+  output: ['IMAGE']  names: ['images']
+  category: image/animation
+  [required]
+    images                         IMAGE                              
+    source_fps                     FLOAT                              default=30.0 min=1.0 max=120.0
+    target_fps                     FLOAT                              default=60.0 min=1.0 max=240.0
+    scale                          FLOAT                              default=1.0 min=0.25 max=4.0
+  [optional]
+    model_name                     ENUM['flownet.pkl']                default=flownet.pkl
+    batch_size                     INT                                default=8 min=1 max=32
+    use_fp16                       BOOLEAN                            default=True
+
+--- FrameInterpolationModelLoader ---
+  output: ['INTERP_MODEL']  names: ['INTERP_MODEL']
+  category: model/loaders
+  [required]
+    model_name                     COMBO                              
+
+--- TemporalScoreRescaling ---
+  output: ['MODEL']  names: ['patched_model']
+  category: model/patch/unet
+  [required]
+    model                          MODEL                              
+    tsr_k                          FLOAT                              default=0.95 min=0.01 max=100.0
+    tsr_sigma                      FLOAT                              default=1.0 min=0.01 max=100.0
+
+--- UNetTemporalAttentionMultiply ---
+  output: ['MODEL']  names: ['MODEL']
+  category: experimental/attention_experiments
+  [required]
+    model                          MODEL                              
+    self_structural                FLOAT                              default=1.0 min=0.0 max=10.0
+    self_temporal                  FLOAT                              default=1.0 min=0.0 max=10.0
+    cross_structural               FLOAT                              default=1.0 min=0.0 max=10.0
+    cross_temporal                 FLOAT                              default=1.0 min=0.0 max=10.0
+
+--- UpscaleModelLoader ---
+  output: ['UPSCALE_MODEL']  names: ['UPSCALE_MODEL']
+  category: model/loaders
+  [required]
+    model_name                     COMBO                              
+
+--- ImageUpscaleWithModel ---
+  output: ['IMAGE']  names: ['IMAGE']
+  category: image/upscaling
+  [required]
+    upscale_model                  UPSCALE_MODEL                      
+    image                          IMAGE                              
+
+--- ImageUpscaleWithModelBatched ---
+  output: ['IMAGE']  names: ['IMAGE']
+  category: KJNodes/image
+  [required]
+    upscale_model                  UPSCALE_MODEL                      
+    images                         IMAGE                              
+    per_batch                      INT                                default=16 min=1 max=4096
+  [optional]
+    downscale_ratio                FLOAT                              default=1.0 min=0.01 max=1.0
+    downscale_method               ENUM['nearest-exact', 'bilinear', 'area', 'bicubic', 'lanczos'] default=lanczos
+    precision                      ENUM['float32', 'float16', 'bfloat16'] default=float32
+
+--- MMH3UltimateUpscale ---
+  output: ['LATENT', 'DICT', 'DICT']  names: ['latent', 'segments_info', 'tiles_info']
+  category: PlagueKind/upscaling/minimax
+  [required]
+    model                          MODEL                              
+    conditioning                   CONDITIONING                       
+    latent                         LATENT                             
+    noise                          NOISE                              
+    sampler                        SAMPLER                            
+    sigmas                         SIGMAS                             
+    cfg                            FLOAT                              default=1.0 min=0.0 max=100.0
+  [optional]
+    negative                       CONDITIONING                       
+    latent_upscale_param           H3_UPSCALE_PARAM                   
+    temporal_split_param           H3_TEMPORAL_PARAM                  
+    spatial_split_param            H3_SPATIAL_PARAM                   
+
+--- MediaPipeFaceLandmarker ---
+  output: ['FACE_LANDMARKS', 'BOUNDING_BOX']  names: ['face_landmarks', 'bboxes']
+  category: image/detection
+  [required]
+    face_detection_model           FACE_DETECTION_MODEL               
+    image                          IMAGE                              
+    detector_variant               COMBO                              default=short
+    num_faces                      INT                                default=1 min=0 max=16
+    min_confidence                 FLOAT                              default=0.5 min=0.0 max=1.0
+    missing_frame_fallback         COMBO                              default=empty
+
+--- ImageBlend ---
+  output: ['IMAGE']  names: ['IMAGE']
+  category: image/filters
+  [required]
+    image1                         IMAGE                              
+    image2                         IMAGE                              
+    blend_factor                   FLOAT                              default=0.5 min=0.0 max=1.0
+    blend_mode                     COMBO                              
+
+--- ImageFromBatch ---
+  output: ['IMAGE']  names: ['IMAGE']
+  category: image/batch
+  [required]
+    image                          IMAGE                              
+    batch_index                    INT                                default=0 min=-16384 max=16384
+    length                         INT                                default=1 min=1 max=4096
+
+--- GetImageRangeFromBatch ---
+  output: ['IMAGE', 'MASK']  names: ['IMAGE', 'MASK']
+  category: KJNodes/image
+  [required]
+    start_index                    INT                                default=0 min=-1 max=4096
+    num_frames                     INT                                default=1 min=1 max=4096
+  [optional]
+    images                         IMAGE                              
+    masks                          MASK                               
+
+--- ImageBatchExtendWithOverlap ---
+  output: ['IMAGE', 'IMAGE', 'IMAGE']  names: ['source_images', 'start_images', 'extended_images']
+  category: KJNodes/image
+  [required]
+    source_images                  IMAGE                              
+    overlap                        INT                                default=13 min=1 max=4096
+    overlap_side                   ENUM['source', 'new_images']       default=source
+    overlap_mode                   ENUM['cut', 'linear_blend', 'ease_in_out', 'filmic_crossfade', 'perceptual_crossfade'] default=linear_blend
+  [optional]
+    new_images                     IMAGE                              
+
+--- ImageBatchJoinWithTransition ---
+  output: ['IMAGE']  names: ['IMAGE']
+  category: KJNodes/image
+  [required]
+    images_1                       IMAGE                              
+    images_2                       IMAGE                              
+    start_index                    INT                                default=0 min=-10000 max=10000
+    interpolation                  ENUM['linear', 'ease_in', 'ease_out', 'ease_in_out', 'bounce', 'elastic', 'glitchy', 'exponential_ease_out'] 
+    transition_type                ENUM['horizontal slide', 'vertical slide', 'box', 'circle', 'horizontal door', 'vertical door', 'fade'] 
+    transitioning_frames           INT                                default=1 min=1 max=4096
+    blur_radius                    FLOAT                              default=0.0 min=0.0 max=100.0
+    reverse                        BOOLEAN                            default=False
+    device                         ENUM['CPU', 'GPU']                 default=CPU
+
+--- VHS_LoadVideo ---
+  output: ['IMAGE', 'INT', 'AUDIO', 'VHS_VIDEOINFO']  names: ['IMAGE', 'frame_count', 'audio', 'video_info']
+  category: Video Helper Suite 🎥🅥🅗🅢
+  [required]
+    video                          ENUM['#性感美女.mp4', '14912638572466341957.mp4', '1cf120463092a2852963bc5a8045dee0.mp4', '20260513_094712_我明天去做火车_00001.mp4', '20260514_132719_像我这种在古代可以换取和平多少钱各位军师？.mp4', '20260517_153413_我这种颜值在古代可以换取和平多少年？各位军师。.mp4', '_test_prompt_00001.mp4', '_test_short2s.mp4', 'ootd_target.mp4', 'qdb_faceswap1_爱你没商量不许偷偷看呦_00001_.mp4', 'shiling_dance_wave.mp4', 'shiling_say_yes.mp4'] 
+    force_rate                     FLOAT                              default=0 min=0 max=60
+    custom_width                   INT                                default=0 min=0 max=8192
+    custom_height                  INT                                default=0 min=0 max=8192
+    frame_load_cap                 INT                                default=0 min=0 max=9007199254740991
+    skip_first_frames              INT                                default=0 min=0 max=9007199254740991
+    select_every_nth               INT                                default=1 min=1 max=9007199254740991
+  [optional]
+    meta_batch                     VHS_BatchManager                   
+    vae                            VAE                                
+    format                         ENUM['None', 'AnimateDiff', 'Mochi', 'LTXV', 'Hunyuan', 'Cosmos', 'Wan', 'H3'] default=AnimateDiff
+
+============================================================
+MISSING (2): UltralyticsDetectorProvider, H3Cache
+FOUND  (50)

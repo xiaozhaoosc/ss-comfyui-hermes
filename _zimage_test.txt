@@ -1,0 +1,13 @@
+提交工作流 ...
+已提交 prompt_id=e7d0155f-07c6-45a2-bcf6-0ea7a36aed2a
+node_errors={}
+  仍在跑 ... running=1 pending=0 (0.2 min)
+完成 status=success 用时 0.8 分钟
+  产物: zimage_test_00001_.png (subfolder= type=output)
+  msg: ["execution_start", {"prompt_id": "e7d0155f-07c6-45a2-bcf6-0ea7a36aed2a", "timestamp": 1791642385389}]
+  msg: ["execution_cached", {"nodes": [], "prompt_id": "e7d0155f-07c6-45a2-bcf6-0ea7a36aed2a", "timestamp": 1791642385398}]
+  msg: ["execution_success", {"prompt_id": "e7d0155f-07c6-45a2-bcf6-0ea7a36aed2a", "timestamp": 1791642429498}]
+
+=== 产物文件 ===
+  D:\ai_projects\ComfyUI\output\zimage_test_00001_.png  0.97 MB  22:27:09
+总耗时 0.9 分钟

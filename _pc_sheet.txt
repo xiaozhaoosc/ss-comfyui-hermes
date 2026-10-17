@@ -1,0 +1,2 @@
+﻿SAVED: D:\ai_projects\ComfyUI\output\2026-10-10_wb\_eval\compare_matrix_full.png (2662, 1440)
+SAVED: D:\ai_projects\ComfyUI\output\2026-10-10_wb\_eval\compare_matrix_crop.png (2662, 1440)

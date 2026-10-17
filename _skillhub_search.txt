@@ -1,0 +1,80 @@
+=== text to image prompt generator ===
+url: https://lightmake.site/api/v1/search?q=text%20to%20image%20prompt%20generator&limit=8
+  slug=parenting-expert | name=育儿大师.Skill | score=0.05
+      育儿大师.Skill——0-18 岁全场景家庭养育支持，服务对象是家长。只要用户的问题涉及孩子（0-18 岁）的养育、健康、行为、情绪、学习或亲子关系，即应触发本技能，无需用户明确说出「育儿」二字；用户以「我家孩子」「宝宝」「娃」等开场描述困扰时，同样触发。典型话题：育儿/带娃/宝宝/婴儿/幼儿/学龄前/青春期/新生儿、发育/里程碑/早教、喂养/辅食/挑食/
+      dl=2031427 inst=0 star=47 home=https://api.skillhub.cn/indiv-ebandao/parenting-expert
+  slug=self-improving-agent | name=self-improving agent | score=0.048610717249778224
+      记录自身发现以实现自我改进的技能
+      dl=1356859 inst=86140 star=4527 home=https://api.skillhub.cn/clawhub_pskoett/self-improving-agent
+  slug=agent-browser | name=Agent Browser | score=0.04749377166135184
+      用于 AI 代理的浏览器自动化 CLI。当用户需要与网站交互（包括浏览页面、填写表单、点击按钮、截图等）时使用。
+      dl=980901 inst=36434 star=992 home=https://api.skillhub.cn/clawhub_rez0/agent-browser
+  slug=summarize | name=Summarize | score=0.046336809216696265
+      智能摘要工具，自动为长文本、文档、网页生成摘要，提取要点与关键词，支持自定义摘要长度。
+      dl=700918 inst=45959 star=1040 home=https://api.skillhub.cn/clawhub_paudyyin/summarize
+  slug=beatra | name=视频短视频图片音乐音频配音口播数字人全能创作 | score=0.04605820975862701
+      通过同一个AI创作工具完成AI图片、视频、音乐与语音创作，查找公开社交数据，编辑视觉成果，并集中查看和管理生成资产。Beatra 全能创作支持AI图片生成（文生图）、AI视频生成（图生视频）和AI视频编辑，通过AI音乐生成把想法做成歌曲或纯音乐，也可用AI语音生成（文字转语音）、多语言旁白和AI语音克隆完成跨媒介内容；还能查找抖音数据、小红书数据，以及 Yo
+      dl=646428 inst=0 star=74 home=https://api.skillhub.cn/beatra-ai/beatra
+  slug=parenting-expert | name=育儿专家 | score=0.04517631393171736
+      简介 循证育儿专家 · 0-18 岁全场景养育支持，先托举家长，再托举孩子。  详细描述 育儿专家是一个循证取向的 0-18 岁家庭养育支持系统，覆盖日常照护、发育里程碑、行为情绪、沟通话术、父母自我成长、危机识别与早教启蒙九大模块。 不喊"育儿"也能触发：你说"我家娃又半夜哭""写作业磨蹭"，它直接接住。 危机优先：自伤、虐待、紧急症状等红色信号，先给安全
+      dl=500338 inst=0 star=1 home=https://api.skillhub.cn/user_c0c05774/parenting-expert
+  slug=admapix | name=AdMapix | score=0.04450660891200014
+      AdMapix 原始数据层，提供广告创意、应用、排名、下载/收入及市场元数据。返回 AdMapix API 的结构化 JSON；调用方...
+      dl=411885 inst=6496 star=304 home=https://api.skillhub.cn/clawhub_fly0pants/admapix
+  slug=proactive-agent | name=Proactive Agent | score=0.043868976384416454
+      将 AI 代理从任务执行者转变为能够预见需求、持续优化的主动伙伴。现已支持 WAL Protocol、Working Buffer、Autonomous Crons 及经过实战验证的模式。属于 Hal Stack 🦞。
+      dl=342243 inst=28937 star=912 home=https://api.skillhub.cn/clawhub_halthelobster/proactive-agent
+
+=== video editing ffmpeg ===
+url: https://lightmake.site/api/v1/search?q=video%20editing%20ffmpeg&limit=8
+  slug=parenting-expert | name=育儿大师.Skill | score=0.05
+      育儿大师.Skill——0-18 岁全场景家庭养育支持，服务对象是家长。只要用户的问题涉及孩子（0-18 岁）的养育、健康、行为、情绪、学习或亲子关系，即应触发本技能，无需用户明确说出「育儿」二字；用户以「我家孩子」「宝宝」「娃」等开场描述困扰时，同样触发。典型话题：育儿/带娃/宝宝/婴儿/幼儿/学龄前/青春期/新生儿、发育/里程碑/早教、喂养/辅食/挑食/
+      dl=2031427 inst=0 star=47 home=https://api.skillhub.cn/indiv-ebandao/parenting-expert
+  slug=self-improving-agent | name=self-improving agent | score=0.048610717249778224
+      记录自身发现以实现自我改进的技能
+      dl=1356859 inst=86140 star=4527 home=https://api.skillhub.cn/clawhub_pskoett/self-improving-agent
+  slug=agent-browser | name=Agent Browser | score=0.04749377166135184
+      用于 AI 代理的浏览器自动化 CLI。当用户需要与网站交互（包括浏览页面、填写表单、点击按钮、截图等）时使用。
+      dl=980901 inst=36434 star=992 home=https://api.skillhub.cn/clawhub_rez0/agent-browser
+  slug=summarize | name=Summarize | score=0.046336809216696265
+      智能摘要工具，自动为长文本、文档、网页生成摘要，提取要点与关键词，支持自定义摘要长度。
+      dl=700918 inst=45959 star=1040 home=https://api.skillhub.cn/clawhub_paudyyin/summarize
+  slug=beatra | name=视频短视频图片音乐音频配音口播数字人全能创作 | score=0.04605820975862701
+      通过同一个AI创作工具完成AI图片、视频、音乐与语音创作，查找公开社交数据，编辑视觉成果，并集中查看和管理生成资产。Beatra 全能创作支持AI图片生成（文生图）、AI视频生成（图生视频）和AI视频编辑，通过AI音乐生成把想法做成歌曲或纯音乐，也可用AI语音生成（文字转语音）、多语言旁白和AI语音克隆完成跨媒介内容；还能查找抖音数据、小红书数据，以及 Yo
+      dl=646428 inst=0 star=74 home=https://api.skillhub.cn/beatra-ai/beatra
+  slug=parenting-expert | name=育儿专家 | score=0.04517631393171736
+      简介 循证育儿专家 · 0-18 岁全场景养育支持，先托举家长，再托举孩子。  详细描述 育儿专家是一个循证取向的 0-18 岁家庭养育支持系统，覆盖日常照护、发育里程碑、行为情绪、沟通话术、父母自我成长、危机识别与早教启蒙九大模块。 不喊"育儿"也能触发：你说"我家娃又半夜哭""写作业磨蹭"，它直接接住。 危机优先：自伤、虐待、紧急症状等红色信号，先给安全
+      dl=500338 inst=0 star=1 home=https://api.skillhub.cn/user_c0c05774/parenting-expert
+  slug=admapix | name=AdMapix | score=0.04450660891200014
+      AdMapix 原始数据层，提供广告创意、应用、排名、下载/收入及市场元数据。返回 AdMapix API 的结构化 JSON；调用方...
+      dl=411885 inst=6496 star=304 home=https://api.skillhub.cn/clawhub_fly0pants/admapix
+  slug=proactive-agent | name=Proactive Agent | score=0.043868976384416454
+      将 AI 代理从任务执行者转变为能够预见需求、持续优化的主动伙伴。现已支持 WAL Protocol、Working Buffer、Autonomous Crons 及经过实战验证的模式。属于 Hal Stack 🦞。
+      dl=342243 inst=28937 star=912 home=https://api.skillhub.cn/clawhub_halthelobster/proactive-agent
+
+=== text to speech offline ===
+url: https://lightmake.site/api/v1/search?q=text%20to%20speech%20offline&limit=8
+  slug=parenting-expert | name=育儿大师.Skill | score=0.05
+      育儿大师.Skill——0-18 岁全场景家庭养育支持，服务对象是家长。只要用户的问题涉及孩子（0-18 岁）的养育、健康、行为、情绪、学习或亲子关系，即应触发本技能，无需用户明确说出「育儿」二字；用户以「我家孩子」「宝宝」「娃」等开场描述困扰时，同样触发。典型话题：育儿/带娃/宝宝/婴儿/幼儿/学龄前/青春期/新生儿、发育/里程碑/早教、喂养/辅食/挑食/
+      dl=2031427 inst=0 star=47 home=https://api.skillhub.cn/indiv-ebandao/parenting-expert
+  slug=self-improving-agent | name=self-improving agent | score=0.048610717249778224
+      记录自身发现以实现自我改进的技能
+      dl=1356859 inst=86140 star=4527 home=https://api.skillhub.cn/clawhub_pskoett/self-improving-agent
+  slug=agent-browser | name=Agent Browser | score=0.04749377166135184
+      用于 AI 代理的浏览器自动化 CLI。当用户需要与网站交互（包括浏览页面、填写表单、点击按钮、截图等）时使用。
+      dl=980901 inst=36434 star=992 home=https://api.skillhub.cn/clawhub_rez0/agent-browser
+  slug=summarize | name=Summarize | score=0.046336809216696265
+      智能摘要工具，自动为长文本、文档、网页生成摘要，提取要点与关键词，支持自定义摘要长度。
+      dl=700918 inst=45959 star=1040 home=https://api.skillhub.cn/clawhub_paudyyin/summarize
+  slug=beatra | name=视频短视频图片音乐音频配音口播数字人全能创作 | score=0.04605820975862701
+      通过同一个AI创作工具完成AI图片、视频、音乐与语音创作，查找公开社交数据，编辑视觉成果，并集中查看和管理生成资产。Beatra 全能创作支持AI图片生成（文生图）、AI视频生成（图生视频）和AI视频编辑，通过AI音乐生成把想法做成歌曲或纯音乐，也可用AI语音生成（文字转语音）、多语言旁白和AI语音克隆完成跨媒介内容；还能查找抖音数据、小红书数据，以及 Yo
+      dl=646428 inst=0 star=74 home=https://api.skillhub.cn/beatra-ai/beatra
+  slug=parenting-expert | name=育儿专家 | score=0.04517631393171736
+      简介 循证育儿专家 · 0-18 岁全场景养育支持，先托举家长，再托举孩子。  详细描述 育儿专家是一个循证取向的 0-18 岁家庭养育支持系统，覆盖日常照护、发育里程碑、行为情绪、沟通话术、父母自我成长、危机识别与早教启蒙九大模块。 不喊"育儿"也能触发：你说"我家娃又半夜哭""写作业磨蹭"，它直接接住。 危机优先：自伤、虐待、紧急症状等红色信号，先给安全
+      dl=500338 inst=0 star=1 home=https://api.skillhub.cn/user_c0c05774/parenting-expert
+  slug=admapix | name=AdMapix | score=0.04450660891200014
+      AdMapix 原始数据层，提供广告创意、应用、排名、下载/收入及市场元数据。返回 AdMapix API 的结构化 JSON；调用方...
+      dl=411885 inst=6496 star=304 home=https://api.skillhub.cn/clawhub_fly0pants/admapix
+  slug=proactive-agent | name=Proactive Agent | score=0.043868976384416454
+      将 AI 代理从任务执行者转变为能够预见需求、持续优化的主动伙伴。现已支持 WAL Protocol、Working Buffer、Autonomous Crons 及经过实战验证的模式。属于 Hal Stack 🦞。
+      dl=342243 inst=28937 star=912 home=https://api.skillhub.cn/clawhub_halthelobster/proactive-agent
