@@ -139,7 +139,6 @@ def comfy_masks_for_dir(frames_dir, out_prefix, W, H):
 def estimate_anchor(video, W, H, anchor_root, out_prefix):
     """抽 5 帧 -> BiRefNet 掩码 -> feet_y/head_y (归一化)。"""
     frames_dir = os.path.join(anchor_root, "frames")
-    shutil.rmtree(anchor_root, ignore_errors=True)
     os.makedirs(frames_dir, exist_ok=True)
     cap = cv2.VideoCapture(video)
     total = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
@@ -215,7 +214,7 @@ def ffmpeg_composite(bg_png, src_mp4, mask_files, out_mp4, crf, W, H, fps):
         f"[2:v]format=gray,negate,setsar=1[m0];"
         f"[bg0][m0]alphamerge[bga];"
         f"[1:v]format=gbrp,setsar=1[src0];"
-        f"[src0][bga]overlay=format=gbrp[v]"
+        f"[src0][bga]overlay=format=gbrp:shortest=1[v]"
     )
     cmd = [
         "ffmpeg", "-y", "-loglevel", "error",
@@ -224,6 +223,7 @@ def ffmpeg_composite(bg_png, src_mp4, mask_files, out_mp4, crf, W, H, fps):
         "-framerate", f"{fps:.5f}", "-start_number", "1", "-i", mask_pat,
         "-filter_complex", fc,
         "-map", "[v]", "-map", "1:a?",
+        "-frames:v", str(len(mask_files)),
         "-c:v", "libx264", "-crf", str(crf), "-pix_fmt", "yuv420p",
         "-c:a", "copy", out_mp4,
     ]
